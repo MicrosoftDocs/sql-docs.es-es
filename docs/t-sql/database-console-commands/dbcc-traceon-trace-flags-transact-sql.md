@@ -2,7 +2,7 @@
 description: 'DBCC TRACEON: marcas de seguimiento (Transact-SQL)'
 title: Marcas de seguimiento (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2020
+ms.date: 01/19/2021
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 0332cd817851ff1152d6dc476bd757d971e41bc2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2cc8cbcc737c1f77c11aee6826ab39bd8b1ec4f1
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170217"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597237"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON: marcas de seguimiento (Transact-SQL)
 
@@ -193,6 +193,7 @@ En la siguiente tabla se enumeran y se describen las marcas de seguimiento dispo
 |**9929**|Reduce cada archivo de punto de comprobación en memoria a 1 MB. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/3147012).<br /><br />**Ámbito**: solo global|  
 |**9939**|Habilita los planes paralelos y el examen paralelo de las tablas optimizadas para memoria y las variables de tabla en las operaciones DML que hacen referencia a tablas optimizadas para memoria o variables de tabla, siempre y cuando no sean el destino de la operación DML en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/4013877).<br /><br />**Nota:** La marca de seguimiento 9939 no es necesaria si la marca de seguimiento 4199 también está habilitada de forma explícita.<br /><br />**Ámbito**: global, sesión o consulta (QUERYTRACEON)|   
 |**9944**|Habilita una corrección no predeterminada del tiempo de recuperación de base de datos lento cuando una base de datos tiene un gran número de tablas optimizadas para memoria o tipos de tablas optimizadas para memoria, y se puede observar el bloqueo con tipos de espera PREMPTIVE_OS_FINDFILE o PREEMPTIVE_OS_CREATEDIRECTORY. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/4090789) y este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/4052338).<br /><br />**Ámbito**: solo global|  
+|**10054**|Deshabilita la regla del optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que anula la correlación de las subconsultas en los predicados OR en combinaciones externas.<br /><br />**Nota:** Esta marca de seguimiento se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y a compilaciones posteriores.<br /><br />**Nota:** Asegúrese de probar exhaustivamente esta opción antes de aplicarla en un entorno de producción.<br /><br />**Ámbito**: global, sesión o consulta (QUERYTRACEON)| 
 |**10204**|Deshabilita la fusión o la recompresión durante la reorganización de los índices del almacén de columnas. En [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], cuando se reorganiza un índice de almacén de columnas, hay una nueva funcionalidad para fusionar automáticamente los grupos de filas comprimidos pequeños en grupos de filas comprimidos más grandes, así como para volver a comprimir los grupos de filas que tienen un gran número de filas eliminadas.<br /><br />**Nota:** La marca de seguimiento 10204 no se aplica a los índices de almacén de columnas que se crean en tablas optimizadas para memoria.<br /><br />**Ámbito**: global o sesión|   
 |**10207**|Permite que los exámenes de índice de almacén de columnas agrupado (CCI) omitan segmentos o metadatos dañados, con lo que se pueden recuperar datos de un CCI dañado. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/3067257).<br /><br />**Ámbito**: global o sesión| 
 |**10316**|Permite crear índices adicionales en la [tabla temporal de almacenamiento provisional interna optimizada para memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), además del predeterminado. Si dispone de un patrón de consulta específico que incluye columnas que no están cubiertas por el índice predeterminado, considere la posibilidad de agregar otros adicionales.<br /><br />**Nota:** Las tablas temporales con versión del sistema para tablas optimizadas para memoria están diseñadas con el objetivo de proporcionar un rendimiento transaccional alto. Tenga en cuenta que la creación de índices adicionales puede introducir una sobrecarga para las operaciones DML que actualizan o eliminan filas de la tabla actual. Con los índices adicionales, debe buscar un equilibrio adecuado entre el rendimiento de las consultas temporales y la sobrecarga adicional de DML.<br /><br />**Ámbito**: global o sesión|

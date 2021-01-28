@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 44903475ed2202ba3cc40de388ccc00511075dac
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 2d4848a8fa3661abd94ef63f3289261142998409
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088915"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766322"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Cifrado de conexiones a SQL Server en Linux
 
@@ -42,13 +42,16 @@ TLS se usa para cifrar las conexiones de una aplicación cliente a [!INCLUDE[ssN
 - **Generación del certificado** (/CN debe coincidir con el nombre de dominio completo del host de SQL Server)
 
 > [!NOTE]
-> En este ejemplo, se usa un certificado autofirmado, que no debe emplearse en escenarios de producción. Debe usar certificados de CA. 
+> En este ejemplo, se usa un certificado autofirmado, que no debe emplearse en escenarios de producción. Debe usar certificados de CA.<br>
+> Asegúrese de que el grupo o el usuario mssql puedan acceder a la carpeta donde se guardan los certificados y las claves privadas, y que tiene el permiso establecido en 700 (drwx-----). Puede crear carpetas manualmente con el permiso establecido en 700 (drwx------) y que sean propiedad del usuario o grupo mssqlL, o bien establecer el permiso en 755 (drwxr-xr-x) y que sean propiedad de otro usuario, pero todavía accesibles para el grupo de usuarios mssql. Por ejemplo, puede crear una carpeta denominada "sslcert" en la ruta de acceso "/var/opt/mssql/" y, después, guardar el certificado y la clave privada con permisos en los archivos establecidos en 600 como se muestra a continuación. 
 
 ```bash
 openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
 sudo chown mssql:mssql mssql.pem mssql.key 
-sudo chmod 600 mssql.pem mssql.key   
-sudo mv mssql.pem /etc/ssl/certs/ 
+sudo chmod 600 mssql.pem mssql.key 
+# in this case we are saving the certificate to the certs folder under /etc/ssl/ which has the following permission 755(drwxr-xr-x)
+sudo mv mssql.pem /etc/ssl/certs/ drwxr-xr-x 
+# in this case we are saving the private key to the private folder under /etc/ssl/ with permissions set to 755(drwxr-xr-x)
 sudo mv mssql.key /etc/ssl/private/ 
 ```
 

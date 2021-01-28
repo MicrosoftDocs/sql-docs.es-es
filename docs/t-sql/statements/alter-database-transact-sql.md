@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
-ms.openlocfilehash: 9086c0e4dcda0a98daad3e372e719bde7fc628d7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a5b5a4174a8faae5c57ed6844e96f52b8f271311
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099513"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98712001"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -168,7 +168,7 @@ Para más información sobre los nombres de intercalación de Windows y de SQL, 
 **\<delayed_durability_option> ::=**    
 **Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.
 
-Para más información, consulte [Opciones de ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) y [Controlar la durabilidad de las transacciones](../../relational-databases/logs/control-transaction-durability.md).
+Para obtener más información, vea [Opciones de ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) y [Controlar la durabilidad de las transacciones](../../relational-databases/logs/control-transaction-durability.md).
 
 **\<file_and_filegroup_options>::=**    
 Para más información, consulte [Opciones File y Filegroup de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
@@ -482,7 +482,7 @@ Especifica el tamaño máximo de la base de datos. El tamaño máximo debe cumpl
 |1024 GB|N/D|√|√|√|√ (D)|
 |Desde 1024 GB hasta 4096 GB en incrementos de 256 GB*|N/D|N/D|N/D|N/D|√|
 
-\* P11 y P15 permiten un valor de MAXSIZE de hasta 4 TB, con 1024 GB como tamaño predeterminado. P11 y P15 pueden usar hasta 4 TB de almacenamiento incluido sin cargos adicionales. En el nivel Premium, un valor de MAXSIZE mayor de 1 TB está actualmente disponible en las regiones siguientes: Este de EE. UU. 2, Oeste de EE. UU., US Gov Virginia, Oeste de Europa, Centro de Alemania, Sudeste de Asia, Este de Japón, Este de Australia, Centro de Canadá y Este de Canadá. Para obtener más información sobre las limitaciones de recursos para el modelo de DTU, consulte [Límites de recursos de DTU](/azure/sql-database/sql-database-dtu-resource-limits).
+\* P11 y P15 permiten un valor de MAXSIZE de hasta 4 TB, con 1024 GB como tamaño predeterminado. P11 y P15 pueden usar hasta 4 TB de almacenamiento incluido sin cargos adicionales. En el nivel Premium, un valor de MAXSIZE mayor de 1 TB está actualmente disponible en las regiones siguientes: Este de EE. UU. 2, Oeste de EE. UU., US Gov Virginia, Oeste de Europa, Centro de Alemania, Sudeste de Asia, Este de Japón, Este de Australia, Centro de Canadá y Este de Canadá. Para obtener más información sobre las limitaciones de recursos para el modelo de DTU, vea [Límites de recursos de DTU](/azure/sql-database/sql-database-dtu-resource-limits).
 
 El valor MAXSIZE para el modelo de DTU, si se especifica, tiene que ser válido según lo que se indica en la tabla anterior para el nivel de servicio especificado.
 
@@ -578,7 +578,7 @@ El valor MAXSIZE para el modelo de DTU, si se especifica, tiene que ser válido 
 |:----- | -------: | -------: | -------: | -------: | -------: |
 |Tamaño máximo de datos (GB)|1280|1536|2048|4096|4096|
 
-Si no hay ningún valor `MAXSIZE` establecido al utilizar el modelo de núcleo virtual, el valor predeterminado es 32 GB. Para obtener más información sobre las limitaciones de recursos para el modelo basado en núcleo virtual, vea [Límites de recursos del núcleo virtual](/azure/sql-database/sql-database-dtu-resource-limits).
+Si no hay ningún valor `MAXSIZE` establecido al utilizar el modelo de núcleo virtual, el valor predeterminado es 32 GB. Para obtener más información sobre las limitaciones de recursos para el modelo de núcleo virtual, vea [Límites de recursos del núcleo virtual](/azure/sql-database/sql-database-dtu-resource-limits).
 
 Las reglas siguientes se aplican a los argumentos MAXSIZE y EDITION:
 
@@ -868,15 +868,33 @@ Designa que la base de datos actual en uso se debe modificar.
 
 ## <a name="remarks"></a>Observaciones
 
-Para quitar una base de datos, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
-Para reducir el tamaño de una base de datos, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
+- Para quitar una base de datos, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 
-La instrucción `ALTER DATABASE` se debe ejecutar en modo de confirmación automática (modo predeterminado de administración de transacciones) y no se permite en una transacción explícita o implícita.
+- Para reducir el tamaño de una base de datos, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
-Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la memoria caché de planes) debido a determinadas operaciones de mantenimiento de base de datos o reconfiguración". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
+- La instrucción `ALTER DATABASE` se debe ejecutar en modo de confirmación automática (modo predeterminado de administración de transacciones) y no se permite en una transacción explícita o implícita.
 
+- La caché de planes de Instancia administrada se borra si se establece una de las opciones siguientes.
+    - COLLATE
+    - MODIFY FILEGROUP DEFAULT
+    - MODIFY FILEGROUP READ_ONLY
+    - MODIFY FILEGROUP READ_WRITE
+    - MODIFY NAME
+
+    Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la memoria caché de planes) debido a determinadas operaciones de mantenimiento de base de datos o reconfiguración". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
 También se vacía la caché de planes cuando se ejecutan varias consultas en una base de datos que tiene las opciones predeterminadas. Después, la base de datos se quita.
 
+- Para ejecutarse, algunas instrucciones `ALTER DATABASE` necesitan un bloqueo exclusivo en una base de datos. Por este motivo es posible que se produzca un error cuando otro proceso activo mantenga un bloqueo en la base de datos. Un error que se notifica en estos casos es `Msg 5061, Level 16, State 1, Line 38` con el mensaje `ALTER DATABASE failed because a lock could not be placed on database '<database name>'. Try again later`. Suele ser un error transitorio y, para resolverlo, una vez que se hayan liberado todos los bloqueos de la base de datos, vuelva a intentar la instrucción ALTER DATABASE en la que se ha producido el error. La vista del sistema `sys.dm_tran_locks` contiene información sobre los bloqueos activos. Para comprobar si hay bloqueos compartidos o exclusivos en una base de datos, use la consulta siguiente.
+  
+    ```sql
+    SELECT
+        resource_type, resource_database_id, request_mode, request_type, request_status, request_session_id 
+    FROM 
+        sys.dm_tran_locks
+    WHERE
+        resource_database_id = DB_ID('testdb')
+    ```
+  
 ## <a name="viewing-database-information"></a>Ver la información de la base de datos
 
 Se pueden utilizar vistas de catálogo, funciones del sistema y procedimientos almacenados del sistema para devolver información sobre bases de datos, archivos y grupos de archivos.
@@ -1109,7 +1127,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
         [Instancia administrada de SQL](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
@@ -1314,7 +1332,7 @@ FROM sys.databases;
 
 ### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>F. Habilitación de estadísticas de creación y actualización automáticas para una base de datos
 
-Use la instrucción siguiente para habilitar las estadísticas de creación y actualización de manera automática y asincrónica para la base de datos, CustomerSales. Esto crea y actualiza las estadísticas de columna única según sea necesario para crear planes de consulta de alta calidad.
+Use la instrucción siguiente para habilitar las estadísticas de creación y actualización de manera automática y asincrónica para la base de datos, CustomerSales. De esta forma, se crean y actualizan las estadísticas de columna única según sea necesario para crear planes de consulta de alta calidad.
 
 ```sql
 ALTER DATABASE CustomerSales

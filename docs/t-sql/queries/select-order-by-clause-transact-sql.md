@@ -40,12 +40,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12bb0423ad450ef94df8767ba8aae10a5c47cade
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a7903d3a208bd08c9ba22d251a0e4124e81725ea
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439090"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711991"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT: Cláusula ORDER BY (Transact-SQL)
 
@@ -146,7 +146,7 @@ ORDER BY SchemaName + ''; -- wrong
  En una instrucción SELECT TOP (*N*), use siempre una cláusula ORDER BY. Esta es la única manera de indicar previsiblemente a qué filas afecta TOP. Para más información, vea [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
 ## <a name="interoperability"></a>Interoperabilidad  
- Cuando se usa con una instrucción SELECT…INTO para insertar filas de otro origen, la cláusula ORDER BY no garantiza la inserción de las filas en el orden especificado.  
+ Cuando se usa con una instrucción SELECT...INTO o INSERT...SELECT para insertar filas de otro origen, la cláusula ORDER BY no garantiza la inserción de las filas en el orden especificado.  
   
  Al usar OFFSET y FETCH en una vista no se cambia la propiedad Updateability de la vista.  
   

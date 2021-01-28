@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ce723dfbf0171d3c1885c1574bf681fbb2c8e714
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: fa041d70aa80d44194859c92ad58f518cfa14c45
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172567"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783381"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Copia de seguridad administrada en Microsoft Azure para SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "98172567"
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] solo es compatible con las copias de seguridad de registros y completas de bases de datos. La automatización de la copia de seguridad de archivos no se admite.  
   
--   El servicio Almacenamiento de blobs de Microsoft Azure es la única opción de almacenamiento de copias de seguridad que se admite. Las copias de seguridad en disco o cinta no se admiten.  
+-   El servicio Microsoft Azure Blob Storage es la única opción de almacenamiento de copias de seguridad que se admite. Las copias de seguridad en disco o cinta no se admiten.  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] utiliza la característica de copia de seguridad de blobs en bloques. El tamaño máximo de un blob en bloques es de 200 GB. Sin embargo, gracias a la creación de bandas, el tamaño máximo de una copia de seguridad individual puede ser de hasta 12 TB. Si necesita realizar copias de seguridad de mayor tamaño, considere la posibilidad de usar la compresión y probar el tamaño del archivo de copia de seguridad antes de configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Puede hacer la prueba realizando la copia de seguridad en un disco local o manualmente en Almacenamiento de Microsoft Azure con la instrucción Transact-SQL **BACKUP TO URL** . Para más información, consulte [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   

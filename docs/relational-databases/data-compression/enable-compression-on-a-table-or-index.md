@@ -1,8 +1,8 @@
 ---
-title: Habilitar compresión de una tabla o un índice | Microsoft Docs
+title: Habilitar compresión de una tabla o un índice
 description: Obtenga información sobre cómo habilitar la compresión en una tabla o índice en SQL Server mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/22/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -20,24 +20,23 @@ f1_keywords:
 helpviewer_keywords:
 - data compression wizard
 - compression [SQL Server], enable
-ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016'
-ms.openlocfilehash: 080d50b76d71d7a0c13104f20303fe040d214a33
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 59d15d0f056a757fea1545025832990254a7e4ae
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485507"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766359"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Habilitar compresión de una tabla o un índice
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  En este tema se describe cómo habilitar la compresión en una tabla o un índice en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este artículo se describe cómo habilitar la [compresión de datos](../../relational-databases/data-compression/data-compression.md) en una tabla o un índice de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **En este tema**  
+ **En este artículo**  
   
 -   **Antes de empezar:**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "97485507"
   
 -   En las tablas del sistema no se puede habilitar la compresión.  
   
--   Si la tabla es un montón, la operación de regeneración en modo ONLINE será de un solo subproceso. Utilice el modo OFFLINE para una operación de regeneración de montón de varios subprocesos. Para obtener más información sobre la compresión de datos, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).  
+-   Si la tabla es un montón, la operación de regeneración en modo ONLINE será de un solo subproceso. Utilice el modo OFFLINE para una operación de regeneración de montón de varios subprocesos. Las operaciones de recompilación están sin conexión (OFFLINE) a menos que se especifique la opción ONLINE. Para obtener información completa sobre cómo realizar una regeneración ONLINE, vea [Realizar operaciones de índice en línea](../indexes/perform-index-operations-online.md).
   
 -   No se puede cambiar la configuración de compresión de una partición única si la tabla tiene índices no alineados.  
   
@@ -76,9 +75,9 @@ ms.locfileid: "97485507"
   
 3.  Haga clic con el botón derecho en la tabla o el índice que quiera comprimir, seleccione **Almacenamiento** y, luego, **Administrar la compresión...** .  
   
-4.  En la página de bienvenida del **Asistente para compresión de datos** , haga clic en **Siguiente**.  
+4.  En la página de bienvenida del **Asistente para compresión de datos**, seleccione **Siguiente**.  
   
-5.  En la página de **Seleccionar el tipo de compresión** , seleccione el tipo de compresión para aplicar a cada partición de la tabla o del índice que desea comprimir. Cuando termine, haga clic en **Siguiente**.  
+5.  En la página de **Seleccionar el tipo de compresión** , seleccione el tipo de compresión para aplicar a cada partición de la tabla o del índice que desea comprimir. Cuando termine, seleccione **Siguiente**.  
   
      Las siguientes opciones están disponibles en la página de **Seleccionar el tipo de compresión** :  
   
@@ -101,17 +100,17 @@ ms.locfileid: "97485507"
      Muestra el espacio actual que esta partición ocupa en megabytes (MB). Esta columna es de solo lectura.  
   
      **Espacio comprimido solicitado**  
-     Después de hacer clic en **Calcular**, esta columna muestra el tamaño deducido de cada partición después de llevar a cabo la compresión usando la configuración especificada en la columna **Tipo de compresión** . Esta columna es de solo lectura.  
+     Después de seleccionar **Calcular**, en esta columna se muestra el tamaño estimado de cada partición después de llevar a cabo la compresión con la configuración especificada en la columna **Tipo de compresión**. Esta columna es de solo lectura.  
   
      **Calcular**  
-     Haga clic aquí para deducir el tamaño de cada partición después de realizar la compresión usando la configuración que especificó en la columna **Tipo de compresión** .  
+     Seleccione para deducir el tamaño de cada partición después de realizar la compresión mediante la configuración que ha especificado en la columna **Tipo de compresión**.  
   
 6.  En la página **Seleccionar la opción de salida** , especifique cómo desea completar la compresión. Seleccione **Crear script** para crear un script SQL basado en las páginas anteriores del asistente. Seleccione **Ejecutar inmediatamente** para crear la nueva tabla con particiones después de completar todas las páginas restantes del asistente. Seleccione **Programar** para crear la tabla con particiones en un momento predeterminado en el futuro.  
   
      Si selecciona **Crear script**, las opciones siguientes están disponibles debajo de **Opciones de script**:  
   
      **Generar script en archivo**  
-     Genera el script como un archivo .sql. Escriba un nombre de archivo y ubicación en el cuadro de diálogo **Nombre de archivo** o haga clic en **Examinar** para abrir **Ubicación del archivo script** . En **Guardar como**, seleccione **Texto Unicode** o **Texto ANSI**.  
+     Genera el script como un archivo .sql. Escriba un nombre de archivo y una ubicación en el cuadro de diálogo **Nombre de archivo**, o bien seleccione **Examinar** para abrir **Ubicación del archivo de script**. En **Guardar como**, seleccione **Texto Unicode** o **Texto ANSI**.  
   
      **Generar script en Portapapeles**  
      Guarda el script en el Portapapeles.  
@@ -119,7 +118,7 @@ ms.locfileid: "97485507"
      **Generar script en la ventana Nueva consulta**  
      Genera el script en una nueva ventana del Editor de consultas. Esta es la selección predeterminada.  
   
-     Si selecciona **Programar**, haga clic en **Cambiar programación**.  
+     Si selecciona **Programar**, seleccione **Cambiar programación**.  
   
     1.  En el cuadro de diálogo **Nueva programación de trabajo**, en el cuadro **Nombre**, escriba el nombre de la programación de trabajo.  
   
@@ -129,9 +128,9 @@ ms.locfileid: "97485507"
   
         -   **Iniciar al quedar inactivas las CPU**  
   
-        -   **Periódica**. Seleccione esta opción si la nueva tabla con particiones se actualiza con la nueva información de forma regular.  
+        -   **Periódica**. Seleccione esta opción si la nueva tabla con particiones se actualiza con la nueva información de forma periódica.  
   
-        -   **Una vez**. Esta es la selección predeterminada.  
+        -   **Una vez**. Esta opción es la selección predeterminada.  
   
     3.  Active o desactive la casilla **Habilitado** para habilitar o deshabilitar la programación.  
   
@@ -145,15 +144,15 @@ ms.locfileid: "97485507"
   
             -   Si selecciona **Mensual**, seleccione **Día** o **El**.  
   
-                -   Si selecciona **Día**, especifique la fecha del mes que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si quiere que la programación de trabajo se ejecute el decimoquinto día de cada mes, seleccione **Día** y escriba "15" en el primer cuadro y "2" en el segundo. Tenga en cuenta que el mayor número permitido en el segundo cuadro es "99".  
+                -   Si selecciona **Día**, especifique la fecha del mes que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si quiere que la programación de trabajo se ejecute el decimoquinto día de cada mes, seleccione **Día** y escriba "15" en el primer cuadro y "2" en el segundo. Tenga en cuenta que el mayor número permitido en el segundo cuadro es "99".  
   
-                -   Si selecciona **El**, seleccione el día concreto de la semana del mes en que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si quiere que la programación de trabajo se ejecute el último día de la semana de cada mes, seleccione **Día**, seleccione **último** en la primera lista y **día de la semana** en la segunda y, después, escriba "2" en el último cuadro. En las primeras dos listas, también puede seleccionar **primero**, **segundo**, **tercero** o **cuarto**, así como días de la semana concretos (por ejemplo: domingo o miércoles). Tenga en cuenta que el mayor número permitido en el último cuadro es "99".  
+                -   Si selecciona **El**, seleccione el día concreto de la semana del mes en que desea que se ejecute la programación de trabajo y con qué frecuencia debe repetirse la programación de trabajo en meses. Por ejemplo, si quiere que la programación de trabajo se ejecute el último día de la semana de cada mes, seleccione **Día**, seleccione **último** en la primera lista y **día de la semana** en la segunda y, después, escriba "2" en el último cuadro. En las primeras dos listas, también puede seleccionar **primero**, **segundo**, **tercero** o **cuarto**, así como días de la semana concretos (por ejemplo: domingo o miércoles). Tenga en cuenta que el mayor número permitido en el último cuadro es "99".  
   
         2.  Debajo de **Frecuencia diaria**, especifique la frecuencia con que se repite la programación de trabajo en el día en que se ejecuta:  
   
             -   Si selecciona **Sucede una vez a las**, escriba la hora concreta en que debe ejecutarse la programación de trabajo en el cuadro **Sucede una vez a las** . Especifique la hora, minuto y segundo del día, así como a.m. o p.m.  
   
-            -   Si selecciona **Sucede cada**, especifique la frecuencia con que se ejecuta la programación de trabajo durante el día seleccionado en **Frecuencia**. Por ejemplo, si quiere que la programación de trabajo se repita cada dos horas al día cuando se ejecuta, seleccione **Sucede cada**, escriba "2" en el primer cuadro y, después, seleccione **horas** en la lista. En esta lista también puede seleccionar **minutos** y **segundos**. Tenga en cuenta que el mayor número permitido en el primer cuadro es "100".  
+            -   Si selecciona **Sucede cada**, especifique la frecuencia con que se ejecuta la programación de trabajo durante el día seleccionado en **Frecuencia**. Por ejemplo, si quiere que la programación de trabajo se repita cada dos horas al día cuando se ejecuta, seleccione **Sucede cada**, escriba "2" en el primer cuadro y, después, seleccione **horas** en la lista. En esta lista también puede seleccionar **minutos** y **segundos**. Tenga en cuenta que el mayor número permitido en el primer cuadro es "100".  
   
                  En el cuadro **A partir de** , especifique la hora en que la programación de trabajo debe iniciar su ejecución. En el cuadro **Finaliza** , especifique la hora en que la programación de trabajo debe dejar de repetirse. Especifique la hora, minuto y segundo del día, así como a.m. o p.m.  
   
@@ -163,11 +162,11 @@ ms.locfileid: "97485507"
   
     6.  Debajo de **Resumen**, en **Descripción**, compruebe que todos los valores de la programación de trabajo son correctos.  
   
-    7.  Haga clic en **OK**.  
+    7.  Seleccione **Aceptar**.  
   
-     Después de completar esta página, haga clic en **Siguiente**.  
+     Después de completar esta página, seleccione **Siguiente**.  
   
-7.  En la página **Revisar resumen** , bajo **Revisar opciones seleccionadas**, expanda todas las opciones disponibles para comprobar que todos los valores de la compresión son correctos. Si todo está como se esperaba, haga clic en **Finalizar**.  
+7.  En la página **Revisar resumen** , bajo **Revisar opciones seleccionadas**, expanda todas las opciones disponibles para comprobar que todos los valores de la compresión son correctos. Si todo está como se esperaba, seleccione **Finalizar**.  
   
 8.  En la página **Progreso del asistente para compresión** , supervise la información de estado sobre las acciones del Asistente para la creación de particiones. Según las opciones que se seleccionen en el asistente, la página de progreso puede contener una o varias acciones. El cuadro superior muestra el estado general del asistente y el número de mensajes de estado, error y advertencia que ha recibido.  
   
@@ -200,7 +199,7 @@ ms.locfileid: "97485507"
      **Enviar informe como correo electrónico**  
      Copia los resultados del informe de progreso del asistente en un mensaje de correo electrónico.  
   
-     Cuando termine, haga clic en **Cerrar**.  
+     Cuando haya finalizado, seleccione **Cerrar**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
 
@@ -212,9 +211,9 @@ En SQL Server, ejecute `sp_estimate_data_compression_savings` y, después, habi
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
+2.  En la barra Estándar, seleccione **Nueva consulta**.  
   
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo primero se ejecuta el procedimiento almacenado `sp_estimate_data_compression_savings` para devolver el tamaño estimado del objeto en caso de que se use la configuración de compresión ROW. Después, se habilita la compresión de ROW en todas las particiones de la tabla especificada.  
+3.  Copie y pegue el ejemplo siguiente en la ventana de consulta y seleccione **Ejecutar**. En el ejemplo primero se ejecuta el procedimiento almacenado `sp_estimate_data_compression_savings` para devolver el tamaño estimado del objeto en caso de que se use la configuración de compresión ROW. Después, se habilita la compresión de ROW en todas las particiones de la tabla especificada.  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -230,9 +229,9 @@ En SQL Server, ejecute `sp_estimate_data_compression_savings` y, después, habi
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
+2.  En la barra Estándar, seleccione **Nueva consulta**.  
   
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo primero se consulta la vista de catálogo `sys.indexes` para devolver el nombre y el `index_id` para cada índice en la tabla `Production.TransactionHistory` . Después, se ejecuta el procedimiento almacenado `sp_estimate_data_compression_savings` para devolver el tamaño estimado del identificador del índice especificado en caso de que se use el valor de compresión PAGE. Finalmente, en el ejemplo se vuelve a generar el identificador de índice 2 (`IX_TransactionHistory_ProductID`), especificando la compresión PAGE.  
+3.  Copie y pegue el ejemplo siguiente en la ventana de consulta y seleccione **Ejecutar**. En el ejemplo primero se consulta la vista de catálogo `sys.indexes` para devolver el nombre y el `index_id` para cada índice en la tabla `Production.TransactionHistory` . Después, se ejecuta el procedimiento almacenado `sp_estimate_data_compression_savings` para devolver el tamaño estimado del identificador del índice especificado en caso de que se use el valor de compresión PAGE. Finalmente, en el ejemplo se vuelve a generar el identificador de índice 2 (`IX_TransactionHistory_ProductID`), especificando la compresión PAGE.  
   
     ```sql  
     USE AdventureWorks2012;   
@@ -254,15 +253,15 @@ En SQL Server, ejecute `sp_estimate_data_compression_savings` y, después, habi
     
 ### <a name="on-azure-sql-database"></a>En Azure SQL Database
 
-Azure SQL Database no admite `sp_estimate_data_compression`. Los scripts siguientes habilitan la compresión sin estimar la cantidad de esta. 
+Azure SQL Database no admite el procedimiento almacenado `sp_estimate_data_compression_savings`. Los scripts siguientes habilitan la compresión sin estimar la cantidad de esta. 
 
 #### <a name="to-enable-compression-on-a-table"></a>Para habilitar la compresión en una tabla  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
+2.  En la barra Estándar, seleccione **Nueva consulta**.  
   
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo se habilita la compresión de ROW en todas las particiones de la tabla especificada.  
+3.  Copie y pegue el ejemplo siguiente en la ventana de consulta y seleccione **Ejecutar**. En el ejemplo se habilita la compresión de ROW en todas las particiones de la tabla especificada.  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -277,9 +276,9 @@ Azure SQL Database no admite `sp_estimate_data_compression`. Los scripts siguien
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
+2.  En la barra Estándar, seleccione **Nueva consulta**.  
   
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo primero se consulta la vista de catálogo `sys.indexes` para devolver el nombre y el `index_id` para cada índice en la tabla `Production.TransactionHistory` . Finalmente, en el ejemplo se vuelve a generar el identificador de índice 2 (`IX_TransactionHistory_ProductID`), especificando la compresión PAGE.  
+3.  Copie y pegue el ejemplo siguiente en la ventana de consulta y seleccione **Ejecutar**. En el ejemplo primero se consulta la vista de catálogo `sys.indexes` para devolver el nombre y el `index_id` para cada índice en la tabla `Production.TransactionHistory` . Finalmente, en el ejemplo se vuelve a generar el identificador de índice 2 (`IX_TransactionHistory_ProductID`), especificando la compresión PAGE.  
   
     ```sql  
     USE AdventureWorks2012;   

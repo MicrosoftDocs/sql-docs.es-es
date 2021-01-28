@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d7e51afb97a5ff698ef9a504375783b93ef9640
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: d8e1c8af9fbd147c7a20ae773dc1797026240293
+ms.sourcegitcommit: 0576ce6d7c9c5514306a90e27fa621ef25825186
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170667"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98575732"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guía de diseño y de arquitectura de índices de SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +69,7 @@ Para obtener más información sobre los índices de texto completo, vea [Rellen
  <sup>1</sup> Los almacenes de filas han sido la forma tradicional de almacenar los datos de una tabla relacional. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], "almacén de filas" hace referencia a la tabla en la que el formato de almacenamiento de datos subyacente es un montón, un árbol B ([índice agrupado](#Clustered)) o una tabla optimizada para memoria.
 
 ### <a name="index-design-tasks"></a>Tareas del diseño de índices  
- Las siguientes tareas componen la estrategia recomendada para el diseño de índices:  
+ Las tareas siguientes componen la estrategia recomendada para el diseño de índices:  
   
 1.  Comprender las características de la propia base de datos. 
     * Por ejemplo, si es una base de datos de procesamiento de transacciones en línea (OLTP) con modificaciones de datos frecuentes que deben tener un alto rendimiento. A partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], las tablas y los índices optimizados para memoria son especialmente adecuados en este escenario, ya que proporcionan un diseño sin bloqueos temporales. Para obtener más información, en esta guía podrá ver [Índices de tablas optimizadas para memoria](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md), [Nonclustered Index for Memory-Optimized Tables Design Guidelines](#inmem_nonclustered_index) (Guía de diseño de índices no agrupados para tablas optimizadas para memoria) y [Hash Index for Memory-Optimized Tables Design Guidelines](#hash_index) (Guía de diseño de índices de hash para tablas optimizadas para memoria).

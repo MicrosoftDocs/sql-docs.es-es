@@ -4,16 +4,16 @@ description: En este artículo se ofrecen instrucciones y procedimientos recomen
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 12/11/2020
+ms.date: 01/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 89b8a7c087fb87ed911be640126ec81021b045a7
-ms.sourcegitcommit: 2991ad5324601c8618739915aec9b184a8a49c74
+ms.openlocfilehash: 9a73013e7d49523f8aba418a2961336998190fc5
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97323627"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689122"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Procedimientos recomendados de rendimiento e instrucciones de configuración para SQL Server en Linux
 
@@ -33,7 +33,7 @@ Considere la posibilidad de usar las siguientes opciones de configuración del s
 
 El subsistema de almacenamiento que hospeda los datos, los registros de transacciones y otros archivos asociados (por ejemplo, los archivos de punto de comprobación para OLTP en memoria) debe ser capaz de administrar las cargas de trabajo de tipo medio y máximo correctamente. Normalmente, en entornos locales, el proveedor de almacenamiento admite la configuración de RAID de hardware adecuada con la división en varios discos para garantizar los valores adecuados de IOPS, rendimiento y redundancia. Pero esto puede diferir en otros proveedores de almacenamiento y en otras ofertas de almacenamiento con distintas arquitecturas.
 
-En el caso de SQL Server en Linux implementado en Azure Virtual Machines, considere la posibilidad de usar RAID de software para asegurarse de que se consiguen los requisitos de rendimiento e IOPS adecuados. Consulte el artículo siguiente al configurar SQL Server en máquinas virtuales de Azure para obtener consideraciones de almacenamiento similares: [Configuración del almacenamiento para VM de SQL Server](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/storage-configuration)
+En el caso de SQL Server en Linux implementado en Azure Virtual Machines, considere la posibilidad de usar RAID de software para asegurarse de que se consiguen los requisitos de rendimiento e IOPS adecuados. Consulte el artículo siguiente al configurar SQL Server en máquinas virtuales de Azure para obtener consideraciones de almacenamiento similares: [Configuración del almacenamiento para VM de SQL Server](/azure/azure-sql/virtual-machines/windows/storage-configuration)
 
 El siguiente es un ejemplo de cómo crear RAID de software en Linux en Azure Virtual Machines. A continuación se proporciona un ejemplo, pero debe usar el número adecuado de discos de datos para los valores necesarios de rendimiento e IOPS para los volúmenes en función de los requisitos de datos, registro de transacciones y E/S de tempdb. En este ejemplo, se han conectado 8 discos de datos a la máquina virtual de Azure: 4 para hospedar archivos de datos, 2 para registros de transacciones y 2 para la carga de trabajo de tempdb.
 
@@ -48,6 +48,31 @@ mdadm --create --verbose /dev/md1 --level=raid10 --chunk=64K --raid-devices=2 /d
 # For tempdb volume, using 2 devices in RAID 0 configuration with 64KB stripes
 mdadm --create --verbose /dev/md2 --level=raid0 --chunk=64K --raid-devices=2 /dev/sdi /dev/sdj
 ```
+
+#### <a name="disk-partitioning-and-configuration-recommendations"></a>Recomendaciones de configuración y partición de discos
+
+Para SQL Server, se recomienda usar configuraciones RAID. La unidad de franja del sistema de archivos implementada (sunit) y el ancho de franja deben coincidir con la geometría de RAID. Este es un ejemplo basado en sistema de archivos XFS para un volumen de registro. 
+
+```bash
+# Creating a log volume, using 6 devices, in RAID 10 configuration with 64KB stripes
+mdadm --create --verbose /dev/md3 --level=raid10 --chunk=64K --raid-devices=6 /dev/sda /dev/sdb /dev/sdc /dev/sdd /dev/sde /dev/sdf
+
+mkfs.xfs /dev/sda1 -f -L log 
+meta-data=/dev/sda1              isize=512    agcount=32, agsize=18287648 blks 
+         =                       sectsz=4096  attr=2, projid32bit=1 
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0 
+         =                       reflink=1 
+data     =                       bsize=4096   blocks=585204384, imaxpct=5 
+         =                       sunit=16     swidth=48 blks 
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1 
+log      =internal log           bsize=4096   blocks=285744, version=2 
+         =                       sectsz=4096  sunit=1 blks, lazy-count=1 
+realtime =none                   extsz=4096   blocks=0, rtextents=0 
+```
+
+La matriz de registro es una unidad RAID-10 de 6 unidades con una franja de 64 k. Como puede ver:
+   1. "sunit=16 blks", 16*4096 blk size= 64k coincide con el tamaño de franja. 
+   2. "swidth = 48 blks", swidth/sunit = 3 es el número de unidades de datos de la matriz, excepto las unidades de paridad. 
 
 #### <a name="file-system-configuration-recommendation"></a>Recomendación de configuración del sistema de archivos
 
@@ -195,7 +220,8 @@ En la tabla siguiente se proporcionan recomendaciones para la configuración del
 
 **Descripción:**
 
-- **vm.swappiness**: este parámetro controla el peso relativo dado para intercambiar memoria en tiempo de ejecución limitando el kernel al intercambio de páginas de memoria de proceso de SQL Server.
+- **vm.swappiness**: este parámetro controla el peso relativo dado para intercambiar memoria de proceso en tiempo de ejecución en comparación con la caché del sistema de archivos. El valor predeterminado de este parámetro es 60, que indica el intercambio de páginas de memoria de proceso en tiempo de ejecución en comparación con la eliminación de páginas de caché del sistema de archivos con una proporción de 60:140. Al establecer el valor 1 se indica una preferencia segura por mantener la memoria de proceso en tiempo de ejecución en la memoria física a costa de la caché del sistema de archivos. Como SQL Server usa el grupo de búferes como una caché de páginas de datos y prefiere escribir en el hardware físico omitiendo la caché del sistema de archivos para una recuperación confiable, la configuración de intercambio intenso puede ser beneficiosa para una instancia dedicada de SQL Server y de alto rendimiento.
+Puede encontrar información adicional en [Documentación de /proc/sys/vm/ - #swappiness](https://www.kernel.org/doc/html/latest/admin-guide/sysctl/vm.html#swappiness).
 
 - **vm.dirty_\** _: los accesos de escritura de archivos de SQL Server no están almacenados en caché, lo que satisface sus requisitos de integridad de datos. Estos parámetros permiten un rendimiento de escritura asincrónico eficaz y reducen el impacto de la E/S de almacenamiento de las escrituras de almacenamiento en caché de Linux al permitir un almacenamiento en caché suficientemente grande mientras se limita el vaciado.
 
@@ -245,6 +271,114 @@ tuned-adm profile mssql
 ```
 
 El perfil **_Optimizado_ *_ **mssql** configura la opción _* transparent_hugepage**.
+
+#### <a name="network-setting-recommendations"></a>Recomendaciones de configuración de red
+
+Al igual que existen recomendaciones de almacenamiento y de CPU, hay recomendaciones específicas de red que se enumeran a continuación como referencia. No todas las opciones de configuración que se mencionan a continuación están disponibles en otras NIC. Consulte a los proveedores de NIC si quiere obtener instrucciones para cada una de estas opciones. Pruebe y configure esto en entornos de desarrollo antes de aplicarlas en entornos de producción. Las opciones que se mencionan a continuación se explican con ejemplos y los comandos que se usan son específicos del tipo de NIC y del proveedor. 
+
+1. Configuración del tamaño de búfer del puerto de red: en el ejemplo siguiente, la NIC se denomina "eth0", que es una NIC basada en Intel. En el caso de la NIC basada en Intel, el tamaño de búfer recomendado es de 4 KB (4096). Compruebe los valores máximos establecidos previamente y, después, configúrelo con los comandos de ejemplo que se muestran a continuación:
+
+ ```bash
+         #To check the pre-set maximums please run the command, example NIC name used here is:"eth0"
+         ethtool -g eth0
+         #command to set both the rx(recieve) and tx (transmit) buffer size to 4 KB. 
+         ethtool -G eth0 rx 4096 tx 4096
+         #command to check the value is properly configured is:
+         ethtool -g eth0
+  ```
+
+2. Habilitación de marcos gigantes: antes de habilitar los marcos gigantes, compruebe que todos los conmutadores de red, los enrutadores y los demás elementos esenciales de la ruta del paquete de red entre los clientes y SQL Server los admiten. Solo entonces, la habilitación de los marcos gigantes puede mejorar el rendimiento. Después de habilitar los marcos gigantes, conéctese a SQL Server y cambie el tamaño de los paquetes de red a 8060 con `sp_configure` como se muestra a continuación:
+
+```bash
+         #command to set jumbo frame to 9014 for a Intel NIC named eth0 is
+         ifconfig eth0 mtu 9014
+         #verify the setting using the command:
+         ip addr | grep 9014
+```
+
+```sql
+         sp_configure 'network packet size' , '8060'
+         go
+         reconfigure with override
+         go
+```
+
+3. De manera predeterminada, se recomienda establecer el puerto para la fusión de IRQ de RX/TX adaptable, lo que significa que la entrega de interrupción se ajustará para mejorar la latencia cuando la velocidad de los paquetes sea baja y mejorar el rendimiento cuando sea alta. Tenga en cuenta que es posible que esta configuración no esté disponible en todas la infraestructuras de red, por lo que debe revisar la infraestructura de red existente y confirmar que es compatible. En el ejemplo siguiente, la NIC se denomina "eth0", que es una NIC basada en Intel:
+
+```bash
+         #command to set the port for adaptive RX/TX IRQ coalescing
+         echtool -C eth0 adaptive-rx on
+         echtool -C eth0 adaptive-tx on
+         #confirm the setting using the command:
+         ethtool -c eth0
+```
+
+> [!NOTE]
+> Para obtener un comportamiento predecible en entornos de alto rendimiento, como los de pruebas comparativas, deshabilite la fusión de IRQ de RX/TX adaptable y, después, establezca específicamente la fusión de interrupciones RX/TX. Vea los comandos de ejemplo para deshabilitar la fusión de IRQ de RX/TX y, después, establezca los valores específicamente:
+
+```bash
+         #commands to disable adaptive RX/TX IRQ coalescing
+         echtool -C eth0 adaptive-rx off
+         echtool -C eth0 adaptive-tx off
+         #confirm the setting using the command:
+         ethtool -c eth0
+         #Let us set the rx-usecs parameter which specify how many microseconds after at least 1 packet is received before generating an interrupt, and the [irq] parameters are the corresponding delays in updating the #status when the interrupt is disabled. For Intel bases NICs below are good values to start with:
+         ethtool -C eth0 rx-usecs 100 tx-frames-irq 512
+         #confirm the setting using the command:
+         ethtool -c eth0
+```
+
+4. También se recomienda habilitar la opción RSS (Escalabilidad de tráfico de entrada) de manera predeterminada, para combinar los lados rx y tx de las colas de RSS. Ha habido escenarios concretos en los que, al trabajar con Soporte técnico de Microsoft, también se ha mejorado el rendimiento al deshabilitar RSS. Pruebe esta configuración en entornos de prueba antes de aplicarla en entornos de producción. El comando de ejemplo que se muestra a continuación es para las NIC de Intel.
+
+```bash
+         #command to get pre-set maximums
+         ethtool -l eth0 
+         #note the pre-set "Combined" maximum value. let's consider for this example, it is 8.
+         #command to combine the queues with the value reported in the pre-set "Combined" maximum value:
+         ethtool -L eth0 combined 8
+         #you can verify the setting using the command below
+         ethtool -l eth0
+```
+
+5. Trabajar con la afinidad de IRQ de puertos de NIC. Para lograr el rendimiento esperado mediante la modificación de la afinidad de IRQ, tenga en cuenta algunos parámetros importantes como el control por parte de Linux de la topología del servidor, la pila de controladores de NIC, la configuración predeterminada y el valor irqbalance. Las optimizaciones de la configuración de las afinidades de IRQ de puertos de NIC se realizan con el conocimiento de la topología del servidor, deshabilitando el valor irqbalance y con la configuración específica del proveedor de la NIC. A continuación se muestra un ejemplo de infraestructura de red específica de Mellanox que facilita la explicación de la configuración. Tenga en cuenta que los comandos cambiarán en función del entorno. Póngase en contacto con el proveedor de la NIC para obtener instrucciones adicionales:
+
+```bash
+         #disable irqbalance or get a snapshot of the IRQ settings and force the daemon to exit
+         systemctl disable irqbalance.service
+         #or
+         irqbalance --oneshot
+
+         #download the Mellanox mlnx_tuning_scripts tarball, https://www.mellanox.com/sites/default/files/downloads/tools/mlnx_tuning_scripts.tar.gz and extract it
+         tar -xvf mlnx_tuning_scripts.tar.gz
+         # be sure, common_irq_affinity.sh is executable. if not, 
+         # chmod +x common_irq_affinity.sh       
+
+         #display IRQ affinity for Mellanox NIC port; e.g eth0
+         ./show_irq_affinity.sh eth0
+
+         #optimize for best throughput performance
+         ./mlnx_tune -p HIGH_THROUGHPUT
+
+         #set hardware affinity to the NUMA node hosting physically the NIC and its port
+         ./set_irq_affinity_bynode.sh `\cat /sys/class/net/eth0/device/numa_node` eth0
+
+         #verify IRQ affinity
+         ./show_irq_affinity.sh eth0
+
+         #add IRQ coalescing optimizations
+         ethtool -C eth0 adaptive-rx off
+         ethtool -C eth0 adaptive-tx off
+         ethtool -C eth0  rx-usecs 750 tx-frames-irq 2048
+
+         #verify the settings
+         ethtool -c eth0
+```
+
+6. Una vez que se hayan realizado los cambios anteriores, compruebe la velocidad de la NIC para asegurarse de que coincida con la esperada mediante el comando siguiente:
+
+```bash
+         ethtool eth0 | grep -i Speed
+```
 
 #### <a name="additional-advanced-kernelos-configuration"></a>Configuración avanzada adicional del kernel o el sistema operativo
 

@@ -22,12 +22,12 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 295e21500b51bed644807c2cbbab03515fb7e7d9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: eb6024d0ad3ef6f34d170201c0fbacc3447dab26
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484007"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783603"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,7 +80,7 @@ Utilice TOP (o bien, OFFSET y FETCH) en lugar de SET ROWCOUNT para limitar el n�
 -   Como parte de una instrucción SELECT, el optimizador de consultas puede considerar el valor de *expression* en las cláusulas TOP o FETCH durante la optimización de consulta. Dado que usa SET ROWCOUNT fuera de una instrucción que ejecuta una consulta, su valor no se puede considerar en un plan de consulta.  
   
 ## <a name="compatibility-support"></a>Soporte de compatibilidad  
-Por compatibilidad con versiones anteriores, los paréntesis son opcionales en las instrucciones SELECT. Recomendamos que use siempre paréntesis para TOP en las instrucciones SELECT. Hacerlo proporciona coherencia con su uso necesario en las instrucciones INSERT, UPDATE, MERGE y DELETE. 
+Por compatibilidad con versiones anteriores, los paréntesis son opcionales en las instrucciones SELECT si la expresión es una constante entera. Recomendamos que use siempre paréntesis para TOP en las instrucciones SELECT. Hacerlo proporciona coherencia con su uso necesario en las instrucciones INSERT, UPDATE, MERGE y DELETE. 
   
 ## <a name="interoperability"></a>Interoperabilidad  
 La expresión TOP no afecta a las instrucciones que se pueden ejecutar debido a un desencadenador. Las tablas **insertadas** y **eliminadas** en los desencadenadores solo devuelven las filas verdaderamente afectadas por las instrucciones INSERT, UPDATE, MERGE o DELETE. Por ejemplo, si INSERT TRIGGER se desencadena como resultado de una instrucción INSERT que utilizó una cláusula TOP.  

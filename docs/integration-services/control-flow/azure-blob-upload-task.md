@@ -14,19 +14,19 @@ f1_keywords:
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4fefa039f03e061c683c3df916a25087cb9a4e5c
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 588bb693d5bcf8561d7f697dc910c483d63160a7
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96123669"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783086"
 ---
 # <a name="azure-blob-upload-task"></a>Tarea de carga de blobs de Azure
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-La **tarea de carga de blobs de Azure** permite a un paquete SSIS cargar archivos a un almacenamiento de blobs de Azure.
+La **tarea de carga de blobs de Azure** permite a un paquete SSIS cargar archivos en Azure Blob Storage.
     
 Para agregar una **tarea de carga de blobs de Azure**, arrástrela y colóquela en el Diseñador SSIS, haga doble clic o haga clic con el botón derecho y, luego, haga clic en **Editar** para ver el siguiente cuadro de diálogo del **Azure Blob Upload Task Editor** (Editor de la tarea de carga de blobs de Azure).  
   

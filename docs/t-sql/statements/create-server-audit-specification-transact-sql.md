@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ddd4bb610c9ed7d9a5da70c9633c31a86cc5b034
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 66dd3b3b036bdbebcbd19dd52a65d2bf4ac45d1e
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96131284"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783554"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ FOR SERVER AUDIT audit_name
 ## <a name="permissions"></a>Permisos  
  Los usuarios con el permiso ALTER ANY SERVER AUDIT pueden crear especificaciones de auditoría de servidor y enlazarlas a cualquier auditoría.  
   
- Una vez creada una especificación de auditoría de servidor, podrá ser consultada por las entidades de seguridad que cuenten con los permisos CONTROL SERVER o ALTER ANY SERVER AUDIT, así como por la cuenta sysadmin o las entidades de seguridad que tengan acceso explícito a la auditoría.  
+ Después de crearse una especificación de auditoría de servidor, la pueden ver los usuarios con el permiso CONTROL SERVER, la cuenta sysadmin o las entidades de seguridad que tengan acceso explícito a la auditoría.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una especificación de auditoría de servidor denominada `HIPAA_Audit_Specification` que audita los inicios de sesión erróneos, para una auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada `HIPAA_Audit`.  

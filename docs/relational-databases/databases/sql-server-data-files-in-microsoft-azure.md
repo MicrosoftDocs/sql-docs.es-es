@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 85d9e42b9c0ac537d6f33bd884b898374119972d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 22413b2fff8a3b243e4723ecc66862980f8d8abf
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099339"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766252"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Archivos de datos de SQL Server en Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "98099339"
 La característica Archivos de datos de SQL Server en Microsoft Azure habilita la compatibilidad nativa para los archivos de base de datos de SQL Server almacenados como blobs. Permite crear una base de datos de SQL Server que se ejecuta en el entorno local o en una máquina virtual de Microsoft Azure con una ubicación de almacenamiento dedicada para los datos de Microsoft Azure Blob Storage. También simplifica el proceso de mover bases de datos entre equipos. Puede desconectar las bases de datos de un equipo y conectarlas a otro. Además, proporciona una ubicación de almacenamiento alternativa para los archivos de copia de seguridad de la base de datos, lo que permite realizar la restauración desde o hasta Almacenamiento de Microsoft Azure. Por tanto, habilita diversas soluciones híbridas al aportar varias ventajas en cuanto a virtualización de datos, movimiento de datos, seguridad y disponibilidad, así como costos y mantenimiento reducidos para lograr escalado flexible y alta disponibilidad.
  
 > [!IMPORTANT]  
->  Almacenar bases de datos del sistema en Blob Storage de Azure no es recomendable y no se admite. 
+>  El almacenamiento de bases de datos del sistema en Azure Blob Storage no es recomendable y no se admite. 
 
  En este tema se describen los conceptos y los factores básicos a la hora de almacenar archivos de datos de SQL Server en el Servicio de Azure Storage.  
   

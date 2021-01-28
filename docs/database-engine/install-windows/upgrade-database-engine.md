@@ -15,24 +15,24 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: dd6c78880419b2330e109d4e1f1416c99f84963d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c855e1a72e1cbd0f6012e4af19701fbaf6c71e68
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460708"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765528"
 ---
 # <a name="upgrade-database-engine"></a>Actualizar el motor de base de datos
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-  Con los artículos de esta sección aprenderá a actualizar el motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Con los artículos de esta sección aprenderá a actualizar el motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].  
   
 1.  [Elija un método de actualización del motor de base de datos](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md). Antes de comenzar una actualización, debe comprender los distintos métodos de actualización. En este artículo se describen los métodos de actualización y los pasos implicados en cada método de actualización.  
   
 2.  [Planee y pruebe el plan de actualización del motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md). Después de revisar los métodos de actualización, está a punto para desarrollar el método de actualización adecuado para su entorno y, después, probar el método de actualización antes de actualizar el entorno existente. En este artículo se describe el desarrollo de un plan de actualización y su prueba.  
   
-3.  [Complete la actualización del motor de base de datos](../../database-engine/install-windows/complete-the-database-engine-upgrade.md). Una vez que se haya actualizado el motor de base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y las bases de datos estén en línea, debe realizar otros pasos, como efectuar una copia de seguridad nueva, actualizar la funcionalidad de las bases de datos para habilitar nuevas características y volver a rellenar los catálogos de texto completo. En este artículo se describen estos pasos.  
+3.  [Complete la actualización del motor de base de datos](../../database-engine/install-windows/complete-the-database-engine-upgrade.md). Una vez que se haya actualizado el motor de base de datos y las bases de datos estén en línea, debe realizar otros pasos, como hacer una copia de seguridad nueva, actualizar la funcionalidad de las bases de datos para habilitar nuevas características y volver a rellenar los catálogos de texto completo. En este artículo se describen estos pasos.  
   
 4.  Actualice el [Nivel de compatibilidad de la base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) (**Se aplica a:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Uno de los pasos que debe realizar cuando las bases de datos estén en línea en la nueva versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] puede ser actualizar el modo de funcionalidad de estas para habilitar las nuevas características cambiando el nivel de compatibilidad de la base de datos. Esto se puede hacer manualmente a través del Asistente para optimización de consultas. 
 
