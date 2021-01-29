@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 11/04/2019
-ms.openlocfilehash: a778fd92a44a229ae6806cef31a10b728f241865
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.date: 1/25/2021
+ms.openlocfilehash: 39c48fc84047deea9c2bf49751c9bc3a491023b7
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87987730"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766399"
 ---
 # <a name="sql-assessment-api"></a>API de SQL Assessment
 
@@ -22,23 +22,45 @@ La API SQL Server Assessment ofrece un mecanismo para evaluar la configuración
 
 La API SQL Server Assessment resulta útil si quiere asegurarse de que la configuración de SQL Server esté en consonancia con los procedimientos recomendados. Después de una valoración inicial, se puede realizar un seguimiento de la estabilidad de la configuración mediante evaluaciones programadas periódicamente.
 
-La API se puede usar para evaluar Azure SQL Managed Instance y SQL Server (versión 2012 y posteriores). Asimismo, SQL se admite en Linux.
+La API se puede usar para evaluar lo siguiente:
+ 
+* Instancia administrada de Azure SQL Database y SQL Server, versión 2012 y posteriores.
+
+* SQL en sistemas basados en Linux.
+
+La extensión SQL Assessment de SQL Server también usa la API para Azure Data Studio (ADS).
 
 ## <a name="rules"></a>Reglas
 
-Las reglas, a las que a veces se hace referencia como "comprobaciones", se definen en archivos con formato JSON. El formato del conjunto de reglas requiere que se especifique el nombre y la versión de este. Por lo tanto, al usar conjuntos de reglas personalizados, podrá saber fácilmente qué recomendaciones proceden de los distintos conjunto de reglas.
+Las reglas, a las que a veces se hace referencia como "comprobaciones", se definen en archivos con formato JSON. El formato del conjunto de reglas requiere que se especifiquen su nombre y versión. Al usar conjuntos de reglas personalizados, podrá saber fácilmente qué recomendaciones proceden de los distintos conjunto de reglas.
 
 El conjunto de reglas de Microsoft está disponible en GitHub. Puede visitar el [repositorio de ejemplos](https://aka.ms/sql-assessment-api) para obtener más detalles.
 
-## <a name="sql-assessment-cmdlets-and-smo-extension"></a>Cmdlets de SQL Assessment y extensión de SMO
+## <a name="sql-assessment-cmdlets-and-associated-extensions"></a>Cmdlets de SQL Assessment y extensiones asociadas
 
-La API SQL Server Assessment forma parte de la versión de lanzamiento de [Objetos de administración de SQL Server (SMO)](../../relational-databases/server-management-objects-smo/installing-smo.md) de julio de 2019 y versiones posteriores, y de la versión de lanzamiento del módulo [SQL Server PowerShell](../../powershell/download-sql-server-ps-module.md) de julio de 2019 y versiones posteriores.
+La API de SQL Assessment forma parte de:
+
+* [Azure Data Studio (ADS)](../../azure-data-studio/what-is-azure-data-studio.md)
+
+    Versión de junio de 2020 y posteriores.
+
+* [Objetos de administración de SQL Server (SMO)](../../relational-databases/server-management-objects-smo/installing-smo.md)
+
+    Versión de julio de 2019 y posteriores.
+
+* [Módulo de SQL Server PowerShell](../../powershell/download-sql-server-ps-module.md)
+
+    Versión de julio de 2019 y posteriores.
+
+Antes de empezar a usar la API de SQL Assessment, asegúrese de lo siguiente:
+
+* [Instalación de ADS](https://techcommunity.microsoft.com/t5/sql-server/released-sql-server-assessment-extension-for-azure-data-studio/ba-p/1470603)
 
 * [Instalación de SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)
 
 * [Instalación de un módulo de SQL Server PowerShell](../../powershell/download-sql-server-ps-module.md)
 
-El módulo SqlServer incluye dos nuevos cmdlets para trabajar con la API SQL Server Assessment:
+El módulo SqlServer incluye dos nuevos cmdlets para trabajar con la API de la extensión SQL Assessment de SQL Server:
 
 * **Get-SqlAssessmentItem**: ofrece una lista de las comprobaciones de valoración disponibles para un objeto SQL Server.
 
@@ -46,11 +68,11 @@ El módulo SqlServer incluye dos nuevos cmdlets para trabajar con la API SQL Se
 
 El marco de SMO se complementa con la extensión de la API SQL Server Assessment que proporciona los métodos siguientes:
 
-* **GetAssessmentItems** : devuelve las comprobaciones disponibles para un objeto SQL determinado (IEnumerable<…>).
+* **GetAssessmentItems**: devuelve las comprobaciones disponibles para un objeto de SQL Server determinado (IEnumerable<…>).
 
-* **GetAssessmentResults** : evalúa sincrónicamente la valoración y devuelve los resultados y errores, si hay alguno (IEnumerable<…>).
+* **GetAssessmentResults**: evalúa sincrónicamente la valoración, y devuelve los resultados y errores, si los hay (IEnumerable<…>).
 
-* **GetAssessmentResultsList** : evalúa sincrónicamente la valoración y devuelve los resultados y errores, si hay alguno (Task<…>).
+* **GetAssessmentResultsList**: evalúa asincrónicamente la valoración, y devuelve los resultados y errores, si los hay (Task<…>).
 
 ## <a name="get-started-using-sql-assessment-cmdlets"></a>Introducción al uso de cmdlets de SQL Server Assessment
 

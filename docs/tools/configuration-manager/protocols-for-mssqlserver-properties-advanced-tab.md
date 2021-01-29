@@ -2,22 +2,21 @@
 title: Propiedades de Protocolos de MSSQLSERVER (pestaña Opciones avanzadas)
 description: Obtenga información sobre las ventajas y los requisitos de la protección ampliada para la autenticación para el Motor de base de datos de SQL Server. Vea cómo habilitarla y configurarla.
 ms.custom: seo-lt-2019
-ms.date: 01/24/2019
+ms.date: 01/22/2021
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: eabb3e524e052823d4ea7b04348a58ccaf24fb64
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ff312fefc29021a28df51ed4a845067d54024d6a
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478416"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813220"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Propiedades de Protocolos de MSSQLSERVER (pestaña Opciones avanzadas)
 
@@ -30,7 +29,7 @@ Utilice la pestaña **Opciones avanzadas** del cuadro de diálogo **Protocolos d
 > - [Protección ampliada de Windows \<extendedProtection\>](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
 > - [Introducción a la protección ampliada para la autenticación](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
 
-Para obtener más información acerca de cómo configurar otros servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y una descripción completa de **Protección ampliada**, vea la información más reciente de [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752).
+Para obtener más información sobre cómo configurar otros servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Administrar el servicio del motor de base de datos](../../database-engine/configure-windows/manage-the-database-engine-services.md). Para acceder a una descripción completa de la protección ampliada, consulte [Conectar al motor de base de datos con protección ampliada](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).
 
 La **Protección ampliada** es plenamente compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client a partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Actualmente no se garantiza la compatibilidad de la **Protección ampliada** con otros proveedores de clientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 

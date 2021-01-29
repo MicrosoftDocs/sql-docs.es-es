@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 0c822321323eb5f74fda34df2d540b7c5c79c382
-ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
+ms.openlocfilehash: b499c7236391c7286c4a267c433ad991a963dab5
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98151325"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98688934"
 ---
 # <a name="sqlcmd-utility"></a>Utilidad sqlcmd
 
@@ -70,7 +70,7 @@ La nueva versión de BCP admite la autenticación de Azure AD, incluida la comp
 
 **Requisitos del sistema** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2019.
 
-Este componente requiere [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) y [Microsoft ODBC Driver 17 para SQL Server](https://aka.ms/downloadmsodbcsql).
+Este componente requiere [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) y [Microsoft ODBC Driver 17 para SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
  
 Para comprobar la versión de SQLCMD, ejecute el comando `sqlcmd -?` y confirme que la versión de 15.0.2000.5 o superior está usándose.
 
@@ -180,7 +180,7 @@ El cliente usa este modificador al conectarse a SQL Database o a Azure Synapse A
 
 > [!IMPORTANT]
 > La opción `-G` solo se aplica a Azure SQL Database y Almacenamiento de datos de Azure.
-> La autenticación interactiva de AAD no se admite actualmente ni en Linux ni en macOS. La autenticación integrada de AAD requiere la versión 17.6.1 o superior de [Microsoft ODBC Driver 17 for SQL  Server](https://aka.ms/downloadmsodbcsql) y un entorno de Kerberos configurado correctamente.
+> La autenticación interactiva de AAD no se admite actualmente ni en Linux ni en macOS. La autenticación integrada de AAD requiere la versión 17.6.1 o superior de [Microsoft ODBC Driver 17 for SQL  Server](../connect/odbc/download-odbc-driver-for-sql-server.md) y un entorno de Kerberos configurado correctamente.
 
 - **Nombre de usuario y contraseña de Azure Active Directory:** 
 
@@ -218,7 +218,7 @@ El cliente usa este modificador al conectarse a SQL Database o a Azure Synapse A
 
     La autenticación interactiva de Azure AD para Azure SQL Database y Azure Synapse Analytics permite usar un método interactivo que admite la autenticación multifactor. Para obtener más información, vea [Autenticación interactiva de Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
-   La autenticación interactiva de Azure AD requiere **sqlcmd**, [versión 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) o posterior, así como [ODBC, versión 17.2 o posterior](https://aka.ms/downloadmsodbcsql).  
+   La autenticación interactiva de Azure AD requiere **sqlcmd**, [versión 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) o posterior, así como [ODBC, versión 17.2 o posterior](../connect/odbc/download-odbc-driver-for-sql-server.md).  
 
    Para habilitar la autenticación interactiva, indique la opción -G solo con el nombre de usuario (-U), sin contraseña.
 
@@ -417,7 +417,7 @@ No. Sin embargo, se recomienda el uso de una contraseña segura.
  Si se especifica **-b** junto con esta opción, **sqlcmd** se cierra en caso de error. **-b** se describe más adelante en este artículo.  
   
  **-t** _query_timeout_  
- Especifica el número de segundos que tienen que transcurrir antes de que un comando (o la instrucción de SQL) exceda el tiempo de espera. Esta opción establece la variable de scripting de **sqlcmd** SQLCMDSTATTIMEOUT. Si no se especifica ningún valor para *tiempo_de_espera* , el comando no tiene tiempo de espera. *tiempo_de_espera**consulta* debe ser un número comprendido entre 1 y 65534. Si el valor proporcionado no es numérico o no está dentro de ese intervalo, **sqlcmd** generará un mensaje de error.  
+ Especifica el número de segundos que tienen que transcurrir antes de que un comando (o la instrucción de SQL) exceda el tiempo de espera. Esta opción establece la variable de scripting de **sqlcmd** SQLCMDSTATTIMEOUT. Si no se especifica ningún valor para *tiempo_de_espera* , el comando no tiene tiempo de espera. El valor de *query* *time_out* debe ser un número entre 1 y 65534. Si el valor proporcionado no es numérico o no está dentro de ese intervalo, **sqlcmd** generará un mensaje de error.  
   
 > [!NOTE]  
 >  El tiempo de espera real puede variar unos segundos con respecto al valor de *tiempo_de_espera* especificado.  
@@ -929,7 +929,7 @@ Use los procedimientos siguientes para ayudar a maximizar la exactitud:
 
 - Use **-V16** para registrar los [mensajes con una gravedad de nivel 16](../relational-databases/errors-events/database-engine-error-severities.md#levels-of-severity).  Los mensajes de gravedad 16 indican errores generales que el usuario puede corregir.
 
-- Una vez finalizado el proceso, compruebe el código de salida y la variable DOS ERRORLEVEL.  **sqlcmd** devolverá normalmente 0; de lo contrario, establecerá el valor de ERRORLEVEL configurado en **-V**.  En otras palabras, no cabe esperar que ERRORLEVEL tenga el mismo valor que el número de error que se ha comunicado desde SQL Server. El número de error es un valor específico de SQL Server correspondiente a la función del sistema [ **@@ERROR** ](../t-sql/functions/error-transact-sql.md).  ERRORLEVEL es un valor específico de SQLCMD que indica por qué ha finalizado (es decir, SQLCMD) y la especificación del argumento de la línea de comandos **-b** influye en su valor.
+- Una vez finalizado el proceso, compruebe el código de salida y la variable DOS ERRORLEVEL.  **sqlcmd** devolverá normalmente 0; de lo contrario, establecerá el valor de ERRORLEVEL configurado en **-V**.  En otras palabras, no cabe esperar que ERRORLEVEL tenga el mismo valor que el número de error que se ha comunicado desde SQL Server. El número de error es un valor específico de SQL Server correspondiente a la función del sistema [ **@@ERROR**](../t-sql/functions/error-transact-sql.md).  ERRORLEVEL es un valor específico de SQLCMD que indica por qué ha finalizado (es decir, SQLCMD) y la especificación del argumento de la línea de comandos **-b** influye en su valor.
 
 El uso de **-V16** en combinación con la comprobación del código de salida y DOS ERRORLEVEL puede ayudar a detectar errores en entornos automatizados, especialmente en las pruebas de calidad antes de una versión de producción.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: dbacb44550622f3c61a3cd58281619bb74652af7
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 62b5e5e18743d7425a011e00787ca374e8f90507
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96120821"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765867"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planear una instalación de SQL Server
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "96120821"
  Esta sección de la documentación de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica cómo instalar las funciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que forman parte de la plataforma de BI de Microsoft.  
   
  [Actualizar SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
- En esta sección se proporciona información general sobre la actualización de las instancias de la versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ En esta sección se proporciona información general sobre la actualización a partir de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Desinstalar SQL Server](../../sql-server/install/uninstall-sql-server.md)  
  Consulte esta sección para desinstalar por completo una instancia existente de [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] y preparar el sistema para poder volver a instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

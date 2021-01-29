@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 126ac3c36d7e72205c4e0268fcd4b1cedf993169
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b4f0e4ed75e992095cff1f9ae315e3036ba7ef90
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172387"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766228"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificaciones de capacidad máxima para SQL Server
 
@@ -122,7 +122,7 @@ Tamaño y número máximo de diversos objetos que se probaron en la Utilidad de 
 |Archivos de registro por base de datos|1|
 |Volúmenes por equipo|3|
 
-<sup>*</sup> El número máximo de instancias administradas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admitidas por la Utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede variar según la configuración de hardware del servidor. Para obtener información de introducción, vea [Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no está disponible en todas las ediciones de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](./editions-and-components-of-sql-server-2016.md).
+<sup>*</sup> El número máximo de instancias administradas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admitidas por la Utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede variar según la configuración de hardware del servidor. Para obtener información de introducción, vea [Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no está disponible en todas las ediciones de [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [Características compatibles con las ediciones de SQL Server 2019](./editions-and-components-of-sql-server-version-15.md), [Características compatibles con las ediciones de SQL Server 2017](./editions-and-components-of-sql-server-2017.md) y [Características compatibles con las ediciones de SQL Server 2016](./editions-and-components-of-sql-server-2016.md).
 
 ## <a name="ssnoversion-data-tier-application-objects"></a>Objetos de aplicación de capa de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 

@@ -9,18 +9,17 @@ dev_langs:
 - XML
 helpviewer_keywords:
 - DTAXML element
-ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 9dd7f40c3cfbac8739caacc10eb821fcd8b8845b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d82b1d9198946d9ef7c14e80d443d151a7154d3
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785997"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98812923"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML (DTA, elemento)
 
@@ -62,7 +61,7 @@ El elemento raíz de un archivo de entrada o salida XML del Asistente para la op
 |**Elementos secundarios**|[Elemento DTAInput &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)<br /><br /> Elemento **DTAOutput** (para obtener información, vea [Database Engine Tuning Advisor XML schema (Esquema XML del Asistente para la optimización de motor de base de datos)](https://schemas.microsoft.com/sqlserver/)).|  
   
 ## <a name="remarks"></a>Observaciones  
- Para obtener más información acerca de los espacios de nombres XML, vea el artículo sobre [espacios de nombres en un documento XML](https://go.microsoft.com/fwlink/?LinkId=7341) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN Library.  
+ Para obtener más información sobre los espacios de nombres XML, consulte [Administrar espacios de nombres en un documento XML](/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document). 
   
 ## <a name="example"></a>Ejemplo  
  Para ver ejemplos de elementos **DTAXML** típicos, consulte [Ejemplos de archivos de entrada XML &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md).  
@@ -70,5 +69,4 @@ El elemento raíz de un archivo de entrada o salida XML del Asistente para la op
 ## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
  [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
-  
   

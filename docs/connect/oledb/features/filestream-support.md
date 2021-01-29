@@ -13,12 +13,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server [FILESTREAM support]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c197dadade12e189e2914d01a19975d9d03b7de4
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: d1fcc048d51186289d13cbe8918b5328f8c604f8
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861483"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766133"
 ---
 # <a name="filestream-support-in-ole-db-driver-for-sql-server"></a>Compatibilidad con FILESTREAM en OLE DB Driver for SQL Server
 [!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
@@ -54,7 +54,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Compatibilidad con niveles inferiores  
-Si el cliente se compiló con OLE DB Driver for SQL Server y la aplicación se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]), el comportamiento de **varbinary(max)** será compatible con el comportamiento introducido por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Es decir, el tamaño máximo de los datos devueltos se limitará a 2 GB. Los resultados cuyo valor supere los 2 GB, se truncarán, y se devolverá una advertencia de tipo "datos de cadena truncados por la derecha". 
+Si el cliente se compiló con OLE DB Driver for SQL Server y la aplicación se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o una versión posterior), el comportamiento de **varbinary(max)** será compatible con el introducido por el cliente nativo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Es decir, el tamaño máximo de los datos devueltos se limitará a 2 GB. Los resultados cuyo valor supere los 2 GB, se truncarán, y se devolverá una advertencia de tipo "datos de cadena truncados por la derecha". 
   
 Cuando la compatibilidad de tipo de datos se establezca en 80, el comportamiento del cliente será coherente con el comportamiento del cliente de nivel inferior.  
   
