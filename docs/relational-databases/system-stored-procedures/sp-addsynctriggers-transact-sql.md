@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addsynctriggers_TSQL
 - sp_addsynctriggers
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 38c0e33c780e13f11266d8cafde93fbdca2ebc11
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 00782a900c02976c06f2cfcdf6c9184d90e8059d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539237"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211948"
 ---
 # <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,41 +58,41 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @sub_table = ] 'sub_table'` Es el nombre de la tabla del suscriptor. *sub_table* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @sub_table = ] 'sub_table'` Es el nombre de la tabla del suscriptor. *sub_table* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @sub_table_owner = ] 'sub_table_owner'` Es el nombre del propietario de la tabla del suscriptor. *sub_table_owner* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @sub_table_owner = ] 'sub_table_owner'` Es el nombre del propietario de la tabla del suscriptor. *sub_table_owner* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @publisher = ] 'publisher'` Es el nombre del servidor del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del servidor del publicador. *Publisher* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado. Si es NULL, se utiliza la base de datos actual.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname** y no tiene ningún valor predeterminado. Si es NULL, se utiliza la base de datos actual.  
   
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @ins_proc = ] 'ins_proc'` Es el nombre del procedimiento almacenado que admite inserciones de transacciones sincrónicas en el publicador. *ins_proc* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @ins_proc = ] 'ins_proc'` Es el nombre del procedimiento almacenado que admite inserciones de transacciones sincrónicas en el publicador. *ins_proc* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @upd_proc = ] 'upd_proc'` Es el nombre del procedimiento almacenado que admite actualizaciones de transacciones sincrónicas en el publicador. *ins_proc* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @upd_proc = ] 'upd_proc'` Es el nombre del procedimiento almacenado que admite actualizaciones de transacciones sincrónicas en el publicador. *ins_proc* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @del_proc = ] 'del_proc'` Es el nombre del procedimiento almacenado que admite eliminaciones de transacciones sincrónicas en el publicador. *ins_proc* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @del_proc = ] 'del_proc'` Es el nombre del procedimiento almacenado que admite eliminaciones de transacciones sincrónicas en el publicador. *ins_proc* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @cftproc = ] 'cftproc'` Es el nombre del procedimiento generado automáticamente que usan las publicaciones que permiten la actualización en cola. *cftproc* es de **tipo sysname**y no tiene ningún valor predeterminado. En las publicaciones que permiten la actualización inmediata, este valor es NULL. Este parámetro se aplica a las publicaciones que permiten la actualización en cola (actualización en cola y actualización inmediata con actualización en cola como conmutación por error).  
+`[ @cftproc = ] 'cftproc'` Es el nombre del procedimiento generado automáticamente que usan las publicaciones que permiten la actualización en cola. *cftproc* es de **tipo sysname** y no tiene ningún valor predeterminado. En las publicaciones que permiten la actualización inmediata, este valor es NULL. Este parámetro se aplica a las publicaciones que permiten la actualización en cola (actualización en cola y actualización inmediata con actualización en cola como conmutación por error).  
   
 `[ @proc_owner = ] 'proc_owner'` Especifica la cuenta de usuario en el publicador en la que se crearon todos los procedimientos almacenados generados automáticamente para la publicación de actualización (en cola o inmediato). *proc_owner* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @identity_col = ] 'identity_col'` Es el nombre de la columna de identidad en el publicador. *identity_col* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @identity_col = ] 'identity_col'` Es el nombre de la columna de identidad en el publicador. *identity_col* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @ts_col = ] 'timestamp_col'` Es el nombre de la columna **timestamp** en el publicador. *timestamp_col* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @ts_col = ] 'timestamp_col'` Es el nombre de la columna **timestamp** en el publicador. *timestamp_col* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @filter_clause = ] 'filter_clause'` Es una cláusula de restricción (WHERE) que define un filtro horizontal. Al especificar la cláusula de restricción, omita la palabra clave WHERE. *filter_clause*es de tipo **nvarchar (4000)** y su valor predeterminado es NULL.  
+`[ @filter_clause = ] 'filter_clause'` Es una cláusula de restricción (WHERE) que define un filtro horizontal. Al especificar la cláusula de restricción, omita la palabra clave WHERE. *filter_clause* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL.  
   
 `[ @primary_key_bitmap = ] 'primary_key_bitmap'` Es un mapa de bits de las columnas de clave principal de la tabla. *primary_key_bitmap* es **varbinary (4000)** y no tiene ningún valor predeterminado.  
   
-`[ @identity_support = ] identity_support` Habilita y deshabilita el control automático de intervalos de identidad cuando se utiliza la actualización en cola. *identity_support* es de **bit**y su valor predeterminado es **0**. **0** significa que no hay compatibilidad con el intervalo de identidad, **1** habilita el control automático del intervalo de identidad.  
+`[ @identity_support = ] identity_support` Habilita y deshabilita el control automático de intervalos de identidad cuando se utiliza la actualización en cola. *identity_support* es de **bit** y su valor predeterminado es **0**. **0** significa que no hay compatibilidad con el intervalo de identidad, **1** habilita el control automático del intervalo de identidad.  
   
 `[ @independent_agent = ] independent_agent` Indica si hay un único Agente de distribución (un agente independiente) para esta publicación, o una Agente de distribución por cada base de datos de publicación y par de base de datos de suscripciones (un agente compartido). Este valor refleja el valor de la propiedad independent_agent de la publicación definida en el publicador. *independent_agent* es un bit con un valor predeterminado de **0**. Si es **0**, el agente es un agente compartido. Si es **1**, el agente es un agente independiente.  
   
-`[ @distributor = ] 'distributor'` Es el nombre del distribuidor. *Distributor* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @distributor = ] 'distributor'` Es el nombre del distribuidor. *Distributor* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @pubversion = ] pubversion` Indica la versión del publicador. *pubversion* es de **tipo int**y su valor predeterminado es 1. **1** significa que la versión del publicador es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 o anterior; **2** significa que el publicador es [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) o posterior. *pubversion* debe establecerse explícitamente en **2** cuando la versión del publicador sea [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 o posterior.  
+`[ @pubversion = ] pubversion` Indica la versión del publicador. *pubversion* es de **tipo int** y su valor predeterminado es 1. **1** significa que la versión del publicador es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 o anterior; **2** significa que el publicador es [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) o posterior. *pubversion* debe establecerse explícitamente en **2** cuando la versión del publicador sea [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 o posterior.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

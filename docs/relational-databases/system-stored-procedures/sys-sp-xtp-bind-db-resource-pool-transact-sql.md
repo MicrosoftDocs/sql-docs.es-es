@@ -1,13 +1,13 @@
 ---
 description: sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
-title: Sys. sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs
+title: sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_xtp_bind_db_resource_pool_TSQL
 - sp_xtp_bind_db_resource_pool
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 436d04ea81df4b25646b4b56d8ac59ffc9fa3b91
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 73312fdb49f223f8a275ade2a13bf2d988649404
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540421"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205088"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'
  resource_pool_name  
  Nombre de un grupo de recursos de servidor existente.  
   
-## <a name="messages"></a>Mensajes  
+## <a name="messages"></a>Messages  
  Cuando se produce un error, `sp_xtp_bind_db_resource_pool` devuelve uno de estos mensajes.  
   
  **La base de datos no existe**  
@@ -93,7 +93,7 @@ Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'
 ```  
   
 **La base de datos ya está enlazada a otro grupo de recursos de servidor**  
- Una base de datos se puede enlazar a solo un grupo de recursos de servidor en todo momento. Los enlaces de la base de datos a grupos de recursos de servidor se deben haber quitado explícitamente antes de que se puedan enlazar a otro grupo. Vea [Sys. sp_xtp_unbind_db_resource_pool &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
+ Una base de datos se puede enlazar a solo un grupo de recursos de servidor en todo momento. Los enlaces de la base de datos a grupos de recursos de servidor se deben haber quitado explícitamente antes de que se puedan enlazar a otro grupo. Vea [sys.sp_xtp_unbind_db_resource_pool &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
 *La base de datos% s ya está enlazada al grupo de recursos% s.  Debe Desenlazar antes de poder crear un nuevo enlace.*  
   
 ```  

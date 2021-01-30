@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Catalog::Views
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26d61c1d2835d9dcabba82beb2a120330f8f2ead
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 51a32bb1952e5c8100ed1d13cb7ba72b99e8994d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982876"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169102"
 ---
 # <a name="views-collection-adox"></a>Colección de vistas (ADOX)
 Contiene todos los objetos de [vista](./view-object-adox.md) de un catálogo.  
   
 ## <a name="remarks"></a>Observaciones  
- El método [Append](./append-method-adox-views.md) de una colección **views** es único para ADOX. Se puede hacer lo siguiente:  
+ El método [Append](./append-method-adox-views.md) de una colección **views** es único para ADOX. Puede:  
   
 -   Agregue una nueva vista a la colección con el método **Append** .  
   
- Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Se puede hacer lo siguiente:  
+ Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
   
 -   Obtener acceso a una vista de la colección con la propiedad [Item](../ado-api/item-property-ado.md) .  
   

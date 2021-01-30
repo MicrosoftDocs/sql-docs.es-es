@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_defaultlanguage
 - sp_defaultlanguage_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5eb94ea64b22f233d1c7c1e5d508fc0704f931ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9c382a442e6b87220f2650e65adc03089f2014b3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549881"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195555"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,9 +44,9 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'` Es el nombre de inicio de sesión. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. el *Inicio de sesión* puede ser un inicio de sesión existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un usuario o grupo de Windows.  
+`[ @loginame = ] 'login'` Es el nombre de inicio de sesión. *login* es de **tipo sysname** y no tiene ningún valor predeterminado. el *Inicio de sesión* puede ser un inicio de sesión existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un usuario o grupo de Windows.  
   
-`[ @language = ] 'language'` Es el idioma predeterminado del inicio de sesión. *Language* es de **tipo sysname y su**valor predeterminado es NULL. *Language* debe ser un idioma válido en el servidor. Si no se especifica *Language* , *Language* se establece en el idioma predeterminado del servidor; el idioma predeterminado se define mediante el **idioma predeterminado**de la variable de configuración **sp_configure** . El cambio del idioma predeterminado del servidor no cambia el idioma predeterminado de los inicios de sesión existentes.  
+`[ @language = ] 'language'` Es el idioma predeterminado del inicio de sesión. *Language* es de **tipo sysname y su** valor predeterminado es NULL. *Language* debe ser un idioma válido en el servidor. Si no se especifica *Language* , *Language* se establece en el idioma predeterminado del servidor; el idioma predeterminado se define mediante el **idioma predeterminado** de la variable de configuración **sp_configure** . El cambio del idioma predeterminado del servidor no cambia el idioma predeterminado de los inicios de sesión existentes.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

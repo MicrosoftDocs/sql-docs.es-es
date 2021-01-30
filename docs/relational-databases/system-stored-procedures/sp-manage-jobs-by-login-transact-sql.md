@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_manage_jobs_by_login
 - sp_manage_jobs_by_login_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e16bce5905a993082ca480996fae9639dd053eeb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5f367f869092bde5458c732fda3e79bc06e43cb8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547631"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185351"
 ---
 # <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @action = ] 'action'` Acción que se va a realizar para el inicio de sesión especificado. *Action* es de tipo **VARCHAR (10)** y no tiene ningún valor predeterminado. Cuando *Action*es **Delete**, **sp_manage_jobs_by_login** elimina todos los trabajos que pertenecen a *current_owner_login_name*. Cuando se **REasigna**la *acción* , todos los trabajos se asignan a *new_owner_login_name*.  
+`[ @action = ] 'action'` Acción que se va a realizar para el inicio de sesión especificado. *Action* es de tipo **VARCHAR (10)** y no tiene ningún valor predeterminado. Cuando *Action* es **Delete**, **sp_manage_jobs_by_login** elimina todos los trabajos que pertenecen a *current_owner_login_name*. Cuando se **REasigna** la *acción* , todos los trabajos se asignan a *new_owner_login_name*.  
   
-`[ @current_owner_login_name = ] 'current_owner_login_name'` Nombre de inicio de sesión del propietario del trabajo actual. *current_owner_login_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` Nombre de inicio de sesión del propietario del trabajo actual. *current_owner_login_name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'` Nombre de inicio de sesión del nuevo propietario del trabajo. Use este parámetro solo si se **reasigna**la *acción* . *new_owner_login_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` Nombre de inicio de sesión del nuevo propietario del trabajo. Use este parámetro solo si se **reasigna** la *acción* . *new_owner_login_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

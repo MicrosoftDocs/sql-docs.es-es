@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - FetchProgress
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b84b963f42c83191c613dbb4849288fc862df474
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 53cd3be90492bb601c06138a3829d428d3abcaeb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973336"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167393"
 ---
 # <a name="fetchprogress-event-ado"></a>Evento FetchProgress (ADO)
-Se llama al evento **FetchProgress**periódicamente durante una operación asincrónica larga para informar del número de filas que se han recuperado actualmente en el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Se llama al evento **FetchProgress** periódicamente durante una operación asincrónica larga para informar del número de filas que se han recuperado actualmente en el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,7 +48,7 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
  Objeto de **conjunto de registros** que es el objeto para el que se recuperan los registros.  
   
 ## <a name="remarks"></a>Observaciones  
- Al usar **FetchProgress** con un **conjunto de registros**secundario, tenga en cuenta que los valores de los parámetros *Progress* y *MaxProgress* se derivan del conjunto de filas del [servicio de cursor](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) subyacente. Los valores devueltos representan el número total de registros del conjunto de filas subyacente, no solo el número de registros del capítulo actual.  
+ Al usar **FetchProgress** con un **conjunto de registros** secundario, tenga en cuenta que los valores de los parámetros *Progress* y *MaxProgress* se derivan del conjunto de filas del [servicio de cursor](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) subyacente. Los valores devueltos representan el número total de registros del conjunto de filas subyacente, no solo el número de registros del capítulo actual.  
   
 > [!NOTE]
 >  Para usar **FetchProgress** con Microsoft Visual Basic, se requiere Visual Basic 6,0 o posterior.  

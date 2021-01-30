@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - ExecuteOptions property [ADO], VBScript example
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8fe38de33ea0b5f0784af27f031d2a93759d15aa
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 148e889a4b9ac406732a5665d02dd9d52727b6ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722361"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168961"
 ---
 # <a name="executeoptions-property-rds"></a>Propiedad ExecuteOptions (RDS)
 Indica si la ejecución asincrónica está habilitada.  
@@ -39,11 +39,11 @@ Indica si la ejecución asincrónica está habilitada.
 >  Cada archivo ejecutable que utiliza estas constantes debe proporcionar declaraciones para ellos. Puede cortar y pegar las declaraciones de constantes que desee del archivo Adcvbs. Inc, que se encuentra en la carpeta de instalación predeterminada de la biblioteca RDS.  
   
 ## <a name="remarks"></a>Observaciones  
- Si **ExecuteOptions** está establecida en **adcExecAsync**, se ejecuta de forma asincrónica la siguiente llamada de **actualización** en [RDS. ](./datacontrol-object-rds.md) **Conjunto de registros**del objeto DataControl.  
+ Si **ExecuteOptions** está establecida en **adcExecAsync**, se ejecuta de forma asincrónica la siguiente llamada de **actualización** en [RDS.](./datacontrol-object-rds.md) **Conjunto de registros** del objeto DataControl.  
   
- Si intenta llamar a [RESET](./reset-method-rds.md), [Refresh](./refresh-method-rds.md), [SubmitChanges](./submitchanges-method-rds.md), [CancelUpdate](../ado-api/cancelupdate-method-ado.md)o [Recordset](./recordset-sourcerecordset-properties-rds.md) mientras otra operación asincrónica podría cambiar el [objeto RDS. ](./datacontrol-object-rds.md) Se está ejecutando el **conjunto de registros** del objeto DataControl; se produce un error.  
+ Si intenta llamar a [RESET](./reset-method-rds.md), [Refresh](./refresh-method-rds.md), [SubmitChanges](./submitchanges-method-rds.md), [CancelUpdate](../ado-api/cancelupdate-method-ado.md)o [Recordset](./recordset-sourcerecordset-properties-rds.md) mientras otra operación asincrónica podría cambiar el [objeto RDS.](./datacontrol-object-rds.md) Se está ejecutando el **conjunto de registros** del objeto DataControl; se produce un error.  
   
- Si se produce un error durante una operación asincrónica, el **objeto RDS. ** El valor [ReadyState](./readystate-property-rds.md) del objeto DataControl cambia de **adcReadyStateLoaded** a **adcReadyStateComplete**, y el valor de la propiedad **Recordset** no sigue siendo *nada*.  
+ Si se produce un error durante una operación asincrónica, el **objeto RDS.** El valor [ReadyState](./readystate-property-rds.md) del objeto DataControl cambia de **adcReadyStateLoaded** a **adcReadyStateComplete**, y el valor de la propiedad **Recordset** no sigue siendo *nada*.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataControl (RDS)](./datacontrol-object-rds.md)  

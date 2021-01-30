@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_get_ddl_history (Transact-SQL)
-title: Sys. sp_cdc_get_ddl_history (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_get_ddl_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_get_ddl_history
 - sp_cdc_get_ddl_history_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b00c56c4324c4e25e9a19dd71d342dfcaafcc76d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b83e018c8e8e7c5e2f4daa704e5b7a13e7789f0b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547303"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205961"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_time|**datetime**|Hora asociada al cambio de DDL.|  
   
 ## <a name="remarks"></a>Observaciones  
- Las modificaciones de DDL en la tabla de origen que cambian la estructura de las columnas de la tabla de origen, como agregar o quitar una columna, o cambiar el tipo de datos de una columna existente, se mantienen en la tabla [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Se puede crear un informe de estos cambios usando este procedimiento almacenado. Las entradas en cdc.ddl_history se realizan cuando el proceso de captura lee la transacción de DDL en el registro.  
+ Las modificaciones de DDL en la tabla de origen que cambian la estructura de las columnas de la tabla de origen, como agregar o quitar una columna, o cambiar el tipo de datos de una columna existente, se mantienen en la tabla [CDC.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Se puede crear un informe de estos cambios usando este procedimiento almacenado. Las entradas en cdc.ddl_history se realizan cuando el proceso de captura lee la transacción de DDL en el registro.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de base de datos db_owner para devolver filas para todas las instancias de captura de la base de datos. Para el resto de usuarios, requiere el permiso SELECT en todas las columnas capturadas en la tabla de origen y, si se ha definido un rol de acceso para la instancia de captura, la pertenencia a ese rol de base de datos.  

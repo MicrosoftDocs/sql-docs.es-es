@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLConnect
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 714bc6f69a72609ee266effff71f1898d62ec7d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90d982db52e0656fba25eb54065ea84b751a7b18
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461207"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206140"
 ---
 # <a name="sqlconnect-function"></a>Función SQLConnect
 **Conformidad**  
@@ -85,12 +85,12 @@ SQLRETURN SQLConnect(
 |08004|El servidor rechazó la conexión|El origen de datos rechazó el establecimiento de la conexión por motivos definidos por la implementación.|  
 |08S01|Error de vínculo de comunicación|Error en el vínculo de comunicación entre el controlador y el origen de datos al que el controlador estaba intentando conectar antes de que la función finalizara el procesamiento.|  
 |28000|Especificación de autorización no válida|El valor especificado para el *nombre de usuario* del argumento o el valor especificado para la *autenticación* de argumento infringió las restricciones definidas por el origen de datos.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer *\* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|(DM) el administrador de controladores no pudo asignar memoria necesaria para admitir la ejecución o la finalización de la función.|  
-|HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *ConnectionHandle*. Se llamó a la función **SQLConnect** y antes de completar la ejecución, se llamó a la [función SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) en *ConnectionHandle*y, a continuación, se llamó de nuevo a la función **SQLConnect** en el *ConnectionHandle*.<br /><br /> O bien, se llamó a la función **SQLConnect** y antes de completar la ejecución, se llamó a **SQLCancelHandle** en *ConnectionHandle* desde un subproceso diferente en una aplicación multiproceso.|  
+|HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *ConnectionHandle*. Se llamó a la función **SQLConnect** y antes de completar la ejecución, se llamó a la [función SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) en *ConnectionHandle* y, a continuación, se llamó de nuevo a la función **SQLConnect** en el *ConnectionHandle*.<br /><br /> O bien, se llamó a la función **SQLConnect** y antes de completar la ejecución, se llamó a **SQLCancelHandle** en *ConnectionHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *ConnectionHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
-|HY090|Longitud de búfer o cadena no válida|(DM) el valor especificado para el argumento *NameLength1*, *NameLength2*o *NameLength3* era menor que 0 pero no es igual a SQL_NTS.<br /><br /> (DM) el valor especificado para el argumento *NameLength1* superó la longitud máxima de un nombre de origen de datos.|  
+|HY090|Longitud de búfer o cadena no válida|(DM) el valor especificado para el argumento *NameLength1*, *NameLength2* o *NameLength3* era menor que 0 pero no es igual a SQL_NTS.<br /><br /> (DM) el valor especificado para el argumento *NameLength1* superó la longitud máxima de un nombre de origen de datos.|  
 |HYT00|Tiempo de espera agotado|El período de tiempo de espera de consulta expiró antes de que se completara la conexión al origen de datos. El período de tiempo de espera se establece mediante **SQLSetConnectAttr**, SQL_ATTR_LOGIN_TIMEOUT.|  
 |HY114|El controlador no admite la ejecución de función asincrónica de nivel de conexión|(DM) la aplicación habilitó la operación asincrónica en el identificador de conexión antes de realizar la conexión. Sin embargo, el controlador no admite operaciones asincrónicas en el identificador de conexión.|  
 |HYT01|Tiempo de espera de conexión agotado|Expiró el tiempo de espera de conexión antes de que el origen de datos respondiera a la solicitud. El período de tiempo de espera de la conexión se establece mediante **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
@@ -101,9 +101,9 @@ SQLRETURN SQLConnect(
 |IM005|Error de SQLAllocHandle del controlador en SQL_HANDLE_DBC|(DM) durante **SQLConnect**, el administrador de controladores llamó a la función **SQLAllocHandle** del controlador con un *HandleType* de SQL_HANDLE_DBC y el controlador devolvió un error.|  
 |IM006|Error de SQLSetConnectAttr del controlador|Durante **SQLConnect**, el administrador de controladores llamó a la función **SQLSetConnectAttr** del controlador y el controlador devolvió un error. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |IM009|No se puede conectar a la DLL de traducción|El controlador no pudo conectarse a la DLL de traducción que se especificó para el origen de datos.|  
-|IM010|El nombre del origen de datos es demasiado largo|(DM) * \* ServerName* tenía más de SQL_MAX_DSN_LENGTH caracteres.|  
+|IM010|El nombre del origen de datos es demasiado largo|(DM) *\* ServerName* tenía más de SQL_MAX_DSN_LENGTH caracteres.|  
 |IM014|El DSN especificado contiene una incoherencia de arquitectura entre el controlador y la aplicación|(DM) 32: la aplicación de bits usa un DSN que se conecta a un controlador de 64 bits; o viceversa.|  
-|IM015|Error de SQLConnect del controlador en SQL_HANDLE_DBC_INFO_HANDLE|Si un controlador devuelve SQL_ERROR, el administrador de controladores devolverá SQL_ERROR a la aplicación y se producirá un error en la conexión.<br /><br /> Para obtener más información acerca de SQL_HANDLE_DBC_INFO_TOKEN, vea [desarrollar el reconocimiento del grupo de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
+|IM015|Error de SQLConnect del controlador en SQL_HANDLE_DBC_INFO_HANDLE|Si un controlador devuelve SQL_ERROR, el administrador de controladores devolverá SQL_ERROR a la aplicación y se producirá un error en la conexión.<br /><br /> Para obtener más información acerca de SQL_HANDLE_DBC_INFO_TOKEN, vea [desarrollar el reconocimiento de Connection-Pool en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
 |IM017|El sondeo está deshabilitado en el modo de notificación asincrónico|Cada vez que se usa el modelo de notificación, el sondeo se deshabilita.|  
 |IM018|No se ha llamado a **SQLCompleteAsync** para completar la operación asincrónica anterior en este controlador.|Si la llamada de función anterior en el identificador devuelve SQL_STILL_EXECUTING y si el modo de notificación está habilitado, se debe llamar a **SQLCompleteAsync** en el identificador para realizar el procesamiento posterior y completar la operación.|  
 |S1118|El controlador no admite la notificación asincrónica|Cuando el controlador no admite la notificación asincrónica, no se puede establecer SQL_ATTR_ASYNC_DBC_EVENT o SQL_ATTR_ASYNC_DBC_RETCODE_PTR.|  
@@ -111,7 +111,7 @@ SQLRETURN SQLConnect(
 ## <a name="comments"></a>Comentarios  
  Para obtener información sobre por qué una aplicación usa **SQLConnect**, consulte [conectar con SQLConnect](../../../odbc/reference/develop-app/connecting-with-sqlconnect.md).  
   
- El administrador de controladores no se conecta a un controlador hasta que la aplicación llama a una función (**SQLConnect**, **SQLDriverConnect**o **SQLBrowseConnect**) para conectarse al controlador. Hasta ese momento, el administrador de controladores trabaja con sus propios identificadores y administra la información de conexión. Cuando la aplicación llama a una función de conexión, el administrador de controladores comprueba si un controlador está conectado actualmente a para el *ConnectionHandle*especificado:  
+ El administrador de controladores no se conecta a un controlador hasta que la aplicación llama a una función (**SQLConnect**, **SQLDriverConnect** o **SQLBrowseConnect**) para conectarse al controlador. Hasta ese momento, el administrador de controladores trabaja con sus propios identificadores y administra la información de conexión. Cuando la aplicación llama a una función de conexión, el administrador de controladores comprueba si un controlador está conectado actualmente a para el *ConnectionHandle* especificado:  
   
 -   Si un controlador no está conectado a, el administrador de controladores se conecta al controlador y llama a **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_ENV, **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_DBC, **SQLSetConnectAttr** (si la aplicación especificó algún atributo de conexión) y la función de conexión en el controlador. El administrador de controladores devuelve SQLSTATE IM006 (error de **SQLSetConnectOption** del controlador) y SQL_SUCCESS_WITH_INFO para la función de conexión si el controlador devolvió un error para **SQLSetConnectAttr**. Para obtener más información, vea [conectarse a un origen de datos o a un controlador](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md).  
   
@@ -142,16 +142,16 @@ SQLRETURN SQLConnect(
   
  Si un controlador admite **SQLConnect**, la sección de la palabra clave driver de la información del sistema para el controlador debe contener la palabra clave **ConnectFunctions** con el primer carácter establecido en "Y".  
   
-### <a name="connection-pooling"></a>Agrupación de conexiones  
+### <a name="connection-pooling"></a>Agrupar conexiones  
  La agrupación de conexiones permite a una aplicación volver a usar una conexión que ya se ha creado. Cuando la agrupación de conexiones está habilitada y se llama a **SQLConnect** , el administrador de controladores intenta establecer la conexión con una conexión que forma parte de un grupo de conexiones en un entorno que se ha designado para la agrupación de conexiones. Este entorno es un entorno compartido que usan todas las aplicaciones que usan las conexiones en el grupo.  
   
  La agrupación de conexiones está habilitada antes de que se asigne el entorno mediante una llamada a **SQLSetEnvAttr** para establecer SQL_ATTR_CONNECTION_POOLING en SQL_CP_ONE_PER_DRIVER (que especifica un máximo de un grupo por controlador) o SQL_CP_ONE_PER_HENV (que especifica un máximo de un grupo por entorno). En este caso, se llama a **SQLSetEnvAttr** con *EnvironmentHandle* establecido en null, lo que convierte el atributo en un atributo de nivel de proceso. Si SQL_ATTR_CONNECTION_POOLING está establecido en SQL_CP_OFF, la agrupación de conexiones está deshabilitada.  
   
  Una vez habilitada la agrupación de conexiones, se llama a **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_ENV para asignar un entorno. El entorno asignado por esta llamada es un entorno compartido porque se ha habilitado la agrupación de conexiones. Sin embargo, el entorno que se usará no se determinará hasta que se llame a **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_DBC.  
   
- Se llama a **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_DBC para asignar una conexión. El administrador de controladores intenta encontrar un entorno compartido existente que coincida con los atributos de entorno establecidos por la aplicación. Si no existe ningún entorno de este tipo, se crea uno como un *entorno compartido*implícito. Si se encuentra un entorno compartido coincidente, se devuelve el identificador de entorno a la aplicación y se incrementa su recuento de referencias.  
+ Se llama a **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_DBC para asignar una conexión. El administrador de controladores intenta encontrar un entorno compartido existente que coincida con los atributos de entorno establecidos por la aplicación. Si no existe ningún entorno de este tipo, se crea uno como un *entorno compartido* implícito. Si se encuentra un entorno compartido coincidente, se devuelve el identificador de entorno a la aplicación y se incrementa su recuento de referencias.  
   
- Sin embargo, la conexión que se utilizará no se determinará hasta que se llame a **SQLConnect** . En ese momento, el administrador de controladores intenta encontrar una conexión existente en el grupo de conexiones que coincida con los criterios solicitados por la aplicación. Estos criterios incluyen las opciones de conexión solicitadas en la llamada a **SQLConnect** (los valores de *ServerName*, *username*y las palabras clave de *autenticación* ) y cualquier atributo de conexión establecido desde **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_DBC se llamó a. El administrador de controladores comprueba estos criterios en función de las palabras clave de conexión y los atributos correspondientes de las conexiones del grupo. Si se encuentra una coincidencia, se usa la conexión en el grupo. Si no se encuentra ninguna coincidencia, se crea una nueva conexión.  
+ Sin embargo, la conexión que se utilizará no se determinará hasta que se llame a **SQLConnect** . En ese momento, el administrador de controladores intenta encontrar una conexión existente en el grupo de conexiones que coincida con los criterios solicitados por la aplicación. Estos criterios incluyen las opciones de conexión solicitadas en la llamada a **SQLConnect** (los valores de *ServerName*, *username* y las palabras clave de *autenticación* ) y cualquier atributo de conexión establecido desde **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_DBC se llamó a. El administrador de controladores comprueba estos criterios en función de las palabras clave de conexión y los atributos correspondientes de las conexiones del grupo. Si se encuentra una coincidencia, se usa la conexión en el grupo. Si no se encuentra ninguna coincidencia, se crea una nueva conexión.  
   
  Si el atributo de entorno SQL_ATTR_CP_MATCH está establecido en SQL_CP_STRICT_MATCH, la coincidencia debe ser exacta para una conexión del grupo que se va a usar. Si el atributo de entorno SQL_ATTR_CP_MATCH está establecido en SQL_CP_RELAXED_MATCH, las opciones de conexión de la llamada a **SQLConnect** deben coincidir, pero no todos los atributos de conexión deben coincidir.  
   
@@ -257,6 +257,6 @@ int main() {
 |Devolver el valor de un atributo de conexión|[Función SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Establecer un atributo de conexión|[Función SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

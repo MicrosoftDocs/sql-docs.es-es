@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLGetDescRec
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5237d8b1a1d070752219abd22936615060371a89
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a340ecc75e7ae4f03c44051f594fda7305a2a00f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461055"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205636"
 ---
 # <a name="sqlgetdescrec-function"></a>Función SQLGetDescRec
 **Conformidad**  
@@ -65,7 +65,7 @@ SQLRETURN SQLGetDescRec(
  Si *Name* es null, *StringLengthPtr* seguirá devolviendo el número total de caracteres (excepto el carácter de terminación null para los datos de caracteres) disponible para devolver en el búfer señalado por *el nombre*.  
   
  *BufferLength*  
- Entradas Longitud del búfer de*nombres* *, en caracteres.  
+ Entradas Longitud del búfer de *nombres* *, en caracteres.  
   
  *StringLengthPtr*  
  Genere Un puntero a un búfer en el que se va a devolver el número de caracteres de datos disponibles que se van a devolver en el búfer de \* *nombres* , excluido el carácter de terminación null. Si el número de caracteres es mayor o igual que *BufferLength*, los datos de \* *Name* se truncan en *BufferLength* menos la longitud de un carácter de terminación NULL y el controlador termina en NULL.  
@@ -104,10 +104,10 @@ SQLRETURN SQLGetDescRec(
 |01004|Datos de cadena, truncados a la derecha|El \* *nombre* de búfer no era lo suficientemente grande como para devolver el campo de descriptor completo. Por lo tanto, el campo se truncó. La longitud del campo descriptor untruncado se devuelve en **StringLengthPtr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |07009|Índice de descriptor no válido|El argumento *FieldIdentifier* era un campo registro, el argumento *RecNumber* se estableció en 0 y el argumento *DescriptorHandle* era un identificador IPD.<br /><br /> (DM) el argumento *RecNumber* se estableció en 0 y el atributo instrucción SQL_ATTR_USE_BOOKMARKS se estableció en SQL_UB_OFF, y el argumento *DescriptorHandle* era un identificador IRD.<br /><br /> El argumento *RecNumber* era menor que 0.|  
 |08S01|Error de vínculo de comunicación|Se produjo un error en el vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador antes de que la función finalizara el procesamiento.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer *\* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY007|La instrucción asociada no está preparada|*DescriptorHandle* se asoció con un IRD y el identificador de instrucción asociado no estaba en el estado preparado o ejecutado.|  
-|HY010|Error de secuencia de función|(DM) *DescriptorHandle* se asoció con un *StatementHandle* para el que se llamó a una función que se ejecuta de forma asincrónica (no a este) y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) *DescriptorHandle* se asoció con un *StatementHandle* para el que se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** y se devolvía SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *DescriptorHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a **SQLGetDescRec** .|  
+|HY010|Error de secuencia de función|(DM) *DescriptorHandle* se asoció con un *StatementHandle* para el que se llamó a una función que se ejecuta de forma asincrónica (no a este) y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) *DescriptorHandle* se asoció con un *StatementHandle* para el que se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** y se devolvía SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *DescriptorHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a **SQLGetDescRec** .|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
 |HY117|La conexión se suspendió debido a un estado de transacción desconocido. Solo se permiten las funciones de desconexión y de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Tiempo de espera de conexión agotado|Expiró el tiempo de espera de conexión antes de que el origen de datos respondiera a la solicitud. El período de tiempo de espera de la conexión se establece mediante **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
@@ -149,6 +149,6 @@ SQLRETURN SQLGetDescRec(
 |Obtención de un campo de descriptor|[Función SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
 |Establecer varios campos de descriptor|[Función SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

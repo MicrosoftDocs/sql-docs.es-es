@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmergefilter
 - sp_addmergefilter_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 662fc45f9d2d4377bdb9a02ce69047a469d5bfe7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 836f493a3ae4ca6d3f17928af0d5faa367bdd1b4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546297"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192341"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,17 +46,17 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación en la que se va a agregar el filtro de mezcla. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en la que se va a agregar el filtro de mezcla. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre del artículo en el que se va a agregar el filtro de mezcla. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre del artículo en el que se va a agregar el filtro de mezcla. *article* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @filtername = ] 'filtername'` Es el nombre del filtro. *nombrefiltro* es un parámetro necesario. *filtername*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @filtername = ] 'filtername'` Es el nombre del filtro. *nombrefiltro* es un parámetro necesario. *filtername* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @join_articlename = ] 'join_articlename'` Es el artículo primario al que el artículo secundario, especificado por *article*, debe combinarse mediante la cláusula de combinación especificada por *join_filterclause*, con el fin de determinar las filas del artículo secundario que cumplen el criterio de filtro del filtro de mezcla. *join_articlename* es de **tipo sysname**y no tiene ningún valor predeterminado. El artículo debe encontrarse en la publicación proporcionada por la *publicación*.  
+`[ @join_articlename = ] 'join_articlename'` Es el artículo primario al que el artículo secundario, especificado por *article*, debe combinarse mediante la cláusula de combinación especificada por *join_filterclause*, con el fin de determinar las filas del artículo secundario que cumplen el criterio de filtro del filtro de mezcla. *join_articlename* es de **tipo sysname** y no tiene ningún valor predeterminado. El artículo debe encontrarse en la publicación proporcionada por la *publicación*.  
   
-`[ @join_filterclause = ] join_filterclause` Es la cláusula de combinación que debe utilizarse para combinar el artículo secundario especificado por *article*y el artículo primario especificado por *join_article*, con el fin de determinar las filas que cumplen el filtro de mezcla. *join_filterclause* es **nvarchar (1000)**.  
+`[ @join_filterclause = ] join_filterclause` Es la cláusula de combinación que debe utilizarse para combinar el artículo secundario especificado por *article* y el artículo primario especificado por *join_article*, con el fin de determinar las filas que cumplen el filtro de mezcla. *join_filterclause* es **nvarchar (1000)**.  
   
-`[ @join_unique_key = ] join_unique_key` Especifica si la combinación entre *el artículo del artículo secundario y el*artículo primario *join_article*es uno a varios, uno a uno, varios a uno o varios a varios. *join_unique_key* es de **tipo int**y su valor predeterminado es 0. **0** indica una combinación de varios a uno o de varios a varios. **1** indica una combinación uno a uno o uno a varios. Este valor es **1** cuando las columnas de combinación forman una clave única en *join_article*o si *join_filterclause* se encuentra entre una clave externa en el *artículo* y una clave principal en *join_article*.  
+`[ @join_unique_key = ] join_unique_key` Especifica si la combinación entre *el artículo del artículo secundario y el* artículo primario *join_article* es uno a varios, uno a uno, varios a uno o varios a varios. *join_unique_key* es de **tipo int** y su valor predeterminado es 0. **0** indica una combinación de varios a uno o de varios a varios. **1** indica una combinación uno a uno o uno a varios. Este valor es **1** cuando las columnas de combinación forman una clave única en *join_article* o si *join_filterclause* se encuentra entre una clave externa en el *artículo* y una clave principal en *join_article*.  
   
 > [!CAUTION]  
 >  Establezca este parámetro en **1** únicamente si tiene una restricción en la columna de combinación de la tabla subyacente para el artículo primario que garantiza la unicidad. Si *join_unique_key* se establece en **1** de forma incorrecta, se puede producir la no convergencia de los datos.  
@@ -67,15 +67,15 @@ sp_addmergefilter [ @publication = ] 'publication'
   
  **1** especifica que los cambios en el artículo de mezcla pueden hacer que la instantánea no sea válida y, si hay suscripciones existentes que requieran una nueva instantánea, concede permiso para que la instantánea existente se marque como obsoleta y se genere una nueva instantánea.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Confirma que la acción realizada por este procedimiento almacenado puede requerir que se reinicialicen las suscripciones existentes. *force_reinit_subscription* es de **bit**y su valor predeterminado es 0.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Confirma que la acción realizada por este procedimiento almacenado puede requerir que se reinicialicen las suscripciones existentes. *force_reinit_subscription* es de **bit** y su valor predeterminado es 0.  
   
  **0** especifica que los cambios en el artículo de mezcla no harán que se reinicialice la suscripción. Si el procedimiento almacenado detecta que el cambio requiere que se reinicialicen las suscripciones, se producirá un error y no se realizarán cambios.  
   
  **1** especifica que los cambios en el artículo de mezcla harán que se reinicialicen las suscripciones existentes y concede permiso para que se produzca la reinicialización de la suscripción.  
   
-`[ @filter_type = ] filter_type` Especifica el tipo de filtro que se va a agregar. *filter_type* es **tinyint**y puede tener uno de los valores siguientes.  
+`[ @filter_type = ] filter_type` Especifica el tipo de filtro que se va a agregar. *filter_type* es **tinyint** y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Solo filtro de combinación. Necesario para admitir [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores.|  
 |**2**|Solo relación de registros lógicos.|  

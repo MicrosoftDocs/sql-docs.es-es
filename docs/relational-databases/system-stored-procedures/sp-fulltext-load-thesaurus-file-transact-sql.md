@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_fulltext_load_thesaurus_file
 - sp_fulltext_load_thesaurus_file_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7fa28cb49c289437bc6c9dea524d1ff9e8b8ac64
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 129bc6385628ef44d5103ddbac5f8ee7f51889ef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546198"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185410"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
@@ -43,9 +43,9 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="arguments"></a>Argumentos  
  *lcid*  
- Entero que asigna el identificador de configuración regional (LCID) del idioma para el que desea lade la definición de XML del Diccionario de sinónimos. Para obtener los LCID de los idiomas que están disponibles en una instancia de servidor, use la vista de catálogo [Sys. fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) .  
+ Entero que asigna el identificador de configuración regional (LCID) del idioma para el que desea lade la definición de XML del Diccionario de sinónimos. Para obtener los LCID de los idiomas que están disponibles en una instancia de servidor, use la sys.fulltext_languages &#40;vista de catálogo de [Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) .  
   
- ** \@ **  =  *acción* loadOnlyIfNotLoaded  
+ **\@**  =  *acción* loadOnlyIfNotLoaded  
  Especifica si el archivo de diccionario de sinónimos se carga en las tablas de diccionario de sinónimos internas aun cuando ya se haya cargado. la *acción* es una de las siguientes:  
   
 |Value|Definición|  

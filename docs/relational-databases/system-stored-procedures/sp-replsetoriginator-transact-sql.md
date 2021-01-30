@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replsetoriginator
 - sp_replsetoriginator_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bdb29bc47aebdf92589f9782bf63f424dd1995e6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c26248551ad949bcf27433d28898ba4ec98dc68b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534889"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211642"
 ---
 # <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,9 +39,9 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server_name = ] 'server_name'` Es el nombre del servidor donde se aplica la transacción. *originating_server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @server_name = ] 'server_name'` Es el nombre del servidor donde se aplica la transacción. *originating_server* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @database_name = ] 'database_name'` Es el nombre de la base de datos donde se aplica la transacción. *originating_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @database_name = ] 'database_name'` Es el nombre de la base de datos donde se aplica la transacción. *originating_db* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

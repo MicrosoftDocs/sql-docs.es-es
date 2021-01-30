@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergepartition
 - sp_helpmergepartition_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79e4d1ea4ea226706aa34db3121b2a4469a330b9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 06994bb4f0e606f0d67e797603e6f4a23899076b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546079"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185731"
 ---
 # <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +40,14 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @suser_sname = ] 'suser_sname'` Es el valor de SUSER_SNAME que se usa para definir una partición. *SUSER_SNAME* es de **tipo sysname y su**valor predeterminado es NULL. Proporcione este parámetro para limitar el conjunto de resultados tan solo a las particiones en que SUSER_SNAME se resuelve en el valor suministrado.  
+`[ @suser_sname = ] 'suser_sname'` Es el valor de SUSER_SNAME que se usa para definir una partición. *SUSER_SNAME* es de **tipo sysname y su** valor predeterminado es NULL. Proporcione este parámetro para limitar el conjunto de resultados tan solo a las particiones en que SUSER_SNAME se resuelve en el valor suministrado.  
   
 > [!NOTE]  
 >  Cuando se proporciona *SUSER_SNAME* , *host_name* debe ser null.  
   
-`[ @host_name = ] 'host_name'` Es el valor de HOST_NAME que se usa para definir una partición. *host_name* es de **tipo sysname y su**valor predeterminado es NULL. Proporcione este parámetro para limitar el conjunto de resultados tan solo a las particiones en que HOST_NAME se resuelve en el valor suministrado.  
+`[ @host_name = ] 'host_name'` Es el valor de HOST_NAME que se usa para definir una partición. *host_name* es de **tipo sysname y su** valor predeterminado es NULL. Proporcione este parámetro para limitar el conjunto de resultados tan solo a las particiones en que HOST_NAME se resuelve en el valor suministrado.  
   
 > [!NOTE]  
 >  Cuando se proporciona *SUSER_SNAME* , *host_name* debe ser null.  

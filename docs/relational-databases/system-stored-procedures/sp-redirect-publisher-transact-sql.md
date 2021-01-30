@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_redirect_publisher_TSQL
 - sp_redirect_publisher
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6c58ec557fd2d41a0fbbe7fc6ac728df56935542
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d7fef5e51b8a41e6e21d570a398775810dd23155
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543177"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185746"
 ---
 # <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +41,11 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @original_publisher = ] 'original_publisher'` Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicó originalmente la base de datos. *original_publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @original_publisher = ] 'original_publisher'` Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicó originalmente la base de datos. *original_publisher* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @publisher_db = ] 'publisher_db'` Nombre de la base de datos que se está publicando. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Nombre de la base de datos que se está publicando. *publisher_db* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` El nombre del agente de escucha del grupo de disponibilidad asociado al grupo de disponibilidad que será el nuevo publicador. *redirected_publisher* es de **tipo sysname**y no tiene ningún valor predeterminado. Cuando el agente de escucha de grupo de disponibilidad está configurado en un puerto que no es el predeterminado, especifique el número de puerto junto con el nombre del agente de escucha, como `'Listenername,51433'`  
+`[ @redirected_publisher = ] 'redirected_publisher'` El nombre del agente de escucha del grupo de disponibilidad asociado al grupo de disponibilidad que será el nuevo publicador. *redirected_publisher* es de **tipo sysname** y no tiene ningún valor predeterminado. Cuando el agente de escucha de grupo de disponibilidad está configurado en un puerto que no es el predeterminado, especifique el número de puerto junto con el nombre del agente de escucha, como `'Listenername,51433'`  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -56,7 +56,7 @@ sp_redirect_publisher
 ## <a name="remarks"></a>Observaciones  
  **sp_redirect_publisher** se usa para permitir que un publicador de replicación se redirija a la réplica principal actual de un grupo de disponibilidad de Always on mediante la Asociación del par de publicador y base de datos con el agente de escucha de un grupo de disponibilidad. Ejecute **sp_redirect_publisher** después de configurar el agente de escucha del AG para el grupo de disponibilidad que contiene la base de datos publicada.  
   
- Si la base de datos de publicación del publicador original se quita de un grupo de disponibilidad en la réplica principal, ejecute **sp_redirect_publisher** sin especificar un valor para el parámetro * \@ redirected_publisher* para quitar el redireccionamiento del par publicador/base de datos. Para obtener más información sobre cómo redirigir el publicador cuando, vea [mantener una base de datos de publicación alwayson &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Si la base de datos de publicación del publicador original se quita de un grupo de disponibilidad en la réplica principal, ejecute **sp_redirect_publisher** sin especificar un valor para el parámetro *\@ redirected_publisher* para quitar el redireccionamiento del par publicador/base de datos. Para obtener más información sobre cómo redirigir el publicador cuando, vea [mantener una base de datos de publicación alwayson &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
 ## <a name="permissions"></a>Permisos  
  El autor de la llamada debe ser miembro del rol fijo de servidor **sysadmin** , el rol fijo de base de datos **db_owner** para la base de datos de distribución, o un miembro de una lista de acceso a la publicación para una publicación definida asociada a la base de datos del publicador.  

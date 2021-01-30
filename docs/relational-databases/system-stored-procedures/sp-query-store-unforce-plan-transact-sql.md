@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SP_QUERY_STORE_UNFORCE_PLAN_TSQL
 - SP_QUERY_STORE_UNFORCE_PLAN
@@ -22,12 +22,12 @@ ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c07d581a603c25f7d222564a67636dbe23819bb0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a53c054c80a4e7fc05b50ee9b4d9310dbeb75ab0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468356"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185728"
 ---
 # <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan (Transact-SQL)
 

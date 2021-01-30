@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_enable_db (Transact-SQL)
-title: Sys. sp_cdc_enable_db (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_enable_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_enable_db_TSQL
 - sp_cdc_enable_db
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c40d3904737c7740c3658eda12e2f9c9df340b0a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a0756c34e9fc914abdb99cddef865d0968767ab3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534760"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205998"
 ---
 # <a name="syssp_cdc_enable_db-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,6 +71,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
+ [sys.sp_cdc_disable_db &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
   
   

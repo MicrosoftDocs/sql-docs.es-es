@@ -1,11 +1,11 @@
 ---
 description: sys.dm_fts_parser (Transact-SQL)
-title: Sys. dm_fts_parser (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_parser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_fts_parser_TSQL
 - dm_fts_parser
@@ -20,12 +20,12 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 3005c1d843796bfa9206750134d7be1c4f4546fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff5dac01f1fa48db60a384b8cc8bfb2216a5bab5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454964"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184322"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
@@ -51,7 +51,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *stoplist_id*  
  IDENTIFICADOR de la lista de palabras irrelevantes, si existe, que va a usar el separador de palabras identificado por *LCID*. *stoplist_id* es de **tipo int**. Si especifica ' NULL ', no se utiliza ninguna lista de palabras irrelevantes. Si se especifica 0, se utiliza la lista de palabras irrelevantes del sistema.  
   
- Un identificador de lista de palabras irrelevantes es único dentro de una base de datos. Para obtener el identificador de la lista de palabras irrelevantes de un índice de texto completo en una tabla determinada, use la vista de catálogo [Sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) .  
+ Un identificador de lista de palabras irrelevantes es único dentro de una base de datos. Para obtener el identificador de la lista de palabras irrelevantes de un índice de texto completo en una tabla determinada, use la vista de catálogo [Sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) .  
   
  *accent_sensitivity*  
  Valor booleano que controla si la búsqueda de texto completo distingue o no los signos diacríticos. *accent_sensitivity* es de **bits**, con uno de los siguientes valores:  
@@ -68,7 +68,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|palabra clave|**varbinary(128)**|Representación hexadecimal de una palabra clave determinada devuelta por un separador de palabras. Esta representación se utiliza para almacenar la palabra clave en el índice de texto completo. Este valor no es legible para el usuario, pero es útil para relacionar una palabra clave determinada con la salida devuelta por otras vistas de administración dinámica que devuelven el contenido de un índice de texto completo, como [Sys. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) y [Sys. dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Nota:** OxFF representa el carácter especial que indica el final de un archivo o conjunto de archivos.|  
+|palabra clave|**varbinary(128)**|Representación hexadecimal de una palabra clave determinada devuelta por un separador de palabras. Esta representación se utiliza para almacenar la palabra clave en el índice de texto completo. Este valor no es legible para el usuario, pero es útil para relacionar una palabra clave determinada con la salida devuelta por otras vistas de administración dinámica que devuelven el contenido de un índice de texto completo, como [Sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) y [Sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Nota:** OxFF representa el carácter especial que indica el final de un archivo o conjunto de archivos.|  
 |group_id|**int**|Contiene un valor entero que es útil para diferenciar el grupo lógico a partir del cual se generó un término determinado. Por ejemplo, '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' genera los valores de group_id siguientes en inglés:<br /><br /> 1: servidor<br />2: BASE DE<br />3: BASE DE|  
 |phrase_id|**int**|Contiene un valor entero que resulta útil para diferenciar los casos en los que el separador de palabras emite formatos alternativos de palabras compuestas, tales como texto completo. A veces, con la presencia de palabras compuestas ('multi-million') el separador de palabras emite formatos alternativos. En ocasiones, es necesario diferenciar estos formatos alternativos (frases).<br /><br /> Por ejemplo, '`multi-million`' genera los valores de phrase_id siguientes en inglés:<br /><br /> 1 para `multi`<br />1 para `million`<br />2 para `multimillion`|  
 |occurrence|**int**|Indica el orden de cada término en el resultado del análisis. Por ejemplo, para la repetición de la frase "`SQL Server query processor`", contendría los valores de repetición siguientes para los términos de la frase, en inglés:<br /><br /> 1 para `SQL`<br />2 para `Server`<br />3 para `query`<br />4 para `processor`|  
@@ -78,15 +78,15 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |source_term|**nvarchar(4000)**|Término o frase a partir de la cual se generó o analizó un término determinado. Por ejemplo, una consulta de '"`word breakers" AND stemmers'` genera los valores de source_term siguientes en inglés:<br /><br /> `word breakers` para el display_term`word`<br />`word breakers` para el display_term`breakers`<br />`stemmers` para el display_term`stemmers`|  
   
 ## <a name="remarks"></a>Observaciones  
- **Sys. dm_fts_parser** admite la sintaxis y las características de los predicados de texto completo, como [Contains](../../t-sql/queries/contains-transact-sql.md) y [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), y las funciones, como [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) y [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
+ **Sys.dm_fts_parser** admite la sintaxis y las características de los predicados de texto completo, como [Contains](../../t-sql/queries/contains-transact-sql.md) y [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), y las funciones, como [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) y [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>Usar Unicode para analizar caracteres especiales  
- Cuando se analiza una cadena de consulta, **Sys. dm_fts_parser** usa la intercalación de la base de datos a la que está conectado, a menos que se especifique la cadena de consulta como Unicode. Por lo tanto, para una cadena no Unicode que contenga caracteres especiales, como ü o ç, la salida podría ser inesperada, dependiendo de la intercalación de la base de datos. Para procesar una cadena de consulta independientemente de la intercalación de la base de datos, anteponga a la cadena `N` , es decir, `N'` *query_string* `'` .  
+ Cuando se analiza una cadena de consulta, **Sys.dm_fts_parser** usa la intercalación de la base de datos a la que está conectado, a menos que se especifique la cadena de consulta como Unicode. Por lo tanto, para una cadena no Unicode que contenga caracteres especiales, como ü o ç, la salida podría ser inesperada, dependiendo de la intercalación de la base de datos. Para procesar una cadena de consulta independientemente de la intercalación de la base de datos, anteponga a la cadena `N` , es decir, `N'` *query_string* `'` .  
   
  Para obtener más información, vea "C. Mostrar el resultado de una cadena que contiene caracteres especiales", más adelante en este tema.  
   
 ## <a name="when-to-use-sysdm_fts_parser"></a>Cuándo usar sys.dm_fts_parser  
- **Sys. dm_fts_parser** puede ser muy eficaz para la depuración. Algunos de los escenarios de uso principales son:  
+ **Sys.dm_fts_parser** puede ser muy eficaz para la depuración. Algunos de los escenarios de uso principales son:  
   
 -   Entender cómo trata un separador de palabras determinado una entrada dada  
   
@@ -166,8 +166,8 @@ SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
  [Funciones y vistas de administración dinámica de la búsqueda de texto completo y la búsqueda semántica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Búsqueda de texto completo](../../relational-databases/search/full-text-search.md)   
  [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Configurar y administrar archivos de sinónimos para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [Configurar y administrar palabras irrelevantes y palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Configurar y administrar archivos de sinónimos para búsquedas de Full-Text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
  [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
  [Elementos protegibles](../../relational-databases/security/securables.md)  

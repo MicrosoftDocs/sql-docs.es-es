@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_delete_mailitems_sp_TSQL
 - sysmail_delete_mailitems_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1bcfc2bbd5069e50399eaa6b23fc69938ec6a05
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 14e9d1fa942fc41f4865e70460465691e4aef6ef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538507"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182041"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +43,13 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ## <a name="arguments"></a>Argumentos  
 `[ \@sent_before = ] 'sent_before'` Elimina los mensajes de correo electrónico hasta la fecha y la hora proporcionadas como *sent_before* argumento. *sent_before* es de **tipo DateTime** y su valor predeterminado es NULL. NULL indica todas las fechas.  
   
-`[ \@sent_status = ] 'sent_status'` Elimina los mensajes de correo electrónico del tipo especificado por *sent_status*. *sent_status* es de tipo **VARCHAR (8)** y no tiene ningún valor predeterminado. Las entradas válidas se **envían**, no se **envían**, se **reintentan**y **se produce un error**. NULL indica todos los estados.  
+`[ \@sent_status = ] 'sent_status'` Elimina los mensajes de correo electrónico del tipo especificado por *sent_status*. *sent_status* es de tipo **VARCHAR (8)** y no tiene ningún valor predeterminado. Las entradas válidas se **envían**, no se **envían**, se **reintentan** y **se produce un error**. NULL indica todos los estados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Observaciones  
- Correo electrónico de base de datos mensajes y sus datos adjuntos se almacenan en la base de datos **msdb** . Los mensajes deben eliminarse periódicamente para evitar que **msdb** crezca más de lo esperado y cumplir con el programa de retención de documentos de las organizaciones. Utilice el **sysmail_delete_mailitems_sp** procedimiento almacenado para eliminar de forma permanente los mensajes de correo electrónico de las tablas de correo electrónico de base de datos. Un argumento opcional permite eliminar solo los mensajes de correo electrónico antiguos indicando la fecha y la hora. Se eliminarán los mensajes de correo electrónico anteriores al valor de ese argumento. Otro argumento opcional permite eliminar solo los mensajes de correo electrónico de un tipo determinado, especificado como el argumento **sent_status** . Debe proporcionar un argumento para ** \@ sent_before** o ** \@ sent_status**. Para eliminar todos los mensajes, utilice ** \@ sent_before = getDate ()**.  
+ Correo electrónico de base de datos mensajes y sus datos adjuntos se almacenan en la base de datos **msdb** . Los mensajes deben eliminarse periódicamente para evitar que **msdb** crezca más de lo esperado y cumplir con el programa de retención de documentos de las organizaciones. Utilice el **sysmail_delete_mailitems_sp** procedimiento almacenado para eliminar de forma permanente los mensajes de correo electrónico de las tablas de correo electrónico de base de datos. Un argumento opcional permite eliminar solo los mensajes de correo electrónico antiguos indicando la fecha y la hora. Se eliminarán los mensajes de correo electrónico anteriores al valor de ese argumento. Otro argumento opcional permite eliminar solo los mensajes de correo electrónico de un tipo determinado, especificado como el argumento **sent_status** . Debe proporcionar un argumento para **\@ sent_before** o **\@ sent_status**. Para eliminar todos los mensajes, utilice **\@ sent_before = getDate ()**.  
   
  Si se eliminan mensajes de correo electrónico, se eliminarán también los archivos adjuntos relacionados con los mismos. Al eliminar el correo electrónico, no se eliminan las entradas correspondientes en **sysmail_event_log**. Use [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) para eliminar elementos del registro.  
   

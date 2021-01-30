@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_job
 - sp_update_job_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 494e284bb9df06094116d075979673bf2b033dea
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e559c50589681f7d00b1bd6048b1e23579213bee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551205"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184700"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` Número de identificación del trabajo que se va a actualizar. *job_id*es de tipo **uniqueidentifier**.  
+`[ @job_id = ] job_id` Número de identificación del trabajo que se va a actualizar. *job_id* es de tipo **uniqueidentifier**.  
   
 `[ @job_name = ] 'job_name'` Nombre del trabajo. *job_name* es **nvarchar (128)**.  
   
@@ -75,20 +75,20 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 `[ @owner_login_name = ] 'login'` Nombre del inicio de sesión al que pertenece el trabajo. *login* es **nvarchar (128)** solo los miembros del rol fijo de servidor **sysadmin** pueden cambiar la propiedad del trabajo.  
   
-`[ @notify_level_eventlog = ] eventlog_level` Especifica cuándo se debe colocar una entrada en el registro de aplicación de Microsoft Windows para este trabajo. *eventlog_level*es de **tipo int**y puede tener uno de estos valores.  
+`[ @notify_level_eventlog = ] eventlog_level` Especifica cuándo se debe colocar una entrada en el registro de aplicación de Microsoft Windows para este trabajo. *eventlog_level* es de **tipo int** y puede tener uno de estos valores.  
   
-|Valor|Descripción (acción)|  
+|Value|Descripción (acción)|  
 |-----------|----------------------------|  
 |**0**|Nunca|  
 |**1**|En caso de éxito|  
 |**2**|En caso de error|  
 |**3**|Siempre|  
   
-`[ @notify_level_email = ] email_level` Especifica cuándo se debe enviar un mensaje de correo electrónico al finalizar este trabajo. *email_level*es de **tipo int**. *email_level*usa los mismos valores que *eventlog_level*.  
+`[ @notify_level_email = ] email_level` Especifica cuándo se debe enviar un mensaje de correo electrónico al finalizar este trabajo. *email_level* es de **tipo int**. *email_level* usa los mismos valores que *eventlog_level*.  
   
-`[ @notify_level_netsend = ] netsend_level` Especifica cuándo se debe enviar un mensaje de red al finalizar este trabajo. *netsend_level*es de **tipo int**. *netsend_level*usa los mismos valores que *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` Especifica cuándo se debe enviar un mensaje de red al finalizar este trabajo. *netsend_level* es de **tipo int**. *netsend_level* usa los mismos valores que *eventlog_level*.  
   
-`[ @notify_level_page = ] page_level` Especifica cuándo se debe enviar una página al finalizar este trabajo. *page_level* es de **tipo int**. *page_level*usa los mismos valores que *eventlog_level*.  
+`[ @notify_level_page = ] page_level` Especifica cuándo se debe enviar una página al finalizar este trabajo. *page_level* es de **tipo int**. *page_level* usa los mismos valores que *eventlog_level*.  
   
 `[ @notify_email_operator_name = ] 'operator_name'` Nombre del operador al que se envía el correo electrónico cuando se alcanza *email_level* . *email_name* es **nvarchar (128)**.  
   
@@ -96,7 +96,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 `[ @notify_page_operator_name = ] 'page_operator'` Nombre del operador al que se envía una página. *page_operator* es **nvarchar (128)**.  
   
-`[ @delete_level = ] delete_level` Especifica cuándo se debe eliminar el trabajo. *delete_value*es de **tipo int**. *delete_level*usa los mismos valores que *eventlog_level*.  
+`[ @delete_level = ] delete_level` Especifica cuándo se debe eliminar el trabajo. *delete_value* es de **tipo int**. *delete_level* usa los mismos valores que *eventlog_level*.  
   
 `[ @automatic_post = ] automatic_post` Sector.  
   

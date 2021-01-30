@@ -6,18 +6,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bbf4cdae12da71f5fc4d3b8fbc11b7ca64c46c5b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4d3d765cbeba49a5c34bbc5529d833cefc5bb1ab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976496"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167912"
 ---
 # <a name="ado-dynamic-property-index"></a>Índice de propiedades dinámicas de ADO
 Los proveedores de datos, los proveedores de servicios y los componentes de servicio pueden agregar propiedades dinámicas a las colecciones de **propiedades** de los objetos [Connection](./connection-object-ado.md) y [Recordset](./recordset-object-ado.md) no abiertos. Un proveedor determinado también puede insertar propiedades adicionales cuando se abren estos objetos. Algunas de estas propiedades se muestran en la sección [propiedades dinámicas de ADO](./ado-dynamic-properties.md) . Encontrará más información en los proveedores específicos de la sección [Apéndice A: proveedores](../../guide/appendixes/appendix-a-providers.md) .  
@@ -77,15 +77,15 @@ Los proveedores de datos, los proveedores de servicios y los componentes de serv
 |Preparar el comportamiento de anulación|DBPROP_PREPAREABORTBEHAVIOR|  
 |Preparar el comportamiento de confirmación|DBPROP_PREPARECOMMITBEHAVIOR|  
 |Término del procedimiento|DBPROP_PROCEDURETERM|  
-|Prompt|DBPROP_INIT_PROMPT|  
+|Solicitud|DBPROP_INIT_PROMPT|  
 |Nombre descriptivo del proveedor|DBPROP_PROVIDERFRIENDLYNAME|  
 |Nombre del proveedor|DBPROP_PROVIDERFILENAME|  
 |Versión del proveedor|DBPROP_PROVIDERVER|  
-|Origen de datos de solo lectura|DBPROP_DATASOURCEREADONLY|  
+|Read-Only origen de datos|DBPROP_DATASOURCEREADONLY|  
 |Conversiones del conjunto de filas en el comando|DBPROP_ROWSETCONVERSIONSONCOMMAND|  
 |Término de esquema|DBPROP_SCHEMATERM|  
 |Uso de esquemas|DBPROP_SCHEMAUSAGE|  
-|Compatibilidad con SQL|DBPROP_SQLSUPPORT|  
+|Soporte técnico de SQL|DBPROP_SQLSUPPORT|  
 |Almacenamiento estructurado|DBPROP_STRUCTUREDSTORAGE|  
 |Compatibilidad con subconsultas|DBPROP_SUBQUERIES|  
 |Término de tabla|DBPROP_TABLETERM|  
@@ -126,7 +126,7 @@ Los proveedores de datos, los proveedores de servicios y los componentes de serv
 |IStream|DBPROP_ISTREAM|  
 |ISupportErrorInfo|DBPROP_ISUPPORTERRORINFO|  
 |Orden de acceso|DBPROP_ACCESSORDER|  
-|Conjunto de filas de solo anexar|DBPROP_APPENDONLY|  
+|Conjunto de filas Append-Only|DBPROP_APPENDONLY|  
 |Procesamiento de conjuntos de filas asíncronos|DBPROP_ROWSET_ASYNCH|  
 |Recalc automático|DBPROP_ADC_AUTORECALC|  
 |Tamaño de captura en segundo plano|DBPROP_ASYNCHFETCHSIZE|  

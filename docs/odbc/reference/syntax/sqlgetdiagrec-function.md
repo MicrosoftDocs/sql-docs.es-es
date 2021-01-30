@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLGetDiagRec
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7f141891292fb80d53ba06e03329b66cbc8b826e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93b5b85d6c20a58d314dcb7f7c53f391c15a1491
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461018"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194177"
 ---
 # <a name="sqlgetdiagrec-function"></a>Función SQLGetDiagRec
 **Conformidad**  
@@ -63,7 +63,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_HANDLE_STMT  
   
- El identificador de SQL_HANDLE_DBC_INFO_TOKEN solo lo utiliza el administrador de controladores y el controlador. Las aplicaciones no deben usar este tipo de identificador. Para obtener más información acerca de SQL_HANDLE_DBC_INFO_TOKEN, vea [desarrollar el reconocimiento del grupo de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
+ El identificador de SQL_HANDLE_DBC_INFO_TOKEN solo lo utiliza el administrador de controladores y el controlador. Las aplicaciones no deben usar este tipo de identificador. Para obtener más información acerca de SQL_HANDLE_DBC_INFO_TOKEN, vea [desarrollar el reconocimiento de Connection-Pool en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
  *Handle*  
  Entradas Identificador de la estructura de datos de diagnóstico, del tipo indicado por *HandleType*. Si *HandleType* es SQL_HANDLE_ENV, *Handle* puede ser un identificador de entorno compartido o no compartido.  
@@ -86,7 +86,7 @@ SQLRETURN SQLGetDiagRec(
  Entradas Longitud del búfer **MessageText* en caracteres. No hay una longitud máxima del texto del mensaje de diagnóstico.  
   
  *TextLengthPtr*  
- Genere Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el número de caracteres necesarios para el carácter de terminación null) disponible para devolver en * \* MessageText*. Si el número de caracteres disponibles para devolver es mayor que *BufferLength*, el texto del mensaje de diagnóstico en * \* MessageText* se trunca a *BufferLength* menos la longitud de un carácter de terminación null.  
+ Genere Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el número de caracteres necesarios para el carácter de terminación null) disponible para devolver en *\* MessageText*. Si el número de caracteres disponibles para devolver es mayor que *BufferLength*, el texto del mensaje de diagnóstico en *\* MessageText* se trunca a *BufferLength* menos la longitud de un carácter de terminación null.  
   
 ## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -115,9 +115,9 @@ SQLRETURN SQLGetDiagRec(
   
  **SQLGetDiagRec** no se puede usar para devolver campos del encabezado de la estructura de datos de diagnóstico. (El argumento *RecNumber* debe ser mayor que 0). La aplicación debe llamar a **SQLGetDiagField** para este propósito.  
   
- **SQLGetDiagRec** solo recupera la información de diagnóstico asociada más recientemente con el identificador especificado en el argumento de *identificador* . Si la aplicación llama a otra función ODBC, excepto **SQLGetDiagRec**, **SQLGetDiagField**o **SQLError**, se pierde toda la información de diagnóstico de las llamadas anteriores en el mismo identificador.  
+ **SQLGetDiagRec** solo recupera la información de diagnóstico asociada más recientemente con el identificador especificado en el argumento de *identificador* . Si la aplicación llama a otra función ODBC, excepto **SQLGetDiagRec**, **SQLGetDiagField** o **SQLError**, se pierde toda la información de diagnóstico de las llamadas anteriores en el mismo identificador.  
   
- Una aplicación puede examinar todos los registros de diagnóstico mediante bucles, incrementando *RecNumber*, siempre y cuando **SQLGetDiagRec** devuelva SQL_SUCCESS. Las llamadas a **SQLGetDiagRec** no son destructivas para los campos de encabezado y registro. La aplicación puede llamar a **SQLGetDiagRec** de nuevo más tarde para recuperar un campo de un registro siempre que no se haya llamado a ninguna otra función, excepto **SQLGetDiagRec**, **SQLGetDiagField**o **SQLError**, en el período de tiempo. La aplicación también puede recuperar un recuento del número total de registros de diagnóstico disponibles mediante una llamada a **SQLGetDiagField** para recuperar el valor del campo SQL_DIAG_NUMBER y, a continuación, llamar a **SQLGetDiagRec** tantas veces.  
+ Una aplicación puede examinar todos los registros de diagnóstico mediante bucles, incrementando *RecNumber*, siempre y cuando **SQLGetDiagRec** devuelva SQL_SUCCESS. Las llamadas a **SQLGetDiagRec** no son destructivas para los campos de encabezado y registro. La aplicación puede llamar a **SQLGetDiagRec** de nuevo más tarde para recuperar un campo de un registro siempre que no se haya llamado a ninguna otra función, excepto **SQLGetDiagRec**, **SQLGetDiagField** o **SQLError**, en el período de tiempo. La aplicación también puede recuperar un recuento del número total de registros de diagnóstico disponibles mediante una llamada a **SQLGetDiagField** para recuperar el valor del campo SQL_DIAG_NUMBER y, a continuación, llamar a **SQLGetDiagRec** tantas veces.  
   
  Para obtener una descripción de los campos de la estructura de datos de diagnóstico, vea [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md). Para obtener más información, vea [usar SQLGetDiagRec y SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md) e [implementar SQLGetDiagRec y SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md).  
   
@@ -136,7 +136,7 @@ SQLRETURN SQLGetDiagRec(
 |---------------------------|---------|  
 |Obtención de un campo de un registro de diagnóstico o un campo del encabezado de diagnóstico|[Función SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Programa de ejemplo de ODBC](../../../odbc/reference/sample-odbc-program.md)

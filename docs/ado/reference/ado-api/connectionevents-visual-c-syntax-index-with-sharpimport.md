@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 dev_langs:
 - C++
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dd052d36-7730-4400-822b-0544fb1992b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ccd1f8de3a1ca2b5b44a32fa9e9d02f610abf53
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 28ab260b939f7e12ba0d84fd69d89a1039251d0f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974816"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167728"
 ---
 # <a name="connectionevents-visual-c-syntax-index-with-import"></a>ConnectionEvents (índice de sintaxis de Visual C++ con #import)
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
   
 ```  
 HRESULT InfoMessage( struct Error * pError, enum  

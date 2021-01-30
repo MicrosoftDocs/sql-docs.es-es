@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9b35f89911c0b016c52eed00f8165b767968180
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2bfcf230d897274c45621dd404c9ed2816946812
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973256"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167384"
 ---
 # <a name="field-ado---wfc-syntax"></a>Campo (ADO - sintaxis WFC)
 ## <a name="package-commswfcdata"></a>paquete com. ms. wfc. Data  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_releaseapplock_TSQL
 - sp_releaseapplock
@@ -19,12 +19,12 @@ ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b74d54cbf87c6749248376a21ae55362c93314d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 020a2964a4f73872669a4f9623a8c24aa2a88fd5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97410464"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185658"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 |0|El bloqueo se ha liberado correctamente.|  
 |-999|Indica un error de validación de parámetros u otro error de llamada.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si una aplicación llama a sp_getapplock varias veces para el mismo recurso de bloqueo, es necesario llamar a sp_releaseapplock el mismo número de veces para liberar el bloqueo.  
   
  Los bloqueos se liberan si el servidor se cierra por cualquier razón.  

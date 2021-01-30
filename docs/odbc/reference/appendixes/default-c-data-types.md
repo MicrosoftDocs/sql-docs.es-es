@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], pseudo-type identifiers
 - pseudo-type identifiers [ODBC], about pseudo-type identifiers
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7d0ed42971405ca23d5f69f47cbb6ac02e8e5675
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd7f50e58fd84cec5938aacc598d12e6d733fcdc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456611"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194895"
 ---
 # <a name="default-c-data-types"></a>Tipos de datos predeterminados de C
-Si una aplicación especifica SQL_C_DEFAULT en **SQLBindCol**, **SQLGetData**o **SQLBindParameter**, el controlador supone que el tipo de datos C del búfer de entrada o de salida corresponde al tipo de datos SQL de la columna o parámetro al que está enlazado el búfer.  
+Si una aplicación especifica SQL_C_DEFAULT en **SQLBindCol**, **SQLGetData** o **SQLBindParameter**, el controlador supone que el tipo de datos C del búfer de entrada o de salida corresponde al tipo de datos SQL de la columna o parámetro al que está enlazado el búfer.  
   
 > [!IMPORTANT]  
 >  Las aplicaciones interoperables no deben utilizar SQL_C_DEFAULT. En su lugar, siempre deben especificar el tipo C del búfer que están usando. Esto se debe a que los controladores no siempre determinan correctamente el tipo C predeterminado, por las razones siguientes:  

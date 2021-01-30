@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLAllocHandle
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9488e5d8d627feac2877878cc2d10a52ec15e4e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d546ddfa5f7e18365fec4bdff08032a8bba749f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487298"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184330"
 ---
 # <a name="sqlallochandle-function"></a>Función SQLAllocHandle
 **Conformidad**  
@@ -36,7 +36,7 @@ ms.locfileid: "88487298"
  **SQLAllocHandle** asigna un entorno, una conexión, una instrucción o un identificador de descriptor.  
   
 > [!NOTE]  
->  Esta función es una función genérica para asignar identificadores que reemplazan las funciones de ODBC 2,0 **SQLAllocConnect**, **SQLAllocEnv**y **SQLAllocStmt**. Para permitir que las aplicaciones que llaman a **SQLAllocHandle** funcionen con ODBC 2. *x* , se asigna una llamada a **SQLAllocHandle** en el administrador de controladores a **SQLAllocConnect**, **SQLAllocEnv**o **SQLAllocStmt**, según corresponda. Para obtener más información, vea "Comentarios". Para obtener más información sobre lo que el administrador de controladores asigna a esta función cuando se trata de un ODBC 3. la aplicación *x* está trabajando con ODBC 2. controlador *x* , consulte [asignación de funciones de reemplazo para la compatibilidad con versiones anteriores de las aplicaciones](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Esta función es una función genérica para asignar identificadores que reemplazan las funciones de ODBC 2,0 **SQLAllocConnect**, **SQLAllocEnv** y **SQLAllocStmt**. Para permitir que las aplicaciones que llaman a **SQLAllocHandle** funcionen con ODBC 2. *x* , se asigna una llamada a **SQLAllocHandle** en el administrador de controladores a **SQLAllocConnect**, **SQLAllocEnv** o **SQLAllocStmt**, según corresponda. Para obtener más información, vea "Comentarios". Para obtener más información sobre lo que el administrador de controladores asigna a esta función cuando se trata de un ODBC 3. la aplicación *x* está trabajando con ODBC 2. controlador *x* , consulte [asignación de funciones de reemplazo para la compatibilidad con versiones anteriores de las aplicaciones](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -62,7 +62,7 @@ SQLRETURN SQLAllocHandle(
   
 -   SQL_HANDLE_STMT  
   
- El identificador de SQL_HANDLE_DBC_INFO_TOKEN solo lo utiliza el administrador de controladores y el controlador. Las aplicaciones no deben usar este tipo de identificador. Para obtener más información acerca de SQL_HANDLE_DBC_INFO_TOKEN, vea [desarrollar el reconocimiento del grupo de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
+ El identificador de SQL_HANDLE_DBC_INFO_TOKEN solo lo utiliza el administrador de controladores y el controlador. Las aplicaciones no deben usar este tipo de identificador. Para obtener más información acerca de SQL_HANDLE_DBC_INFO_TOKEN, vea [desarrollar el reconocimiento de Connection-Pool en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
  *InputHandle*  
  Entradas Identificador de entrada en cuyo contexto se va a asignar el nuevo identificador. Si *HandleType* es SQL_HANDLE_ENV, se SQL_NULL_HANDLE. Si *HandleType* es SQL_HANDLE_DBC, debe ser un identificador de entorno y, si es SQL_HANDLE_STMT o SQL_HANDLE_DESC, debe ser un identificador de conexión.  
@@ -78,9 +78,9 @@ SQLRETURN SQLAllocHandle(
 ## <a name="environment-handle-allocation-errors"></a>Errores de asignación de control de entorno  
  La asignación de entorno se produce en el administrador de controladores y dentro de cada controlador. El error devuelto por **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_ENV depende del nivel en el que se produjo el error.  
   
- Si el administrador de controladores no puede asignar memoria para * \* OutputHandlePtr* cuando se llama a **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_ENV, o la aplicación proporciona un puntero nulo para *OutputHandlePtr*, **SQLAllocHandle** devuelve SQL_ERROR. El administrador de controladores establece **OutputHandlePtr* en SQL_NULL_HENV (a menos que la aplicación proporcione un puntero nulo, que devuelve SQL_ERROR). No hay ningún identificador con el que asociar información de diagnóstico adicional.  
+ Si el administrador de controladores no puede asignar memoria para *\* OutputHandlePtr* cuando se llama a **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_ENV, o la aplicación proporciona un puntero nulo para *OutputHandlePtr*, **SQLAllocHandle** devuelve SQL_ERROR. El administrador de controladores establece **OutputHandlePtr* en SQL_NULL_HENV (a menos que la aplicación proporcione un puntero nulo, que devuelve SQL_ERROR). No hay ningún identificador con el que asociar información de diagnóstico adicional.  
   
- El administrador de controladores no llama a la función de asignación de identificador de entorno de nivel de controlador hasta que la aplicación llama a **SQLConnect**, **SQLBrowseConnect**o **SQLDriverConnect**. Si se produce un error en la función **SQLAllocHandle** de nivel de controlador, la función **SQLConnect**, **SQLBrowseConnect**o **SQLDriverConnect** de nivel de administrador de controladores devuelve SQL_ERROR. La estructura de datos de diagnóstico contiene SQLSTATE IM004 (error de **SQLAllocHandle** del controlador). El error se devuelve en un identificador de conexión.  
+ El administrador de controladores no llama a la función de asignación de identificador de entorno de nivel de controlador hasta que la aplicación llama a **SQLConnect**, **SQLBrowseConnect** o **SQLDriverConnect**. Si se produce un error en la función **SQLAllocHandle** de nivel de controlador, la función **SQLConnect**, **SQLBrowseConnect** o **SQLDriverConnect** de nivel de administrador de controladores devuelve SQL_ERROR. La estructura de datos de diagnóstico contiene SQLSTATE IM004 (error de **SQLAllocHandle** del controlador). El error se devuelve en un identificador de conexión.  
   
  Para obtener más información sobre el flujo de llamadas de función entre el administrador de controladores y un controlador, consulte [función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
@@ -108,10 +108,10 @@ SQLRETURN SQLAllocHandle(
   
  Una aplicación puede asignar más de un entorno, conexión o identificador de instrucción a la vez si el controlador admite varias asignaciones. En ODBC, no se define ningún límite en el número de identificadores de entorno, conexión, instrucción o descriptor que se pueden asignar en un momento dado. Los controladores pueden imponer un límite en cuanto al número de un determinado tipo de identificador que se puede asignar a la vez; para obtener más información, consulte la documentación del controlador.  
   
- Si la aplicación llama a **SQLAllocHandle** con * \* OutputHandlePtr* establecido en un entorno, una conexión, una instrucción o un identificador de descriptor que ya existe, el controlador sobrescribe la información asociada con el *identificador*, a menos que la aplicación use la agrupación de conexiones (vea "asignar un atributo de entorno para la agrupación de conexiones" más adelante en esta sección). El administrador de controladores no comprueba si el *identificador* especificado en * \* OutputHandlePtr* ya se está usando, ni comprueba el contenido anterior de un identificador antes de sobrescribirlo.  
+ Si la aplicación llama a **SQLAllocHandle** con *\* OutputHandlePtr* establecido en un entorno, una conexión, una instrucción o un identificador de descriptor que ya existe, el controlador sobrescribe la información asociada con el *identificador*, a menos que la aplicación use la agrupación de conexiones (vea "asignar un atributo de entorno para la agrupación de conexiones" más adelante en esta sección). El administrador de controladores no comprueba si el *identificador* especificado en *\* OutputHandlePtr* ya se está usando, ni comprueba el contenido anterior de un identificador antes de sobrescribirlo.  
   
 > [!NOTE]  
->  La programación de aplicaciones ODBC es incorrecta para llamar a **SQLAllocHandle** dos veces con la misma variable de aplicación definida para * \* OutputHandlePtr* sin llamar a **SQLFreeHandle** para liberar el identificador antes de reasignarlo. Si se sobrescriben los identificadores ODBC de tal manera, se podría producir un comportamiento incoherente o errores en la parte de los controladores ODBC.  
+>  La programación de aplicaciones ODBC es incorrecta para llamar a **SQLAllocHandle** dos veces con la misma variable de aplicación definida para *\* OutputHandlePtr* sin llamar a **SQLFreeHandle** para liberar el identificador antes de reasignarlo. Si se sobrescriben los identificadores ODBC de tal manera, se podría producir un comportamiento incoherente o errores en la parte de los controladores ODBC.  
   
  En los sistemas operativos que admiten varios subprocesos, las aplicaciones pueden usar el mismo entorno, conexión, instrucción o identificador de descriptor en subprocesos diferentes. Por lo tanto, los controladores deben admitir el acceso multiproceso seguro a esta información; una manera de lograrlo, por ejemplo, es usar una sección crítica o un semáforo. Para obtener más información sobre los subprocesos, vea [multithreading](../../../odbc/reference/develop-app/multithreading.md).  
   
@@ -128,7 +128,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-an-environment-handle"></a>Asignar un identificador de entorno  
  Un identificador de entorno proporciona acceso a información global, como los identificadores de conexión válidos y los identificadores de conexión activos. Para obtener información general acerca de los identificadores de entorno, consulte [controladores de entorno](../../../odbc/reference/develop-app/environment-handles.md).  
   
- Para solicitar un identificador de entorno, una aplicación llama a **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_ENV y un *InputHandle* de SQL_NULL_HANDLE. El controlador asigna memoria para la información del entorno y devuelve el valor del identificador asociado en el argumento * \* OutputHandlePtr* . La aplicación pasa el valor * \* OutputHandle* en todas las llamadas subsiguientes que requieren un argumento de identificador de entorno. Para obtener más información, consulte [asignar el identificador de entorno](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
+ Para solicitar un identificador de entorno, una aplicación llama a **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_ENV y un *InputHandle* de SQL_NULL_HANDLE. El controlador asigna memoria para la información del entorno y devuelve el valor del identificador asociado en el argumento *\* OutputHandlePtr* . La aplicación pasa el valor *\* OutputHandle* en todas las llamadas subsiguientes que requieren un argumento de identificador de entorno. Para obtener más información, consulte [asignar el identificador de entorno](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
   
  En el identificador de entorno de un administrador de controladores, si ya existe el identificador de entorno de un controlador, no se llama a **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_ENV en ese controlador cuando se establece una conexión, solo **sqlallochandle** con un *HandleType* de SQL_HANDLE_DBC. Si el identificador de entorno de un controlador no existe en el identificador de entorno del administrador de controladores, se llama a SQLAllocHandle con un HandleType de SQL_HANDLE_ENV y SQLAllocHandle con un HandleType de SQL_HANDLE_DBC en el controlador cuando el primer identificador de conexión del entorno está conectado al controlador.  
   
@@ -148,9 +148,9 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-connection-handle"></a>Asignar un identificador de conexión  
  Un identificador de conexión proporciona acceso a información como la instrucción y los identificadores de descriptor válidos en la conexión y si una transacción está abierta actualmente. Para obtener información general acerca de los identificadores de conexión, vea [identificadores de conexión](../../../odbc/reference/develop-app/connection-handles.md).  
   
- Para solicitar un identificador de conexión, una aplicación llama a **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_DBC. El argumento *InputHandle* se establece en el identificador de entorno que devolvió la llamada a **SQLAllocHandle** que asignó ese identificador. El controlador asigna memoria para la información de conexión y pasa el valor del identificador asociado de nuevo en * \* OutputHandlePtr*. La aplicación pasa el valor * \* OutputHandlePtr* en todas las llamadas subsiguientes que requieren un identificador de conexión. Para obtener más información, consulte [asignar un identificador de conexión](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md).  
+ Para solicitar un identificador de conexión, una aplicación llama a **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_DBC. El argumento *InputHandle* se establece en el identificador de entorno que devolvió la llamada a **SQLAllocHandle** que asignó ese identificador. El controlador asigna memoria para la información de conexión y pasa el valor del identificador asociado de nuevo en *\* OutputHandlePtr*. La aplicación pasa el valor *\* OutputHandlePtr* en todas las llamadas subsiguientes que requieren un identificador de conexión. Para obtener más información, consulte [asignar un identificador de conexión](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md).  
   
- El administrador de controladores procesa la función **SQLAllocHandle** y llama a la función **SQLAllocHandle** del controlador cuando la aplicación llama a **SQLConnect**, **SQLBrowseConnect**o **SQLDriverConnect**. (Para obtener más información, vea [función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)).  
+ El administrador de controladores procesa la función **SQLAllocHandle** y llama a la función **SQLAllocHandle** del controlador cuando la aplicación llama a **SQLConnect**, **SQLBrowseConnect** o **SQLDriverConnect**. (Para obtener más información, vea [función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)).  
   
  Si no se establece el atributo de entorno SQL_ATTR_ODBC_VERSION antes de llamar a **SQLAllocHandle** para asignar un identificador de conexión en el entorno, la llamada para asignar la conexión devolverá SQLSTATE HY010 (error de secuencia de función).  
   
@@ -161,7 +161,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-statement-handle"></a>Asignar un identificador de instrucción  
  Un identificador de instrucción proporciona acceso a información de instrucciones, como mensajes de error, el nombre del cursor y la información de estado para el procesamiento de instrucciones SQL. Para obtener información general acerca de los identificadores de instrucciones, vea [identificadores de instrucciones](../../../odbc/reference/develop-app/statement-handles.md).  
   
- Para solicitar un identificador de instrucción, una aplicación se conecta a un origen de datos y, a continuación, llama a **SQLAllocHandle** antes de enviar instrucciones SQL. En esta llamada, *HandleType* debe establecerse en SQL_HANDLE_STMT y *InputHandle* debe establecerse en el identificador de conexión devuelto por la llamada a **SQLAllocHandle** que asignó ese identificador. El controlador asigna memoria para la información de la instrucción, asocia el identificador de instrucción a la conexión especificada y pasa el valor del identificador asociado de nuevo en * \* OutputHandlePtr*. La aplicación pasa el valor * \* OutputHandlePtr* en todas las llamadas subsiguientes que requieren un identificador de instrucción. Para obtener más información, vea [asignar un identificador de instrucción](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md).  
+ Para solicitar un identificador de instrucción, una aplicación se conecta a un origen de datos y, a continuación, llama a **SQLAllocHandle** antes de enviar instrucciones SQL. En esta llamada, *HandleType* debe establecerse en SQL_HANDLE_STMT y *InputHandle* debe establecerse en el identificador de conexión devuelto por la llamada a **SQLAllocHandle** que asignó ese identificador. El controlador asigna memoria para la información de la instrucción, asocia el identificador de instrucción a la conexión especificada y pasa el valor del identificador asociado de nuevo en *\* OutputHandlePtr*. La aplicación pasa el valor *\* OutputHandlePtr* en todas las llamadas subsiguientes que requieren un identificador de instrucción. Para obtener más información, vea [asignar un identificador de instrucción](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md).  
   
  Cuando se asigna el identificador de instrucción, el controlador asigna automáticamente un conjunto de cuatro descriptores y asigna los identificadores de estos descriptores a los atributos de instrucción SQL_ATTR_APP_ROW_DESC, SQL_ATTR_APP_PARAM_DESC, SQL_ATTR_IMP_ROW_DESC y SQL_ATTR_IMP_PARAM_DESC. Estos se conocen como descriptores asignados *implícitamente* . Para asignar explícitamente un descriptor de aplicación, vea la sección siguiente, "asignar un identificador de descriptor".  
   
@@ -190,6 +190,6 @@ SQLRETURN SQLAllocHandle(
 |Establecer un atributo de entorno|[Función SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
 |Establecer un atributo de instrucción|[Función SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

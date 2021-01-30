@@ -1,12 +1,12 @@
 ---
 description: Vistas de catálogo relacionadas con la búsqueda de texto completo y la búsqueda semántica (Transact-SQL)
-title: Vistas de catálogo de búsqueda de texto completo y de búsqueda semántica (Transact-SQL) | Microsoft Docs
+title: Full-Text vistas de catálogo de búsqueda semántica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 6bd2db217106c1d4a9f12914bd15761388beca86
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 90a7bcde4caa40158bf55314c84054bb94a8426f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809428"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194619"
 ---
 # <a name="full-text-search-and-semantic-search-catalog-views-transact-sql"></a>Vistas de catálogo relacionadas con la búsqueda de texto completo y la búsqueda semántica (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

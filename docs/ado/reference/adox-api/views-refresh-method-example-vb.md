@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8715debe54a987f12a79e6ced36e1c7fbc23eb11
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 70795cf5c645ba3eaf9d6c869a067b02fad9d0c4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982806"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169073"
 ---
 # <a name="views-refresh-method-example-vb"></a>Ejemplo de método Refresh de vistas (VB)
 En el código siguiente se muestra cómo actualizar la colección [views](./views-collection-adox.md) de un [Catálogo](./catalog-object-adox.md). Esto es necesario antes de que se pueda tener acceso a los objetos de [vista](./view-object-adox.md) del **Catálogo** .  

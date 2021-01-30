@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_cdc_has_column_changed_TSQL
 - sys.fn_cdc_has_column_changed
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 8e835647f387b4980a50a0f49e5c6bd967fe553f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 53539981e3c24fa03cf2636fd32e40d729ded6d0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099701"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194427"
 ---
 # <a name="sysfn_cdc_has_column_changed-transact-sql"></a>sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
  *update_mask*  
  Es la máscara que identifica las columnas actualizadas en cualquier fila de cambio asociada. *update_mask* es **varbinary (128)**.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **bit**  
   
 ## <a name="remarks"></a>Observaciones  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_rename_policy_category_TSQL
 - sp_syspolicy_rename_policy_category
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b350a19bb19defbd1510f7ce13a82729c2cbe779
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41bacd4093ebaf3337d311d0a3e2b4b20d246f90
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446752"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203125"
 ---
 # <a name="sp_syspolicy_rename_policy_category-transact-sql"></a>sp_syspolicy_rename_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +41,11 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` Es el nombre de la categoría de directiva cuyo nombre desea cambiar. *Name* es de **tipo sysname**y se debe especificar si *policy_category_id* es NULL.  
+`[ @name = ] 'name'` Es el nombre de la categoría de directiva cuyo nombre desea cambiar. *Name* es de **tipo sysname** y se debe especificar si *policy_category_id* es NULL.  
   
-`[ @policy_category_id = ] policy_category_id` Es el identificador de la categoría de directiva cuyo nombre se desea cambiar. *policy_category_id* es de **tipo int**y se debe especificar si *Name* es NULL.  
+`[ @policy_category_id = ] policy_category_id` Es el identificador de la categoría de directiva cuyo nombre se desea cambiar. *policy_category_id* es de **tipo int** y se debe especificar si *Name* es NULL.  
   
-`[ @new_name = ] 'new_name'` Es el nuevo nombre de la categoría de directiva. *new_name* es **sysname**y es obligatorio. No puede ser NULL ni una cadena vacía.  
+`[ @new_name = ] 'new_name'` Es el nuevo nombre de la categoría de directiva. *new_name* es **sysname** y es obligatorio. No puede ser NULL ni una cadena vacía.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -71,7 +71,7 @@ EXEC msdb.dbo.sp_syspolicy_rename_policy_category @name = N'Test Category 1'
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_add_policy_category &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
  [sp_syspolicy_delete_policy_category &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)   

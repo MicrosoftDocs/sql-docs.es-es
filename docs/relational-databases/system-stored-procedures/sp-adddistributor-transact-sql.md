@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_adddistributor
 - sp_adddistributor_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 4a1aa8f5a5ebd86c8ce1ea53d5ba8cf454d17f5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2e84824fec7a45fcfea24a2d97ced622b2147f34
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493519"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182803"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,14 +43,14 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @distributor = ] 'distributor'` Es el nombre del servidor de distribución. *Distributor* es de **tipo sysname**y no tiene ningún valor predeterminado. Este parámetro se utiliza únicamente si se está configurando un distribuidor remoto. Agrega entradas para las propiedades del distribuidor en **msdb. Tabla MSdistributor** .  
+`[ @distributor = ] 'distributor'` Es el nombre del servidor de distribución. *Distributor* es de **tipo sysname** y no tiene ningún valor predeterminado. Este parámetro se utiliza únicamente si se está configurando un distribuidor remoto. Agrega entradas para las propiedades del distribuidor en **msdb. Tabla MSdistributor** .  
 
 > [!NOTE]
 > El nombre del servidor se puede especificar como `<Hostname>,<PortNumber>` . Es posible que tenga que especificar el número de puerto para la conexión cuando SQL Server se implementa en Linux o Windows con un puerto personalizado, y el servicio explorador está deshabilitado.
 
-`[ @heartbeat_interval = ] heartbeat_interval` Es el número máximo de minutos que un agente puede pasar sin registrar un mensaje de progreso. *heartbeat_interval* es de **tipo int**y su valor predeterminado es 10 minutos. Se crea un trabajo del Agente SQL Server que se ejecuta en este intervalo para comprobar el estado de los agentes de replicación que se están ejecutando.  
+`[ @heartbeat_interval = ] heartbeat_interval` Es el número máximo de minutos que un agente puede pasar sin registrar un mensaje de progreso. *heartbeat_interval* es de **tipo int** y su valor predeterminado es 10 minutos. Se crea un trabajo del Agente SQL Server que se ejecuta en este intervalo para comprobar el estado de los agentes de replicación que se están ejecutando.  
   
-`[ @password = ] 'password']` Es la contraseña del inicio de sesión de **distributor_admin** . *password* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL o una cadena vacía, la contraseña se restablece a un valor aleatorio. La contraseña debe configurarse cuando se agrega el primer distribuidor remoto. **distributor_admin** inicio de sesión y la *contraseña* se almacenan para las entradas del servidor vinculado utilizadas para una conexión RPC del *distribuidor* , incluidas las conexiones locales. Si el *distribuidor* es local, la contraseña de **distributor_admin** se establece en un valor nuevo. En el caso de los publicadores con un distribuidor remoto, se debe especificar el mismo valor de *contraseña* al ejecutar **Sp_adddistributor** en el publicador y el distribuidor. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) se puede usar para cambiar la contraseña del distribuidor.  
+`[ @password = ] 'password']` Es la contraseña del inicio de sesión de **distributor_admin** . *password* es de **tipo sysname y su** valor predeterminado es NULL. Si es NULL o una cadena vacía, la contraseña se restablece a un valor aleatorio. La contraseña debe configurarse cuando se agrega el primer distribuidor remoto. **distributor_admin** inicio de sesión y la *contraseña* se almacenan para las entradas del servidor vinculado utilizadas para una conexión RPC del *distribuidor* , incluidas las conexiones locales. Si el *distribuidor* es local, la contraseña de **distributor_admin** se establece en un valor nuevo. En el caso de los publicadores con un distribuidor remoto, se debe especificar el mismo valor de *contraseña* al ejecutar **Sp_adddistributor** en el publicador y el distribuidor. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) se puede usar para cambiar la contraseña del distribuidor.  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  

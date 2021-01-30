@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - DataControl
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81f7d1a3ca15eaf2ebc2bb6dbaff20ba7762d89c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5c65d8f639ec1747e7085f8d88c266ed6b6299d4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721106"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169005"
 ---
 # <a name="datacontrol-object-rds"></a>Objeto DataControl (RDS)
 Enlaza un [conjunto de registros](../ado-api/recordset-object-ado.md) de consulta de datos a uno o varios controles (por ejemplo, un cuadro de texto, un control de cuadrícula o un cuadro combinado) para mostrar los datos del **conjunto de registros** en una página web.  
@@ -42,19 +42,19 @@ Enlaza un [conjunto de registros](../ado-api/recordset-object-ado.md) de consult
 ```  
   
 ## <a name="remarks"></a>Observaciones  
- IDENTIFICADOR de clase del **objeto RDS. ** El objeto DataControl es BD96C556-65A3-11D0-983A-00C04FC29E33.  
+ IDENTIFICADOR de clase del **objeto RDS.** El objeto DataControl es BD96C556-65A3-11D0-983A-00C04FC29E33.  
   
 > [!NOTE]
->  Si recibe un error que hace que un [objeto RDS. DataSpace](./dataspace-object-rds.md) o **RDS. ** El objeto DataControl no se carga, asegúrese de que está usando el identificador de clase correcto. Los identificadores de clase de estos objetos han cambiado respecto a la versión 1,0 y 1,1. Además, tenga en cuenta que incluso las columnas que aceptan valores NULL se deben establecer cuando se usa el objeto **DataControl de RDS** .  
+>  Si recibe un error que hace que un [objeto RDS. DataSpace](./dataspace-object-rds.md) o **RDS.** El objeto DataControl no se carga, asegúrese de que está usando el identificador de clase correcto. Los identificadores de clase de estos objetos han cambiado respecto a la versión 1,0 y 1,1. Además, tenga en cuenta que incluso las columnas que aceptan valores NULL se deben establecer cuando se usa el objeto **DataControl de RDS** .  
   
- En un escenario básico, solo tiene que establecer las propiedades **SQL**, **Connect**y **Server** de **RDS. Objeto DataControl** , que llamará automáticamente al objeto comercial predeterminado, [RDSServer. DataFactory](./datafactory-object-rdsserver.md).  
+ En un escenario básico, solo tiene que establecer las propiedades **SQL**, **Connect** y **Server** de **RDS. Objeto DataControl** , que llamará automáticamente al objeto comercial predeterminado, [RDSServer. DataFactory](./datafactory-object-rdsserver.md).  
   
  Todas las propiedades de **RDS. DataControl** son opcionales porque los objetos comerciales personalizados pueden reemplazar su funcionalidad.  
   
 > [!NOTE]
 >  Si consulta varios resultados, solo se devuelve el primer [conjunto de registros](../ado-api/recordset-object-ado.md) . Si se necesitan varios conjuntos de resultados, asigne cada uno a su propio **control de DataControl**. Un ejemplo de una consulta para varios resultados podría ser el siguiente: `"Select * from Authors, Select * from Topics"`  
   
- Agregar "DFMode = 20;" a la cadena de conexión cuando se utiliza **RDS. ** El objeto DataControl puede mejorar el rendimiento del servidor cuando se actualizan datos. Con esta configuración, el objeto **RDSServer. DataFactory** en el servidor utiliza un modo con menos recursos. Sin embargo, las siguientes características no están disponibles en esta configuración:  
+ Agregar "DFMode = 20;" a la cadena de conexión cuando se utiliza **RDS.** El objeto DataControl puede mejorar el rendimiento del servidor cuando se actualizan datos. Con esta configuración, el objeto **RDSServer. DataFactory** en el servidor utiliza un modo con menos recursos. Sin embargo, las siguientes características no están disponibles en esta configuración:  
   
 -   Uso de consultas con parámetros.  
   
@@ -72,7 +72,7 @@ Enlaza un [conjunto de registros](../ado-api/recordset-object-ado.md) de consult
   
 -   Usar **adCmdTableDirect**.  
   
- **Objeto RDS. **El objeto DataControl se ejecuta de forma predeterminada en modo asincrónico. Si necesita ejecutar la aplicación sincrónicamente, establezca el parámetro [ExecuteOptions](./executeoptions-property-rds.md) en **adcExecSync** y el parámetro [FetchOptions](./fetchoptions-property-rds.md) en **adcFetchUpFront**, como se muestra en el ejemplo siguiente.  
+ **Objeto RDS.** El objeto DataControl se ejecuta de forma predeterminada en modo asincrónico. Si necesita ejecutar la aplicación sincrónicamente, establezca el parámetro [ExecuteOptions](./executeoptions-property-rds.md) en **adcExecSync** y el parámetro [FetchOptions](./fetchoptions-property-rds.md) en **adcFetchUpFront**, como se muestra en el ejemplo siguiente.  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   
@@ -90,7 +90,7 @@ Enlaza un [conjunto de registros](../ado-api/recordset-object-ado.md) de consult
   
 -   Agregue dos **RDS. Objetos DataControl** en la Página Web.  
   
--   Escriba dos consultas, una para cada propiedad **SQL** de los dos **RDS. Objetos DataControl** . Un **objeto RDS. ** El objeto DataControl contendrá una consulta SQL que solicita información del cliente; el segundo contendrá una consulta que solicita una lista de productos que el cliente ha adquirido.  
+-   Escriba dos consultas, una para cada propiedad **SQL** de los dos **RDS. Objetos DataControl** . Un **objeto RDS.** El objeto DataControl contendrá una consulta SQL que solicita información del cliente; el segundo contendrá una consulta que solicita una lista de productos que el cliente ha adquirido.  
   
 -   En las etiquetas de objeto de cada control enlazado, especifique el valor de DATAFLD para establecer los valores de los datos que desea mostrar en cada control visual.  
   
@@ -98,7 +98,7 @@ Enlaza un [conjunto de registros](../ado-api/recordset-object-ado.md) de consult
   
  Al definir **RDS. Objeto DataControl** en una página web, use valores de **alto** y **ancho** distintos de cero, como 1 (para evitar la inclusión de espacio adicional).  
   
- Los componentes de cliente del servicio de datos remotos ya están incluidos como parte de Internet Explorer 4,0; por lo tanto, no es necesario incluir un parámetro CODEBASE en el **objeto RDS. ** Etiqueta de objeto DataControl.  
+ Los componentes de cliente del servicio de datos remotos ya están incluidos como parte de Internet Explorer 4,0; por lo tanto, no es necesario incluir un parámetro CODEBASE en el **objeto RDS.** Etiqueta de objeto DataControl.  
   
  Con Internet Explorer 4,0 o posterior, puede enlazar a datos utilizando controles HTML y controles de® ActiveX solo si están marcados como controles de modelo de apartamento.  
   

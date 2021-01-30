@@ -6,7 +6,7 @@ ms.date: 01/28/2019
 ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - event_log
 - sys.event_log_TSQL
@@ -21,12 +21,12 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: c3a358e23d9428440166dd98a0f29ca8e4ea11c5
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: ae823cddc60a82c343bc949515493f9405a51a9a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093106"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203862"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
@@ -83,7 +83,7 @@ ms.locfileid: "98093106"
 |**Conectividad**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión ha terminado debido al uso excesivo de TEMPDB. Intente modificar la consulta para reducir el uso de espacio de la tabla temporal. Para obtener más información, consulte [límites de recursos](/previous-versions/azure/dn338081(v=azure.100)).|  
 |**Conectividad**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión ha terminado debido al excesivo uso de espacio del registro de transacciones. Intente modificar menos filas en una sola transacción. Para obtener más información, consulte [límites de recursos](/previous-versions/azure/dn338081(v=azure.100)).|  
 |**Conectividad**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión ha terminado debido al uso excesivo de la memoria. Intente modificar la consulta para procesar menos filas. Para obtener más información, consulte [límites de recursos](/previous-versions/azure/dn338081(v=azure.100)).|  
-|**motor**|**deadlock**|0|**deadlock**|2|Se ha producido un interbloqueo.|  
+|**engine**|**deadlock**|0|**deadlock**|2|Se ha producido un interbloqueo.|  
   
 ## <a name="permissions"></a>Permisos
 
