@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ab4088aa563befcb32eaaf8fe129716b789f516b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 64fcd7c57c57dec9978695b52db1af2cc2c8ebba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243616"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160358"
 ---
 # <a name="replication-views-transact-sql"></a>Vistas de replicación (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "87243616"
 
 :::row:::
     :::column:::
-        [MSdatatype_mappings &#40;&#41;de Transact-SQL](../../relational-databases/system-views/msdatatype-mappings-transact-sql.md)
+        [MSdatatype_mappings &#40;&#41;de Transact-SQL ](../../relational-databases/system-views/msdatatype-mappings-transact-sql.md)
     :::column-end:::
     :::column:::
         [sysdatatypemappings &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysdatatypemappings-transact-sql.md)
@@ -62,7 +62,7 @@ ms.locfileid: "87243616"
 
         [IHsyscolumns &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihsyscolumns-transact-sql.md)
 
-        [MSdistribution_status &#40;&#41;de Transact-SQL](../../relational-databases/system-views/msdistribution-status-transact-sql.md)
+        [MSdistribution_status &#40;&#41;de Transact-SQL ](../../relational-databases/system-views/msdistribution-status-transact-sql.md)
 
         [sysarticlecolumns &#40;vista del sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)
     :::column-end:::

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_grant_login_to_proxy
 - sp_grant_login_to_proxy_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: e5e1c8ad821aeee5eff2a7671636941bad816405
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c59f8b19e63f491757386ba5562ea9e0106e92a8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493288"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159807"
 ---
 # <a name="sp_grant_login_to_proxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 
@@ -45,15 +45,15 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @login_name = ] 'login_name'` Nombre de inicio de sesión al que se va a conceder acceso. El *login_name* es **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar uno de ** \@ login_name**, ** \@ fixed_server_role**o ** \@ msdb_role** , o bien se produce un error en el procedimiento almacenado.  
+`[ @login_name = ] 'login_name'` Nombre de inicio de sesión al que se va a conceder acceso. El *login_name* es **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar uno de **\@ login_name**, **\@ fixed_server_role** o **\@ msdb_role** , o bien se produce un error en el procedimiento almacenado.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'` Rol fijo de servidor al que se va a conceder acceso. El *fixed_server_role* es **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar uno de ** \@ login_name**, ** \@ fixed_server_role**o ** \@ msdb_role** , o bien se produce un error en el procedimiento almacenado.  
+`[ @fixed_server_role = ] 'fixed_server_role'` Rol fijo de servidor al que se va a conceder acceso. El *fixed_server_role* es **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar uno de **\@ login_name**, **\@ fixed_server_role** o **\@ msdb_role** , o bien se produce un error en el procedimiento almacenado.  
   
-`[ @msdb_role = ] 'msdb_role'` Rol de base de datos de la base de datos **msdb** al que se va a conceder acceso. El *msdb_role* es **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar uno de ** \@ login_name**, ** \@ fixed_server_role**o ** \@ msdb_role** , o bien se produce un error en el procedimiento almacenado.  
+`[ @msdb_role = ] 'msdb_role'` Rol de base de datos de la base de datos **msdb** al que se va a conceder acceso. El *msdb_role* es **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar uno de **\@ login_name**, **\@ fixed_server_role** o **\@ msdb_role** , o bien se produce un error en el procedimiento almacenado.  
   
-`[ @proxy_id = ] id` Identificador del proxy al que se va a conceder acceso. El *identificador* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar uno de ** \@ proxy_id** o ** \@ proxy_name** , o bien se produce un error en el procedimiento almacenado.  
+`[ @proxy_id = ] id` Identificador del proxy al que se va a conceder acceso. El *identificador* es de **tipo int** y su valor predeterminado es NULL. Se debe especificar uno de **\@ proxy_id** o **\@ proxy_name** , o bien se produce un error en el procedimiento almacenado.  
   
-`[ @proxy_name = ] 'proxy_name'` Nombre del proxy al que se va a conceder acceso. El *proxy_name* es **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar uno de ** \@ proxy_id** o ** \@ proxy_name** , o bien se produce un error en el procedimiento almacenado.  
+`[ @proxy_name = ] 'proxy_name'` Nombre del proxy al que se va a conceder acceso. El *proxy_name* es **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar uno de **\@ proxy_id** o **\@ proxy_name** , o bien se produce un error en el procedimiento almacenado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

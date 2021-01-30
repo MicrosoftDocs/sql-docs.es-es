@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changemergepullsubscription
 - sp_changemergepullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 39cb33678b853feadbbb20a88669f0b48a3d444a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f8590cd397f41ca4c4db8776f614f47b2b05c921
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546222"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159842"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,17 +42,17 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es%.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su** valor predeterminado es%.  
   
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher*es de **tipo sysname y su**valor predeterminado es%.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname y su** valor predeterminado es%.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db*es de **tipo sysname y su**valor predeterminado es%.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su** valor predeterminado es%.  
   
-`[ @property = ] 'property'` Es el nombre de la propiedad que se va a cambiar. *Property* es de **tipo sysname**y puede tener uno de los valores de la tabla.  
+`[ @property = ] 'property'` Es el nombre de la propiedad que se va a cambiar. *Property* es de **tipo sysname** y puede tener uno de los valores de la tabla.  
   
-`[ @value = ] 'value'` Es el nuevo valor de la propiedad especificada. el *valor*es **nvarchar (255)** y puede ser uno de los valores de la tabla.  
+`[ @value = ] 'value'` Es el nuevo valor de la propiedad especificada. el *valor* es **nvarchar (255)** y puede ser uno de los valores de la tabla.  
   
-|Propiedad|Valor|Descripción|  
+|Propiedad|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Ubicación donde se almacena la carpeta de instantáneas si la ubicación es distinta de la ubicación predeterminada o además de ella.|  
 |**description**||Descripción de esta suscripción de extracción de mezcla.|  

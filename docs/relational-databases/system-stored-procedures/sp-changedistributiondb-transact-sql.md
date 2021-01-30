@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedistributiondb_TSQL
 - sp_changedistributiondb
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 35a090a0dc82f09ccceb1a4d56c09f8ab9d8191f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 958b76e23e52a6f36d54acf9d596cec92aadefba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536745"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159019"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,11 +40,11 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database'` Es el nombre de la base de datos de distribución. *Database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @database = ] 'database'` Es el nombre de la base de datos de distribución. *Database* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @property = ] 'property'` Es la propiedad que se va a cambiar para la base de datos dada. *Property* es de **tipo sysname**y puede tener uno de estos valores.  
+`[ @property = ] 'property'` Es la propiedad que se va a cambiar para la base de datos dada. *Property* es de **tipo sysname** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**history_retention**|Período de retención de la tabla de historial.|  
 |**max_distretention**|Período máximo de retención de la distribución.|  

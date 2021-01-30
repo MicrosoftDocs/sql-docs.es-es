@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DM_EXEC_EXTERNAL_WORK
 - DM_EXEC_EXTERNAL_WORK_TSQL
@@ -23,12 +23,12 @@ ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32a0949cfbc06d9fb801681c6ecfa56abc9f811e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 10f7f8ae36a35a39a303d9548b828768282df3f9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098987"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159991"
 ---
 # <a name="sysdm_exec_external_work-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "98098987"
 |step_index|`int`|Solicitud que está realizando este trabajador.|Vea *step_index* en  [Sys.dm_exec_requests &#40;&#41;de Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |dms_step_index|`int`|Paso del plan DMS en el que se está ejecutando este trabajador.|Vea [sys.dm_exec_dms_workers &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
 |compute_node_id|`int`|Nodo en el que se está ejecutando el trabajo.|Vea [sys.dm_exec_compute_nodes &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
-|type|`nvarchar(60)`|Tipo de trabajo externo.|' División de archivos '|  
+|tipo|`nvarchar(60)`|Tipo de trabajo externo.|' División de archivos '|  
 |work_id|`int`|IDENTIFICADOR de la división real.|Mayor o igual que 0.|  
 |input_name|`nvarchar(4000)`|Nombre de la entrada que se va a leer|Nombre de archivo cuando se usa Hadoop.|  
 |read_location|`bigint`|Desplazamiento o ubicación de lectura.|Desplazamiento del archivo que se va a leer.|  

@@ -6,7 +6,7 @@ ms.date: 05/18/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d3f4baa08a3c087bc0b38963226da26072a822b3
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: b5ce339ae678de564a900abeb1e2287924ba73bb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096627"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158501"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>Vistas de administración dinámica relacionadas con la base de datos (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

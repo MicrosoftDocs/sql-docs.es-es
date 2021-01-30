@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], timestamp
 - timestamp data type [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e51d82e8acd59c8b4e6f5a8385720b0bd38eba4c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54632816fb7013639e1cdb761fbc8df53c461a0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449037"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158590"
 ---
 # <a name="c-to-sql-timestamp"></a>C a SQL: Timestamp
 El identificador del tipo de datos de marca de tiempo de ODBC C es:  
@@ -41,6 +41,6 @@ El identificador del tipo de datos de marca de tiempo de ODBC C es:
   
  Para obtener información sobre qué valores son válidos en una estructura de SQL_C_TIMESTAMP, vea [tipos de datos de C](../../../odbc/reference/appendixes/c-data-types.md), anteriormente en este apéndice.  
   
- Cuando los datos de marca de tiempo de C se convierten en datos de SQL de caracteres, los datos de caracteres resultantes se encontraban en "*yyyy* - *mm* - *DD* *HH*:*mm*:*SS*[.* f...*] " Aplique.  
+ Cuando los datos de marca de tiempo de C se convierten en datos de SQL de caracteres, los datos de caracteres resultantes se encontraban en "*yyyy* - *mm* - *DD* *HH*:*mm*:*SS*[.*f...*] ".  
   
  El controlador omite el valor de longitud/indicador al convertir los datos del tipo de datos timestamp C y da por supuesto que el tamaño del búfer de datos es el tamaño del tipo de datos timestamp de C. El valor de longitud/indicador se pasa en el argumento *StrLen_or_Ind* de **SQLPutData** y en el búfer especificado con el argumento *StrLen_or_IndPtr* en **SQLBindParameter**. El búfer de datos se especifica con el argumento *DataPtr* en **SQLPutData** y el argumento *ParameterValuePtr* en **SQLBindParameter**.

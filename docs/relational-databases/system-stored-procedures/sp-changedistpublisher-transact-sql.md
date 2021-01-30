@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedistpublisher_TSQL
 - sp_changedistpublisher
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca2b3369a75d2e2b80624d99d2fe11459b8ff749
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d48757f7404ba4f915e7b92609c9077ab702adb4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548274"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159035"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @property = ] 'property'` Es una propiedad que se va a cambiar para el publicador especificado. *Property* es de **tipo sysname** y puede tener uno de estos valores.  
   
@@ -59,7 +59,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 |**active**|**true**|Activa el publicador.|  
 ||**false**|Desactiva el publicador.|  
 |**distribution_db**||Nombre de la base de datos de distribución.|  
-|**Inicio**||Nombre de inicio de sesión.|  
+|**login**||Nombre de inicio de sesión.|  
 |**password**||Contraseña segura para el inicio de sesión que se ha proporcionado.|  
 |**security_mode**|**1**|Se utiliza la autenticación de Windows para la conexión con el publicador. *No se puede cambiar para un no* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*|  
 ||**0**|Se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión con el publicador. *No se puede cambiar para un no* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*|  

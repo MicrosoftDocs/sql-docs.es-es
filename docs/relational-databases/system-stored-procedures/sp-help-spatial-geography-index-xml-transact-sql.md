@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_spatial_geography_index_xml_TSQL
 - sp_help_spatial_geography_index_xml
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74b480c5c673ff4211437303011a3be5e2536593
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 81bad34a1eb0d45eafb84bacf1cc65871e73e2b9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810361"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158424"
 ---
 # <a name="sp_help_spatial_geography_index_xml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
  Las propiedades que contienen valores NULL están incluidas en el conjunto que se devuelve.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente `sp_help_spatial_geography_index_xml` se utiliza para investigar el índice espacial **SIndx_SpatialTable_geography_col2** definido en el **geography_col** de tabla para el ejemplo de consulta determinado en ** \@ q**. En este ejemplo se devuelven las propiedades básicas del índice especificado en un fragmento XML que muestra el nombre y valor de las propiedades seleccionadas.  
+ En el ejemplo siguiente `sp_help_spatial_geography_index_xml` se utiliza para investigar el índice espacial **SIndx_SpatialTable_geography_col2** definido en el **geography_col** de tabla para el ejemplo de consulta determinado en **\@ q**. En este ejemplo se devuelven las propiedades básicas del índice especificado en un fragmento XML que muestra el nombre y valor de las propiedades seleccionadas.  
   
  Después, se ejecuta una consulta [XQuery](../../xquery/xquery-basics.md) en el conjunto de resultados, que devuelve una propiedad concreta.  
   

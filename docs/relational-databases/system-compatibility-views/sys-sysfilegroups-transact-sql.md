@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysfilegroups_TSQL
 - sys.sysfilegroups
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 609563f4998215367649a33cfc5136b8edd0e26b
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 9d0a11ac6a62ee7f2936e3c31f8e99389b2bd10c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099121"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160722"
 ---
 # <a name="syssysfilegroups-transact-sql"></a>sys.sysfilegroups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "98099121"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**GROUPID**|**smallint**|Número de identificación de grupo, único en cada base de datos.|  
-|**allocpolicy**|**smallint**|Reservada|  
+|**allocpolicy**|**smallint**|Reservado|  
 |**status**|**int**|0x8 = Solo lectura<br /><br /> 0x10 = Predeterminado|  
 |**GroupName**|**sysname**|Nombre del grupo de archivos.|  
   

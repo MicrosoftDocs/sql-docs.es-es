@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_update_policy_category_TSQL
 - sp_syspolicy_update_policy_category
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b6413c2-7a3b-4eff-91d9-5db2011869d6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 911dfde6ac3cb10ec67e788f7d8937e44ca6727e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8825e94add7ceb74f6adcc0d52fda768d5e777bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492983"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161282"
 ---
 # <a name="sp_syspolicy_update_policy_category-transact-sql"></a>sp_syspolicy_update_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` Es el nombre de la categoría de directiva. *Name* es de **tipo sysname**y se debe especificar si *policy_category_id* es NULL.  
+`[ @name = ] 'name'` Es el nombre de la categoría de directiva. *Name* es de **tipo sysname** y se debe especificar si *policy_category_id* es NULL.  
   
-`[ @policy_category_id = ] policy_category_id` Es el identificador de la categoría de directiva. *policy_category_id* es de **tipo int**y se debe especificar si *Name* es NULL.  
+`[ @policy_category_id = ] policy_category_id` Es el identificador de la categoría de directiva. *policy_category_id* es de **tipo int** y se debe especificar si *Name* es NULL.  
   
 `[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Determina si la suscripción a la base de datos se asigna a la categoría de directiva. *mandate_database_subscriptions* es un valor de **bit** y su valor predeterminado es NULL. Puede usar alguno de los valores siguientes:  
   
@@ -75,7 +75,7 @@ EXEC msdb.dbo.sp_syspolicy_update_policy_category @name = N'Finance'
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_add_policy_category &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
  [sp_syspolicy_delete_policy_category &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)   

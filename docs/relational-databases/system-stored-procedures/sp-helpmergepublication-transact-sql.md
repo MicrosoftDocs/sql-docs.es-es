@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergepublication
 - sp_helpmergepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1042543ba82dcbd4bc7376acf6943a838506b6fa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8001e98b207ca9493ff71b1f874b12b0d5227306
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549611"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160605"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,22 +44,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ @publication **=** ] **'**_publicación_**'**  
- Nombre de la publicación. *Publication*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todas las publicaciones de combinación en la base de datos actual.  
+ Nombre de la publicación. *Publication* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve información acerca de todas las publicaciones de combinación en la base de datos actual.  
   
- [ @found **=** ] **'***se encontró***** el resultado '  
- Marca que indica las filas devueltas. *found*es de **tipo int** y un parámetro output, con un valor predeterminado de NULL. **1** indica que se ha encontrado la publicación. **0** indica que no se encuentra la publicación.  
+ [ @found **=** ] **'**_se encontró_ el resultado *_'_*  
+ Marca que indica las filas devueltas. *found* es de **tipo int** y un parámetro output, con un valor predeterminado de NULL. **1** indica que se ha encontrado la publicación. **0** indica que no se encuentra la publicación.  
   
- salida de [ @publication_id **=** ] **'***publication_id***'**  
+ salida de [ @publication_id **=** ] **'**_publication_id_*_'_*  
  El número de identificación de la publicación. *publication_id* es de tipo **uniqueidentifier** y un parámetro output, con un valor predeterminado de NULL.  
   
- [ @reserved **=** ] **'***reservado***'**  
+ [ @reserved **=** ] **'**_reservado_*_'_*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*Reserved* es de tipo **nvarchar (20)** y su valor predeterminado es NULL.  
   
- [ @publisher **=** ] **'***publicador***'**  
- El nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+ [ @publisher **=** ] **'**_publicador_*_'_*  
+ El nombre del publicador. *Publisher* es de **tipo sysname y su** valor predeterminado es NULL.  
   
- [ @publisher_db **=** ] **'***publisher_db***'**  
- Nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL.  
+ [ @publisher_db **=** ] **'**_publisher_db_*_'_*  
+ Nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -70,7 +70,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |description|**nvarchar(255)**|Descripción de la publicación.|  
 |status|**tinyint**|Indica cuándo están disponibles los datos de la publicación.|  
 |retention|**int**|Tiempo durante el que guardar los metadatos sobre los cambios de los artículos de la publicación. Las unidades de este período pueden ser días, semanas, meses o años. Para obtener información sobre las unidades, vea la columna retention_period_unit.|  
-|sync_mode|**tinyint**|Modo de sincronización de esta publicación:<br /><br /> **0** = programa nativo de copia masiva (utilidad**BCP** )<br /><br /> **1** = copia masiva de caracteres|  
+|sync_mode|**tinyint**|Modo de sincronización de esta publicación:<br /><br /> **0** = programa nativo de copia masiva (utilidad **BCP** )<br /><br /> **1** = copia masiva de caracteres|  
 |allow_push|**int**|Determina si es posible crear suscripciones de inserción para la publicación indicada. **0** significa que no se permite una suscripción de extracción.|  
 |allow_pull|**int**|Determina si es posible crear suscripciones de extracción para la publicación indicada. **0** significa que no se permite una suscripción de extracción.|  
 |allow_anonymous|**int**|Determina si es posible crear suscripciones anónimas para la publicación indicada. **0** significa que no se permite una suscripción anónima.|  

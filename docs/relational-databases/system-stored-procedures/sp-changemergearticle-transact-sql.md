@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changemergearticle_TSQL
 - sp_changemergearticle
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 994efc8752017757bbced6df16fed2b6a4955eb1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b504644f5b96cc631a6352d71f2b387e8040b5a0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541917"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159884"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ sp_changemergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación en la que existe el artículo. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en la que existe el artículo. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre del artículo que se va a cambiar. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre del artículo que se va a cambiar. *article* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @property = ] 'property'` Es la propiedad que se va a cambiar para el artículo y la publicación especificados. *Property* es de tipo **nvarchar (30)** y puede ser uno de los valores enumerados en la tabla.  
   
@@ -65,10 +65,10 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**column_tracking**|**true**|Activa el seguimiento por columna. Solo se aplica a un artículo de tabla.<br /><br /> Nota: no se puede usar el seguimiento de nivel de columna al publicar tablas con más de 246 columnas.|  
 ||**false**|Desactiva el seguimiento por columna y deja la detección de conflictos a nivel de fila. Solo se aplica a un artículo de tabla.|  
 |**compensate_for_errors**|**true**|Las acciones de compensación se ejecutan cuando se producen errores durante la sincronización. Para obtener más información, vea [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
-||**false**|Las acciones de compensación no se ejecutan; éste es el comportamiento predeterminado. Para obtener más información, vea [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).<br /><br /> Importante aunque es posible que parezca que los datos de las filas afectadas no sean de convergencia, tan pronto como se solucionen los errores, se pueden aplicar los cambios y los datos convergerán. ** \* \* \* \* ** Si la tabla de origen de un artículo ya está publicada en otra publicación, el valor de *compensate_for_errors* debe ser el mismo para ambos artículos.|  
+||**false**|Las acciones de compensación no se ejecutan; éste es el comportamiento predeterminado. Para obtener más información, vea [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).<br /><br /> Importante aunque es posible que parezca que los datos de las filas afectadas no sean de convergencia, tan pronto como se solucionen los errores, se pueden aplicar los cambios y los datos convergerán. **\* \* \* \*** Si la tabla de origen de un artículo ya está publicada en otra publicación, el valor de *compensate_for_errors* debe ser el mismo para ambos artículos.|  
 |**creation_script**||Ruta de acceso y nombre de un script opcional del esquema del artículo que se utiliza para crear el artículo en la base de datos de suscripciones.|  
 |**delete_tracking**|**true**|Las instrucciones DELETE se replican; éste es el comportamiento predeterminado.|  
-||**false**|Las instrucciones DELETE no se replican.<br /><br /> Una configuración ** \* \* \* importante \* ** **delete_tracking** a **false** da como resultado una no convergencia y las filas eliminadas deben quitarse manualmente.|  
+||**false**|Las instrucciones DELETE no se replican.<br /><br /> Una configuración **\* \* \* importante \*** **delete_tracking** a **false** da como resultado una no convergencia y las filas eliminadas deben quitarse manualmente.|  
 |**description**||Entrada descriptiva del artículo.|  
 |**destination_owner**||Nombre del propietario del objeto en la base de datos de suscripciones, si no es **DBO**.|  
 |**identity_range**||**BIGINT** que especifica el tamaño del intervalo que se va a utilizar al asignar nuevos valores de identidad si el artículo tiene **identityrangemanagementoption** establecido en **auto** o **auto_identity_range** establecido en **true**. Solamente se aplica en un artículo de la tabla. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -123,7 +123,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x40000000**|Permisos de replicación.|  
 ||**0x80000000**|Intenta quitar las dependencias de los objetos que no forman parte de la publicación.|  
 ||**0x100000000**|Use esta opción para replicar el atributo FILESTREAM si se especifica en columnas **varbinary (Max)** . No especifique esta opción si replica tablas en suscriptores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. No se admite la replicación de tablas que tienen columnas FILESTREAM en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] suscriptores, independientemente de cómo se establezca esta opción de esquema. Vea la opción relacionada **0x800000000**.|  
-||**0x200000000**|Convierte los tipos de datos de fecha y hora (**Date**, **Time**, **DateTimeOffset**y **datetime2**) introducidos en en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tipos de datos que se admiten en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+||**0x200000000**|Convierte los tipos de datos de fecha y hora (**Date**, **Time**, **DateTimeOffset** y **datetime2**) introducidos en en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tipos de datos que se admiten en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 ||**0x400000000**|Replica la opción de compresión para los datos y los índices. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 ||**0x800000000**|Establezca esta opción para almacenar los datos de FILESTREAM en su propio grupo de archivos en el suscriptor. Si no se establece esta opción, los datos de FILESTREAM se almacenan en el grupo de archivos predeterminado. La replicación no crea grupos de archivos; por tanto, si establece esta opción, debe crear el grupo de archivos antes de aplicar la instantánea en el suscriptor. Para obtener más información sobre cómo crear objetos antes de aplicar la instantánea, vea [ejecutar scripts antes y después de aplicar la instantánea](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> Vea la opción relacionada **0x100000000**.|  
 ||**0x1000000000**|Convierte los tipos definidos por el usuario (UDT) de Common Language Runtime (CLR) a **varbinary (Max)** para que las columnas de tipo UDT se puedan replicar en los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
@@ -134,18 +134,18 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||NULL|El sistema genera automáticamente una opción de esquema válida para el artículo.|  
 |**status**|**active**|Se ejecuta el script inicial de proceso para publicar la tabla.|  
 ||**unsynced**|El script de procesos inicial para publicar la tabla se ejecuta la próxima vez que se ejecute el Agente de instantáneas.|  
-|**stream_blob_columns**|**true**|Se utiliza una optimización del flujo de datos al replicar columnas de objetos binarios grandes. No obstante, ciertas funciones de la replicación de mezcla, como los registros lógicos, pueden impedir que se utilice la optimización de flujos. *stream_blob_columns* se establece en true cuando se habilita FileStream. Esto permite que la replicación de datos FILESTREAM se realice de forma óptima y que se reduzca el uso de memoria. Para forzar que los artículos de tabla FILESTREAM no usen streaming de blobs, establezca *stream_blob_columns* en false.<br /><br /> Importante: habilitar esta optimización de memoria podría perjudicar el rendimiento de la agente de mezcla durante la sincronización. ** \* \* \* \* ** Esta opción solo se debe utilizar al replicar columnas que contienen megabytes de datos.|  
+|**stream_blob_columns**|**true**|Se utiliza una optimización del flujo de datos al replicar columnas de objetos binarios grandes. No obstante, ciertas funciones de la replicación de mezcla, como los registros lógicos, pueden impedir que se utilice la optimización de flujos. *stream_blob_columns* se establece en true cuando se habilita FileStream. Esto permite que la replicación de datos FILESTREAM se realice de forma óptima y que se reduzca el uso de memoria. Para forzar que los artículos de tabla FILESTREAM no usen streaming de blobs, establezca *stream_blob_columns* en false.<br /><br /> Importante: habilitar esta optimización de memoria podría perjudicar el rendimiento de la agente de mezcla durante la sincronización. **\* \* \* \*** Esta opción solo se debe utilizar al replicar columnas que contienen megabytes de datos.|  
 ||**false**|La optimización no se utiliza al replicar columnas de objetos binarios grandes.|  
 |**subscriber_upload_options**|**0**|No existen restricciones en actualizaciones realizadas en el suscriptor con una suscripción de cliente; los cambios se cargan en el publicador. Si cambia esta propiedad puede que sea necesaria la reinicialización de suscriptores existentes.|  
 ||**1**|Se permiten cambios en un suscriptor con una suscripción de cliente, pero no se cargan en el publicador.|  
 ||**2**|No se permiten cambios en un suscriptor con una suscripción de cliente.|  
-|**subset_filterclause**||Cláusula WHERE que especifica el filtrado horizontal. Solo se aplica a un artículo de tabla.<br /><br /> Importante por motivos de rendimiento, se recomienda no aplicar funciones a los nombres de columna en las cláusulas de filtro de fila con parámetros, como. ** \* \* \* \* ** `LEFT([MyColumn]) = SUSER_SNAME()` Si utiliza [host_name](../../t-sql/functions/host-name-transact-sql.md) en una cláusula de filtro y reemplaza el valor host_name, es posible que tenga que convertir los tipos de datos mediante [Convert](../../t-sql/functions/cast-and-convert-transact-sql.md). Para obtener más información sobre los procedimientos recomendados para este caso, vea la sección "invalidar el valor HOST_NAME ()" en [filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
+|**subset_filterclause**||Cláusula WHERE que especifica el filtrado horizontal. Solo se aplica a un artículo de tabla.<br /><br /> Importante por motivos de rendimiento, se recomienda no aplicar funciones a los nombres de columna en las cláusulas de filtro de fila con parámetros, como. **\* \* \* \*** `LEFT([MyColumn]) = SUSER_SNAME()` Si utiliza [host_name](../../t-sql/functions/host-name-transact-sql.md) en una cláusula de filtro y reemplaza el valor host_name, es posible que tenga que convertir los tipos de datos mediante [Convert](../../t-sql/functions/cast-and-convert-transact-sql.md). Para obtener más información sobre los procedimientos recomendados para este caso, vea la sección "invalidar el valor HOST_NAME ()" en [filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
 |**threshold**||Valor de porcentaje utilizado para los suscriptores que ejecutan [!INCLUDE[ssEW](../../includes/ssew-md.md)] o versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Threshold** controla cuándo el agente de mezcla asigna un nuevo intervalo de identidad. Si se utiliza el porcentaje de valores especificado en el umbral, el Agente de mezcla crea un nuevo intervalo de identidad. Se utiliza cuando el valor de **identityrangemanagementoption** está establecido en **auto** o **auto_identity_range** está establecido en **true**. Solamente se aplica en un artículo de la tabla. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**1**|La firma digital en un solucionador personalizado se comprueba para determinar si proviene de una fuente confiable.|  
 ||**0**|La firma digital en un solucionador personalizado no se comprueba para determinar si proviene de una fuente confiable.|  
 |NULL (predeterminado)||Devuelve la lista de valores admitidos para la *propiedad*.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es de **bit**y su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es de **bit** y su valor predeterminado es **0**.  
   
  **0** especifica que los cambios en el artículo de mezcla no hacen que la instantánea no sea válida. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
   
@@ -153,7 +153,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  Vea en la sección de Notas las propiedades que, si se cambian, requieren que se genere una instantánea nueva.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Confirma que la acción realizada por este procedimiento almacenado puede requerir que se reinicialicen las suscripciones existentes. *force_reinit_subscription* es de **bit**y su valor predeterminado es **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Confirma que la acción realizada por este procedimiento almacenado puede requerir que se reinicialicen las suscripciones existentes. *force_reinit_subscription* es de **bit** y su valor predeterminado es **0**.  
   
  **0** especifica que los cambios en el artículo de mezcla no harán que se reinicialice la suscripción. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de las suscripciones existentes, se producirá un error y no se realizarán cambios.  
   
@@ -221,15 +221,15 @@ sp_changemergearticle [ @publication = ] 'publication'
 >  Si tiene muchos artículos (quizás cientos) en una publicación y ejecuta **sp_changemergearticle** para uno de los artículos, es posible que se tarde mucho tiempo en finalizar la ejecución.  
   
 ## <a name="valid-schema-option-table"></a>Tabla Opciones de esquema válidas  
- En la tabla siguiente se describen los valores de *schema_option*permitidos, dependiendo del tipo de artículo.  
+ En la tabla siguiente se describen los valores de *schema_option* permitidos, dependiendo del tipo de artículo.  
   
 |Tipo de artículo|Valores de las opciones de esquema|  
 |------------------|--------------------------|  
 |**func schema only**|**0x01** y **0x2000**|  
-|**indexed view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**y **0x200000**|  
+|**indexed view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000** y **0x200000**|  
 |**proc schema only**|**0x01** y **0x2000**|  
 |**table**|Todas las opciones.|  
-|**view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**y **0x200000**|  
+|**view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000** y **0x200000**|  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_changemergearticle](../../relational-databases/replication/codesnippet/tsql/sp-changemergearticle-tr_1.sql)]  

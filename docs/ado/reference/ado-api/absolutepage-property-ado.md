@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::AbsolutePage
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d735a8a61d4b62e6fa57427ecbee247d4589040
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 781d20047b170ec5f3d1fc480d65cfc684735f84
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977246"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161031"
 ---
 # <a name="absolutepage-property-ado"></a>Propiedad AbsolutePage (ADO)
 Indica en qué página reside el registro actual.  
@@ -36,7 +36,7 @@ Indica en qué página reside el registro actual.
   
 -   Al obtener o establecer la propiedad **AbsolutePage** , ADO utiliza la propiedad [AbsolutePosition](./absoluteposition-property-ado.md) y la propiedad [pageSize](./pagesize-property-ado.md) conjuntamente de la siguiente manera:  
   
--   Para obtener el **AbsolutePage**, ADO primero recupera el **AbsolutePosition**y, a continuación, lo divide por el **pageSize**.  
+-   Para obtener el **AbsolutePage**, ADO primero recupera el **AbsolutePosition** y, a continuación, lo divide por el **pageSize**.  
   
 -   Para establecer el valor de **AbsolutePage**, ADO mueve el valor de **AbsolutePosition** de la manera siguiente: multiplica el valor de **pageSize** por el nuevo valor de **AbsolutePage** y, a continuación, agrega 1 al valor. Como resultado, la posición actual del conjunto de **registros** después de establecer correctamente **AbsolutePage** es el primer registro de la página.  
   

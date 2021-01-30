@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergepullsubscription
 - sp_helpmergepullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b74d9846d672a59adbde9eada760af1d60fc725e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 91266e8d825fd669979e925753804230fd62027c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543283"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160596"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +41,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Argumento  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** . Si la *publicación* es **%** , se devuelve información acerca de todas las publicaciones y suscripciones de combinación en la base de datos actual.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su** valor predeterminado es **%** . Si la *publicación* es **%** , se devuelve información acerca de todas las publicaciones y suscripciones de combinación en la base de datos actual.  
   
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher*es de **tipo sysname y su**valor predeterminado es **%** .  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname y su** valor predeterminado es **%** .  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db*es de **tipo sysname y su**valor predeterminado es **%** .  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su** valor predeterminado es **%** .  
   
-`[ @subscription_type = ] 'subscription_type'` Indica si se van a mostrar las suscripciones de extracción. *subscription_type*es de tipo **nvarchar (10)** y su valor predeterminado es **' pull '**. Los valores válidos son **' Inserte '**, **' pull '** o **' both '**.  
+`[ @subscription_type = ] 'subscription_type'` Indica si se van a mostrar las suscripciones de extracción. *subscription_type* es de tipo **nvarchar (10)** y su valor predeterminado es **' pull '**. Los valores válidos son **' Inserte '**, **' pull '** o **' both '**.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dbremove
 - sp_dbremove_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c57b013e1c97a82200390b7b3876248c7099e863
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 3002fe1738a377cb42aa6c16411e0b75ebfaac2a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91807550"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159504"
 ---
 # <a name="sp_dbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'database'` Es el nombre de la base de datos que se va a quitar. *Database* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @dbname = ] 'database'` Es el nombre de la base de datos que se va a quitar. *Database* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 `[ @dropdev = ] 'dropdev'` Es una marca que se proporciona solo para la compatibilidad con versiones anteriores y actualmente se omite. *dropdev* tiene el valor **dropdev**.  
   

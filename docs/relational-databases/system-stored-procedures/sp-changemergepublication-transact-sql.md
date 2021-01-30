@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changemergepublication_TSQL
 - sp_changemergepublication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e909e343a22ca1a249e5de03bc5eb64948e982cd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e7807a445de3ddf919679b09002646c87b313c5d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541920"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159862"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,19 +42,19 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Nombre de la publicación. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @property = ] 'property'` Propiedad que se va a cambiar para la publicación especificada. *Property* es de **tipo sysname**y puede tener uno de los valores enumerados en la tabla siguiente.  
+`[ @property = ] 'property'` Propiedad que se va a cambiar para la publicación especificada. *Property* es de **tipo sysname** y puede tener uno de los valores enumerados en la tabla siguiente.  
   
 `[ @value = ] 'value'` Nuevo valor de la propiedad especificada. el *valor* es **nvarchar (255)** y puede ser uno de los valores enumerados en la tabla siguiente.  
   
  Esta tabla describe las propiedades de la publicación que se pueden cambiar, así como las restricciones de los valores de esas propiedades.  
   
-|Propiedad|Valor|Descripción|  
+|Propiedad|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Se admiten las suscripciones anónimas.|  
 ||**false**|No se admiten las suscripciones anónimas.|  
-|**allow_partition_realignment**|**true**|Las eliminaciones se envían al suscriptor para reflejar los resultados de un cambio en la partición mediante la eliminación de los datos que han dejado de formar parte de la partición del suscriptor. Este es el comportamiento predeterminado.|  
+|**allow_partition_realignment**|**true**|Las eliminaciones se envían al suscriptor para reflejar los resultados de un cambio en la partición mediante la eliminación de los datos que han dejado de formar parte de la partición del suscriptor. Éste es el comportamiento predeterminado.|  
 ||**false**|Los datos de la partición antigua se dejan en el suscriptor, donde los cambios realizados en estos datos del publicador no se replican en este suscriptor. En cambio, los cambios realizados en el suscriptor se replican en el publicador. Esto sirve para conservar los datos de una partición antigua en una suscripción cuando es necesario que los datos estén accesibles con fines históricos.|  
 |**allow_pull**|**true**|Se permiten suscripciones de extracción para la publicación indicada.|  
 ||**false**|No se permiten suscripciones de extracción para la publicación indicada.|  
@@ -115,13 +115,13 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**inactive**|La publicación está en estado inactivo.|  
 |**sync_mode**|**nativo** o<br /><br /> **BCP nativo**|La salida del programa de copia masiva de todas las tablas en modo nativo se utiliza para la instantánea inicial.|  
 ||**carácter**<br /><br /> o **carácter BCP**|La salida del programa de copia masiva de todas las tablas en modo de carácter se utiliza para la instantánea inicial, que se necesita para todos los suscriptores que no lo son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**use_partition_groups**<br /><br /> Nota: después de usar partition_groups, si revierte a usar **setupbelongs**y establece **use_partition_groups = false** en **changemergearticle**, es posible que no se refleje correctamente después de tomar una instantánea. Los desencadenadores que genera una instantánea son conformes con los grupos de particiones.<br /><br /> La solución a este escenario es establecer el estado en inactivo, modificar el **use_partition_groups**y, a continuación, establecer el estado en activo.|**true**|La publicación utiliza particiones previamente calculadas.|  
+|**use_partition_groups**<br /><br /> Nota: después de usar partition_groups, si revierte a usar **setupbelongs** y establece **use_partition_groups = false** en **changemergearticle**, es posible que no se refleje correctamente después de tomar una instantánea. Los desencadenadores que genera una instantánea son conformes con los grupos de particiones.<br /><br /> La solución a este escenario es establecer el estado en inactivo, modificar el **use_partition_groups** y, a continuación, establecer el estado en activo.|**true**|La publicación utiliza particiones previamente calculadas.|  
 ||**false**|La publicación no utiliza particiones previamente calculadas.|  
 |**validate_subscriber_info**||Muestra las funciones que se utilizan para recuperar información del suscriptor. Después, valida los criterios de filtro dinámico que se están utilizando para que el suscriptor compruebe que la información se está dividiendo de un modo coherente.|  
 |**web_synchronization_url**||Valor predeterminado de la URL de Internet utilizada para la sincronización web.|  
 |NULL (predeterminado)||Devuelve la lista de valores admitidos para la *propiedad*.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado podría invalidar una instantánea existente. *force_invalidate_snapshot* es de **bit**y su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado podría invalidar una instantánea existente. *force_invalidate_snapshot* es de **bit** y su valor predeterminado es **0**.  
   
  **0** especifica que el cambio de la publicación no invalidará la instantánea. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
   

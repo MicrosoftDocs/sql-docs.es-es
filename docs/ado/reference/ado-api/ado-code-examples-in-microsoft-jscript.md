@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - JScript
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8fff86663c19b4be71b2d83ae24c1cd3ea61ee14
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: de089513781167b3ee744fb3f217532ae71e6ef5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976676"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161684"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Ejemplos de código ADO en Microsoft JScript
 Use los siguientes ejemplos de código para obtener información sobre cómo usar los métodos, las propiedades y los eventos de ADO al escribir en JScript.  

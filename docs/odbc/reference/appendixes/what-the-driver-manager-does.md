@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - driver manager [ODBC], backward compatibility
 - compatibility [ODBC], driver manager
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 399dec39e18c9e31ce4a93172d0597c333fb40cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d210d5c202f11151cf22a64362b652958422f513
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386171"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158167"
 ---
 # <a name="what-the-driver-manager-does"></a>Lo que hace el Administrador de controladores
 En la tabla siguiente se resume el modo en que el administrador de controladores ODBC *3. x* asigna las llamadas a los controladores ODBC *2. x* y ODBC *3. x* .  
@@ -29,7 +29,7 @@ En la tabla siguiente se resume el modo en que el administrador de controladores
 |Función o<br /><br /> atributo de instrucción|Comentarios|  
 |-----------------------------------------|--------------|  
 |SQL_ATTR_FETCH_BOOKMARK_PTR|Apunta al marcador que se va a usar con **SQLFetchScroll**. Estos son los detalles de la implementación:<br /><br /> -Cuando una aplicación lo establece en un controlador ODBC *2. x* , el administrador de controladores ODBC *3. x* lo almacena en caché. Desreferencia el puntero y pasa el valor al controlador ODBC *2. x* en el argumento *FetchOffset* de **SQLExtendedFetch** cuando la aplicación llama a **SQLFetchScroll** más tarde.<br />-Cuando una aplicación lo establece en un controlador ODBC *3. x* , el administrador de controladores ODBC *3. x* pasa la llamada al controlador.|  
-|SQL_ATTR_ROW_STATUS_PTR|Apunta a la matriz de estado de fila rellena por **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**y **SQLSetPos**. Estos son los detalles de la implementación:<br /><br /> -Cuando una aplicación lo establece en un controlador ODBC *2. x* , el administrador de controladores ODBC *3. x* almacena en caché su valor. Pasa este valor al controlador ODBC *2. x* en el argumento *RowStatusArray* de **SQLExtendedFetch** cuando se llama a **SQLFetchScroll** o **SQLFetch** .<br />-Cuando una aplicación lo establece en un controlador ODBC *3. x* , el administrador de controladores ODBC *3. x* pasa la llamada al controlador.<br />-In State S6, si una aplicación establece SQL_ATTR_ROW_STATUS_PTR y después llama a **SQLBulkOperations** (con una *operación* de SQL_ADD) o **SQLSetPos** sin llamar primero a **SQLFETCH** o **SQLFetchScroll**, se devuelve SQLSTATE HY011 (el atributo no se puede establecer ahora).|  
+|SQL_ATTR_ROW_STATUS_PTR|Apunta a la matriz de estado de fila rellena por **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations** y **SQLSetPos**. Estos son los detalles de la implementación:<br /><br /> -Cuando una aplicación lo establece en un controlador ODBC *2. x* , el administrador de controladores ODBC *3. x* almacena en caché su valor. Pasa este valor al controlador ODBC *2. x* en el argumento *RowStatusArray* de **SQLExtendedFetch** cuando se llama a **SQLFetchScroll** o **SQLFetch** .<br />-Cuando una aplicación lo establece en un controlador ODBC *3. x* , el administrador de controladores ODBC *3. x* pasa la llamada al controlador.<br />-In State S6, si una aplicación establece SQL_ATTR_ROW_STATUS_PTR y después llama a **SQLBulkOperations** (con una *operación* de SQL_ADD) o **SQLSetPos** sin llamar primero a **SQLFETCH** o **SQLFetchScroll**, se devuelve SQLSTATE HY011 (el atributo no se puede establecer ahora).|  
 |SQL_ATTR_ROWS_FETCHED_PTR|Apunta al búfer en el que **SQLFetch** y **SQLFetchScroll** devuelven el número de filas recuperadas. Estos son los detalles de la implementación:<br /><br /> -Cuando una aplicación lo establece en un controlador ODBC *2. x* , el administrador de controladores ODBC *3. x* almacena en caché su valor. Pasa este valor al controlador ODBC *2. x* en el argumento *RowCountPtr* de **SQLExtendedFetch** cuando la aplicación llama a **SQLFetch** o **SQLFetchScroll** .<br />-Cuando una aplicación lo establece en un controlador ODBC *3. x* , el administrador de controladores ODBC *3. x* pasa la llamada al controlador.|  
 |SQL_ATTR_ROW_ARRAY_SIZE|Establece el tamaño del conjunto de filas. Estos son los detalles de la implementación:<br /><br /> -Cuando una aplicación lo establece en un controlador ODBC *2. x* , el administrador de controladores ODBC *3. x* lo asigna al atributo de instrucción SQL_ROWSET_SIZE.<br />-Cuando una aplicación lo establece en un controlador ODBC *3. x* , el administrador de controladores ODBC *3. x* pasa la llamada al controlador.<br />-Cuando una aplicación que trabaja con un controlador ODBC *3. x* llama a **SQLSetScrollOptions**, SQL_ROWSET_SIZE se establece en el valor del argumento *RowsetSize* si el controlador subyacente no admite **SQLSetScrollOptions**.|  
 |SQL_ROWSET_SIZE|Establece el tamaño del conjunto de filas usado por **SQLExtendedFetch** cuando una aplicación ODBC *2. x* llama a **SQLExtendedFetch** . Estos son los detalles de la implementación:<br /><br /> -Cuando una aplicación establece esto, el administrador de controladores ODBC *3. x* pasa la llamada al controlador, independientemente de la versión del controlador.<br />-Cuando una aplicación que trabaja con un controlador ODBC *2. x* llama a **SQLSetScrollOptions**, SQL_ROWSET_SIZE se establece en el valor del argumento **RowsetSize** .|  

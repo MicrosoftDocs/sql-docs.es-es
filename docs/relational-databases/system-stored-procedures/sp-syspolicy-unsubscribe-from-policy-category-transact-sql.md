@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_unsubscribe_from_policy_category_TSQL
 - sp_syspolicy_unsubscribe_from_policy_category
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4591c3b20702923d7f9ea418951b8510977dc840
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be5008e3b86cd752bc7cfe5794b07ca875e62952
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469166"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161296"
 ---
 # <a name="sp_syspolicy_unsubscribe_from_policy_category-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @policy_category = ] 'policy_category'` Es el nombre de la suscripción de categoría de directiva que desea eliminar. *policy_category* es **sysname**y es obligatorio.  
+`[ @policy_category = ] 'policy_category'` Es el nombre de la suscripción de categoría de directiva que desea eliminar. *policy_category* es **sysname** y es obligatorio.  
   
  Para obtener los valores de *policy_category*, consulte la vista del sistema policy_policy_categories msdb.dbo.sys.  
   

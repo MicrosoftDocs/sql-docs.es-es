@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC cursor library [ODBC], using cursor library
 - cursor library [ODBC], using cursor library
 ms.assetid: 9653f2f8-ccfc-4220-99ef-601dc0fa641c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be42c95692537c0479afb7ed492756b8a54ab030
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1658d3c628506f1b5c53a5c9271a10f96fa2ef44
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386201"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158186"
 ---
 # <a name="using-the-odbc-cursor-library"></a>Uso de la biblioteca de cursores ODBC
 > [!IMPORTANT]  
@@ -29,7 +29,7 @@ ms.locfileid: "88386201"
   
 1.  Llama a **SQLSetConnectAttr** con un *atributo* de SQL_ATTR_ODBC_CURSORS para especificar cómo se debe usar la biblioteca de cursores con una conexión determinada. La biblioteca de cursores se puede usar siempre (SQL_CUR_USE_ODBC), solo se usa si el controlador no admite cursores desplazables (SQL_CUR_USE_IF_NEEDED) o nunca se usa (SQL_CUR_USE_DRIVER).  
   
-2.  Llama a **SQLConnect**, **SQLDriverConnect**o **SQLBrowseConnect** para conectarse al origen de datos.  
+2.  Llama a **SQLConnect**, **SQLDriverConnect** o **SQLBrowseConnect** para conectarse al origen de datos.  
   
 3.  Llama a **SQLSetStmtAttr** para especificar el tipo de cursor (SQL_ATTR_CURSOR_TYPE), la simultaneidad (SQL_ATTR_CONCURRENCY) y el tamaño del conjunto de filas (SQL_ATTR_ROW_ARRAY_SIZE). La biblioteca de cursores admite cursores de solo avance y estáticos. Los cursores de solo avance deben ser de solo lectura, mientras que los cursores estáticos pueden ser de solo lectura o pueden usar el control de simultaneidad optimista comparando valores.  
   

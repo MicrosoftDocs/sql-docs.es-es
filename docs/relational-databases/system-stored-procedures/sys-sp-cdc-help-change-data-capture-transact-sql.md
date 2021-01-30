@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_help_change_data_capture_TSQL
 - sys.sp_cdc_help_change_data_capture_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13f78f25cd02ccf9c698518b5aa10f7fda0b7694
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 79c12ab4b1bdfb3a955c83ef3d724a026f24f1ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809828"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159776"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,14 +47,14 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="arguments"></a>Argumentos  
  [ @source_schema =] '*source_schema*'  
- Es el nombre del esquema al que pertenece la tabla de origen. *source_schema* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se especifica *source_schema* , se debe especificar también *source_name* .  
+ Es el nombre del esquema al que pertenece la tabla de origen. *source_schema* es de **tipo sysname y su** valor predeterminado es NULL. Cuando se especifica *source_schema* , se debe especificar también *source_name* .  
   
  Si no es NULL, *source_schema* debe existir en la base de datos actual.  
   
  Si *source_schema* no es null, *source_name* también debe ser distinto de NULL.  
   
  [ @source_name =] '*source_name*'  
- Es el nombre de la tabla de origen. *source_name* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se especifica *source_name* , se debe especificar también *source_schema* .  
+ Es el nombre de la tabla de origen. *source_name* es de **tipo sysname y su** valor predeterminado es NULL. Cuando se especifica *source_name* , se debe especificar también *source_schema* .  
   
  Si no es NULL, *source_name* debe existir en la base de datos actual.  
   

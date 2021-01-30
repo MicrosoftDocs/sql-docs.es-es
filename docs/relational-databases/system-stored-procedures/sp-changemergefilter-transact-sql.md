@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changemergefilter_TSQL
 - sp_changemergefilter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e5a5208eeb1a47971e1960bd9c9c581d5d6517e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8081fc9a95452d68540acf3b2a5a412910f75219
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539134"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159846"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,19 +44,19 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre del artículo. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre del artículo. *article* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @filtername = ] 'filtername'` Es el nombre actual del filtro. *filtername* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @filtername = ] 'filtername'` Es el nombre actual del filtro. *filtername* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @property = ] 'property'` Es el nombre de la propiedad que se va a cambiar. *Property* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @property = ] 'property'` Es el nombre de la propiedad que se va a cambiar. *Property* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @value = ] 'value'` Es el nuevo valor de la propiedad especificada. el *valor*es **nvarchar (1000)** y no tiene ningún valor predeterminado.  
+`[ @value = ] 'value'` Es el nuevo valor de la propiedad especificada. el *valor* es **nvarchar (1000)** y no tiene ningún valor predeterminado.  
   
  En esta tabla se describen las propiedades de los artículos y los valores de esas propiedades.  
   
-|Propiedad|Valor|Descripción|  
+|Propiedad|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Filtro de combinación.<br /><br /> Esta opción es necesaria para admitir los suscriptores de [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relación de registros lógicos.|  
@@ -85,7 +85,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>Observaciones  
  **sp_changemergefilter** se utiliza en la replicación de mezcla.  
   
- Para cambiar el filtro de un artículo de mezcla es preciso recrear la instantánea, si ya existe. Esto se realiza estableciendo el ** \@ force_invalidate_snapshot** en **1**. Asimismo, si hay suscripciones para este artículo, es necesario reinicializarlas. Esto se hace estableciendo el ** \@ force_reinit_subscription** en **1**.  
+ Para cambiar el filtro de un artículo de mezcla es preciso recrear la instantánea, si ya existe. Esto se realiza estableciendo el **\@ force_invalidate_snapshot** en **1**. Asimismo, si hay suscripciones para este artículo, es necesario reinicializarlas. Esto se hace estableciendo el **\@ force_reinit_subscription** en **1**.  
   
  Para utilizar registros lógicos, la publicación y los artículos deben satisfacer una serie de requisitos. Para más información, vea [Agrupar cambios en filas relacionadas con registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   

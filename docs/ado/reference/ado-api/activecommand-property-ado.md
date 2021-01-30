@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset20::ActiveCommand
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df737543e8cc09735c7da413b89406b6f2385079
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0a8d8dab4944cfa2d43bc571442e294699154f12
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977166"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159263"
 ---
 # <a name="activecommand-property-ado"></a>Propiedad ActiveCommand (ADO)
 Indica el objeto de [comando](./command-object-ado.md) que creó el objeto de [conjunto de registros](./recordset-object-ado.md) asociado.  
@@ -32,7 +32,7 @@ Indica el objeto de [comando](./command-object-ado.md) que creó el objeto de [c
 ## <a name="remarks"></a>Observaciones  
  La propiedad **ActiveCommand** es de solo lectura.  
   
- Si un objeto de **comando** no se utilizó para crear el **conjunto de registros**actual, se devuelve una referencia de objeto **null** .  
+ Si un objeto de **comando** no se utilizó para crear el **conjunto de registros** actual, se devuelve una referencia de objeto **null** .  
   
  Utilice esta propiedad para buscar el objeto de **comando** asociado cuando solo se le proporciona el objeto de **conjunto de registros** resultante.  
   

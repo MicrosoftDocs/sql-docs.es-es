@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command15::ActiveConnection
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc1a54d70639e4e3ff78748b4e04483fcfefafdb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: efcb376c9ad27dff5a0c85d73f70ae4000385e3d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976966"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159233"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection (propiedad, ADO)
 Indica a qué objeto de [conexión](./connection-object-ado.md) pertenece actualmente el objeto de [comando](./command-object-ado.md), [conjunto de registros](./recordset-object-ado.md)o [registro](./record-object-ado.md) especificado.  
@@ -60,7 +60,7 @@ Indica a qué objeto de [conexión](./connection-object-ado.md) pertenece actual
 > [!NOTE]
 >  **Uso del servicio de datos remotos** Cuando se usa en un objeto de **conjunto de registros** del cliente, esta propiedad solo se puede establecer en una cadena de conexión o (en Microsoft Visual Basic o Visual Basic, Scripting Edition) en *Nothing*.  
   
-## <a name="record"></a>Registro  
+## <a name="record"></a>Grabar  
  Esta propiedad es de lectura y escritura cuando el objeto de **registro** está cerrado y puede contener una cadena de conexión o una referencia a un objeto de **conexión** abierto. Esta propiedad es de solo lectura cuando el objeto de **registro** está abierto y contiene una referencia a un objeto de **conexión** abierto.  
   
  Un objeto de **conexión** se crea implícitamente cuando el objeto de **registro** se abre desde una dirección URL. Abra el **registro** con un objeto de **conexión** abierto existente asignando el objeto de **conexión** a esta propiedad o usando el objeto de **conexión** como parámetro en la llamada al método [Open](./open-method-ado-record.md) . Si el **registro** se abre desde un **registro** o un [conjunto de registros](./recordset-object-ado.md)existente, se asocia automáticamente a ese **registro** o al objeto de **conexión** del objeto de conjunto de **registros** .  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changeobjectowner_TSQL
 - sp_changeobjectowner
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e96c93be7b21deb0966e0a48f5fde3258501ac6c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 482fcbdb2d7c1b79eb0a8b5ed88d1295785b994b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464433"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159825"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ## <a name="arguments"></a>Argumentos  
 `[ @objname = ] 'object'` Es el nombre de una tabla, vista, función definida por el usuario o procedimiento almacenado existente en la base de datos actual. el *objeto* es un **nvarchar (776)** y no tiene ningún valor predeterminado. el *objeto* se puede calificar con el propietario del objeto existente, con el formato _existing_owner_**.** _objeto_ si el esquema y su propietario tienen el mismo nombre.  
   
-`[ @newowner = ] 'owner_ '` Es el nombre de la cuenta de seguridad que será el nuevo propietario del objeto. *Owner* es de **tipo sysname**y no tiene ningún valor predeterminado. *Owner* debe ser un usuario de base de datos, un rol de servidor, un [!INCLUDE[msCoName](../../includes/msconame-md.md)] Inicio de sesión de Windows o un grupo de Windows válido con acceso a la base de datos actual. Si el nuevo propietario es un usuario o grupo de Windows que no tiene una entidad de seguridad de base de datos correspondiente, se creará un usuario de base de datos.  
+`[ @newowner = ] 'owner_ '` Es el nombre de la cuenta de seguridad que será el nuevo propietario del objeto. *Owner* es de **tipo sysname** y no tiene ningún valor predeterminado. *Owner* debe ser un usuario de base de datos, un rol de servidor, un [!INCLUDE[msCoName](../../includes/msconame-md.md)] Inicio de sesión de Windows o un grupo de Windows válido con acceso a la base de datos actual. Si el nuevo propietario es un usuario o grupo de Windows que no tiene una entidad de seguridad de base de datos correspondiente, se creará un usuario de base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
