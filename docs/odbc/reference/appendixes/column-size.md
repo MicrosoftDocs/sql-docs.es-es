@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], column size
 - size of data types [ODBC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 53d7934f3ac4669545e3cc24752e4a9e0f4fb589
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bae1a1814ae89b2fe4b91ba9c2936df601c03301
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411121"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183667"
 ---
 # <a name="column-size"></a>Tamaño de columna
 El tamaño de la columna (o parámetro) de los tipos de datos numéricos se define como el número máximo de dígitos utilizados por el tipo de datos de la columna o del parámetro, o la precisión de los datos. En el caso de los tipos de caracteres, es la longitud en caracteres de los datos; en el caso de los tipos de datos binarios, el tamaño de columna se define como la longitud en bytes de los datos. En el caso de los tipos de datos Time, TIMESTAMP y All Interval, es el número de caracteres en la representación de caracteres de estos datos. En la tabla siguiente se muestra el tamaño de columna definido para cada tipo de datos conciso de SQL.  
@@ -41,7 +41,7 @@ El tamaño de la columna (o parámetro) de los tipos de datos numéricos se defi
 |Todos los tipos binarios [a], [b]|La longitud máxima o definida en bytes de la columna o del parámetro. Por ejemplo, la longitud de una columna definida como BINARIa (10) es 10.|  
 |SQL_TYPE_DATE [c]|10 (número de caracteres en el formato *AAAA-MM-DD* ).|  
 |SQL_TYPE_TIME [c]|8 (el número de caracteres del formato *hh-mm-SS* ) o 9 + *s* (el número de caracteres del formato *HH: mm: SS*[. FFF...], donde *s* es la precisión en segundos).|  
-|SQL_TYPE_TIMESTAMP|16 (el número de caracteres del formato *AAAA-MM-DD HH: mm* )<br /><br /> 19 (el número de caracteres del formato *AAAA-MM-DD* *HH: mm: SS* )<br /><br /> or<br /><br /> 20 + *s* (el número de caracteres del formato *AAAA-MM-DD HH: mm: SS*[. FFF...], donde *s* es la precisión en segundos).|  
+|SQL_TYPE_TIMESTAMP|16 (el número de caracteres del formato *AAAA-MM-DD HH: mm* )<br /><br /> 19 (el número de caracteres del formato *AAAA-MM-DD* *HH: mm: SS* )<br /><br /> o<br /><br /> 20 + *s* (el número de caracteres del formato *AAAA-MM-DD HH: mm: SS*[. FFF...], donde *s* es la precisión en segundos).|  
 |SQL_INTERVAL_SECOND|Donde *p* es la precisión inicial del intervalo y *s* es la precisión en segundos, *p* (si *s*= 0) o *p* + *s*+ 1 (si *es*>0). [ d|  
 |SQL_INTERVAL_DAY_TO_SECOND|Donde *p* es la precisión inicial del intervalo y *s* es la precisión en segundos, 9 +*p* (si *s*= 0) o 10 +*p* + *s* (si *s*>0). [ d|  
 |SQL_INTERVAL_HOUR_TO_SECOND|Donde *p* es la precisión inicial del intervalo y *s* es la precisión en segundos, 6 +*p* (si *s*= 0) o 7 +*p* + *s* (si *es*>0). [ d|  

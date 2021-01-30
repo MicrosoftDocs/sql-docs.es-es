@@ -1,13 +1,13 @@
 ---
-description: managed_backup. sp_backup_on_demand (Transact-SQL)
-title: managed_backup. sp_backup_on_demand (Transact-SQL) | Microsoft Docs
+description: managed_backup.sp_backup_on_demand managed_backup (Transact-SQL)
+title: managed_backup managed_backup.sp_backup_on_demand (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - smart_admin.sp_backup_on_demand
 - smart_admin.sp_backup_on_demand_TSQL
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79188e36e5a876fb61ddda3af94f37372963a08c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 480338a6194b07f15d8c139a6675649e5c4f8e7d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548424"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205297"
 ---
-# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-SQL)
+# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup.sp_backup_on_demand managed_backup (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Solicita [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] que realice una copia de seguridad de la base de datos especificada.  
@@ -62,7 +62,7 @@ EXEC managed_backup.sp_backup_on_demand
 ## <a name="security"></a>Seguridad  
   
 ### <a name="permissions"></a>Permisos  
- Requiere la pertenencia al rol de base de datos **db_backupoperator** , con permisos **ALTER any Credential** y permisos **Execute** en **sp_delete_backuphistory**procedimiento almacenado.  
+ Requiere la pertenencia al rol de base de datos **db_backupoperator** , con permisos **ALTER any Credential** y permisos **Execute** en **sp_delete_backuphistory** procedimiento almacenado.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se realiza una solicitud de copia de seguridad de base de datos para la base de datos ' TestDB '. Esta base de datos tiene [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] habilitado.  

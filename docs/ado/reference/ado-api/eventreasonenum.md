@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - EventReasonEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b676ee2b8585f2bab467cc9f09580721d06fab0c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 53076cb3787e334955a727bf33502c80d289aac4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973576"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167437"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 Especifica la razón por la que se produjo un evento.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adRsnAddNew**|1|Una operación agregó un nuevo registro.|  
 |**adRsnClose**|9|Una operación cerró el **conjunto de registros**.|  

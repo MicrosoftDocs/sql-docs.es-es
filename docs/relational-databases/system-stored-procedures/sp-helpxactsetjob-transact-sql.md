@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpxactsetjob
 - sp_helpxactsetjob_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b353f694301c4d6a6c1cc6eae85e9791481d4620
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 39092ea96ed0f143af7322fea3f04d38d3e4eef0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547916"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194728"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` Es el nombre del publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que pertenece el trabajo. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que pertenece el trabajo. *Publisher* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -48,7 +48,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**lastdate**|**VARCHAR (22)**|Fecha en que se ejecutó el trabajo por última vez.|  
 |**thisdate**|**VARCHAR (22)**|Hora de cambio.|  
 |**nextdate**|**VARCHAR (22)**|Fecha en que se ejecutará el trabajo de nuevo.|  
-|**broken**|**varchar(1)**|Marca de interrupción del trabajo.|  
+|**deteriora**|**varchar(1)**|Marca de interrupción del trabajo.|  
 |**interval**|**VARCHAR (200)**|Intervalo del trabajo.|  
 |**falla**|**int**|Número de errores del trabajo.|  
 |**xactsetjobwhat**|**VARCHAR (200)**|Nombre del procedimiento ejecutado por el trabajo.|  

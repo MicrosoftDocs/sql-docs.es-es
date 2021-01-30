@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC escape sequences [ODBC], LIKE
 - LIKE escape sequence [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 19d20f80f9fea4df2c508ec4ec4bcc2ee6718986
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d32b0470cb2adf0960e23dac17d8cb4942f296c0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429656"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184392"
 ---
 # <a name="like-escape-sequence"></a>Secuencia de escape LIKE
 ODBC usa secuencias de escape para la cláusula LIKE. La sintaxis de esta secuencia de escape es la siguiente:  

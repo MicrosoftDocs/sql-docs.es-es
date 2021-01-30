@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpfilegroup_TSQL
 - sp_helpfilegroup
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 253118a01b4044d752c16e570e16b1f46f21ede2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 39899feae9ad7b4cd6f2ab45caf11ddd3e89cd98
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549626"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204411"
 ---
 # <a name="sp_helpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @filegroupname = ] 'name'` Es el nombre lógico de cualquier grupo de archivos de la base de datos actual. *Name* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *Name* , se muestran todos los grupos de archivos de la base de datos actual y solo se muestra el primer conjunto de resultados que se muestra en la sección conjuntos de resultados.  
+`[ @filegroupname = ] 'name'` Es el nombre lógico de cualquier grupo de archivos de la base de datos actual. *Name* es de **tipo sysname y su** valor predeterminado es NULL. Si no se especifica *Name* , se muestran todos los grupos de archivos de la base de datos actual y solo se muestra el primer conjunto de resultados que se muestra en la sección conjuntos de resultados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -93,7 +93,7 @@ GO
  [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpfile &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [Sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.master_files &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Archivos y grupos de archivos de base de datos](../../relational-databases/databases/database-files-and-filegroups.md)  

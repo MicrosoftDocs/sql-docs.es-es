@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - SortColumn property [RDS]
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 62187b1643c315099d40d0bdd878699fcfc0065c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: edbfa8f6c4dbb1296e9bf86aed43148bb7b12ec2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724232"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168776"
 ---
 # <a name="sortcolumn-property-rds"></a>Propiedad SortColumn (RDS)
 Indica la columna por la que se ordenarán los registros.  
@@ -42,9 +42,9 @@ DataControl.SortColumn = String
  Valor de **cadena** que representa el nombre o el alias de la columna por la que se van a ordenar los registros.  
   
 ## <a name="remarks"></a>Observaciones  
- Las propiedades **SortColumn**, [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), [FilterCriterion](./filtercriterion-property-rds.md)y [FilterColumn](./filtercolumn-property-rds.md) proporcionan funcionalidad de ordenación y filtrado en la memoria caché del lado cliente. La funcionalidad de ordenación ordena los registros por los valores de una columna. La funcionalidad de filtrado muestra un subconjunto de registros basados en criterios de búsqueda, mientras que el [conjunto de registros](../ado-api/recordset-object-ado.md) completo se mantiene en la memoria caché. El método [RESET](./reset-method-rds.md) ejecutará los criterios y reemplazará el **conjunto de registros** actual por un **conjunto de registros**actualizable.  
+ Las propiedades **SortColumn**, [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), [FilterCriterion](./filtercriterion-property-rds.md)y [FilterColumn](./filtercolumn-property-rds.md) proporcionan funcionalidad de ordenación y filtrado en la memoria caché del lado cliente. La funcionalidad de ordenación ordena los registros por los valores de una columna. La funcionalidad de filtrado muestra un subconjunto de registros basados en criterios de búsqueda, mientras que el [conjunto de registros](../ado-api/recordset-object-ado.md) completo se mantiene en la memoria caché. El método [RESET](./reset-method-rds.md) ejecutará los criterios y reemplazará el **conjunto de registros** actual por un **conjunto de registros** actualizable.  
   
- Para ordenar por un **conjunto de registros**, primero debe guardar los cambios pendientes. Si utiliza **RDS. DataControl**, puede utilizar el método [SubmitChanges](./submitchanges-method-rds.md) . Por ejemplo, si el **objeto RDS. DataControl** se denomina ADC1, el código sería `ADC1.SubmitChanges` . Si está utilizando un conjunto de **registros**ADO, puede utilizar su método [UpdateBatch](../ado-api/updatebatch-method.md) . El uso de **UpdateBatch** es el método recomendado para los objetos de **conjunto de registros** creados con el método [CreateRecordset](./createrecordset-method-rds.md) . Por ejemplo, el código podría ser `myRS.UpdateBatch` o `ADC1.Recordset.UpdateBatch` .  
+ Para ordenar por un **conjunto de registros**, primero debe guardar los cambios pendientes. Si utiliza **RDS. DataControl**, puede utilizar el método [SubmitChanges](./submitchanges-method-rds.md) . Por ejemplo, si el **objeto RDS. DataControl** se denomina ADC1, el código sería `ADC1.SubmitChanges` . Si está utilizando un conjunto de **registros** ADO, puede utilizar su método [UpdateBatch](../ado-api/updatebatch-method.md) . El uso de **UpdateBatch** es el método recomendado para los objetos de **conjunto de registros** creados con el método [CreateRecordset](./createrecordset-method-rds.md) . Por ejemplo, el código podría ser `myRS.UpdateBatch` o `ADC1.Recordset.UpdateBatch` .  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataControl (RDS)](./datacontrol-object-rds.md)  

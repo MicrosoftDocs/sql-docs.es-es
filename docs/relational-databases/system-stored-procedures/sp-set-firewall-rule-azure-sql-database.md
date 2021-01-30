@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 07/28/2016
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_set_firewall_rule
 - sp_set_firewall_rule_TSQL
@@ -20,12 +20,12 @@ ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: 795aeb9a03f839cae400e92060ac21056f314d2f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: aa47f5578403fa6cfd2f945ebcaa5bff767d967b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468286"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184738"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (Azure SQL Database)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
@@ -45,13 +45,13 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="arguments"></a>Argumentos  
  En la tabla siguiente se muestran los argumentos y las opciones admitidos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   
-|NOMBRE|Datatype|Descripción|  
+|Nombre|Datatype|Descripción|  
 |----------|--------------|-----------------|  
 |[ @name =] ' nombre '|**NVARCHAR (128)**|El nombre utilizado para describir y distinguir la configuración del firewall de nivel de servidor.|  
 |[ @start_ip_address =] ' start_ip_address '|**VARCHAR (50)**|La dirección IP más baja en el intervalo de la configuración del firewall de nivel de servidor. Las direcciones IP iguales o superiores a esta pueden intentar conectarse con el servidor [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La dirección IP más baja posible es `0.0.0.0`.|  
 |[ @end_ip_address =] ' end_ip_address '|**VARCHAR (50)**|La dirección IP más alta en el intervalo de la configuración del firewall de nivel de servidor. Las direcciones IP iguales o inferiores a esta pueden intentar conectarse con el servidor [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La dirección IP más alta posible es `255.255.255.255`.<br /><br /> Nota: los intentos de conexión de Azure se permiten cuando este campo y el campo *start_ip_address* es igual a `0.0.0.0` .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los nombres de la configuración del firewall de nivel de servidor deben ser únicos. Si el nombre del valor proporcionado para el procedimiento almacenado ya existe en la tabla de configuración del firewall, las direcciones IP inicial y final se actualizarán. De lo contrario, se creará una nueva configuración del firewall de nivel de servidor.  
   
  Al agregar una configuración de firewall de nivel de servidor donde las direcciones IP inicial y final son iguales a `0.0.0.0`, se permite al acceso a su servidor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] desde Azure. Proporcione un valor al parámetro *Name* que le ayude a recordar para qué sirve la configuración de Firewall de nivel de servidor.  

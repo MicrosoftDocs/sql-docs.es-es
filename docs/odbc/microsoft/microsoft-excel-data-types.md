@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], Excel driver
 - Excel data types [ODBC]
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3e54ece7962fc5b56e4b9fcc17123ac7ad3c9e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a6342706e2ab9b66db9d0410b31573d89bdf1d7c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466437"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212125"
 ---
 # <a name="microsoft-excel-data-types"></a>Tipos de datos de Microsoft Excel
 En la tabla siguiente se muestra cómo se asignan los tipos de datos del controlador de Microsoft Excel a los tipos de datos SQL de ODBC. El controlador de Microsoft Excel asigna estos tipos de datos a las columnas de las tablas de Microsoft Excel en función de los datos de la columna.  

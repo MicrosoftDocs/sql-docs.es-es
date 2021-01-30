@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - RDS properties [ADO]
 - properties [ADO], RDS
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75124c0fc8d7a0c3c0bb0ea491c84c3673339108
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6bf9a232f2dadfc562cd6e7e183858c3a7f64e9c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724356"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168829"
 ---
 # <a name="rds-properties"></a>Propiedades de RDS
 > [!IMPORTANT]
@@ -33,7 +33,7 @@ ms.locfileid: "91724356"
 |[FilterColumn (RDS)](./filtercolumn-property-rds.md)|Indica la columna en la que se van a evaluar los criterios de filtro.|  
 |[FilterCriterion (RDS)](./filtercriterion-property-rds.md)|Indica el operador de evaluación que se va a usar en el valor de filtro.|  
 |[FilterValue (RDS)](./filtervalue-property-rds.md)|Indica el valor para filtrar los registros.|  
-|[Controlador (RDS)](./handler-property-rds.md)|Indica el nombre de un programa de personalización de servidor (*controlador*) que extiende la funcionalidad de **RDSServer. DataFactory**y cualquier parámetro utilizado por el *controlador*.|  
+|[Controlador (RDS)](./handler-property-rds.md)|Indica el nombre de un programa de personalización de servidor (*controlador*) que extiende la funcionalidad de **RDSServer. DataFactory** y cualquier parámetro utilizado por el *controlador*.|  
 |[InternetTimeout (RDS)](./internettimeout-property-rds.md)|Indica el número de milisegundos que hay que esperar antes de que se agote el tiempo de espera de una solicitud.|  
 |[ReadyState (RDS)](./readystate-property-rds.md)|Indica el progreso de un objeto **DataControl** a medida que captura los datos en su objeto de **conjunto de registros** .|  
 |[Recordset y SourceRecordset (RDS)](./recordset-sourcerecordset-properties-rds.md)|Indica el objeto de **conjunto de registros** devuelto desde un objeto comercial personalizado.|  

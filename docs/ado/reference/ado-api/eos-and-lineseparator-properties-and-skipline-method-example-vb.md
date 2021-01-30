@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6c4bf73832513a09960d221be42c879a3755e29
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 00bb06c8ea24b622278bb3202f2e0500c4594627
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973776"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167493"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Ejemplo de las propiedades EOS y LineSeparator y el método SkipLine (VB)
 En este ejemplo se muestra cómo manipular secuencias de texto una línea a la vez. Se muestra el efecto de cambiar el separador de líneas del retorno de carro/avance de línea predeterminado (**adCRLF**) a simplemente avance de línea (**adLF**) o retorno de carro (**adCR**).  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_resync_targetserver
 - sp_resync_targetserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8d7076615c68b7cd0918a3556753fd0d41d5bcf6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3bd9b8b4b73cf79fc1adc9dcff8fd4754c944e35
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551266"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194367"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server_name = ] 'server'` Nombre del servidor que se va a volver a sincronizar. *server* es de tipo **sysname**y no tiene ningún valor predeterminado. Si se especifica **All** , se vuelven a sincronizar todos los servidores de destino.  
+`[ @server_name = ] 'server'` Nombre del servidor que se va a volver a sincronizar. *server* es de tipo **sysname** y no tiene ningún valor predeterminado. Si se especifica **All** , se vuelven a sincronizar todos los servidores de destino.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

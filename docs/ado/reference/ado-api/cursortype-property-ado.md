@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::CursorType
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5401b5b5b9e91b6b851f70d2d3a7e19f5e5d7a82
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 703c89fb8f5e1479e09162429ac93fa43c66e0be
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974326"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167620"
 ---
 # <a name="cursortype-property-ado"></a>Propiedad CursorType (ADO)
 Indica el tipo de cursor utilizado en un objeto de [conjunto de registros](./recordset-object-ado.md) .  
@@ -40,7 +40,7 @@ Indica el tipo de cursor utilizado en un objeto de [conjunto de registros](./rec
   
 |Para un conjunto de registros de este CursorType|El método Supports debe devolver true para todas estas constantes|  
 |----------------------------------------|---------------------------------------------------------------------|  
-|**adOpenForwardOnly**|None|  
+|**adOpenForwardOnly**|ninguno|  
 |**adOpenKeyset**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
 |**adOpenDynamic**|**adMovePrevious**|  
 |**adOpenStatic**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  

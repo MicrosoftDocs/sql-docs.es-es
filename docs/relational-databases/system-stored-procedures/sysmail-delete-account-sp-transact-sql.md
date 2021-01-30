@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_delete_account_sp
 - sysmail_delete_account_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ccc7cbbbae49362eabc1612547e37589d80894a3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1facb2a83b79c51fbfa53eaa4af4980b0e71b594
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538525"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203662"
 ---
 # <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,9 +40,9 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @account_id = ] account_id` Número de ID. de la cuenta que se va a eliminar. *ACCOUNT_ID* es de **tipo int**y no tiene ningún valor predeterminado. Se debe especificar *ACCOUNT_ID* o *account_name* .  
+`[ @account_id = ] account_id` Número de ID. de la cuenta que se va a eliminar. *ACCOUNT_ID* es de **tipo int** y no tiene ningún valor predeterminado. Se debe especificar *ACCOUNT_ID* o *account_name* .  
   
-`[ @account_name = ] 'account_name'` Nombre de la cuenta que se va a eliminar. *account_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Se debe especificar *ACCOUNT_ID* o *account_name* .  
+`[ @account_name = ] 'account_name'` Nombre de la cuenta que se va a eliminar. *account_name* es de **tipo sysname** y no tiene ningún valor predeterminado. Se debe especificar *ACCOUNT_ID* o *account_name* .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

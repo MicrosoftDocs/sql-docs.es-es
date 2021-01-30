@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - ConvertToString method [ADO]
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec87fd4bc4495874aae88b3051081e30dda9bbb9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4edcebbfdee8a9a1411189786593c129ee32771c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722431"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169038"
 ---
 # <a name="converttostring-method-rds"></a>Método ConvertToString (RDS)
 Convierte un [conjunto de registros](../ado-api/recordset-object-ado.md) en una cadena MIME que representa los datos del conjunto de registros.  
@@ -46,7 +46,7 @@ DataFactory.ConvertToString(Recordset)
   
  **ConvertToString** carga primero el **conjunto de registros** en las tablas de servicio de cursor y, a continuación, genera una secuencia en formato MIME.  
   
- En el cliente, el servicio de datos remotos puede volver a convertir la cadena MIME en un **conjunto de registros**totalmente funcional. Funciona bien para controlar menos de 400 filas de datos con un ancho de más de 1024 bytes por fila. No debe usarlo para la transmisión por secuencias de datos de BLOBs y grandes conjuntos de resultados a través de HTTP. No se realiza ninguna compresión de conexión en la cadena, por lo que los conjuntos de datos muy grandes tardarán mucho tiempo en transportarse a través de HTTP cuando se comparan con el formato tablegram optimizado para conexión que el servicio de datos remotos define e implementa como su formato de protocolo de transporte nativo.  
+ En el cliente, el servicio de datos remotos puede volver a convertir la cadena MIME en un **conjunto de registros** totalmente funcional. Funciona bien para controlar menos de 400 filas de datos con un ancho de más de 1024 bytes por fila. No debe usarlo para la transmisión por secuencias de datos de BLOBs y grandes conjuntos de resultados a través de HTTP. No se realiza ninguna compresión de conexión en la cadena, por lo que los conjuntos de datos muy grandes tardarán mucho tiempo en transportarse a través de HTTP cuando se comparan con el formato tablegram optimizado para conexión que el servicio de datos remotos define e implementa como su formato de protocolo de transporte nativo.  
   
 > [!NOTE]
 >  Si está utilizando Active Server páginas para insertar la cadena MIME resultante en una página HTML de cliente, tenga en cuenta que las versiones de VBScript anteriores a la versión 2,0 limitan el tamaño de la cadena a 32 KB. Si se supera este límite, se devuelve un error. Mantenga el ámbito de la consulta relativamente pequeño al utilizar la incrustación MIME a través de archivos. asp. Para solucionarlo, descargue la versión más reciente de VBScript del sitio web Microsoft Windows Script Technologies.  

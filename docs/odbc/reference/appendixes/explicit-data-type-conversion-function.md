@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - explicit data type conversion functions [ODBC]
 - data type conversion functions [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da897469d26cd0403dc023cfcd3f3e03bfceeba4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 927c911b839e7aa07b087edb0fb3b457d0825b6c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466192"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194819"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Función de conversión de tipo de datos explícito
 La conversión explícita de tipos de datos se especifica en términos de definiciones de tipos de datos SQL.  
@@ -31,7 +31,7 @@ La conversión explícita de tipos de datos se especifica en términos de defini
   
  **Convert (** _value_exp_, _data_type_**)**  
   
- La función devuelve el valor especificado por *value_exp* convertido en el *data_type*especificado, donde *data_type* es una de las palabras clave siguientes:  
+ La función devuelve el valor especificado por *value_exp* convertido en el *data_type* especificado, donde *data_type* es una de las palabras clave siguientes:  
 
 :::row:::
     :::column:::

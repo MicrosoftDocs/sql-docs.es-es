@@ -1,13 +1,13 @@
 ---
-description: managed_backup. sp_backup_master_switch (Transact-SQL)
-title: managed_backup. sp_backup_master_switch (Transact-SQL) | Microsoft Docs
+description: managed_backup.sp_backup_master_switch managed_backup (Transact-SQL)
+title: managed_backup managed_backup.sp_backup_master_switch (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_ backup_master_switch
 - smart_admin.sp_backup_master_switch
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cbb360512888007f8fa5e0408771f1e27f94aeb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 97202d989a21002d7f24c886378fd3f6c6b35ebd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548427"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205306"
 ---
-# <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup. sp_backup_master_switch (Transact-SQL)
+# <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup.sp_backup_master_switch managed_backup (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Pausa o reanuda la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
@@ -57,7 +57,7 @@ EXEC managed_backup.sp_backup_master_switch
  Describe problemas de seguridad relacionados con la instrucción. Permisos de inclusión como subsección (título H3). Considere incluir otras subsecciones para el encadenamiento de la propiedad y auditoría, si procede.  
   
 ### <a name="permissions"></a>Permisos  
- Requiere la pertenencia al rol de base de datos **db_backupoperator** , con permisos **ALTER any Credential** y permisos **Execute** en **sp_delete_backuphistory**procedimiento almacenado.  
+ Requiere la pertenencia al rol de base de datos **db_backupoperator** , con permisos **ALTER any Credential** y permisos **Execute** en **sp_delete_backuphistory** procedimiento almacenado.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente se puede utilizar para pausar la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en la instancia que se ejecuta en:  

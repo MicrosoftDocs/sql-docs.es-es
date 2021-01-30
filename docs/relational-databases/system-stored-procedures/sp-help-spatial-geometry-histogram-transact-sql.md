@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_spatial_geometry_histogram
 - sp_help_spatial_geometry_histogram_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d875178db938e92aa60e3396cee2242d6a54e3f7
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 75609570d3c021b350fc06cbaf35f32dee4bd8ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810225"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183604"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,19 +47,19 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="arguments"></a>Argumentos  
 `[ @tabname = ] 'tabname'` Es el nombre completo o no completo de la tabla para la que se ha especificado el índice espacial.  
   
- Se requieren comillas únicamente si se especifica una tabla certificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *tabname* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ Se requieren comillas únicamente si se especifica una tabla certificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *tabname* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @colname = ] 'colname'` Es el nombre de la columna espacial especificada. *colname* es un **sysname**y no tiene ningún valor predeterminado.  
+`[ @colname = ] 'colname'` Es el nombre de la columna espacial especificada. *colname* es un **sysname** y no tiene ningún valor predeterminado.  
   
-`[ @resolution = ] 'resolution'` Es la resolución del cuadro de límite. Los valores válidos van del 10 al 5000. la *resolución* es de **tinyint**y no tiene ningún valor predeterminado.  
+`[ @resolution = ] 'resolution'` Es la resolución del cuadro de límite. Los valores válidos van del 10 al 5000. la *resolución* es de **tinyint** y no tiene ningún valor predeterminado.  
   
-`[ @xmin = ] 'xmin'` Es la propiedad del cuadro de límite X mínimo. *xmin* es de **tipo float**y no tiene ningún valor predeterminado.  
+`[ @xmin = ] 'xmin'` Es la propiedad del cuadro de límite X mínimo. *xmin* es de **tipo float** y no tiene ningún valor predeterminado.  
   
-`[ @ymin = ] 'ymin'` Es la propiedad del cuadro de límite Y mínimo. *YMIN* es de **tipo float**y no tiene ningún valor predeterminado.  
+`[ @ymin = ] 'ymin'` Es la propiedad del cuadro de límite Y mínimo. *YMIN* es de **tipo float** y no tiene ningún valor predeterminado.  
   
-`[ @xmax = ] 'xmax'` Es la propiedad del cuadro de límite X máximo. *Xmax* es de **tipo float**y no tiene ningún valor predeterminado.  
+`[ @xmax = ] 'xmax'` Es la propiedad del cuadro de límite X máximo. *Xmax* es de **tipo float** y no tiene ningún valor predeterminado.  
   
-`[ @ymax = ] 'ymax'` Es la propiedad del cuadro de límite Y máximo. *YMAX* es de **tipo float**y no tiene ningún valor predeterminado.  
+`[ @ymax = ] 'ymax'` Es la propiedad del cuadro de límite Y máximo. *YMAX* es de **tipo float** y no tiene ningún valor predeterminado.  
   
 `[ @sample = ] 'sample'` Es el porcentaje de la tabla que se utiliza. Los valores válidos son de 0 a 100. el *ejemplo* es **float**. El valor predeterminado es 100.  
   

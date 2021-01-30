@@ -6,7 +6,7 @@ ms.date: 01/05/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex_TSQL
 - sys.dm_resource_governor_workload_groups_history_ex
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: 69f310b699e59845dbd62a908a6a49bfb6efb42f
-ms.sourcegitcommit: 11ca2305a8d7e420daf772eb97861706c9e08e31
+ms.openlocfilehash: ac8bc675c5a059c211e6ecfbed063d54daf6ee92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97928454"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203306"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -69,8 +69,8 @@ Cada fila representa una instantánea periódica de las estadísticas del grupo 
 |**max_request_cpu_msec**| bigint |Uso máximo de CPU, en milisegundos, para una única solicitud. No admite valores NULL.|
 |**max_concurrent_request**| int |Valor actual del número máximo de solicitudes simultáneas. No admite valores NULL.|
 |**max_io**| int |Límite máximo de e/s para el grupo.|
-|**max_global_io**| int |Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.
-|**max_queued_io**| int |Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|
+|**max_global_io**| int |Solamente se identifica con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.
+|**max_queued_io**| int |Solamente se identifica con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|
 |**max_log_rate_kb**| bigint |Velocidad de registro máxima (kilobytes por segundo) en el nivel de grupo de recursos.|
 |**max_session**| int |Límite de sesión para el grupo.|
 |**max_worker**| int |Límite de trabajo para el grupo.|
@@ -80,7 +80,7 @@ Cada fila representa una instantánea periódica de las estadísticas del grupo 
 
 Esta vista requiere el permiso VIEW SERVER STATE.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Los usuarios pueden tener acceso a esta vista de administración dinámica para supervisar el consumo de recursos casi en tiempo real para el grupo de cargas de trabajo de usuario, así como los grupos internos del sistema de la instancia de Azure SQL Database.
 

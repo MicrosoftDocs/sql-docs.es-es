@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - environment transitions [ODBC]
 - transitioning states [ODBC], environment
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4cb4366a044f42440eb70934b9f853947e4f3224
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: daef0bc276831358cd3d82dd10a1dd44082214af
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466235"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194842"
 ---
 # <a name="environment-transitions"></a>Transiciones de entorno
 Los entornos ODBC tienen los tres Estados siguientes.  
   
-|State|Descripción|  
+|Estado|Descripción|  
 |-----------|-----------------|  
 |E0|Entorno sin asignar|  
 |E1|Entorno asignado, conexión sin asignar|  

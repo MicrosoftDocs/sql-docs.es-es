@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3331aa89-24d0-4c0e-b377-c720c1107ad5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6439ecd5d19e4daf2eaf42009bae375bb9d20e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 24dfc1370ab2038e8b57465b94cc0ba56e84d61d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429607"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193265"
 ---
 # <a name="odbc-appendixes"></a>Apéndices ODBC
 Los detalles técnicos relacionados con la interfaz ODBC de Microsoft se incluyen en los apéndices siguientes:  

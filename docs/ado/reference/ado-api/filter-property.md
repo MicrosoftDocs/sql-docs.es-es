@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Filter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2519fdf691cc0f982f16a3aa77fdb66036bd86e8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7366ba67d36049f1c5df701bc633d76f56bb9af5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973006"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167327"
 ---
 # <a name="filter-property"></a>Propiedad Filter
 Indica un filtro para los datos de un [conjunto de registros](./recordset-object-ado.md).  
@@ -65,7 +65,7 @@ Puede producirse un error en la configuración de la propiedad de **filtro** deb
   
 Establecer la propiedad **Filter** en una cadena de longitud cero ("") tiene el mismo efecto que el uso de la constante **adFilterNone** .
   
-Siempre que se establece la propiedad **Filter** , la posición del registro actual se mueve al primer registro del subconjunto filtrado de registros del **conjunto**de registros. Del mismo modo, cuando se borra la propiedad **Filter** , la posición del registro actual se mueve al primer registro del **conjunto de registros**.
+Siempre que se establece la propiedad **Filter** , la posición del registro actual se mueve al primer registro del subconjunto filtrado de registros del **conjunto** de registros. Del mismo modo, cuando se borra la propiedad **Filter** , la posición del registro actual se mueve al primer registro del **conjunto de registros**.
 
 Supongamos que un **conjunto de registros** se filtra en función de un campo de un tipo Variant, como el tipo sql_variant. Se produce un error (DISP_E_TYPEMISMATCH o 80020005) cuando no coinciden los subtipos del campo y los valores de filtro utilizados en la cadena de criterios. Por ejemplo, supongamos que:
 
@@ -76,7 +76,7 @@ Esta configuración genera el error durante el tiempo de ejecución. Sin embargo
 
 Vea la propiedad [Bookmark (propiedad de ADO)](./bookmark-property-ado.md) para obtener una explicación de los valores de marcador desde los que puede crear una matriz que se va a usar con la propiedad Filter.
 
-Solo los filtros en forma de cadenas de criterios afectan al contenido de un **conjunto de registros**guardado. Un ejemplo de una cadena de criterios es `OrderDate > '12/31/1999'` . Los filtros creados con una matriz de marcadores o el uso de un valor de **FilterGroupEnum**no afectan al contenido del **conjunto de registros**guardado. Estas reglas se aplican a los conjuntos de registros creados con cursores del lado cliente o del lado servidor.
+Solo los filtros en forma de cadenas de criterios afectan al contenido de un **conjunto de registros** guardado. Un ejemplo de una cadena de criterios es `OrderDate > '12/31/1999'` . Los filtros creados con una matriz de marcadores o el uso de un valor de **FilterGroupEnum** no afectan al contenido del **conjunto de registros** guardado. Estas reglas se aplican a los conjuntos de registros creados con cursores del lado cliente o del lado servidor.
   
 > [!NOTE]
 >  Al aplicar la marca adFilterPendingRecords a un **conjunto de registros** filtrado y modificado en el modo de actualización por lotes, el **conjunto de registros** resultante está vacío si el filtrado se basó en el campo clave de una tabla con una sola clave y la modificación se realizó en los valores del campo de clave. El conjunto de **registros** resultante no estará vacío si se cumple alguna de las siguientes instrucciones:  
@@ -89,13 +89,13 @@ Solo los filtros en forma de cadenas de criterios afectan al contenido de un **c
   
 -   Se han realizado modificaciones en los campos de una tabla con varias claves.  
   
-En la tabla siguiente se resumen los efectos de **adFilterPendingRecords** en diferentes combinaciones de filtrado y modificaciones. En la columna izquierda se muestran las posibles modificaciones. Las modificaciones se pueden realizar en cualquiera de los campos sin clave, en el campo clave de una tabla con una sola clave o en cualquiera de los campos clave de una tabla con varias claves. La fila superior muestra el criterio de filtrado. El filtrado puede basarse en cualquiera de los campos sin clave, en el campo clave de una tabla con una sola clave o en cualquiera de los campos clave de una tabla con varias claves. Las celdas de intersección muestran los resultados. Un **+** signo más significa que la aplicación de **adFilterPendingRecords** da como resultado un **conjunto de registros**no vacío. Un **-** signo menos significa un **conjunto de registros**vacío.  
+En la tabla siguiente se resumen los efectos de **adFilterPendingRecords** en diferentes combinaciones de filtrado y modificaciones. En la columna izquierda se muestran las posibles modificaciones. Las modificaciones se pueden realizar en cualquiera de los campos sin clave, en el campo clave de una tabla con una sola clave o en cualquiera de los campos clave de una tabla con varias claves. La fila superior muestra el criterio de filtrado. El filtrado puede basarse en cualquiera de los campos sin clave, en el campo clave de una tabla con una sola clave o en cualquiera de los campos clave de una tabla con varias claves. Las celdas de intersección muestran los resultados. Un **+** signo más significa que la aplicación de **adFilterPendingRecords** da como resultado un **conjunto de registros** no vacío. Un **-** signo menos significa un **conjunto de registros** vacío.  
   
 |Posibles|No claves|Clave única|Varias claves|
 |-|--------------|----------------|-------------------|
 |**No claves**|+|+|+|
-|**Clave única**|+|-|N/D|
-|**Varias claves**|+|N/D|+|
+|**Clave única**|+|-|No aplicable|
+|**Varias claves**|+|No aplicable|+|
 |||||
   
 ## <a name="applies-to"></a>Se aplica a
@@ -107,4 +107,4 @@ En la tabla siguiente se resumen los efectos de **adFilterPendingRecords** en di
 [Ejemplo de las propiedades Filter y RecordCount (VB)](./filter-and-recordcount-properties-example-vb.md) 
  [Ejemplo de las propiedades Filter y RecordCount (VC + +)](./filter-and-recordcount-properties-example-vc.md) 
  [Clear (método) (ADO)](./clear-method-ado.md) 
- [Optimize (propiedad dinámica) (ADO)](./optimize-property-dynamic-ado.md)
+ [Optimizar Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)
