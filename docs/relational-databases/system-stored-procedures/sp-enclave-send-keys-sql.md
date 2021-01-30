@@ -9,7 +9,7 @@ ms.reviewer: vanto
 ms.suite: sql
 ms.technology: system-objects
 ms.tgt_pltfrm: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enclave_send_keys
 - sp_enclave_send_keys_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 0fc33aa4e45e742f50321336bd01ab136c8e966a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 22d7f8b86d5cd247691c0d7527287c901845cb58
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462706"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99157303"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -75,4 +75,4 @@ EXEC sp_enclave_send_keys;
  
 - [Creación y uso de índices en columnas mediante Always Encrypted con enclaves seguros](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
 
-- [Tutorial: crear y usar índices en columnas habilitadas para enclave mediante el cifrado aleatorio](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
+- [Tutorial: Creación y uso de índices en columnas habilitadas para enclave que usan cifrado aleatorio](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

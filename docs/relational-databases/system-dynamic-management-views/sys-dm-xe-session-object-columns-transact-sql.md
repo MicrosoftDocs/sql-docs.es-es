@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_xe_session_object_columns_TSQL
 - sys.dm_xe_session_object_columns_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 14213f30fed5d57a794c147486aa8f9bcc077575
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e8a7cf766e172d0cb62a3051894be390b176361c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096434"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99128621"
 ---
 # <a name="sysdm_xe_session_object_columns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

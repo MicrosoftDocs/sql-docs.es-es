@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1c39561044936d0ed8ffa1bdd6982efa9e46d99
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 019282bb5926a1bae4c409a98158b56a86bfabd2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975416"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164697"
 ---
 # <a name="clone-method-example-vc"></a>Ejemplo del método Clone (VC ++)
 En este ejemplo se usa el método [Clone](./clone-method-ado.md) para crear copias de un [conjunto de registros](./recordset-object-ado.md) y, a continuación, se permite al usuario colocar el puntero de registro de cada copia de forma independiente.  

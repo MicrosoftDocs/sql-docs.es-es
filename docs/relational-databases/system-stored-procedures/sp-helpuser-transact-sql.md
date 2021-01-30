@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpuser
 - sp_helpuser_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9ea3b0b0b6d1700c486514c29f889cc7beb3566
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ce2bf386978412c6b1409b31e371f8caa15eccdb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546046"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99103173"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89546046"
   Proporciona información acerca de las entidades de seguridad de base de datos en la base de datos actual.  
   
 > [!IMPORTANT]  
->  **sp_helpuser** no devuelve información acerca de los elementos protegibles que se introdujeron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Use [Sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) en su lugar.  
+>  **sp_helpuser** no devuelve información acerca de los elementos protegibles que se introdujeron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . En su lugar, use [Sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name_in_db = ] 'security_account'` Es el nombre del usuario o el rol de base de datos en la base de datos actual. *security_account* debe existir en la base de datos actual. *security_account* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *security_account* , **sp_helpuser** devuelve información acerca de todas las entidades de seguridad de base de datos.  
+`[ @name_in_db = ] 'security_account'` Es el nombre del usuario o el rol de base de datos en la base de datos actual. *security_account* debe existir en la base de datos actual. *security_account* es de **tipo sysname y su** valor predeterminado es NULL. Si no se especifica *security_account* , **sp_helpuser** devuelve información acerca de todas las entidades de seguridad de base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -78,7 +78,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Deberían**|**smallint**|IDENTIFICADOR de usuario del miembro del rol.|  
   
 ## <a name="remarks"></a>Observaciones  
- Para obtener información acerca de la pertenencia a roles de base de datos, use [Sys. database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Para ver información sobre los miembros del rol de servidor, use [Sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)y para ver información sobre las entidades de seguridad de nivel de servidor, use [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ Para obtener información acerca de la pertenencia a roles de base de datos, use [Sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Para ver información acerca de los miembros del rol de servidor, use [Sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)y para ver información sobre las entidades de seguridad de nivel de servidor, use [Sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  

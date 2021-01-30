@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_db_wait_stats_TSQL
 - dm_db_wait_stats
@@ -20,12 +20,12 @@ ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 3d711b3eb0cb99c65582d8feacf8678fbca264c7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 9787c91301678463ee324b6c6fa473b03af61a80
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98092949"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99109142"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -169,7 +169,7 @@ ms.locfileid: "98092949"
 |FSAGENT|Tiene lugar cuando una operación de E/S del archivo de FILESTREAM espera un recurso del agente de FILESTREAM que está utilizando otra operación de E/S de archivo.|  
 |FSTR_CONFIG_MUTEX|Tiene lugar cuando se produce una espera hasta que se complete la configuración de otra característica de FILESTREAM.|  
 |FSTR_CONFIG_RWLOCK|Tiene lugar cuando se produce una espera para serializar el acceso a los parámetros de configuración de FILESTREAM.|  
-|FT_METADATA_MUTEX|Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_METADATA_MUTEX|Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
 |FT_RESTART_CRAWL|Tiene lugar cuando un rastreo de texto completo debe reiniciarse desde el último punto correcto conocido para recuperarse de un error transitorio. La espera permite que completen o abandonen el paso actual las tareas del trabajador que se están ejecutando en dicho rellenado.|  
 |FULLTEXT GATHERER|Tiene lugar durante la sincronización de operaciones de texto completo.|  
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -380,11 +380,11 @@ ms.locfileid: "98092949"
 |XE_MODULEMGR_SYNC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_OLS_LOCK|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_PACKAGE_LOCK_BACKOFF|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|FT_COMPROWSET_RWLOCK|El texto completo espera en la operación de metadatos de fragmento. Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
-|FT_IFTS_RWLOCK|El texto completo está esperando la sincronización interna. Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_COMPROWSET_RWLOCK|El texto completo espera en la operación de metadatos de fragmento. Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_IFTS_RWLOCK|El texto completo está esperando la sincronización interna. Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
 |TDPFT_IFTS_SCHEDULER_IDLE_WAIT|Tipo de espera de la suspensión del programador de texto completo. El programador está inactivo.|  
-|FT_IFTSHC_MUTEX|El texto completo está esperando una operación de control de fdhost. Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
-|FT_IFTSISM_MUTEX|El texto completo está esperando la operación de comunicación. Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
-|FT_MASTER_MERGE|El texto completo está esperando la operación de combinación maestra. Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_IFTSHC_MUTEX|El texto completo está esperando una operación de control de fdhost. Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_IFTSISM_MUTEX|El texto completo está esperando la operación de comunicación. Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_MASTER_MERGE|El texto completo está esperando la operación de combinación maestra. Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
   
   

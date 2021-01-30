@@ -6,7 +6,7 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 450d131c-773a-4e05-ab96-3837b6c33aae
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d80ae6f3288df7bc0f0c2b5d1f9168487c52d80f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: db333672f9fed1fe1743ec437ce984f75bb2debc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097745"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158124"
 ---
 # <a name="security-related-dynamic-management-views-and-functions-transact-sql"></a>Funciones y vistas de administración dinámica relacionadas con la seguridad (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

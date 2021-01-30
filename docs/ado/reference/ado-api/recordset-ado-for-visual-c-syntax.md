@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 dev_langs:
 - C++
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad07d0539ffffa63193721064a1d1e0c21ba210c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d675e8349b652c3e0d9e248a34260cc06d5612c1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989796"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166715"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>Conjunto de registros (ADO para la sintaxis Visual C++)
 ## <a name="methods"></a>Métodos  
@@ -103,7 +103,7 @@ put_StayInSync(VARIANT_BOOL bStayInSync)
 get_Fields(ADOFields **ppvObject)  
 ```  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
   
 ```  
 EndOfRecordset(VARIANT_BOOL *fMoreData, EventStatusEnum *adStatus, _ADORecordset *pRecordset)  

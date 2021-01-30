@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysconstraints
 - sys.sysconstraints
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f2b2e2ad-ba24-48a1-913c-8ee4e0895dc4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 3014430aad20c74d22a72e1756503baadbe7cb68
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6b4b35b030cda96abc944ede2438f6cb0483e5c2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099153"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99149684"
 ---
 # <a name="syssysconstraints-transact-sql"></a>sys.sysconstraints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,10 +41,10 @@ ms.locfileid: "98099153"
 |**constid**|**int**|Número de restricción.|  
 |**id**|**int**|Id. de la tabla que posee la restricción.|  
 |**colid**|**smallint**|Id. de la columna en la que se define la restricción.<br /><br /> 0 = Restricción de tabla|  
-|**spare1**|**tinyint**|Reservada|  
+|**spare1**|**tinyint**|Reservado|  
 |**status**|**int**|Pseudomáscara de bits que indica el estado. Entre los valores posibles figuran los siguientes:<br /><br /> 1 = Restricción PRIMARY KEY<br /><br /> 2 = Restricción UNIQUE KEY<br /><br /> 3 = Restricción FOREIGN KEY<br /><br /> 4 = Restricción CHECK<br /><br /> 5 = Restricción DEFAULT<br /><br /> 16 = Restricción de nivel de columna<br /><br /> 32 = Restricción de nivel de tabla|  
-|**actions**|**int**|Reservada|  
-|**error**|**int**|Reservada|  
+|**actions**|**int**|Reservado|  
+|**error**|**int**|Reservado|  
   
 ## <a name="see-also"></a>Consulte también  
  [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

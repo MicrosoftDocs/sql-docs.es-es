@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enumcustomresolvers
 - sp_enumcustomresolvers_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2971d44f61076191addb74a701bb03069d06bc4c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8972aa1aaa4e567c60efb9653a75e6fa196211b4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549786"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99156782"
 ---
 # <a name="sp_enumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @distributor = ] 'distributor'` Es el nombre del distribuidor en el que se encuentra el solucionador personalizado. *Distributor* es de **tipo sysname y su**valor predeterminado es NULL. *Este parámetro ha quedado desusado y se retirará en versiones posteriores.*  
+`[ @distributor = ] 'distributor'` Es el nombre del distribuidor en el que se encuentra el solucionador personalizado. *Distributor* es de **tipo sysname y su** valor predeterminado es NULL. *Este parámetro ha quedado desusado y se retirará en versiones posteriores.*  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

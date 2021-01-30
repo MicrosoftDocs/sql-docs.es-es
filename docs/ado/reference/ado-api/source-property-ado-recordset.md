@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::putref_Source
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a71efe111a58ab8f799db512e77da4365ba5f48
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7ece9c2255891424ce26ef6ed81285c6f5767086
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988906"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166512"
 ---
 # <a name="source-property-ado-recordset"></a>Propiedad Source (ADO Recordset)
 Indica el origen de datos de un objeto de [conjunto de registros](./recordset-object-ado.md) .  

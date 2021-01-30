@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_xe_session_event_actions_TSQL
 - sys.dm_xe_session_event_actions_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: b705617043efd65494b1c6c6a5698dff292a8263
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8c1376034630be746de9eb989f8bfb8a1e44981c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096439"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99129247"
 ---
 # <a name="sysdm_xe_session_event_actions-transact-sql"></a>sys.dm_xe_session_event_actions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

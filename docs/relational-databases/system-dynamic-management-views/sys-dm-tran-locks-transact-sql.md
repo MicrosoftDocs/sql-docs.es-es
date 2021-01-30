@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_tran_locks
 - sys.dm_tran_locks
@@ -21,12 +21,12 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3dad8a8c42e2189a29b2e75743653aca5055eae
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a39e58fb6ca60a30a73531988eeffac89e7b46e1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101475"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99133968"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -99,7 +99,7 @@ Se mantienen bloqueos en recursos de [!INCLUDE[ssNoVersion](../../includes/ssnov
 |Tipo de recurso|Descripción del recurso|Resource_associated_entity_id|  
 |-------------------|--------------------------|--------------------------------------|  
 |DATABASE|Representa una base de datos.|No aplicable|  
-|ARCHIVO|Representa un archivo de la base de datos. Este archivo puede ser un archivo de datos o de registro.|No aplicable|  
+|FILE|Representa un archivo de la base de datos. Este archivo puede ser un archivo de datos o de registro.|No aplicable|  
 |OBJECT|Representa un objeto de la base de datos. Este objeto puede ser una tabla de datos, una vista, un procedimiento almacenado, un procedimiento almacenado extendido o cualquier objeto que tenga un Id. de objeto.|Id. de objeto|  
 |PAGE|Representa una página de un archivo de datos.|Identificador de HoBt. Este valor corresponde a **sys.partitions.hobt_id**. El identificador de HoBt no está siempre disponible para recursos PAGE, ya que es información adicional que puede proporcionar el autor de la llamada y no todos los autores de llamadas pueden proporcionar esta información.|  
 |KEY|Representa una fila en un índice.|Identificador de HoBt. Este valor corresponde a **sys.partitions.hobt_id**.|  
@@ -201,7 +201,7 @@ Se mantienen bloqueos en recursos de [!INCLUDE[ssNoVersion](../../includes/ssnov
 |Resource|Formato|Descripción|  
 |--------------|------------|-----------------|  
 |DATABASE|No aplicable|El Id. de base de datos ya está disponible en la columna **resource_database_id**.|  
-|ARCHIVO|<file_id>|Id. del archivo representado por este recurso.|  
+|FILE|<file_id>|Id. del archivo representado por este recurso.|  
 |OBJECT|<object_id>|Id. del objeto representado por este recurso. Este objeto puede ser cualquier objeto mostrado en **sys.objects**, no solo una tabla.|  
 |PAGE|<file_id>:<page_in_file>|Representa el Id. de página y de archivo de la página representada por este recurso.|  
 |KEY|<hash_value>|Representa un hash de las columnas de clave de la fila representada por este recurso.|  

@@ -6,7 +6,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_exec_cursors_TSQL
 - dm_exec_cursors
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 8ab1ed9e722f2363c0568932e7eb337bc09dbe41
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 30e47feb0650e5e345c78f431f27bd0a953b31bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099014"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99106395"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -91,7 +91,7 @@ dm_exec_cursors (session_id | 0 )
   
  En la tabla siguiente se proporciona información acerca de la simultaneidad de cursor y se incluyen los valores posibles para la columna de propiedades.  
   
-|Simultaneidad|Descripción|  
+|Simultaneidad|Description|  
 |-----------------|-----------------|  
 |Solo lectura|El cursor se ha declarado como de solo lectura.|  
 |Scroll Locks|El cursor utiliza bloqueos de desplazamiento.|  

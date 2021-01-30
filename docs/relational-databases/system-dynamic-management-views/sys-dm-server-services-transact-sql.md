@@ -6,7 +6,7 @@ ms.date: 01/07/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_server_services
 - sys.dm_server_services
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 65ba3ca60ceb6d1c4ba327ee191084fc63aca8d6
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: fd00b91eb2ba5018a7ae9865f323ac2f3faeb39d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170657"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99134589"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "98170657"
 |process_id|**int**|Identificador de proceso del servicio. No puede ser NULL.|  
 |last_startup_time|**datetimeoffset(7)**|Fecha y hora en que el servicio se inició por última vez. Acepta valores NULL.|  
 |service_account|**nvarchar(256)**|Cuenta autorizada para controlar el servicio. Esta cuenta puede iniciar o detener el servicio, o puede modificar las propiedades del servicio. No puede ser NULL.|  
-|filename|**nvarchar(256)**|Ruta de acceso y nombre del archivo ejecutable del servicio. No puede ser NULL.|  
+|nombreDeArchivo|**nvarchar(256)**|Ruta de acceso y nombre del archivo ejecutable del servicio. No puede ser NULL.|  
 |is_clustered|**nvarchar (1)**|Indica si el servicio está instalado como un recurso de un servidor en clúster. No puede ser NULL.|  
 |cluster_nodename|**nvarchar(256)**|Nombre del nodo de clúster en el que está instalado el servicio. Acepta valores NULL.|
 |instant_file_initialization_enabled|**nvarchar (1)**|Especifica si la inicialización instantánea de archivos está habilitada para el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servicio.<br /><br />Y = la inicialización instantánea de archivos está habilitada para el servicio.<br /><br />N = la inicialización instantánea de archivos está deshabilitada para el servicio.<br /><br /> Acepta valores NULL.<br /><br /> **Nota:** No se aplica a otros servicios como el Agente SQL Server.<br /><br /> **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir de [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 y [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 y versiones posteriores).|  

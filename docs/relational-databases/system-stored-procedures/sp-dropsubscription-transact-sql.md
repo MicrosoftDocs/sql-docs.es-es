@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropsubscription
 - sp_dropsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8c13030b1232a01aac14ac936323c05c540ab1f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3097c61204e0a9ae310af87fb83901a252c50e67
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536569"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99157948"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,13 +43,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación asociada. *Publication* es de **tipo sysname y su**valor predeterminado es NULL. Si es **All**, se cancelan todas las suscripciones de todas las publicaciones del suscriptor especificado. la *publicación* es un parámetro necesario.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación asociada. *Publication* es de **tipo sysname y su** valor predeterminado es NULL. Si es **All**, se cancelan todas las suscripciones de todas las publicaciones del suscriptor especificado. la *publicación* es un parámetro necesario.  
   
-`[ @article = ] 'article'` Es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es NULL. Si es **All**, se quitan las suscripciones a todos los artículos de cada publicación y suscriptor especificados. Usar **todo para las** publicaciones que permiten la actualización inmediata.  
+`[ @article = ] 'article'` Es el nombre del artículo. *article* es de **tipo sysname y su** valor predeterminado es NULL. Si es **All**, se quitan las suscripciones a todos los artículos de cada publicación y suscriptor especificados. Usar **todo para las** publicaciones que permiten la actualización inmediata.  
   
-`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor al que se quitarán sus suscripciones. *Subscriber* es de **tipo sysname**y no tiene ningún valor predeterminado. Si es **All**, se quitan todas las suscripciones de todos los suscriptores.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor al que se quitarán sus suscripciones. *Subscriber* es de **tipo sysname** y no tiene ningún valor predeterminado. Si es **All**, se quitan todas las suscripciones de todos los suscriptores.  
   
-`[ @destination_db = ] 'destination_db'` Es el nombre de la base de datos de destino. *destination_db* es de **tipo sysname y su**valor predeterminado es NULL. Cuando es NULL, se quitan todas las suscripciones del suscriptor indicado.  
+`[ @destination_db = ] 'destination_db'` Es el nombre de la base de datos de destino. *destination_db* es de **tipo sysname y su** valor predeterminado es NULL. Cuando es NULL, se quitan todas las suscripciones del suscriptor indicado.  
   
 `[ @ignore_distributor = ] ignore_distributor`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  

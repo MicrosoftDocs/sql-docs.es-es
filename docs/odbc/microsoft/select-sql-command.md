@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - select [ODBC]
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b5fb0e3d38a2e5594cacf77b116844bcce219d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fc6ae552bc4e6e8bd681aa3d47ffadeaf81fd0a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466427"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99153521"
 ---
 # <a name="select---sql-command"></a>Seleccione - comando SQL
 Recupera datos de una o más tablas.  
@@ -122,12 +122,12 @@ FROM [DatabaseName!]Table [Local_Alias]
   
      *FieldName1* es el nombre de un campo de una tabla, *FieldName2* es el nombre de un campo de otra tabla y la *comparación* es uno de los operadores descritos en la tabla siguiente.  
   
-|Operator|De comparación|  
+|Operador|De comparación|  
 |--------------|----------------|  
 |=|Igual|  
 |==|Exactamente igual|  
 |LIKE|SQL LIKE|  
-|<>,! =, #|No igual|  
+|<>,! =, #|No igual a|  
 |>|Más de|  
 |>=|Mayor o igual que|  
 |<|Menor que|  
@@ -254,7 +254,7 @@ WHERE customer.cust_id NOT IN ;
   
 -   La cláusula WHERE encuentra todos los números de cliente de la tabla Customer que no están en la tabla Orders. Dado que la primera sección del comando proporcionó todas las compañías que tenían un número de cliente en la tabla Orders, todas las compañías de la tabla Customer se incluyen ahora en los resultados de la consulta.  
   
--   Dado que las estructuras de las tablas incluidas en una Unión deben ser idénticas, hay dos marcadores de posición en la segunda instrucción SELECT para representar los *pedidos. order_id* y *orders. emp_id* de la primera instrucción SELECT.  
+-   Dado que las estructuras de las tablas incluidas en una Unión deben ser idénticas, hay dos marcadores de posición en la segunda instrucción SELECT que representan *Orders.order_id* y *Orders.emp_id* de la primera instrucción SELECT.  
   
     > [!NOTE]  
     >  Los marcadores de posición deben ser del mismo tipo que los campos que representan. Si el campo es un tipo de fecha, el marcador de posición debe ser {//}. Si el campo es un campo de caracteres, el marcador de posición debe ser una cadena vacía ("").  
@@ -281,7 +281,7 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="driver-remarks"></a>Notas del controlador  
  Cuando la aplicación envía la instrucción SQL de ODBC SELECT al origen de datos, el controlador ODBC de Visual FoxPro convierte el comando en el comando SELECT de Visual FoxPro sin traducción a menos que el comando contenga una secuencia de escape ODBC. Los elementos incluidos en una secuencia de escape de ODBC se convierten a la sintaxis de Visual FoxPro. Para obtener más información sobre el uso de secuencias de escape de ODBC, vea [funciones de fecha y hora](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) y en la *Referencia del programador de Microsoft ODBC*, vea [secuencias de escape en ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT-SQL](../../odbc/microsoft/insert-sql-command.md)   
  [ESTABLECER ANSI](../../odbc/microsoft/set-ansi-command.md)   

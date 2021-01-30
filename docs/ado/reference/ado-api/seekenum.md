@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - SeekEnum
@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 345e6dff5c2bc372f06eb386a4546a61b9e5a1bb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f61e05965b1750c4f8e6b48f092eeb059d1e19d3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989156"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166559"
 ---
 # <a name="seekenum"></a>SeekEnum
 Especifica el tipo de [búsqueda](./seek-method.md) que se va a ejecutar.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adSeekFirstEQ**|1|Busca la primera clave igual a *keyValues*.|  
 |**adSeekLastEQ**|2|Busca la última clave igual a *keyValues*.|  
 |**adSeekAfterEQ**|4|Busca una clave igual a *keyValues* o justo después de donde se hubiera producido esa coincidencia.|  
 |**adSeekAfter**|8|Busca una clave justo después de donde se habría producido una coincidencia con *keyValues* .|  
-|**adSeekBeforeEQ**|16|Busca una clave igual a *keyValues*o justo antes de que se hubiera producido esa coincidencia.|  
+|**adSeekBeforeEQ**|16|Busca una clave igual a *keyValues* o justo antes de que se hubiera producido esa coincidencia.|  
 |**adSeekBefore**|32|Busca una clave justo antes de que se hubiera producido una coincidencia con *keyValues* .|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  

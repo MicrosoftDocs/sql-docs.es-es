@@ -1,13 +1,13 @@
 ---
 description: sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
-title: Sys. sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft Docs
+title: sys.sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_xtp_unbind_db_resource_pool_TSQL
 - sp_xtp_unbind_db_resource_pool
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 27d5d5efd923dfffd66054da48b8baf28b6f193b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ec549ca71802d8c028ef12ef8293d178dff19f4f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551115"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99102837"
 ---
 # <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sys.sp_xtp_unbind_db_resource_pool 'database_name'
   
 #### <a name="parameters"></a>Parámetros  
   
-## <a name="messages"></a>Mensajes  
+## <a name="messages"></a>Messages  
  Si la base de datos se ha enlazado a un grupo de recursos de servidor con nombre, el procedimiento se realiza correctamente. Sin embargo, debe reiniciar la base de datos para que surta efecto la eliminación del enlace.  
  Si no hay enlaces para la base de datos especificada, `sp_xtp_unbind_db_resource_pool` se ejecuta correctamente, pero genera el mensaje informativo:  
   

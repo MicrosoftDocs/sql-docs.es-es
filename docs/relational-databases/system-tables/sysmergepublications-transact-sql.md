@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmergepublications
 - sysmergepublications_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 0b2a7e7783ffb67688041a6da39ea99f945a607f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 70cfe557241aa78c60726cc4e094b5945e876c61
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097365"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99102560"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "98097365"
 |**pre_snapshot_script**|**nvarchar(255)**|Puntero a. archivo **SQL** que el agente de mezcla ejecuta antes que cualquiera de los scripts de objetos de replicación al aplicar la instantánea en el suscriptor.|  
 |**post_snapshot_script**|**nvarchar(255)**|Puntero a. archivo **SQL** que el agente de mezcla ejecuta después de que se hayan aplicado todos los demás datos y scripts de objetos de replicación durante una sincronización inicial.|  
 |**compress_snapshot**|**bit**|Especifica si la instantánea escrita en la ubicación **alt_snapshot_folder** se comprime en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. **0** especifica que el archivo no está comprimido.|  
-|**ftp_address**|**sysname**|Dirección de red del servicio de File Transfer Protocol (FTP) para el distribuidor. Especifica dónde se encuentran los archivos de instantánea de la publicación para que los recoja el Agente de mezcla, si se ha habilitado FTP.|  
+|**ftp_address**|**sysname**|Dirección de red del servicio de protocolo de transferencia de archivos (FTP) para el distribuidor. Especifica dónde se encuentran los archivos de instantánea de la publicación para que los recoja el Agente de mezcla, si se ha habilitado FTP.|  
 |**ftp_port**|**int**|El número de puerto del servicio FTP para el distribuidor.|  
 |**ftp_subdirectory**|**nvarchar(255)**|Subdirectorio en el que están disponibles los archivos de instantánea para que los recoja el Agente de mezcla.|  
 |**ftp_login**|**sysname**|Nombre de usuario que se utiliza para conectarse al servicio FTP.|  
