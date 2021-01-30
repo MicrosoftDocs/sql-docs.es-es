@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addextendedproc_TSQL
 - sp_addextendedproc
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e8c7ffebae9f082a6a579a6cb6643ad2fc44d1b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d3ca884a585b76eb62d9af20bf09757d7d3c84e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548413"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182787"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
   
  Este procedimiento solo se puede ejecutar en la base de datos **maestra** . Para ejecutar un procedimiento almacenado extendido desde una base de datos que no sea **maestra**, califique el nombre del procedimiento almacenado extendido con **Master**.  
   
- **sp_addextendedproc** agrega entradas a la vista de catálogo [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) , registrando el nombre del nuevo procedimiento almacenado extendido con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También agrega una entrada en la vista de catálogo [Sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) .  
+ **sp_addextendedproc** agrega entradas a la vista de catálogo [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) , registrando el nombre del nuevo procedimiento almacenado extendido con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También agrega una entrada en la vista de catálogo [Sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) .  
   
 > [!IMPORTANT]  
 >  Las DLL existentes que no se registraron con una ruta completa no funcionarán tras una actualización a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para corregir el problema, use **sp_dropextendedproc** para anular el registro del archivo dll y, a continuación, vuelva a registrarlo con **sp_addextendedproc**, especificando la ruta de acceso completa.  

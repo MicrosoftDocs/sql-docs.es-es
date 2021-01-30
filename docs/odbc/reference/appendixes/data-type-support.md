@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 782b4490-372b-4366-aad7-a486fb8a07c8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ab0fd163713a7f6657d8ce446336f5c35a3dd00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b9249539c87e727b293c73ee12ed0fa734e08fa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456642"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179542"
 ---
 # <a name="data-type-support"></a>Compatibilidad con tipos de datos
 Los controladores ODBC deben admitir al menos una de SQL_CHAR y SQL_VARCHAR. La compatibilidad con otros tipos de datos viene determinada por el nivel de cumplimiento de SQL-92 del controlador o del origen de datos. Una aplicación debe llamar a **SQLGetTypeInfo** para determinar los tipos de datos admitidos por el controlador.  

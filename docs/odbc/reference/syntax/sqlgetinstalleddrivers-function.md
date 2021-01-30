@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLGetInstalledDrivers
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0599cb187dee9d3b860f619538b1e0dc148ad58d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5f770254874b09158632ebaee071964c00265a46
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421269"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180949"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>Función SQLGetInstalledDrivers
 **Conformidad**  
@@ -58,7 +58,7 @@ BOOL SQLGetInstalledDrivers(
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLGetInstalledDrivers** devuelve false, se puede obtener un valor de * \* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLGetInstalledDrivers** devuelve false, se puede obtener un valor de *\* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de *\* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  

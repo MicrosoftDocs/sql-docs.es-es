@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_denylogin_TSQL
 - sp_denylogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9133a6ee523c27837da0209c57e620a13187bdd1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7006aaa4a8c7ddf0603264d1c241d09a8e327f5f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546210"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178094"
 ---
 # <a name="sp_denylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +43,13 @@ sp_denylogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login_ '` Es el nombre de un usuario o grupo de Windows. *login* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @loginame = ] 'login_ '` Es el nombre de un usuario o grupo de Windows. *login* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="remarks"></a>Observaciones  
- **sp_denylogin** deniega el permiso Connect SQL a la entidad de seguridad de nivel de servidor asignada al usuario de Windows o grupo de Windows especificado. Si la entidad de seguridad de servidor no existe, se creará. La nueva entidad de seguridad estará visible en la vista de catálogo [Sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) .  
+ **sp_denylogin** deniega el permiso Connect SQL a la entidad de seguridad de nivel de servidor asignada al usuario de Windows o grupo de Windows especificado. Si la entidad de seguridad de servidor no existe, se creará. La nueva entidad de seguridad estará visible en la sys.server_principals &#40;vista de catálogo de [Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) .  
   
  **sp_denylogin** no se puede ejecutar en una transacción definida por el usuario.  
   

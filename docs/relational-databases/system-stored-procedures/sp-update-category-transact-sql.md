@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_category
 - sp_update_category_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 117f146c4ceea988d5817785494bf2af4dc11814
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c771e031254821562933cd2e7f4d9f51903edba6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543019"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184723"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,17 +43,17 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @class = ] 'class'` Clase de la categoría que se va a actualizar. la *clase*es **VARCHAR (8)**, no tiene ningún valor predeterminado y puede tener uno de estos valores.  
+`[ @class = ] 'class'` Clase de la categoría que se va a actualizar. la *clase* es **VARCHAR (8)**, no tiene ningún valor predeterminado y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**ONALERT**|Actualiza una categoría de alerta.|  
+|**ALERT**|Actualiza una categoría de alerta.|  
 |**TRABAJO**|Actualiza una categoría de trabajo.|  
 |**OPERATOR**|Actualiza una categoría de operador.|  
   
-`[ @name = ] 'old_name'` Nombre actual de la categoría. *old_name*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @name = ] 'old_name'` Nombre actual de la categoría. *old_name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @new_name = ] 'new_name'` El nuevo nombre de la categoría. *new_name*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @new_name = ] 'new_name'` El nuevo nombre de la categoría. *new_name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

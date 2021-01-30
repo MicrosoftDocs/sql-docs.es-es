@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replicationdboption_TSQL
 - sp_replicationdboption
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 65839ea899d001c42478e1eb3d1e54cad0f53f52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e56271516d9ef2df60e993cd73963d074b503d42
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485718"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211873"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,9 +42,9 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'` Es la base de datos para la que se establece la opción de base de datos de replicación. *db_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @dbname = ] 'dbname'` Es la base de datos para la que se establece la opción de base de datos de replicación. *db_name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @optname = ] 'optname'` Es la opción de base de datos de replicación para habilitar o deshabilitar. *optname* es de **tipo sysname**y puede tener uno de estos valores.  
+`[ @optname = ] 'optname'` Es la opción de base de datos de replicación para habilitar o deshabilitar. *optname* es de **tipo sysname** y puede tener uno de estos valores.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -53,7 +53,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**ID**|La base de datos es una base de datos de suscripciones.|  
 |**sync with backup**|La base de datos está habilitada para una copia de seguridad coordinada. Para obtener más información, vea [Habilitar copias de seguridad coordinadas para la replicación transaccional &#40;la programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
-`[ @value = ] 'value'` Indica si se debe habilitar o deshabilitar la opción de base de datos de replicación dada. *Value* es de **tipo sysname**y puede ser **true** o **false**. Cuando este valor es **false** y *optname* es **Merge Publish**, también se quitan las suscripciones a la base de datos publicada de mezcla.  
+`[ @value = ] 'value'` Indica si se debe habilitar o deshabilitar la opción de base de datos de replicación dada. *Value* es de **tipo sysname** y puede ser **true** o **false**. Cuando este valor es **false** y *optname* es **Merge Publish**, también se quitan las suscripciones a la base de datos publicada de mezcla.  
   
 `[ @ignore_distributor = ] ignore_distributor` Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es de **bits**, con un valor predeterminado de **0**, lo que significa que el distribuidor debe estar conectado al nuevo estado de la base de datos de publicación y actualizarse. Solo se debe especificar el valor **1** si no se puede tener acceso al distribuidor y se usa **sp_replicationdboption** para deshabilitar la publicación.  
   

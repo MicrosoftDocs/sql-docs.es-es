@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_adddistpublisher
 - sp_adddistpublisher_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 5af634687088e305a15e41fd54110832195d0cab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ad2edff83e6600ab77e422d2d18516ecd8a2064
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447438"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182825"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,14 +48,14 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname** y no tiene ningún valor predeterminado.  
 
 > [!NOTE]
 > El nombre del servidor se puede especificar como `<Hostname>,<PortNumber>` . Es posible que tenga que especificar el número de puerto para la conexión cuando SQL Server se implementa en Linux o Windows con un puerto personalizado, y el servicio explorador está deshabilitado.
   
-`[ @distribution_db = ] 'distribution_db'` Es el nombre de la base de datos de distribución. *distributor_db* es de **tipo sysname**y no tiene ningún valor predeterminado. Los agentes de replicación utilizan este parámetro para conectarse al publicador.  
+`[ @distribution_db = ] 'distribution_db'` Es el nombre de la base de datos de distribución. *distributor_db* es de **tipo sysname** y no tiene ningún valor predeterminado. Los agentes de replicación utilizan este parámetro para conectarse al publicador.  
   
-`[ @security_mode = ] security_mode` Es el modo de seguridad implementado. Este parámetro solo lo utilizan los agentes de replicación para conectarse al publicador para las suscripciones de actualización en cola o con un publicador que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *security_mode* es de **tipo int**y puede tener uno de estos valores.  
+`[ @security_mode = ] security_mode` Es el modo de seguridad implementado. Este parámetro solo lo utilizan los agentes de replicación para conectarse al publicador para las suscripciones de actualización en cola o con un publicador que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *security_mode* es de **tipo int** y puede tener uno de estos valores.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -64,7 +64,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @login = ] 'login'` Es el inicio de sesión. Este parámetro es necesario si *security_mode* es **0**. *login* es de tipo **sysname** y su valor predeterminado es NULL. Los agentes de replicación utilizan este parámetro para conectarse al publicador.  
   
-`[ @password = ] 'password']` Es la contraseña. *password* es de **tipo sysname y su**valor predeterminado es NULL. Los agentes de replicación utilizan este parámetro para conectarse al publicador.  
+`[ @password = ] 'password']` Es la contraseña. *password* es de **tipo sysname y su** valor predeterminado es NULL. Los agentes de replicación utilizan este parámetro para conectarse al publicador.  
   
 > [!IMPORTANT]  
 >  No utilice una contraseña en blanco. Utilice una contraseña segura.  
@@ -81,7 +81,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @encrypted_password = ] encrypted_password` Ya no se admite la configuración de *encrypted_password* . Si se intenta establecer este parámetro de **bits** en **1** se producirá un error.  
   
-`[ @thirdparty_flag = ] thirdparty_flag` Es cuando el publicador es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *thirdparty_flag* es de **bits**y puede tener uno de los valores siguientes.  
+`[ @thirdparty_flag = ] thirdparty_flag` Es cuando el publicador es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *thirdparty_flag* es de **bits** y puede tener uno de los valores siguientes.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -112,7 +112,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistpublisher &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
+ [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_ivindexhasnullcols
 - sp_ivindexhasnullcols_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fe91514a87999bb053f6011e74b3b96ec075fbf4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9fc065d30bc8fac8195a3a389de1b316645bcd57
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549629"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183401"
 ---
 # <a name="sp_ivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,9 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @viewname = ] 'view_name'` Es el nombre de la vista que se va a comprobar. *view_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @viewname = ] 'view_name'` Es el nombre de la vista que se va a comprobar. *view_name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @fhasnullcols = ] field_has_null_columns OUTPUT` Es la marca que indica si el índice de la vista tiene columnas que permiten valores NULL. *view_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Devuelve el valor **1** si el índice de la vista tiene columnas que permiten valores NULL. Devuelve un valor de **0** si la vista no contiene columnas que permitan valores NULL.  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` Es la marca que indica si el índice de la vista tiene columnas que permiten valores NULL. *view_name* es de **tipo sysname** y no tiene ningún valor predeterminado. Devuelve el valor **1** si el índice de la vista tiene columnas que permiten valores NULL. Devuelve un valor de **0** si la vista no contiene columnas que permitan valores NULL.  
   
 > [!NOTE]  
 >  Si el propio procedimiento almacenado devuelve un código de retorno de **1**, lo que significa que se ha producido un error en la ejecución del procedimiento almacenado, este valor es **0** y debe omitirse.  

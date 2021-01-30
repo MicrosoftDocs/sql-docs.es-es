@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Groups::raw_Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5890ffa77884927574f10edeb0d2acc3a428185e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 859e3dea7f5dbdb84efd44aebc766eb2d195a7e3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985496"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164303"
 ---
 # <a name="append-method-adox-groups"></a>Append (método) (grupos ADOX)
 Agrega un nuevo objeto de [Grupo](./group-object-adox.md) a la colección de [grupos](./groups-collection-adox.md) .  

@@ -1,12 +1,12 @@
 ---
-title: Sys. sp_rda_reconcile_indexes (Transact-SQL) | Microsoft Docs
-description: Más información sobre sys. sp_rda_reconcile_indexes. Vea cómo usar este procedimiento almacenado de Transact-SQL para poner en cola una tarea de esquema para conciliar los índices en una tabla remota.
+title: sys.sp_rda_reconcile_indexes (Transact-SQL) | Microsoft Docs
+description: Más información sobre sys.sp_rda_reconcile_indexes. Vea cómo usar este procedimiento almacenado de Transact-SQL para poner en cola una tarea de esquema para conciliar los índices en una tabla remota.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_rda_reconcile_indexes
 - sp_rda_reconcile_indexes_TSQL
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2d224f5ea2b20f684fdd9e484304639114fd2d2e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 28152ad8d8ed10eff6f0576a6fd9f508f0e8fc98
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544681"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211741"
 ---
-# <a name="syssp_rda_reconcile_indexes-transact-sql"></a>Sys. sp_rda_reconcile_indexes (Transact-SQL)
+# <a name="syssp_rda_reconcile_indexes-transact-sql"></a>sys.sp_rda_reconcile_indexes (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Pone en cola una tarea de esquema para conciliar los índices en la tabla remota. Una vez que la tarea finaliza correctamente, la tabla remota tiene los mismos índices que existen en la tabla habilitada para Stretch local.  

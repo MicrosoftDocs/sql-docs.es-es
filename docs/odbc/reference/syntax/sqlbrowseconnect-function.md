@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLBrowseConnect
 apilocation:
@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 712dbb366e25098c7956ffbb9c8733a437339297
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33983c9fb41625fa6479c47045ca4a04738a1463
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499638"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181078"
 ---
 # <a name="sqlbrowseconnect-function"></a>Función SQLBrowseConnect
 **Conformidad**  
  Versión introducida: ODBC 1,0 Standards Compliance: ODBC  
   
  **Resumen**  
- **SQLBrowseConnect** admite un método iterativo de detectar y enumerar los atributos y los valores de atributo necesarios para conectarse a un origen de datos. Cada llamada a **SQLBrowseConnect** devuelve niveles sucesivos de atributos y valores de atributo. Cuando se han enumerado todos los niveles, se completa una conexión al origen de datos y **SQLBrowseConnect**devuelve una cadena de conexión completa. Un código de retorno de SQL_SUCCESS o SQL_SUCCESS_WITH_INFO indica que se ha especificado toda la información de conexión y ahora la aplicación está conectada al origen de datos.  
+ **SQLBrowseConnect** admite un método iterativo de detectar y enumerar los atributos y los valores de atributo necesarios para conectarse a un origen de datos. Cada llamada a **SQLBrowseConnect** devuelve niveles sucesivos de atributos y valores de atributo. Cuando se han enumerado todos los niveles, se completa una conexión al origen de datos y **SQLBrowseConnect** devuelve una cadena de conexión completa. Un código de retorno de SQL_SUCCESS o SQL_SUCCESS_WITH_INFO indica que se ha especificado toda la información de conexión y ahora la aplicación está conectada al origen de datos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,13 +53,13 @@ SQLRETURN SQLBrowseConnect(
  [Entrada] Identificador de conexión.  
   
  *Inconnectionstring*  
- Entradas Examinar cadena de conexión de solicitud (vea "argumento*inconnectionstring* " en "Comentarios").  
+ Entradas Examinar cadena de conexión de solicitud (vea "argumento *inconnectionstring* " en "Comentarios").  
   
  *StringLength1*  
  Entradas Longitud de **inconnectionstring* en caracteres.  
   
  *Outconnectionstring*  
- Genere Puntero a un búfer de caracteres en el que se va a devolver la cadena de conexión del resultado de la exploración (vea el "argumento*outconnectionstring* " en "comments").  
+ Genere Puntero a un búfer de caracteres en el que se va a devolver la cadena de conexión del resultado de la exploración (vea el "argumento *outconnectionstring* " en "comments").  
   
  Si *outconnectionstring* es null, *StringLength2Ptr* seguirá devolviendo el número total de caracteres (excepto el carácter de terminación null para los datos de caracteres) disponible para devolver en el búfer señalado por *outconnectionstring*.  
   
@@ -86,7 +86,7 @@ SQLRETURN SQLBrowseConnect(
 |08004|El servidor rechazó la conexión|El origen de datos rechazó el establecimiento de la conexión por motivos definidos por la implementación.|  
 |08S01|Error de vínculo de comunicación|Error en el vínculo de comunicación entre el controlador y el origen de datos al que el controlador estaba intentando conectar antes de que la función finalizara el procesamiento.|  
 |28000|Especificación de autorización no válida|El identificador de usuario o la cadena de autorización, o ambos, según se especifica en la cadena de conexión de la solicitud de exploración (*inconnectionstring*), infringiendo las restricciones definidas por el origen de datos.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer *\* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|(DM) el administrador de controladores no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.<br /><br /> El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|Una operación asincrónica se canceló mediante una llamada a la [función SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md). A continuación, se llamó de nuevo a la función original en *ConnectionHandle*.<br /><br /> Se canceló una operación llamando a **SQLCancelHandle** en *ConnectionHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *ConnectionHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.|  
@@ -113,7 +113,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>Argumento inconnectionstring  
  Una cadena de conexión de solicitud de examen tiene la siguiente sintaxis:  
   
- *Connection-String* :: = *atributo*[ `;` ] &#124; *attribute* `;` *cadena de conexión de*atributo;<br>
+ *Connection-String* :: = *atributo*[ `;` ] &#124;  `;` *cadena de conexión de* atributo;<br>
  *Attribute* :: = *Attribute-keyword* `=` *Attribute-Value* &#124; `DRIVER=` [ `{` ]*atributo-valor*[ `}` ]<br>
  *Attribute-keyword* :: = `DSN` &#124; `UID` &#124; de la `PWD` *palabra clave-Attribute-Defined del controlador* &#124;<br>
  *Attribute-Value* :: = *cadena de caracteres*<br>
@@ -128,8 +128,8 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>Outconnectionstring (argumento)  
  La cadena de conexión de resultados de examen es una lista de atributos de conexión. Un atributo de conexión consta de una palabra clave de atributo y un valor de atributo correspondiente. La cadena de conexión del resultado de la exploración tiene la siguiente sintaxis:  
   
- *Connection-String* :: = *atributo*[ `;` ] &#124; *attribute* `;` *cadena de conexión de* atributo<br>
- *Attribute::* = [ `*` ] Attribute *-palabra clave*Attribute `=` *-Value*<br>
+ *Connection-String* :: = *atributo*[ `;` ] &#124;  `;` *cadena de conexión de* atributo<br>
+ *Attribute::* = [ `*` ] Attribute *-palabra clave* Attribute `=` *-Value*<br>
  *Attribute-keyword* :: = *ODBC-Attribute-palabra clave* &#124; *driver-Attribute-keyword*<br>
  *ODBC-Attribute-keyword* = { `UID` &#124; `PWD` } [ `:` *identificador adaptado*] *controlador-atributo-atributo-palabra clave* :: = *identificador*[ `:` *localizador-identificador*] *atributo-valor* :: = `{` *atributo-valor-lista* `}` &#124; `?` (las llaves son literales; son devueltas por el controlador).<br>
  *Attribute-Value-List* :: = *cadena de caracteres* [ `:` *cadena de caracteres localizados*] &#124; *cadena de caracteres* [cadena `:` *de caracteres localizados*] `,` *atributo-valor-lista*<br>
@@ -142,11 +142,11 @@ SQLRETURN SQLBrowseConnect(
   
 -   Las palabras clave de atributo **UID** y **pwd** tienen el mismo significado que el definido en **SQLDriverConnect**.  
   
--   Una *palabra clave de atributo definido por el controlador* designa el tipo de atributo para el que se puede proporcionar un valor de atributo. Por ejemplo, podría tratarse de un **servidor**, una **base de datos**, un **host**o un **DBMS**.  
+-   Una *palabra clave de atributo definido por el controlador* designa el tipo de atributo para el que se puede proporcionar un valor de atributo. Por ejemplo, podría tratarse de un **servidor**, una **base de datos**, un **host** o un **DBMS**.  
   
--   Las palabras clave de *atributo ODBC* y *driver-Attribute-Keywords* incluyen una versión localizada o descriptiva de la palabra clave. Esto podría ser utilizado por las aplicaciones como una etiqueta en un cuadro de diálogo. Sin embargo, se debe usar **UID**, **pwd**o el *identificador* solo al pasar una cadena de solicitud de examen al controlador.  
+-   Las palabras clave de *atributo ODBC* y *driver-Attribute-Keywords* incluyen una versión localizada o descriptiva de la palabra clave. Esto podría ser utilizado por las aplicaciones como una etiqueta en un cuadro de diálogo. Sin embargo, se debe usar **UID**, **pwd** o el *identificador* solo al pasar una cadena de solicitud de examen al controlador.  
   
--   {*Attribute-Value-List*} es una enumeración de los valores reales válidos para la *palabra clave de atributo*correspondiente. Tenga en cuenta que las llaves ( {} ) no indican una lista de opciones; las devuelve el controlador. Por ejemplo, podría ser una lista de nombres de servidor o una lista de nombres de base de datos.  
+-   {*Attribute-Value-List*} es una enumeración de los valores reales válidos para la *palabra clave de atributo* correspondiente. Tenga en cuenta que las llaves ( {} ) no indican una lista de opciones; las devuelve el controlador. Por ejemplo, podría ser una lista de nombres de servidor o una lista de nombres de base de datos.  
   
 -   Si el *valor del atributo* es un signo de interrogación (?), un solo valor corresponde a la *palabra clave de atributo*. Por ejemplo, UID = JohnS; PWD = sésamo.  
   
@@ -294,6 +294,6 @@ int main() {
 |Devolver descripciones y atributos de controladores|[Función SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|  
 |Liberar un identificador de conexión|[Función SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

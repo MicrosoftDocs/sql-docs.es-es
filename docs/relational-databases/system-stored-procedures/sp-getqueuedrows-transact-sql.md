@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getqueuedrows_TSQL
 - sp_getqueuedrows
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8aae51ed8d3806fb32375ddebd6d09c1c6c37d1f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ad904065a8270266e7010ff49889d04a8625296f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548044"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183142"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,9 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tablename = ] 'tablename'` Es el nombre de la tabla. *TableName* es de **tipo sysname**y no tiene ningún valor predeterminado. La tabla debe formar parte de una suscripción en cola.  
+`[ @tablename = ] 'tablename'` Es el nombre de la tabla. *TableName* es de **tipo sysname** y no tiene ningún valor predeterminado. La tabla debe formar parte de una suscripción en cola.  
   
-`[ @owner = ] 'owner'` Es el propietario de la suscripción. *Owner* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @owner = ] 'owner'` Es el propietario de la suscripción. *Owner* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 `[ @tranid = ] 'transaction_id'` Permite filtrar el resultado por el identificador de la transacción. *transaction_id* es de tipo **nvarchar (70)** y su valor predeterminado es NULL. Si se especifica, se muestra el Id. de la transacción asociado con el comando en cola. Si es NULL, se muestran todos los comandos de la cola.  
   

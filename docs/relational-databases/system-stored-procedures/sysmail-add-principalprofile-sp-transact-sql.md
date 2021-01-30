@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_add_principalprofile_sp_TSQL
 - sysmail_add_principalprofile_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6092ba1de12d71ff50facbafd7fed04aed9d9fd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0252e299f072144999e3c2db1b2404de9aa9b6a8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547247"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183038"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,25 +42,25 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @principal_id = ] principal_id` IDENTIFICADOR del usuario o el rol de la base de datos **msdb** de la asociación. *principal_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *principal_id* o *principal_name* . Un *principal_id* de **0** convierte este perfil en un perfil público, lo que concede acceso a todas las entidades de seguridad de la base de datos.  
+`[ @principal_id = ] principal_id` IDENTIFICADOR del usuario o el rol de la base de datos **msdb** de la asociación. *principal_id* es de **tipo int** y su valor predeterminado es NULL. Se debe especificar *principal_id* o *principal_name* . Un *principal_id* de **0** convierte este perfil en un perfil público, lo que concede acceso a todas las entidades de seguridad de la base de datos.  
   
-`[ @principal_name = ] 'principal_name'` Nombre del usuario o el rol de la base de datos **msdb** de la asociación. *principal_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *principal_id* o *principal_name* . Un *principal_name* de **' Public '** convierte este perfil en un perfil público, lo que concede acceso a todas las entidades de seguridad de la base de datos.  
+`[ @principal_name = ] 'principal_name'` Nombre del usuario o el rol de la base de datos **msdb** de la asociación. *principal_name* es de **tipo sysname y su** valor predeterminado es NULL. Se debe especificar *principal_id* o *principal_name* . Un *principal_name* de **' Public '** convierte este perfil en un perfil público, lo que concede acceso a todas las entidades de seguridad de la base de datos.  
   
-`[ @profile_id = ] profile_id` Identificador del perfil para la asociación. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
+`[ @profile_id = ] profile_id` Identificador del perfil para la asociación. *profile_id* es de **tipo int** y su valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Nombre del perfil para la asociación. *profile_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Se debe especificar *profile_id* o *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Nombre del perfil para la asociación. *profile_name* es de **tipo sysname** y no tiene ningún valor predeterminado. Se debe especificar *profile_id* o *profile_name* .  
   
-`[ @is_default = ] is_default` Especifica si este perfil es el perfil predeterminado para la entidad de seguridad. Una entidad de seguridad debe tener solo un perfil predeterminado. *is_default* es de **bits**y no tiene ningún valor predeterminado.  
+`[ @is_default = ] is_default` Especifica si este perfil es el perfil predeterminado para la entidad de seguridad. Una entidad de seguridad debe tener solo un perfil predeterminado. *is_default* es de **bits** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Observaciones  
- Para que un perfil sea público, especifique un ** \@ principal_id** de **0** o un ** \@ principal_name** de **Public**. Un perfil público está disponible para todos los usuarios de la base de datos **msdb** , aunque los usuarios también deben ser miembros de **DatabaseMailUserRole** para ejecutar **sp_send_dbmail**.  
+ Para que un perfil sea público, especifique un **\@ principal_id** de **0** o un **\@ principal_name** de **Public**. Un perfil público está disponible para todos los usuarios de la base de datos **msdb** , aunque los usuarios también deben ser miembros de **DatabaseMailUserRole** para ejecutar **sp_send_dbmail**.  
   
- El usuario de la base de datos solo puede tener un perfil predeterminado. Cuando ** \@ is_default** es '**1**' y el usuario ya está asociado a uno o más perfiles, el perfil especificado se convierte en el perfil predeterminado para el usuario. El perfil predeterminado anterior sigue estando asociado con el usuario, pero ya no es el perfil predeterminado.  
+ El usuario de la base de datos solo puede tener un perfil predeterminado. Cuando **\@ is_default** es '**1**' y el usuario ya está asociado a uno o más perfiles, el perfil especificado se convierte en el perfil predeterminado para el usuario. El perfil predeterminado anterior sigue estando asociado con el usuario, pero ya no es el perfil predeterminado.  
   
- Cuando ** \@ is_default** es '**0**' y no existe ninguna otra asociación, el procedimiento almacenado devuelve un error.  
+ Cuando **\@ is_default** es '**0**' y no existe ninguna otra asociación, el procedimiento almacenado devuelve un error.  
   
  El procedimiento almacenado **sysmail_add_principalprofile_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
   

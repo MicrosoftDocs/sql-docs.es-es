@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_notification_TSQL
 - sp_update_notification
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 103e697c8aad38fa19769358372b31d89d3b5978
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7e1f54c6933945c6031e48d4f97ab89f0f966779
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549550"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184311"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +44,13 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @alert_name = ] 'alert'` El nombre de la alerta asociada a esta notificación. la *alerta* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @alert_name = ] 'alert'` El nombre de la alerta asociada a esta notificación. la *alerta* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @operator_name = ] 'operator'` Operador al que se notificará cuando se produzca la alerta. *Operator* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @operator_name = ] 'operator'` Operador al que se notificará cuando se produzca la alerta. *Operator* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @notification_method = ] notification` Método por el que se notifica al operador. la *notificación*es de **tinyint**, no tiene ningún valor predeterminado y puede tener uno o varios de estos valores.  
+`[ @notification_method = ] notification` Método por el que se notifica al operador. la *notificación* es de **tinyint**, no tiene ningún valor predeterminado y puede tener uno o varios de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Correo electrónico|  
 |**2**|Buscapersonas|  
@@ -63,7 +63,7 @@ sp_update_notification
 ## <a name="remarks"></a>Observaciones  
  **sp_update_notification** se debe ejecutar desde la base de datos **msdb** .  
   
- Puede actualizar una notificación para un operador que no tenga la información de dirección necesaria mediante el *notification_method*especificado. Si se produce algún error al enviar un mensaje de correo electrónico o una notificación por buscapersonas, el error se refleja en el registro de errores del Agente SQL Server.  
+ Puede actualizar una notificación para un operador que no tenga la información de dirección necesaria mediante el *notification_method* especificado. Si se produce algún error al enviar un mensaje de correo electrónico o una notificación por buscapersonas, el error se refleja en el registro de errores del Agente SQL Server.  
   
 ## <a name="permissions"></a>Permisos  
  Para ejecutar este procedimiento almacenado, se debe conceder a los usuarios el rol fijo de servidor **sysadmin** .  

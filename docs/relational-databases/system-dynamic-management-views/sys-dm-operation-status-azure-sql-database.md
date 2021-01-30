@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_operation_status_TSQL
 - dm_operation_status
@@ -20,12 +20,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: 21028fd5cdabf435d7672074907b20ebeaaad3c4
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 10f8d0523f81c68317a87f960d7ae3e72bf00c3e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101557"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184981"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
@@ -39,7 +39,7 @@ ms.locfileid: "98101557"
 |resource_type|**int**|Indica el tipo de recurso en el que se realiza la operación. NOT NULL. En la versión actual, esta vista solo realiza el seguimiento de las operaciones realizadas en [!INCLUDE[ssSDS](../../includes/sssds-md.md)], y el valor entero correspondiente es 0.|  
 |resource_type_desc|**nvarchar(2048)**|Descripción del tipo de recurso en el que se realiza la operación. En la versión actual, esta vista solo realiza el seguimiento de las operaciones realizadas en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |major_resource_id|**sql_variant**|Nombre del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el que se realiza la operación. No NULL.|  
-|minor_resource_id|**sql_variant**|Sólo para uso interno. NOT NULL.|  
+|minor_resource_id|**sql_variant**|Solo para uso interno. NOT NULL.|  
 |operation|**nvarchar(60)**|Operación realizada en un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , como Create o ALTER.|  
 |state|**tinyint**|El estado de la operación.<br /><br /> 0 = Pendiente<br />1 = en curso<br />2= Completado<br />3 = error<br />4 = Cancelado|  
 |state_desc|**nvarchar(120)**|PENDING = la operación está esperando disponibilidad de los recursos o la cuota.<br /><br /> IN_PROGRESS = la operación se ha iniciado y está en curso.<br /><br /> COMPLETED = la operación finalizó correctamente.<br /><br /> FAILED= se produjo un error en la operación Vea la columna **error_desc** para obtener más información.<br /><br /> CANCELLED = la operación se detuvo a petición del usuario.|  

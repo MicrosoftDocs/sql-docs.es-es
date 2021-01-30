@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec19a5f4968613bbf85137485f9256937499a354
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9d99778b2fd53fd75d38e8476022a4744192d251
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987896"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166283"
 ---
 # <a name="version-property-example-vc"></a>Ejemplo de la propiedad de versión (VC ++)
 En este ejemplo se usa la propiedad [version](./version-property-ado.md) de un objeto [Connection](./connection-object-ado.md) para mostrar la versión actual de ADO. También usa varias propiedades dinámicas para mostrar:  

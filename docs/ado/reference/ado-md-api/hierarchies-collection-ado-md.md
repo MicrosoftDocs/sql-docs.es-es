@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Dimension::Hierarchies
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a2420fbb920bb47e8db70c9c9c1584f102abfe2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fe93d7f79a866aabf0fdb77d0b865e23b8bb3ecd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986686"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164558"
 ---
 # <a name="hierarchies-collection-ado-md"></a>Colección Hierarchies (ADO MD)
 Contiene el conjunto de objetos [Hierarchy](./hierarchy-object-ado-md.md) de una dimensión.  

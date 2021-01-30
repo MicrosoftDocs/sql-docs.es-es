@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ADORecordsetConstruction
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ecf8f8e12f8d12a3382e7b67b13e8bb12fb69ac9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d9be4f47033616f56177027bc83c4621cef57847
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976226"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164872"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interfaz ADORecordsetConstruction
 La interfaz **ADORecordsetConstruction** se utiliza para construir un objeto de **conjunto de registros** ADO a partir de un objeto de conjunto de **filas** OLE DB en una aplicación de C/C++.  
@@ -39,7 +39,7 @@ La interfaz **ADORecordsetConstruction** se utiliza para construir un objeto de 
 ## <a name="methods"></a>Métodos  
  Ninguno.  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Ninguno.  
   
 ## <a name="remarks"></a>Observaciones  

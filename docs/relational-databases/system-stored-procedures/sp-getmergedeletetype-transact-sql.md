@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getmergedeletetype
 - sp_getmergedeletetype_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d2a254a81bdd4b1a4d7718e8960ced22666b5705
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 816815f36511cb64f52ec5a48f20c04121fe67bb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538947"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183152"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +40,11 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ## <a name="arguments"></a>Argumentos  
 `[ @source_object = ] 'source_object'` Es el nombre del objeto de origen. *source_object* es de tipo **nvarchar (386)** y no tiene ningún valor predeterminado.  
   
-`[ @rowguid = ] 'rowguid'` Es el identificador de fila del tipo de eliminación. *ROWGUID* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado.  
+`[ @rowguid = ] 'rowguid'` Es el identificador de fila del tipo de eliminación. *ROWGUID* es de tipo **uniqueidentifier** y no tiene ningún valor predeterminado.  
   
-`[ @delete_type = ] delete_type OUTPUT` Es el código que indica el tipo de eliminación. *delete_type* es de **tipo int**y no tiene ningún valor predeterminado. *delete_type* también es un parámetro de salida y puede tener uno de estos valores.  
+`[ @delete_type = ] delete_type OUTPUT` Es el código que indica el tipo de eliminación. *delete_type* es de **tipo int** y no tiene ningún valor predeterminado. *delete_type* también es un parámetro de salida y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Eliminación por parte del usuario|  
 |**5**|Eliminación parcial|  

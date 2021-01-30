@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_requestpeertopologyinfo
 - sp_requestpeertopologyinfo_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c096777323df0bc2fd02360991df8d527c0dfb7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5cd33688e4a3d5ba5f1b849580f9c180a1ad4d98
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543119"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182047"
 ---
 # <a name="sp_requestpeertopologyinfo-transact-sql"></a>sp_requestpeertopologyinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,10 +40,10 @@ sp_requestpeertopologyinfo [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [ @publication =] '*publicación*'  
- Es el nombre de la publicación para la que se realiza una solicitud del estado de toda la topología. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ Es el nombre de la publicación para la que se realiza una solicitud del estado de toda la topología. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
  [ @request_id =] *request_id*  
- Es el número de identificación que está asignado a la solicitud del estado de la topología. *request_id* es de **tipo int**y su valor predeterminado es NULL. [Sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)puede usar este identificador.  
+ Es el número de identificación que está asignado a la solicitud del estado de la topología. *request_id* es de **tipo int** y su valor predeterminado es NULL. [Sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)puede usar este identificador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

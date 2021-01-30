@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addapprole_TSQL
 - sp_addapprole
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fa68e8b0d965fae3a1c27f5ca2705bc003d7b616
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a48cfb80bab8e9a754cbcb8186de8cb2955f096
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481563"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182858"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +43,11 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'` Es el nombre del nuevo rol de aplicación. *role* es de **tipo sysname**y no tiene ningún valor predeterminado. *role* debe ser un identificador válido y no puede existir en la base de datos actual.  
+`[ @rolename = ] 'role'` Es el nombre del nuevo rol de aplicación. *role* es de **tipo sysname** y no tiene ningún valor predeterminado. *role* debe ser un identificador válido y no puede existir en la base de datos actual.  
   
  Los nombres de roles de aplicación pueden contener entre 1 y 128 caracteres, y pueden incluir letras, símbolos y números. Los nombres de rol no pueden contener una barra diagonal inversa ( \\ ) ni ser null ni una cadena vacía (' ').  
   
-`[ @password = ] 'password'` Es la contraseña requerida para activar el rol de aplicación. *password* es de **tipo sysname**y no tiene ningún valor predeterminado. la *contraseña* no puede ser null.  
+`[ @password = ] 'password'` Es la contraseña requerida para activar el rol de aplicación. *password* es de **tipo sysname** y no tiene ningún valor predeterminado. la *contraseña* no puede ser null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -61,14 +61,14 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
   
 -   Si ya existe un esquema con el mismo nombre que el rol de aplicación, el procedimiento generará un error.  
   
--   **Sp_addapprole**no comprueba la complejidad de la contraseña. La complejidad de la contraseña la comprueba CREATE APPLICATION ROLE.  
+-   **Sp_addapprole** no comprueba la complejidad de la contraseña. La complejidad de la contraseña la comprueba CREATE APPLICATION ROLE.  
   
  La *contraseña* del parámetro se almacena como un hash unidireccional.  
   
  La **sp_addapprole** procedimiento almacenado no se puede ejecutar desde una transacción definida por el usuario.  
   
 > [!IMPORTANT]  
->  **SqlClient**no admite la opción de **cifrado** ODBC de Microsoft. Cuando pueda, pida a los usuarios que escriban las credenciales del rol de aplicación en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, cífrelas con las funciones CryptoAPI.  
+>  **SqlClient** no admite la opción de **cifrado** ODBC de Microsoft. Cuando pueda, pida a los usuarios que escriban las credenciales del rol de aplicación en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, cífrelas con las funciones CryptoAPI.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY APPLICATION ROLE en la base de datos. Si aún no existe un esquema con el mismo nombre de esquema y propietario que el nuevo rol, también se requiere el permiso CREATE SCHEMA en la base de datos.  

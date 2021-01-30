@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - functions [ODBC], time functions
 - functions [ODBC], date functions
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dcbdf9f40a9cd1f1296920e3d2ea71fcb5ce6b39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e73d295613f3f11b72317d20b49a6c75be802cbd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386381"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202497"
 ---
 # <a name="time-date-and-interval-functions"></a>Funciones de hora, fecha e intervalo
 En la tabla siguiente se enumeran las funciones de fecha y hora que se incluyen en el conjunto de funciones escalares de ODBC. Una aplicación puede determinar qué funciones de fecha y hora son compatibles con un controlador mediante una llamada a **SQLGetInfo** con un *tipo de información* de SQL_TIMEDATE_FUNCTIONS.  
   
- Los argumentos indicados como *timestamp_exp* pueden ser el nombre de una columna, el resultado de otra función escalar o un valor de ODBC- *Time-* escape, *ODBC-Date-escape*u *ODBC-timestamp-escape*, donde el tipo de datos subyacente podría representarse como SQL_CHAR, SQL_VARCHAR, SQL_TYPE_TIME, SQL_TYPE_DATE o SQL_TYPE_TIMESTAMP.  
+ Los argumentos indicados como *timestamp_exp* pueden ser el nombre de una columna, el resultado de otra función escalar o un valor de ODBC- *Time-* escape, *ODBC-Date-escape* u *ODBC-timestamp-escape*, donde el tipo de datos subyacente podría representarse como SQL_CHAR, SQL_VARCHAR, SQL_TYPE_TIME, SQL_TYPE_DATE o SQL_TYPE_TIMESTAMP.  
   
  Los argumentos indicados como *date_exp* pueden ser el nombre de una columna, el resultado de otra función escalar o un *ODBC-Date-escape* u *ODBC-timestamp-escape*, donde el tipo de datos subyacente podría representarse como SQL_CHAR, SQL_VARCHAR, SQL_TYPE_DATE o SQL_TYPE_TIMESTAMP.  
   
@@ -47,7 +47,7 @@ En la tabla siguiente se enumeran las funciones de fecha y hora que se incluyen 
 |**DAYOFMONTH (** *date_exp* **)** (ODBC 1,0)|Devuelve el día del mes basándose en el campo de mes en *date_exp* como un valor entero en el intervalo de 1-31.|  
 |**DAYOFWEEK (** *date_exp* **)** (ODBC 1,0)|Devuelve el día de la semana basándose en el campo de la semana en *date_exp* como un valor entero en el intervalo de 1-7, donde 1 representa el domingo.|  
 |**DAYOFYEAR (** *date_exp* **)** (ODBC 1,0)|Devuelve el día del año basándose en el campo año de *date_exp* como un valor entero en el intervalo de 1-366.|  
-|**Extract (** *Extract-Field desde* *Extract-Source* **)** (ODBC 3,0)|Devuelve la parte de *Extracto-campo* del *origen*de la extracción. El argumento *Extract-Source* es una expresión de fecha y hora o de intervalo. El argumento *Extract-Field* puede ser una de las palabras clave siguientes:<br /><br /> AÑO MES/MINUTO HORA SEGUNDO<br /><br /> La precisión del valor devuelto está definida por la implementación. La escala es 0 a menos que se especifique SECOND, en cuyo caso la escala no es menor que la precisión de las fracciones de segundo del campo de origen de la *extracción* .|  
+|**Extract (** *Extract-Field desde* *Extract-Source* **)** (ODBC 3,0)|Devuelve la parte de *Extracto-campo* del *origen* de la extracción. El argumento *Extract-Source* es una expresión de fecha y hora o de intervalo. El argumento *Extract-Field* puede ser una de las palabras clave siguientes:<br /><br /> AÑO MES/MINUTO HORA SEGUNDO<br /><br /> La precisión del valor devuelto está definida por la implementación. La escala es 0 a menos que se especifique SECOND, en cuyo caso la escala no es menor que la precisión de las fracciones de segundo del campo de origen de la *extracción* .|  
 |**Hora (** *time_exp* **)** (ODBC 1,0)|Devuelve la hora según el campo de hora de *time_exp* como un valor entero en el intervalo de 0-23.|  
 |**Minute (** *time_exp* **)** (ODBC 1,0)|Devuelve el minuto según el campo de minuto en *time_exp* como un valor entero en el intervalo de 0-59.|  
 |**Month (** *date_exp* **)** (ODBC 1,0)|Devuelve el mes basado en el campo de mes en *date_exp* como un valor entero en el intervalo de 1-12.|  

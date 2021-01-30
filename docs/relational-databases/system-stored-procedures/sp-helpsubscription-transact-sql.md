@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsubscription_TSQL
 - sp_helpsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ff06497437017fd6771a7402c18d16a5ee6f94b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 73fc43bf20a9306d0224392d984b3f2bff74ec6f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543270"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192898"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,21 +43,21 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación asociada. *Publication* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve toda la información de suscripción de este servidor.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación asociada. *Publication* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve toda la información de suscripción de este servidor.  
   
-`[ @article = ] 'article'` Es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve toda la información de suscripción de las publicaciones y los suscriptores seleccionados. Si es **All**, solo se devuelve una entrada para la suscripción completa en una publicación.  
+`[ @article = ] 'article'` Es el nombre del artículo. *article* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve toda la información de suscripción de las publicaciones y los suscriptores seleccionados. Si es **All**, solo se devuelve una entrada para la suscripción completa en una publicación.  
   
-`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor en el que se va a obtener información de suscripción. *Subscriber* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve toda la información de suscripción de las publicaciones y los artículos seleccionados.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor en el que se va a obtener información de suscripción. *Subscriber* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve toda la información de suscripción de las publicaciones y los artículos seleccionados.  
   
-`[ @destination_db = ] 'destination_db'` Es el nombre de la base de datos de destino. *destination_db* es de **tipo sysname y su**valor predeterminado es **%** .  
+`[ @destination_db = ] 'destination_db'` Es el nombre de la base de datos de destino. *destination_db* es de **tipo sysname y su** valor predeterminado es **%** .  
   
-`[ @found = ] 'found'OUTPUT` Es una marca que indica que se devuelven filas. *found*es de **tipo int** y un parámetro output, con un valor predeterminado de 23456.  
+`[ @found = ] 'found'OUTPUT` Es una marca que indica que se devuelven filas. *found* es de **tipo int** y un parámetro output, con un valor predeterminado de 23456.  
   
  **1** indica que se ha encontrado la publicación.  
   
  **0** indica que no se encuentra la publicación.  
   
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname**y su valor predeterminado es el nombre del servidor actual.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname** y su valor predeterminado es el nombre del servidor actual.  
   
 > [!NOTE]  
 >  no se debe especificar el *publicador* , excepto cuando se trata de un publicador de Oracle.  

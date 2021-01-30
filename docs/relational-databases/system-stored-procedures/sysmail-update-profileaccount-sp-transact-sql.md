@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_update_profileaccount_sp_TSQL
 - sysmail_update_profileaccount_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ccfcd3627627dd2fca78ba02b74f89f2bea07116
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 140256e73adee3593c620b17f81ac10c163030f3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473357"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181847"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +43,15 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id` IDENTIFICADOR del perfil que se va a actualizar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar el *profile_id* o el *profile_name* .  
+`[ @profile_id = ] profile_id` IDENTIFICADOR del perfil que se va a actualizar. *profile_id* es de **tipo int** y su valor predeterminado es NULL. Se debe especificar el *profile_id* o el *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Nombre del perfil que se va a actualizar. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar el *profile_id* o el *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Nombre del perfil que se va a actualizar. *profile_name* es de **tipo sysname y su** valor predeterminado es NULL. Se debe especificar el *profile_id* o el *profile_name* .  
   
-`[ @account_id = ] account_id` IDENTIFICADOR de la cuenta que se va a actualizar. *ACCOUNT_ID* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar el *ACCOUNT_ID* o el *account_name* .  
+`[ @account_id = ] account_id` IDENTIFICADOR de la cuenta que se va a actualizar. *ACCOUNT_ID* es de **tipo int** y su valor predeterminado es NULL. Se debe especificar el *ACCOUNT_ID* o el *account_name* .  
   
-`[ @account_name = ] 'account_name'` Nombre de la cuenta que se va a actualizar. *account_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar el *ACCOUNT_ID* o el *account_name* .  
+`[ @account_name = ] 'account_name'` Nombre de la cuenta que se va a actualizar. *account_name* es de **tipo sysname y su** valor predeterminado es NULL. Se debe especificar el *ACCOUNT_ID* o el *account_name* .  
   
-`[ @sequence_number = ] sequence_number` El nuevo número de secuencia de la cuenta. *sequence_number* es de **tipo int**y no tiene ningún valor predeterminado. El número de secuencia determina el orden en que las cuentas se utilizan en el perfil.  
+`[ @sequence_number = ] sequence_number` El nuevo número de secuencia de la cuenta. *sequence_number* es de **tipo int** y no tiene ningún valor predeterminado. El número de secuencia determina el orden en que las cuentas se utilizan en el perfil.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

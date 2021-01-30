@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_revoke_login_from_proxy_TSQL
 - sp_revoke_login_from_proxy
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 39857bce8c0fc50c1773709d70e7e477b669b282
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c95315de974558eaf82878d087af09d2ac8e81b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473865"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183077"
 ---
 # <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +45,9 @@ sp_revoke_login_from_proxy
 ## <a name="arguments"></a>Argumentos  
 `[ @name = ] 'name'` Nombre del rol de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión, rol de servidor o base de datos **msdb** para el que se va a quitar el acceso. *Name* es de tipo **nvarchar (256)** y no tiene ningún valor predeterminado.  
   
-`[ @proxy_id = ] id` Identificador del proxy al que se va a quitar el acceso. Se debe especificar el *identificador* o el *proxy_name* , pero no se pueden especificar ambos. El *identificador* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @proxy_id = ] id` Identificador del proxy al que se va a quitar el acceso. Se debe especificar el *identificador* o el *proxy_name* , pero no se pueden especificar ambos. El *identificador* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @proxy_name = ] 'proxy_name'` Nombre del proxy al que se va a quitar el acceso. Se debe especificar el *identificador* o el *proxy_name* , pero no se pueden especificar ambos. La *proxy_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @proxy_name = ] 'proxy_name'` Nombre del proxy al que se va a quitar el acceso. Se debe especificar el *identificador* o el *proxy_name* , pero no se pueden especificar ambos. La *proxy_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_log_shipping_primary_database
 - sp_change_log_shipping_primary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 070065ae6e621c5ea52bf4be50ac0cc99af089f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1bcd150ff810f5a4a16deb09a7ea72956ccd681
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474526"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181356"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database'` Es el nombre de la base de datos del servidor principal. *primary_database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @database = ] 'database'` Es el nombre de la base de datos del servidor principal. *primary_database* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @backup_directory = ] 'backup_directory'` Es la ruta de acceso a la carpeta de copia de seguridad del servidor principal. *backup_directory* es de tipo **nvarchar (500)**, no tiene ningún valor predeterminado y no puede ser null.  
   
@@ -71,7 +71,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
 `[ @monitor_server_password = ] 'monitor_server_password'` Es la contraseña de la cuenta utilizada para obtener acceso al servidor de supervisión.  
   
-`[ @backup_threshold = ] 'backup_threshold'` Es el período de tiempo, en minutos, después de la última copia de seguridad antes de que se produzca un error de *threshold_alert* . *backup_threshold* es de **tipo int**y su valor predeterminado es de 60 minutos.  
+`[ @backup_threshold = ] 'backup_threshold'` Es el período de tiempo, en minutos, después de la última copia de seguridad antes de que se produzca un error de *threshold_alert* . *backup_threshold* es de **tipo int** y su valor predeterminado es de 60 minutos.  
   
 `[ @threshold_alert = ] 'threshold_alert'` La alerta que se generará cuando se supere el umbral de copia de seguridad. *threshold_alert* es de **tipo int** y no puede ser null.  
   

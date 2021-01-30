@@ -7,24 +7,24 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], identifiers
 - identifiers [ODBC], data types
 ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 54fe7267ea70dc50b0b40f16b27a1306fea533f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cd38f5ddb62a28bc3ec2658dca621769e13ab481
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386281"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202434"
 ---
 # <a name="using-data-type-identifiers"></a>Usar identificadores de tipo de datos
 Las aplicaciones usan identificadores de tipo de datos de dos maneras: para describir sus búferes en el controlador y para recuperar metadatos sobre el conjunto de resultados del controlador, de modo que puedan determinar qué tipo de búferes de C usar para almacenar los datos. Las aplicaciones llaman a las siguientes funciones para realizar estas tareas:  
   
--   **SQLBindParameter**, **SQLBindCol**y **SQLGetData** : para describir el tipo de datos C de los búferes de la aplicación.  
+-   **SQLBindParameter**, **SQLBindCol** y **SQLGetData** : para describir el tipo de datos C de los búferes de la aplicación.  
   
 -   **SQLBindParameter** : para describir el tipo de datos SQL de los parámetros dinámicos.  
   
@@ -32,7 +32,7 @@ Las aplicaciones usan identificadores de tipo de datos de dos maneras: para desc
   
 -   **SQLDescribeParameter** : para recuperar los tipos de datos SQL de los parámetros.  
   
--   **SQLColumns**, **SQLProcedureColumns**y **SQLSpecialColumns** : para recuperar los tipos de datos SQL de diversa información de esquema  
+-   **SQLColumns**, **SQLProcedureColumns** y **SQLSpecialColumns** : para recuperar los tipos de datos SQL de diversa información de esquema  
   
 -   **SQLGetTypeInfo** : para recuperar una lista de tipos de datos admitidos  
   

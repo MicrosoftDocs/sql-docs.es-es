@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_secondary_primary_TSQL
 - sp_add_log_shipping_secondary_primary
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e1123bfa1ce465989322c3b76a48da96c1fed7f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7675de9f5d3e322511af474fcf9495dad3e4454a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464643"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179780"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_add_log_shipping_secondary_primary
 ## <a name="arguments"></a>Argumentos  
 `[ @primary_server = ] 'primary_server'` Nombre de la instancia principal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración del trasvase de registros. *primary_server* es de **tipo sysname** y no puede ser null.  
   
-`[ @primary_database = ] 'primary_database'` Es el nombre de la base de datos del servidor principal. *primary_database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @primary_database = ] 'primary_database'` Es el nombre de la base de datos del servidor principal. *primary_database* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @backup_source_directory = ] 'backup_source_directory'` Directorio donde se almacenan los archivos de copia de seguridad del registro de transacciones del servidor principal. *backup_source_directory* es de tipo **nvarchar (500)** y no puede ser null.  
   
@@ -66,7 +66,7 @@ sp_add_log_shipping_secondary_primary
   
 `[ @restore_job_name = ] 'restore_job_name'` Es el nombre del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente en el servidor secundario que restaura las copias de seguridad en la base de datos secundaria. *restore_job_name* es de **tipo sysname** y no puede ser null.  
   
-`[ @file_retention_period = ] 'file_retention_period'` Período de tiempo, en minutos, que se conserva un archivo de copia de seguridad en el servidor secundario en la ruta de acceso especificada por el @backup_destination_directory parámetro antes de ser eliminado. *history_retention_period* es de **tipo int**y su valor predeterminado es NULL. Si no se especifica ninguno, se usará un valor de 14420.  
+`[ @file_retention_period = ] 'file_retention_period'` Período de tiempo, en minutos, que se conserva un archivo de copia de seguridad en el servidor secundario en la ruta de acceso especificada por el @backup_destination_directory parámetro antes de ser eliminado. *history_retention_period* es de **tipo int** y su valor predeterminado es NULL. Si no se especifica ninguno, se usará un valor de 14420.  
   
 `[ @monitor_server = ] 'monitor_server'` Es el nombre del servidor de supervisión. *Monitor_server* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
   

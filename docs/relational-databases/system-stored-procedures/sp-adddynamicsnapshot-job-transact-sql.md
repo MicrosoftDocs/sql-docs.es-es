@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_adddynamicsnapshot_job
 - sp_adddynamicsnapshot_job_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 25bbf50a6732806c37eafeb3efedddd712dcba57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9798613901be96552813ebe6f419f2e2c24229fd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447461"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182798"
 ---
 # <a name="sp_adddynamicsnapshot_job-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,13 +57,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación a la que se va a agregar el trabajo de instantáneas de datos filtrados. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación a la que se va a agregar el trabajo de instantáneas de datos filtrados. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @suser_sname = ] 'suser_sname'` Es el valor utilizado al crear una instantánea de datos filtrados para una suscripción que se filtra por el valor de la función [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) en el suscriptor. *SUSER_SNAME* es de **tipo sysname**y no tiene ningún valor predeterminado. *SUSER_SNAME* debe ser null si esta función no se utiliza para filtrar dinámicamente la publicación.  
+`[ @suser_sname = ] 'suser_sname'` Es el valor utilizado al crear una instantánea de datos filtrados para una suscripción que se filtra por el valor de la función [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) en el suscriptor. *SUSER_SNAME* es de **tipo sysname** y no tiene ningún valor predeterminado. *SUSER_SNAME* debe ser null si esta función no se utiliza para filtrar dinámicamente la publicación.  
   
-`[ @host_name = ] 'host_name'` Es el valor utilizado al crear una instantánea de datos filtrados para una suscripción que se filtra por el valor de la función [host_name](../../t-sql/functions/host-name-transact-sql.md) en el suscriptor. *host_name* es de **tipo sysname**y no tiene ningún valor predeterminado. *host_name* debe ser null si esta función no se utiliza para filtrar dinámicamente la publicación.  
+`[ @host_name = ] 'host_name'` Es el valor utilizado al crear una instantánea de datos filtrados para una suscripción que se filtra por el valor de la función [host_name](../../t-sql/functions/host-name-transact-sql.md) en el suscriptor. *host_name* es de **tipo sysname** y no tiene ningún valor predeterminado. *host_name* debe ser null si esta función no se utiliza para filtrar dinámicamente la publicación.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Es el nombre del trabajo de instantáneas de datos filtrados creado. *dynamic_snapshot_jobname* es de **tipo sysname, su**valor predeterminado es NULL y es un parámetro Output opcional. Si se especifica, *dynamic_snapshot_jobname* debe resolverse en un trabajo único en el distribuidor. Si no se especifica, se generará un nombre de trabajo automáticamente, el cual se devolverá al conjunto de resultados. Allí, el nombre se crea del siguiente modo:  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Es el nombre del trabajo de instantáneas de datos filtrados creado. *dynamic_snapshot_jobname* es de **tipo sysname, su** valor predeterminado es NULL y es un parámetro Output opcional. Si se especifica, *dynamic_snapshot_jobname* debe resolverse en un trabajo único en el distribuidor. Si no se especifica, se generará un nombre de trabajo automáticamente, el cual se devolverá al conjunto de resultados. Allí, el nombre se crea del siguiente modo:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -74,7 +74,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Es un identificador para el trabajo de instantáneas de datos filtrados creado. *dynamic_snapshot_jobid* es de tipo **uniqueidentifier**, su valor predeterminado es NULL y es un parámetro Output opcional.  
   
-`[ @frequency_type = ] frequency_type` Es la frecuencia con que se programa el trabajo de instantáneas de datos filtrados. *frequency_type* es de **tipo int**y puede tener uno de estos valores.  
+`[ @frequency_type = ] frequency_type` Es la frecuencia con que se programa el trabajo de instantáneas de datos filtrados. *frequency_type* es de **tipo int** y puede tener uno de estos valores.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -93,42 +93,42 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |--------------------------------|-------------------------------------|  
 |**1**|*frequency_interval* no se usa.|  
 |**4** (valor predeterminado)|Cada *frequency_interval* días, con un valor predeterminado de Daily.|  
-|**8**|*frequency_interval* es uno o más de los siguientes (combinados con un [&#124; &#40;operador lógico OR bit a bit&#41; &#40;de TRANSACT-&#41;SQL ](../../t-sql/language-elements/bitwise-or-transact-sql.md) ):<br /><br /> **1** = Domingo &#124; **2** = lunes &#124; **4** = martes &#124; **8** = miércoles &#124; **16** = jueves &#124; **32** = viernes &#124; **64** = sábado|  
+|**8**|*frequency_interval* es uno o más de los siguientes (combinados con un [&#124; &#40;operador lógico OR bit a bit&#41; &#40;de TRANSACT-&#41;SQL](../../t-sql/language-elements/bitwise-or-transact-sql.md) ):<br /><br /> **1** = Domingo &#124; **2** = lunes &#124; **4** = martes &#124; **8** = miércoles &#124; **16** = jueves &#124; **32** = viernes &#124; **64** = sábado|  
 |**16**|En el *frequency_interval* día del mes.|  
 |**32**|*frequency_interval* es uno de los siguientes:<br /><br /> **1** = Domingo &#124; **2** = lunes &#124; **3** = martes &#124; **4** = miércoles &#124; **5** = jueves &#124; **6** = viernes &#124; **7** = sábado &#124; **8** = día &#124; **9** = día de la semana &#124; **10** = día del fin de semana|  
 |**64**|*frequency_interval* no se usa.|  
 |**128**|*frequency_interval* no se usa.|  
   
-`[ @frequency_subday = ] frequency_subday` Especifica las unidades para *frequency_subday_interval*. *frequency_subday* es de **tipo int**y puede tener uno de estos valores.  
+`[ @frequency_subday = ] frequency_subday` Especifica las unidades para *frequency_subday_interval*. *frequency_subday* es de **tipo int** y puede tener uno de estos valores.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
-|**2**|Second|  
+|**2**|Segundo|  
 |**4** (valor predeterminado)|Minute|  
 |**8**|Hora|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Es el número de períodos *frequency_subday* que se producen entre cada ejecución del trabajo. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es 5.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Es el número de períodos *frequency_subday* que se producen entre cada ejecución del trabajo. *frequency_subday_interval* es de **tipo int** y su valor predeterminado es 5.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Es la aparición del trabajo de instantáneas de datos filtrados en cada mes. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de estos valores.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Es la aparición del trabajo de instantáneas de datos filtrados en cada mes. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int** y puede tener uno de estos valores.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
 |**1** (predeterminado)|First|  
-|**2**|Second|  
+|**2**|Segundo|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
 |**16**|Último|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es 0.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int** y su valor predeterminado es 0.  
   
-`[ @active_start_date = ] active_start_date` Es la fecha en que el trabajo de instantáneas de datos filtrados se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @active_start_date = ] active_start_date` Es la fecha en que el trabajo de instantáneas de datos filtrados se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @active_end_date = ] active_end_date` Es la fecha en la que el trabajo de instantáneas de datos filtrados deja de estar programado, con el formato AAAAMMDD. *active_end_date* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @active_end_date = ] active_end_date` Es la fecha en la que el trabajo de instantáneas de datos filtrados deja de estar programado, con el formato AAAAMMDD. *active_end_date* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Es la hora del día en que el trabajo de instantáneas de datos filtrados se programa por primera vez, con el formato HHMMSS. *active_start_time_of_day* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Es la hora del día en que el trabajo de instantáneas de datos filtrados se programa por primera vez, con el formato HHMMSS. *active_start_time_of_day* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Es la hora del día en que el trabajo de instantáneas de datos filtrados deja de estar programado, con el formato HHMMSS. *active_end_time_of_day* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Es la hora del día en que el trabajo de instantáneas de datos filtrados deja de estar programado, con el formato HHMMSS. *active_end_time_of_day* es de **tipo int** y su valor predeterminado es NULL.  
   
 ## <a name="result-set"></a>Tipo de cursor  
   

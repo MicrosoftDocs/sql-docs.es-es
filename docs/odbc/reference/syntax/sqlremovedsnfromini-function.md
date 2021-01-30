@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLRemoveDSNFromIni
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f49646881539d7c90c057633e7151b31cfe52b52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26bbcf3bf68dda172220323cb7d9b0dc39e3178d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499618"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192489"
 ---
 # <a name="sqlremovedsnfromini-function"></a>Función SQLRemoveDSNFromIni
 **Conformidad**  
@@ -39,7 +39,7 @@ ms.locfileid: "88499618"
 ```cpp  
   
 BOOL SQLRemoveDSNFromIni(  
-     LPCSTR   lpszDSN);  
+     LPCSTR   lpszDSN);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -50,7 +50,7 @@ BOOL SQLRemoveDSNFromIni(
  La función devuelve TRUE si quita el origen de datos o el origen de datos no estaba en el archivo de Odbc.ini. Devuelve FALSE si no puede quitar el origen de datos.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLRemoveDSNFromIni** devuelve false, se puede obtener un valor de * \* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLRemoveDSNFromIni** devuelve false, se puede obtener un valor de *\* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de *\* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
