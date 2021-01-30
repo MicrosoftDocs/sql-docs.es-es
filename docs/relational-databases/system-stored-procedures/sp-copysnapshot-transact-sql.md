@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_copysnapshot
 - sp_copysnapshot_TSQL
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1b6013694b6fe9746a3a0a167b107ed08083cc4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 76e8f1bead2aaf10289f724b300a79eacd3ca11f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528922"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185772"
 ---
 # <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Copia la carpeta de instantáneas de la publicación especificada en la carpeta indicada en el ** \@ destination_folder**. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación. Este procedimiento almacenado es muy útil para copiar una instantánea en medios extraíbles, como un CD-ROM.  
+  Copia la carpeta de instantáneas de la publicación especificada en la carpeta indicada en el **\@ destination_folder**. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación. Este procedimiento almacenado es muy útil para copiar una instantánea en medios extraíbles, como un CD-ROM.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,9 +40,9 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación cuyo contenido de instantánea se va a copiar. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación cuyo contenido de instantánea se va a copiar. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @destination_folder = ] 'destination_folder'` Es el nombre de la carpeta donde se va a copiar el contenido de la instantánea de la publicación. *destination_folder*es de tipo **nvarchar (255)** y no tiene ningún valor predeterminado. El *destination_folder* puede ser una ubicación alternativa, por ejemplo, en otro servidor, en una unidad de red o en medios extraíbles (como CD-ROM o discos extraíbles).  
+`[ @destination_folder = ] 'destination_folder'` Es el nombre de la carpeta donde se va a copiar el contenido de la instantánea de la publicación. *destination_folder* es de tipo **nvarchar (255)** y no tiene ningún valor predeterminado. El *destination_folder* puede ser una ubicación alternativa, por ejemplo, en otro servidor, en una unidad de red o en medios extraíbles (por ejemplo, CD-ROMs o discos extraíbles).  
   
 `[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *Subscriber* es de tipo sysname y su valor predeterminado es NULL.  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_droprole
 - sp_droprole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6180676b4458a5f270f9ecab9bb35d2ed8a481c4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 58832ba9f1d5b508f8125dc137805e59d3977f9e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548149"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187024"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'` Es el nombre del rol de base de datos que se va a quitar de la base de datos actual. *role* es un **sysname**y no tiene ningún valor predeterminado. el *rol* ya debe existir en la base de datos actual.  
+`[ @rolename = ] 'role'` Es el nombre del rol de base de datos que se va a quitar de la base de datos actual. *role* es un **sysname** y no tiene ningún valor predeterminado. el *rol* ya debe existir en la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

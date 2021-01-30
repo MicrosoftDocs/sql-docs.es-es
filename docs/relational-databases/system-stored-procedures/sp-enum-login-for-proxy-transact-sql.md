@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enum_login_for_proxy_TSQL
 - sp_enum_login_for_proxy
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 7707843979bd0c741ade8e4ae6759d265eb13d06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b51d02a66833df04a82a970319bab4e62f462a33
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486066"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186960"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
@@ -45,9 +45,9 @@ sp_enum_login_for_proxy
 ## <a name="arguments"></a>Argumentos  
 `[ @name = ] 'name'` El nombre de una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entidad de seguridad, Inicio de sesión, rol de servidor o rol de base de datos **msdb** para el que se van a enumerar los servidores proxy. El nombre es **nvarchar (256)** y su valor predeterminado es NULL.  
   
-`[ @proxy_id = ] id` Número de identificación del proxy del que se va a mostrar información. La *proxy_id* es de **tipo int**y su valor predeterminado es NULL. Se puede especificar el *identificador* o el *proxy_name* .  
+`[ @proxy_id = ] id` Número de identificación del proxy del que se va a mostrar información. La *proxy_id* es de **tipo int** y su valor predeterminado es NULL. Se puede especificar el *identificador* o el *proxy_name* .  
   
-`[ @proxy_name = ] 'proxy_name'` Nombre del proxy del que se va a mostrar información. La *proxy_name* es de **tipo sysname y su**valor predeterminado es NULL. Se puede especificar el *identificador* o el *proxy_name* .  
+`[ @proxy_name = ] 'proxy_name'` Nombre del proxy del que se va a mostrar información. La *proxy_name* es de **tipo sysname y su** valor predeterminado es NULL. Se puede especificar el *identificador* o el *proxy_name* .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

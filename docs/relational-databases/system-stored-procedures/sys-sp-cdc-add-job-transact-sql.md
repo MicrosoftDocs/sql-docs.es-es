@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_add_job (Transact-SQL)
-title: Sys. sp_cdc_add_job (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_add_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_add_job_TSQL
 - sys.sp_cdc_add_job
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8a1285df9bf4d7e17e074e3c22f0ff37241c400
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1c48413f1f588ea4a70c4f8a1190e819758c76b2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545849"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186692"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,7 +90,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Dado que los trabajos de captura y limpieza se crean de forma predeterminada, este procedimiento almacenado solo es necesario cuando un trabajo se ha eliminado y se ha vuelto a crear explícitamente.  
   
- El nombre del trabajo es **CDC.** _\<database\_name\>_ ** \_ Cleanup** o **CDC.** _\<database\_name\>_ ** \_ Capture**, donde *<database_name>* es el nombre de la base de datos actual. Si ya existe un trabajo con el mismo nombre, el nombre se anexa con un punto (**.**) seguido de un identificador único, por ejemplo: **CDC. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ El nombre del trabajo es **CDC.** _\<database\_name\>_ **\_ Cleanup** o **CDC.** _\<database\_name\>_ **\_ Capture**, donde *<database_name>* es el nombre de la base de datos actual. Si ya existe un trabajo con el mismo nombre, el nombre se anexa con un punto (**.**) seguido de un identificador único, por ejemplo: **CDC.AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Para ver la configuración actual de un trabajo de limpieza o de captura, use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Para cambiar la configuración de un trabajo, use [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   
@@ -122,8 +122,8 @@ EXEC sys.sp_cdc_add_job
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [DBO. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [Sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [dbo.cdc_jobs &#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [Acerca de la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

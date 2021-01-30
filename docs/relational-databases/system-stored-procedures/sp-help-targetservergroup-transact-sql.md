@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_targetservergroup_TSQL
 - sp_help_targetservergroup
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ea33d20e35938561489f27a14c834da002a7408d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 200b6b0a8d6a6700f7aa98db0cde45cfc278dc53
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527232"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186706"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>Argumento  
-`[ @name = ] 'name'` Es el nombre del grupo de servidores de destino para el que se va a devolver información. *Name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @name = ] 'name'` Es el nombre del grupo de servidores de destino para el que se va a devolver información. *Name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

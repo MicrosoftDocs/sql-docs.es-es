@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_jobstep
 - sp_delete_jobstep_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c98055d6b5aba79d1d7b62966e5e20c656d17a22
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9b795b6526941518e476390dba158f56e18040da
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541827"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186332"
 ---
 # <a name="sp_delete_jobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +42,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` El número de identificación del trabajo del que se quitará el paso. *job_id*es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id` El número de identificación del trabajo del que se quitará el paso. *job_id* es de tipo **uniqueidentifier** y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` Nombre del trabajo del que se quitará el paso. *job_name*es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo del que se quitará el paso. *job_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > **Nota:** Se debe especificar *job_id* o *job_name* ; no se pueden especificar ambos.  
   
-`[ @step_id = ] step_id` Número de identificación del paso que se va a quitar. *step_id*es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @step_id = ] step_id` Número de identificación del paso que se va a quitar. *step_id* es de **tipo int** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

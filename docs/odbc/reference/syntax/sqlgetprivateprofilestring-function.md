@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLGetPrivateProfileString
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2223d46d507df2a9cf82e7feb800caf5b8f82cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6ec5dfa03f04b004f704ad707fb7916d40e69716
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421239"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186189"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>Función SQLGetPrivateProfileString
 **Conformidad**  
@@ -70,7 +70,7 @@ int SQLGetPrivateProfileString(
  **SQLGetPrivateProfileString** devuelve un valor entero que indica el número de caracteres leídos.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando se produce un error en una llamada a **SQLGetPrivateProfileString** , se puede obtener un valor de * \* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando se produce un error en una llamada a **SQLGetPrivateProfileString** , se puede obtener un valor de *\* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de *\* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  

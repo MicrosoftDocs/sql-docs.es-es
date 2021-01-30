@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_job
 - sp_delete_job_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d4ded9ec986afc467534c3053e17831147bc404
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ef2fdfc32a0b8b076037b3d75d2c88df9a5883aa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541855"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186340"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,20 +43,20 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` Es el número de identificación del trabajo que se va a eliminar. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id` Es el número de identificación del trabajo que se va a eliminar. *job_id* es de tipo **uniqueidentifier** y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` Es el nombre del trabajo que se va a eliminar. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Es el nombre del trabajo que se va a eliminar. *job_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *job_id* o *job_name*; no se pueden especificar ambos.  
   
 `[ @originating_server = ] 'server'` Para uso interno.  
   
-`[ @delete_history = ] delete_history` Especifica si se debe eliminar el historial del trabajo. *delete_history* es de **bit**y su valor predeterminado es **1**. Cuando *delete_history* es **1**, se elimina el historial de trabajos del trabajo. Cuando *delete_history* es **0**, no se elimina el historial de trabajos.  
+`[ @delete_history = ] delete_history` Especifica si se debe eliminar el historial del trabajo. *delete_history* es de **bit** y su valor predeterminado es **1**. Cuando *delete_history* es **1**, se elimina el historial de trabajos del trabajo. Cuando *delete_history* es **0**, no se elimina el historial de trabajos.  
   
  Tenga en cuenta que cuando se elimina un trabajo y no se elimina el historial, la información histórica del trabajo no se mostrará en el historial de trabajos de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interfaz gráfica de usuario del agente, pero la información seguirá residiendo en la tabla **sysjobhistory** de la base de datos **msdb** .  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` Especifica si se deben eliminar las programaciones adjuntas a este trabajo si no están adjuntas a ningún otro trabajo. *delete_unused_schedule* es de **bit**y su valor predeterminado es **1**. Cuando *delete_unused_schedule* es **1**, se eliminan las programaciones adjuntas a este trabajo si ningún otro trabajo hace referencia a la programación. Cuando *delete_unused_schedule* es **0**, no se eliminan las programaciones.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Especifica si se deben eliminar las programaciones adjuntas a este trabajo si no están adjuntas a ningún otro trabajo. *delete_unused_schedule* es de **bit** y su valor predeterminado es **1**. Cuando *delete_unused_schedule* es **1**, se eliminan las programaciones adjuntas a este trabajo si ningún otro trabajo hace referencia a la programación. Cuando *delete_unused_schedule* es **0**, no se eliminan las programaciones.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -65,9 +65,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  None  
   
 ## <a name="remarks"></a>Observaciones  
- El argumento ** \@ originating_server** está reservado para uso interno.  
+ El argumento **\@ originating_server** está reservado para uso interno.  
   
- El argumento ** \@ delete_unused_schedule** proporciona compatibilidad con versiones anteriores de SQL Server quitando automáticamente las programaciones que no están adjuntas a ningún trabajo. Tenga en cuenta que este parámetro tiene como valor predeterminado el comportamiento compatible con versiones anteriores. Para conservar las programaciones que no están adjuntas a un trabajo, debe proporcionar el valor **0** como ** \@ delete_unused_schedule** argumento.  
+ El argumento **\@ delete_unused_schedule** proporciona compatibilidad con versiones anteriores de SQL Server quitando automáticamente las programaciones que no están adjuntas a ningún trabajo. Tenga en cuenta que este parámetro tiene como valor predeterminado el comportamiento compatible con versiones anteriores. Para conservar las programaciones que no están adjuntas a un trabajo, debe proporcionar el valor **0** como **\@ delete_unused_schedule** argumento.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
   

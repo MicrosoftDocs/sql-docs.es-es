@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropremotelogin
 - sp_dropremotelogin_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 6ccb8f6c4bbf5795784c8ad3712c5fe8163ff0e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b468ff83bffdd581695b9553c636b06fbe6c784
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474236"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187032"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
@@ -45,11 +45,11 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @remoteserver = ] 'remoteserver'` Es el nombre del servidor remoto asignado al inicio de sesión remoto que se va a quitar. *RemoteServer* es de **tipo sysname**y no tiene ningún valor predeterminado. *RemoteServer* ya debe existir.  
+`[ @remoteserver = ] 'remoteserver'` Es el nombre del servidor remoto asignado al inicio de sesión remoto que se va a quitar. *RemoteServer* es de **tipo sysname** y no tiene ningún valor predeterminado. *RemoteServer* ya debe existir.  
   
 `[ @loginame = ] 'login'` Es el nombre de inicio de sesión opcional en el servidor local que está asociado con el servidor remoto. *login* es de tipo **sysname** y su valor predeterminado es NULL. el *Inicio de sesión* ya debe existir si se especifica.  
   
-`[ @remotename = ] 'remote_name'` Es el nombre opcional del inicio de sesión remoto que se asigna al *Inicio de sesión* cuando se inicia sesión desde el servidor remoto. *remote_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @remotename = ] 'remote_name'` Es el nombre opcional del inicio de sesión remoto que se asigna al *Inicio de sesión* cuando se inicia sesión desde el servidor remoto. *remote_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -89,14 +89,14 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_addremotelogin &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_addserver &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
- [sp_droplogin &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpremotelogin &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
