@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d2fc1113525c18642f3de958224d55986c6c2156
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 01fffe1c07768b6820d39b558b1f585bee23bc73
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429606"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193244"
 ---
 # <a name="odbc-escape-sequences"></a>Secuencias de escape ODBC
 Las secuencias de escape siguientes se utilizan en ODBC. La gramática de esta sección utiliza algunos elementos definidos en [los elementos que se usan en las instrucciones SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  

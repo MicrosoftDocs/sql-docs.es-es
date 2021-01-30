@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_restoredbreplication
 - sp_restoredbreplication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b64a39661fdceefade15d605ccc8e1c083ede0e6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 841a162c9619344fa297951277642f306d8539ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541562"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194382"
 ---
 # <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,10 +42,10 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
   
 ## <a name="arguments"></a>Argumentos  
 `[ @srv_orig = ] 'original_server_name'`  
- El nombre del servidor donde se creó la copia de seguridad. *original_server_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ El nombre del servidor donde se creó la copia de seguridad. *original_server_name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @db_orig = ] 'original_database_name'`  
- Nombre de la base de datos de la que se realizó la copia de seguridad. *original_database_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ Nombre de la base de datos de la que se realizó la copia de seguridad. *original_database_name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @keep_replication = ] keep_replication`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  

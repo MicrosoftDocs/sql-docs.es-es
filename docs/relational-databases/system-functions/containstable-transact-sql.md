@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CONTAINSTABLE
 - CONTAINSTABLE_TSQL
@@ -34,12 +34,12 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8222058b5e26dd8e2d1c932705889ec0ee6d68c6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0884b34e2da3eaa6a081da8bebaae06f4d16ddc7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482521"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196144"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -145,7 +145,7 @@ CONTAINSTABLE
  <contains_search_condition>  
  Especifica el texto que se va a buscar en *column_name* y las condiciones para obtener coincidencias. Para obtener información acerca de las condiciones de búsqueda, vea [Contains &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los predicados y las funciones de texto completo operan en una única tabla, que se obtiene del predicado FROM. Para buscar en varias tablas, utilice una tabla combinada en la cláusula FROM a fin de buscar en un conjunto de resultados que sea el producto de dos o más tablas.  
   
  La tabla devuelta tiene una columna denominada **key** que contiene valores de clave de texto completo. Cada tabla indizada de texto completo tiene una columna cuyos valores se garantiza que son únicos y los valores devueltos en la columna de **clave** son los valores de clave de texto completo de las filas que coinciden con los criterios de selección especificados en la condición de búsqueda Contains. La propiedad **TableFulltextKeyColumn** , obtenida a partir de la función OBJECTPROPERTYEX, proporciona la identidad de esta columna de clave única. Para obtener el identificador de la columna asociada a la clave de texto completo del índice de texto completo, use **Sys.fulltext_indexes**. Para obtener más información, vea [sys.fulltext_indexes &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  

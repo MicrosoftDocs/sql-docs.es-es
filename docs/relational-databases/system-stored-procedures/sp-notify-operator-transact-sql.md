@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_notify_operator_TSQL
 - sp_notify_operator
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 946a2adf54435499ae72d12ed10e984892295533
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 954a314760a22d9b00996dc460062fcc75af16aa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541645"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192002"
 ---
 # <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_notify_operator
 ## <a name="arguments"></a>Argumentos  
 `[ @profile_name = ] 'profilename'` Nombre del perfil de Correo electrónico de base de datos que se va a utilizar para enviar el mensaje. *ProfileName* es **nvarchar (128)**. Si no se especifica *ProfileName* , se utiliza el perfil de correo electrónico de base de datos predeterminado.  
   
-`[ @id = ] id` Identificador del operador al que se va a enviar el mensaje. *ID* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar uno de los *identificadores* o *nombres* .  
+`[ @id = ] id` Identificador del operador al que se va a enviar el mensaje. *ID* es de **tipo int** y su valor predeterminado es NULL. Se debe especificar uno de los *identificadores* o *nombres* .  
   
 `[ @name = ] 'name'` Nombre del operador al que se va a enviar el mensaje. *Name* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. Se debe especificar uno de los *identificadores* o *nombres* .  
   
@@ -98,7 +98,7 @@ EXEC dbo.sp_notify_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Agente SQL Server procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   

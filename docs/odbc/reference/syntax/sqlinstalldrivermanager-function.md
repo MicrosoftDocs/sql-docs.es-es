@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLInstallDriverManager
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b39e2c9304fd47394617d48f22ac91284af1b45d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b85af0323de46972ec6d6c4bf88359209b0015d5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421179"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189702"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>Función SQLInstallDriverManager
 **Conformidad**  
@@ -58,7 +58,7 @@ BOOL SQLInstallDriverManager(
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLInstallDriverManager** devuelve false, se puede obtener un valor de * \* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLInstallDriverManager** devuelve false, se puede obtener un valor de *\* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de *\* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
@@ -74,7 +74,7 @@ BOOL SQLInstallDriverManager(
   
  Si el programa de instalación de la aplicación instaló previamente una versión anterior del administrador de controladores, los componentes principales deben desinstalarse y volver a instalarse para que el recuento de uso de componentes principales sea válido. Primero se debe llamar a **SQLRemoveDriverManager** para reducir el recuento de uso de componentes. A continuación, se debe llamar a **SQLInstallDriverManager** para incrementar el recuento de uso de componentes. El programa de instalación de la aplicación debe reemplazar los archivos de componentes principales antiguos por los nuevos archivos. Los recuentos de uso de archivos seguirán siendo los mismos y otras aplicaciones que usen los archivos de componentes principales de la versión anterior utilizarán los archivos de la versión más reciente.  
   
- En una instalación nueva de los componentes, controladores y traductores principales de ODBC, el programa de instalación de la aplicación debe llamar a las siguientes funciones en secuencia: **SQLInstallDriverManager**, **SQLInstallDriverEx**, **SQLConfigDriver** (con un *fRequest* de ODBC_INSTALL_DRIVER) y, a continuación, **SQLInstallTranslatorEx**. En una desinstalación de los componentes principales, controladores y traductores, el programa de instalación de la aplicación debe llamar a las siguientes funciones en secuencia: **SQLRemoveTranslator**, **SQLRemoveDriver**y **SQLRemoveDriverManager**. Estas funciones deben llamarse en esta secuencia. En una actualización de todos los componentes, se debe llamar a todas las funciones de desinstalación en secuencia y, a continuación, se debe llamar a todas las funciones de instalación en orden.  
+ En una instalación nueva de los componentes, controladores y traductores principales de ODBC, el programa de instalación de la aplicación debe llamar a las siguientes funciones en secuencia: **SQLInstallDriverManager**, **SQLInstallDriverEx**, **SQLConfigDriver** (con un *fRequest* de ODBC_INSTALL_DRIVER) y, a continuación, **SQLInstallTranslatorEx**. En una desinstalación de los componentes principales, controladores y traductores, el programa de instalación de la aplicación debe llamar a las siguientes funciones en secuencia: **SQLRemoveTranslator**, **SQLRemoveDriver** y **SQLRemoveDriverManager**. Estas funciones deben llamarse en esta secuencia. En una actualización de todos los componentes, se debe llamar a todas las funciones de desinstalación en secuencia y, a continuación, se debe llamar a todas las funciones de instalación en orden.  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_stored_procedures_TSQL
 - sp_stored_procedures
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 41c28dd8a9dff8c95f6656aace6d80eb8d289e7c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3266b5619701d28a4fc65eb79d3f3e16c75e40b6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541163"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193217"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
@@ -56,9 +56,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   El esquema **dbo** de la base de datos actual.  
   
-`[ @qualifier = ] 'qualifier'` Es el nombre del calificador del procedimiento. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas en el formulario (_calificador_**.** _esquema_**.** _nombre_. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el *calificador* representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+`[ @qualifier = ] 'qualifier'` Es el nombre del calificador del procedimiento. el *calificador* es de **tipo sysname y su** valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas en el formulario (_calificador_**.** _esquema_**.** _nombre_. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el *calificador* representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
-`[ @fUsePattern = ] 'fUsePattern'` Determina si el carácter de subrayado (_), porcentaje (%) o corchetes []) se interpreta como caracteres comodín. *fUsePattern* es de **bit**y su valor predeterminado es 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina si el carácter de subrayado (_), porcentaje (%) o corchetes []) se interpreta como caracteres comodín. *fUsePattern* es de **bit** y su valor predeterminado es 1.  
   
  **0** = la coincidencia de patrones está desactivada.  
   
@@ -85,7 +85,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
  La información de permisos acerca del acceso de ejecución del usuario actual para un procedimiento almacenado específico no se comprueba necesariamente, por lo tanto, el acceso no está garantizado. Observe que solo se utilizan los nombres en tres partes. Esto significa que solo se devolverán los procedimientos almacenados locales, y no los remotos (que precisan nombres de cuatro partes), cuando se ejecuten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el atributo de servidor ACCESSIBLE_SPROC es Y en el conjunto de resultados de **sp_server_info**, solo se devuelven los procedimientos almacenados que puede ejecutar el usuario actual.  
   
- **sp_stored_procedures** es equivalente a **SQLProcedures** en ODBC. Los resultados devueltos se ordenan por **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**y **procedure_name**.  
+ **sp_stored_procedures** es equivalente a **SQLProcedures** en ODBC. Los resultados devueltos se ordenan por **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER** y **procedure_name**.  
   
 ## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  

@@ -6,7 +6,7 @@ ms.date: 04/24/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_exec_session_wait_stats
 - sys.dm_exec_session_wait_stats_tsql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d0c91c8af4b0264c6cb418e858e18e0c252eda15
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: df522912f8c9fe07cd6aef495eddd90c66832e63
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171427"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192965"
 ---
 # <a name="sysdm_exec_session_wait_stats-transact-sql"></a>sys.dm_exec_session_wait_stats (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "98171427"
 |max_wait_time_ms|**bigint**|Tiempo de espera máximo de este tipo de espera.|  
 |signal_wait_time_ms|**bigint**|Diferencia entre el momento en que se indicó el subproceso en espera y el momento en que empezó a ejecutarse.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta DMV restablece la información de una sesión cuando se abre la sesión, o cuando se restablece la sesión (si se agrupa la conexión),  
   
  Para obtener información sobre los tipos de espera, vea [sys.dm_os_wait_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  

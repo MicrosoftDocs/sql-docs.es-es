@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_migrate_user_to_contained
 - sp_migrate_user_to_contained_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: edabb8a59a672c3ebfe04a799df7901b402fb5b3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 81450361252fcdc2d02a9d9e118839db3c5af64c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543208"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195492"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +43,13 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [** @username =** ] **N '***usuario***'**  
- Nombre de un usuario en la base de datos independiente actual asignado a un inicio de sesión autenticado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor es de **tipo sysname y su**valor predeterminado es **null**.  
+ [**@username =** ] **N '**_usuario_*_'_*  
+ Nombre de un usuario en la base de datos independiente actual asignado a un inicio de sesión autenticado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor es de **tipo sysname y su** valor predeterminado es **null**.  
   
- [** @rename =** ] **N '***copy_login_name***'**  |  **N '***keep_name***'**  
+ [**@rename =** ] **N '**_copy_login_name_*_'_*  |  **N '**_keep_name_*_'_*  
  Cuando un usuario de base de datos basado en un inicio de sesión tiene un nombre de usuario distinto al nombre de inicio de sesión, utilice *keep_name* para conservar el nombre de usuario de la base de datos durante la migración. Utilice *copy_login_name* para crear el nuevo usuario de base de datos independiente con el nombre del inicio de sesión, en lugar del usuario. Cuando un usuario de la base de datos basado en inicio de sesión tiene el mismo nombre de usuario que el nombre de inicio de sesión, ambas opciones crean el usuario de la base de datos independiente sin cambiar el nombre.  
   
- [** @disablelogin =** ] **N '***disable_login***'**  |  **N '***do_not_disable_login***'**  
+ [**@disablelogin =** ] **N '**_disable_login_*_'_*  |  **N '**_do_not_disable_login_*_'_*  
  *disable_login* deshabilita el inicio de sesión en la base de datos maestra. Para conectarse cuando el inicio de sesión está deshabilitado, la conexión debe proporcionar el nombre de la base de datos independiente como el **catálogo inicial** como parte de la cadena de conexión.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

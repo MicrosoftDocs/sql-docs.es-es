@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsort_TSQL
 - sp_helpsort
@@ -19,12 +19,12 @@ ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a447450687f0399cc8585e4f7266b757114da01
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ad9597ce9219ebe927a4cab233a6bcb462767ccd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97411112"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189551"
 ---
 # <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ sp_helpsort
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve la intercalación predeterminada del servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si se instala una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una intercalación especificada para ser compatible con una instalación anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **sp_helpsort** devuelve resultados en blanco. En casos como éste, se puede determinar la intercalación consultando el objeto SERVERPROPERTY; por ejemplo: `SELECT SERVERPROPERTY ('Collation');`.  
   
 ## <a name="permissions"></a>Permisos  

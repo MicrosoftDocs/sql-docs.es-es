@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_control_dbmasterkey_password
 - sp_control_dbmasterkey_password_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 08b749ad756a47ed991acd1ad0ea1d533bbb770c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06de3460a55eecba6c1525576caec85d6baa905f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481461"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190034"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!CAUTION]  
 >  No cree una credencial de clave maestra para una base de datos que deba estar inaccesible para sa y otras entidades de seguridad de servidor con numerosos privilegios. Puede configurar una base de datos de forma que su jerarquía de claves no pueda descifrarse con la clave maestra de servicio. Esta opción se admite como una defensa para bases de datos que contienen información cifrada que no debe estar accesible para sa u otras entidades de seguridad de servidor con amplios privilegios. Al crear una credencial de clave maestra para esta base de datos se quita la defensa, por lo que sa y otras entidades de seguridad de servidor con numerosos privilegios podrán descifrar la base de datos.  
   
- Las credenciales que se crean mediante sp_control_dbmasterkey_password están visibles en la vista de catálogo [Sys. master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) . Los nombres de las credenciales creadas para las claves maestras de base de datos presentan el siguiente formato: `##DBMKEY_<database_family_guid>_<random_password_guid>##`. La contraseña se almacena como el secreto de la credencial. Para cada contraseña que se agrega al almacén de credenciales hay una fila en sys.credentials.  
+ Las credenciales que se crean mediante sp_control_dbmasterkey_password están visibles en la vista de catálogo de [Sys.master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) . Los nombres de las credenciales creadas para las claves maestras de base de datos presentan el siguiente formato: `##DBMKEY_<database_family_guid>_<random_password_guid>##`. La contraseña se almacena como el secreto de la credencial. Para cada contraseña que se agrega al almacén de credenciales hay una fila en sys.credentials.  
   
  No puede utilizar sp_control_dbmasterkey_password para crear una credencial para las siguientes bases de datos del sistema: maestra, model, msdb, o tempdb.  
   
@@ -101,7 +101,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar una base de datos reflejada cifrada](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
+ [Establecer una base de datos reflejada cifrada](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   

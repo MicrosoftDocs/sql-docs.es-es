@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_schemafilter_TSQL
 - sp_schemafilter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 51edefb63c7ec075e89e9239636207625c4ba1dc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f5b05b9976525109f6361c68f7acf7ee309f8b85
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541527"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189994"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +40,13 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` Es el nombre del publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @schema = ] 'schema'` Es el nombre del esquema. *Schema* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @schema = ] 'schema'` Es el nombre del esquema. *Schema* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 `[ @operation = ] 'operation'` Es la acción que se va a realizar en este esquema. la *operación* es **nvarchar (4)** y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**add**|Agrega el esquema especificado a la lista de esquemas no aptos para su publicación.|  
 |**omisiones**|Quita el esquema especificado de la lista de esquemas no aptos para su publicación.|  

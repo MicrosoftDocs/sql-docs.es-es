@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_monitor_TSQL
 - sp_monitor
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f214abb7b20c42ec62f1bc35d85222e0033798d1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f046c3e6fe81c7dac489fcdd88237ecb2d3747d0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544762"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195463"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sp_monitor
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |**last_run**|Hora **sp_monitor** la última vez que se ejecutó.|  
 |**current_run**|Tiempo **sp_monitor** se está ejecutando.|  
@@ -63,7 +63,7 @@ sp_monitor
 ## <a name="remarks"></a>Observaciones  
  A través de una serie de funciones, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza el seguimiento del trabajo que ha realizado. Al ejecutar **sp_monitor** se muestran los valores actuales devueltos por estas funciones y se muestra cuánto han cambiado desde la última vez que se ejecutó el procedimiento.  
   
- Para cada columna, la estadística se imprime con el formato *número*(*número*)-*número*% o *número*(*número*). El primer *número* hace referencia al número de segundos (por **cpu_busy**, **io_busy**e **inactivo**) o el número total (para las demás variables) desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinició. El *número* entre paréntesis hace referencia al número de segundos o al número total transcurridos desde la última vez que se ejecutó **sp_monitor** . El porcentaje es el porcentaje de tiempo transcurrido desde la última vez que se ejecutó **sp_monitor** . Por ejemplo, si el informe muestra **cpu_busy** como 4250 (215)-68%, la CPU ha estado ocupada 4250 segundos desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez, 215 segundos desde la última vez que se ejecutó **sp_monitor** , y el 68% del tiempo total transcurrido desde la última vez que se ejecutó la **sp_monitor** .  
+ Para cada columna, la estadística se imprime con el formato *número*(*número*)-*número*% o *número*(*número*). El primer *número* hace referencia al número de segundos (por **cpu_busy**, **io_busy** e **inactivo**) o el número total (para las demás variables) desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinició. El *número* entre paréntesis hace referencia al número de segundos o al número total transcurridos desde la última vez que se ejecutó **sp_monitor** . El porcentaje es el porcentaje de tiempo transcurrido desde la última vez que se ejecutó **sp_monitor** . Por ejemplo, si el informe muestra **cpu_busy** como 4250 (215)-68%, la CPU ha estado ocupada 4250 segundos desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez, 215 segundos desde la última vez que se ejecutó **sp_monitor** , y el 68% del tiempo total transcurrido desde la última vez que se ejecutó la **sp_monitor** .  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  

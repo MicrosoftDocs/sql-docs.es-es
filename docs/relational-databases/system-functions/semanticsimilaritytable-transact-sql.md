@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - semanticsimilaritytable
 - semanticsimilaritytable_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4866c5002fce3540014b9ad0c94ccd7b20a0e235
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 532ec509de094db343406b6cb0f9f0cca924a724
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397281"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194560"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,10 +57,10 @@ SEMANTICSIMILARITYTABLE
  **lista_de_columnas**  
  Indica varias columnas, separadas por comas y escritas entre paréntesis. Todas las columnas deben tener habilitada la indización semántica.  
   
- **\***  
+ **\** _  
  Indica que se incluyen todas las columnas que tienen la indización semántica habilitada.  
   
- **source_key**  
+ _ *source_key**  
  Clave única de la fila, para solicitar los resultados de una fila concreta.  
   
  La clave se convierte implícitamente al tipo de la clave única de texto completo en la tabla de origen siempre que sea posible. La clave se puede especificar como una constante o como una variable, pero no puede ser una expresión ni el resultado de una subconsulta escalar.  
@@ -74,8 +74,8 @@ SEMANTICSIMILARITYTABLE
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|Identificador de la columna de la que se usó un documento de origen para buscar documentos similares.<br /><br /> Vea las funciones COL_NAME y COLUMNPROPERTY para obtener información detallada sobre cómo recuperar el nombre de columna desde column_id y viceversa.|  
 |**matched_column_id**|**int**|Identificador de la columna de la que se encontró un documento similar.<br /><br /> Vea las funciones COL_NAME y COLUMNPROPERTY para obtener información detallada sobre cómo recuperar el nombre de columna desde column_id y viceversa.|  
-|**matched_document_key**|**\***<br /><br /> Esta clave coincide con el tipo de la clave única de la tabla de origen.|Valor de clave única de extracción semántica y de texto completo del documento o la fila que resultaron ser similares al documento especificado en la consulta.|  
-|**carácter**|**IMPUESTOS**|Valor relativo de similitud para este documento en su relación con todos los demás documentos similares.<br /><br /> El valor es un valor fraccionario decimal en el intervalo de [0.0, 1.0] donde una puntuación superior representa una coincidencia más próxima y 1.0 es una puntuación perfecta.|  
+|**matched_document_key**|**\** _<br /><br /> Esta clave coincide con el tipo de la clave única de la tabla de origen.|Valor de clave única de extracción semántica y de texto completo del documento o la fila que resultaron ser similares al documento especificado en la consulta.|  
+|_ *puntuación**|**REAL**|Valor relativo de similitud para este documento en su relación con todos los demás documentos similares.<br /><br /> El valor es un valor fraccionario decimal en el intervalo de [0.0, 1.0] donde una puntuación superior representa una coincidencia más próxima y 1.0 es una puntuación perfecta.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Para obtener más información, vea [buscar documentos similares y relacionados con la búsqueda semántica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  

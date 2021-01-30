@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_pkeys
 - sp_pkeys_TSQL
@@ -18,12 +18,12 @@ ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a55bcdd0df9f288daa22c5f4f1454b14305ec6a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bfb9d942ae25c8bf690e1ed9740f56c021cf413d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478946"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190026"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +68,7 @@ sp_pkeys [ @table_name = ] 'name'
 |KEY_SEQ|**smallint**|Número de secuencia de la columna en una clave principal con varias columnas.|  
 |PK_NAME|**sysname**|Identificador de la clave principal. Devuelve NULL si no es aplicable al origen de datos.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_pkeys devuelve información acerca de las columnas definidas explícitamente con una restricción PRIMARY KEY. Debido a que no todos los sistemas aceptan claves principales con nombre explícito, el implementador de puerta de enlace determina qué constituye una clave principal. Observe que el término clave principal hace referencia a la clave principal lógica de una tabla. Se espera que cada clave enumerada como clave principal lógica tenga un índice único definido en la misma. Este índice único también se devuelve en sp_statistics.  
   
  El procedimiento almacenado sp_pkeys es equivalente a SQLPrimaryKeys en ODBC. Los resultados devueltos se ordenan por TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME y KEY_SEQ.  

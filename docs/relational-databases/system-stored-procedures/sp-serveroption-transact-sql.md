@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_serveroption_TSQL
 - sp_serveroption
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba6045caf5d95aed6d11c0844c16afd93365368f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ec6dfda1d4e12b190999b82e16c27b5127d5af6d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547399"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190773"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +43,11 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server = ] 'server'` Es el nombre del servidor para el que se va a establecer la opción. *server* es de tipo **sysname**y no tiene ningún valor predeterminado.  
+`[ @server = ] 'server'` Es el nombre del servidor para el que se va a establecer la opción. *server* es de tipo **sysname** y no tiene ningún valor predeterminado.  
   
 `[ @optname = ] 'option_name'` Es la opción que se va a establecer para el servidor especificado. *option_name* es de tipo **VARCHAR (** 35 **)** y no tiene ningún valor predeterminado. *option_name* puede ser cualquiera de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**compatible con la intercalación**|Afecta a la ejecución de consultas distribuidas en los servidores vinculados. Si esta opción se establece en **true**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supone que todos los caracteres del servidor vinculado son compatibles con el servidor local, con respecto al Juego de caracteres y a la secuencia de intercalación (o criterio de ordenación). Esta opción habilita a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para enviar comparaciones en columnas de caracteres al proveedor. Si no se establece esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre evalúa localmente las comparaciones en las columnas de caracteres.<br /><br /> Esta opción solo se debe establecer si se tiene la certeza de que el origen de datos correspondiente al servidor vinculado tiene el mismo juego de caracteres y criterio de ordenación que el servidor local.|  
 |**nombre de intercalación**|Especifica el nombre de la intercalación utilizada por el origen de datos remoto si **usar intercalación remota** es **true** y el origen de datos no es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen de datos. El nombre debe pertenecer a una de las intercalaciones que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]admite.<br /><br /> Utilice esta opción cuando se obtenga acceso a un origen de datos OLE DB que no sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero que tenga una intercalación que coincida con una de las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> El servidor vinculado debe permitir el uso de una única intercalación para todas las columnas de ese servidor. No establezca esta opción si el servidor vinculado admite varias intercalaciones dentro de un único origen de datos o si no se puede determinar si la intercalación del servidor vinculado coincide con alguna de las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

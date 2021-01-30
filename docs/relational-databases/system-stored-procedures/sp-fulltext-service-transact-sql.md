@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_fulltext_service
 - sp_fulltext_service_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f29ad11ca5b1df94e445466a5402637a2abab023
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6fbbbe3451994687542f755b4d48953c7dbbe2e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546125"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187327"
 ---
 # <a name="sp_fulltext_service-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,12 +43,12 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @action = ] 'action'` Es la propiedad que se va a cambiar o restablecer. *Action* es de tipo **nvarchar (100) y** no tiene ningún valor predeterminado. Para obtener una lista de las propiedades de*c*, sus descripciones y los valores que se pueden establecer, vea la tabla bajo el argumento *Value* . Este argumento devuelve las propiedades siguientes: tipo de datos, valor actual, valor mínimo o máximo y estado de degradación, si procede.  
+`[ @action = ] 'action'` Es la propiedad que se va a cambiar o restablecer. *Action* es de tipo **nvarchar (100) y** no tiene ningún valor predeterminado. Para obtener una lista de las propiedades de *c*, sus descripciones y los valores que se pueden establecer, vea la tabla bajo el argumento *Value* . Este argumento devuelve las propiedades siguientes: tipo de datos, valor actual, valor mínimo o máximo y estado de degradación, si procede.  
   
-`[ @value = ] value` Es el valor de la propiedad especificada. el *valor* es **sql_variant**y su valor predeterminado es NULL. Si @value es null, **sp_fulltext_service** devuelve la configuración actual. En la siguiente tabla se muestran las propiedades de acción, sus descripciones y los valores que se pueden establecer.  
+`[ @value = ] value` Es el valor de la propiedad especificada. el *valor* es **sql_variant** y su valor predeterminado es NULL. Si @value es null, **sp_fulltext_service** devuelve la configuración actual. En la siguiente tabla se muestran las propiedades de acción, sus descripciones y los valores que se pueden establecer.  
   
 > [!NOTE]  
->  Las siguientes acciones se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **clean_up**, **connect_timeout**, **data_timeout**y **resource_usage**. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que las usan actualmente.  
+>  Las siguientes acciones se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **clean_up**, **connect_timeout**, **data_timeout** y **resource_usage**. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que las usan actualmente.  
   
 |Acción|Tipo de datos|Descripción|  
 |------------|---------------|-----------------|  
@@ -59,7 +59,7 @@ sp_fulltext_service [ [@action=] 'action'
 |**master_merge_dop**|**int**|Especifica el número de subprocesos que utilizará el proceso de mezcla maestra. Este valor no debe exceder el número de CPU o núcleos de CPU disponibles.<br /><br /> Cuando no se especifica este argumento, el servicio utiliza menos de 4, o el número de CPU o núcleos de CPU disponibles.|  
 |**pause_indexing**|**int**|Especifica si se debe pausar la indización de texto completo, en caso de que se esté ejecutando actualmente, o si se debe reanudar, si está en pausa actualmente.<br /><br /> 0 = Reanuda las actividades de indización de texto completo para la instancia del servidor.<br /><br /> 1 = Pausa las actividades de indización de texto completo para la instancia del servidor.|  
 |**resource_usage**|**int**|No tiene ninguna función en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y se omite.|  
-|**update_languages**|NULL|Actualiza la lista de idiomas y filtros registrados con búsqueda de texto completo. Los idiomas se especifican al configurar la indización y en las consultas de texto completo. El host de demonio de filtro utiliza filtros para extraer información de texto de los formatos de archivo correspondientes, como. docx, almacenados en tipos de datos, como **varbinary**, **varbinary (Max)**, **Image**o **XML**, para la indización de texto completo.<br /><br /> Para obtener más información, consulte [ver o cambiar los filtros registrados y separadores de palabras](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).|  
+|**update_languages**|NULL|Actualiza la lista de idiomas y filtros registrados con búsqueda de texto completo. Los idiomas se especifican al configurar la indización y en las consultas de texto completo. El host de demonio de filtro utiliza filtros para extraer información de texto de los formatos de archivo correspondientes, como. docx, almacenados en tipos de datos, como **varbinary**, **varbinary (Max)**, **Image** o **XML**, para la indización de texto completo.<br /><br /> Para obtener más información, consulte [ver o cambiar los filtros registrados y separadores de palabras](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).|  
 |**upgrade_option**|**int**|Controla cómo se migran los índices de texto completo cuando se actualiza una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a una versión posterior. Esta propiedad se aplica a la actualización al adjuntar una base de datos, restaurar una copia de seguridad de base de datos, restaurar una copia de seguridad de archivo o copiar la base de datos mediante el Asistente para copiar bases de datos.<br /><br /> Uno de los valores siguientes:<br /><br /> 0 = Los catálogos de texto completo se vuelven a generar con los separadores de palabras nuevos y mejorados. La regeneración de los índices puede llevar cierto tiempo y, después de la actualización, podría ser necesaria una cantidad significativa de CPU y de memoria.<br /><br /> 1 = Los catálogos de texto completo se restablecen. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Los archivos de catálogo de texto completo se quitan, pero los metadatos de los catálogos de texto completo y los índices de texto completo se conservan. Después de actualizarse, todos los índices de texto completo quedan deshabilitados para el seguimiento de cambios y los rastreos no se inician de forma automática. El catálogo permanecerá vacío hasta que se emita manualmente un rellenado completo después de que se complete la actualización.<br /><br /> 2 = Se importan los catálogos de texto completo. Normalmente, el proceso de importación es significativamente más rápido que el de regeneración. Por ejemplo, si se usa solo una CPU, importar es aproximadamente 10 veces más rápido que volver a generar. Sin embargo, un catálogo de texto completo importado no usa los separadores de palabras nuevos y mejorados, por lo que es posible que, al final, le interese volver a generar los catálogos de texto completo.<br /><br /> Nota: la recompilación se puede ejecutar en modo de varios subprocesos y, si hay más de 10 CPU disponibles, la regeneración puede ejecutarse más rápido que la importación si se permite que la recompilación utilice todas las CPU.<br /><br /> Si un catálogo de texto completo no está disponible, se vuelven a generar los índices de texto completo asociados. Esta opción solo está disponible para bases de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> Para obtener información sobre cómo elegir una opción de actualización de texto completo, vea[Actualizar la búsqueda de texto completo](../../relational-databases/search/upgrade-full-text-search.md).<br /><br /> Nota: para establecer esta propiedad en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , utilice la propiedad **opción de actualización de texto completo** . Para obtener más información, vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).|  
 |**verify_signature**|**int**|Indica si el motor de texto completo carga únicamente binarios firmados. De forma predeterminada, solo se cargan binarios con firma de confianza.<br /><br /> 1 = Comprueba que solo se cargan binarios firmados de confianza (opción predeterminada).<br /><br /> 0 = No comprueba si los binarios están firmados.|  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmessage_TSQL
 - sp_dropmessage
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb4480908dc508fb82e591b2a9dbab448f951961
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 41971224ec830b1fbc17fdc8f754d7ae99e8731e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536530"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197633"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @msgnum = ] message_number` Es el número de mensaje que se va a quitar. *message_number* debe ser un mensaje definido por el usuario con un número de mensaje superior a 50000. *message_number* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @msgnum = ] message_number` Es el número de mensaje que se va a quitar. *message_number* debe ser un mensaje definido por el usuario con un número de mensaje superior a 50000. *message_number* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @lang = ] 'language'` Es el idioma del mensaje que se va a quitar. Si se especifica **All** , se quitan todas las versiones de idioma de *message_number* . *Language* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @lang = ] 'language'` Es el idioma del mensaje que se va a quitar. Si se especifica **All** , se quitan todas las versiones de idioma de *message_number* . *Language* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

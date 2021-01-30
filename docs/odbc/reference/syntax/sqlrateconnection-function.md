@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLRateConnection function [ODBC]
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cc6b217e8d9e06c4ab011d15cfe016dfefc91d76
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 40aec3459e43d2684bd80f0ced55171314551d92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487126"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192547"
 ---
 # <a name="sqlrateconnection-function"></a>Función SQLRateConnection
 **Conformidad**  
@@ -53,7 +53,7 @@ SQLRETURN  SQLRateConnection(
  Entradas Si *fRequiredTransactionEnlistment* es true, *transId* representa la transacción DTC a la que se dará de alta la solicitud. Si *fRequiredTransactionEnlistment* es false, *transId* se omitirá.  
   
  *pRating*  
- Genere clasificación de reutilización de *hCandidateConnection*para *hRequest*. Esta clasificación estará entre 0 y 100 (inclusive).  
+ Genere clasificación de reutilización de *hCandidateConnection* para *hRequest*. Esta clasificación estará entre 0 y 100 (inclusive).  
   
 ## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -64,7 +64,7 @@ SQLRETURN  SQLRateConnection(
 ## <a name="remarks"></a>Observaciones  
  **SQLRateConnection** genera una puntuación entre 0 y 100 (inclusive) que indica el grado de coincidencia de una conexión existente con la solicitud.  
   
-|Score|Significado (cuando se devuelve SQL_SUCCESS)|  
+|Puntuación|Significado (cuando se devuelve SQL_SUCCESS)|  
 |-----------|-----------------------------------------------|  
 |0|*hCandidateConnection* no se debe reutilizar para *hRequest*.|  
 |Cualquier valor entre 1 y 98 (inclusivo)|Cuanto mayor sea la puntuación, más cerca de *hCandidateConnection* coincidirá con *hRequest*.|  
@@ -84,7 +84,7 @@ SQLRETURN  SQLRateConnection(
   
  Incluya sqlspi. h para el desarrollo del controlador ODBC.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Agrupación de conexiones compatible con controladores](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

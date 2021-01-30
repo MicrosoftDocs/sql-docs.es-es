@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - numeric data type [ODBC], literals
 - conversions with numeric literals [ODBC]
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e3d9a931a960ce1bd404b6616b4a6e4f0d37c4a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b015a60e376e47a4c3c931d4739a884db23fc98b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424957"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187135"
 ---
 # <a name="rules-for-conversions"></a>Reglas para conversiones
 Las reglas de esta sección se aplican a las conversiones que implican literales numéricos. Para los fines de estas reglas, se definen los siguientes términos:  
   
--   *Asignación de almacenamiento:* Al enviar datos a una columna de tabla en una base de datos. Esto sucede durante las llamadas a **SQLExecute**, **SQLExecDirect**y **SQLSetPos**. Durante la asignación del almacén, "destino" hace referencia a una columna de base de datos y "origen" hace referencia a los datos de los búferes de la aplicación.  
+-   *Asignación de almacenamiento:* Al enviar datos a una columna de tabla en una base de datos. Esto sucede durante las llamadas a **SQLExecute**, **SQLExecDirect** y **SQLSetPos**. Durante la asignación del almacén, "destino" hace referencia a una columna de base de datos y "origen" hace referencia a los datos de los búferes de la aplicación.  
   
--   *Asignación de recuperación:* Al recuperar datos de la base de datos en búferes de la aplicación. Esto sucede durante las llamadas a **SQLFetch**, **SQLGetData**, **SQLFetchScroll**y **SQLSetPos**. Durante la asignación de recuperación, "destino" hace referencia a los búferes de la aplicación y "origen" hace referencia a la columna de la base de datos.  
+-   *Asignación de recuperación:* Al recuperar datos de la base de datos en búferes de la aplicación. Esto sucede durante las llamadas a **SQLFetch**, **SQLGetData**, **SQLFetchScroll** y **SQLSetPos**. Durante la asignación de recuperación, "destino" hace referencia a los búferes de la aplicación y "origen" hace referencia a la columna de la base de datos.  
   
 -   *CS:* Valor del origen del carácter.  
   
@@ -47,7 +47,7 @@ Las reglas de esta sección se aplican a las conversiones que implican literales
 ## <a name="character-source-to-numeric-target"></a>Origen de caracteres al destino numérico  
  A continuación se muestran las reglas para convertir de un origen de caracteres (CS) a un destino numérico (NT):  
   
-1.  Reemplace CS por el valor obtenido quitando los espacios iniciales o finales en CS. Si CS no es un *literal numérico*válido, se devuelve SQLSTATE 22018 (valor de carácter no válido para la especificación de conversión).  
+1.  Reemplace CS por el valor obtenido quitando los espacios iniciales o finales en CS. Si CS no es un *literal numérico* válido, se devuelve SQLSTATE 22018 (valor de carácter no válido para la especificación de conversión).  
   
 2.  Reemplace CS por el valor obtenido quitando los ceros a la izquierda antes del separador decimal, los ceros a la derecha después del separador decimal o ambos.  
   

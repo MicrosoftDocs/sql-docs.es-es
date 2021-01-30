@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLGetTranslator
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d30268c846af4e95298d00edcd13def97c20c77d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ec960312c652c625a6fb27388bd9c21a09f3206
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421229"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189732"
 ---
 # <a name="sqlgettranslator-function"></a>Función SQLGetTranslator
 **Conformidad**  
@@ -78,7 +78,7 @@ BOOL SQLGetTranslator(
  La función devuelve TRUE si es correcto, FALSE si se produce un error o si el usuario cancela el cuadro de diálogo.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLGetTranslator** devuelve false, se puede obtener un valor de * \* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLGetTranslator** devuelve false, se puede obtener un valor de *\* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de *\* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
@@ -91,13 +91,13 @@ BOOL SQLGetTranslator(
 |ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El instalador no pudo realizar la función debido a una falta de memoria.|  
   
 ## <a name="comments"></a>Comentarios  
- Si *hwndParent* es null o si *lpszName*, *lpszPath*o *pvOption* es un puntero nulo, **SQLGetTranslator** devuelve false. De lo contrario, muestra la lista de traductores instalados en el siguiente cuadro de diálogo.  
+ Si *hwndParent* es null o si *lpszName*, *lpszPath* o *pvOption* es un puntero nulo, **SQLGetTranslator** devuelve false. De lo contrario, muestra la lista de traductores instalados en el siguiente cuadro de diálogo.  
   
  ![Cuadro de diálogo Seleccionar traductor](../../../odbc/reference/syntax/media/ch23j.gif "CH23J")  
   
  Si *lpszName* contiene un nombre de traductor válido, se selecciona. De lo contrario, \<No Translator> se selecciona.  
   
- Si el usuario elige \<No Translator> , no se toca el contenido de *lpszName*, *lpszPath*y *pvOption* . **SQLGetTranslator** establece *pcbNameOut* y *PCBPATHOUT* en 0 y devuelve true.  
+ Si el usuario elige \<No Translator> , no se toca el contenido de *lpszName*, *lpszPath* y *pvOption* . **SQLGetTranslator** establece *pcbNameOut* y *PCBPATHOUT* en 0 y devuelve true.  
   
  Si el usuario elige un traductor, **SQLGetTranslator** llama a **ConfigTranslator** en el archivo dll de instalación del traductor. Si **ConfigTranslator** devuelve false, **SQLGetTranslator** vuelve a su cuadro de diálogo. Si **ConfigTranslator** devuelve true, **SQLGetTranslator** devuelve true, junto con el nombre de traductor, la ruta de acceso y la opción de traducción seleccionados.  
   

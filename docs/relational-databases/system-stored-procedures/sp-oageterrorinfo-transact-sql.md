@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OAGetErrorInfo_TSQL
 - sp_OAGetErrorInfo
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89bb7dff2131d8463e26754148aa6e8032503fd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d55126c7feb362b910e83034a66e4d691f1be84c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546024"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191982"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,16 +47,16 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  Es el token de objeto de un objeto OLE creado previamente mediante **sp_OACreate** o es NULL. Si se especifica *objecttoken* , se devuelve información de error para ese objeto. Si se especifica NULL, se devuelve la información de error de todo el lote.  
   
- _source_ **salida** de origen  
- Es el origen de la información de error. Si se especifica, debe ser una variable de tipo **Char**, **nchar**, **VARCHAR**o **nvarchar** local. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
+  **salida** de origen  
+ Es el origen de la información de error. Si se especifica, debe ser una variable de tipo **Char**, **nchar**, **VARCHAR** o **nvarchar** local. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
   
- _description_ **salida** de Descripción  
- Es la descripción del error. Si se especifica, debe ser una variable de tipo **Char**, **nchar**, **VARCHAR**o **nvarchar** local. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
+  **salida** de Descripción  
+ Es la descripción del error. Si se especifica, debe ser una variable de tipo **Char**, **nchar**, **VARCHAR** o **nvarchar** local. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
   
- _helpfile_ **salida** de HelpFile  
- Es el archivo de ayuda del objeto OLE. Si se especifica, debe ser una variable de tipo **Char**, **nchar**, **VARCHAR**o **nvarchar** local. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
+  **salida** de HelpFile  
+ Es el archivo de ayuda del objeto OLE. Si se especifica, debe ser una variable de tipo **Char**, **nchar**, **VARCHAR** o **nvarchar** local. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
   
- _helpid_ **salida** de helpID  
+  **salida** de helpID  
  Es el identificador de contexto del archivo de ayuda. Si se especifica, debe ser una variable local **int** .  
   
 > [!NOTE]  
@@ -73,7 +73,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |Nombres de columna|Tipo de datos|Descripción|  
 |------------------|---------------|-----------------|  
 |**Error**|**binario (4)**|Representación binaria del número de error.|  
-|**Source**|**nvarchar (NN)**|Origen del error.|  
+|**Origen**|**nvarchar (NN)**|Origen del error.|  
 |**Descripción**|**nvarchar (NN)**|Descripción del error.|  
 |**HelpFile**|**nvarchar (NN)**|Archivo de ayuda del origen.|  
 |**HelpID**|**int**|Id. del contexto de Ayuda del archivo de origen correspondiente.|  

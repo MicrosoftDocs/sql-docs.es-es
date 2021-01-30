@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_table_validation_TSQL
 - sp_table_validation
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 88ee13025153fff3018fadfa8d64becf7a534303
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 255c30ea6b3144e781007bff3ae748c8e5a960ce
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545939"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189261"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -46,13 +46,13 @@ sp_table_validation [ @table = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table = ] 'table'` Es el nombre de la tabla. *TABLE* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @table = ] 'table'` Es el nombre de la tabla. *TABLE* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @expected_rowcount = ] expected_rowcountOUTPUT` Especifica si se debe devolver el número esperado de filas de la tabla. *expected_rowcount* es de **tipo int**y su valor predeterminado es NULL. Si es NULL, el recuento de filas real se devuelve como parámetro de salida. Si se proporciona un valor, dicho valor se compara con el recuento de filas real para identificar posibles diferencias.  
+`[ @expected_rowcount = ] expected_rowcountOUTPUT` Especifica si se debe devolver el número esperado de filas de la tabla. *expected_rowcount* es de **tipo int** y su valor predeterminado es NULL. Si es NULL, el recuento de filas real se devuelve como parámetro de salida. Si se proporciona un valor, dicho valor se compara con el recuento de filas real para identificar posibles diferencias.  
   
-`[ @expected_checksum = ] expected_checksumOUTPUT` Especifica si se debe devolver la suma de comprobación esperada para la tabla. *expected_checksum* es **numérica**y su valor predeterminado es NULL. Si es NULL, la suma de comprobación real se devuelve como parámetro de salida. Si se proporciona un valor, dicho valor se compara con la suma de comprobación real para identificar posibles diferencias.  
+`[ @expected_checksum = ] expected_checksumOUTPUT` Especifica si se debe devolver la suma de comprobación esperada para la tabla. *expected_checksum* es **numérica** y su valor predeterminado es NULL. Si es NULL, la suma de comprobación real se devuelve como parámetro de salida. Si se proporciona un valor, dicho valor se compara con la suma de comprobación real para identificar posibles diferencias.  
   
-`[ @rowcount_only = ] type_of_check_requested` Especifica qué tipo de suma de comprobación o recuento de filas se va a realizar. *type_of_check_requested* es de **smallint**y su valor predeterminado es **1**.  
+`[ @rowcount_only = ] type_of_check_requested` Especifica qué tipo de suma de comprobación o recuento de filas se va a realizar. *type_of_check_requested* es de **smallint** y su valor predeterminado es **1**.  
   
  Si es **0**, realice un recuento de filas y una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suma de comprobación compatible con 7,0.  
   
@@ -60,19 +60,19 @@ sp_table_validation [ @table = ] 'table'
   
  Si es **2**, realice un recuento de filas y una suma de comprobación binaria.  
   
-`[ @owner = ] 'owner'` Es el nombre del propietario de la tabla. *Owner* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @owner = ] 'owner'` Es el nombre del propietario de la tabla. *Owner* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @full_or_fast = ] full_or_fast` Es el método utilizado para calcular el recuento de filas. *full_or_fast* es de **tinyint**, su valor predeterminado es **2**y puede tener uno de estos valores.  
+`[ @full_or_fast = ] full_or_fast` Es el método utilizado para calcular el recuento de filas. *full_or_fast* es de **tinyint**, su valor predeterminado es **2** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Realiza un recuento completo mediante COUNT(*).|  
 |**1**|Realiza un recuento rápido de **sysindexes. Rows**. El recuento de filas en **sysindexes** es mucho más rápido que contar las filas de la tabla real. Sin embargo, dado que **sysindexes** se actualiza de forma diferida, es posible que el recuento de filas no sea preciso.|  
 |**2** (predeterminado)|Realiza un recuento rápido condicional intentando primero el método rápido. Si el método rápido muestra diferencias, se utiliza el método completo. Si *expected_rowcount* es NULL y se usa el procedimiento almacenado para obtener el valor, siempre se usa un recuento completo (*).|  
   
-`[ @shutdown_agent = ] shutdown_agent` Si el Agente de distribución se está ejecutando **sp_table_validation**, especifica si el agente de distribución debe cerrarse inmediatamente al completarse la validación. *shutdown_agent* es de **bit**y su valor predeterminado es **0**. Si es **0**, el agente de replicación no se cierra. Si es **1**, se genera el error 20578 y se indica al agente de replicación que se cierre. Este parámetro se omite cuando el usuario ejecuta **sp_table_validation** directamente.  
+`[ @shutdown_agent = ] shutdown_agent` Si el Agente de distribución se está ejecutando **sp_table_validation**, especifica si el agente de distribución debe cerrarse inmediatamente al completarse la validación. *shutdown_agent* es de **bit** y su valor predeterminado es **0**. Si es **0**, el agente de replicación no se cierra. Si es **1**, se genera el error 20578 y se indica al agente de replicación que se cierre. Este parámetro se omite cuando el usuario ejecuta **sp_table_validation** directamente.  
   
-`[ @table_name = ] table_name` Es el nombre de la tabla de la vista utilizada para los mensajes de salida. *TABLE_NAME* es de **tipo sysname y su**valor predeterminado es ** \@ TABLE**.  
+`[ @table_name = ] table_name` Es el nombre de la tabla de la vista utilizada para los mensajes de salida. *TABLE_NAME* es de **tipo sysname y su** valor predeterminado es **\@ TABLE**.  
   
 `[ @column_list = ] 'column_list'` Es la lista de columnas que se deben utilizar en la función de suma de comprobación. *column_list* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL. Habilita la validación de artículos de mezcla para especificar una lista de columnas que excluya las columnas calculadas y de marca de tiempo.  
   

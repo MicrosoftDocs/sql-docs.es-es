@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLDescribeCol
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4007d5edbd400e65ea92d8c5dcab947a53779ec4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ceffc2b0db32ccce75c566c89ac3d69b535abe29
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491330"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192076"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol (función)
 **Conformidad**  
@@ -71,9 +71,9 @@ SQLRETURN SQLDescribeCol(
  *DataTypePtr*  
  Genere Puntero a un búfer en el que se va a devolver el tipo de datos SQL de la columna. Este valor se lee desde el campo SQL_DESC_CONCISE_TYPE de IRD. Este será uno de los valores de los [tipos de datos de SQL](../../../odbc/reference/appendixes/sql-data-types.md)o un tipo de datos de SQL específico del controlador. Si no se puede determinar el tipo de datos, el controlador devuelve SQL_UNKNOWN_TYPE.  
   
- En ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME o SQL_TYPE_TIMESTAMP se devuelve en * \* DataTypePtr* para los datos de fecha, hora o marca de tiempo, respectivamente, en ODBC 2.* *se devuelve x, SQL_DATE, SQL_TIME o SQL_TIMESTAMP. El administrador de controladores realiza las asignaciones necesarias cuando se trata de un ODBC 2. la aplicación *x* está trabajando con un ODBC 3. controlador *x* o cuando se trata de un ODBC 3. la aplicación *x* está trabajando con ODBC 2. controlador *x* .  
+ En ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME o SQL_TYPE_TIMESTAMP se devuelve en *\* DataTypePtr* para los datos de fecha, hora o marca de tiempo, respectivamente, en ODBC 2.** se devuelve x, SQL_DATE, SQL_TIME o SQL_TIMESTAMP. El administrador de controladores realiza las asignaciones necesarias cuando se trata de un ODBC 2. la aplicación *x* está trabajando con un ODBC 3. controlador *x* o cuando se trata de un ODBC 3. la aplicación *x* está trabajando con ODBC 2. controlador *x* .  
   
- Cuando *ColumnNumber* es igual a 0 (para una columna de marcador), se devuelve SQL_BINARY en * \* DataTypePtr* para los marcadores de longitud variable. (Se devuelve SQL_INTEGER si los marcadores se usan en ODBC 3. aplicación *x* que trabaja con ODBC 2. controlador *x* o ODBC 2. aplicación *x* que trabaja con ODBC 3. controlador *x* ).  
+ Cuando *ColumnNumber* es igual a 0 (para una columna de marcador), se devuelve SQL_BINARY en *\* DataTypePtr* para los marcadores de longitud variable. (Se devuelve SQL_INTEGER si los marcadores se usan en ODBC 3. aplicación *x* que trabaja con ODBC 2. controlador *x* o ODBC 2. aplicación *x* que trabaja con ODBC 3. controlador *x* ).  
   
  Para obtener más información sobre estos tipos de datos, vea tipos de datos [SQL](../../../odbc/reference/appendixes/sql-data-types.md) en el Apéndice D: tipos de datos. Para obtener información acerca de los tipos de datos de SQL específicos del controlador, consulte la documentación del controlador.  
   
@@ -105,10 +105,10 @@ SQLRETURN SQLDescribeCol(
 |07005|Instrucción preparada no es una *especificación de cursor*|La instrucción asociada a *StatementHandle* no devolvió un conjunto de resultados. No había columnas para describir.|  
 |07009|Índice de descriptor no válido|(DM) el valor especificado para el argumento *ColumnNumber* era igual a 0 y la opción de instrucción SQL_ATTR_USE_BOOKMARKS era SQL_UB_OFF.<br /><br /> El valor especificado para el argumento *ColumnNumber* era mayor que el número de columnas del conjunto de resultados.|  
 |08S01|Error de vínculo de comunicación|Se produjo un error en el vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador antes de que la función finalizara el procesamiento.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer *\* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*. A continuación, se llamó de nuevo a la función en *StatementHandle*.<br /><br /> Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
-|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a **SQLDescribeCol** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) se llamó a la función antes de llamar a **SQLPrepare**, **SQLExecute**o a una función de catálogo en el identificador de instrucción.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.|  
+|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a **SQLDescribeCol** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect** o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) se llamó a la función antes de llamar a **SQLPrepare**, **SQLExecute** o a una función de catálogo en el identificador de instrucción.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
 |HY090|Longitud de búfer o cadena no válida|(DM) el valor especificado para el argumento *BufferLength* era menor que 0.|  
 |HY117|La conexión se suspendió debido a un estado de transacción desconocido. Solo se permiten las funciones de desconexión y de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -140,6 +140,6 @@ SQLRETURN SQLDescribeCol(
 |Devolver el número de columnas del conjunto de resultados|[SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |Preparar una instrucción para su ejecución|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

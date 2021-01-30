@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - changesubscription
 - sp_changesubscription
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d1dd4a0fc40cf24896de912c1254b154a5538866
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: db0e26092acb2a8cb0fc546a18c0b8f4010fa8fc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543705"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189584"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,19 +49,19 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a cambiar. *Publication*es de **tipo sysname**y no tiene ningún valor predeterminado  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a cambiar. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado  
   
-`[ @article = ] 'article'` Es el nombre del artículo que se va a cambiar. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre del artículo que se va a cambiar. *article* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *Subscriber* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *Subscriber* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @destination_db = ] 'destination_db'` Es el nombre de la base de datos de suscripciones. *destination_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @destination_db = ] 'destination_db'` Es el nombre de la base de datos de suscripciones. *destination_db* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @property = ] 'property'` Es la propiedad que se va a cambiar para la suscripción especificada. *Property* es de tipo **nvarchar (30)** y puede ser uno de los valores de la tabla.  
   
-`[ @value = ] 'value'` Es el nuevo valor de la *propiedad*especificada. el *valor* es **nvarchar (4000)** y puede ser uno de los valores de la tabla.  
+`[ @value = ] 'value'` Es el nuevo valor de la *propiedad* especificada. el *valor* es **nvarchar (4000)** y puede ser uno de los valores de la tabla.  
   
-|Propiedad|Valor|Descripción|  
+|Propiedad|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Inicio de sesión de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el agente.|  
 |**distrib_job_password**||Contraseña de la cuenta de Windows con la que se ejecuta el agente.|  
@@ -79,7 +79,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|Proveedor OLE DB|  
 |**memory_optimized**|**bit**|Indica que la suscripción admite tablas con optimización para memoria. *memory_optimized* es de **bits**, donde 1 es igual a true (la suscripción admite las tablas optimizadas en memoria).|  
   
-`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  no se debe especificar el *publicador* para un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

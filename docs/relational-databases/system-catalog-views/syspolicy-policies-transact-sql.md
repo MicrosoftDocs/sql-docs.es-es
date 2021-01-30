@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - syspolicy_policies_TSQL
 - syspolicy_policies
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e56ab498d2502bcb7130ab2406a390d8bbd1055a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8547fa15c966e6835c0b100e628217bc0281991e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419809"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192988"
 ---
 # <a name="syspolicy_policies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88419809"
 |policy_id|**int**|Identificador de la directiva.|  
 |name|**sysname**|Nombre de la directiva.|  
 |condition_id|**int**|Identificador de la condición exigida o probada por esta directiva.|  
-|root_condition_id|**int**|Sólo para uso interno.|  
+|root_condition_id|**int**|Solo para uso interno.|  
 |date_created|**datetime**|Fecha y hora cuando se creó la directiva.|  
 |execution_mode|**int**|Modo de evaluación para la directiva. Los valores posibles son:<br /><br /> 0 = A petición<br /><br /> Este modo evalúa la directiva cuando lo especifica el usuario directamente.<br /><br /> 1 = Al cambiar: impedir<br /><br /> Este modo automatizado utiliza desencadenadores DDL para evitar infracciones de las directivas.<br /><br /> 2 = Al cambiar: solo registrar<br /><br /> Este modo automatizado utiliza la notificación de eventos para evaluar una directiva cuando se produce un cambio relevante y registra las infracciones de la directiva.<br /><br /> 4 = Al programar<br /><br /> Este modo automatizado utiliza un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para evaluar una directiva periódicamente. El modo registra las infracciones de la directiva.<br /><br /> Nota: el valor 3 no es un valor posible.|  
 |policy_category|**int**|Identificador de la categoría de directivas de administración basada en directivas al que esta directiva pertenece. Es NULL si es el grupo de directivas predeterminado.|  
@@ -57,7 +57,7 @@ ms.locfileid: "88419809"
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar servidores mediante la administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Vistas de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

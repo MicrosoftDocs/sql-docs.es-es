@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_executesql
 - sp_executesql_TSQL
@@ -20,12 +20,12 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 315abb75423d2d7fa11d70ab1b2d6897b8bbc372
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 333bc510861d769a8b9dbb22272918e65982ff2a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97428084"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99188021"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +76,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve los conjuntos de resultados de todas las instrucciones SQL integradas en la cadena SQL.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  los parámetros de sp_executesql deben especificarse en el orden específico, tal y como se describe en la sección "sintaxis", anteriormente en este tema. Si los parámetros se escriben desordenados, se producirá un mensaje de error.  
   
  sp_executesql tiene el mismo comportamiento que EXECUTE en cuanto a los lotes, el ámbito de los nombres y el contexto de las bases de datos. La [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o el lote del \@ parámetro sp_executesql stmt no se compila hasta que se ejecuta la instrucción sp_executesql. El contenido de \@ stmt se compila y se ejecuta como un plan de ejecución independiente del plan de ejecución del lote que llamó a sp_executesql. El lote de sp_executesql no puede hacer referencia a las variables declaradas en el lote que llama a sp_executesql. Los cursores o las variables locales del lote de sp_executesql no son visibles para el lote que llama a sp_executesql. Los cambios en el contexto de base de datos solo se mantienen hasta el final de la instrucción sp_executesql.  

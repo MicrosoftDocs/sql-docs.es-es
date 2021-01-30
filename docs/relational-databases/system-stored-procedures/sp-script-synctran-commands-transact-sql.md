@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_script_synctran_commands
 - sp_script_synctran_commands_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f596a02346748cedcc6b99ada4e0a6122b184673
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9d52c3c63009d6dd5fdc33fca3f9c2c1598e96e8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541606"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189978"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,9 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a incluir en el script. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a incluir en el script. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre del artículo que se va a incluir en el script. *article* es de **tipo sysname y su**valor predeterminado es **All**, que especifica que todos los artículos se incluyen en el script.  
+`[ @article = ] 'article'` Es el nombre del artículo que se va a incluir en el script. *article* es de **tipo sysname y su** valor predeterminado es **All**, que especifica que todos los artículos se incluyen en el script.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

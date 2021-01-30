@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - FileTableRootPath_TSQL
 - FileTableRootPath
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: f08273adcf261ecfdafaa70793d50b31360f7e40
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: b21eb896c32b2afdfb56b1318406ee96f93546df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093879"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196131"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
 |**1**|Devuelve el nombre del servidor sin la conversión, por ejemplo:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|Devuelve la ruta de acceso al servidor completa, por ejemplo:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **nvarchar(4000)**  
   
  Cuando la base de datos pertenece a un grupo de disponibilidad de Always On, la función **FileTableRootPath** devuelve el nombre de la red virtual (VNN) en lugar del nombre del equipo.  

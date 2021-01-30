@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_defaultdb_TSQL
 - sp_defaultdb
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7289868e32e26c6902f00d0c7e542b599b6978fd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4c644fed26ea2ce80f0f827eb7b3b0f6b000d66
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549909"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196077"
 ---
 # <a name="sp_defaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'` Es el nombre de inicio de sesión. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. el *Inicio de sesión* puede ser un inicio de sesión existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un usuario o grupo de Windows. Si un inicio de sesión del usuario o grupo de Windows no existe en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se agrega automáticamente.  
+`[ @loginame = ] 'login'` Es el nombre de inicio de sesión. *login* es de **tipo sysname** y no tiene ningún valor predeterminado. el *Inicio de sesión* puede ser un inicio de sesión existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un usuario o grupo de Windows. Si un inicio de sesión del usuario o grupo de Windows no existe en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se agrega automáticamente.  
   
-`[ @defdb = ] 'database'` Es el nombre de la nueva base de datos predeterminada. *Database* es de **tipo sysname**y no tiene ningún valor predeterminado. la *base de datos* ya debe existir.  
+`[ @defdb = ] 'database'` Es el nombre de la nueva base de datos predeterminada. *Database* es de **tipo sysname** y no tiene ningún valor predeterminado. la *base de datos* ya debe existir.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

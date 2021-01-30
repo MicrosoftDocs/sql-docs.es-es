@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_operator_TSQL
 - sp_update_operator
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4dbc3c382ecd1c58e9bd76624700a1c62804a82c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2d664bbfc012ee262528397f735525138e91e82b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545916"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187301"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,13 +55,13 @@ sp_update_operator
   
 ## <a name="arguments"></a>Argumentos  
  [ @name =] '*nombre*'  
- El nombre del operador que se va a modificar. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ El nombre del operador que se va a modificar. *Name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
  [ @new_name =] '*new_name*'  
- Nuevo nombre del operador. El nombre debe ser único. *new_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+ Nuevo nombre del operador. El nombre debe ser único. *new_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
  [ @enabled =] *habilitado*  
- Número que indica el estado actual del operador (**1** si está habilitado actualmente; **0** si no lo está). *Enabled* es de **tinyint**y su valor predeterminado es NULL. Si no está habilitado, un operador no recibirá notificaciones de alertas.  
+ Número que indica el estado actual del operador (**1** si está habilitado actualmente; **0** si no lo está). *Enabled* es de **tinyint** y su valor predeterminado es NULL. Si no está habilitado, un operador no recibirá notificaciones de alertas.  
   
  [ @email_address =] '*EMAIL_ADDRESS*'  
  Dirección de correo electrónico del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *EMAIL_ADDRESS* es de tipo **nvarchar (100)** y su valor predeterminado es NULL.  
@@ -70,27 +70,27 @@ sp_update_operator
  Dirección del buscapersonas del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *pager_number* es de tipo **nvarchar (100)** y su valor predeterminado es NULL.  
   
  [ @weekday_pager_start_time =] *weekday_pager_start_time*  
- Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas a este operador, de lunes a viernes. *weekday_pager_start_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
+ Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas a este operador, de lunes a viernes. *weekday_pager_start_time* es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
  [ @weekday_pager_end_time =] *weekday_pager_end_time*  
- Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas al operador especificado, de lunes a viernes. *weekday_pager_end_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
+ Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas al operador especificado, de lunes a viernes. *weekday_pager_end_time* es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
  [ @saturday_pager_start_time =] *saturday_pager_start_time*  
- Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas los sábados al operador especificado. *saturday_pager_start_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
+ Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas los sábados al operador especificado. *saturday_pager_start_time* es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
  [ @saturday_pager_end_time =] *saturday_pager_end_time*  
- Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas los sábados al operador especificado. *saturday_pager_end_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
+ Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas los sábados al operador especificado. *saturday_pager_end_time* es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
  [ @sunday_pager_start_time =] *sunday_pager_start_time*  
- Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas los domingos al operador especificado. *sunday_pager_start_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
+ Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas los domingos al operador especificado. *sunday_pager_start_time* es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
  [ @sunday_pager_end_time =] *sunday_pager_end_time*  
- Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas los domingos al operador especificado. *sunday_pager_end_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
+ Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas los domingos al operador especificado. *sunday_pager_end_time* es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
  [ @pager_days =] *pager_days*  
- Especifica los días en que el operador está disponible para recibir mensajes por buscapersonas (de acuerdo con las horas inicial y final especificadas). *pager_days*es de **tinyint**, su valor predeterminado es NULL y debe ser un valor comprendido entre **0** y **127**. *pager_days* se calcula agregando los valores individuales de los días necesarios. Por ejemplo, de lunes a viernes, **2** + **4** + **8** + **16** + **32**  =  **64**.  
+ Especifica los días en que el operador está disponible para recibir mensajes por buscapersonas (de acuerdo con las horas inicial y final especificadas). *pager_days* es de **tinyint**, su valor predeterminado es NULL y debe ser un valor comprendido entre **0** y **127**. *pager_days* se calcula agregando los valores individuales de los días necesarios. Por ejemplo, de lunes a viernes, **2** + **4** + **8** + **16** + **32**  =  **64**.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -101,10 +101,10 @@ sp_update_operator
 |**64**|Sábado|  
   
  [ @netsend_address =] '*netsend_address*'  
- La dirección de red del operador al que se envía el mensaje de red. *netsend_address*es de tipo **nvarchar (100)** y su valor predeterminado es NULL.  
+ La dirección de red del operador al que se envía el mensaje de red. *netsend_address* es de tipo **nvarchar (100)** y su valor predeterminado es NULL.  
   
  [ @category_name =] '*categoría*'  
- El nombre de la categoría de esta alerta. *Category* es de **tipo sysname y su**valor predeterminado es NULL.  
+ El nombre de la categoría de esta alerta. *Category* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

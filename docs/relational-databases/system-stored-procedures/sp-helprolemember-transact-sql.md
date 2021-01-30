@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helprolemember_TSQL
 - sp_helprolemember
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bbfec9641e543b4774a8d8d6f7a288bd2fe23c8a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 223d0fe0a72ed72f312e1aba5402ee9c14e9db63
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541723"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195091"
 ---
 # <a name="sp_helprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] ' role '` Es el nombre de un rol de la base de datos actual. *role* es de **tipo sysname y su**valor predeterminado es NULL. el *rol* debe existir en la base de datos actual. Si no se especifica *role* , se devuelven todos los roles que contienen al menos un miembro de la base de datos actual.  
+`[ @rolename = ] ' role '` Es el nombre de un rol de la base de datos actual. *role* es de **tipo sysname y su** valor predeterminado es NULL. el *rol* debe existir en la base de datos actual. Si no se especifica *role* , se devuelven todos los roles que contienen al menos un miembro de la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLGetDiagField
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92043f5deb505d60ebe168a9c219c4d37a304ed5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 733933691297f22934fe59e0c337dfd6093ddd3b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461030"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194184"
 ---
 # <a name="sqlgetdiagfield-function"></a>Función SQLGetDiagField
 
@@ -63,7 +63,7 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_HANDLE_STMT  
   
- El identificador de SQL_HANDLE_DBC_INFO_TOKEN solo lo utiliza el administrador de controladores y el controlador. Las aplicaciones no deben usar este tipo de identificador. Para obtener más información acerca de SQL_HANDLE_DBC_INFO_TOKEN, vea [desarrollar el reconocimiento del grupo de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
+ El identificador de SQL_HANDLE_DBC_INFO_TOKEN solo lo utiliza el administrador de controladores y el controlador. Las aplicaciones no deben usar este tipo de identificador. Para obtener más información acerca de SQL_HANDLE_DBC_INFO_TOKEN, vea [desarrollar el reconocimiento de Connection-Pool en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
  *Handle*  
  Entradas Identificador de la estructura de datos de diagnóstico, del tipo indicado por *HandleType*. Si *HandleType* es SQL_HANDLE_ENV, *Handle* puede ser un identificador de entorno compartido o no compartido.  
@@ -72,7 +72,7 @@ SQLRETURN SQLGetDiagField(
  Entradas Indica el registro de estado del que la aplicación busca información. Los registros de estado se numeran a partir de 1. Si el argumento *DiagIdentifier* indica cualquier campo del encabezado Diagnostics, *RecNumber* se omite. Si no es así, debe ser mayor que 0.  
   
  *DiagIdentifier*  
- Entradas Indica el campo del diagnóstico cuyo valor se va a devolver. Para obtener más información, vea la sección sobre el argumento*DiagIdentifier* en "Comentarios".  
+ Entradas Indica el campo del diagnóstico cuyo valor se va a devolver. Para obtener más información, vea la sección sobre el argumento *DiagIdentifier* en "Comentarios".  
   
  *DiagInfoPtr*  
  Genere Puntero a un búfer en el que se va a devolver la información de diagnóstico. El tipo de datos depende del valor de *DiagIdentifier*. Si *DiagInfoPtr* es un tipo entero, las aplicaciones deben usar un búfer de SQLULEN e inicializar el valor en 0 antes de llamar a esta función, ya que algunos controladores solo pueden escribir el menor 32 bits o 16 bits de un búfer y dejar el bit de orden superior sin cambios.  
@@ -80,7 +80,7 @@ SQLRETURN SQLGetDiagField(
  Si *DiagInfoPtr* es null, *StringLengthPtr* devolverá el número total de bytes (sin incluir el carácter de terminación null para los datos de caracteres) disponible para devolver en el búfer señalado por *DiagInfoPtr*.  
   
  *BufferLength*  
- Entradas Si *DiagIdentifier* es un diagnóstico definido por ODBC y *DiagInfoPtr* apunta a una cadena de caracteres o a un búfer binario, este argumento debe ser la longitud de \* *DiagInfoPtr*. Si *DiagIdentifier* es un campo definido por ODBC y \* *DiagInfoPtr* es un entero, se omite *BufferLength* . Si el valor de * \* DiagInfoPtr* es una cadena Unicode (al llamar a **SQLGetDiagFieldW**), el argumento *BufferLength* debe ser un número par.  
+ Entradas Si *DiagIdentifier* es un diagnóstico definido por ODBC y *DiagInfoPtr* apunta a una cadena de caracteres o a un búfer binario, este argumento debe ser la longitud de \* *DiagInfoPtr*. Si *DiagIdentifier* es un campo definido por ODBC y \* *DiagInfoPtr* es un entero, se omite *BufferLength* . Si el valor de *\* DiagInfoPtr* es una cadena Unicode (al llamar a **SQLGetDiagFieldW**), el argumento *BufferLength* debe ser un número par.  
   
  Si *DiagIdentifier* es un campo definido por el controlador, la aplicación indica la naturaleza del campo en el administrador de controladores estableciendo el argumento *BufferLength* . *BufferLength* puede tener los siguientes valores:  
   
@@ -90,7 +90,7 @@ SQLRETURN SQLGetDiagField(
   
 -   Si *DiagInfoPtr* es un puntero a un valor distinto de una cadena de caracteres o una cadena binaria, *BufferLength* debe tener el valor SQL_IS_POINTER.  
   
--   Si * \* DiagInfoPtr* contiene un tipo de datos de longitud fija, *BufferLength* es SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT o SQL_IS_USMALLINT, según corresponda.  
+-   Si *\* DiagInfoPtr* contiene un tipo de datos de longitud fija, *BufferLength* es SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT o SQL_IS_USMALLINT, según corresponda.  
   
  *StringLengthPtr*  
  Genere Puntero a un búfer en el que se va a devolver el número total de bytes (sin incluir el número de bytes necesario para el carácter de terminación null) disponible para devolver en \* *DiagInfoPtr*, para los datos de caracteres. Si el número de bytes disponibles para devolver es mayor o igual que *BufferLength*, el texto de \* *DiagInfoPtr* se trunca en *BufferLength* menos la longitud de un carácter de terminación null.  
@@ -126,7 +126,7 @@ SQLRETURN SQLGetDiagField(
   
 1.  Para obtener información específica de errores o advertencias cuando una llamada de función ha devuelto SQL_ERROR o SQL_SUCCESS_WITH_INFO (o SQL_NEED_DATA para la función **SQLBrowseConnect** ).  
   
-2.  Para determinar el número de filas del origen de datos que se vieron afectados al realizar las operaciones de inserción, eliminación o actualización con una llamada a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** (desde el campo de encabezado SQL_DIAG_ROW_COUNT) o para determinar el número de filas que existen en el cursor abierto actual, si el controlador puede proporcionar esta información (desde el campo de encabezado SQL_DIAG_CURSOR_ROW_COUNT).  
+2.  Para determinar el número de filas del origen de datos que se vieron afectados al realizar las operaciones de inserción, eliminación o actualización con una llamada a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** (desde el campo de encabezado SQL_DIAG_ROW_COUNT) o para determinar el número de filas que existen en el cursor abierto actual, si el controlador puede proporcionar esta información (desde el campo de encabezado SQL_DIAG_CURSOR_ROW_COUNT).  
   
 3.  Para determinar qué función ejecutó una llamada a **SQLExecDirect** o **SQLExecute** (de los campos de encabezado SQL_DIAG_DYNAMIC_FUNCTION y SQL_DIAG_DYNAMIC_FUNCTION_CODE).  
   
@@ -163,12 +163,12 @@ SQLRETURN SQLGetDiagField(
   
 |DiagIdentifier|Tipo de valor devuelto|Devoluciones|  
 |--------------------|-----------------|-------------|  
-|SQL_DIAG_CURSOR_ROW_COUNT|SQLLEN|Este campo contiene el recuento de filas en el cursor. Su semántica depende de los tipos de información de **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES2, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 y SQL_STATIC_CURSOR_ATTRIBUTES2, que indican qué recuentos de filas están disponibles para cada tipo de cursor (en el SQL_CA2_CRC_EXACT y SQL_CA2_CRC_APPROXIMATE bits).<br /><br /> El contenido de este campo solo se define para los identificadores de instrucciones y solo después de llamar a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** . La llamada a **SQLGetDiagField** con un *DiagIdentifier* de SQL_DIAG_CURSOR_ROW_COUNT que no sea un identificador de instrucción devolverá SQL_ERROR.|  
-|SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR|Se trata de una cadena que describe la instrucción SQL ejecutada por la función subyacente. (Vea "valores de los campos de funciones dinámicas", más adelante en esta sección, para ver los valores específicos). El contenido de este campo solo se define para los identificadores de instrucciones y solo después de una llamada a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults**. La llamada a **SQLGetDiagField** con un *DiagIdentifier* de SQL_DIAG_DYNAMIC_FUNCTION que no sea un identificador de instrucción devolverá SQL_ERROR. El valor de este campo no está definido antes de llamar a **SQLExecute** o **SQLExecDirect**.|  
-|SQL_DIAG_DYNAMIC_FUNCTION_CODE|SQLINTEGER|Se trata de un código numérico que describe la instrucción SQL que ejecutó la función subyacente. (Vea "valores de los campos de funciones dinámicas", más adelante en esta sección, para obtener un valor específico). El contenido de este campo solo se define para los identificadores de instrucciones y solo después de una llamada a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults**. La llamada a **SQLGetDiagField** con un *DiagIdentifier* de SQL_DIAG_DYNAMIC_FUNCTION_CODE que no sea un identificador de instrucción devolverá SQL_ERROR. El valor de este campo no está definido antes de llamar a **SQLExecute** o **SQLExecDirect**.|  
+|SQL_DIAG_CURSOR_ROW_COUNT|SQLLEN|Este campo contiene el recuento de filas en el cursor. Su semántica depende de los tipos de información de **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES2, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 y SQL_STATIC_CURSOR_ATTRIBUTES2, que indican qué recuentos de filas están disponibles para cada tipo de cursor (en el SQL_CA2_CRC_EXACT y SQL_CA2_CRC_APPROXIMATE bits).<br /><br /> El contenido de este campo solo se define para los identificadores de instrucciones y solo después de llamar a **SQLExecute**, **SQLExecDirect** o **SQLMoreResults** . La llamada a **SQLGetDiagField** con un *DiagIdentifier* de SQL_DIAG_CURSOR_ROW_COUNT que no sea un identificador de instrucción devolverá SQL_ERROR.|  
+|SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR|Se trata de una cadena que describe la instrucción SQL ejecutada por la función subyacente. (Vea "valores de los campos de funciones dinámicas", más adelante en esta sección, para ver los valores específicos). El contenido de este campo solo se define para los identificadores de instrucciones y solo después de una llamada a **SQLExecute**, **SQLExecDirect** o **SQLMoreResults**. La llamada a **SQLGetDiagField** con un *DiagIdentifier* de SQL_DIAG_DYNAMIC_FUNCTION que no sea un identificador de instrucción devolverá SQL_ERROR. El valor de este campo no está definido antes de llamar a **SQLExecute** o **SQLExecDirect**.|  
+|SQL_DIAG_DYNAMIC_FUNCTION_CODE|SQLINTEGER|Se trata de un código numérico que describe la instrucción SQL que ejecutó la función subyacente. (Vea "valores de los campos de funciones dinámicas", más adelante en esta sección, para obtener un valor específico). El contenido de este campo solo se define para los identificadores de instrucciones y solo después de una llamada a **SQLExecute**, **SQLExecDirect** o **SQLMoreResults**. La llamada a **SQLGetDiagField** con un *DiagIdentifier* de SQL_DIAG_DYNAMIC_FUNCTION_CODE que no sea un identificador de instrucción devolverá SQL_ERROR. El valor de este campo no está definido antes de llamar a **SQLExecute** o **SQLExecDirect**.|  
 |SQL_DIAG_NUMBER|SQLINTEGER|El número de registros de estado que están disponibles para el identificador especificado.|  
 |SQL_DIAG_RETURNCODE|SQLRETURN|Código de retorno devuelto por la función. Para obtener una lista de códigos de retorno, vea [códigos de retorno](../../../odbc/reference/develop-app/return-codes-odbc.md). El controlador no tiene que implementar SQL_DIAG_RETURNCODE; siempre se implementa mediante el administrador de controladores. Si todavía no se ha llamado a ninguna función en el *identificador*, se devolverá SQL_SUCCESS para SQL_DIAG_RETURNCODE.|  
-|SQL_DIAG_ROW_COUNT|SQLLEN|El número de filas afectadas por una instrucción INSERT, delete o Update realizada por **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos**. Está definido por el controlador una vez que se ha ejecutado una *especificación de cursor* . El contenido de este campo solo se define para los identificadores de instrucción. La llamada a **SQLGetDiagField** con un *DiagIdentifier* de SQL_DIAG_ROW_COUNT que no sea un identificador de instrucción devolverá SQL_ERROR. Los datos de este campo también se devuelven en el argumento *RowCountPtr* de **SQLRowCount**. Los datos de este campo se restablecen después de cada llamada de función no de diagnóstico, mientras que el número de filas devuelto por **SQLRowCount** permanece igual hasta que la instrucción se vuelve a establecer en el estado preparado o asignado.|  
+|SQL_DIAG_ROW_COUNT|SQLLEN|El número de filas afectadas por una instrucción INSERT, delete o Update realizada por **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos**. Está definido por el controlador una vez que se ha ejecutado una *especificación de cursor* . El contenido de este campo solo se define para los identificadores de instrucción. La llamada a **SQLGetDiagField** con un *DiagIdentifier* de SQL_DIAG_ROW_COUNT que no sea un identificador de instrucción devolverá SQL_ERROR. Los datos de este campo también se devuelven en el argumento *RowCountPtr* de **SQLRowCount**. Los datos de este campo se restablecen después de cada llamada de función no de diagnóstico, mientras que el número de filas devuelto por **SQLRowCount** permanece igual hasta que la instrucción se vuelve a establecer en el estado preparado o asignado.|  
   
 ## <a name="record-fields"></a>Campos de registro  
  Los campos de registro enumerados en la tabla siguiente pueden incluirse en el argumento *DiagIdentifier* .  
@@ -219,7 +219,7 @@ SQLRETURN SQLGetDiagField(
 |*Traducción: definición*|"CREAR TRADUCCIÓN"|SQL_DIAG_CREATE_TRANSLATION|  
 |*Update-Statement-posicionada*|"CURSOR DE ACTUALIZACIÓN DINÁMICA"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*Update-Statement-buscada*|"ACTUALIZAR DÓNDE"|SQL_DIAG_UPDATE_WHERE|  
-|Desconocido|*cadena vacía*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|Unknown|*cadena vacía*|SQL_DIAG_UNKNOWN_STATEMENT|  
 
 <!--
 These two malformed table rows were fixed by educated GUESS only.
@@ -259,7 +259,7 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
 -   En el caso de todos los registros que pertenecen a filas específicas, los registros se ordenan por el valor del campo SQL_DIAG_ROW_NUMBER. Se muestran todos los errores y advertencias de la primera fila afectada y, a continuación, todos los errores y advertencias de la siguiente fila afectados, etc.  
   
 > [!NOTE]
->  El administrador de controladores ODBC 3 *. x* no ordena los registros de estado en la cola de diagnóstico si SQLSTATE 01S01 (error en la fila) lo devuelve un controlador ODBC 2 *. x* o si el controlador*ODBC 3. x devuelve* SQLSTATE 01S01 (error in row) cuando se llama a **SQLExtendedFetch** o se llama a **SQLSetPos** en un cursor que se ha colocado en **SQLExtendedFetch**.  
+>  El administrador de controladores ODBC 3 *. x* no ordena los registros de estado en la cola de diagnóstico si SQLSTATE 01S01 (error en la fila) lo devuelve un controlador ODBC 2 *. x* o si el controlador *ODBC 3. x devuelve* SQLSTATE 01S01 (error in row) cuando se llama a **SQLExtendedFetch** o se llama a **SQLSetPos** en un cursor que se ha colocado en **SQLExtendedFetch**.  
   
  Dentro de cada fila, o para todos los registros que no correspondan a una fila o para los que se desconoce el número de fila, o para todos los registros con un número de fila igual a SQL_NO_ROW_NUMBER, el primer registro de la lista se determina mediante un conjunto de reglas de ordenación. Después del primer registro, el orden de los demás registros que afectan a una fila es indefinido. Una aplicación no puede suponer que los errores preceden a las advertencias después del primer registro. Las aplicaciones deben examinar la estructura de datos de diagnóstico completa para obtener información completa sobre una llamada incorrecta a una función.  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_spaceused_TSQL
 - sp_spaceused
@@ -19,12 +19,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b887b79a2e768f3c73a683ae6f60b06fb8d16a2c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 480b61493dc38ea91679e590f3abe63bde3a48c0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466836"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189312"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -166,7 +166,7 @@ Si se omite *objName* , el valor de oneresultset es 1 y *include_total_xtp_stora
 |**xtp_used**|**VARCHAR (18)**|Tamaño total de los archivos de punto de comprobación con Estados en construcción, activo y de combinación destino, en KB. Este es el espacio en disco que se usa activamente para los datos de las tablas optimizadas para memoria. Devuelve NULL si la base de datos no tiene un grupo de archivos de memory_optimized_data con al menos un contenedor. *Esta columna solo se incluye si @include_total_xtp_storage = 1*.| 
 |**xtp_pending_truncation**|**VARCHAR (18)**|Tamaño total de los archivos de punto de comprobación con WAITING_FOR_LOG_TRUNCATION de estado, en KB. Es el espacio en disco usado para los archivos de punto de comprobación que esperan la limpieza, cuando se produce el truncamiento del registro. Devuelve NULL si la base de datos no tiene un grupo de archivos de memory_optimized_data con al menos un contenedor. Esta columna solo se incluye si `@include_total_xtp_storage=1` .|
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **database_size** suele ser mayor que la suma del espacio **reservado** sin  +  **asignar** porque incluye el tamaño de los archivos de registro, pero **reservado** y **unallocated_space** considerar solo las páginas de datos. En algunos casos con Azure Synapse Analytics, es posible que esta instrucción no sea verdadera. 
   
  Las páginas que se usan en los índices XML y los índices de texto completo se incluyen en **index_size** para ambos conjuntos de resultados. Cuando se especifica *objName* , las páginas de los índices XML y los índices de texto completo del objeto también se cuentan en el total de resultados **reservados** y **index_size** .  

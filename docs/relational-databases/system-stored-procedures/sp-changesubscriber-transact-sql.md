@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changesubscriber
 - sp_changesubscriber_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 96cce9a9d9a0b9bf74a1ac3b67d3089f4fcd23ed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3f920abb3544800d99ba108e024e200fad769f1a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543717"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189607"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,13 +57,13 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor en el que se van a cambiar las opciones. *Subscriber* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor en el que se van a cambiar las opciones. *Subscriber* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @type = ] type` Es el tipo de suscriptor. el *tipo* es **tinyint**y su valor predeterminado es NULL. **0** indica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptor. **1** especifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptor del servidor de origen de datos ODBC distinto de u otro.  
+`[ @type = ] type` Es el tipo de suscriptor. el *tipo* es **tinyint** y su valor predeterminado es NULL. **0** indica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptor. **1** especifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptor del servidor de origen de datos ODBC distinto de u otro.  
   
 `[ @login = ] 'login'` Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador de inicio de sesión de autenticación. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
   
-`[ @password = ] 'password'` Es la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contraseña de autenticación. *password* es de **tipo sysname y su**valor predeterminado es **%** . **%** indica que no hay ningún cambio en la propiedad de contraseña.  
+`[ @password = ] 'password'` Es la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contraseña de autenticación. *password* es de **tipo sysname y su** valor predeterminado es **%** . **%** indica que no hay ningún cambio en la propiedad de contraseña.  
   
 `[ @commit_batch_size = ] commit_batch_size` Solo se admite por compatibilidad con versiones anteriores.  
   
@@ -71,9 +71,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @flush_frequency = ] flush_frequency` Solo se admite por compatibilidad con versiones anteriores.  
   
-`[ @frequency_type = ] frequency_type` Es la frecuencia con la que se programa la tarea de distribución. *frequency_type* es de **tipo int**y puede tener uno de estos valores.  
+`[ @frequency_type = ] frequency_type` Es la frecuencia con la que se programa la tarea de distribución. *frequency_type* es de **tipo int** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
@@ -84,11 +84,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**64**|Iniciar automáticamente|  
 |**128**|Periódica|  
   
-`[ @frequency_interval = ] frequency_interval` Es el intervalo de *frequency_type*. *frequency_interval* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @frequency_interval = ] frequency_interval` Es el intervalo de *frequency_type*. *frequency_interval* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Es la fecha de la tarea de distribución. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de estos valores.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Es la fecha de la tarea de distribución. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|Segundo|  
@@ -96,37 +96,37 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**8**|Cuarto|  
 |**16**|Último|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Indica la frecuencia con la que debe repetirse la tarea de distribución durante el *frequency_type*definido. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Indica la frecuencia con la que debe repetirse la tarea de distribución durante el *frequency_type* definido. *frequency_recurrence_factor* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @frequency_subday = ] frequency_subday` Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de estos valores.  
+`[ @frequency_subday = ] frequency_subday` Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**2**|Segundo|  
 |**4**|Minute|  
 |**8**|Hora|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Es el intervalo de *frequence_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Es el intervalo de *frequence_subday*. *frequency_subday_interval* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Es la hora del día en la que la tarea de distribución se programa por primera vez, con el formato HHMMSS. *active_start_time_of_day* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Es la hora del día en la que la tarea de distribución se programa por primera vez, con el formato HHMMSS. *active_start_time_of_day* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Es la hora del día a la que la tarea de distribución deja de estar programada, con el formato HHMMSS. *active_end_time_of_day*es de **tipo int**y su valor predeterminado es NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Es la hora del día a la que la tarea de distribución deja de estar programada, con el formato HHMMSS. *active_end_time_of_day* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @active_start_date = ] active_start_date` Es la fecha en la que la tarea de distribución se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @active_start_date = ] active_start_date` Es la fecha en la que la tarea de distribución se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @active_end_date = ] active_end_date` Es la fecha en la que la tarea de distribución deja de estar programada, con el formato AAAAMMDD. *active_end_date*es de **tipo int**y su valor predeterminado es NULL.  
+`[ @active_end_date = ] active_end_date` Es la fecha en la que la tarea de distribución deja de estar programada, con el formato AAAAMMDD. *active_end_date* es de **tipo int** y su valor predeterminado es NULL.  
   
 `[ @description = ] 'description'` Es una descripción de texto opcional. la *Descripción* es de tipo **nvarchar (255)** y su valor predeterminado es NULL.  
   
-`[ @security_mode = ] security_mode` Es el modo de seguridad implementado. *security_mode* es de **tipo int**y puede tener uno de estos valores.  
+`[ @security_mode = ] security_mode` Es el modo de seguridad implementado. *security_mode* es de **tipo int** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticación|  
 |**1**|Autenticación de Windows|  
   
-`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  no se debe usar el *publicador* al cambiar las propiedades de un artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

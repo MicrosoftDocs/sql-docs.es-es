@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - display size of data types [ODBC]
 - size of data types [ODBC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 747c2076c528df8c312c9b3ed45e45a165299d59
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a39a0f986164cf6bc14e8be6e221232dd936e4bb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456590"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194878"
 ---
 # <a name="display-size"></a>Tamaño de presentación
 El tamaño de presentación de una columna es el número máximo de caracteres necesarios para mostrar los datos en forma de carácter. En la tabla siguiente se define el tamaño de presentación de cada tipo de datos SQL de ODBC.  
@@ -39,8 +39,8 @@ El tamaño de presentación de una columna es el número máximo de caracteres n
 |SQL_FLOAT SQL_DOUBLE|24 (un signo, 15 dígitos, un separador decimal, la letra *E*, un signo y 3 dígitos).|  
 |Todos los tipos binarios [a]|La longitud definida o máxima (para tipos de variable) de la columna veces el valor 2. (Cada byte binario se representa con un número hexadecimal de 2 dígitos).|  
 |SQL_TYPE_DATE|10 (una fecha con el formato *AAAA-MM-DD*).|  
-|SQL_TYPE_TIME|8 (una hora con el formato *HH: mm: SS*)<br /><br /> O bien<br /><br /> 9 + *s* (una hora con el formato *HH: mm: SS*[. FFF...], donde *s* es la precisión de las fracciones de segundo).|  
-|SQL_TYPE_TIMESTAMP|19 (para una marca de tiempo en el formato *AAAA-MM-DD HH: mm: SS* )<br /><br /> O bien<br /><br /> 20 + *s* (para una marca de tiempo en el formato *AAAA-MM-DD HH: mm: SS*[. FFF...], donde *s* es la precisión de las fracciones de segundo).|  
+|SQL_TYPE_TIME|8 (una hora con el formato *HH: mm: SS*)<br /><br /> o bien<br /><br /> 9 + *s* (una hora con el formato *HH: mm: SS*[. FFF...], donde *s* es la precisión de las fracciones de segundo).|  
+|SQL_TYPE_TIMESTAMP|19 (para una marca de tiempo en el formato *AAAA-MM-DD HH: mm: SS* )<br /><br /> o bien<br /><br /> 20 + *s* (para una marca de tiempo en el formato *AAAA-MM-DD HH: mm: SS*[. FFF...], donde *s* es la precisión de las fracciones de segundo).|  
 |Todos los tipos de datos de intervalo|Vea [longitud del tipo de datos de intervalo](../../../odbc/reference/appendixes/interval-data-type-length.md).|  
 |SQL_GUID|36 (número de caracteres en el formato *aaaaaaaa-bbbb-CCCC-dddd-eeeeeeeeeeee*|  
   

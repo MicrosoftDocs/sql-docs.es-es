@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helplinkedsrvlogin_TSQL
 - sp_helplinkedsrvlogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4468902fc983e94656a7f00c457b51e26a752a82
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 274d1d9a39feac333d5b7d572ec475bb89444c2b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541755"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190016"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rmtsrvname = ] 'rmtsrvname'` Es el nombre del servidor vinculado al que se aplica la asignación de inicio de sesión. *rmtsrvname* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL, se presentan todas las asignaciones de inicio de sesión establecidas con todos los servidores vinculados definidos en el equipo local que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @rmtsrvname = ] 'rmtsrvname'` Es el nombre del servidor vinculado al que se aplica la asignación de inicio de sesión. *rmtsrvname* es de **tipo sysname y su** valor predeterminado es NULL. Si es NULL, se presentan todas las asignaciones de inicio de sesión establecidas con todos los servidores vinculados definidos en el equipo local que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-`[ @locallogin = ] 'locallogin'` Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión en el servidor local que tiene una asignación al servidor vinculado *rmtsrvname*. *locallogin* es de **tipo sysname y su**valor predeterminado es NULL. NULL especifica que se devuelven todas las asignaciones de inicio de sesión definidas en *rmtsrvname* . Si no es NULL, ya debe existir una asignación para *locallogin* a *rmtsrvname* . *locallogin* puede ser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión de o un usuario de Windows. El usuario de Windows tiene que haber recibido acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directamente o a través de su pertenencia a un grupo de Windows al que se haya concedido acceso.  
+`[ @locallogin = ] 'locallogin'` Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión en el servidor local que tiene una asignación al servidor vinculado *rmtsrvname*. *locallogin* es de **tipo sysname y su** valor predeterminado es NULL. NULL especifica que se devuelven todas las asignaciones de inicio de sesión definidas en *rmtsrvname* . Si no es NULL, ya debe existir una asignación para *locallogin* a *rmtsrvname* . *locallogin* puede ser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión de o un usuario de Windows. El usuario de Windows tiene que haber recibido acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directamente o a través de su pertenencia a un grupo de Windows al que se haya concedido acceso.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

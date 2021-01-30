@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLSpecialColumns
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca29bf8bbef30296ad1aef17bda6890b23da8fb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf4f810499c4a3409d134806ead739096c5b1b89
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476071"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191754"
 ---
 # <a name="sqlspecialcolumns-function"></a>Función SQLSpecialColumns
 **Conformidad**  
@@ -66,7 +66,7 @@ SQLRETURN SQLSpecialColumns(
   
  SQL_ROWVER: devuelve la columna o columnas de la tabla especificada, si existen, que el origen de datos actualiza automáticamente cuando una transacción actualiza cualquier valor de la fila (como en SQLBase ROWID o Sybase TIMESTAMP).  
   
- *CatalogName*  
+ *Nombrecatálogo*  
  Entradas Nombre del catálogo de la tabla. Si un controlador admite catálogos para algunas tablas, pero no para otros, como cuando el controlador recupera datos de distintos DBMS, una cadena vacía ("") denota las tablas que no tienen catálogos. *Nombrecatálogo* no puede contener un patrón de búsqueda de cadenas.  
   
  Si el atributo de instrucción SQL_ATTR_METADATA_ID está establecido en SQL_TRUE, *nombrecatálogo* se trata como un identificador y su caso no es significativo. Si se SQL_FALSE, *nombrecatálogo* es un argumento normal; se trata literalmente y su caso es significativo. Para obtener más información, vea [argumentos en funciones de catálogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
@@ -90,7 +90,7 @@ SQLRETURN SQLSpecialColumns(
  *NameLength3*  
  Entradas Longitud en caracteres de **TableName*.  
   
- *Ámbito*  
+ *Scope*  
  Entradas Ámbito mínimo necesario del ROWID. El ROWID devuelto puede tener un ámbito mayor. Debe ser una de las siguientes:  
   
  SQL_SCOPE_CURROW: se garantiza que el ROWID es válido solo mientras se coloca en esa fila. Una reselección posterior mediante ROWID no puede devolver una fila si otra transacción actualizó o eliminó la fila.  
@@ -116,14 +116,14 @@ SQLRETURN SQLSpecialColumns(
 |--------------|-----------|-----------------|  
 |01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |08S01|Error de vínculo de comunicación|Se produjo un error en el vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador antes de que la función finalizara el procesamiento.|  
-|24000|Estado de cursor no válido|Un cursor estaba abierto en el *StatementHandle*y se ha llamado a **SQLFetch** o **SQLFetchScroll** . Este error lo devuelve el administrador de controladores si **SQLFetch** o **sqlfetchscroll** no ha devuelto SQL_NO_DATA y lo devuelve el controlador si **SQLFetch** o **sqlfetchscroll** ha devuelto SQL_NO_DATA.<br /><br /> Un cursor estaba abierto en el *StatementHandle*, pero no se ha llamado a **SQLFetch** o **SQLFetchScroll** .|  
+|24000|Estado de cursor no válido|Un cursor estaba abierto en el *StatementHandle* y se ha llamado a **SQLFetch** o **SQLFetchScroll** . Este error lo devuelve el administrador de controladores si **SQLFetch** o **sqlfetchscroll** no ha devuelto SQL_NO_DATA y lo devuelve el controlador si **SQLFetch** o **sqlfetchscroll** ha devuelto SQL_NO_DATA.<br /><br /> Un cursor estaba abierto en el *StatementHandle*, pero no se ha llamado a **SQLFetch** o **SQLFetchScroll** .|  
 |40001|Error de serialización|La transacción se revirtió debido a un interbloqueo de recursos con otra transacción.|  
 |40003|Finalización de instrucciones desconocida|No se pudo establecer la conexión asociada durante la ejecución de esta función y no se puede determinar el estado de la transacción.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer *\* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*. A continuación, se llamó de nuevo a la función en *StatementHandle*.<br /><br /> Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY009|Uso no válido de puntero nulo|El argumento *TableName* era un puntero nulo.<br /><br /> El atributo de instrucción SQL_ATTR_METADATA_ID se estableció en SQL_TRUE, el argumento *nombrecatálogo* era un puntero nulo y el SQL_CATALOG_NAME *InfoType* devuelve los nombres de catálogo que se admiten.<br /><br /> (DM) el atributo de instrucción SQL_ATTR_METADATA_ID se estableció en SQL_TRUE y el argumento *SchemaName* era un puntero nulo.|  
-|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función todavía se estaba ejecutando cuando se llamó a **SQLSpecialColumns** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.|  
+|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función todavía se estaba ejecutando cuando se llamó a **SQLSpecialColumns** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect** o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
 |HY090|Longitud de búfer o cadena no válida|(DM) el valor de uno de los argumentos de longitud era menor que 0 pero no es igual a SQL_NTS.<br /><br /> El valor de uno de los argumentos de longitud superó el valor de longitud máxima para el nombre correspondiente. La longitud máxima de cada nombre se puede obtener llamando a **SQLGetInfo** con los valores *InfoType* : SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN o SQL_MAX_TABLE_NAME_LEN.|  
 |HY097|Tipo de columna fuera del intervalo|(DM) se especificó un valor *IdentifierType* no válido.|  
@@ -145,9 +145,9 @@ SQLRETURN SQLSpecialColumns(
   
  Si no hay ninguna columna que identifique de forma única cada fila de la tabla, **SQLSpecialColumns** devuelve un conjunto de filas sin filas; una llamada subsiguiente a **SQLFetch** o **SQLFetchScroll** en la instrucción devuelve SQL_NO_DATA.  
   
- Si los argumentos *IdentifierType*, *ámbito*o que *aceptan valores NULL* especifican características que no son compatibles con el origen de datos, **SQLSpecialColumns** devuelve un conjunto de resultados vacío.  
+ Si los argumentos *IdentifierType*, *ámbito* o que *aceptan valores NULL* especifican características que no son compatibles con el origen de datos, **SQLSpecialColumns** devuelve un conjunto de resultados vacío.  
   
- Si el atributo de instrucción SQL_ATTR_METADATA_ID está establecido en SQL_TRUE, los argumentos *nombrecatálogo*, *SchemaName*y *TableName* se tratan como identificadores, por lo que no se pueden establecer en un puntero nulo en determinadas situaciones. (Para obtener más información, vea [argumentos en las funciones de catálogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)).  
+ Si el atributo de instrucción SQL_ATTR_METADATA_ID está establecido en SQL_TRUE, los argumentos *nombrecatálogo*, *SchemaName* y *TableName* se tratan como identificadores, por lo que no se pueden establecer en un puntero nulo en determinadas situaciones. (Para obtener más información, vea [argumentos en las funciones de catálogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)).  
   
  **SQLSpecialColumns** devuelve los resultados como un conjunto de resultados estándar, ordenados por ámbito.  
   
@@ -198,6 +198,6 @@ SQLRETURN SQLSpecialColumns(
 |Obtener un bloque de datos o desplazarse por un conjunto de resultados|[Función SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |Devolver las columnas de una clave principal|[Función SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

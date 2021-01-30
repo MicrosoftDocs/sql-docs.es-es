@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_showrowreplicainfo_TSQL
 - sp_showrowreplicainfo
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5a46fd42c9caa69e808635fc9dcc5125403697a6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f2a66e8e6123adef864ca2beadef31cd4a9cbffe
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543045"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193487"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +41,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @ownername = ] 'ownername'` Es el nombre del propietario de la tabla. *nombrepropietario* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro resulta útil para diferenciar las tablas en caso de que la base de datos contenga varias tablas con el mismo nombre pero con propietarios distintos.  
+`[ @ownername = ] 'ownername'` Es el nombre del propietario de la tabla. *nombrepropietario* es de **tipo sysname y su** valor predeterminado es NULL. Este parámetro resulta útil para diferenciar las tablas en caso de que la base de datos contenga varias tablas con el mismo nombre pero con propietarios distintos.  
   
-`[ @tablename = ] 'tablename'` Es el nombre de la tabla que contiene la fila para la que se devuelve la información. *TableName* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @tablename = ] 'tablename'` Es el nombre de la tabla que contiene la fila para la que se devuelve la información. *TableName* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @rowguid = ] rowguid` Es el identificador único de la fila. *ROWGUID* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado.  
+`[ @rowguid = ] rowguid` Es el identificador único de la fila. *ROWGUID* es de tipo **uniqueidentifier** y no tiene ningún valor predeterminado.  
   
-`[ @show = ] 'show'` Determina la cantidad de información que se va a devolver en el conjunto de resultados. *Show* es de tipo **nvarchar (20)** y su valor predeterminado es Both. Si es **Row**, solo se devuelve información de la versión de fila. Si son **columnas**, solo se devuelve información de la versión de la columna. Si es, se devuelve la **información de fila**y de columna.  
+`[ @show = ] 'show'` Determina la cantidad de información que se va a devolver en el conjunto de resultados. *Show* es de tipo **nvarchar (20)** y su valor predeterminado es Both. Si es **Row**, solo se devuelve información de la versión de fila. Si son **columnas**, solo se devuelve información de la versión de la columna. Si es, se devuelve la **información de fila** y de columna.  
   
 ## <a name="result-sets-for-row-information"></a>Conjuntos de resultados para información de fila  
   
