@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLSetConnectAttrForDbcInfo function [ODBC]
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7380ba8682deb7424c363b28d42ecf3980755daf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ca64e1309c939f4b39b8b9a020a1debb1cc10b9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499565"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192439"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>Función SQLSetConnectAttrForDbcInfo
 **Conformidad**  
@@ -72,13 +72,13 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
 ## <a name="remarks"></a>Observaciones  
  **SQLSetConnectAttrForDbcInfo** es igual que **SQLSetConnectAttr**, pero establece el atributo en el token de información de conexión, en lugar de en el identificador de conexión. Por ejemplo, si **SQLSetConnectAttr** no reconoce un atributo, **SQLSetConnectAttrForDbcInfo** también debe devolver SQL_ERROR para ese atributo.  
   
- Cada vez que el controlador devuelve SQL_ERROR o SQL_INVALID_HANDLE, el controlador debe omitir este atributo para calcular el identificador del grupo. Además, el administrador de controladores obtendrá la información de diagnóstico de *hDbcInfoToken*y devolverá SQL_SUCCESS_WITH_INFO a la aplicación en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) y [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md). Por lo tanto, una aplicación puede recuperar detalles sobre el motivo por el que no se pueden establecer algunos atributos.  
+ Cada vez que el controlador devuelve SQL_ERROR o SQL_INVALID_HANDLE, el controlador debe omitir este atributo para calcular el identificador del grupo. Además, el administrador de controladores obtendrá la información de diagnóstico de *hDbcInfoToken* y devolverá SQL_SUCCESS_WITH_INFO a la aplicación en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) y [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md). Por lo tanto, una aplicación puede recuperar detalles sobre el motivo por el que no se pueden establecer algunos atributos.  
   
  Las aplicaciones no deben llamar directamente a esta función. Un controlador ODBC que admita la agrupación de conexiones compatible con controladores debe implementar esta función.  
   
  Incluya sqlspi. h para el desarrollo del controlador ODBC.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Agrupación de conexiones compatible con controladores](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

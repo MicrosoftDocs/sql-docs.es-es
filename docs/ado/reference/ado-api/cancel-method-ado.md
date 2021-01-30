@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset20::Cancel
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75829400fbb1beb838b9254acf7db129980046c3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: adc282492b4c6d9a21683693154e43f1177bdca0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975656"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164752"
 ---
 # <a name="cancel-method-ado"></a>Cancel (método) (ADO)
 Cancela la ejecución de una llamada de método asincrónica pendiente.  
@@ -38,7 +38,7 @@ object.Cancel
 ```  
   
 ## <a name="remarks"></a>Observaciones  
- Use el método **Cancel** para finalizar la ejecución de una llamada de método asincrónico: es decir, un método invocado con la opción **adAsyncConnect**, **adAsyncExecute**o **adAsyncFetch** .  
+ Use el método **Cancel** para finalizar la ejecución de una llamada de método asincrónico: es decir, un método invocado con la opción **adAsyncConnect**, **adAsyncExecute** o **adAsyncFetch** .  
   
  En la tabla siguiente se muestra qué tarea se termina cuando se usa el método **Cancel** en un tipo de objeto determinado.  
   

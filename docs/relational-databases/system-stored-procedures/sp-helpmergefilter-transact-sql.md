@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergefilter
 - sp_helpmergefilter_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: faa3b2922f8d73875b5213603b980560d69465ff
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 862f23713da4bcd611310149b509e34658766006
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527019"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179242"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +40,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve los nombres de todos los artículos.  
+`[ @article = ] 'article'` Es el nombre del artículo. *article* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve los nombres de todos los artículos.  
   
-`[ @filtername = ] 'filtername'` Es el nombre del filtro sobre el que se va a devolver información. *filtername* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todos los filtros definidos en el artículo o la publicación.  
+`[ @filtername = ] 'filtername'` Es el nombre del filtro sobre el que se va a devolver información. *filtername* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve información acerca de todos los filtros definidos en el artículo o la publicación.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

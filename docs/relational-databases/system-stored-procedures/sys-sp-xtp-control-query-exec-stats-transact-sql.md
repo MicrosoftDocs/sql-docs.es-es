@@ -1,13 +1,13 @@
 ---
 description: sys.sp_xtp_control_query_exec_stats (Transact-SQL)
-title: Sys. sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft Docs
+title: sys.sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_xtp_control_query_exec_stats_TSQL
 - sys.sp_xtp_control_query_exec_stats
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74e92f12d7003df9a4e0a23ac451d016b84fd5bc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a1047918fd6d337d863dbf43d7058d1e3571e1cb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89525430"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180213"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89525430"
   
  El rendimiento disminuye cuando se habilita la recopilación de estadísticas. Si solo necesita solucionar los problemas de algunos procedimientos almacenados compilados de forma nativa, puede habilitar la recopilación de estadísticas únicamente para dichos procedimientos almacenados.  
   
- Para habilitar la recopilación de estadísticas en el nivel de procedimiento para todos los procedimientos almacenados compilados de forma nativa, vea [Sys. sp_xtp_control_proc_exec_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
+ Para habilitar la recopilación de estadísticas en el nivel de procedimiento para todos los procedimientos almacenados compilados de forma nativa, vea [sys.sp_xtp_control_proc_exec_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,7 +50,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
  @new_collection_value se establece en cero cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicia.  
   
  @database_id = = *database_id*, @xtp_object_id = *procedure_id*  
- El identificador de la base de datos y el identificador de objeto para el procedimiento almacenado compilado de forma nativa. Si la recopilación de estadísticas está habilitada para la instancia ([Sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), se recopilan las estadísticas de un procedimiento almacenado compilado de forma nativa. Al desactivar la recopilación de estadísticas en la instancia, no se desactiva la recopilación de estadísticas para procedimientos almacenados compilados de forma nativa individuales.  
+ El identificador de la base de datos y el identificador de objeto para el procedimiento almacenado compilado de forma nativa. Si la recopilación de estadísticas está habilitada para la instancia ([sys.sp_xtp_control_proc_exec_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), se recopilan las estadísticas de un procedimiento almacenado compilado de forma nativa. Al desactivar la recopilación de estadísticas en la instancia, no se desactiva la recopilación de estadísticas para procedimientos almacenados compilados de forma nativa individuales.  
   
  Use [Sys. databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [Sys. Procedures &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md), [DB_ID &#40;transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)o OBJECT_ID &#40;de [Transact-SQL ](../../t-sql/functions/object-id-transact-sql.md) para obtener los identificadores de una base de datos y un procedimiento almacenado.  
   

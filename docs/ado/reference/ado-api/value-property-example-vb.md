@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9b3cfe95322801c35f36623b0323ed38b47fcdc
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 228d78a90510bbc060143f6d7686f4c76680d3f7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987976"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166309"
 ---
 # <a name="value-property-example-vb"></a>Ejemplo de la propiedad de valor (VB)
 En este ejemplo se muestra la propiedad [Value](./value-property-ado.md) con objetos [Field](./field-object.md) y [Property](./property-object-ado.md) al mostrar los valores de campo y propiedad de la tabla ***Employees*** .  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelpmergesession_TSQL
 - sp_replmonitorhelpmergesession
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9544a1d11efbd3d956821784257619bb45b7a5cc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d81a500eccbc8d969e9e0ef957ae4db09616d768
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526317"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211889"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,24 +47,24 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @hours = ] hours` Es el intervalo de tiempo, en horas, para el que se devuelve información histórica de la sesión del agente. *hours* es **int**, que puede ser uno de los siguientes intervalos.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |< **0,1**|Devuelve información sobre las ejecuciones pasadas del agente, hasta un máximo de 100.|  
 |**0** (valor predeterminado)|Devuelve información sobre todas las ejecuciones pasadas del agente.|  
 |> **0,1**|Devuelve información sobre las ejecuciones del agente que se produjeron en *el último número de horas.*|  
   
-`[ @session_type = ] session_type` Filtra el conjunto de resultados según el resultado final de la sesión. *session_type* es de **tipo int**y puede tener uno de estos valores.  
+`[ @session_type = ] session_type` Filtra el conjunto de resultados según el resultado final de la sesión. *session_type* es de **tipo int** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1** (predeterminado)|Sesiones del agente con un reintento o un resultado correcto.|  
 |**0**|Sesiones del agente con un resultado erróneo.|  
   
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro se utiliza al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname y su** valor predeterminado es NULL. Este parámetro se utiliza al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro se utiliza al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su** valor predeterminado es NULL. Este parámetro se utiliza al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
   
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro se utiliza al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su** valor predeterminado es NULL. Este parámetro se utiliza al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

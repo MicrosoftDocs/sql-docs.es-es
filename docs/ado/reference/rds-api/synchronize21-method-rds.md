@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Synchronize21 method [ADO]
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46d0d13fa6e735b7763a35186beff59f293cc278
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: fb782b8c61f3ae80c3e37d5ff28b040651eb5669
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724703"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166086"
 ---
 # <a name="synchronize21-method-rds"></a>Método Synchronize21 (RDS)
 Sincronizar el conjunto de registros dado con la base de datos especificada por la cadena de conexión para su uso con ADO 2,1.  
@@ -48,7 +48,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
   
  2 =*RefreshWithUpdate* hace que se devuelvan los Estados de fila cuando no se establece ninguna *actualización* ni *RefreshConflicts* .  
   
- 4 = la*actualización* del conjunto de registros se actualiza con los datos actuales de la base de datos. Las actualizaciones pendientes no se insertan en la base de datos. Si no se establece este bit, el conjunto de registros no se actualiza y se insertan las actualizaciones pendientes en la base de datos.  
+ 4 = la *actualización* del conjunto de registros se actualiza con los datos actuales de la base de datos. Las actualizaciones pendientes no se insertan en la base de datos. Si no se establece este bit, el conjunto de registros no se actualiza y se insertan las actualizaciones pendientes en la base de datos.  
   
  8 =*RefreshConflicts* las filas con cambios pendientes no se pueden actualizar. Las filas que no se pudieron actualizar se actualizan con los datos actuales de la base de datos.  
   

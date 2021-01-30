@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helptracertokenhistory_TSQL
 - sp_helptracertokenhistory
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4874af1c1defd949f4744a98f9f959995bf1d231
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f701a1681281bfb63cf6c39ba42869ac83df204e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547947"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192879"
 ---
 # <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,16 +41,16 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación en la que se insertó el testigo de seguimiento. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en la que se insertó el testigo de seguimiento. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @tracer_id = ] tracer_id` Es el identificador del testigo de seguimiento en el [MStracer_tokens &#40;tabla de&#41;de Transact-SQL ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) para la que se devuelve información del historial. *tracer_id* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @tracer_id = ] tracer_id` Es el identificador del testigo de seguimiento en el [MStracer_tokens &#40;tabla de&#41;de Transact-SQL ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) para la que se devuelve información del historial. *tracer_id* es de **tipo int** y no tiene ningún valor predeterminado.  
   
-`[ @publisher = ] 'publisher'` Nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Nombre del publicador. *Publisher* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]
 >  Este parámetro solo debe especificarse para los publicadores que no sean de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @publisher_db = ] 'publisher_db'` Nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. Si el procedimiento almacenado se ejecuta en el publicador, se omite este parámetro.  
+`[ @publisher_db = ] 'publisher_db'` Nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su** valor predeterminado es NULL. Si el procedimiento almacenado se ejecuta en el publicador, se omite este parámetro.  
   
 ## <a name="result-set"></a>Tipo de cursor  
   

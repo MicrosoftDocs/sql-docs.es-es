@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Member::LevelName
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 875dc870c9c5416f01bf27e011ec16ada771db3d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 225ae29d2fa74d6788115a921590c669c7bb3ba0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986476"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164513"
 ---
 # <a name="levelname-property-ado-md"></a>LevelName (propiedad, ADO MD)
 Indica el nombre del nivel de un [miembro](./member-object-ado-md.md).  

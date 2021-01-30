@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b582582fa3acc91921aeee41a465915979a6c7d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e5369805e939171f9510deafc0a50128c724be0b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988896"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166501"
 ---
 # <a name="source-property-example-vc"></a>Ejemplo de la propiedad Source (VC ++)
 En este ejemplo se muestra la propiedad de [origen](./source-property-ado-recordset.md) abriendo tres objetos de [conjunto de registros](./recordset-object-ado.md) basados en orígenes de datos diferentes.  

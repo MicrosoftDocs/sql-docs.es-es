@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLGetData function [ODBC], Cursor Library
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5288c46dc731f1bee8727e3825c95ccae663f871
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1e0cb6a73fb294e8b47ab82c988f8d07a4a220df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421469"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202787"
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData (biblioteca de cursores)
 > [!IMPORTANT]  

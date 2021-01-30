@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_backup_config_basic_TSQL
 - sp_backup_config_basic
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 428dff3f22b5a924f7a208a988334c14ece752a3
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 0ef304af8088ee35aeb19022f5d7f6cf539f554d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753739"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193601"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -66,7 +66,7 @@ EXEC managed_backup.sp_backup_config_basic
  El nombre de la credencial SQL que se usa para autenticar en la cuenta de almacenamiento de Azure. @credentail_name es de **tipo SYSNAME**. Cuando se especifica, la copia de seguridad se almacena en un BLOB en páginas. Si este parámetro es NULL, la copia de seguridad se almacenará como un BLOB en bloques. El BLOB de copia de seguridad en página está en desuso, por lo que es preferible usar la nueva funcionalidad de copia de seguridad de blobs en bloques. Cuando se utiliza para cambiar la configuración de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], este parámetro es opcional. Si no se especifica, se conservan los valores de configuración existentes.  
   
 > [!WARNING]
->  En este momento no se admite el parámetro ** \@ credential_name** . Solo se admite la copia de seguridad en blobs en bloques, lo que requiere que este parámetro sea NULL.  
+>  En este momento no se admite el parámetro **\@ credential_name** . Solo se admite la copia de seguridad en blobs en bloques, lo que requiere que este parámetro sea NULL.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto) o 1 (error)  

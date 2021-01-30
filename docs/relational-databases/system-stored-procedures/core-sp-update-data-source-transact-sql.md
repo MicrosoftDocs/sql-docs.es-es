@@ -1,13 +1,13 @@
 ---
 description: core.sp_update_data_source (Transact-SQL)
-title: Core. sp_update_data_source (Transact-SQL) | Microsoft Docs
+title: core.sp_update_data_source (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_data_source
 - sp_update_data_source_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ad50aaa81cb61b6ead9388e41e025993e54c364
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 45bfb2c042ea491516aa4d3caadff72c45451202
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550110"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180587"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,13 +48,13 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
   
 ## <a name="arguments"></a>Argumentos  
  [ @collection_set_uid =] '*collection_set_uid*'  
- GUID del conjunto de recopilación. *collection_set_uid* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado. Para obtener el GUID, consulte la vista dbo.syscollector_collection_sets en la base de datos msdb.  
+ GUID del conjunto de recopilación. *collection_set_uid* es de tipo **uniqueidentifier** y no tiene ningún valor predeterminado. Para obtener el GUID, consulte la vista dbo.syscollector_collection_sets en la base de datos msdb.  
   
  [ @machine_name =] '*machine_name*'  
  Nombre del servidor en el que reside el conjunto de recopilación. *machine_name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
  [ @named_instance =] '*named_instance*'  
- Nombre de la instancia del conjunto de recopilación. *named_instance* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ Nombre de la instancia del conjunto de recopilación. *named_instance* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
 >  *named_instance* debe ser el nombre completo de la instancia, que consta del nombre del equipo y el nombre de la instancia con el formato *NombreDeEquipo* \\ *nombreDeInstancia*.  

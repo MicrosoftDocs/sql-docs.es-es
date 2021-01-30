@@ -7,18 +7,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Parameters collection [ADO], members
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 506b9177976b24277dfe132368c828d54f571c75
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 211152737a8b95812f9808074c1e2316824648d1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990106"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166881"
 ---
 # <a name="parameters-collection-properties-methods-and-events"></a>Propiedades, métodos y eventos de la colección Parameters
 ## <a name="properties"></a>Propiedades  
@@ -33,7 +33,7 @@ ms.locfileid: "88990106"
   
  [Refresh (método)](./refresh-method-ado.md)  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

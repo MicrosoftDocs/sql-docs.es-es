@@ -1,25 +1,25 @@
 ---
 description: Propiedad dinámica Optimize (ADO)
-title: Optimize (propiedad dinámica) (ADO) | Microsoft Docs
+title: Optimizar Property-Dynamic (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3393bbfbfbaeb50c6a608db92dae42bb29fb3b1d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 839c2cb27fc14546523272c1c5b6d69f233557fa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990266"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166948"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Propiedad dinámica Optimize (ADO)
 Especifica si se debe crear un índice en un [campo](./field-object.md).  

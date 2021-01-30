@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 23a6ebaa724e06ce4a8283b95e3d7a982c8deef1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 69e80f025c29e379495507447ef78af5bcc8868f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988705"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166453"
 ---
 # <a name="status-property-example-field-vb"></a>Ejemplo de la propiedad de estado (campo) (VB)
-En el ejemplo siguiente se abre un documento desde una carpeta de lectura/escritura mediante el [proveedor de publicación en Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). La propiedad [status](./status-property-ado-field.md) de un objeto [Field](./field-object.md) del [registro](./record-object-ado.md) se establecerá primero en **adFieldPendingInsert**y, a continuación, se actualizará a **adFieldOk**.  
+En el ejemplo siguiente se abre un documento desde una carpeta de lectura/escritura mediante el [proveedor de publicación en Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). La propiedad [status](./status-property-ado-field.md) de un objeto [Field](./field-object.md) del [registro](./record-object-ado.md) se establecerá primero en **adFieldPendingInsert** y, a continuación, se actualizará a **adFieldOk**.  
   
 ```  
 'BeginStatusFieldVB  
@@ -80,7 +80,7 @@ End Sub
 'EndStatusFieldVB  
 ```  
   
- En el ejemplo siguiente se elimina un **campo** conocido de un **registro** abierto desde un documento. La propiedad **status** se establecerá primero en **adFieldOK**y luego en **adFieldPendingUnknown**.  
+ En el ejemplo siguiente se elimina un **campo** conocido de un **registro** abierto desde un documento. La propiedad **status** se establecerá primero en **adFieldOK** y luego en **adFieldPendingUnknown**.  
   
 ```  
 Attribute VB_Name = "StatusField"  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8a9a9a7296ac87f733d8626f0c425071c5d8671
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 33a74ff761e6c1be0761fcabf149564b6d5bf4be
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990236"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166941"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Ejemplo de las propiedades OriginalValue y UnderlyingValue (VC + +)
 En este ejemplo se muestran las propiedades [OriginalValue](./originalvalue-property-ado.md) y [UnderlyingValue](./underlyingvalue-property.md) al mostrar un mensaje si los datos subyacentes de un registro han cambiado durante una actualización por lotes del [conjunto de registros](./recordset-object-ado.md) .  

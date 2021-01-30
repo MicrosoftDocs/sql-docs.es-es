@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - timestamp data type [ODBC]
 - converting data from SQL to C types [ODBC], timestamp
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a2904f01b5ecadbfc224d052366197e41163cd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d7881ad4ef9280ab9f2e7ac0d941ae2228b21b9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429547"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202993"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL a C: Timestamp
 
@@ -51,4 +51,4 @@ En la tabla siguiente se muestran los tipos de datos C de ODBC a los que se pued
   
  [f] es el tamaño del tipo de datos de C correspondiente.  
 
-Cuando los datos de marca de tiempo de SQL se convierten en datos de caracteres C, la cadena resultante se encuentra en "*AAAA* - *mm* - *DD* *HH*:*mm*:*SS*[.* f...*] " formato, donde se pueden usar hasta nueve dígitos para las fracciones de segundo. Este formato no se ve afectado por la configuración del país de Windows®. (Excepto el separador decimal y las fracciones de segundo, se debe usar todo el formato, independientemente de la precisión del tipo de datos de marca de tiempo de SQL).
+Cuando los datos de marca de tiempo de SQL se convierten en datos de caracteres C, la cadena resultante se encuentra en "*AAAA* - *mm* - *DD* *HH*:*mm*:*SS*[.*f...*] ", donde se pueden usar hasta nueve dígitos para las fracciones de segundo. Este formato no se ve afectado por la configuración del país de Windows®. (Excepto el separador decimal y las fracciones de segundo, se debe usar todo el formato, independientemente de la precisión del tipo de datos de marca de tiempo de SQL).

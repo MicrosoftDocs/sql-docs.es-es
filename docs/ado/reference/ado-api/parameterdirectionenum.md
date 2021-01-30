@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ParameterDirectionEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7422bf0037adc8d756c20c82404a7f3b06ae9e3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 960164c8f881c3094493f3bbc828ef7982e75280
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990136"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166885"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Especifica si el [parámetro](./parameter-object.md) representa un parámetro de entrada, un parámetro de salida, una entrada y un parámetro de salida, o el valor devuelto de un procedimiento almacenado.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adParamInput**|1|Predeterminada. Indica que el parámetro representa un parámetro de entrada.|  
 |**adParamInputOutput**|3|Indica que el parámetro representa un parámetro de entrada y de salida.|  

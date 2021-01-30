@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::Position
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55ae275db06b8b0c73598977e78954bac0fd22be
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9b2da711df951fc79db5034eeb447a71ade21fee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990066"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166860"
 ---
 # <a name="position-property-ado"></a>Propiedad Position (ADO)
 Indica la posición actual dentro de un objeto de [flujo](./stream-object-ado.md) .  
@@ -39,7 +39,7 @@ Indica la posición actual dentro de un objeto de [flujo](./stream-object-ado.md
 >  No se pueden usar valores negativos para cambiar la posición actual en una **secuencia**. Solo se pueden usar números positivos para la **posición**.  
   
 > [!NOTE]
->  En el caso de los objetos de **secuencia** de solo lectura, ADO no devolverá un error si la **posición** está establecida en un valor mayor que el **tamaño** de la **secuencia**. Esto no cambia el tamaño de la **secuencia**ni modifica el contenido de la **secuencia** de ninguna manera. Sin embargo, esto se debe evitar porque da como resultado un valor de **posición**sin sentido.  
+>  En el caso de los objetos de **secuencia** de solo lectura, ADO no devolverá un error si la **posición** está establecida en un valor mayor que el **tamaño** de la **secuencia**. Esto no cambia el tamaño de la **secuencia** ni modifica el contenido de la **secuencia** de ninguna manera. Sin embargo, esto se debe evitar porque da como resultado un valor de **posición** sin sentido.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de secuencia (ADO)](./stream-object-ado.md)  

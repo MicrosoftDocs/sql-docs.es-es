@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_users_login
 - sp_change_users_login_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c82241030646e2ef20c978cb1905cf836f9a589b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 109b2a6aa015f8f66a327714264aa986060f9a0c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447420"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203713"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,17 +54,17 @@ sp_change_users_login [ @Action = ] 'action'
 |Value|Descripción|  
 |-----------|-----------------|  
 |**Auto_Fix**|Vincula una entrada de usuario de la vista de catálogo del sistema sys.database_principals de la base de datos actual con el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del mismo nombre. Si no existe un inicio de sesión con el mismo nombre, se creará uno. Examine el resultado de la instrucción **Auto_Fix** para confirmar que se ha realizado el vínculo correcto. Evite usar **Auto_Fix** en situaciones de seguridad.<br /><br /> Al usar **Auto_Fix**, debe especificar el *usuario* y la *contraseña* si el inicio de sesión aún no existe; de lo contrario, debe especificar *usuario* pero se omitirá la *contraseña* . *login* debe ser null. el *usuario* debe ser un usuario válido en la base de datos actual. El inicio de sesión no puede tener otro usuario asignado.|  
-|**Report**|Enumera los usuarios y sus identificadores de seguridad (SID) correspondientes, que se encuentran en la base de datos actual y no están vinculados con ningún inicio de sesión. el *usuario*, el *Inicio de sesión*y la *contraseña* deben ser null o no especificarse.<br /><br /> Para reemplazar la opción de informe por una consulta mediante las tablas del sistema, compare las entradas de **Sys. server_prinicpals** con las entradas de **Sys. database_principals**.|  
-|**Update_One**|Vincula el *usuario* especificado en la base de datos actual a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Inicio de sesión*existente. se debe especificar el *usuario* y el *Inicio de sesión* . la *contraseña* debe ser null o no especificarse.|  
+|**Report**|Enumera los usuarios y sus identificadores de seguridad (SID) correspondientes, que se encuentran en la base de datos actual y no están vinculados con ningún inicio de sesión. el *usuario*, el *Inicio de sesión* y la *contraseña* deben ser null o no especificarse.<br /><br /> Para reemplazar la opción de informe por una consulta mediante las tablas del sistema, compare las entradas de **Sys.server_prinicpals** con las entradas de **Sys.database_principals**.|  
+|**Update_One**|Vincula el *usuario* especificado en la base de datos actual a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Inicio de sesión* existente. se debe especificar el *usuario* y el *Inicio de sesión* . la *contraseña* debe ser null o no especificarse.|  
   
  [ @UserNamePattern =] '*usuario*'  
- Es el nombre de un usuario en la base de datos actual. *User* es de **tipo sysname y su**valor predeterminado es NULL.  
+ Es el nombre de un usuario en la base de datos actual. *User* es de **tipo sysname y su** valor predeterminado es NULL.  
   
  [ @LoginName =] '*Inicio de sesión*'  
  Es el nombre de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
   
  [ @Password =] '*contraseña*'  
- Es la contraseña asignada a un nuevo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión que se crea especificando **Auto_Fix**. Si ya existe un inicio de sesión coincidente, se asignan el usuario y el inicio de sesión y se omite la *contraseña* . Si no existe un inicio de sesión coincidente, sp_change_users_login crea un nuevo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión y asigna la *contraseña* como contraseña para el nuevo inicio de sesión. *password* es de **tipo sysname**y no debe ser null.  
+ Es la contraseña asignada a un nuevo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión que se crea especificando **Auto_Fix**. Si ya existe un inicio de sesión coincidente, se asignan el usuario y el inicio de sesión y se omite la *contraseña* . Si no existe un inicio de sesión coincidente, sp_change_users_login crea un nuevo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión y asigna la *contraseña* como contraseña para el nuevo inicio de sesión. *password* es de **tipo sysname** y no debe ser null.  
   
 > **IMPORTANTE:** Use siempre una [contraseña segura.](../../relational-databases/security/strong-passwords.md)
   
@@ -123,7 +123,7 @@ EXEC sp_change_users_login 'Auto_Fix', 'Mary', NULL, 'B3r12-3x$098f6';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   

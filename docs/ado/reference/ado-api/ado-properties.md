@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8a53f4b901209a1ef59be6ca2eb8b531bc52d7c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: bdacd558161c09d1d43f590f9f355e14da262b14
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976286"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164885"
 ---
 # <a name="ado-properties"></a>Propiedades de ADO
 
@@ -28,7 +28,7 @@ ms.locfileid: "88976286"
 |[AbsolutePage](./absolutepage-property-ado.md)|Indica en qué página reside el registro actual.|  
 |[AbsolutePosition](./absoluteposition-property-ado.md)|Indica la posición ordinal del registro actual de un objeto de **conjunto de registros** .|  
 |[ActiveCommand](./activecommand-property-ado.md)|Indica el objeto de **comando** que creó el objeto de **conjunto de registros** asociado.|  
-|[ActiveConnection](./activeconnection-property-ado.md)|Indica a qué objeto de **conexión** pertenece actualmente el objeto de **comando**, **conjunto de registros**o **registro** especificado.|  
+|[ActiveConnection](./activeconnection-property-ado.md)|Indica a qué objeto de **conexión** pertenece actualmente el objeto de **comando**, **conjunto de registros** o **registro** especificado.|  
 |[ActualSize](./actualsize-property-ado.md)|Indica la longitud real del valor de un campo.|  
 |[Atributos](./attributes-property-ado.md)|Indica una o más características de un objeto.|  
 |[BOF y EOF](./bof-eof-properties-ado.md)|**BOF** indica que la posición del registro actual es anterior al primer registro de un objeto de conjunto de registros.<br /><br /> **EOF** indica que la posición del registro actual es posterior al último registro de un objeto de conjunto de registros.|  
@@ -63,7 +63,7 @@ ms.locfileid: "88976286"
 |[LockType](./locktype-property-ado.md)|Indica el tipo de bloqueos colocados en los registros durante la edición.|  
 |[MarshalOptions](./marshaloptions-property-ado.md)|Indica qué registros deben calcularse de nuevo en el servidor.|  
 |[MaxRecords](./maxrecords-property-ado.md)|Indica el número máximo de registros que se van a devolver a un **conjunto** de registros desde una consulta.|  
-|[Modo](./mode-property-ado.md)|Indica los permisos disponibles para modificar los datos de un objeto de **conexión**, **registro**o **secuencia** .|  
+|[Modo](./mode-property-ado.md)|Indica los permisos disponibles para modificar los datos de un objeto de **conexión**, **registro** o **secuencia** .|  
 |[Nombre](./name-property-ado.md)|Indica el nombre de un objeto.|  
 |[NativeError](./nativeerror-property-ado.md)|Indica el código de error específico del proveedor para un objeto de **error** determinado.|  
 |[Number](./number-property-ado.md)|Indica el número que identifica de forma única un objeto de **error** .|  
@@ -73,28 +73,28 @@ ms.locfileid: "88976286"
 |[PageSize](./pagesize-property-ado.md)|Indica el número de registros que representan una página en el **conjunto de registros**.|  
 |[ParentRow](./parentrow-property-ado.md)|Establece el contenedor de un objeto de **fila** OLE DB en un objeto **ADORecordConstruction** , de modo que el elemento primario de la fila se convierta en un objeto **Record** de ADO.|  
 |[ParentURL](./parenturl-property-ado.md)|Indica una cadena de dirección URL absoluta que apunta al **registro** primario del objeto de **registro** actual.|  
-|[Posición](./position-property-ado.md)|Indica la posición actual dentro de un objeto de **flujo** .|  
+|[Position](./position-property-ado.md)|Indica la posición actual dentro de un objeto de **flujo** .|  
 |[Precisión](./precision-property-ado.md)|Indica el grado de precisión de los valores numéricos de un objeto de **parámetro** o de los objetos de **campo** numérico.|  
 |[Prepared](./prepared-property-ado.md)|Indica si se debe guardar una versión compilada de un comando antes de la ejecución.|  
 |[Proveedor](./provider-property-ado.md)|Indica el nombre del proveedor de un objeto de **conexión** .|  
 |[RecordCount](./recordcount-property-ado.md)|Indica el número de registros de un objeto de **conjunto de registros** .|  
 |[RecordType](./recordtype-property-ado.md)|Indica el tipo de objeto de **registro** .|  
-|[Columna](./row-property-ado.md)|Obtiene o establece un objeto de **fila** OLE DB de/en un objeto **ADORecordConstruction** .|  
+|[Row](./row-property-ado.md)|Obtiene o establece un objeto de **fila** OLE DB de/en un objeto **ADORecordConstruction** .|  
 |[RowPosition](./rowposition-property-ado.md)|Obtiene o establece un objeto **RowPosition** OLE DB de/en un objeto **ADORecordsetConstruction** .|  
 |[Conjunto de filas](./rowset-property-ado.md)|Obtiene o establece un objeto de **conjunto de filas** OLE DB de/en un objeto **ADORecordsetConstruction** .|  
 |[Origen (error de ADO)](./source-property-ado-error.md)|Indica el nombre del objeto o la aplicación que originalmente generó un error.|  
 |[Source (registro de ADO)](./source-property-ado-record.md)|Indica la entidad representada por el objeto de **registro** .|  
 |[Source (conjunto de registros ADO)](./source-property-ado-recordset.md)|Indica el origen de los datos de un objeto de **conjunto de registros**|  
 |[SQLState](./sqlstate-property.md)|Indica el estado de SQL para un objeto de **error** específico.|  
-|[State](./state-property-ado.md)|Indica para todos los objetos aplicables si el estado del objeto es abierto o cerrado. Indica para todos los objetos aplicables que ejecutan un método asincrónico, si el estado actual del objeto es conexión, ejecución o recuperación.|  
+|[Estado](./state-property-ado.md)|Indica para todos los objetos aplicables si el estado del objeto es abierto o cerrado. Indica para todos los objetos aplicables que ejecutan un método asincrónico, si el estado actual del objeto es conexión, ejecución o recuperación.|  
 |[Status (campo de ADO)](./status-property-ado-field.md)|Indica el estado de un objeto de **campo** .|  
 |[Status (conjunto de registros ADO)](./status-property-ado-recordset.md)|Indica el estado del registro actual en relación con las actualizaciones por lotes u otras operaciones masivas.|  
 |[StayInSync](./stayinsync-property.md)|Indica, en un objeto de **conjunto de registros** jerárquico, si la referencia a los registros secundarios subyacentes (es decir, el *capítulo*) cambia cuando cambia la posición de la fila primaria.|  
 |[Propiedad de la secuencia](./stream-property.md)|Obtiene o establece un objeto de **flujo** de OLE DB de/en un objeto **ADOStreamConstruction** .|  
-|[Tipo](./type-property-ado.md)|Indica el tipo operativo o el tipo de datos de un **parámetro**, **campo**o objeto de **propiedad** .|  
+|[Type](./type-property-ado.md)|Indica el tipo operativo o el tipo de datos de un **parámetro**, **campo** o objeto de **propiedad** .|  
 |[Type (secuencia de ADO)](./type-property-ado-stream.md)|Indica el tipo de datos contenidos en la **secuencia** (binario o de texto).|  
 |[UnderlyingValue](./underlyingvalue-property.md)|Indica el valor actual de la base de datos para un objeto de **campo** .|  
-|[Valor](./value-property-ado.md)|Indica el valor asignado a un **campo**, un **parámetro**o un objeto de **propiedad** .|  
+|[Valor](./value-property-ado.md)|Indica el valor asignado a un **campo**, un **parámetro** o un objeto de **propiedad** .|  
 |[Versión](./version-property-ado.md)|Indica el número de versión de ADO.|  
   
 ## <a name="see-also"></a>Consulte también  

@@ -7,18 +7,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Catalog object [ADO MD], members
 ms.assetid: e9566718-9122-490d-8a8e-da8f605246f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 608c380da1c03fc6aed6381ecd460f2bbc3b9b8c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2b69050452e444926ad5781d427717a55f564840
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987236"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166146"
 ---
 # <a name="catalog-object-properties-methods-and-events-ado-md"></a>Propiedades de objeto de catálogo, métodos y eventos (ADO MD)
 ## <a name="propertiescollections"></a>Propiedades/colecciones  
@@ -31,7 +31,7 @@ ms.locfileid: "88987236"
 ## <a name="methods"></a>Métodos  
  Ninguno.  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

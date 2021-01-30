@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_repldone
 - sp_repldone_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a8e32127986fb67a28abfa2433caefc044ed1b2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4889616070df4a42150272e0c9cd17aee941b063
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538607"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203147"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,11 +48,11 @@ sp_repldone [ @xactid= ] xactid
   
 `[ @xact_seqno = ] xact_seqno` Es el LSN del último registro de la última transacción distribuida del servidor. *xact_seqno* es **binario (10)** y no tiene ningún valor predeterminado.  
   
-`[ @numtrans = ] numtrans` Es el número de transacciones distribuidas. *numtrans* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @numtrans = ] numtrans` Es el número de transacciones distribuidas. *numtrans* es de **tipo int** y no tiene ningún valor predeterminado.  
   
-`[ @time = ] time` Es el número de milisegundos, si se proporciona, necesarios para distribuir el último lote de transacciones. *Time* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @time = ] time` Es el número de milisegundos, si se proporciona, necesarios para distribuir el último lote de transacciones. *Time* es de **tipo int** y no tiene ningún valor predeterminado.  
   
-`[ @reset = ] reset` Es el estado de restablecimiento. *RESET* es de **tipo int**y no tiene ningún valor predeterminado. Si es **1**, todas las transacciones replicadas del registro se marcan como distribuidas. Si es **0**, el registro de transacciones se restablece a la primera transacción replicada y no hay transacciones replicadas marcadas como distribuidas. *RESET* solo es válido cuando *xactid* y *xact_seqno* son NULL.  
+`[ @reset = ] reset` Es el estado de restablecimiento. *RESET* es de **tipo int** y no tiene ningún valor predeterminado. Si es **1**, todas las transacciones replicadas del registro se marcan como distribuidas. Si es **0**, el registro de transacciones se restablece a la primera transacción replicada y no hay transacciones replicadas marcadas como distribuidas. *RESET* solo es válido cuando *xactid* y *xact_seqno* son NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

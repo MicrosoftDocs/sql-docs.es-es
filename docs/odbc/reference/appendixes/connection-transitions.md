@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - transitioning states [ODBC], connection
 - connection transitions [ODBC]
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5f7fecf0ad25311e9d96f4db8554c1cdbf24e91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60a26505af6d53265111bd24b08990e61b992902
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88339451"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165422"
 ---
 # <a name="connection-transitions"></a>Transiciones de conexión
 Las conexiones ODBC tienen los Estados siguientes.  
   
-|State|Descripción|  
+|Estado|Descripción|  
 |-----------|-----------------|  
 |C0|Entorno sin asignar, conexión sin asignar|  
 |C1|Entorno asignado, conexión sin asignar|  
@@ -54,7 +54,7 @@ Las conexiones ODBC tienen los Estados siguientes.
   
  [4] esta fila muestra las transiciones cuando se SQL_HANDLE_DESC *HandleType* .  
   
- [5] si se llama a **SQLAllocHandle** con *OutputHandlePtr* que apuntan a un identificador válido, se sobrescribe ese identificador sin tener en cuenta el contenido anterior de ese control y podrían producirse problemas con los controladores ODBC. La programación de aplicaciones ODBC es incorrecta para llamar a **SQLAllocHandle** dos veces con la misma variable de aplicación definida para * \* OutputHandlePtr* sin llamar a **SQLFreeHandle** para liberar el identificador antes de reasignarlo. Si se sobrescriben los identificadores ODBC de este modo, se puede producir un comportamiento incoherente o errores en la parte de los controladores ODBC.  
+ [5] si se llama a **SQLAllocHandle** con *OutputHandlePtr* que apuntan a un identificador válido, se sobrescribe ese identificador sin tener en cuenta el contenido anterior de ese control y podrían producirse problemas con los controladores ODBC. La programación de aplicaciones ODBC es incorrecta para llamar a **SQLAllocHandle** dos veces con la misma variable de aplicación definida para *\* OutputHandlePtr* sin llamar a **SQLFreeHandle** para liberar el identificador antes de reasignarlo. Si se sobrescriben los identificadores ODBC de este modo, se puede producir un comportamiento incoherente o errores en la parte de los controladores ODBC.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   
@@ -145,9 +145,9 @@ Las conexiones ODBC tienen los Estados siguientes.
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |ADMITIR|ADMITIR|ADMITIR|ADMITIR|ADMITIR|--[1] C6 [2] C6 [3]|--|  
   
- [1] la conexión estaba en modo de confirmación automática y la instrucción ejecutada no era una *cursor* *especificación* de cursor (como una instrucción SELECT). o la conexión estaba en modo de confirmación manual y la instrucción ejecutada no inició una transacción.  
+ [1] la conexión estaba en modo de confirmación automática y la instrucción ejecutada no era una  *especificación* de cursor (como una instrucción SELECT). o la conexión estaba en modo de confirmación manual y la instrucción ejecutada no inició una transacción.  
   
- [2] la conexión estaba en modo de confirmación automática y la instrucción ejecutada era una *cursor* *especificación* de cursor (como una instrucción SELECT).  
+ [2] la conexión estaba en modo de confirmación automática y la instrucción ejecutada era una  *especificación* de cursor (como una instrucción SELECT).  
   
  [3] la conexión estaba en modo de confirmación manual y el origen de datos comenzó una transacción.  
   

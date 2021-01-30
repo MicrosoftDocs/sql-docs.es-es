@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4cb98b791f35a122643402344b6195246c19226f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 98362a1c4bc122c46b84b5521168979283eb966d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990296"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166963"
 ---
 # <a name="openschema-method-example-vc"></a>Ejemplo del método OpenSchema (VC ++)
-En este ejemplo se usa el método [OpenSchema](./openschema-method.md) para mostrar el nombre y el tipo de cada tabla en la base de datos ***pubs*** .  
+En este ejemplo se usa el método [OpenSchema](./openschema-method.md) para mostrar el nombre y el tipo de cada tabla en la base de datos ***pubs** _.  
   
 ```  
 // OpenSchemaMethodExample.cpp  
@@ -108,7 +108,7 @@ void OpenSchemaX2() {
   
       // Create a safearray which takes four elements,and pass it as   
       // 2nd parameter in OpenSchema method.  
-      SAFEARRAY FAR* psa = NULL;  
+      SAFEARRAY FAR_ psa = NULL;  
       SAFEARRAYBOUND rgsabound;  
       _variant_t  var;  
       _variant_t  Array;  

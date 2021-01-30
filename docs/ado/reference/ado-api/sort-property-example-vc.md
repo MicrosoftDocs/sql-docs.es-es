@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fe3fdab656afa12de49ee5858783ef97c89c24c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a9cfb5a0f09e7f990fe5dd1f4ce21478c6d34446
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989026"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166531"
 ---
 # <a name="sort-property-example-vc"></a>Ejemplo de la propiedad Sort (VC ++)
-En este ejemplo se usa la propiedad [Sort](./sort-property.md) del objeto de [conjunto de registros](./recordset-object-ado.md) para reordenar las filas de un **conjunto de registros** derivado de la tabla ***authors*** de la base de datos **pubs** . Una rutina de utilidad secundaria imprime cada fila.  
+En este ejemplo se usa la propiedad [Sort](./sort-property.md) del objeto de [conjunto de registros](./recordset-object-ado.md) para reordenar las filas de un **conjunto de registros** derivado de la **tabla _authors_*_ de la base de datos _* pubs** . Una rutina de utilidad secundaria imprime cada fila.  
   
 ```  
 // SortPropertyExample.cpp  

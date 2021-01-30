@@ -1,12 +1,12 @@
 ---
-title: Sys. sp_rda_test_connection (Transact-SQL) | Microsoft Docs
-description: Aprenda a usar sys. sp_rda_test_connection para probar la conexión de SQL Server al servidor remoto de Azure e informar de los problemas que pueden impedir la migración de datos.
+title: sys.sp_rda_test_connection (Transact-SQL) | Microsoft Docs
+description: Aprenda a usar sys.sp_rda_test_connection para probar la conexión desde SQL Server al servidor remoto de Azure e informar de problemas que pueden impedir la migración de datos.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_rda_test_connection
 - sys.sp_rda_test_connection_TSQL
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 031e3abe622a4a15fa9656e65bce80b5eaf27365
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e584604a0229e3e2e0c213b70d8fd4bca0321c2b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540411"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211718"
 ---
-# <a name="syssp_rda_test_connection-transact-sql"></a>Sys. sp_rda_test_connection (Transact-SQL)
+# <a name="syssp_rda_test_connection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Prueba la conexión desde SQL Server al servidor remoto de Azure e informa de los problemas que pueden impedir la migración de datos.  
@@ -49,9 +49,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N '*azure_server_fully_qualified_address*'  
  La dirección completa del servidor de Azure.  
   
--   Si proporciona un valor para ** \@ database_name**, pero la base de datos especificada no está habilitada para Stretch, tendrá que proporcionar un valor para ** \@ SERVER_ADDRESS**.  
+-   Si proporciona un valor para **\@ database_name**, pero la base de datos especificada no está habilitada para Stretch, tendrá que proporcionar un valor para **\@ SERVER_ADDRESS**.  
   
--   Si proporciona un valor para ** \@ database_name**y la base de datos especificada está habilitada para Stretch, no tiene que proporcionar un valor para ** \@ SERVER_ADDRESS**. Si proporciona un valor para ** \@ SERVER_ADDRESS**, el procedimiento almacenado lo omite y usa el servidor de Azure existente que ya está asociado a la base de datos habilitada para Stretch.  
+-   Si proporciona un valor para **\@ database_name** y la base de datos especificada está habilitada para Stretch, no tiene que proporcionar un valor para **\@ SERVER_ADDRESS**. Si proporciona un valor para **\@ SERVER_ADDRESS**, el procedimiento almacenado lo omite y usa el servidor de Azure existente que ya está asociado a la base de datos habilitada para Stretch.  
   
  @azure_username = N '*azure_username*  
  El nombre de usuario para el servidor remoto de Azure.  

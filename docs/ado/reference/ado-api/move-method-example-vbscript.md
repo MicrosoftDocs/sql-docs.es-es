@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a05f873e14f1d722d357288f07d19931139f8bb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c02d388e4e690b83859e4d340b3c49caedf4e83e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990576"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167105"
 ---
 # <a name="move-method-example-vbscript"></a>Ejemplo del método Move (VBScript)
 En este ejemplo se usa el método [Move](./move-method-ado.md) para colocar el puntero de registro, en función de los datos proporcionados por el usuario.  

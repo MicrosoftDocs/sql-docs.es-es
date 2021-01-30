@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ADO, objects and interfaces
 - objects [ADO]
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80391605a0480d8967afb1e0240168a393f09363
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c694a5051729a6ce9b925014ae93b5dbde11f5d9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976316"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164895"
 ---
 # <a name="ado-objects-and-interfaces"></a>Interfaces y objetos ADO
 Las relaciones entre estos objetos se representan en el [modelo de objetos ADO](./ado-object-model.md).  
@@ -39,7 +39,7 @@ Las relaciones entre estos objetos se representan en el [modelo de objetos ADO](
 |[Campo](./field-object.md)|Representa una columna de datos con un tipo de datos común.|  
 |[Parámetro](./parameter-object.md)|Representa un parámetro o un argumento asociado a un objeto de **comando** basado en una consulta con parámetros o un procedimiento almacenado.<br /><br /> El objeto de **parámetro** no es seguro para el scripting.|  
 |[Propiedad](./property-object-ado.md)|Representa una característica dinámica de un objeto ADO definido por el proveedor.|  
-|[Registro](./record-object-ado.md)|Representa una fila de un **conjunto de registros**o un directorio o archivo en un sistema de archivos. El objeto de **registro** es seguro para el scripting.|  
+|[Registro](./record-object-ado.md)|Representa una fila de un **conjunto de registros** o un directorio o archivo en un sistema de archivos. El objeto de **registro** es seguro para el scripting.|  
 |[DataRecordsets](./recordset-object-ado.md)|Representa el conjunto de registros de una tabla base o los resultados de un comando ejecutado. En cualquier momento, el objeto de **conjunto de registros** hace referencia a un único registro del conjunto como el registro actual.<br /><br /> El objeto de **conjunto de registros** es seguro para el scripting.|  
 |[Stream](./stream-object-ado.md)|Representa un flujo binario de datos.<br /><br /> El objeto de **secuencia** es seguro para el scripting.|  
   

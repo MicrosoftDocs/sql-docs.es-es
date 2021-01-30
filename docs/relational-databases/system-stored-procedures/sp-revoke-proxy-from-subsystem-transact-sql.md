@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_revoke_login_from_subsystem
 - sp_revoke_login_from_subsystem_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d58ec6db017fee031a2de2e242a18281eb3b7a68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9457a1d9dd0d9fd01a7418cd56e772902d593b6f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469255"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211862"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +44,15 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @proxy_id = ] id` Número de identificación del proxy del que se va a revocar el acceso. La *proxy_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *proxy_id* o *proxy_name* , pero no se pueden especificar ambos.  
+`[ @proxy_id = ] id` Número de identificación del proxy del que se va a revocar el acceso. La *proxy_id* es de **tipo int** y su valor predeterminado es NULL. Se debe especificar *proxy_id* o *proxy_name* , pero no se pueden especificar ambos.  
   
-`[ @proxy_name = ] 'proxy_name'` Nombre del proxy del que se va a revocar el acceso. La *proxy_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *proxy_id* o *proxy_name* , pero no se pueden especificar ambos.  
+`[ @proxy_name = ] 'proxy_name'` Nombre del proxy del que se va a revocar el acceso. La *proxy_name* es de **tipo sysname y su** valor predeterminado es NULL. Se debe especificar *proxy_id* o *proxy_name* , pero no se pueden especificar ambos.  
   
-`[ @subsystem_id = ] id` Número de ID. del subsistema al que se va a revocar el acceso. La *subsystem_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *subsystem_id* o *subsystem_name* , pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
+`[ @subsystem_id = ] id` Número de ID. del subsistema al que se va a revocar el acceso. La *subsystem_id* es de **tipo int** y su valor predeterminado es NULL. Se debe especificar *subsystem_id* o *subsystem_name* , pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**2**|Script ActiveX<br /><br /> Importante el subsistema de scripts ActiveX se quitará del agente en una versión futura de ** \* . \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
+|**2**|Script ActiveX<br /><br /> Importante el subsistema de scripts ActiveX se quitará del agente en una versión futura de **\* . \* \* \*** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
 |**3**|Sistema operativo (CmdExec)|  
 |**4**|Agente de instantáneas de replicación|  
 |**5**|Agente de registro del LOG de replicación|  
@@ -64,7 +64,7 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] ejecución de paquetes|  
 |**12**|Script de PowerShell|  
   
-`[ @subsystem_name = ] 'subsystem_name'` Nombre del subsistema al que se va a revocar el acceso. La *subsystem_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *subsystem_id* o *subsystem_name* , pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
+`[ @subsystem_name = ] 'subsystem_name'` Nombre del subsistema al que se va a revocar el acceso. La *subsystem_name* es de **tipo sysname y su** valor predeterminado es NULL. Se debe especificar *subsystem_id* o *subsystem_name* , pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
   
 |Value|Descripción|  
 |-----------|-----------------|  

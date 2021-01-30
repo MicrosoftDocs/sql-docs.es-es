@@ -1,12 +1,12 @@
 ---
-title: Sys. sp_rda_reconcile_columns (Transact-SQL) | Microsoft Docs
-description: Más información sobre sys. sp_rda_reconcile_columns. Use este procedimiento almacenado para conciliar las columnas de las tablas remotas de Azure y las tablas de SQL Server habilitadas para Stretch.
+title: sys.sp_rda_reconcile_columns (Transact-SQL) | Microsoft Docs
+description: Más información sobre sys.sp_rda_reconcile_columns. Use este procedimiento almacenado para conciliar las columnas de las tablas remotas de Azure y las tablas de SQL Server habilitadas para Stretch.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_rda_reconcile_columns
 - sys.sp_rda_reconcile_columns_TSQL
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1788e373c8bab330182df9338e447946cda87bd3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8eb33cbb1fd2975d96a727f6a7fde457c9827cc8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538451"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211781"
 ---
-# <a name="syssp_rda_reconcile_columns-transact-sql"></a>Sys. sp_rda_reconcile_columns (Transact-SQL)
+# <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Concilia las columnas de la tabla remota de Azure con las columnas de la tabla SQL Server habilitada para Stretch.  
@@ -45,7 +45,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \@objName = '* \@ objName*'  
+ \@objName = '*\@ objName*'  
  Nombre de la tabla de SQL Server habilitada para Stretch.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

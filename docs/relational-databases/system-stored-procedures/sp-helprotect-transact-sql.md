@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helprotect
 - sp_helprotect_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fff150e26e7342beda98b2eb362e1fbb310cdab0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f64ca2d34d11811bec87c1e4e378b424065299c4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538749"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211932"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89538749"
   Devuelve un informe con información acerca de los permisos de usuario para un objeto o los permisos de una instrucción en la base de datos actual.  
   
 > [!IMPORTANT]  
->  **sp_helprotect** no devuelve información acerca de los elementos protegibles que se introdujeron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Use [Sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) y [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) en su lugar.  
+>  **sp_helprotect** no devuelve información acerca de los elementos protegibles que se introdujeron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Utilice [Sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) y [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) en su lugar.  
   
  No muestra los permisos que se asignan siempre a los roles fijos de servidor o a los roles fijos de base de datos. No incluye los inicios de sesión o los usuarios que reciben los permisos en función de su pertenencia a un rol.  
   
@@ -52,11 +52,11 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
  Si *object_statement* es una instrucción, puede ser una instrucción CREATE.  
   
-`[ @username = ] 'security_account'` Es el nombre de la entidad de seguridad para la que se devuelven los permisos. *security_account* es de **tipo sysname y su**valor predeterminado es null, que devuelve todas las entidades de seguridad en la base de datos actual. *security_account* debe existir en la base de datos actual.  
+`[ @username = ] 'security_account'` Es el nombre de la entidad de seguridad para la que se devuelven los permisos. *security_account* es de **tipo sysname y su** valor predeterminado es null, que devuelve todas las entidades de seguridad en la base de datos actual. *security_account* debe existir en la base de datos actual.  
   
-`[ @grantorname = ] 'grantor'` Es el nombre de la entidad de seguridad que concedió permisos. el *otorgante* es de **tipo sysname y su**valor predeterminado es null, que devuelve toda la información de los permisos concedidos por cualquier entidad de seguridad en la base de datos.  
+`[ @grantorname = ] 'grantor'` Es el nombre de la entidad de seguridad que concedió permisos. el *otorgante* es de **tipo sysname y su** valor predeterminado es null, que devuelve toda la información de los permisos concedidos por cualquier entidad de seguridad en la base de datos.  
   
-`[ @permissionarea = ] 'type'`Es una cadena de caracteres que indica si se van a mostrar los permisos de objeto **(cadena de**caracteres **o**), los permisos de instrucción (cadena de caracteres) o ambos (**so**). *Type* es de tipo **VARCHAR (10)** y su valor predeterminado es **os**. el *tipo* puede ser cualquier combinación **de o** y **s**, con o sin comas o espacios entre **o** y **s**.  
+`[ @permissionarea = ] 'type'`Es una cadena de caracteres que indica si se van a mostrar los permisos de objeto **(cadena de** caracteres **o**), los permisos de instrucción (cadena de caracteres) o ambos (**so**). *Type* es de tipo **VARCHAR (10)** y su valor predeterminado es **os**. el *tipo* puede ser cualquier combinación **de o** y **s**, con o sin comas o espacios entre **o** y **s**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replqueuemonitor
 - sp_replqueuemonitor_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db91c3bef035398fa98d8eeb88f68bbd1c5cf09a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8fa6635b4f31692e5f45e848043e44496e2d702f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534936"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211668"
 ---
 # <a name="sp_replqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,17 +42,17 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. El servidor debe estar configurado para publicación. Su valor es NULL para todos los publicadores.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname y su** valor predeterminado es NULL. El servidor debe estar configurado para publicación. Su valor es NULL para todos los publicadores.  
   
-`[ @publisherdb = ] 'publisher_db' ]` Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. Su valor es NULL para todas las bases de datos de publicaciones.  
+`[ @publisherdb = ] 'publisher_db' ]` Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su** valor predeterminado es NULL. Su valor es NULL para todas las bases de datos de publicaciones.  
   
-`[ @publication = ] 'publication' ]` Es el nombre de la publicación. *Publication*es de **tipo sysname y su**valor predeterminado es NULL. Su valor es NULL para todas las publicaciones.  
+`[ @publication = ] 'publication' ]` Es el nombre de la publicación. *Publication* es de **tipo sysname y su** valor predeterminado es NULL. Su valor es NULL para todas las publicaciones.  
   
-`[ @tranid = ] 'tranid' ]` Es el identificador de la transacción. *tranid*es de **tipo sysname y su**valor predeterminado es NULL. Su valor es NULL para todas las transacciones.  
+`[ @tranid = ] 'tranid' ]` Es el identificador de la transacción. *tranid* es de **tipo sysname y su** valor predeterminado es NULL. Su valor es NULL para todas las transacciones.  
   
-`[ @queuetype = ] 'queuetype' ]` Es el tipo de cola que almacena las transacciones. *queuetype* es de **tinyint** con un valor predeterminado de **0**y puede tener uno de estos valores.  
+`[ @queuetype = ] 'queuetype' ]` Es el tipo de cola que almacena las transacciones. *queuetype* es de **tinyint** con un valor predeterminado de **0** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Todos los tipos de colas|  
 |**1**|Message Queue Server|  

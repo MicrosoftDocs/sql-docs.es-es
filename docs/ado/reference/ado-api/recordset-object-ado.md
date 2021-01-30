@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff23c57ae3ecf25e7328d304f9716ad24f2aba7e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ecf73bd3708fc33d8ada106dcaa4fb6e1f0b5503
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989746"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166696"
 ---
 # <a name="recordset-object-ado"></a>Objeto de conjunto de registros (ADO)
 Representa el conjunto completo de registros de una tabla base o los resultados de un comando ejecutado. En cualquier momento, el objeto de **conjunto de registros** hace referencia a un único registro del conjunto como el registro actual.  
@@ -49,13 +49,13 @@ Representa el conjunto completo de registros de una tabla base o los resultados 
   
  Al abrir un **conjunto de registros**, el registro actual se coloca en el primer registro (si existe) y las propiedades [BOF](./bof-eof-properties-ado.md) y [EOF](./bof-eof-properties-ado.md) se establecen en **false**. Si no hay ningún registro, los valores de la propiedad **BOF** y **EOF** son **true**.  
   
- Puede usar los métodos [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**y **MovePrevious** ; método [Move](./move-method-ado.md) ; y las propiedades [AbsolutePosition](./absoluteposition-property-ado.md), [AbsolutePage](./absolutepage-property-ado.md)y [Filter](./filter-property.md) para cambiar la posición del registro actual, suponiendo que el proveedor admita la funcionalidad pertinente. Los objetos de **conjunto de registros** de solo avance solo admiten el método [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) . Cuando se usan los métodos **Move** para visitar cada registro (o enumerar el **conjunto de registros**), se pueden usar las propiedades **BOF** y **EOF** para determinar si se ha movido más allá del principio o el final del **conjunto de registros**.  
+ Puede usar los métodos [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext** y **MovePrevious** ; método [Move](./move-method-ado.md) ; y las propiedades [AbsolutePosition](./absoluteposition-property-ado.md), [AbsolutePage](./absolutepage-property-ado.md)y [Filter](./filter-property.md) para cambiar la posición del registro actual, suponiendo que el proveedor admita la funcionalidad pertinente. Los objetos de **conjunto de registros** de solo avance solo admiten el método [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) . Cuando se usan los métodos **Move** para visitar cada registro (o enumerar el **conjunto de registros**), se pueden usar las propiedades **BOF** y **EOF** para determinar si se ha movido más allá del principio o el final del **conjunto de registros**.  
   
  Antes de usar cualquier funcionalidad de un objeto de **conjunto de registros** , debe llamar al método **Supports** en el objeto para comprobar que la funcionalidad es compatible o disponible. No debe utilizar la funcionalidad cuando el método **Supports** devuelve false. Por ejemplo, puede usar el método **MovePrevious** solo si `Recordset.Supports(adMovePrevious)` devuelve **true**. De lo contrario, obtendrá un error porque el objeto de **conjunto de registros** podría haberse cerrado y la funcionalidad se representara no disponible en la instancia. Si no se admite una característica que le interese, **Supports** también devolverá FALSE. En este caso, debe evitar llamar a la propiedad o al método correspondiente en el objeto de **conjunto de registros** .  
   
  Los objetos de **conjunto de registros** pueden admitir dos tipos de actualización: inmediato y por lotes. En la actualización inmediata, todos los cambios en los datos se escriben inmediatamente en el origen de datos subyacente una vez que se llama al método [Update](./update-method.md) . También puede pasar matrices de valores como parámetros con los métodos [AddNew](./addnew-method-ado.md) y **Update** y actualizar simultáneamente varios campos en un registro.  
   
- Si un proveedor admite la actualización por lotes, puede hacer que la memoria caché del proveedor cambie a más de un registro y, a continuación, transmitirlos en una única llamada a la base de datos con el método [UpdateBatch](./updatebatch-method.md) . Esto se aplica a los cambios realizados con los métodos **AddNew**, **Update**y [Delete](./delete-method-ado-recordset.md) . Después de llamar al método **UpdateBatch** , puede usar la propiedad [status](./status-property-ado-recordset.md) para comprobar los conflictos de datos con el fin de resolverlos.  
+ Si un proveedor admite la actualización por lotes, puede hacer que la memoria caché del proveedor cambie a más de un registro y, a continuación, transmitirlos en una única llamada a la base de datos con el método [UpdateBatch](./updatebatch-method.md) . Esto se aplica a los cambios realizados con los métodos **AddNew**, **Update** y [Delete](./delete-method-ado-recordset.md) . Después de llamar al método **UpdateBatch** , puede usar la propiedad [status](./status-property-ado-recordset.md) para comprobar los conflictos de datos con el fin de resolverlos.  
   
 > [!NOTE]
 >  Para ejecutar una consulta sin usar un objeto de [comando](./command-object-ado.md) , pase una cadena de consulta al método **Open** de un objeto de **conjunto de registros** . Sin embargo, se requiere un objeto de **comando** si desea conservar el texto del comando y volver a ejecutarlo, o usar parámetros de consulta.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_fts_index_keywords_by_document_TSQL
 - dm_fts_index_keywords_by_document_TSQL
@@ -23,12 +23,12 @@ ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 353fcb321549546ff1b44956d5ebc20826e6c0e3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c11b68f45ef5f42cb4e46fdfb7c2c975df5483c5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484707"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193799"
 ---
 # <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -72,7 +72,7 @@ sys.dm_fts_index_keywords_by_document
 |document_id|**int**|Identificador del documento o fila en que el término actual se indizó con texto completo. Este identificador corresponde al valor de clave de texto completo de ese documento o fila.|  
 |occurrence_count|**int**|Número de repeticiones de la palabra clave actual en el documento o la fila que se indica mediante **document_id**. Cuando se especifica '*search_property_name*', occurrence_count muestra solo el número de apariciones de la palabra clave actual en la propiedad de búsqueda especificada dentro del documento o la fila.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La información devuelta por sys.dm_fts_index_keywords_by_document es útil para averiguar lo siguiente, entre otras cosas:  
   
 -   El número total de palabras clave que contiene un índice de texto completo.  

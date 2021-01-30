@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - RecordCreateOptionsEnum
@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4393196078b7800e1f1ec324c612918d7b8380e9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 99c13920d8a786b4d9eae0d22a794b9ed34ddbb0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989826"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166731"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Especifica si se debe abrir un **registro** existente o crear un nuevo **registro** para el método [Open](./open-method-ado-record.md) del objeto [Record](./record-object-ado.md) . Los valores se pueden combinar con un operador AND.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
-|**adCreateCollection**|0x2000|Crea un nuevo **registro** en el nodo especificado por el parámetro *source* , en lugar de abrir un **registro**existente. Si el origen apunta a un nodo existente, se produce un error en tiempo de ejecución, a menos que **adCreateCollection** se combine con **adOpenIfExists** o **adCreateOverwrite**.|  
+|**adCreateCollection**|0x2000|Crea un nuevo **registro** en el nodo especificado por el parámetro *source* , en lugar de abrir un **registro** existente. Si el origen apunta a un nodo existente, se produce un error en tiempo de ejecución, a menos que **adCreateCollection** se combine con **adOpenIfExists** o **adCreateOverwrite**.|  
 |**adCreateNonCollection**|0|Crea un nuevo **registro** de tipo [adSimpleRecord](./recordtypeenum.md).|  
-|**adCreateOverwrite**|0x4000000|Modifica las marcas de creación **adCreateCollection**, **adCreateNonCollection**y **adCreateStructDoc**. Cuando se usa o con este valor y uno de los valores de la marca de creación, si la dirección URL de origen apunta a un nodo o **registro**existente, se sobrescribe el **registro** existente y se crea uno nuevo en su lugar. Este valor no se puede usar junto con **adOpenIfExists**.|  
-|**adCreateStructDoc**|0x80000000|Crea un nuevo **registro** de tipo [adStructDoc](./recordtypeenum.md), en lugar de abrir un **registro**existente.|  
+|**adCreateOverwrite**|0x4000000|Modifica las marcas de creación **adCreateCollection**, **adCreateNonCollection** y **adCreateStructDoc**. Cuando se usa o con este valor y uno de los valores de la marca de creación, si la dirección URL de origen apunta a un nodo o **registro** existente, se sobrescribe el **registro** existente y se crea uno nuevo en su lugar. Este valor no se puede usar junto con **adOpenIfExists**.|  
+|**adCreateStructDoc**|0x80000000|Crea un nuevo **registro** de tipo [adStructDoc](./recordtypeenum.md), en lugar de abrir un **registro** existente.|  
 |**adFailIfNotExists**|-1|Predeterminada. Da como resultado un error en tiempo de ejecución si el *origen* apunta a un nodo no existente.|  
-|**adOpenIfExists**|0x2000000|Modifica las marcas de creación **adCreateCollection**, **adCreateNonCollection**y **adCreateStructDoc**. Cuando se usa o con este valor y uno de los valores de la marca de creación, si la dirección URL de origen apunta a un objeto de **registro** o nodo existente, el proveedor debe abrir el **registro** existente en lugar de crear uno nuevo. Este valor no se puede usar junto con **adCreateOverwrite**.|  
+|**adOpenIfExists**|0x2000000|Modifica las marcas de creación **adCreateCollection**, **adCreateNonCollection** y **adCreateStructDoc**. Cuando se usa o con este valor y uno de los valores de la marca de creación, si la dirección URL de origen apunta a un objeto de **registro** o nodo existente, el proveedor debe abrir el **registro** existente en lugar de crear uno nuevo. Este valor no se puede usar junto con **adCreateOverwrite**.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
  Estas constantes no tienen equivalentes de ADO/WFC.  
