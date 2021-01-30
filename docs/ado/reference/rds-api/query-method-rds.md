@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Query method [ADO]
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d65da0531e9387e94f4d22c734821779c53b9639
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 0826d80d786f6f6e944c284422e2a891b509025c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724443"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163707"
 ---
 # <a name="query-method-rds"></a>Método Query (RDS)
 Utiliza una cadena de consulta SQL válida para devolver un [conjunto de registros](../ado-api/recordset-object-ado.md).  

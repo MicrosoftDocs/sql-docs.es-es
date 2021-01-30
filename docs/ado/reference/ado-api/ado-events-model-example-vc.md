@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5ce070edb9058f36bab18d64a06f50b867bbe55
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 15999a2d20aa8374fcd29b007bc95035bb5f6185
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976476"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161627"
 ---
 # <a name="ado-events-model-example-vc"></a>Ejemplo de modelo de eventos de ADO (VC ++)
 En la sección Visual C++ de la [creación de instancias de eventos de ADO por lenguaje](../../guide/data/ado-event-instantiation-by-language.md) se ofrece una descripción general de cómo crear una instancia del modelo de eventos de ADO. El siguiente es un ejemplo específico de la creación de instancias del modelo de eventos dentro del entorno creado por la directiva **#import** .  
   
  La descripción general utiliza **adoint. h** como referencia para las firmas de método. Sin embargo, algunos detalles de la descripción general cambian ligeramente como resultado del uso de la directiva **#import** :  
   
--   La directiva **#import** resuelve los tipos de datos de la firma del método, los tipos y los modificadores de **typedef**en sus formatos fundamentales.  
+-   La directiva **#import** resuelve los tipos de datos de la firma del método, los tipos y los modificadores de **typedef** en sus formatos fundamentales.  
   
 -   Todos los métodos virtuales puros que se deben sobrescribir tienen el prefijo "**raw_**".  
   

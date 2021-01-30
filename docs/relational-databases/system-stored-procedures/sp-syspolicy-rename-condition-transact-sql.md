@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_rename_condition
 - sp_syspolicy_rename_condition_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1df9ab11c50340b75d51481822f4a8925df34a51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2fce41b3ac9252f3fc1d4648656310baad12e388
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485638"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161352"
 ---
 # <a name="sp_syspolicy_rename_condition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +41,11 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` Es el nombre de la condición cuyo nombre se va a cambiar. *Name* es de **tipo sysname**y se debe especificar si *condition_id* es NULL.  
+`[ @name = ] 'name'` Es el nombre de la condición cuyo nombre se va a cambiar. *Name* es de **tipo sysname** y se debe especificar si *condition_id* es NULL.  
   
-`[ @condition_id = ] condition_id` Es el identificador de la condición cuyo nombre se va a cambiar. *condition_id* es de **tipo int**y se debe especificar si *Name* es NULL.  
+`[ @condition_id = ] condition_id` Es el identificador de la condición cuyo nombre se va a cambiar. *condition_id* es de **tipo int** y se debe especificar si *Name* es NULL.  
   
-`[ @new_name = ] 'new_name'` Es el nuevo nombre de la condición. *new_name* es **sysname**y es obligatorio. No puede ser NULL ni una cadena vacía.  
+`[ @new_name = ] 'new_name'` Es el nuevo nombre de la condición. *new_name* es **sysname** y es obligatorio. No puede ser NULL ni una cadena vacía.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -71,7 +71,7 @@ EXEC msdb.dbo.sp_syspolicy_rename_condition @name = N'Change Tracking Enabled'
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

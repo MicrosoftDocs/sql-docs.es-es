@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - User25::SetPermissions
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1333fc42f98ba787cfcc139b40932038307e5592
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3c5db51dc0af4f8e86fbaa68b20dbd82a327c038
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983296"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164040"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions (método, ADOX)
 Especifica los permisos para un [Grupo](./group-object-adox.md) o [usuario](./user-object-adox.md) en un objeto.  

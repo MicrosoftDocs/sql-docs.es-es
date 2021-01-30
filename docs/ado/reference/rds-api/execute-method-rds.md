@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcb81dbe0fc719b2bb31c08a0799e4bc5084519a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 2e5ad157ffccc07ba0b64064122f7f0e55ccd422
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720791"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163806"
 ---
 # <a name="execute-method-rds"></a>Execute (método) (RDS)
 Ejecuta la solicitud y crea un conjunto de registros ADO para su uso en ADO 2,5 y versiones posteriores.  
@@ -63,7 +63,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
   
  4 =*AllParamInfoSupplied* el autor de la llamada garantiza que la información de parámetros de todos los parámetros se proporciona en *pParameters*.  
   
- 8 = la información del parámetro*GetInfo* de la consulta se obtendrá del proveedor de OLE DB y se devolverá en el parámetro *pParameters* . No se ejecuta la consulta y no se devuelve ningún conjunto de registros.  
+ 8 = la información del parámetro *GetInfo* de la consulta se obtendrá del proveedor de OLE DB y se devolverá en el parámetro *pParameters* . No se ejecuta la consulta y no se devuelve ningún conjunto de registros.  
   
  16 =*GetHiddenColumns* el conjunto de registros se abrirá con **adLockBatchOptimistic** y las columnas ocultas se incluirán en el conjunto de registros.  
   

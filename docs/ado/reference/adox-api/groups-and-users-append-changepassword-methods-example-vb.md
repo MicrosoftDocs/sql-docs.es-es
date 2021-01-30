@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 824cf44560335152ac6079c4ff61f2177368447c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6864d99294ebd68b07c41b69bca6e18f479a4935
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984386"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164240"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Ejemplo de métodos Append y ChangePassword de grupos y usuarios (VB)
 En este ejemplo se muestra el método [Append](./append-method-adox-groups.md) de los [grupos](./groups-collection-adox.md), así como el método [Append](./append-method-adox-users.md) de [los usuarios](./users-collection-adox.md) mediante la adición de un nuevo [Grupo](./group-object-adox.md) y un nuevo [usuario](./user-object-adox.md) al sistema. El nuevo **Grupo** se anexa a la colección de **grupos** del nuevo **usuario**. Por lo tanto, el nuevo **usuario** se agrega al **Grupo**. Además, el método [ChangePassword](./changepassword-method-adox.md) se usa para especificar la contraseña del **usuario** .  

@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - IRDSService interface [ADO]
 ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98c5e5e24952cb0aa4f2c28e50cabd1bd06d64ad
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5656474a840c3f43b51179c43bfafe9ee78d70b4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724486"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163733"
 ---
 # <a name="irdsservice-interface-rds"></a>Interfaz IRDSService (RDS)
 Expone el método [InvokeService (RDS)](./invokeservice-rds.md) , que se usa para devolver un puntero a la interfaz solicitada en una versión más capaz del objeto.  

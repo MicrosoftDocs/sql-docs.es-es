@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::AddNew
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4695d1cf70328adad910d5b2b34e6b346b8049a4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4aedf124f13374c5756519b86a60c1164c0df046
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976806"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161740"
 ---
 # <a name="addnew-method-ado"></a>AddNew (método) (ADO)
 Crea un nuevo registro para un objeto de [conjunto de registros](./recordset-object-ado.md) actualizable.  
@@ -55,7 +55,7 @@ recordset.AddNew FieldList, Values
   
  En *el modo de actualización inmediata* (en el que el proveedor escribe los cambios en el origen de datos subyacente una vez que se llama al método **Update** ), al llamar al método **AddNew** sin argumentos se establece la propiedad [EditMode](./editmode-property.md) en **adEditAdd** (un valor de [EditModeEnum](./editmodeenum.md) ). El proveedor almacena en caché los cambios de los valores de campo de forma local. La llamada al método **Update** expone el nuevo registro en la base de datos y restablece la propiedad **EditMode** en **AdEditNone** (un valor de **EditModeEnum** ). Si se pasan los argumentos *FieldList* y *Values* , ADO envía inmediatamente el nuevo registro a la base de datos (no se necesita ninguna llamada de **actualización** ); el valor de la propiedad **EditMode** no cambia (**adEditNone**).  
   
- En *el modo de actualización por lotes* (en el que el proveedor almacena en caché varios cambios y los escribe en el origen de datos subyacente solo cuando se llama al método [UpdateBatch](./updatebatch-method.md) ), al llamar al método **AddNew** sin argumentos se establece la propiedad **EditMode** en **adEditAdd**. El proveedor almacena en caché los cambios de los valores de campo de forma local. Al llamar al método **Update** se agrega el nuevo registro al **conjunto de registros**actual, pero el proveedor no publica los cambios en la base de datos subyacente o restablece el objeto **EditMode** en **adEditNone**, hasta que se llama al método **UpdateBatch** . Si se pasan los argumentos *FieldList* y *Values* , ADO envía el nuevo registro al proveedor para su almacenamiento en una memoria caché y establece **EditMode** en **adEditAdd**; debe llamar al método **UpdateBatch** para publicar el nuevo registro en la base de datos subyacente.  
+ En *el modo de actualización por lotes* (en el que el proveedor almacena en caché varios cambios y los escribe en el origen de datos subyacente solo cuando se llama al método [UpdateBatch](./updatebatch-method.md) ), al llamar al método **AddNew** sin argumentos se establece la propiedad **EditMode** en **adEditAdd**. El proveedor almacena en caché los cambios de los valores de campo de forma local. Al llamar al método **Update** se agrega el nuevo registro al **conjunto de registros** actual, pero el proveedor no publica los cambios en la base de datos subyacente o restablece el objeto **EditMode** en **adEditNone**, hasta que se llama al método **UpdateBatch** . Si se pasan los argumentos *FieldList* y *Values* , ADO envía el nuevo registro al proveedor para su almacenamiento en una memoria caché y establece **EditMode** en **adEditAdd**; debe llamar al método **UpdateBatch** para publicar el nuevo registro en la base de datos subyacente.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo usar el método AddNew con la lista de campos y la lista de valores incluida, para ver cómo incluir la lista de campos y la lista de valores como matrices.  

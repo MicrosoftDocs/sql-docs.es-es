@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f8815ce6d607de39861f56bdcecca6c37e9dcc6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 757679e99f9f4de7b7c1c96abf367ad5df5daee1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722165"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163762"
 ---
 # <a name="handler-property-example-vc"></a>Ejemplo de la propiedad de controlador (VC ++)
 > [!IMPORTANT]
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- El código tiene un aspecto similar al siguiente. El comando que se asigna a la propiedad [SQL](./sql-property.md) coincidirá con el identificador ***AuthorById*** y recuperará una fila para el autor Michael O'Leary. Aunque la propiedad [Connect](./connect-property-rds.md) del código especifica el origen de datos Northwind, este origen de datos se sobrescribirá en la sección Msdfmap.ini *Connect* . La propiedad [Recordset](./recordset-sourcerecordset-properties-rds.md) del objeto **DataControl** se asigna a un objeto de [conjunto de registros](../ado-api/recordset-object-ado.md) desconectado únicamente como una comodidad de codificación.  
+ El código tiene un aspecto similar al siguiente. El comando que se asigna a la propiedad [SQL](./sql-property.md) coincidirá con el identificador ***AuthorById** _ y recuperará una fila para el autor Michael O'Leary. Aunque la propiedad [Connect](./connect-property-rds.md) del código especifica el origen de datos Northwind, el origen de datos se sobrescribirá en la sección Msdfmap.ini _connect *. La propiedad [Recordset](./recordset-sourcerecordset-properties-rds.md) del objeto **DataControl** se asigna a un objeto de [conjunto de registros](../ado-api/recordset-object-ado.md) desconectado únicamente como una comodidad de codificación.  
   
 ```  
 // BeginHandlerCpp.cpp  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_revokelogin_TSQL
 - sp_revokelogin
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f2ccd140079e9a585ee67ce1b7c2208b9926f963
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 130ba750ed2e6dfadac111578ee9c42c6578c313
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446780"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161339"
 ---
 # <a name="sp_revokelogin-transact-sql"></a>sp_revokelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Quita las entradas de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para un usuario o grupo de Windows creado mediante Create login, **sp_grantlogin**o **sp_denylogin**.  
+  Quita las entradas de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para un usuario o grupo de Windows creado mediante Create login, **sp_grantlogin** o **sp_denylogin**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilice [Drop login](../../t-sql/statements/drop-login-transact-sql.md) en su lugar.  
@@ -43,7 +43,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'` Es el nombre del usuario o grupo de Windows. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. el *Inicio de sesión* puede ser cualquier grupo o nombre de usuario de Windows existente con el formato nombre de *equipo* \\ *usuario o dominio* \\ *usuario*.  
+`[ @loginame = ] 'login'` Es el nombre del usuario o grupo de Windows. *login* es de **tipo sysname** y no tiene ningún valor predeterminado. el *Inicio de sesión* puede ser cualquier grupo o nombre de usuario de Windows existente con el formato nombre de *equipo* \\ *usuario o dominio* \\ *usuario*.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -82,9 +82,9 @@ EXEC sp_revokelogin [Corporate\MollyA];
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
- [sp_denylogin &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [sp_droplogin &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [sp_grantlogin &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

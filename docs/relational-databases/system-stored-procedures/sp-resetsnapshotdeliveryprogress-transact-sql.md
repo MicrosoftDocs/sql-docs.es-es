@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_resetsnapshotdeliveryprogress
 - sp_resetsnapshotdeliveryprogress_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b4bcee8dfc47a489fc605bcd3bd787a1ed393329
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4b0d858fdaf03a50a4d87447dc57c09f4a79792c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543097"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158422"
 ---
 # <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @verbose_level = ] verbose_level` Especifica la cantidad de información devuelta. *verbose_level*es de **tipo int**y su valor predeterminado es **1**. Un valor de **1** significa que se devuelve un error si no se pueden obtener los bloqueos necesarios en la tabla **MSsnapshotdeliveryprogress** y **0** significa que no se devuelve ningún error.  
+`[ @verbose_level = ] verbose_level` Especifica la cantidad de información devuelta. *verbose_level* es de **tipo int** y su valor predeterminado es **1**. Un valor de **1** significa que se devuelve un error si no se pueden obtener los bloqueos necesarios en la tabla **MSsnapshotdeliveryprogress** y **0** significa que no se devuelve ningún error.  
   
 `[ @drop_table = ] 'drop_table'` Indica si se va a quitar o truncar la tabla que contiene información sobre el progreso de la instantánea. *drop_table* es de tipo **nvarchar (5)** y su valor predeterminado es **false**. que significa que la tabla se trunca. Si es True, la tabla se quita.  
   

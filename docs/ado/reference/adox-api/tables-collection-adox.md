@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Catalog::Tables
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b6d580dd6f56f78947ff1a881db1bff28c3e2b8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e30bb754332d52f02d2857dc80d572e227e819ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983266"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164006"
 ---
 # <a name="tables-collection-adox"></a>Colección de tablas (ADOX)
 Contiene todos los objetos de [tabla](./table-object-adox.md) de un catálogo.  
   
 ## <a name="remarks"></a>Observaciones  
- El método [Append](./append-method-adox-tables.md) de una colección **tables** es único para ADOX. Se puede hacer lo siguiente:  
+ El método [Append](./append-method-adox-tables.md) de una colección **tables** es único para ADOX. Puede:  
   
 -   Agregue una nueva tabla a la colección con el método **Append** .  
   
- Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Se puede hacer lo siguiente:  
+ Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
   
 -   Obtener acceso a una tabla de la colección con la propiedad [Item](../ado-api/item-property-ado.md) .  
   

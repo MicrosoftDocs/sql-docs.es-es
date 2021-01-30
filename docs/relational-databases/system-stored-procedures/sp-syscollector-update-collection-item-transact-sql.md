@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_update_collection_item
 - sp_syscollector_update_collection_item_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2dc7d6967f4bfa7aa1c22f4cfa5c55e06127455b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f21ca6f68eed789756a7dbf57f79afe194d40dab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534875"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161916"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,12 +54,12 @@ sp_syscollector_update_collection_item
  Es el nombre del elemento de colección. *Name* es de **tipo sysname y su** valor predeterminado es NULL. *el nombre* debe tener un valor si *collection_item_id* es NULL.  
   
  [ @new_name =] '*new_name*'  
- Es el nuevo nombre del elemento de recopilación. *new_name* es de **tipo sysname**y, si se utiliza, no puede ser una cadena vacía.  
+ Es el nuevo nombre del elemento de recopilación. *new_name* es de **tipo sysname** y, si se utiliza, no puede ser una cadena vacía.  
   
  *new_name* debe ser único. Para obtener una lista de los nombres de elementos de recopilación actuales, consulte la vista del sistema syscollector_collection_items.  
   
  [ @frequency =] *frecuencia*  
- Es la frecuencia (en segundos) con que este elemento de recopilación recopila los datos. *Frequency* es de **tipo int**y su valor predeterminado es 5, el valor mínimo que se puede especificar.  
+ Es la frecuencia (en segundos) con que este elemento de recopilación recopila los datos. *Frequency* es de **tipo int** y su valor predeterminado es 5, el valor mínimo que se puede especificar.  
   
  [ @parameters =] '*Parameters*'  
  Parámetros de entrada para el elemento de recopilación. *Parameters* es **XML** con un valor predeterminado de NULL. El esquema de *parámetros* debe coincidir con el esquema de parámetros del tipo de recopilador.  
