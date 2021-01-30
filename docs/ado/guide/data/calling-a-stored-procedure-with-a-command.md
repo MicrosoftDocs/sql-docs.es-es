@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac6f8388e3f07bf93e00f1d24aa3a782237ca0e5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5c66c4bdd347aaa8d01ab80d3a11ae67ce683b47
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991586"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075867"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Llamar a un procedimiento almacenado con un comando
 Puede utilizar un comando para llamar a un procedimiento almacenado. El ejemplo de código al final de este tema hace referencia a un procedimiento almacenado en la base de datos de ejemplo Northwind, denominado CustOrdersOrders, que se define de la siguiente manera.  
@@ -35,7 +35,7 @@ ORDER BY OrderID
   
  Consulte la documentación de SQL Server para obtener más información sobre cómo definir y llamar a procedimientos almacenados.  
   
- Este procedimiento almacenado es similar al comando que se usa en [los parámetros del objeto de comando](./command-object-parameters.md). Toma un parámetro de identificador de cliente y devuelve información acerca de los pedidos de ese cliente. En el ejemplo de código siguiente se usa este procedimiento almacenado como el origen de un **conjunto de registros**ADO.  
+ Este procedimiento almacenado es similar al comando que se usa en [los parámetros del objeto de comando](./command-object-parameters.md). Toma un parámetro de identificador de cliente y devuelve información acerca de los pedidos de ese cliente. En el ejemplo de código siguiente se usa este procedimiento almacenado como el origen de un **conjunto de registros** ADO.  
   
  El uso del procedimiento almacenado permite tener acceso a otra funcionalidad de ADO: el método de **actualización** de la colección de **parámetros** . Con este método, ADO puede rellenar automáticamente toda la información sobre los parámetros requeridos por el comando en tiempo de ejecución. El uso de esta técnica produce una reducción del rendimiento, ya que ADO debe consultar el origen de datos para obtener información sobre los parámetros.  
   
@@ -134,4 +134,4 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Artículo 117500 de Knowledge base](https://go.microsoft.com/fwlink/?LinkId=117500)
+ [Artículo 117500 de Knowledge base](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/185125)
