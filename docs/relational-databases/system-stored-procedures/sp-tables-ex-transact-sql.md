@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_tables_ex
 - sp_tables_ex_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0156f75940cf5e0d2186625d148850dcfb181ad0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0126cfd14adde25d88d6990a5d7e78c2141ea21e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544743"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182762"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,17 +45,17 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_server = ] 'table_server'` Es el nombre del servidor vinculado del que se va a devolver información de la tabla. *table_server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @table_server = ] 'table_server'` Es el nombre del servidor vinculado del que se va a devolver información de la tabla. *table_server* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-``[ , [ @table_name = ] 'table_name']`` Es el nombre de la tabla para la que se va a devolver información de tipo de datos. *TABLE_NAME*es de **tipo sysname y su**valor predeterminado es NULL.  
+``[ , [ @table_name = ] 'table_name']`` Es el nombre de la tabla para la que se va a devolver información de tipo de datos. *TABLE_NAME* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @table_schema = ] 'table_schema']` Es el esquema de la tabla. *TABLE_SCHEMA*es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @table_schema = ] 'table_schema']` Es el esquema de la tabla. *TABLE_SCHEMA* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @table_catalog = ] 'table_catalog'` Es el nombre de la base de datos en la que reside el *TABLE_NAME* especificado. *TABLE_CATALOG* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @table_catalog = ] 'table_catalog'` Es el nombre de la base de datos en la que reside el *TABLE_NAME* especificado. *TABLE_CATALOG* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @table_type = ] 'table_type'` Es el tipo de la tabla que se va a devolver. *TABLE_TYPE* es de **tipo sysname, su**valor predeterminado es NULL y puede tener uno de los valores siguientes.  
+`[ @table_type = ] 'table_type'` Es el tipo de la tabla que se va a devolver. *TABLE_TYPE* es de **tipo sysname, su** valor predeterminado es NULL y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**ALIAS**|Nombre de un alias.|  
 |**GLOBAL TEMPORARY**|Nombre de una tabla temporal disponible en todo el sistema.|  
@@ -66,7 +66,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|Nombre de una tabla de usuario.|  
 |**VIEW**|Nombre de una vista.|  
   
-`[ @fUsePattern = ] 'fUsePattern'` Determina si los caracteres **_**, **%** , **[** y **]** se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es de **bit**y su valor predeterminado es 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina si los caracteres **_**, **%** , **[** y **]** se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es de **bit** y su valor predeterminado es 1.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -82,7 +82,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**COMENTARIOS**|**VARCHAR (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
   
 ## <a name="remarks"></a>Observaciones  
- **sp_tables_ex** se ejecuta consultando el conjunto de filas tables de la interfaz **IDBSchemaRowset** del proveedor de OLE DB correspondiente a *table_server*. Los parámetros *TABLE_NAME*, *TABLE_SCHEMA*, *TABLE_CATALOG*y *Column* se pasan a esta interfaz para restringir las filas devueltas.  
+ **sp_tables_ex** se ejecuta consultando el conjunto de filas tables de la interfaz **IDBSchemaRowset** del proveedor de OLE DB correspondiente a *table_server*. Los parámetros *TABLE_NAME*, *TABLE_SCHEMA*, *TABLE_CATALOG* y *Column* se pasan a esta interfaz para restringir las filas devueltas.  
   
  **sp_tables_ex** devuelve un conjunto de resultados vacío si el proveedor de OLE DB del servidor vinculado especificado no admite el conjunto de filas tables de la interfaz **IDBSchemaRowset** .  
   

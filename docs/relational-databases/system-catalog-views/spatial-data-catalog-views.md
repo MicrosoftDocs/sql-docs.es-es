@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ad3a1c13b6457e24ed8499579f9db4e69b7d3250
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 368d3ee29a51f7200d9186456bd411f13649f11c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096866"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185058"
 ---
 # <a name="spatial-data-catalog-views"></a>Vistas de catálogo de datos espaciales
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

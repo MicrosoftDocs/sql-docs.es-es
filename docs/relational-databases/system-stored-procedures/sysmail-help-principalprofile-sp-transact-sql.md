@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_principalprofile_sp_TSQL
 - sysmail_help_principalprofile_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5fb578b0af1e51e8e8ca4bb37bc82b3949cb33be
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: efb4b5cd655bf4a401d530e4c9bd52cbc9660a65
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541077"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181957"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +42,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @principal_id = ] principal_id` Es el identificador del usuario o el rol de la base de datos **msdb** de la asociación que se va a mostrar. *principal_id* es de **tipo int**y su valor predeterminado es NULL. Se puede especificar *principal_id* o *principal_name* .  
+`[ @principal_id = ] principal_id` Es el identificador del usuario o el rol de la base de datos **msdb** de la asociación que se va a mostrar. *principal_id* es de **tipo int** y su valor predeterminado es NULL. Se puede especificar *principal_id* o *principal_name* .  
   
-`[ @principal_name = ] 'principal_name'` Es el nombre del usuario o el rol de la base de datos **msdb** de la asociación que se va a mostrar. *principal_name* es de **tipo sysname y su**valor predeterminado es NULL. Se puede especificar *principal_id* o *principal_name* .  
+`[ @principal_name = ] 'principal_name'` Es el nombre del usuario o el rol de la base de datos **msdb** de la asociación que se va a mostrar. *principal_name* es de **tipo sysname y su** valor predeterminado es NULL. Se puede especificar *principal_id* o *principal_name* .  
   
-`[ @profile_id = ] profile_id` Es el identificador del perfil para la asociación que se va a mostrar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se puede especificar *profile_id* o *profile_name* .  
+`[ @profile_id = ] profile_id` Es el identificador del perfil para la asociación que se va a mostrar. *profile_id* es de **tipo int** y su valor predeterminado es NULL. Se puede especificar *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Es el nombre del perfil para la asociación que se va a mostrar. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se puede especificar *profile_id* o *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Es el nombre del perfil para la asociación que se va a mostrar. *profile_name* es de **tipo sysname y su** valor predeterminado es NULL. Se puede especificar *profile_id* o *profile_name* .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

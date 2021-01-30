@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdistributiondb_TSQL
 - sp_helpdistributiondb
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c79c1ed5bbbbf53be84432e4d542affece0b16a3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e9740605d1f3eca456ba506a692b5fc827273e67
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543328"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179295"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database_name'` Es el nombre de la base de datos cuyas propiedades se devuelven. *database_name* es de **tipo sysname y su**valor predeterminado es **%** para todas las bases de datos asociadas al distribuidor y en el que el usuario tiene permisos.  
+`[ @database = ] 'database_name'` Es el nombre de la base de datos cuyas propiedades se devuelven. *database_name* es de **tipo sysname y su** valor predeterminado es **%** para todas las bases de datos asociadas al distribuidor y en el que el usuario tiene permisos.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -50,7 +50,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|Número de horas que se conserva el historial.|  
 |**history_cleanup_agent**|**sysname**|Nombre del Agente de limpieza del historial.|  
 |**distribution_cleanup_agent**|**sysname**|Nombre del Agente de limpieza de distribución.|  
-|**status**|**int**|Exclusivamente para uso interno.|  
+|**status**|**int**|Solo para uso interno.|  
 |**data_folder**|**nvarchar(255)**|Nombre del directorio que se utiliza para almacenar los archivos de base de datos.|  
 |**data_file**|**nvarchar(255)**|Nombre del archivo de la base de datos.|  
 |**data_file_size**|**int**|Tamaño inicial del archivo de datos en megabytes.|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helplogins_TSQL
 - sp_helplogins
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9802a6087bd3747c8fe715d56482b54149ee55d8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b58e74a30ddd86fc2edbfc8db553ddf9449181db
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549639"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183123"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nombre de inicio de sesión.|  
 |**Nombrebd**|**sysname**|Base de datos predeterminada que **LoginName** usa al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**UserName**|**sysname**|Cuenta de usuario a la que **LoginName** está asignada en **dbname**y los roles de los que **LoginName** es miembro en **dbname**.|  
+|**UserName**|**sysname**|Cuenta de usuario a la que **LoginName** está asignada en **dbname** y los roles de los que **LoginName** es miembro en **dbname**.|  
 |**UserOrAlias**|**Char (8)**|MemberOf = **username** es un rol.<br /><br /> User = **username** es una cuenta de usuario.|  
   
 ## <a name="remarks"></a>Observaciones  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - ConfigDSN
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5e4ea667678fcbd0905ee3587f94554eb6e39b03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 42e85b0c77ccc71946836e3103953fc85206b6e2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421309"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174727"
 ---
 # <a name="configdsn-function"></a>Función ConfigDSN
 **Conformidad**  
@@ -68,7 +68,7 @@ BOOL ConfigDSN(
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **ConfigDSN** devuelve false, se envía un valor de * \* pfErrorCode* asociado al búfer de error del instalador mediante una llamada a **SQLPostInstallerError** y se puede obtener llamando a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **ConfigDSN** devuelve false, se envía un valor de *\* pfErrorCode* asociado al búfer de error del instalador mediante una llamada a **SQLPostInstallerError** y se puede obtener llamando a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de *\* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
@@ -84,7 +84,7 @@ BOOL ConfigDSN(
   
  Como en **SQLBrowseConnect** y **SQLDriverConnect**, las palabras clave y sus valores no deben contener **[] {} (),;? \* =! @** Characters, y el valor de la palabra clave **DSN** no puede constar solo de espacios en blanco. Debido a la gramática del registro, las palabras clave y los nombres de los orígenes de datos no pueden contener el carácter de barra diagonal inversa ( \\ ).  
   
- **ConfigDSN** debe llamar a **SQLValidDSN** para comprobar la longitud del nombre del origen de datos y comprobar que no se incluyen caracteres no válidos en el nombre. Si el nombre del origen de datos es mayor que SQL_MAX_DSN_LENGTH o incluye caracteres no válidos, **SQLValidDSN** devuelve un error y **ConfigDSN** devuelve un error. **SQLWriteDSNToIni**también comprueba la longitud del nombre del origen de datos.  
+ **ConfigDSN** debe llamar a **SQLValidDSN** para comprobar la longitud del nombre del origen de datos y comprobar que no se incluyen caracteres no válidos en el nombre. Si el nombre del origen de datos es mayor que SQL_MAX_DSN_LENGTH o incluye caracteres no válidos, **SQLValidDSN** devuelve un error y **ConfigDSN** devuelve un error. **SQLWriteDSNToIni** también comprueba la longitud del nombre del origen de datos.  
   
  Por ejemplo, para configurar un origen de datos que requiera un identificador de usuario, una contraseña y un nombre de base de datos, una aplicación de instalación podría pasar los siguientes pares de palabra clave-valor:  
   

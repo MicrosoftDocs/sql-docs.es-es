@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursor_prepexecrpc
 - sp_cursor_prepexecrpc_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9db0c4450f6726d39934afac27c3306dae9ded3f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c3190e97f177811bc5c90e770544d9c4da1f104b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535028"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183092"
 ---
 # <a name="sp_prepexecrpc-transact-sql"></a>sp_prepexecrpc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

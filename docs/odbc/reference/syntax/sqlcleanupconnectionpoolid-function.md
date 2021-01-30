@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLCleanupConnectionPoolID function [ODBC]
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 20ad05559aa172ff7e8937359bad93f85347a92a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: ce2a6dc5a0a368312a46cb038cb56407f977b2ef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193450"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181014"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>Función SQLCleanupConnectionPoolID
 **Conformidad**  
@@ -51,7 +51,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
   
  Una aplicación no puede recibir el mensaje de error devuelto por el controlador.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Se puede llamar a **SQLCleanupConnectionPoolID** en cualquier momento, pero el administrador de controladores garantiza que ningún otro subproceso llama a **SQLGetPoolID** simultáneamente y ningún otro subproceso está llamando a **SQLRateConnection** y **SQLPoolConnect** de forma simultánea con un token de información de conexión asignado a ese ID. de grupo. Por lo tanto, el controlador debe asegurarse de que esta función es segura para subprocesos.  
   
  Un controlador puede limpiar los recursos asociados con el identificador del grupo.  

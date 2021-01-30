@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_db_partition_stats
 - dm_db_partition_stats_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe7e6639e8f0b04e8a3482ce56baf732a9113c6d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0838f88916f2fb1b7847ab1ee27e7f9f13a594ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095161"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179327"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "98095161"
 |**object_id**|**int**|Id. de objeto de la tabla o vista indizada de la que esta partición forma parte.|  
 |**id_de_índice**|**int**|Id. del montón o índice del que esta partición forma parte.<br /><br /> 0 = Montón<br /><br /> 1 = Índice clúster.<br /><br /> > 1 = Índice no clúster|  
 |**partition_number**|**int**|Número de partición en base 1 en el índice o montón.|  
-|**in_row_data_page_count**|**bigint**|Número de páginas en uso para almacenar datos consecutivos en esta partición. Si la partición forma parte de un montón, el valor es el número de páginas de datos en el montón. Si la partición forma parte de un índice, el valor es el número de páginas en el nivel hoja. (Las páginas no hoja del árbol B no se incluyen en el recuento). En cualquier caso, no se incluyen las páginas IAM (IAM). Siempre es 0 para un índice de almacén de columnas optimizado de memoria xVelocity.|  
+|**in_row_data_page_count**|**bigint**|Número de páginas en uso para almacenar datos consecutivos en esta partición. Si la partición forma parte de un montón, el valor es el número de páginas de datos en el montón. Si la partición forma parte de un índice, el valor es el número de páginas en el nivel hoja. (Las páginas no hoja del árbol B no se incluyen en el recuento). En cualquier caso, no se incluyen las páginas IAM (Mapa de asignación de índices). Siempre es 0 para un índice de almacén de columnas optimizado de memoria xVelocity.|  
 |**in_row_used_page_count**|**bigint**|Número total de páginas en uso para almacenar y administrar datos consecutivos en esta partición. Este recuento incluye páginas de árbol B no hoja, páginas IAM y todas las páginas incluidas en la columna **in_row_data_page_count**. Siempre es 0 para un índice de almacén de columnas.|  
 |**in_row_reserved_page_count**|**bigint**|Número total de páginas reservadas para almacenar y administrar datos consecutivos en esta partición, independientemente de si las páginas están en uso o no. Siempre es 0 para un índice de almacén de columnas.|  
 |**lob_used_page_count**|**bigint**|Número de páginas en uso para almacenar y administrar columnas **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml** no consecutivas en la partición. Las páginas IAM están incluidas.<br /><br /> Número total de LOBs utilizados para almacenar y administrar el índice de almacén de columnas en la partición.|  

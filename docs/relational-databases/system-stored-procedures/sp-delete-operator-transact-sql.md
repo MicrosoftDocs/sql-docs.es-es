@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_operator
 - sp_delete_operator_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d228dbfe5d349a69addded2fe4eeadca6656836c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9de5e301020db6650dd52e172fd24671e10b8c08
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541818"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181288"
 ---
 # <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` Nombre del operador que se va a eliminar. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @name = ] 'name'` Nombre del operador que se va a eliminar. *Name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @reassign_to_operator = ] 'reassign_operator'` Nombre del operador al que se pueden reasignar las alertas del operador especificado. *reassign_operator* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @reassign_to_operator = ] 'reassign_operator'` Nombre del operador al que se pueden reasignar las alertas del operador especificado. *reassign_operator* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

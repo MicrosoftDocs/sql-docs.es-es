@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
 - sysmail_help_profileaccount_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6894b44d7a09fa8f49ffa1d76a8613f930db7d18
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 45b542047875527a26d9c4854b223e626efda5ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541079"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181937"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +44,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id` Es el identificador del perfil que se va a enumerar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
+`[ @profile_id = ] profile_id` Es el identificador del perfil que se va a enumerar. *profile_id* es de **tipo int** y su valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Es el nombre del perfil que se va a enumerar. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Es el nombre del perfil que se va a enumerar. *profile_name* es de **tipo sysname y su** valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
   
-`[ @account_id = ] account_id` Es el identificador de la cuenta que se va a mostrar. *ACCOUNT_ID* es de **tipo int**y su valor predeterminado es NULL. Cuando *ACCOUNT_ID* y *ACCOUNT_NAME* son ambos null, enumera todas las cuentas del perfil.  
+`[ @account_id = ] account_id` Es el identificador de la cuenta que se va a mostrar. *ACCOUNT_ID* es de **tipo int** y su valor predeterminado es NULL. Cuando *ACCOUNT_ID* y *ACCOUNT_NAME* son ambos null, enumera todas las cuentas del perfil.  
   
-`[ @account_name = ] 'account_name'` Es el nombre de la cuenta que se va a mostrar. *account_name* es de **tipo sysname y su**valor predeterminado es NULL. Cuando *ACCOUNT_ID* y *ACCOUNT_NAME* son ambos null, enumera todas las cuentas del perfil.  
+`[ @account_name = ] 'account_name'` Es el nombre de la cuenta que se va a mostrar. *account_name* es de **tipo sysname y su** valor predeterminado es NULL. Cuando *ACCOUNT_ID* y *ACCOUNT_NAME* son ambos null, enumera todas las cuentas del perfil.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -63,7 +63,7 @@ sysmail_help_profileaccount_sp
 |**profile_id**|**int**|Id. de perfil del perfil.|  
 |**profile_name**|**sysname**|Nombre del perfil.|  
 |**account_id**|**int**|Id. de cuenta de la cuenta.|  
-|**account_name**|**sysname**|El nombre de la cuenta.|  
+|**account_name**|**sysname**|Nombre de la cuenta.|  
 |**sequence_number**|**int**|Número de secuencia de la cuenta en el perfil.|  
   
 ## <a name="remarks"></a>Observaciones  

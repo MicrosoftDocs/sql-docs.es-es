@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdbfixedrole
 - sp_helpdbfixedrole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0b72a64d8d895956273a7c76e21dbb88152b546
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 817947901ca7f35ba2972004d23ed8d7f85215ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538810"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176426"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'` Es el nombre de un rol fijo de base de datos. *role* es de **tipo sysname y su**valor predeterminado es NULL. Si se especifica *role* , solo se devuelve información sobre ese rol; de lo contrario, se devolverá una lista y una descripción de todos los roles fijos de base de datos.  
+`[ @rolename = ] 'role'` Es el nombre de un rol fijo de base de datos. *role* es de **tipo sysname y su** valor predeterminado es NULL. Si se especifica *role* , solo se devuelve información sobre ese rol; de lo contrario, se devolverá una lista y una descripción de todos los roles fijos de base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - CREATE TABLE [ODBC]
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ea84b28e12194ffb1a1b181089622cd169c91b7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fb1e91c03f7a1a1fee98ce887be991370450999
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471637"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183203"
 ---
 # <a name="create-table---sql-command"></a>Crear tabla - comando SQL
 Crea una tabla con los campos especificados.  
@@ -115,12 +115,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Dado que una tabla solo puede tener un índice principal, no puede incluir esta cláusula si ya ha creado un índice principal para un campo. Visual FoxPro genera un error si se incluye más de una cláusula de clave principal en CREATE TABLE.  
   
- *TagName3* de etiqueta *eExpression3*única  
+ *TagName3* de etiqueta *eExpression3* única  
  Crea un índice candidato. *eExpression3* especifica cualquier campo o combinación de campos de la tabla. Sin embargo, si ha creado un índice principal con una de las opciones de clave principal, no puede incluir el campo que se especificó para el índice principal. TAG *TagName3* especifica un nombre de etiqueta para la etiqueta de índice candidata que se crea. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres.  
   
  Una tabla puede tener varios índices candidatos.  
   
- CLAVE externa *eExpression4*etiqueta *TagName4*[NODUP]  
+ CLAVE externa *eExpression4* etiqueta *TagName4*[NODUP]  
  Crea un índice externo (no principal) y establece una relación con una tabla primaria. *eExpression4* especifica la expresión de clave de índice externa y *TagName4* especifica el nombre de la etiqueta de clave de índice externa que se crea. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres. Incluya NODUP para crear un índice externo candidato.  
   
  Puede crear varios índices externos para la tabla, pero las expresiones Foreign index deben especificar distintos campos en la tabla.  

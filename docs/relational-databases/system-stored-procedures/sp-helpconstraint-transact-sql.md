@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpconstraint
 - sp_helpconstraint_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7199b56a0bf0c0eb397a061ca366534bdbf9c6ee
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: dddf290bd1b22f0ec25f9ea03dd2e9766e184308
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97404223"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176462"
 ---
 # <a name="sp_helpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,7 +52,7 @@ sp_helpconstraint [ @objname = ] 'table'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_helpconstraint** muestra una columna indizada descendente si participó en las claves principales. El nombre de la columna indizada en orden descendente irá seguido de un signo menos (-) en el conjunto de resultados. La columna predeterminada, indizada en orden ascendente, aparecerá solo por su nombre.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Al ejecutar **sp_help**_tabla_ , se muestra toda la información sobre la tabla especificada. Para ver solo la información de restricción, use **sp_helpconstraint**.  
   
 ## <a name="permissions"></a>Permisos  

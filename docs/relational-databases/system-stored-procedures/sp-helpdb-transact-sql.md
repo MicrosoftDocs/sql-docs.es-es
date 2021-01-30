@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdb
 - sp_helpdb_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1b2055f810be69949f72dd97364ccfb47bfa22f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: efb199d0fc846bc37a8f7c1272563de99507c795
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809171"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176437"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'name'` Es el nombre de la base de datos para la que se envía información. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado. Si no se especifica *Name* , **sp_helpdb** informes en todas las bases de datos de la vista de catálogo **Sys. Databases** .  
+`[ @dbname = ] 'name'` Es el nombre de la base de datos para la que se envía información. *Name* es de **tipo sysname** y no tiene ningún valor predeterminado. Si no se especifica *Name* , **sp_helpdb** informes en todas las bases de datos de la vista de catálogo **Sys. Databases** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -51,7 +51,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|nombre de base de datos.|  
 |**db_size**|**nvarchar (13)**|Tamaño total de la base de datos.|  
-|**propietario**|**sysname**|Propietario de la base de datos, como **SA**.|  
+|**owner**|**sysname**|Propietario de la base de datos, como **SA**.|  
 |**DBID**|**smallint**|Id. de la base de datos.|  
 |**created**|**nvarchar(11)**|Fecha de creación de la base de datos.|  
 |**status**|**nvarchar (600)**|Lista de valores separados por comas de las opciones actualmente establecidas en la base de datos.<br /><br /> Las opciones con valores booleanos aparecen solamente si están habilitadas. Las opciones no booleanas se muestran con sus valores correspondientes en forma de *option_name* = *valor*.<br /><br /> Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  

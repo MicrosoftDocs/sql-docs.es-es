@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_db_file_space_usage
 - sys.dm_db_file_space_usage_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93bbb10cd8274b79aca1b40217f15b1ea19f65f4
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c50652dee0c0930d528249c340bf905a94763f0e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172137"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180688"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "98172137"
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
 |distribution_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador numérico único asociado a la distribución.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los recuentos de páginas siempre son en el nivel de extensión. Por tanto, los valores de recuento de páginas siempre serán un múltiplo de ocho. Las extensiones que contienen páginas de asignación del Mapa de asignación global (GAM) y del Mapa de asignación global compartido (SGAM) se asignan a extensiones uniformes. No se incluyen en los recuentos de páginas descritos anteriormente. Para obtener más información acerca de las páginas y las extensiones, vea [Guía de arquitectura de páginas y extensiones](../../relational-databases/pages-and-extents-architecture-guide.md). 
   
  El contenido del almacén de versiones actual está en [Sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md). El seguimiento de las páginas del almacén de la versión se realiza en el nivel de archivo en vez de en el nivel de sesión y tarea porque son recursos globales. Una sesión puede generar versiones, pero las versiones no pueden quitarse cuando finaliza la sesión. Debe tenerse en cuenta una limpieza del almacén de versiones cuando se tengan que ejecutar transacciones prolongadas que necesiten acceso a la versión determinada. La transacción de ejecución más larga relacionada con la limpieza del almacén de versiones se puede detectar viendo la elapsed_time_seconds columna en [Sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md).  

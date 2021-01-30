@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helparticle_TSQL
 - sp_helparticle
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7bc639fef551b78dd73da39cd404999e39219b2d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 14baf63cc2944396a13bbc911fb6be7670244216
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538801"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176485"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,13 +42,13 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre de un artículo de la publicación. *article* es de **tipo sysname y su**valor predeterminado es **%** . Si no se proporciona el *artículo* , se devuelve información sobre todos los artículos de la publicación especificada.  
+`[ @article = ] 'article'` Es el nombre de un artículo de la publicación. *article* es de **tipo sysname y su** valor predeterminado es **%** . Si no se proporciona el *artículo* , se devuelve información sobre todos los artículos de la publicación especificada.  
   
-`[ @returnfilter = ] returnfilter` Especifica si se debe devolver la cláusula de filtro. *returnfilter* es de **bit**y su valor predeterminado es **1**, que devuelve la cláusula de filtro.  
+`[ @returnfilter = ] returnfilter` Especifica si se debe devolver la cláusula de filtro. *returnfilter* es de **bit** y su valor predeterminado es **1**, que devuelve la cláusula de filtro.  
   
-`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  no se debe especificar el *publicador* al solicitar información sobre un artículo publicado por un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

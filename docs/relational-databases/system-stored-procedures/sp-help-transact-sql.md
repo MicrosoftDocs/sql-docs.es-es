@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help
 - sp_help_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe0b4f610b0656a0b82ad80adebde1480f14c6f3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e97e2118c90521881dbf55d686910cff01ef79e7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478916"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176571"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Nombre**|**nvarchar (** 128 **)**|Nombre de la tabla|  
     |**Propietario**|**nvarchar (** 128 **)**|Propietario de la tabla.|  
-    |**Tipo**|**nvarchar (** 31 **)**|Tipo de tabla.|  
+    |**Type**|**nvarchar (** 31 **)**|Tipo de tabla.|  
     |**Created_datetime**|**datetime**|Tabla de fechas de creación|  
   
      Dependiendo del objeto de base de datos especificado, **sp_help** devuelve conjuntos de resultados adicionales.  
@@ -91,7 +91,7 @@ sp_help [ [ @objname = ] 'name' ]
         |Nombre de la columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar (** 128 **)**|Nombre de la columna.|  
-        |**Tipo**|**nvarchar (** 128 **)**|Tipo de datos de la columna.|  
+        |**Type**|**nvarchar (** 128 **)**|Tipo de datos de la columna.|  
         |**Calculada**|**VARCHAR (** 35 **)**|Indica si los valores de la columna son calculados: Yes o No.|  
         |**Duración**|**int**|Longitud de la columna en bytes.<br /><br /> Nota: Si el tipo de datos de la columna es un tipo de valor grande (**VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)** o **XML**), el valor se mostrará como-1.|  
         |**Prec**|**Char (** 5 **)**|Precisión de la columna.|  
@@ -106,7 +106,7 @@ sp_help [ [ @objname = ] 'name' ]
         |Nombre de la columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**Identidad**|**nvarchar (** 128 **)**|Nombre de la columna cuyo tipo de datos se declara como identidad.|  
-        |**Propagación**|**numeric**|Valor inicial de la columna de identidad.|  
+        |**Seed**|**numeric**|Valor inicial de la columna de identidad.|  
         |**Incremento**|**numeric**|Incremento que se va a utilizar en los valores de esta columna.|  
         |**No disponible para replicación**|**int**|La propiedad IDENTITY no se aplica cuando un inicio de sesión de replicación, como **sqlrepl**, inserta datos en la tabla:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -153,13 +153,13 @@ sp_help [ [ @objname = ] 'name' ]
         |Nombre de la columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar (** 128 **)**|Nombre del parámetro del procedimiento almacenado.|  
-        |**Tipo**|**nvarchar (** 128 **)**|Tipo de datos del parámetro del procedimiento almacenado.|  
+        |**Type**|**nvarchar (** 128 **)**|Tipo de datos del parámetro del procedimiento almacenado.|  
         |**Duración**|**smallint**|Longitud máxima de almacenamiento físico en bytes.|  
         |**Prec**|**int**|Precisión o número total de dígitos.|  
         |**Escalar**|**int**|Número de dígitos a la derecha del separador decimal.|  
         |**Param_order**|**smallint**|Orden del parámetro.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El procedimiento **sp_help** solo busca un objeto en la base de datos actual.  
   
  Cuando no se especifica *Name* , **sp_help** enumera los nombres de objeto, los propietarios y los tipos de objeto para todos los objetos de la base de datos actual. **sp_helptrigger** proporciona información acerca de los desencadenadores.  

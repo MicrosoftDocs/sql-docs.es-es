@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_setsubscriptionxactseqno
 - sp_setsubscriptionxactseqno_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c7908e6cc064a5ad5c973236be759bdea313c5f6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3ec2589b3cacb2e4426793b6adb7814c03e19fce
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547912"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176409"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +44,11 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado. En el caso de un publicador que no sea de SQL Server, *publisher_db* es el nombre de la base de datos de distribución.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname** y no tiene ningún valor predeterminado. En el caso de un publicador que no sea de SQL Server, *publisher_db* es el nombre de la base de datos de distribución.  
   
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado. Cuando el Agente de distribución se comparte con más de una publicación, debe especificar un valor de ALL para la *publicación*.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado. Cuando el Agente de distribución se comparte con más de una publicación, debe especificar un valor de ALL para la *publicación*.  
   
 `[ @xact_seqno = ] xact_seqno` Es el LSN de la siguiente transacción en el distribuidor que se va a aplicar en el suscriptor. *xact_seqno* es **varbinary (16)** y no tiene ningún valor predeterminado.  
   
@@ -68,7 +68,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
  no se puede usar **sp_setsubscriptionxactseqno** en una topología de replicación transaccional punto a punto.  
   
- **sp_setsubscriptionxactseqno** se puede utilizar para omitir una transacción específica que está causando un error cuando se aplica en el suscriptor. Cuando se produce un error y después de que se detenga el Agente de distribución, llame a [sp_helpsubscriptionerrors &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) en el distribuidor para recuperar el valor xact_seqno de la transacción con errores y, a continuación, llame a **sp_setsubscriptionxactseqno**, pasando este valor para *xact_seqno*. Así se garantizará que se procesen solamente los comandos después de este LSN.  
+ **sp_setsubscriptionxactseqno** se puede utilizar para omitir una transacción específica que está causando un error cuando se aplica en el suscriptor. Cuando se produce un error y después de que se detenga el Agente de distribución, llame a [sp_helpsubscriptionerrors &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) en el distribuidor para recuperar el valor xact_seqno de la transacción con errores y, a continuación, llame a **sp_setsubscriptionxactseqno**, pasando este valor para *xact_seqno*. Así se garantizará que se procesen solamente los comandos después de este LSN.  
   
  Especifique un valor de **0** para que *xact_seqno* entregue todos los comandos pendientes en la base de datos de distribución al suscriptor.  
   

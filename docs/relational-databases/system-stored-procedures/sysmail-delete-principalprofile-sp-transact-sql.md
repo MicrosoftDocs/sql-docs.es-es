@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_delete_principalprofile_sp_TSQL
 - sysmail_delete_principalprofile_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e5cfe34ff4bebc2e21517e6515b5ea2ebee3a37f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a80485aca8c7f0adb6a539f57540952ccd758a31
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538500"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182018"
 ---
 # <a name="sysmail_delete_principalprofile_sp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +41,13 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @principal_id = ] principal_id` Es el identificador del usuario o el rol de la base de datos **msdb** de la asociación que se va a eliminar. *principal_id* es de **tipo int**y su valor predeterminado es NULL. Para convertir un perfil público en un perfil privado, proporcione el identificador de entidad de seguridad **0** o el nombre de entidad de seguridad **' Public '**. Se debe especificar *principal_id* o *principal_name* .  
+`[ @principal_id = ] principal_id` Es el identificador del usuario o el rol de la base de datos **msdb** de la asociación que se va a eliminar. *principal_id* es de **tipo int** y su valor predeterminado es NULL. Para convertir un perfil público en un perfil privado, proporcione el identificador de entidad de seguridad **0** o el nombre de entidad de seguridad **' Public '**. Se debe especificar *principal_id* o *principal_name* .  
   
-`[ @principal_name = ] 'principal_name'` Es el nombre del usuario o el rol de la base de datos **msdb** de la asociación que se va a eliminar. *principal_name* es de **tipo sysname y su**valor predeterminado es NULL. Para convertir un perfil público en un perfil privado, proporcione el identificador de entidad de seguridad **0** o el nombre de entidad de seguridad **' Public '**. Se debe especificar *principal_id* o *principal_name* .  
+`[ @principal_name = ] 'principal_name'` Es el nombre del usuario o el rol de la base de datos **msdb** de la asociación que se va a eliminar. *principal_name* es de **tipo sysname y su** valor predeterminado es NULL. Para convertir un perfil público en un perfil privado, proporcione el identificador de entidad de seguridad **0** o el nombre de entidad de seguridad **' Public '**. Se debe especificar *principal_id* o *principal_name* .  
   
-`[ @profile_id = ] profile_id` Es el identificador del perfil para la asociación que se va a eliminar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
+`[ @profile_id = ] profile_id` Es el identificador del perfil para la asociación que se va a eliminar. *profile_id* es de **tipo int** y su valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Es el nombre del perfil para la asociación que se va a eliminar. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Es el nombre del perfil para la asociación que se va a eliminar. *profile_name* es de **tipo sysname y su** valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

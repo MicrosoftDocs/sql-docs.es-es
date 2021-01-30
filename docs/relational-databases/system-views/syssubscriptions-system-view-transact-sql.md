@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - syssubscriptions_TSQL
 - syssubscriptions
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 889a0b58427dedaf9a0ffa167abaed10074183f0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 052d7d4c3fa302fbb5962f89f69f1446bd6e7295
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473087"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181545"
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions (vista del sistema de Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88473087"
 |**update_mode**|**tinyint**|Modo de actualización:<br /><br /> **0** = solo lectura.<br /><br /> **1** = actualización inmediata.|  
 |**loopback_detection**|**bit**|Se aplica a las suscripciones que forman parte de una topología de replicación transaccional bidireccional. La detección de bucles de retorno determina si el Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor:<br /><br /> **0** = devuelve.<br /><br /> **1** = no devuelve.|  
 |**queued_reinit**|**bit**|Especifica si el artículo está marcado para inicialización o reinicialización. Un valor de **1** especifica que el artículo suscrito está marcado para inicialización o reinicialización.|  
-|**nosync_type**|**tinyint**|Tipo de inicialización de la suscripción:<br /><br /> **0** = automática (instantánea)<br /><br /> **1** = solo compatibilidad con replicación<br /><br /> **2** = inicializar con copia de seguridad<br /><br /> **3** = inicializar desde el número de secuencia de registro (LSN)<br /><br /> Para obtener más información, vea el parámetro ** \@ sync_type** de [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).<br /><br /> **3** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**nosync_type**|**tinyint**|Tipo de inicialización de la suscripción:<br /><br /> **0** = automática (instantánea)<br /><br /> **1** = solo compatibilidad con replicación<br /><br /> **2** = inicializar con copia de seguridad<br /><br /> **3** = inicializar desde el número de secuencia de registro (LSN)<br /><br /> Para obtener más información, vea el parámetro **\@ sync_type** de [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).<br /><br /> **3** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**srvname**|**sysname**|Nombre del suscriptor.|  
   
 ## <a name="see-also"></a>Consulte también  

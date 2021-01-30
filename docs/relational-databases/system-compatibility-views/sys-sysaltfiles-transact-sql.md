@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sysaltfiles_TSQL
 - sys.sysaltfiles
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: f6139fb221ab1d960d8cfb455e592ac16fbcee09
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1482980471675563417943366eef233396f6f902
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097811"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180731"
 ---
 # <a name="syssysaltfiles-transact-sql"></a>sys.sysaltfiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "98097811"
 |**crezca**|**int**|Tamaño de aumento de la base de datos.<br /><br /> 0 = Sin aumento de tamaño. Puede ser el número de páginas o el porcentaje del tamaño del archivo, dependiendo del valor de status. Si **status** es 0x100000, el **crecimiento** es el porcentaje del tamaño del archivo; de lo contrario, es el número de páginas.|  
 |**status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**rendimiento**|**int**|Reservado.|  
-|**dbid**|**smallint**|Número de identificación de la base de datos a la que pertenece este archivo.|  
+|**DBID**|**smallint**|Número de identificación de la base de datos a la que pertenece este archivo.|  
 |**name**|**sysname**|Nombre lógico del archivo.|  
 |**filename**|**nvarchar(260)**|Nombre del dispositivo físico. Incluye la ruta de acceso completa al archivo.|  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_resyncmergesubscription_TSQL
 - sp_resyncmergesubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 86e1aaf4ee97447518e09a9b0b08a2624015cbef
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 530c93cbb99db63c7ced6e454ea78b4f6a0f1ebf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540490"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183084"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,19 +44,19 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. El valor NULL es válido si se ejecuta el procedimiento almacenado en el publicador. Si el procedimiento almacenado se ejecuta en el suscriptor, se debe especificar un publicador.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname y su** valor predeterminado es NULL. El valor NULL es válido si se ejecuta el procedimiento almacenado en el publicador. Si el procedimiento almacenado se ejecuta en el suscriptor, se debe especificar un publicador.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. El valor NULL es válido si se ejecuta el procedimiento almacenado en el publicador de la base de datos de publicación. Si el procedimiento almacenado se ejecuta en el suscriptor, se debe especificar un publicador.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su** valor predeterminado es NULL. El valor NULL es válido si se ejecuta el procedimiento almacenado en el publicador de la base de datos de publicación. Si el procedimiento almacenado se ejecuta en el suscriptor, se debe especificar un publicador.  
   
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su**valor predeterminado es NULL. El valor NULL es válido si el procedimiento almacenado se ejecuta en el suscriptor. Si el procedimiento almacenado se ejecuta en el publicador, se debe especificar un suscriptor.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su** valor predeterminado es NULL. El valor NULL es válido si el procedimiento almacenado se ejecuta en el suscriptor. Si el procedimiento almacenado se ejecuta en el publicador, se debe especificar un suscriptor.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripciones. *subscription_db* es de **tipo sysname y su**valor predeterminado es NULL. El valor NULL es válido si el procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones. Si el procedimiento almacenado se ejecuta en el publicador, se debe especificar un suscriptor.  
+`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripciones. *subscription_db* es de **tipo sysname y su** valor predeterminado es NULL. El valor NULL es válido si el procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones. Si el procedimiento almacenado se ejecuta en el publicador, se debe especificar un suscriptor.  
   
-`[ @resync_type = ] resync_type` Define cuándo debe comenzar la resincronización. *resync_type* es de **tipo int**y puede tener uno de los valores siguientes.  
+`[ @resync_type = ] resync_type` Define cuándo debe comenzar la resincronización. *resync_type* es de **tipo int** y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|La sincronización comienza después de la instantánea inicial. Esta es la opción que consume más recursos, puesto que se vuelven a aplicar al suscriptor todos los cambios a partir de la instantánea inicial.|  
 |**1**|La sincronización comienza después de la última validación correcta. Todas las generaciones nuevas o incompletas originadas a partir de la última validación correcta se aplicarán de nuevo al suscriptor.|  
