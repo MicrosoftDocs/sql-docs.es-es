@@ -6,19 +6,19 @@ ms.date: 08/28/2020
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 839a1d906fcd7b6a4a980a7381b4f5fcdcf10d5d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 08d39aff859ad993ec78fba73bfbad800945b461
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644047"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99139528"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97644047"
 |total_elapsed_time|**int**|Cantidad total de tiempo que se ha estado ejecutando el paso de la consulta, en milisegundos.|Entre 0 y la diferencia entre end_time y start_time. 0 para los pasos en cola.<br /><br /> Si total_elapsed_time supera el valor máximo de un entero, total_elapsed_time seguirá siendo el valor máximo. Esta condición generará la advertencia "se ha superado el valor máximo".<br /><br /> El valor máximo en milisegundos es equivalente a 24,8 días.|  
 |row_count|**bigint**|Número total de filas cambiadas o devueltas por esta solicitud.|Número de filas afectadas por el paso.  Mayor o igual que cero para los pasos de la operación de datos.  -1 para los pasos que no operan en los datos.|  
 |estimated_rows|**bigint**|Número total de filas de trabajo calculadas durante la compilación de la consulta.|Número de filas estimadas por el paso.  Mayor o igual que cero para los pasos de la operación de datos.  -1 para los pasos que no operan en los datos.|  
-|command|**nvarchar(4000)**|Contiene el texto completo del comando de este paso.|Cualquier cadena de solicitud válida para un paso. NULL cuando la operación es del tipo MetaDataCreateOperation. Se trunca si hay más de 4000 caracteres.|  
+|.|**nvarchar(4000)**|Contiene el texto completo del comando de este paso.|Cualquier cadena de solicitud válida para un paso. NULL cuando la operación es del tipo MetaDataCreateOperation. Se trunca si hay más de 4000 caracteres.|  
   
  Para obtener información acerca de las filas máximas retenidas en esta vista, consulte la sección valores máximos de la vista del sistema en los valores mínimo y máximo de [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] .  
   

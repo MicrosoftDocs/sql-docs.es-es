@@ -6,19 +6,19 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 360d6c5f5535b0e0702d1c7aede8721f27f88daf
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: fbb924edb6bd5d6b246ee986b7f600576a179a61
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482484"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99138822"
 ---
 # <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys.dm_pdw_sql_requests (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97482484"
 |total_elapsed_time|**int**|Representa el tiempo en milisegundos durante el que se ha estado ejecutando la distribución de la consulta.|Mayor o igual que 0. Igual a la diferencia de start_time y end_time para distribuciones de consulta completadas, con error o canceladas.<br /><br /> Si total_elapsed_time supera el valor máximo de un entero, total_elapsed_time seguirá siendo el valor máximo. Esta condición generará la advertencia "se ha superado el valor máximo".<br /><br /> El valor máximo en milisegundos es equivalente a 24,8 días.|  
 |row_count|**bigint**|Número de filas modificadas o leídas por esta distribución de consulta.|-1 para las operaciones que no cambian o devuelven datos, como CREATE TABLE y DROP TABLE.|  
 |spid|**int**|Identificador de sesión en la instancia de SQL Server que ejecuta la distribución de la consulta.||  
-|command|**nvarchar(4000)**|Texto completo del comando para esta distribución de consulta.|Cualquier cadena de solicitud o consulta válida.|  
+|.|**nvarchar(4000)**|Texto completo del comando para esta distribución de consulta.|Cualquier cadena de solicitud o consulta válida.|  
   
  Para obtener información acerca de las filas máximas retenidas en esta vista, consulte la sección de metadatos en el tema [límites de capacidad](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   
