@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLFetchScroll
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3c725e11c889765c18c2ff14625b6bde4705051
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cfa442ab1ada0b17e06137257b4d17bf37f854c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476090"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198542"
 ---
 # <a name="sqlfetchscroll-function"></a>Función SQLFetchScroll
 **Conformidad**  
@@ -105,12 +105,12 @@ SQLRETURN SQLFetchScroll(
 |24000|Estado de cursor no válido|El *StatementHandle* estaba en un estado ejecutado pero no se asoció ningún conjunto de resultados con el *StatementHandle*.|  
 |40001|Error de serialización|La transacción en la que se ejecutó la captura ha finalizado para evitar el interbloqueo.|  
 |40003|Finalización de instrucciones desconocida|No se pudo establecer la conexión asociada durante la ejecución de esta función y no se puede determinar el estado de la transacción.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer *\* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*. A continuación, se llamó de nuevo a la función en *StatementHandle*.<br /><br /> Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
-|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLFetchScroll** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) el *StatementHandle* especificado no se encontraba en un estado ejecutado. Se llamó a la función sin llamar primero a **SQLExecDirect**, **SQLExecute** o a una función de catálogo.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> Se llamó a **SQLFetch** (DM) para *StatementHandle* después de llamar a **SQLExtendedFetch** y antes de que se llamara a **SQLFreeStmt** con la opción SQL_CLOSE.|  
+|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLFetchScroll** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect** o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) el *StatementHandle* especificado no se encontraba en un estado ejecutado. Se llamó a la función sin llamar primero a **SQLExecDirect**, **SQLExecute** o a una función de catálogo.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> Se llamó a **SQLFetch** (DM) para *StatementHandle* después de llamar a **SQLExtendedFetch** y antes de que se llamara a **SQLFreeStmt** con la opción SQL_CLOSE.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
-|HY090|Longitud de búfer o cadena no válida|El atributo de instrucción SQL_ATTR_USE_BOOKMARK se estableció en SQL_UB_VARIABLE y la columna 0 estaba enlazada a un búfer cuya longitud no es igual a la longitud máxima para el marcador de este conjunto de resultados. (Esta longitud está disponible en el campo SQL_DESC_OCTET_LENGTH de IRD y se puede obtener llamando a **SQLDescribeCol**, **SQLColAttribute**o **SQLGetDescField**).|  
+|HY090|Longitud de búfer o cadena no válida|El atributo de instrucción SQL_ATTR_USE_BOOKMARK se estableció en SQL_UB_VARIABLE y la columna 0 estaba enlazada a un búfer cuya longitud no es igual a la longitud máxima para el marcador de este conjunto de resultados. (Esta longitud está disponible en el campo SQL_DESC_OCTET_LENGTH de IRD y se puede obtener llamando a **SQLDescribeCol**, **SQLColAttribute** o **SQLGetDescField**).|  
 |HY106|Tipo de captura fuera del intervalo|DM) el valor especificado para el argumento FetchOrientation no era válido.<br /><br /> (DM) el argumento FetchOrientation se SQL_FETCH_BOOKMARK y el atributo SQL_ATTR_USE_BOOKMARKS instrucción se estableció en SQL_UB_OFF.<br /><br /> Se SQL_CURSOR_FORWARD_ONLY el valor del atributo de instrucción SQL_ATTR_CURSOR_TYPE y no se SQL_FETCH_NEXT el valor del argumento FetchOrientation.<br /><br /> Se SQL_NONSCROLLABLE el valor del atributo de instrucción SQL_ATTR_CURSOR_SCROLLABLE y no se SQL_FETCH_NEXT el valor del argumento FetchOrientation.|  
 |HY107|Valor de fila fuera del intervalo|Se SQL_CURSOR_KEYSET_DRIVEN el valor especificado con el atributo de instrucción SQL_ATTR_CURSOR_TYPE, pero el valor especificado con el atributo de instrucción SQL_ATTR_KEYSET_SIZE era mayor que 0 y menor que el valor especificado con el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE.|  
 |HY111|Valor de marcador no válido|Se SQL_FETCH_BOOKMARK el argumento FetchOrientation y el marcador al que apunta el valor en el atributo de la instrucción SQL_ATTR_FETCH_BOOKMARK_PTR no era válido o era un puntero nulo.|  
@@ -165,7 +165,7 @@ SQLRETURN SQLFetchScroll(
 |Condición|Primera fila del conjunto de filas nuevo|  
 |---------------|-----------------------------|  
 |*Antes del inicio*|1|  
-|*CurrRowsetStart + RowsetSize*[1] * \< = LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1] *\< = LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*Después del final*|  
 |*Después del final*|*Después del final*|  
   
@@ -201,9 +201,9 @@ SQLRETURN SQLFetchScroll(
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*Después del final*|  
 |*Después de end y FetchOffset >= 0*|*Después del final*|  
   
- [1]   ***SQLFetchScroll*** devuelve el mismo conjunto de filas que si se llamara con FetchOrientation establecido en SQL_FETCH_ABSOLUTE. Para obtener más información, vea la sección "SQL_FETCH_ABSOLUTE".  
+ [1] ***SQLFetchScroll** _ devuelve el mismo conjunto de filas que si se llamara con FetchOrientation establecido en SQL_FETCH_ABSOLUTE. Para obtener más información, vea la sección "SQL_FETCH_ABSOLUTE".  
   
- [2]   **SQLFetchScroll** devuelve SQLSTATE 01S06 (intento de captura antes de que el conjunto de resultados devolviera el primer conjunto de filas) y SQL_SUCCESS_WITH_INFO.  
+ [2] _ *SQLFetchScroll** devuelve SQLSTATE 01S06 (intento de captura antes de que el conjunto de resultados devolviera el primer conjunto de filas) y SQL_SUCCESS_WITH_INFO.  
   
  [3] si se ha cambiado el tamaño del conjunto de filas desde la llamada anterior para capturar filas, este es el nuevo tamaño del conjunto de filas.  
   
@@ -365,6 +365,6 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |Colocar el cursor, actualizar los datos del conjunto de filas o actualizar o eliminar los datos del conjunto de resultados|[Función SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |Establecer un atributo de instrucción|[Función SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,13 +1,13 @@
 ---
-title: Sys. fn_PageResCracker (Transact-SQL) | Microsoft Docs
-description: Obtenga información sobre la función del sistema sys. fn_PageResCracker. Vea ejemplos y ver recursos adicionales disponibles.
+title: sys.fn_PageResCracker (Transact-SQL) | Microsoft Docs
+description: Obtenga información acerca de la función del sistema sys.fn_PageResCracker. Consulte ejemplos y examine los recursos adicionales disponibles.
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_PageResCracker
 - sys.fn_PageResCracker_TSQL
@@ -25,14 +25,14 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: a48b5ba06223130a83980bf6cf8ec410bd58e5a1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a60b83d3b494ba705399effd9412ef0549f2f3e4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247584"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198686"
 ---
-# <a name="sysfn_pagerescracker-transact-sql"></a>Sys. fn_PageResCracker (Transact-SQL)
+# <a name="sysfn_pagerescracker-transact-sql"></a>sys.fn_PageResCracker (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 Devuelve `db_id` , `file_id` y `page_id` para el `page_resource` valor especificado. 
@@ -56,17 +56,17 @@ Es el formato hexadecimal de 8 bytes de un recurso de página de base de datos.
 |file_id|**int**|Id. de archivo|  
 |page_id|**int**|Identificador de página|  
   
-## <a name="remarks"></a>Comentarios  
-`sys.fn_PageResCracker`se utiliza para convertir la representación hexadecimal de 8 bytes de una página de base de datos en un conjunto de filas que contiene el identificador de base de datos, el identificador de archivo y el ID. de página de la página.   
+## <a name="remarks"></a>Observaciones  
+`sys.fn_PageResCracker` se utiliza para convertir la representación hexadecimal de 8 bytes de una página de base de datos en un conjunto de filas que contiene el identificador de base de datos, el identificador de archivo y el ID. de página de la página.   
 
-Puede obtener un recurso de página válido de la `page_resource` columna de la vista de administración dinámica [sys. Dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) o los procesos desys.sys&#40;vista del sistema [&#41;de Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) . Si se usa un recurso de página no válido, el valor devuelto es NULL.  
-El uso principal de `sys.fn_PageResCracker` es facilitar las combinaciones entre estas vistas y la función de administración dinámica [sys. Dm_db_page_info &#40;Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) para obtener información acerca de la página, como el objeto al que pertenece.
+Puede obtener un recurso de página válido de la `page_resource` columna de la sys.dm_exec_requests &#40;vista de administración dinámica de [TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) o los procesos desys.sys&#40;vista del sistema [ de Transact-SQL ](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)&#41;. Si se usa un recurso de página no válido, el valor devuelto es NULL.  
+El uso principal de `sys.fn_PageResCracker` es facilitar combinaciones entre estas vistas y el sys.dm_db_page_info &#40;función de administración dinámica [&#41;de TRANSACT-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) con el fin de obtener información sobre la página, como el objeto al que pertenece.
   
 ## <a name="permissions"></a>Permisos  
 El usuario necesita el `VIEW SERVER STATE` permiso en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  
-La `sys.fn_PageResCracker` función se puede usar junto con [sys. Dm_db_page_info &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) para solucionar problemas de esperas y bloqueos relacionados con las páginas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  El script siguiente es un ejemplo de cómo puede usar estas funciones para recopilar información de la página de base de datos para todas las solicitudes activas que están esperando actualmente algún tipo de recurso de página. 
+La `sys.fn_PageResCracker` función se puede usar junto con [sys.dm_db_page_info &#40;&#41;de TRANSACT-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) para solucionar problemas de esperas y bloqueos relacionados con las páginas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  El script siguiente es un ejemplo de cómo puede usar estas funciones para recopilar información de la página de base de datos para todas las solicitudes activas que están esperando actualmente algún tipo de recurso de página. 
   
 ```sql  
 SELECT page_info.* 
@@ -76,7 +76,7 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. dm_db_page_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)  
+ [sys.dm_db_page_info &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)  
  [sys.sysprocesos &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   

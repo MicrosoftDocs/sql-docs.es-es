@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_exec_query_optimizer_info_TSQL
 - dm_exec_query_optimizer_info
@@ -21,12 +21,12 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0e5a367c8c336cde314cbceef14b523bac8aca1
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4f106fec3f0a512f1f0f565536ad029d3b02af29
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98092940"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198601"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "98092940"
   
 |Nombre|Tipo de datos|Descripción|  
 |----------|---------------|-----------------|  
-|**bloque**|**nvarchar(4000)**|Nombre del evento de estadísticas del optimizador.|  
+|**counter**|**nvarchar(4000)**|Nombre del evento de estadísticas del optimizador.|  
 |**occurrence**|**bigint**|Número de repeticiones del evento de optimización para este contador.|  
 |**value**|**float**|Valor promedio de la propiedad por repetición del evento.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  

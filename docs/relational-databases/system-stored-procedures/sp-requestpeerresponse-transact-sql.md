@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_requestpeerresponse_TSQL
 - sp_requestpeerresponse
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d07204928403d8ba99aa49688e51239dfdf08804
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ce25686ab2b7947438d207a3acb5fc5b7f6549e2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543127"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199968"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación en una topología punto a punto para la que se está comprobando el estado. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en una topología punto a punto para la que se está comprobando el estado. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @description = ] 'description'` Información definida por el usuario que se puede utilizar para identificar solicitudes de estado individuales. la *Descripción* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL.  
   

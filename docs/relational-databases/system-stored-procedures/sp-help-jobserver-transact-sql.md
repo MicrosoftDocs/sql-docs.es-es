@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobserver
 - sp_help_jobserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7e59691a44353826f47550bb67c7a7872fcc4200
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4c5e5f8a4c7ec027c72452ea725ec6def715309a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546106"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200113"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,14 +43,14 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` Número de identificación del trabajo del que se va a devolver información. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id` Número de identificación del trabajo del que se va a devolver información. *job_id* es de tipo **uniqueidentifier** y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` Nombre del trabajo del que se va a devolver información. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo del que se va a devolver información. *job_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
-`[ @show_last_run_details = ] show_last_run_details` Indica si la información de ejecución de la última ejecución forma parte del conjunto de resultados. *show_last_run_details* es de **tinyint**y su valor predeterminado es **0**. **0** no incluye información de última ejecución y **1** sí.  
+`[ @show_last_run_details = ] show_last_run_details` Indica si la información de ejecución de la última ejecución forma parte del conjunto de resultados. *show_last_run_details* es de **tinyint** y su valor predeterminado es **0**. **0** no incluye información de última ejecución y **1** sí.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

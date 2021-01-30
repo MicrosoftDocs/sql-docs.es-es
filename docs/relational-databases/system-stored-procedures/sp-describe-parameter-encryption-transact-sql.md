@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_parameter_encryption
 - sp_describe_parameter_encryption_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b06ee1588fe46b04348d2e9595eb72206f7b57d2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 41821edc34835f60cef201ae78b3448f3d3f4699
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466826"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200776"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 
@@ -85,7 +85,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|Código de la fila del primer conjunto de resultados. La fila a la que se hace referencia describe la clave de cifrado de columnas configurada para la columna, el parámetro corresponde a.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Número de versión del algoritmo de normalización de tipos.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador de cliente, compatible Always Encrypted, llama automáticamente a **sp_describe_parameter_encryption** para recuperar los metadatos de cifrado de las consultas con parámetros, emitidos por la aplicación. Posteriormente, el controlador utiliza los metadatos de cifrado para cifrar los valores de los parámetros que corresponden a las columnas de base de datos protegidas con Always Encrypted y sustituye los valores de parámetro de texto simple, enviados por la aplicación, con los valores de parámetro cifrados, antes de enviar la consulta al motor de base de datos.  
   
 ## <a name="permissions"></a>Permisos  

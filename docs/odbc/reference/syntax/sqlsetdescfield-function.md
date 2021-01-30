@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLSetDescField
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2c21d3a21e863d62a3cc8d685e81c6e3265c1551
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd48da2caec1acba5cfe775a2baa1efaaf886aab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421139"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200972"
 ---
 # <a name="sqlsetdescfield-function"></a>Función SQLSetDescField
 
@@ -54,7 +54,7 @@ SQLRETURN SQLSetDescField(
  Entradas Indica el registro del descriptor que contiene el campo que la aplicación busca establecer. Los registros de descriptor se numeran a partir de 0, con el número de registro 0 como registro del marcador. El argumento *RecNumber* se omite para los campos de encabezado.  
   
  *FieldIdentifier*  
- Entradas Indica el campo del descriptor cuyo valor se va a establecer. Para obtener más información, vea el tema sobre el argumento*FieldIdentifier* en la sección "Comentarios".  
+ Entradas Indica el campo del descriptor cuyo valor se va a establecer. Para obtener más información, vea el tema sobre el argumento *FieldIdentifier* en la sección "Comentarios".  
   
  *ValuePtr*  
  Entradas Puntero a un búfer que contiene la información del descriptor o un valor entero. El tipo de datos depende del valor de *FieldIdentifier*. Si *ValuePtr* es un valor entero, puede considerarse como 8 bytes (SQLLEN), 4 bytes (sqlinteger donde) o 2 bytes (SQLSMALLINT), dependiendo del valor del argumento *FieldIdentifier* .  
@@ -83,20 +83,20 @@ SQLRETURN SQLSetDescField(
 |SQLSTATE|Error|Descripción|  
 |--------------|-----------|-----------------|  
 |01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01S02|Valor de opción cambiado|El controlador no admitía el valor especificado en * \* ValuePtr* (si *ValuePtr* era un puntero) o el valor de *ValuePtr* (si *ValuePtr* era un valor entero) o * \* ValuePtr* no era válido debido a las condiciones de trabajo de implementación, por lo que el controlador sustituyó un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|07009|Índice de descriptor no válido|El argumento *FieldIdentifier* era un campo registro, el argumento *RecNumber* era 0 y el argumento *DescriptorHandle* hacía referencia a un identificador IPD.<br /><br /> El argumento *RecNumber* era menor que 0 y el argumento *DescriptorHandle* hacía referencia a ARD o APD.<br /><br /> El argumento *RecNumber* era mayor que el número máximo de columnas o parámetros que el origen de datos puede admitir, y el argumento *DescriptorHandle* hace referencia a APD o ARD.<br /><br /> (DM) el argumento *FieldIdentifier* se SQL_DESC_COUNT y el argumento * \* ValuePtr* era menor que 0.<br /><br /> El argumento *RecNumber* era igual a 0 y el argumento *DescriptorHandle* hacía referencia a un APD asignado implícitamente. (Este error no se produce con un descriptor de aplicación asignado explícitamente, porque no se sabe si un descriptor de aplicación asignado explícitamente es un APD o ARD hasta el tiempo de ejecución).|  
+|01S02|Valor de opción cambiado|El controlador no admitía el valor especificado en *\* ValuePtr* (si *ValuePtr* era un puntero) o el valor de *ValuePtr* (si *ValuePtr* era un valor entero) o *\* ValuePtr* no era válido debido a las condiciones de trabajo de implementación, por lo que el controlador sustituyó un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|07009|Índice de descriptor no válido|El argumento *FieldIdentifier* era un campo registro, el argumento *RecNumber* era 0 y el argumento *DescriptorHandle* hacía referencia a un identificador IPD.<br /><br /> El argumento *RecNumber* era menor que 0 y el argumento *DescriptorHandle* hacía referencia a ARD o APD.<br /><br /> El argumento *RecNumber* era mayor que el número máximo de columnas o parámetros que el origen de datos puede admitir, y el argumento *DescriptorHandle* hace referencia a APD o ARD.<br /><br /> (DM) el argumento *FieldIdentifier* se SQL_DESC_COUNT y el argumento *\* ValuePtr* era menor que 0.<br /><br /> El argumento *RecNumber* era igual a 0 y el argumento *DescriptorHandle* hacía referencia a un APD asignado implícitamente. (Este error no se produce con un descriptor de aplicación asignado explícitamente, porque no se sabe si un descriptor de aplicación asignado explícitamente es un APD o ARD hasta el tiempo de ejecución).|  
 |08S01|Error de vínculo de comunicación|Se produjo un error en el vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador antes de que la función finalizara el procesamiento.|  
 |22001|Datos de cadena, truncados a la derecha|Se SQL_DESC_NAME el argumento *FieldIdentifier* y el argumento *BufferLength* era un valor mayor que SQL_MAX_IDENTIFIER_LEN.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer *\* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
-|HY010|Error de secuencia de función|(DM) el *DescriptorHandle* estaba asociado a un *StatementHandle* para el que se llamó a una función que se ejecuta de forma asincrónica (no a este) y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para el *StatementHandle* con el que se asoció *DescriptorHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *DescriptorHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLSetDescField** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para uno de los identificadores de instrucciones asociados a *DescriptorHandle* y se devolvieron SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.|  
+|HY010|Error de secuencia de función|(DM) el *DescriptorHandle* estaba asociado a un *StatementHandle* para el que se llamó a una función que se ejecuta de forma asincrónica (no a este) y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** para el *StatementHandle* con el que se asoció *DescriptorHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *DescriptorHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLSetDescField** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect** o **SQLMoreResults** para uno de los identificadores de instrucciones asociados a *DescriptorHandle* y se devolvieron SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
 |HY016|No se puede modificar un descriptor de fila de implementación|El argumento *DescriptorHandle* estaba asociado a IRD y el argumento *FieldIdentifier* no era SQL_DESC_ARRAY_STATUS_PTR ni SQL_DESC_ROWS_PROCESSED_PTR.|  
 |HY021|Información de descriptor incoherente|Los campos SQL_DESC_TYPE y SQL_DESC_DATETIME_INTERVAL_CODE no forman un tipo SQL de ODBC válido o un tipo SQL específico del controlador válido (para IPD) o un tipo C de ODBC válido (para APD o ARDs).<br /><br /> La información del descriptor comprobada durante una comprobación de coherencia no era coherente. (Vea "comprobación de coherencia" en **SQLSetDescRec**).|  
-|HY090|Longitud de búfer o cadena no válida|(DM) * \* ValuePtr* es una cadena de caracteres y *BufferLength* era menor que cero pero no era igual que SQL_NTS.<br /><br /> (DM) el controlador era un controlador ODBC 2 *. x* , el descriptor era ARD, el argumento *ColumnNumber* se estableció en 0 y el valor especificado para el argumento *BufferLength* no era igual a 4.|  
+|HY090|Longitud de búfer o cadena no válida|(DM) *\* ValuePtr* es una cadena de caracteres y *BufferLength* era menor que cero pero no era igual que SQL_NTS.<br /><br /> (DM) el controlador era un controlador ODBC 2 *. x* , el descriptor era ARD, el argumento *ColumnNumber* se estableció en 0 y el valor especificado para el argumento *BufferLength* no era igual a 4.|  
 |HY091|Identificador de campo descriptor no válido|El valor especificado para el argumento *FieldIdentifier* no era un campo definido por ODBC y no era un valor definido por la implementación.<br /><br /> El argumento *FieldIdentifier* no era válido para el argumento *DescriptorHandle* .<br /><br /> El argumento *FieldIdentifier* era un campo definido por ODBC de solo lectura.|  
-|HY092|Identificador de opción/atributo no válido|El valor de * \* ValuePtr* no era válido para el argumento *FieldIdentifier* .<br /><br /> Se SQL_DESC_UNNAMED el argumento *FieldIdentifier* y *ValuePtr* se SQL_NAMED.|  
-|HY105|Tipo de parámetro no válido|(DM) el valor especificado para el campo SQL_DESC_PARAMETER_TYPE no era válido. (Para obtener más información, vea la sección "argumento*InputOutputType* " en **SQLBindParameter**).|  
+|HY092|Identificador de opción/atributo no válido|El valor de *\* ValuePtr* no era válido para el argumento *FieldIdentifier* .<br /><br /> Se SQL_DESC_UNNAMED el argumento *FieldIdentifier* y *ValuePtr* se SQL_NAMED.|  
+|HY105|Tipo de parámetro no válido|(DM) el valor especificado para el campo SQL_DESC_PARAMETER_TYPE no era válido. (Para obtener más información, vea la sección "argumento *InputOutputType* " en **SQLBindParameter**).|  
 |HY117|La conexión se suspendió debido a un estado de transacción desconocido. Solo se permiten las funciones de desconexión y de solo lectura.|(DM) para obtener más información sobre el estado suspendido, vea [novedades de ODBC 3,8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).|  
 |HYT01|Tiempo de espera de conexión agotado|Expiró el tiempo de espera de conexión antes de que el origen de datos respondiera a la solicitud. El período de tiempo de espera de la conexión se establece mediante **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|El controlador no admite esta función|(DM) el controlador asociado a *DescriptorHandle* no admite la función.|  
@@ -113,7 +113,7 @@ SQLRETURN SQLSetDescField(
   
  Si una aplicación llama a **SQLSetDescField** para establecer cualquier campo que no sea SQL_DESC_COUNT o los campos diferidos SQL_DESC_DATA_PTR, SQL_DESC_OCTET_LENGTH_PTR o SQL_DESC_INDICATOR_PTR, el registro se vuelve sin enlazar.  
   
- Los campos de encabezado del descriptor se establecen mediante una llamada a **SQLSetDescField** con el *FieldIdentifier*adecuado. Muchos campos de encabezado también son atributos de instrucción, por lo que también se pueden establecer mediante una llamada a **SQLSetStmtAttr**. Esto permite que las aplicaciones establezcan un campo de descriptor sin obtener primero un identificador de descriptor. Cuando se llama a **SQLSetDescField** para establecer un campo de encabezado, se omite el argumento *RecNumber* .  
+ Los campos de encabezado del descriptor se establecen mediante una llamada a **SQLSetDescField** con el *FieldIdentifier* adecuado. Muchos campos de encabezado también son atributos de instrucción, por lo que también se pueden establecer mediante una llamada a **SQLSetStmtAttr**. Esto permite que las aplicaciones establezcan un campo de descriptor sin obtener primero un identificador de descriptor. Cuando se llama a **SQLSetDescField** para establecer un campo de encabezado, se omite el argumento *RecNumber* .  
   
  Se usa un *RecNumber* de 0 para establecer los campos de marcador.  
   
@@ -216,12 +216,12 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_ARRAY_STATUS_PTR [All]**  
  Para cada tipo de descriptor, este campo de encabezado SQLUSMALLINT * apunta a una matriz de valores de SQLUSMALLINT. Estas matrices tienen el nombre siguiente: matriz de estado de fila (IRD), matriz de estado de parámetro (IPD), matriz de operación de fila (ARD) y matriz de operaciones de parámetros (APD).  
   
- En IRD, este campo de encabezado apunta a una matriz de estado de fila que contiene los valores de estado después de una llamada a **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**o **SQLSetPos**. La matriz tiene tantos elementos como filas hay en el conjunto de filas. La aplicación debe asignar una matriz de SQLUSMALLINTs y establecer este campo para que apunte a la matriz. De forma predeterminada, el campo se establece en un puntero nulo. El controlador rellenará la matriz, a menos que el campo SQL_DESC_ARRAY_STATUS_PTR esté establecido en un puntero nulo, en cuyo caso no se generan valores de estado y la matriz no se rellena.  
+ En IRD, este campo de encabezado apunta a una matriz de estado de fila que contiene los valores de estado después de una llamada a **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll** o **SQLSetPos**. La matriz tiene tantos elementos como filas hay en el conjunto de filas. La aplicación debe asignar una matriz de SQLUSMALLINTs y establecer este campo para que apunte a la matriz. De forma predeterminada, el campo se establece en un puntero nulo. El controlador rellenará la matriz, a menos que el campo SQL_DESC_ARRAY_STATUS_PTR esté establecido en un puntero nulo, en cuyo caso no se generan valores de estado y la matriz no se rellena.  
   
 > [!CAUTION]  
 >  El comportamiento del controlador es indefinido si la aplicación establece los elementos de la matriz de estado de fila a la que señala el campo de SQL_DESC_ARRAY_STATUS_PTR de IRD.  
   
- La matriz se rellena inicialmente mediante una llamada a **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**o **SQLSetPos**. Si la llamada no devolvió SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, el contenido de la matriz a la que señala este campo es indefinido. Los elementos de la matriz pueden contener los valores siguientes:  
+ La matriz se rellena inicialmente mediante una llamada a **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll** o **SQLSetPos**. Si la llamada no devolvió SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, el contenido de la matriz a la que señala este campo es indefinido. Los elementos de la matriz pueden contener los valores siguientes:  
   
 -   SQL_ROW_SUCCESS: la fila se ha recuperado correctamente y no ha cambiado desde que se capturó por última vez.  
   
@@ -233,7 +233,7 @@ SQLRETURN SQLSetDescField(
   
 -   SQL_ROW_DELETED: la fila se ha eliminado desde la última vez que se recuperó.  
   
--   SQL_ROW_ADDED: **SQLBulkOperations**insertó la fila. Si se vuelve a capturar la fila, su estado es SQL_ROW_SUCCESS.  
+-   SQL_ROW_ADDED: **SQLBulkOperations** insertó la fila. Si se vuelve a capturar la fila, su estado es SQL_ROW_SUCCESS.  
   
 -   SQL_ROW_NOROW: el conjunto de filas se superpone al final del conjunto de resultados y no se devolvió ninguna fila que corresponda a este elemento de la matriz de estado de fila.  
   
@@ -293,13 +293,13 @@ SQLRETURN SQLSetDescField(
   
  Para seleccionar el enlace de modo de columna para las columnas, este campo se establece en SQL_BIND_BY_COLUMN (valor predeterminado).  
   
- Este campo de ARD también se puede establecer llamando a **SQLSetStmtAttr** con el *atributo*SQL_ATTR_ROW_BIND_TYPE.  
+ Este campo de ARD también se puede establecer llamando a **SQLSetStmtAttr** con el *atributo* SQL_ATTR_ROW_BIND_TYPE.  
   
  En APD, este campo especifica la orientación de enlace que se va a usar para los parámetros dinámicos.  
   
  Para seleccionar el enlace de modo de columna para los parámetros, este campo se establece en SQL_BIND_BY_COLUMN (valor predeterminado).  
   
- Este campo de APD también se puede establecer llamando a **SQLSetStmtAttr** con el *atributo*SQL_ATTR_PARAM_BIND_TYPE.  
+ Este campo de APD también se puede establecer llamando a **SQLSetStmtAttr** con el *atributo* SQL_ATTR_PARAM_BIND_TYPE.  
   
  **SQL_DESC_COUNT [All]**  
  Este campo de encabezado SQLSMALLINT especifica el índice basado en 1 del registro con el número más alto que contiene los datos. Cuando el controlador establece la estructura de datos para el descriptor, también debe establecer el campo SQL_DESC_COUNT para mostrar cuántos registros son significativos. Cuando una aplicación asigna una instancia de esta estructura de datos, no tiene que especificar el número de registros para los que se va a reservar espacio. A medida que la aplicación especifica el contenido de los registros, el controlador toma las medidas necesarias para asegurarse de que el identificador del descriptor hace referencia a una estructura de datos del tamaño adecuado.  
@@ -315,7 +315,7 @@ SQLRETURN SQLSetDescField(
   
  En un IPD, este campo de encabezado SQLUINTEGER que incluya * apunta a un búfer que contiene el número de conjuntos de parámetros que se han procesado, incluidos los conjuntos de errores. No se devolverá ningún número si se trata de un puntero nulo.  
   
- SQL_DESC_ROWS_PROCESSED_PTR es válido solo después de que se devuelvan SQL_SUCCESS o SQL_SUCCESS_WITH_INFO después de una llamada a **SQLFetch** o **SQLFetchScroll** (para un campo IRD) o **SQLExecute**, **SQLEXECDIRECT**o **SQLParamData** (para un campo IPD). Si la llamada que rellena el búfer señalado por este campo no devuelve SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, el contenido del búfer es indefinido, a menos que devuelva SQL_NO_DATA, en cuyo caso el valor del búfer se establece en 0.  
+ SQL_DESC_ROWS_PROCESSED_PTR es válido solo después de que se devuelvan SQL_SUCCESS o SQL_SUCCESS_WITH_INFO después de una llamada a **SQLFetch** o **SQLFetchScroll** (para un campo IRD) o **SQLExecute**, **SQLEXECDIRECT** o **SQLParamData** (para un campo IPD). Si la llamada que rellena el búfer señalado por este campo no devuelve SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, el contenido del búfer es indefinido, a menos que devuelva SQL_NO_DATA, en cuyo caso el valor del búfer se establece en 0.  
   
  Este campo de ARD también se puede establecer llamando a **SQLSetStmtAttr** con el atributo SQL_ATTR_ROWS_FETCHED_PTR. Este campo de APD también se puede establecer llamando a **SQLSetStmtAttr** con el atributo SQL_ATTR_PARAMS_PROCESSED_PTR.  
   
@@ -500,7 +500,7 @@ SQLRETURN SQLSetDescField(
   
  Si SQL_DESC_TYPE se establece en el tipo de datos verbose DateTime o Interval (SQL_DATETIME o SQL_INTERVAL) y el campo SQL_DESC_DATETIME_INTERVAL_CODE se establece en el subcódigo correspondiente, el campo tipo de SQL_DESC_CONCISE se establece en el tipo conciso correspondiente. Al intentar establecer SQL_DESC_TYPE en uno de los tipos conciso de DateTime o Interval, se devolverá SQLSTATE HY021 (información de descriptor incoherente).  
   
- Cuando el campo de SQL_DESC_TYPE se establece mediante una llamada a **SQLBindCol**, **SQLBindParameter**o **SQLSetDescField**, los campos siguientes se establecen en los valores predeterminados siguientes, tal como se muestra en la tabla siguiente. Los valores de los campos restantes del mismo registro no están definidos.  
+ Cuando el campo de SQL_DESC_TYPE se establece mediante una llamada a **SQLBindCol**, **SQLBindParameter** o **SQLSetDescField**, los campos siguientes se establecen en los valores predeterminados siguientes, tal como se muestra en la tabla siguiente. Los valores de los campos restantes del mismo registro no están definidos.  
   
 |Valor de SQL_DESC_TYPE|Otros campos establecidos implícitamente|  
 |------------------------------|---------------------------------|  
@@ -547,6 +547,6 @@ SQLRETURN SQLSetDescField(
 |Obtener varios campos de descriptor|[Función SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |Establecer varios campos de descriptor|[Función SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Archivos de encabezado ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Referencia de API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)

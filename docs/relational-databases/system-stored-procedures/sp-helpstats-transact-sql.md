@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpstats
 - sp_helpstats_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e44d5cb6911336180b1d90701ce78cf19d0b2a6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c3b0d76b08d8be5aefcbfceee570d893d6ca4659
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97410862"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198722"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,7 @@ sp_helpstats[ @objname = ] 'object_name'
 |**statistics_name**|Nombre de la estadística. Devuelve **sysname** y no puede ser null.|  
 |**statistics_keys**|Claves en que se basa la estadística. Devuelve **nvarchar (2078)** y no puede ser null.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Utilice DBCC SHOW_STATISTICS para presentar información detallada de estadística acerca de cualquier índice o estadística en particular. Para obtener más información, vea [DBCC SHOW_STATISTICS &#40;&#41;de Transact-SQL ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) y [sp_helpindex &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  

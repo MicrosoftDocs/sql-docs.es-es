@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobhistory_TSQL
 - sp_help_jobhistory
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d805cfb7f6cf682e07e703e6854e25737a82b9cc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2cfef1ba5f28b498ab360daf67cc1bf3c79f0d2a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548002"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200137"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,40 +54,40 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` El número de identificación del trabajo. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id` El número de identificación del trabajo. *job_id* es de tipo **uniqueidentifier** y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` Nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo. *job_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @step_id = ] step_id` El número de identificación del paso. *step_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @step_id = ] step_id` El número de identificación del paso. *step_id* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @sql_message_id = ] sql_message_id` El número de identificación del mensaje de error devuelto por Microsoft SQL Server al ejecutar el trabajo. *sql_message_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @sql_message_id = ] sql_message_id` El número de identificación del mensaje de error devuelto por Microsoft SQL Server al ejecutar el trabajo. *sql_message_id* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @sql_severity = ] sql_severity` Nivel de gravedad del mensaje de error devuelto por SQL Server al ejecutar el trabajo. *sql_severity* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @sql_severity = ] sql_severity` Nivel de gravedad del mensaje de error devuelto por SQL Server al ejecutar el trabajo. *sql_severity* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @start_run_date = ] start_run_date` Fecha en que se inició el trabajo. *start_run_date*es de **tipo int**y su valor predeterminado es NULL. *start_run_date* se debe escribir con el formato AAAAMMDD, donde aaaa es un año con cuatro cifras, mm es el mes con dos cifras y dd es el día con dos cifras.  
+`[ @start_run_date = ] start_run_date` Fecha en que se inició el trabajo. *start_run_date* es de **tipo int** y su valor predeterminado es NULL. *start_run_date* se debe escribir con el formato AAAAMMDD, donde aaaa es un año con cuatro cifras, mm es el mes con dos cifras y dd es el día con dos cifras.  
   
-`[ @end_run_date = ] end_run_date` Fecha en que se completó el trabajo. *end_run_date* es de **tipo int**y su valor predeterminado es NULL. *end_run_date*se debe escribir con el formato AAAAMMDD, donde aaaa es un año de cuatro dígitos, mm es el mes con dos cifras y dd es el día con dos cifras.  
+`[ @end_run_date = ] end_run_date` Fecha en que se completó el trabajo. *end_run_date* es de **tipo int** y su valor predeterminado es NULL. *end_run_date* se debe escribir con el formato AAAAMMDD, donde aaaa es un año de cuatro dígitos, mm es el mes con dos cifras y dd es el día con dos cifras.  
   
-`[ @start_run_time = ] start_run_time` La hora a la que se inició el trabajo. *start_run_time* es de **tipo int**y su valor predeterminado es NULL. *start_run_time*debe especificarse con el formato HHMMSS, donde HH es la hora de dos caracteres del día, mm son los minutos con dos cifras y SS son los segundos con dos cifras del día.  
+`[ @start_run_time = ] start_run_time` La hora a la que se inició el trabajo. *start_run_time* es de **tipo int** y su valor predeterminado es NULL. *start_run_time* debe especificarse con el formato HHMMSS, donde HH es la hora de dos caracteres del día, mm son los minutos con dos cifras y SS son los segundos con dos cifras del día.  
   
-`[ @end_run_time = ] end_run_time` La hora a la que el trabajo finalizó su ejecución. *end_run_time* es de **tipo int**y su valor predeterminado es NULL. *end_run_time*debe especificarse con el formato HHMMSS, donde HH es la hora de dos caracteres del día, mm son los minutos con dos cifras y SS son los segundos con dos cifras del día.  
+`[ @end_run_time = ] end_run_time` La hora a la que el trabajo finalizó su ejecución. *end_run_time* es de **tipo int** y su valor predeterminado es NULL. *end_run_time* debe especificarse con el formato HHMMSS, donde HH es la hora de dos caracteres del día, mm son los minutos con dos cifras y SS son los segundos con dos cifras del día.  
   
-`[ @minimum_run_duration = ] minimum_run_duration` La cantidad mínima de tiempo para la finalización del trabajo. *minimum_run_duration* es de **tipo int**y su valor predeterminado es NULL. *minimum_run_duration*debe especificarse con el formato HHMMSS, donde HH es la hora de dos caracteres del día, mm son los minutos con dos cifras y SS son los segundos con dos cifras del día.  
+`[ @minimum_run_duration = ] minimum_run_duration` La cantidad mínima de tiempo para la finalización del trabajo. *minimum_run_duration* es de **tipo int** y su valor predeterminado es NULL. *minimum_run_duration* debe especificarse con el formato HHMMSS, donde HH es la hora de dos caracteres del día, mm son los minutos con dos cifras y SS son los segundos con dos cifras del día.  
   
 `[ @run_status = ] run_status` El estado de ejecución del trabajo. *run_status* es de **tipo int**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**0**|Failed|  
+|**0**|Con error|  
 |**1**|Correcto|  
 |**2**|Reintento (solo pasos)|  
 |**3**|Canceled|  
 |**4**|Mensaje en curso|  
 |**5**|Unknown|  
   
-`[ @minimum_retries = ] minimum_retries` El número mínimo de veces que un trabajo debe volver a ejecutarse. *minimum_retries* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @minimum_retries = ] minimum_retries` El número mínimo de veces que un trabajo debe volver a ejecutarse. *minimum_retries* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @oldest_first = ] oldest_first` Indica si se va a presentar la salida con los trabajos más antiguos en primer lugar. *oldest_first* es de **tipo int**y su valor predeterminado es **0**, que presenta los trabajos más recientes en primer lugar. **1** presenta los trabajos más antiguos en primer lugar.  
+`[ @oldest_first = ] oldest_first` Indica si se va a presentar la salida con los trabajos más antiguos en primer lugar. *oldest_first* es de **tipo int** y su valor predeterminado es **0**, que presenta los trabajos más recientes en primer lugar. **1** presenta los trabajos más antiguos en primer lugar.  
   
 `[ @server = ] 'server'` Nombre del servidor en el que se realizó el trabajo. el *servidor* es de tipo **nvarchar (30)** y su valor predeterminado es NULL.  
   

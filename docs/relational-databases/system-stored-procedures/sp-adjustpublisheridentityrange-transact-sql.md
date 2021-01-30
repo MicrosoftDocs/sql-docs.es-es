@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_adjustpublisheridentityrange_TSQL
 - sp_adjustpublisheridentityrange
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdb8f12f5c5ff3c3c01f5d7cd18827b2fec0e9c8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5855ffeceff68c10e0eac2089a95d2b0184cd327
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542000"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198352"
 ---
 # <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +40,11 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación en la que se reasignan los nuevos intervalos de identidad. *Publication* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en la que se reasignan los nuevos intervalos de identidad. *Publication* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @table_name = ] 'table_name'` Es el nombre de la tabla en la que se reasignan los nuevos intervalos de identidad. *TABLE_NAME* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @table_name = ] 'table_name'` Es el nombre de la tabla en la que se reasignan los nuevos intervalos de identidad. *TABLE_NAME* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @table_owner = ] 'table_owner'` Es el propietario de la tabla en el publicador. *table_owner* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *table_owner* , se usa el nombre del usuario actual.  
+`[ @table_owner = ] 'table_owner'` Es el propietario de la tabla en el publicador. *table_owner* es de **tipo sysname y su** valor predeterminado es NULL. Si no se especifica *table_owner* , se usa el nombre del usuario actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

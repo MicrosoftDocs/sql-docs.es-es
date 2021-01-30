@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobs_in_schedule_TSQL
 - sp_help_jobs_in_schedule
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d8a9251e807be429bfb0881afc711880520f9f7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1890fc4b8aa3757b55dfc5ad7e33070126300897
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538863"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200144"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @schedule_id = ] schedule_id` Identificador de la programación de la que se va a mostrar información. *schedule_id* es de **tipo int**y no tiene ningún valor predeterminado. Se puede especificar *schedule_id* o *schedule_name* .  
+`[ @schedule_id = ] schedule_id` Identificador de la programación de la que se va a mostrar información. *schedule_id* es de **tipo int** y no tiene ningún valor predeterminado. Se puede especificar *schedule_id* o *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'` Nombre de la programación para la que se va a mostrar información. *schedule_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Se puede especificar *schedule_id* o *schedule_name* .  
+`[ @schedule_name = ] 'schedule_name'` Nombre de la programación para la que se va a mostrar información. *schedule_name* es de **tipo sysname** y no tiene ningún valor predeterminado. Se puede especificar *schedule_id* o *schedule_name* .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -61,7 +61,7 @@ sp_help_jobs_in_schedule
 |**description**|**nvarchar(512)**|Descripción del trabajo.|  
 |**start_step_id**|**int**|Id. del paso del trabajo en el que debe comenzar la ejecución.|  
 |**category**|**sysname**|Categoría del trabajo|  
-|**propietario**|**sysname**|Propietario del trabajo.|  
+|**owner**|**sysname**|Propietario del trabajo.|  
 |**notify_level_eventlog**|**int**|Máscara de bits que indica en qué circunstancias se debe registrar un evento de notificación en el registro de aplicación de Microsoft Windows. Puede ser uno de estos valores:<br /><br /> **0** = nunca<br /><br /> **1** = cuando un trabajo se realiza correctamente<br /><br /> **2** = cuando se produce un error en el trabajo<br /><br /> **3** = cada vez que se completa el trabajo (independientemente del resultado del trabajo)|  
 |**notify_level_email**|**int**|Máscara de bits que indica en qué circunstancias se debe enviar una notificación por correo electrónico cuando se completa un trabajo. Los valores posibles son los mismos que para **notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|Máscara de bits que indica en qué circunstancias se debe enviar un mensaje de red cuando se completa un trabajo. Los valores posibles son los mismos que para **notify_level_eventlog**.|  

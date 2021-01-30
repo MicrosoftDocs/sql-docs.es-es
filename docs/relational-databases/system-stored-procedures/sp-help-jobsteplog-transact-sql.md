@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobsteplog_TSQL
 - sp_help_jobsteplog
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4499ad9e2dd54e5592bd4ee9d3b22e3505e9d144
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0e5311127f4ff825f862cb3aef2317a2c53578cc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548005"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200097"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,16 +43,16 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] 'job_id'` Número de identificación del trabajo para el que se va a devolver información del registro de pasos de trabajo. *job_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @job_id = ] 'job_id'` Número de identificación del trabajo para el que se va a devolver información del registro de pasos de trabajo. *job_id* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` Nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo. *job_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
-`[ @step_id = ] step_id` El número de identificación del paso en el trabajo. Si no se especifica, se incluirán todos los pasos del trabajo. *step_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @step_id = ] step_id` El número de identificación del paso en el trabajo. Si no se especifica, se incluirán todos los pasos del trabajo. *step_id* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @step_name = ] 'step_name'` Nombre del paso del trabajo. *step_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @step_name = ] 'step_name'` Nombre del paso del trabajo. *step_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

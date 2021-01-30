@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_notification
 - sp_help_notification_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cce6fd1c7645857019399dae9934c8b730e14f77
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d37d091fdb380f0a08f3f0064f2ce408f439eee8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536219"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199984"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,28 +45,28 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @object_type = ] 'object_type'` Tipo de información que se va a devolver. *object_type*es **Char (9)** y no tiene ningún valor predeterminado. *object_type* pueden ser alertas, que enumeran las alertas asignadas al nombre del operador proporcionado *,* o a los operadores, que enumera los operadores responsables del nombre de alerta proporcionado *.*  
+`[ @object_type = ] 'object_type'` Tipo de información que se va a devolver. *object_type* es **Char (9)** y no tiene ningún valor predeterminado. *object_type* pueden ser alertas, que enumeran las alertas asignadas al nombre del operador proporcionado *,* o a los operadores, que enumera los operadores responsables del nombre de alerta proporcionado *.*  
   
-`[ @name = ] 'name'` Un nombre de operador (si *object_type* es Operators) o un nombre de alerta (si *object_type* es Alerts). *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @name = ] 'name'` Un nombre de operador (si *object_type* es Operators) o un nombre de alerta (si *object_type* es Alerts). *Name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @enum_type = ] 'enum_type'` La información *object_type*que se devuelve. *enum_type* es real en la mayoría de los casos. *enum_type*es **Char (10)**, no tiene ningún valor predeterminado y puede tener uno de estos valores.  
+`[ @enum_type = ] 'enum_type'` La información *object_type* que se devuelve. *enum_type* es real en la mayoría de los casos. *enum_type* es **Char (10)**, no tiene ningún valor predeterminado y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |ACTUAL|Muestra solo el *object_types* asociado al *nombre*.|  
-|ALL|Enumera todos los*object_types* incluidos los que no están asociados con *el nombre*.|  
-|TARGET|Muestra solo el *object_types* que coincide con el *target_name*proporcionado, independientemente de la asociación con el*nombre*.|  
+|ALL|Enumera todos los *object_types* incluidos los que no están asociados con *el nombre*.|  
+|TARGET|Muestra solo el *object_types* que coincide con el *target_name* proporcionado, independientemente de la asociación con el *nombre*.|  
   
-`[ @notification_method = ] notification_method` Valor numérico que determina las columnas del método de notificación que se van a devolver. *notification_method* es **tinyint**y puede tener uno de los valores siguientes.  
+`[ @notification_method = ] notification_method` Valor numérico que determina las columnas del método de notificación que se van a devolver. *notification_method* es **tinyint** y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Correo electrónico: devuelve solo el **use_email** columna.|  
 |**2**|Buscapersonas: devuelve solo el **use_pager** columna.|  
 |**4**|NetSend: devuelve solo el **use_netsend** columna.|  
 |**7**|Todas: devuelve todas las columnas.|  
   
-`[ @target_name = ] 'target_name'` Nombre de alerta que se va a buscar (si *object_type* es alertas) o un nombre de operador que se va a buscar (si *object_type* es Operators). *target_name* solo es necesario si *enum_type* es Target. *target_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @target_name = ] 'target_name'` Nombre de alerta que se va a buscar (si *object_type* es alertas) o un nombre de operador que se va a buscar (si *object_type* es Operators). *target_name* solo es necesario si *enum_type* es Target. *target_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-valves"></a>Válvulas del código de retorno  
  0 (correcto) o 1 (error)  

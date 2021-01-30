@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_peerconflictdetection
 - sp_help_peerconflictdetection_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 960d2a58e01fcb2352fe68d60564534d43d4faf3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 90cd963b22cffd11c400f18a91f2badefff2e799
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527802"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199604"
 ---
 # <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,10 +40,10 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [ @publication =] '*publicación*'  
- Es el nombre de la publicación para la que se devuelve información. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ Es el nombre de la publicación para la que se devuelve información. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
  [ @timeout =] *tiempo de espera*  
- Especifica la cantidad de tiempo, en segundos, tras la cual el procedimiento quedará a la espera de respuesta de cada nodo en la topología. Si hay un suscriptor de solo lectura en la topología, no se puede especificar un valor de tiempo de espera. Los suscriptores de solo lectura nunca responderán a una llamada de este procedimiento. *timeout* es de **tipo int**y su valor predeterminado es 60.  
+ Especifica la cantidad de tiempo, en segundos, tras la cual el procedimiento quedará a la espera de respuesta de cada nodo en la topología. Si hay un suscriptor de solo lectura en la topología, no se puede especificar un valor de tiempo de espera. Los suscriptores de solo lectura nunca responderán a una llamada de este procedimiento. *timeout* es de **tipo int** y su valor predeterminado es 60.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  sp_help_peerconflictdetection devuelve tres conjuntos de resultados. Estos resultados se documentan en los siguientes temas:  

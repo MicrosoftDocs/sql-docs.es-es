@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_cdc_map_time_to_lsn
 - fn_cdc_map_time_to_lsn_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 38f07d3d3c46a46bc18f84d54b14809c201ee219
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6db62a3241b86bdac8dcc955aef865ef8ad99a21
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094971"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198747"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  *tracking_time*  
  Es el valor de fecha y hora con el que se hará la comparación. *tracking_time* es **DateTime**.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **binary(10)**  
   
 ## <a name="remarks"></a>Observaciones  

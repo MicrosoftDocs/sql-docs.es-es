@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_detach_schedule
 - sp_detach_schedule_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 38b63370a0bf4cbfff2206cf5043f71dc9f1667f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 513287fadf671cc645ffa210e96f56615e237983
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549835"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200749"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,21 +43,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` Número de identificación del trabajo del que se va a quitar la programación. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id` Número de identificación del trabajo del que se va a quitar la programación. *job_id* es de tipo **uniqueidentifier** y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` Nombre del trabajo del que se va a quitar la programación. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo del que se va a quitar la programación. *job_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
-`[ @schedule_id = ] schedule_id` El número de identificación de la programación que se va a quitar del trabajo. *schedule_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @schedule_id = ] schedule_id` El número de identificación de la programación que se va a quitar del trabajo. *schedule_id* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @schedule_name = ] 'schedule_name'` Nombre de la programación que se va a quitar del trabajo. *schedule_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @schedule_name = ] 'schedule_name'` Nombre de la programación que se va a quitar del trabajo. *schedule_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *schedule_id* o *schedule_name* , pero no se pueden especificar ambos.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` Especifica si se deben eliminar las programaciones de trabajos no utilizadas. *delete_unused_schedule* es de **bit**y su valor predeterminado es **0**, lo que significa que se conservarán todas las programaciones, incluso si no hay ningún trabajo que haga referencia a ellas. Si se establece en **1**, las programaciones de trabajos sin usar se eliminan si no hay ningún trabajo que haga referencia a ellas.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Especifica si se deben eliminar las programaciones de trabajos no utilizadas. *delete_unused_schedule* es de **bit** y su valor predeterminado es **0**, lo que significa que se conservarán todas las programaciones, incluso si no hay ningún trabajo que haga referencia a ellas. Si se establece en **1**, las programaciones de trabajos sin usar se eliminan si no hay ningún trabajo que haga referencia a ellas.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

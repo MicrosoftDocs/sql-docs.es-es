@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_indexes_TSQL
 - sp_indexes
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 133a7fb36ff65444853c1bdeb44fdefabe4aab4f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f11b9a32c05450dbe97c9130d774e4d92226fcdb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547907"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198509"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,24 +46,24 @@ sp_indexes [ @table_server = ] 'table_server'
   
 ## <a name="arguments"></a>Argumentos  
  [ @table_server =] '*table_server*'  
- Es el nombre de un servidor vinculado que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se solicita información de tablas. *table_server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ Es el nombre de un servidor vinculado que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se solicita información de tablas. *table_server* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
  [ @table_name =] '*TABLE_NAME*'  
- Es el nombre de la tabla remota para la que se proporciona información de índice. *TABLE_NAME* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL, se devuelven todas las tablas de la base de datos especificada.  
+ Es el nombre de la tabla remota para la que se proporciona información de índice. *TABLE_NAME* es de **tipo sysname y su** valor predeterminado es NULL. Si es NULL, se devuelven todas las tablas de la base de datos especificada.  
   
  [ @table_schema =] '*TABLE_SCHEMA*'  
- Especifica el esquema de la tabla. En el entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], corresponde al propietario de la tabla. *TABLE_SCHEMA* es de **tipo sysname y su**valor predeterminado es NULL.  
+ Especifica el esquema de la tabla. En el entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], corresponde al propietario de la tabla. *TABLE_SCHEMA* es de **tipo sysname y su** valor predeterminado es NULL.  
   
  [ @table_catalog =] '*table_db*'  
- Es el nombre de la base de datos en la que reside *TABLE_NAME* . *table_db* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL, *table_db* toma como valor predeterminado **Master**.  
+ Es el nombre de la base de datos en la que reside *TABLE_NAME* . *table_db* es de **tipo sysname y su** valor predeterminado es NULL. Si es NULL, *table_db* toma como valor predeterminado **Master**.  
   
  [ @index_name =] '*index_name*'  
- Es el nombre del índice para el que se solicita información. *index* es de **tipo sysname y su**valor predeterminado es NULL.  
+ Es el nombre del índice para el que se solicita información. *index* es de **tipo sysname y su** valor predeterminado es NULL.  
   
  [ @is_unique =] '*is_unique*'  
  Es el tipo de índice para el que se devuelve información. *is_unique* es de **bit**, su valor predeterminado es NULL y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |1|Devuelve información acerca de índices únicos.|  
 |0|Devuelve información acerca de índices que no son únicos.|  

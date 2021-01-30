@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_create_collector_type
 - sp_syscollector_create_collector_type_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d49121d6f8ce91d6ca1e8be809466ee58968a1d3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5431d45716aa0c1c685f303c3ee4b5d3cec67a13
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549541"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200518"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

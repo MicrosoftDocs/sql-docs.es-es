@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_undeclared_parameters
 - sp_describe_undeclared_parameters_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
-ms.openlocfilehash: 710265fca96078ef08d54ca503f174a8150aca8e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 46dd9d66c73337920300162f331ee7a59b1e559f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466846"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200768"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -88,7 +88,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|Para uso interno.|  
 |**suggested_tds_length**|**int NOT NULL**|Para uso interno.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_describe_undeclared_parameters** siempre devuelve el estado de retorno de cero.  
   
  El uso más común es cuando se proporciona a una aplicación una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] que podría contener parámetros y debe procesarlos de alguna manera. Un ejemplo es una interfaz de usuario (como ODBCTest o RowsetViewer) donde el usuario proporciona una consulta con la sintaxis de parámetros de ODBC. La aplicación debe detectar el número de parámetros dinámicamente y pedir confirmación al usuario para cada uno.  
@@ -226,7 +226,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      En este caso, E ( \@ p) es Col_Int + \@ p y TT ( \@ p) es de **tipo int**. se elige **int** para \@ p porque no genera ninguna conversión implícita. Cualquier otra opción de tipo de datos genera al menos una conversión implícita.  
   
-2.  Si hay varios tipos de datos que coinciden en el número menor de conversiones, se utiliza el tipo de datos con mayor prioridad. Por ejemplo  
+2.  Si hay varios tipos de datos que coinciden en el número menor de conversiones, se utiliza el tipo de datos con mayor prioridad. Por ejemplo,  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  

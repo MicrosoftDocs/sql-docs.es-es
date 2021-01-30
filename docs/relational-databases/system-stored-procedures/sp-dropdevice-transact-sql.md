@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropdevice_TSQL
 - sp_dropdevice
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: de658ea419fe2fe6fcdfbbdd2b335cf5abb12e2e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5df2e24fa3ca61cb235153e0157dbb953a828629
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543512"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200672"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @logicalname = ] 'device'` Es el nombre lógico del dispositivo de base de datos o del dispositivo de copia de seguridad como se indica en **master.dbo.sysDevices.Name**. *Device* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @logicalname = ] 'device'` Es el nombre lógico del dispositivo de base de datos o del dispositivo de copia de seguridad como se indica en **master.dbo.sysDevices.Name**. *Device* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @delfile = ] 'delfile'` Especifica si se debe eliminar el archivo físico del dispositivo de copia de seguridad. *delfile* es **VARCHAR (7)**. Si se especifica como **DELFILE**, se elimina el archivo de disco físico del dispositivo de copia de seguridad.  
   
@@ -65,7 +65,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 EXEC sp_dropdevice 'tapedump1';  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Eliminar un dispositivo de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

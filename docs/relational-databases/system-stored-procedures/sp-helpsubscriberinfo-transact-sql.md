@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsubscriberinfo
 - sp_helpsubscriberinfo_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 490355fa242d799d524690242e4f7e2a0d8ea830
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 25eb68ab0e5c825b646c254f494ab11e1b297b60
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535109"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199117"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,9 +39,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve toda la información.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve toda la información.  
   
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname**y su valor predeterminado es el nombre del servidor actual.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname** y su valor predeterminado es el nombre del servidor actual.  
   
 > [!NOTE]  
 >  no se debe especificar el *publicador* , excepto cuando se trata de un publicador de Oracle.  
@@ -53,11 +53,11 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**publisher**|**sysname**|Nombre del publicador.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor.|  
 |**type**|**tinyint**|Tipo de suscriptor:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos **1** = origen de datos ODBC|  
-|**Inicio**|**sysname**|Id. de inicio de sesión para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**login**|**sysname**|Id. de inicio de sesión para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**sysname**|Contraseña para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
-|**commit_batch_size**|**int**|No compatible.|  
-|**status_batch_size**|**int**|No compatible.|  
-|**flush_frequency**|**int**|No compatible.|  
+|**commit_batch_size**|**int**|No se admite.|  
+|**status_batch_size**|**int**|No se admite.|  
+|**flush_frequency**|**int**|No se admite.|  
 |**frequency_type**|**int**|Frecuencia de ejecución del agente de distribución:<br /><br /> **1** = una vez<br /><br /> **2** = a petición<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente relativo<br /><br /> **64** = AutoStart<br /><br /> **128** = recurrente|  
 |**frequency_interval**|**int**|Valor que se aplica a la frecuencia establecida por *frequency_type*.|  
 |**frequency_relative_interval**|**int**|Fecha de la Agente de distribución que se usa cuando *frequency_type* está establecida en **32** (relativo mensual):<br /><br /> **1** = primero<br /><br /> **2** = segundo<br /><br /> **4** = tercero<br /><br /> **8** = cuarto<br /><br /> **16** = último|  
@@ -68,8 +68,8 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**active_end_time_of_day**|**int**|Hora del día en que el agente de distribución deja de estar programado, con el formato HHMMSS.|  
 |**active_start_date**|**int**|Fecha en que el agente de distribución se programa por primera vez, con el formato AAAAMMDD.|  
 |**active_end_date**|**int**|Fecha en la que el agente de distribución deja de estar programado, con el formato AAAAMMDD.|  
-|**retryattempt**|**int**|No compatible.|  
-|**retrydelay**|**int**|No compatible.|  
+|**retryattempt**|**int**|No se admite.|  
+|**retrydelay**|**int**|No se admite.|  
 |**description**|**nvarchar(255)**|Descripción del suscriptor.|  
 |**security_mode**|**int**|Modo de seguridad implementado.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows|  
 |**frequency_type2**|**int**|Frecuencia de ejecución del Agente de mezcla:<br /><br /> **1** = una vez<br /><br /> **2** = a petición<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente relativo<br /><br /> **64** = AutoStart<br /><br /> **128** = recurrente|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_first_result_set
 - sp_describe_first_result_set_TSQL
@@ -19,12 +19,12 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c95a79bb42cbc3ab32a5521682aacc8f4f9079d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8e9a77fb68a5642b3ba5fac7aac9ae0d9c31c899
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466916"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200810"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -105,7 +105,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|Para uso interno.|  
 |**tds_collation_sort_id**|**tinyint NULL**|Para uso interno.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_describe_first_result_set** garantiza que, si el procedimiento devuelve los metadatos del primer conjunto de resultados de un lote hipotético a y, si ese lote (a) se ejecuta posteriormente, el lote (1) generará un error en tiempo de optimización. (2) genera un error en tiempo de ejecución, (3) no devuelve ningún conjunto de resultados o (4) devuelve un primer conjunto de resultados con los mismos metadatos descritos por **sp_describe_first_result_set**.  
   
  El nombre, la nulabilidad y el tipo de datos pueden diferir. Si **sp_describe_first_result_set** devuelve un conjunto de resultados vacío, la garantía es que la ejecución del lote devolverá conjuntos sin resultados.  

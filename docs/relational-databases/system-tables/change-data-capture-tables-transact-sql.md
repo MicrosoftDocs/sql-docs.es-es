@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 6ef80682d8d95188aa764c6e04e768c57298715a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8003b9d42055aa31cae82765a2f13663fe260860
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094958"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198274"
 ---
 # <a name="change-data-capture-tables-transact-sql"></a>Tablas de captura de datos de cambio (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

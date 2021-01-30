@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_job_TSQL
 - sp_help_job
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c0b2f0845c98f4b5fa403bd98b87718afd0fb26
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 32ffb85143cf448742831071bee7d4b94a25ec57
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549710"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200156"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,16 +53,16 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` El número de identificación del trabajo. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id` El número de identificación del trabajo. *job_id* es de tipo **uniqueidentifier** y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` Nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo. *job_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Para ver un trabajo específico, se debe especificar *job_id* o *job_name* .  Omita *job_id* y *job_name* para devolver información sobre todos los trabajos.
   
 `[ @job_aspect = ] 'job_aspect'` Atributo de trabajo que se va a mostrar. *job_aspect* es de tipo **VARCHAR (9)**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**ALL**|Información del aspecto del trabajo|  
 |**TRABAJO**|Información del trabajo|  
@@ -72,17 +72,17 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_type = ] 'job_type'` Tipo de trabajos que se van a incluir en el informe. *job_type* es de tipo **VARCHAR (12)** y su valor predeterminado es NULL. *job_type* puede ser **local** o **multiservidor**.  
   
-`[ @owner_login_name = ] 'login_name'` Nombre de inicio de sesión del propietario del trabajo. *login_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @owner_login_name = ] 'login_name'` Nombre de inicio de sesión del propietario del trabajo. *login_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 `[ @subsystem = ] 'subsystem'` Nombre del subsistema. el *subsistema* es de tipo **nvarchar (40)** y su valor predeterminado es NULL.  
   
-`[ @category_name = ] 'category'` Nombre de la categoría. *Category* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @category_name = ] 'category'` Nombre de la categoría. *Category* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @enabled = ] enabled` Un número que indica si la información se muestra para los trabajos habilitados o los trabajos deshabilitados. *Enabled* es de **tinyint**y su valor predeterminado es NULL. **1** indica los trabajos habilitados y **0** indica los trabajos deshabilitados.  
+`[ @enabled = ] enabled` Un número que indica si la información se muestra para los trabajos habilitados o los trabajos deshabilitados. *Enabled* es de **tinyint** y su valor predeterminado es NULL. **1** indica los trabajos habilitados y **0** indica los trabajos deshabilitados.  
   
 `[ @execution_status = ] status` El estado de ejecución de los trabajos. *status* es de **tipo int**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Devuelve solo los trabajos que no están inactivos o suspendidos.|  
 |**1**|En ejecución.|  
@@ -94,9 +94,9 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @date_comparator = ] 'date_comparison'` Operador de comparación que se va a usar en las comparaciones de *Date_Created* y *date_modified*. *date_comparison* es **Char (1)** y puede ser =, \<, or > .  
   
-`[ @date_created = ] date_created` Fecha en que se creó el trabajo. *Date_Created*es de **tipo DateTime**y su valor predeterminado es NULL.  
+`[ @date_created = ] date_created` Fecha en que se creó el trabajo. *Date_Created* es de **tipo DateTime** y su valor predeterminado es NULL.  
   
-`[ @date_last_modified = ] date_modified` Fecha en que se modificó el trabajo por última vez. *date_modified* es de **tipo DateTime**y su valor predeterminado es NULL.  
+`[ @date_last_modified = ] date_modified` Fecha en que se modificó el trabajo por última vez. *date_modified* es de **tipo DateTime** y su valor predeterminado es NULL.  
   
 `[ @description = ] 'description_pattern'` La descripción del trabajo. *description_pattern* es de tipo **nvarchar (512)** y su valor predeterminado es NULL. *description_pattern* puede incluir los caracteres comodín SQL Server para la coincidencia de patrones.  
   
@@ -115,7 +115,7 @@ sp_help_job { [ @job_id = ] job_id
 |**description**|**nvarchar(512)**|Descripción del trabajo.|  
 |**start_step_id**|**int**|Id. del paso del trabajo en el que debe comenzar la ejecución.|  
 |**category**|**sysname**|Categoría del trabajo|  
-|**propietario**|**sysname**|Propietario del trabajo.|  
+|**owner**|**sysname**|Propietario del trabajo.|  
 |**notify_level_eventlog**|**int**|**Máscara** de archivo que indica en qué circunstancias se debe registrar un evento de notificación en el registro de aplicación de Microsoft Windows. Puede ser uno de estos valores:<br /><br /> **0** = nunca<br /><br /> **1** = cuando un trabajo se realiza correctamente<br /><br /> **2** = cuando se produce un error en el trabajo<br /><br /> **3** = cada vez que se completa el trabajo (independientemente del resultado del trabajo)|  
 |**notify_level_email**|**int**|**Máscara de máscara** que indica en qué circunstancias se debe enviar una notificación por correo electrónico cuando se completa un trabajo. Los valores posibles son los mismos que para **notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|**Máscara** de red que indica en qué circunstancias se debe enviar un mensaje de red cuando se completa un trabajo. Los valores posibles son los mismos que para **notify_level_eventlog**.|  
@@ -220,7 +220,7 @@ sp_help_job { [ @job_id = ] job_id
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Los miembros de **SQLAgentUserRole** solo pueden ver los trabajos que les pertenecen. Los miembros de **sysadmin**, **SQLAgentReaderRole**y **SQLAgentOperatorRole** pueden ver todos los trabajos locales y multiservidor.  
+ Los miembros de **SQLAgentUserRole** solo pueden ver los trabajos que les pertenecen. Los miembros de **sysadmin**, **SQLAgentReaderRole** y **SQLAgentOperatorRole** pueden ver todos los trabajos locales y multiservidor.  
   
 ## <a name="examples"></a>Ejemplos  
   

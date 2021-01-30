@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_allitems_TSQL
 - sysmail_allitems
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6bc9b58549bbc20fe66caaf2adc61edd4345acd7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 25b60bb95655cea1d4e460b46a0e21faf28a3103
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096662"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199728"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

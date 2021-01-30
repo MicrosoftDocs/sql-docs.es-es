@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobschedule
 - sp_help_jobschedule_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5d74890ab154700159fcf6ca086f88cd2ac57409
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9765feaa9e3237f1ccd8d3a6dcc203c88758aefa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538829"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200132"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,18 +44,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` El número de identificación del trabajo. *job_id*es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id` El número de identificación del trabajo. *job_id* es de tipo **uniqueidentifier** y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` Nombre del trabajo. *job_name*es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo. *job_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]
 > Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.
 
-`[ @schedule_name = ] 'schedule_name'` Nombre del elemento de programación del trabajo. *schedule_name*es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @schedule_name = ] 'schedule_name'` Nombre del elemento de programación del trabajo. *schedule_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @schedule_id = ] schedule_id` Número de identificación del elemento de programación del trabajo. *schedule_id*es de **tipo int**y su valor predeterminado es NULL.  
+`[ @schedule_id = ] schedule_id` Número de identificación del elemento de programación del trabajo. *schedule_id* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @include_description = ] include_description` Especifica si se debe incluir la descripción de la programación en el conjunto de resultados. *include_description* es de **bit**y su valor predeterminado es **0**. Cuando *include_description* es **0**, la descripción de la programación no se incluye en el conjunto de resultados. Cuando *include_description* es **1**, la descripción de la programación se incluye en el conjunto de resultados.  
+`[ @include_description = ] include_description` Especifica si se debe incluir la descripción de la programación en el conjunto de resultados. *include_description* es de **bit** y su valor predeterminado es **0**. Cuando *include_description* es **0**, la descripción de la programación no se incluye en el conjunto de resultados. Cuando *include_description* es **1**, la descripción de la programación se incluye en el conjunto de resultados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -78,7 +78,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_start_time**|**int**|Hora del día en que se inicia la programación.|  
 |**active_end_time**|**int**|Hora del día en que termina la programación.|  
 |**date_created**|**datetime**|Fecha en que se creó la programación.|  
-|**schedule_description**|**nvarchar(4000)**|Una descripción en Inglés de la programación que se deriva de los valores de las ** programaciones demsdb.dbo.sys**. Cuando *include_description* es **0**, esta columna contiene texto que indica que no se solicitó la descripción.|  
+|**schedule_description**|**nvarchar(4000)**|Una descripción en Inglés de la programación que se deriva de los valores de las **programaciones demsdb.dbo.sys**. Cuando *include_description* es **0**, esta columna contiene texto que indica que no se solicitó la descripción.|  
 |**next_run_date**|**int**|Fecha en que la programación hará que se vuelva a ejecutar el trabajo.|  
 |**next_run_time**|**int**|Hora a la que la programación hará que se vuelva a ejecutar el trabajo.|  
 |**schedule_uid**|**uniqueidentifier**|Identificador de la programación.|  

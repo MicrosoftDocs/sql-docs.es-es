@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_autostats_TSQL
 - sp_autostats
@@ -19,12 +19,12 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3ccfa642b98165dcbdad57adac38f300063ccdb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4a1746acf81c59b5b83a45d1be0403d4d58ad6c0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462766"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199224"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +75,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  El conjunto de resultados de una tabla o vista indizada incluye las estadísticas creadas para los índices, las estadísticas de columna única generadas con la opción AUTO_CREATE_STATISTICS y las estadísticas creadas con la instrucción [Create Statistics](../../t-sql/statements/create-statistics-transact-sql.md) .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si el índice especificado está deshabilitado, o si la tabla especificada tiene un índice clúster deshabilitado, aparece un mensaje de error.  
   
  AUTO_UPDATE_STATISTICS siempre es OFF para las tablas optimizadas para memoria  

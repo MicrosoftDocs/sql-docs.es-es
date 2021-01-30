@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_fulltext_columns
 - sp_help_fulltext_columns_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 029cd09cca1945a521d7a8a11c47ea8b7700b57e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9918652699b3d7bcf6d4ec92dadb749604634641
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535960"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198308"
 ---
 # <a name="sp_help_fulltext_columns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89535960"
   Devuelve las columnas diseñadas para la indización de texto completo.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use la vista de catálogo [Sys. fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, use la vista de catálogo [Sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ## <a name="arguments"></a>Argumentos  
 `[ @table_name = ] 'table\_name'` Es el nombre de tabla de una o dos partes para la que se solicita información de índice de texto completo. *TABLE_NAME* es de tipo **nvarchar (r)** y su valor predeterminado es NULL. Si se omite *TABLE_NAME* , se recupera la información de la columna de índice de texto completo de cada tabla indizada de texto completo.  
   
-`[ @column_name = ] 'column\_name'` Es el nombre de la columna para la que se solicitan los metadatos de índice de texto completo. *column_name* es de **tipo sysname y su**valor predeterminado es NULL. Si *column_name* se omite o es null, se devuelve información de la columna de texto completo para cada columna indizada de texto completo de *TABLE_NAME*. Si también se omite *TABLE_NAME* o es null, se devuelve información de la columna de índice de texto completo para cada columna indizada de texto completo de todas las tablas de la base de datos.  
+`[ @column_name = ] 'column\_name'` Es el nombre de la columna para la que se solicitan los metadatos de índice de texto completo. *column_name* es de **tipo sysname y su** valor predeterminado es NULL. Si *column_name* se omite o es null, se devuelve información de la columna de texto completo para cada columna indizada de texto completo de *TABLE_NAME*. Si también se omite *TABLE_NAME* o es null, se devuelve información de la columna de índice de texto completo para cada columna indizada de texto completo de todas las tablas de la base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

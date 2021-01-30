@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_cursor_tables_TSQL
 - sp_describe_cursor_tables
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eec1a0d9d8e61613558e0f34b13080a67ba5335b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b5c2e609eb3a521a991848b3b795b04b2ffbd01f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539009"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200801"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_describe_cursor_tables
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @cursor_return =] *output_cursor_variable*salida  
+ [ @cursor_return =] *output_cursor_variable* salida  
  Es el nombre de una variable de cursor declarada que recibirá la salida del cursor. *output_cursor_variable* es **cursor**, no tiene valor predeterminado y no debe estar asociado a ningún cursor en el momento en que se llama a sp_describe_cursor_tables. El cursor devuelto es un cursor desplazable, dinámico y de solo lectura.  
   
  [ @cursor_source =] {N'local ' | N'global ' | N'variable' }  
@@ -65,7 +65,7 @@ sp_describe_cursor_tables
  Es el nombre de una variable de cursor asociada a un cursor abierto. *input_cursor_variable* es **nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- Ninguno  
+ None  
   
 ## <a name="cursors-returned"></a>Cursores devueltos  
  sp_describe_cursor_tables encapsula su informe como un parámetro de salida de [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor** . De esta forma, los lotes, los procedimientos almacenados y los desencadenadores de [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden trabajar con la salida de fila en fila. También significa que no se puede llamar al procedimiento directamente desde funciones de una API. El parámetro de salida **cursor** debe estar enlazado a una variable de programa, pero las API no admiten parámetros de **cursor** de enlace o variables.  

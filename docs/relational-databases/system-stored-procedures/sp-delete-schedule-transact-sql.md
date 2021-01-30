@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_schedule
 - sp_delete_schedule_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f28249e89a661fcd1906b5da73174aab3df40fe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b152260dca3ab9791124b9f7f1ac13e311f6e514
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549872"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199157"
 ---
 # <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +41,11 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @schedule_id = ] schedule_id` El número de identificación de la programación que se va a eliminar. *schedule_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @schedule_id = ] schedule_id` El número de identificación de la programación que se va a eliminar. *schedule_id* es de **tipo int** y su valor predeterminado es NULL.  
   
 > **Nota:** Se debe especificar *schedule_id* o *schedule_name* , pero no se pueden especificar ambos.  
   
-`[ @schedule_name = ] 'schedule_name'` Nombre de la programación que se va a eliminar. *schedule_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @schedule_name = ] 'schedule_name'` Nombre de la programación que se va a eliminar. *schedule_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > **Nota:** Se debe especificar *schedule_id* o *schedule_name* , pero no se pueden especificar ambos.  
   

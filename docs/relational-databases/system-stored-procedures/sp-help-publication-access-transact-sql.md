@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_publication_access
 - sp_help_publication_access_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 38ef2fe7710d4716d9b544086f29333c96384bf6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b33b79c6e632eef28feaa5fa8b3f605018b09953
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535245"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199601"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,11 +41,11 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación a la que se va a obtener acceso. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación a la que se va a obtener acceso. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @return_granted = ] 'return_granted'` Es el identificador de inicio de sesión. *return_granted* es de **bit**y su valor predeterminado es 1. Si se especifica **0** y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utiliza la autenticación de, se devuelven los inicios de sesión disponibles que aparecen en el publicador pero no en el distribuidor. Si se especifica **0** y se utiliza la autenticación de Windows, se devuelven los inicios de sesión que no deniegan específicamente el acceso en el publicador o el distribuidor.  
+`[ @return_granted = ] 'return_granted'` Es el identificador de inicio de sesión. *return_granted* es de **bit** y su valor predeterminado es 1. Si se especifica **0** y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utiliza la autenticación de, se devuelven los inicios de sesión disponibles que aparecen en el publicador pero no en el distribuidor. Si se especifica **0** y se utiliza la autenticación de Windows, se devuelven los inicios de sesión que no deniegan específicamente el acceso en el publicador o el distribuidor.  
   
-`[ @login = ] 'login'` Es el identificador de inicio de sesión de seguridad estándar. *login* es de **tipo sysname y su**valor predeterminado es **%** .  
+`[ @login = ] 'login'` Es el identificador de inicio de sesión de seguridad estándar. *login* es de **tipo sysname y su** valor predeterminado es **%** .  
   
 `[ @initial_list = ] initial_list` Especifica si se devuelven todos los miembros con acceso de publicación o solo aquellos que tenían acceso antes de que se agregaran nuevos miembros a la lista. *initial_list* es de bit y su valor predeterminado es **0**.  
   

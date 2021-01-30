@@ -6,7 +6,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - backupmediaset
 - backupmediaset_TSQL
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - backupmediaset system table
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 10b4d744e7ef4e0d11a9788580ea7f8c5a67bd1f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c886cf2fb117611d5956277656dd7aaadca9afc5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091585"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198654"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 
@@ -43,7 +43,7 @@ Contiene una fila por cada conjunto de medios de copia de seguridad. Esta tabla 
 |**mirror_count**|**tinyint**|Número de reflejos en el conjunto de medios.|  
 |**is_password_protected**|**bit**|Indica si el conjunto de medios está protegido con contraseña:<br /><br /> 0 = Sin protección <br /><br /> 1 = Protegido|  
 |**is_compressed**|**bit**|Si la copia de seguridad está comprimida:<br /><br /> 0 = no comprimida<br /><br /> 1 = comprimida<br /><br /> Durante una actualización de **msdb** , este valor se establece en NULL. lo que indica que la copia de seguridad no está comprimida.|  
-|**is_encrypted**|**bit**|Si la copia de seguridad está cifrada:<br /><br /> 0 = No cifrado<br /><br /> 1 = Cifrada|  
+|**is_encrypted**|**Poco**|Si la copia de seguridad está cifrada:<br /><br /> 0 = No cifrado<br /><br /> 1 = Cifrada|  
   
 ## <a name="remarks"></a>Observaciones  
  RESTOre VERIFYONLY de *backup_device* con LOADHISTORY rellena las columnas de la tabla **backupmediaset** con los valores adecuados del encabezado de conjunto de medios.  

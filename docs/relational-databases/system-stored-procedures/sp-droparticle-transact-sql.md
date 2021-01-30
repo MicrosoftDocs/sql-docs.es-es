@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_droparticle_TSQL
 - sp_droparticle
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fdd166ab6d4826df8757877b8679ef2864de37dd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 42b89405015235d5c469b2443995ea5038e3cd5f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538999"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200688"
 ---
 # <a name="sp_droparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,19 +43,19 @@ sp_droparticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación que contiene el artículo que se va a quitar. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que contiene el artículo que se va a quitar. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre del artículo que se va a quitar. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre del artículo que se va a quitar. *article* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es de **bit**y su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es de **bit** y su valor predeterminado es **0**.  
   
  **0** especifica que los cambios en el artículo no hacen que la instantánea no sea válida. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
   
  **1** especifica que los cambios en el artículo pueden hacer que la instantánea no sea válida y, si hay suscripciones existentes que requieran una nueva instantánea, concede permiso para que la instantánea existente se marque como obsoleta y se genere una nueva instantánea.  
   
-`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  no se debe usar el *publicador* al cambiar las propiedades de un artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
@@ -68,7 +68,7 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="remarks"></a>Observaciones  
  **sp_droparticle** se utiliza en la replicación de instantáneas y transaccional.  
   
- En el caso de los artículos filtrados horizontalmente, **sp_droparticle** comprueba la columna de **tipo** del artículo en la tabla de [sysarticles &#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/sysarticles-transact-sql.md) para determinar si se debe quitar también una vista o un filtro. Si se ha generado automáticamente una vista o un filtro, también se quita con el artículo. Si se creó de forma manual, la vista o filtro no se quita.  
+ En el caso de los artículos filtrados horizontalmente, **sp_droparticle** comprueba la columna de **tipo** del artículo en la tabla de [sysarticles &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/sysarticles-transact-sql.md) para determinar si se debe quitar también una vista o un filtro. Si se ha generado automáticamente una vista o un filtro, también se quita con el artículo. Si se creó de forma manual, la vista o filtro no se quita.  
   
  Al ejecutar **sp_droparticle** para quitar un artículo de una publicación, no se quita el objeto de la base de datos de publicaciones ni el objeto correspondiente de la base de datos de suscripciones. Use `DROP <object>` para quitar manualmente estos objetos, si es necesario.  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_operator
 - sp_help_operator_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2cbf7c84c22998b5ee7e43fadad6a42cf02d17b8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 03346efcec8571ed6bf586a09a6da3631da28dc4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535477"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199672"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_help_operator
 ## <a name="arguments"></a>Argumentos  
 `[ @operator_name = ] 'operator_name'` Nombre del operador. *operator_name* es de **tipo sysname**. Si no se especifica *operator_name* , se devuelve información acerca de todos los operadores.  
   
-`[ @operator_id = ] operator_id` Número de identificación del operador para el que se solicita información. *operator_id*es de **tipo int**y su valor predeterminado es NULL.  
+`[ @operator_id = ] operator_id` Número de identificación del operador para el que se solicita información. *operator_id* es de **tipo int** y su valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *operator_id* o *operator_name* , pero no se pueden especificar ambos.  
@@ -104,7 +104,7 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [sp_add_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_update_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

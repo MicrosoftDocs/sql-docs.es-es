@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addtype
 - sp_addtype_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b9950580719ecc68f69d09a0fbe481741dbc4a46
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ece3c9bb2d8952738f1f66c59b9cd49563ad00a6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89529372"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198384"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +45,9 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @typename = ] type` Es el nombre del tipo de datos del alias. Los nombres de los tipos de datos de alias deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md) y deben ser únicos en cada base de datos. *Type* es de tipo **sysname**y no tiene ningún valor predeterminado.  
+`[ @typename = ] type` Es el nombre del tipo de datos del alias. Los nombres de los tipos de datos de alias deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md) y deben ser únicos en cada base de datos. *Type* es de tipo **sysname** y no tiene ningún valor predeterminado.  
   
-`[ @phystype = ] system_data_type` Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos físico, o suministrado, en el que se basa el tipo de datos del alias.* system_data_type* es de **tipo sysname**, no tiene ningún valor predeterminado y puede tener uno de estos valores:  
+`[ @phystype = ] system_data_type` Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos físico, o suministrado, en el que se basa el tipo de datos del alias.*system_data_type* es de **tipo sysname**, no tiene ningún valor predeterminado y puede tener uno de estos valores:  
   
 ||||  
 |-|-|-|  
@@ -68,10 +68,10 @@ sp_addtype [ @typename = ] type,
  *P*  
  Es un entero no negativo que indica el número total máximo de cifras decimales que se pueden almacenar, a ambos lados del separador decimal. Para más información, vea [decimal y numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
- *seg*  
+ *s*  
  Es un entero no negativo que indica el número máximo de cifras decimales que se pueden almacenar a la derecha del separador decimal, y tiene que ser menor que la precisión decimal o igual a ésta. Para más información, vea [decimal y numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
-`[ @nulltype = ] 'null_type'` Indica el modo en que el tipo de datos del alias controla los valores NULL. *null_type* es de tipo **VARCHAR (** 8 **)**, su valor predeterminado es NULL y debe incluirse entre comillas simples (' null ', ' not null ' o ' nonull '). Si **sp_addtype**no define explícitamente *null_type* , se establece en la nulabilidad predeterminada actual. Utilice la función de sistema GETANSINULL para determinar la nulabilidad predeterminada actual. Esto se puede ajustar mediante la instrucción SET o ALTER DATABASE. La nulabilidad se tiene que definir explícitamente. Si ** \@ phystype** es de **bit**y no se especifica ** \@ NULLTYPE** , el valor predeterminado es not null.  
+`[ @nulltype = ] 'null_type'` Indica el modo en que el tipo de datos del alias controla los valores NULL. *null_type* es de tipo **VARCHAR (** 8 **)**, su valor predeterminado es NULL y debe incluirse entre comillas simples (' null ', ' not null ' o ' nonull '). Si **sp_addtype** no define explícitamente *null_type* , se establece en la nulabilidad predeterminada actual. Utilice la función de sistema GETANSINULL para determinar la nulabilidad predeterminada actual. Esto se puede ajustar mediante la instrucción SET o ALTER DATABASE. La nulabilidad se tiene que definir explícitamente. Si **\@ phystype** es de **bit** y no se especifica **\@ NULLTYPE** , el valor predeterminado es not null.  
   
 > [!NOTE]  
 >  El parámetro *null_type* solo define la nulabilidad predeterminada para este tipo de datos. Si la nulabilidad se define explícitamente cuando se utiliza este tipo de datos de alias durante la creación de una tabla, ésta tendrá prioridad sobre la nulabilidad definida. Para obtener más información, vea [ALTER TABLE &#40;Transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) y [CREATE TABLE &#40;transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  

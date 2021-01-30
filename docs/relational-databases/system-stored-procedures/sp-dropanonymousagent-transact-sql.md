@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropanonymousagent
 - sp_dropanonymousagent_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: d6e687976dab6d526a2413260d2ad2f980001086
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b75f8b4bc355fd71c469ee2c0593f56feaf9148a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474287"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200715"
 ---
 # <a name="sp_dropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 
@@ -38,9 +38,9 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @subid = ] sub_id` Es el identificador global de una suscripción anónima. *sub_id* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado. Este identificador se puede recuperar en el suscriptor mediante **sp_helppullsubscription**. El valor del campo **subid** del conjunto de resultados devuelto es este identificador global.  
+`[ @subid = ] sub_id` Es el identificador global de una suscripción anónima. *sub_id* es de tipo **uniqueidentifier** y no tiene ningún valor predeterminado. Este identificador se puede recuperar en el suscriptor mediante **sp_helppullsubscription**. El valor del campo **subid** del conjunto de resultados devuelto es este identificador global.  
   
-`[ @type = ] type` Es el tipo de suscripción. el *tipo* es **int**y no tiene ningún valor predeterminado. Los valores válidos son **1** o **2**. Especifique **1**, si la replicación de instantáneas o la replicación transaccional utilizan el agente de distribución. Especifique **2**, si la replicación de mezcla utiliza el agente de mezcla.  
+`[ @type = ] type` Es el tipo de suscripción. el *tipo* es **int** y no tiene ningún valor predeterminado. Los valores válidos son **1** o **2**. Especifique **1**, si la replicación de instantáneas o la replicación transaccional utilizan el agente de distribución. Especifique **2**, si la replicación de mezcla utiliza el agente de mezcla.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_cdc_map_lsn_to_time_TSQL
 - sys.fn_cdc_map_lsn_to_time
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 37f782859ee9f4a292652883a3c7770d464ffa83
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6f2f5b73a4452aed945d0a2aeffcf69e5622c572
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093838"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199328"
 ---
 # <a name="sysfn_cdc_map_lsn_to_time-transact-sql"></a>sys.fn_cdc_map_lsn_to_time (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

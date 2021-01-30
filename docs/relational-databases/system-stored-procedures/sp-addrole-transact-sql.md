@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addrole
 - sp_addrole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 245e617a9756e276bc06907a6f1592ec5383e69e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6217f78d47e193c8583caca0925f2d4b587c439
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489581"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200165"
 ---
 # <a name="sp_addrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'` Es el nombre del nuevo rol de base de datos. *role* es un **sysname**y no tiene ningún valor predeterminado. *role* debe ser un identificador (ID.) válido y no debe existir en la base de datos actual.  
+`[ @rolename = ] 'role'` Es el nombre del nuevo rol de base de datos. *role* es un **sysname** y no tiene ningún valor predeterminado. *role* debe ser un identificador (ID.) válido y no debe existir en la base de datos actual.  
   
-`[ @ownername = ] 'owner'` Es el propietario del nuevo rol de base de datos. *Owner* es un **tipo sysname**y su valor predeterminado es el usuario que se está ejecutando actualmente. *Owner* debe ser un usuario de base de datos o un rol de base de datos en la base de datos actual.  
+`[ @ownername = ] 'owner'` Es el propietario del nuevo rol de base de datos. *Owner* es un **tipo sysname** y su valor predeterminado es el usuario que se está ejecutando actualmente. *Owner* debe ser un usuario de base de datos o un rol de base de datos en la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -70,7 +70,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 EXEC sp_addrole 'Managers';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  

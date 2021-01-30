@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_primarykeys_TSQL
 - sp_primarykeys
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5b967d8ac3d30147e583ffa6268cdd8d2a8d282
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 23117c882ee0c2c55e8d29089327e9dd84643878
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535007"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199585"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +43,13 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_server = ] 'table_server'_` Es el nombre del servidor vinculado del que se va a devolver la información de la clave principal. *table_server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @table_server = ] 'table_server'_` Es el nombre del servidor vinculado del que se va a devolver la información de la clave principal. *table_server* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @table_name = ] 'table_name'` Es el nombre de la tabla para la que se va a proporcionar información de la clave principal. *TABLE_NAME*es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @table_name = ] 'table_name'` Es el nombre de la tabla para la que se va a proporcionar información de la clave principal. *TABLE_NAME* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @table_schema = ] 'table_schema'` Es el esquema de la tabla. *TABLE_SCHEMA* es de **tipo sysname y su**valor predeterminado es NULL. En el entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], corresponde al propietario de la tabla.  
+`[ @table_schema = ] 'table_schema'` Es el esquema de la tabla. *TABLE_SCHEMA* es de **tipo sysname y su** valor predeterminado es NULL. En el entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], corresponde al propietario de la tabla.  
   
-`[ @table_catalog = ] 'table_catalog'` Es el nombre del catálogo en el que reside el *TABLE_NAME* especificado. En el entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], corresponde al nombre de base de datos. *TABLE_CATALOG* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @table_catalog = ] 'table_catalog'` Es el nombre del catálogo en el que reside el *TABLE_NAME* especificado. En el entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], corresponde al nombre de base de datos. *TABLE_CATALOG* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -66,7 +66,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |**PK_NAME**|**sysname**|Identificador de la clave principal. Devuelve NULL si no es aplicable al origen de datos.|  
   
 ## <a name="remarks"></a>Observaciones  
- **sp_primarykeys** se ejecuta consultando el conjunto de filas PRIMARY_KEYS de la interfaz **IDBSchemaRowset** del proveedor de OLE DB correspondiente a *table_server*. Los parámetros *TABLE_NAME*, *TABLE_SCHEMA*, *TABLE_CATALOG*y *Column* se pasan a esta interfaz para restringir las filas devueltas.  
+ **sp_primarykeys** se ejecuta consultando el conjunto de filas PRIMARY_KEYS de la interfaz **IDBSchemaRowset** del proveedor de OLE DB correspondiente a *table_server*. Los parámetros *TABLE_NAME*, *TABLE_SCHEMA*, *TABLE_CATALOG* y *Column* se pasan a esta interfaz para restringir las filas devueltas.  
   
  **sp_primarykeys** devuelve un conjunto de resultados vacío si el proveedor de OLE DB del servidor vinculado especificado no admite el conjunto de filas PRIMARY_KEYS de la interfaz **IDBSchemaRowset** .  
   

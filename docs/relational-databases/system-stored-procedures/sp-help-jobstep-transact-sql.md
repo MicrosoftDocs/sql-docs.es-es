@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobstep_TSQL
 - sp_help_jobstep
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 24ec19dc231ce2fedf3a3562312ddc0bf7311e39
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c6a4a59a69612c37a6b6d9208e121b11ea448a35
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535250"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200104"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,18 +43,18 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] 'job_id'` Número de identificación del trabajo para el que se va a devolver información del trabajo. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] 'job_id'` Número de identificación del trabajo para el que se va a devolver información del trabajo. *job_id* es de tipo **uniqueidentifier** y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` Nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo. *job_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
-`[ @step_id = ] step_id` El número de identificación del paso en el trabajo. Si no se especifica, se incluirán todos los pasos del trabajo. *step_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @step_id = ] step_id` El número de identificación del paso en el trabajo. Si no se especifica, se incluirán todos los pasos del trabajo. *step_id* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @step_name = ] 'step_name'` Nombre del paso del trabajo. *step_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @step_name = ] 'step_name'` Nombre del paso del trabajo. *step_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @suffix = ] suffix` Marca que indica si se anexa una descripción de texto a la columna **Flags** en la salida. el *sufijo*es de **bit**y su valor predeterminado es **0**. Si el *sufijo* es **1**, se anexa una descripción.  
+`[ @suffix = ] suffix` Marca que indica si se anexa una descripción de texto a la columna **Flags** en la salida. el *sufijo* es de **bit** y su valor predeterminado es **0**. Si el *sufijo* es **1**, se anexa una descripción.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -79,7 +79,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|Número máximo de veces que se vuelve a intentar el comando (si no termina correctamente).|  
 |**retry_interval**|**int**|Intervalo (en minutos) entre cada nuevo intento.|  
 |**os_run_priority**|**int**|Reservado.|  
-|**output_file_name**|**nvarchar(200)**|Archivo en el que se debe escribir la salida [!INCLUDE[tsql](../../includes/tsql-md.md)] del **CmdExec**comando (solo para pasos de **PowerShell y PowerShell** ).|  
+|**output_file_name**|**nvarchar(200)**|Archivo en el que se debe escribir la salida [!INCLUDE[tsql](../../includes/tsql-md.md)] del comando (solo para pasos de **PowerShell y PowerShell** ).|  
 |**last_run_outcome**|**int**|Resultado del paso la última vez que se ejecutó:<br /><br /> **0** = error<br /><br /> **1** = correcto<br /><br /> **2** = reintento<br /><br /> **3** = cancelado<br /><br /> **5** = desconocido|  
 |**last_run_duration**|**int**|Duración (hhmmss) del paso la última vez que se ejecutó.|  
 |**last_run_retries**|**int**|Número de veces que se ha intentado el comando desde que se ejecutó el paso por última vez.|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_maintenance_plan_TSQL
 - sp_help_maintenance_plan
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 99fe08406840229ded741160f855ed60f11e977a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4d996179f089b95a3270c9045778afaaf5c13cd9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527723"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200016"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**plan_id**|**uniqueidentifier**|Id. del plan de mantenimiento.|  
 |**plan_name**|**sysname**|Nombre del plan de mantenimiento.|  
 |**date_created**|**datetime**|Fecha de creación del plan de mantenimiento.|  
-|**propietario**|**sysname**|Propietario del plan de mantenimiento.|  
+|**owner**|**sysname**|Propietario del plan de mantenimiento.|  
 |**max_history_rows**|**int**|Número máximo de filas asignadas para registrar el historial del plan de mantenimiento de la tabla del sistema.|  
 |**remote_history_server**|**int**|Nombre del servidor remoto en el que se puede escribir el informe de historial.|  
 |**max_remote_history_rows**|**int**|Número máximo de filas asignadas en la tabla del sistema en un servidor remoto en el que se puede escribir el informe del historial.|  
@@ -71,13 +71,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="database-table"></a>Tabla Database  
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |**database_name**|Nombre de todas las bases de datos asociadas con el plan de mantenimiento. *database_name* es **sysname**.|  
   
 ### <a name="job-table"></a>Tabla Job  
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |**job_id**|Identificador de todos los trabajos asociados con el plan de mantenimiento. *job_id* es de tipo **uniqueidentifier**.|  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8209463c3c316a5bd2e45a2d7b08eb65b3cb113d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e15771f52af0830f07f135453d08f4355a3fae8f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483158"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199871"
 ---
 # <a name="sql-data-types"></a>Tipos de datos SQL
-Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo los tipos de datos de SQL que define el DBMS asociado. La información sobre el modo en que un controlador asigna tipos de SQL DBMS a los identificadores de tipo SQL definidos por ODBC y cómo un controlador asigna tipos SQL de DBMS a sus propios identificadores de tipo SQL específicos del controlador se devuelve a través de una llamada a **SQLGetTypeInfo**. Un controlador también devuelve los tipos de datos de SQL al describir los tipos de datos de las columnas y los parámetros a través de las llamadas a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**y **SQLSpecialColumns**.  
+Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo los tipos de datos de SQL que define el DBMS asociado. La información sobre el modo en que un controlador asigna tipos de SQL DBMS a los identificadores de tipo SQL definidos por ODBC y cómo un controlador asigna tipos SQL de DBMS a sus propios identificadores de tipo SQL específicos del controlador se devuelve a través de una llamada a **SQLGetTypeInfo**. Un controlador también devuelve los tipos de datos de SQL al describir los tipos de datos de las columnas y los parámetros a través de las llamadas a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns** y **SQLSpecialColumns**.  
   
 > [!NOTE]  
 >  Los tipos de datos de SQL se incluyen en los campos SQL_DESC_ CONCISE_TYPE, SQL_DESC_TYPE y SQL_DESC_DATETIME_INTERVAL_CODE de los descriptores de implementación. Las características de los tipos de datos de SQL se incluyen en los campos SQL_DESC_PRECISION, SQL_DESC_SCALE, SQL_DESC_LENGTH y SQL_DESC_OCTET_LENGTH de los descriptores de implementación. Para obtener más información, vea [identificadores y descriptores de tipos de datos](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) más adelante en este apéndice.  

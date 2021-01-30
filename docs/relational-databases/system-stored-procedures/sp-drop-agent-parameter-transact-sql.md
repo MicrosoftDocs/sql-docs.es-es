@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_drop_agent_parameter_TSQL
 - sp_drop_agent_parameter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b63bde66246e24c3971299a668e8a90aa927385a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e050ab1ccb6b9343a672dc2f6c04be33989046b6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528226"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200727"
 ---
 # <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,9 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id` Es el identificador del perfil para el que se va a quitar un parámetro. *profile_id* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @profile_id = ] profile_id` Es el identificador del perfil para el que se va a quitar un parámetro. *profile_id* es de **tipo int** y no tiene ningún valor predeterminado.  
   
-`[ @parameter_name = ] 'parameter_name'` Es el nombre del parámetro que se va a quitar. *parameter_name* es de **tipo sysname y su**valor predeterminado es **%** . Si **%** es, se quitan todos los parámetros del perfil especificado.  
+`[ @parameter_name = ] 'parameter_name'` Es el nombre del parámetro que se va a quitar. *parameter_name* es de **tipo sysname y su** valor predeterminado es **%** . Si **%** es, se quitan todos los parámetros del perfil especificado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

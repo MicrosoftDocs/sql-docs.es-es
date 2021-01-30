@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_proxy
 - sp_help_proxy_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0125bee2811495eefc015e6be65d30b398edeaf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a598d3fef67af2e2d9f4874b9e8f63770b762bb7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549701"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199614"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +44,15 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @proxy_id = ] id` Número de identificación del proxy del que se va a mostrar información. La *proxy_id* es de **tipo int**y su valor predeterminado es NULL. Se puede especificar el *identificador* o el *proxy_name* .  
+`[ @proxy_id = ] id` Número de identificación del proxy del que se va a mostrar información. La *proxy_id* es de **tipo int** y su valor predeterminado es NULL. Se puede especificar el *identificador* o el *proxy_name* .  
   
-`[ @proxy_name = ] 'proxy_name'` Nombre del proxy del que se va a mostrar información. La *proxy_name* es de **tipo sysname y su**valor predeterminado es NULL. Se puede especificar el *identificador* o el *proxy_name* .  
+`[ @proxy_name = ] 'proxy_name'` Nombre del proxy del que se va a mostrar información. La *proxy_name* es de **tipo sysname y su** valor predeterminado es NULL. Se puede especificar el *identificador* o el *proxy_name* .  
   
-`[ @subsystem_name = ] 'subsystem_name'` Nombre del subsistema para el que se van a enumerar los servidores proxy. La *subsystem_name* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se especifica *subsystem_name* , también se debe especificar *Name* .  
+`[ @subsystem_name = ] 'subsystem_name'` Nombre del subsistema para el que se van a enumerar los servidores proxy. La *subsystem_name* es de **tipo sysname y su** valor predeterminado es NULL. Cuando se especifica *subsystem_name* , también se debe especificar *Name* .  
   
  En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Sistema operativo (CmdExec)|  

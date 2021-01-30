@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - database_audit_specification_details
 - sys.database_audit_specification_details_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 80eb02546225f3378c2ca8f139f3282e4651ea24
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 370e00f9e3c391b3084887f1599f2b46e66d8c07
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102835"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200359"
 ---
 # <a name="sysdatabase_audit_specification_details-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "98102835"
 |**minor_id**|**Int**|Id. secundario del objeto que se está auditando, interpretado según la clase; por ejemplo, el Id. de columna de una acción de auditoría de tabla.|  
 |**audited_principal_id**|**int**|Entidad de seguridad que se está auditando.|  
 |**audited_result**|**Nvarchar (60)**|Resultados de la acción de auditoría:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
-|**is_group**|**bit**|Indica si el objeto es un grupo:<br /><br /> 0 - no es un grupo<br /><br /> 1 - es un grupo|  
+|**is_group**|**Poco**|Indica si el objeto es un grupo:<br /><br /> 0 - no es un grupo<br /><br /> 1 - es un grupo|  
   
 ## <a name="permissions"></a>Permisos  
  Las entidades de seguridad con los permisos **ALTER any Database Audit** o **View definition** , el rol **DBO** y los miembros del rol fijo de base de datos **db_owners** tienen acceso a esta vista de catálogo. Además, la entidad de seguridad no debe tener denegado el permiso **View definition** .  

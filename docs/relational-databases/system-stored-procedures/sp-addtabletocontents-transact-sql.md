@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addtabletocontents_TSQL
 - sp_addtabletocontents
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26b1946d03fe949bd0a2af52ce07d64198dd1bbf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 469d9255813e1a072539e6aa8ca7035378ce2b92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548359"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198403"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,9 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_name = ] 'table_name'` Es el nombre de la tabla. *TABLE_NAME* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @table_name = ] 'table_name'` Es el nombre de la tabla. *TABLE_NAME* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @owner_name = ] 'owner_name'` Es el nombre del propietario de la tabla. *owner_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @owner_name = ] 'owner_name'` Es el nombre del propietario de la tabla. *owner_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 `[ @filter_clause = ] 'filter_clause'` Especifica una cláusula de filtro que controla qué filas de los datos recién cargados deben agregarse a las tablas de seguimiento de mezcla. *filter_clause* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL. Si *filter_clause* es **null**, se agregan todas las filas de carga masiva.  
   

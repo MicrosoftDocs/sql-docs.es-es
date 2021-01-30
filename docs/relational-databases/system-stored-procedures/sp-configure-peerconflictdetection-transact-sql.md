@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_configure_peerconflictdetection_TSQL
 - sp_configure_peerconflictdetection
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 80ce8df6158ca3c0f7cd37fc045c7bd5987e2e0f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 58e583191ba0c18824715664162f89a7911c466a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546202"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198704"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,19 +46,19 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [ @publication =] '*publicación*'  
- Es el nombre de la publicación para la que se desea configurar la detección de conflictos. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ Es el nombre de la publicación para la que se desea configurar la detección de conflictos. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
  [ @action =] '*acción*'  
  Especifica si se habilita o deshabilita la detección de conflictos para una publicación. *Action* es de tipo **nvarchar (5)** y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**enable**|Habilita la detección de conflictos para una publicación.|  
 |**disable**|Deshabilita la detección de conflictos para una publicación.|  
 |NULL (predeterminado)||  
   
  [ @originator_id =] *originator_id*  
- Especifica un Id. para un nodo en una topología punto a punto. *originator_id* es de **tipo int**y su valor predeterminado es NULL. Este identificador se usa para la detección de conflictos si la *acción* está establecida en **Habilitar**. Especifique un id. positivo distinto de cero que no se haya utilizado jamás en la topología. Para obtener una lista de identificadores que ya se hayan utilizado, consulte la tabla del sistema [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
+ Especifica un Id. para un nodo en una topología punto a punto. *originator_id* es de **tipo int** y su valor predeterminado es NULL. Este identificador se usa para la detección de conflictos si la *acción* está establecida en **Habilitar**. Especifique un id. positivo distinto de cero que no se haya utilizado jamás en la topología. Para obtener una lista de identificadores que ya se hayan utilizado, consulte la tabla del sistema [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .  
   
  [ @conflict_retention =] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  

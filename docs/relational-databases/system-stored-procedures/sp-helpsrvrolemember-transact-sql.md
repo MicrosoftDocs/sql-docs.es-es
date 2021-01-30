@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsrvrolemember
 - sp_helpsrvrolemember_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 189e26484ced5c955db570ad2d5f4cbe4a36e78c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f17a4be7d5e9b1511a840857c933ed240d0e3d31
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535112"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198695"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @srvrolename = ] 'role'` Es el nombre de un rol fijo de servidor. *role* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *role*, el conjunto de resultados incluye información sobre todos los roles fijos de servidor.  
+`[ @srvrolename = ] 'role'` Es el nombre de un rol fijo de servidor. *role* es de **tipo sysname y su** valor predeterminado es NULL. Si no se especifica *role*, el conjunto de resultados incluye información sobre todos los roles fijos de servidor.  
   
  *role* puede ser cualquiera de los siguientes valores.  
   

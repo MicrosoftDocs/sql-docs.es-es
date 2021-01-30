@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_adduser
 - sp_adduser_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 05aa08ee4d2b518b804db93d5a2408f690b56bbc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c250837ad65e0b14fc5612eae69be6f93d8f23e6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464607"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198372"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,11 +45,11 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'` Es el nombre del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el inicio de sesión de Windows. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. *login* debe ser un inicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sesión de o inicio de sesión de Windows existente.  
+`[ @loginame = ] 'login'` Es el nombre del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el inicio de sesión de Windows. *login* es de **tipo sysname** y no tiene ningún valor predeterminado. *login* debe ser un inicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sesión de o inicio de sesión de Windows existente.  
   
-`[ @name_in_db = ] 'user'` Es el nombre del nuevo usuario de la base de datos. *User* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *User* , el nombre del nuevo usuario de la base de datos tiene como valor predeterminado el nombre de *Inicio de sesión* . Al especificar *User* , se asigna al nuevo usuario un nombre en la base de datos diferente del nombre de inicio de sesión de nivel de servidor.  
+`[ @name_in_db = ] 'user'` Es el nombre del nuevo usuario de la base de datos. *User* es de **tipo sysname y su** valor predeterminado es NULL. Si no se especifica *User* , el nombre del nuevo usuario de la base de datos tiene como valor predeterminado el nombre de *Inicio de sesión* . Al especificar *User* , se asigna al nuevo usuario un nombre en la base de datos diferente del nombre de inicio de sesión de nivel de servidor.  
   
-`[ @grpname = ] 'role'` Es el rol de base de datos del que el nuevo usuario se convierte en miembro. *role* es de **tipo sysname y su**valor predeterminado es NULL. *role* debe ser un rol de base de datos válido en la base de datos actual.  
+`[ @grpname = ] 'role'` Es el rol de base de datos del que el nuevo usuario se convierte en miembro. *role* es de **tipo sysname y su** valor predeterminado es NULL. *role* debe ser un rol de base de datos válido en la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -59,9 +59,9 @@ sp_adduser [ @loginame = ] 'login'
   
  Después de agregar un usuario, utilice las instrucciones GRANT, DENY y REVOKE para definir los permisos que controlan las actividades del usuario.  
   
- Use **Sys. server_principals** para mostrar una lista de nombres de inicio de sesión válidos.  
+ Use **Sys.server_principals** para mostrar una lista de nombres de inicio de sesión válidos.  
   
- Use **sp_helprole** para mostrar una lista de los nombres de rol válidos. Cuando se especifica un rol, el usuario obtiene automáticamente los permisos definidos para ese rol. Si no se especifica un rol, el usuario obtiene los permisos concedidos al rol **público** predeterminado. Para agregar un usuario a un rol, se debe proporcionar un valor para el *nombre de usuario* . (el*nombre de usuario* puede ser el mismo que el *login_id*).  
+ Use **sp_helprole** para mostrar una lista de los nombres de rol válidos. Cuando se especifica un rol, el usuario obtiene automáticamente los permisos definidos para ese rol. Si no se especifica un rol, el usuario obtiene los permisos concedidos al rol **público** predeterminado. Para agregar un usuario a un rol, se debe proporcionar un valor para el *nombre de usuario* . (el *nombre de usuario* puede ser el mismo que el *login_id*).  
   
  El **invitado** del usuario ya existe en cada base de datos. Al agregar el usuario **invitado** , se habilitará este usuario, si estaba deshabilitado anteriormente. De forma predeterminada, el **invitado** del usuario está deshabilitado en las bases de datos nuevas.  
   
@@ -100,14 +100,14 @@ EXEC sp_adduser 'Arvind';
 EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sp_addrole &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_grantdbaccess &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_grantlogin &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
