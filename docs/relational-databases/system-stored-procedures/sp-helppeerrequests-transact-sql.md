@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helppeerrequests_TSQL
 - sp_helppeerrequests
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0ea9dce50e440c9b519032d46340b1b0a495eea0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d728d168ec84d27cbe5c4316eec1e5e0c9f61221
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535161"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210858"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación en una topología punto a punto para la que se enviaron solicitudes de estado. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en una topología punto a punto para la que se enviaron solicitudes de estado. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @description = ] 'description'` Valor que se puede utilizar para identificar solicitudes de estado individuales, lo que permite filtrar las respuestas devueltas en función de la información definida por el usuario proporcionada al llamar a [sp_requestpeerresponse &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). la *Descripción* es de tipo **nvarchar (4000)** y su valor predeterminado es **%** . De forma predeterminada, se devuelven todas las solicitudes de estado para la publicación. Este parámetro se utiliza para devolver solo las solicitudes de estado con una descripción que coincida con el valor proporcionado en la *Descripción*, donde las cadenas de caracteres coinciden con una cláusula [like &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md) .  
   

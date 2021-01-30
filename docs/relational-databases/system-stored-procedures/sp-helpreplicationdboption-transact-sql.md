@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpreplicationdboption_TSQL
 - sp_helpreplicationdboption
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6733b1f473c91094bd8af177bce4b13f3cf1b03e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 17c47d247e154ed80f0daeb8bacdb4984864fa03
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527124"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210812"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,17 +40,17 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'` Es el nombre de la base de datos. *dbname* es de **tipo sysname y su**valor predeterminado es **%** . Si **%** es, el conjunto de resultados contiene todas las bases de datos del publicador; de lo contrario, solo se devuelve información sobre la base de datos especificada. No se devuelve ninguna información para las bases de datos en que el usuario no tiene los permisos correspondientes según se describe a continuación.  
+`[ @dbname = ] 'dbname'` Es el nombre de la base de datos. *dbname* es de **tipo sysname y su** valor predeterminado es **%** . Si **%** es, el conjunto de resultados contiene todas las bases de datos del publicador; de lo contrario, solo se devuelve información sobre la base de datos especificada. No se devuelve ninguna información para las bases de datos en que el usuario no tiene los permisos correspondientes según se describe a continuación.  
   
-`[ @type = ] 'type'` Restringe el conjunto de resultados para que contenga solo las bases de datos en las que se ha habilitado el valor de *tipo* de opción de replicación especificado. *Type* es de tipo **sysname**y puede tener uno de los valores siguientes.  
+`[ @type = ] 'type'` Restringe el conjunto de resultados para que contenga solo las bases de datos en las que se ha habilitado el valor de *tipo* de opción de replicación especificado. *Type* es de tipo **sysname** y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**publicar**|La replicación transaccional está permitida.|  
 |**merge publish**|La replicación de mezcla está permitida.|  
 |**replicación permitida** (valor predeterminado)|La replicación transaccional o de mezcla están permitidas.|  
   
-`[ @reserved = ] reserved` Especifica si se devuelve información sobre las publicaciones y suscripciones existentes. *Reserved* es de **bit**y su valor predeterminado es 0. Si es **1**, el conjunto de resultados incluye información sobre si la base de datos especificada tiene publicaciones o suscripciones existentes.  
+`[ @reserved = ] reserved` Especifica si se devuelve información sobre las publicaciones y suscripciones existentes. *Reserved* es de **bit** y su valor predeterminado es 0. Si es **1**, el conjunto de resultados incluye información sobre si la base de datos especificada tiene publicaciones o suscripciones existentes.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

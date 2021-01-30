@@ -1,13 +1,13 @@
 ---
 description: core.sp_create_snapshot (Transact-SQL)
-title: Core. sp_create_snapshot (Transact-SQL) | Microsoft Docs
+title: core.sp_create_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_create_snapshot
 - sp_create_snapshot_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 719167961eb9c716266e1a96a17c31ea82367cbc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 737739cfa627e6668d95e6453d66ed1bad4ad637
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550140"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210505"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,10 +55,10 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  El GUID de un tipo de recopilador. *collector_type_uid* es de tipo **uniqueidentifier** y no tiene ningún valor predeterminado. Para obtener el GUID, consulte la vista dbo.syscollector_collector_types en la base de datos msdb.  
   
  [ @machine_name =] '*machine_name*'  
- Nombre del servidor en el que reside el conjunto de recopilación. *machine_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ Nombre del servidor en el que reside el conjunto de recopilación. *machine_name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
  [ @named_instance =] '*named_instance*'  
- Nombre de la instancia del conjunto de recopilación. *named_instance* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ Nombre de la instancia del conjunto de recopilación. *named_instance* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
  [ @log_id =] *log_id*  
  Identificador único que se asigna al registro de eventos de conjunto de recopilación en el servidor que recopiló los datos. *log_id* es de tipo **BIGINT** y no tiene ningún valor predeterminado. Para obtener el valor de *log_id*, consulte la vista collector_execution_log dbo.sysen la base de datos msdb.  

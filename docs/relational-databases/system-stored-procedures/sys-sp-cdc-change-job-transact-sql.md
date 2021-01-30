@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_change_job (Transact-SQL)
-title: Sys. sp_cdc_change_job (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_cdc_change_job_TSQL
 - sys.sp_cdc_change_job
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf81cfb8cbd06602252e62b3c72bafe694c14ed8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0dcc3a8b69e6cf8e65f96b239dd7699f796246ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545881"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210753"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Modifica la configuración de un trabajo de captura o de limpieza de captura de datos de cambio en la base de datos actual. Para ver la configuración actual de un trabajo, consulte la tabla [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) o utilice [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
+  Modifica la configuración de un trabajo de captura o de limpieza de captura de datos de cambio en la base de datos actual. Para ver la configuración actual de un trabajo, consulte la tabla [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) o utilice [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,9 +64,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  Cuando es *Continuous* = 0, el trabajo de **sp_cdc_scan** se ejecuta hasta *max_scans* exámenes del registro, procesando hasta *max_trans* transacciones durante cada análisis y, a continuación, se cierra.  
   
- Si ** \@ Continuous** se cambia de 1 a 0, ** \@ PollingInterval** se establece automáticamente en 0. Se omite un valor especificado para ** \@ PollingInterval** distinto de 0.  
+ Si **\@ Continuous** se cambia de 1 a 0, **\@ PollingInterval** se establece automáticamente en 0. Se omite un valor especificado para **\@ PollingInterval** distinto de 0.  
   
- Si se omite ** \@ Continuous** o se establece explícitamente en NULL y ** \@ PollingInterval** se establece explícitamente en un valor mayor que 0, ** \@ Continuous** se establece automáticamente en 1.  
+ Si se omite **\@ Continuous** o se establece explícitamente en NULL y **\@ PollingInterval** se establece explícitamente en un valor mayor que 0, **\@ Continuous** se establece automáticamente en 1.  
   
  *Continuous* solo es válido para los trabajos de captura.  
   
@@ -87,7 +87,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
  None  
   
 ## <a name="remarks"></a>Observaciones  
- Si se omite un parámetro, no se actualiza el valor asociado en la tabla [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) . Un parámetro establecido explícitamente en NULL se trata como si se omitiese el parámetro.  
+ Si se omite un parámetro, no se actualiza el valor asociado en la tabla [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) . Un parámetro establecido explícitamente en NULL se trata como si se omitiese el parámetro.  
   
  Si se especifica un parámetro que no es válido para el tipo de trabajo, la instrucción generará un error.  
   
@@ -112,7 +112,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. Cambiar un trabajo de limpieza  
- En el siguiente ejemplo se actualiza un trabajo de limpieza en la base de datos `AdventureWorks2012`. Se especifican todos los parámetros válidos para este tipo de trabajo, excepto el ** \@ umbral**. El valor de ** \@ Threshold** no se modifica.  
+ En el siguiente ejemplo se actualiza un trabajo de limpieza en la base de datos `AdventureWorks2012`. Se especifican todos los parámetros válidos para este tipo de trabajo, excepto el **\@ umbral**. El valor de **\@ Threshold** no se modifica.  
   
 ```  
 USE AdventureWorks2012;  
@@ -124,8 +124,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [DBO. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [Sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [dbo.cdc_jobs &#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helppullsubscription_TSQL
 - sp_helppullsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abad011197d58876915ce242c4c38198b13105ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3e7711e7034190f5862d512c3da02df685c3aaf5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535196"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210846"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,13 +41,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` Es el nombre del servidor remoto. *Publisher* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información para todos los publicadores.  
+`[ @publisher = ] 'publisher'` Es el nombre del servidor remoto. *Publisher* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve información para todos los publicadores.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve todas las bases de datos del publicador.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve todas las bases de datos del publicador.  
   
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve todas las publicaciones. Si este parámetro es igual a ALL, solo se devuelven las suscripciones de extracción con independent_agent = **0** .  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve todas las publicaciones. Si este parámetro es igual a ALL, solo se devuelven las suscripciones de extracción con independent_agent = **0** .  
   
-`[ @show_push = ] 'show_push'` Indica si se devolverán todas las suscripciones de extracción. *show_push*es de tipo **nvarchar (5)** y su valor predeterminado es false, que no devuelve las suscripciones de extracción.  
+`[ @show_push = ] 'show_push'` Indica si se devolverán todas las suscripciones de extracción. *show_push* es de tipo **nvarchar (5)** y su valor predeterminado es false, que no devuelve las suscripciones de extracción.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergesubscription
 - sp_helpmergesubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 48d40b3209311968443a6c6d2b713b4aa1e3d43a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 274048dcfcd76e815d3f4ec159dded0571f66e43
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535204"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210885"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,25 +44,25 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** . La publicación debe existir y debe cumplir las normas de los identificadores. Si es NULL o **%** , se devuelve información acerca de todas las publicaciones y suscripciones de combinación en la base de datos actual.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su** valor predeterminado es **%** . La publicación debe existir y debe cumplir las normas de los identificadores. Si es NULL o **%** , se devuelve información acerca de todas las publicaciones y suscripciones de combinación en la base de datos actual.  
   
-`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su**valor predeterminado es **%** . Si es NULL o %, se devuelve información acerca de todas las suscripciones a la publicación dada.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su** valor predeterminado es **%** . Si es NULL o %, se devuelve información acerca de todas las suscripciones a la publicación dada.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripciones. *subscriber_db*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todas las bases de datos de suscripciones.  
+`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripciones. *subscriber_db* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve información acerca de todas las bases de datos de suscripciones.  
   
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. El publicador debe ser un servidor válido. *Publisher*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todos los publicadores.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. El publicador debe ser un servidor válido. *Publisher* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve información acerca de todos los publicadores.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todas las bases de datos del publicador.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve información acerca de todas las bases de datos del publicador.  
   
-`[ @subscription_type = ] 'subscription_type'` Es el tipo de suscripción. *subscription_type*es **nvarchar (15)** y puede tener uno de estos valores.  
+`[ @subscription_type = ] 'subscription_type'` Es el tipo de suscripción. *subscription_type* es **nvarchar (15)** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |de **extracción** (valor predeterminado)|Suscripción de inserción.|  
 |**obtener**|Suscripción de extracción|  
 |**ambos**|Una suscripción de inserción y de extracción|  
   
-`[ @found = ] 'found'OUTPUT` Es una marca que indica que se devuelven filas. *found*es de **tipo int** y un parámetro output, con un valor predeterminado de NULL. **1** indica que se ha encontrado la publicación. **0** indica que no se encuentra la publicación.  
+`[ @found = ] 'found'OUTPUT` Es una marca que indica que se devuelven filas. *found* es de **tipo int** y un parámetro output, con un valor predeterminado de NULL. **1** indica que se ha encontrado la publicación. **0** indica que no se encuentra la publicación.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -96,7 +96,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ## <a name="remarks"></a>Observaciones  
  **sp_helpmergesubscription** se utiliza en la replicación de mezcla para devolver la información de suscripción almacenada en el publicador o en el suscriptor de republicación.  
   
- En el caso de las suscripciones anónimas, el valor de *subscription_type*es siempre **1** (extracción). Sin embargo, debe ejecutar [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) en el suscriptor para obtener información sobre las suscripciones anónimas.  
+ En el caso de las suscripciones anónimas, el valor de *subscription_type* es siempre **1** (extracción). Sin embargo, debe ejecutar [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) en el suscriptor para obtener información sobre las suscripciones anónimas.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** , el rol fijo de base de datos **db_owner** o la lista de acceso a la publicación para la publicación a la que pertenece la suscripción pueden ejecutar **sp_helpmergesubscription**.  

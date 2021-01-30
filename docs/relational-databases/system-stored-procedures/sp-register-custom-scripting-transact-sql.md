@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_register_custom_scripting
 - sp_register_custom_scripting_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4f73353cc5d2e0e9be02be5a0e6dc59eaf2f909f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f9239f89c5f65f0a4af3ddfd5588a92551dfbcdc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547516"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210452"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>Argumentos  
 `[ @type = ] 'type'` Es el tipo de procedimiento almacenado personalizado o el script que se está registrando. *Type* es de tipo **VARCHAR (16)**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**insert**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción INSERT.|  
 |**update**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción UPDATE.|  
@@ -57,9 +57,9 @@ sp_register_custom_scripting [ @type  = ] 'type'
   
  Cuando el valor de *tipo* es **custom_script**, se espera el nombre y la ruta de acceso completa de un [!INCLUDE[tsql](../../includes/tsql-md.md)] archivo de script. De lo contrario, el *valor* debe ser el nombre de un procedimiento almacenado registrado.  
   
-`[ @publication = ] 'publication'` Nombre de la publicación para la que se está registrando el procedimiento almacenado personalizado o el script. *Publication* es de **tipo sysname y su**valor predeterminado es **null**.  
+`[ @publication = ] 'publication'` Nombre de la publicación para la que se está registrando el procedimiento almacenado personalizado o el script. *Publication* es de **tipo sysname y su** valor predeterminado es **null**.  
   
-`[ @article = ] 'article'` Nombre del artículo para el que se está registrando el procedimiento almacenado personalizado o el script. *article* es de **tipo sysname y su**valor predeterminado es **null**.  
+`[ @article = ] 'article'` Nombre del artículo para el que se está registrando el procedimiento almacenado personalizado o el script. *article* es de **tipo sysname y su** valor predeterminado es **null**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

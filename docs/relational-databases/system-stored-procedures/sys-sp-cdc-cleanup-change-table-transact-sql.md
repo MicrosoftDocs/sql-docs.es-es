@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_cleanup_change_table (Transact-SQL)
-title: Sys. sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_cleanup_change_table
 - sp_cdc_cleanup_change_table_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6d532b168dfdc17b85ada5b9ef6ac653b9903fc6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fc6ca4964beff8adc8f32598948964d597076804
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541111"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210751"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,12 +54,12 @@ sys.sp_cdc_cleanup_change_table
  [ @low_water_mark =] *low_water_mark*  
  Es un número de secuencia de registro (LSN) que se usará como la nueva marca de límite inferior para la *instancia de captura*. *low_water_mark* es **binario (10)** y no tiene ningún valor predeterminado.  
   
- Si el valor no es null, debe aparecer como el valor start_lsn de una entrada actual en la tabla [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Si otras entradas de cdc.lsn_time_mapping comparten la misma la hora de confirmación que la entrada identificada por el nuevo límite inferior, el LSN más pequeño asociado a dicho grupo de entradas se elige como límite inferior.  
+ Si el valor no es null, debe aparecer como el valor start_lsn de una entrada actual en la tabla [CDC.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Si otras entradas de cdc.lsn_time_mapping comparten la misma la hora de confirmación que la entrada identificada por el nuevo límite inferior, el LSN más pequeño asociado a dicho grupo de entradas se elige como límite inferior.  
   
  Si el valor se establece explícitamente en NULL, se usa la *marca de límite inferior* actual para la *instancia de captura* para definir el límite superior de la operación de limpieza.  
   
  [ @threshold =] '*eliminar umbral*'  
- Es el número máximo de entradas de eliminación que se pueden eliminar mediante el uso de una única instrucción en el proceso de limpieza. *delete_threshold* es de tipo **BIGINT**y su valor predeterminado es 5000.  
+ Es el número máximo de entradas de eliminación que se pueden eliminar mediante el uso de una única instrucción en el proceso de limpieza. *delete_threshold* es de tipo **BIGINT** y su valor predeterminado es 5000.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -81,7 +81,7 @@ sys.sp_cdc_cleanup_change_table
   
 -   El agente de limpieza notifica errores de eliminación.  
   
-     Un administrador puede ejecutar explícitamente este procedimiento almacenado para reintentar una operación que no se ha ejecutado correctamente. Para reintentar la limpieza de una instancia de captura determinada, ejecute sys. sp_cdc_cleanup_change_table y especifique NULL para el @low_water_mark parámetro.  
+     Un administrador puede ejecutar explícitamente este procedimiento almacenado para reintentar una operación que no se ha ejecutado correctamente. Para reintentar la limpieza de una instancia de captura determinada, ejecute sys.sp_cdc_cleanup_change_table y especifique NULL para el @low_water_mark parámetro.  
   
 -   La directiva simple basada en retención utilizada por el trabajo del agente de limpieza no es correcta.  
   
@@ -91,8 +91,8 @@ sys.sp_cdc_cleanup_change_table
  Requiere pertenencia al rol fijo de base de datos db_owner.  
   
 ## <a name="see-also"></a>Consulte también  
- [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [Sys. fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_get_min_lsn &#40;&#41;de Transact-SQL ](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [sys.fn_cdc_increment_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
   
   
