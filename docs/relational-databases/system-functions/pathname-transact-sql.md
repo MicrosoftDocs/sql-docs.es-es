@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - PathName_TSQL
 - PathName
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 85058a3d551a385e4d2de8aed2ea9f56dc3b19c7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 191d567a310686a881363ff46a9667530dd79112
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093916"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207354"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 |0|La función devuelve el nombre de red virtual (VNN) en la ruta de acceso.|  
 |1|La función devuelve el nombre del equipo en la ruta de acceso.|  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **nvarchar(max)**  
   
 ## <a name="return-value"></a>Valor devuelto  

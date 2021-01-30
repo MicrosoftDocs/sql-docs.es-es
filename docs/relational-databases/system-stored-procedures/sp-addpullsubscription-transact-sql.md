@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addpullsubscription
 - sp_addpullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e5c15e1892f6640e8fddbcc0b89898ffce4f6b2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c119173ba184ef8fe3a03c59e90965650bb9c35c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549976"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206674"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,14 +45,14 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname** y no tiene ningún valor predeterminado.  
 
 > [!NOTE]
 > El nombre del servidor se puede especificar como `<Hostname>,<PortNumber>` . Es posible que tenga que especificar el número de puerto para la conexión cuando SQL Server se implementa en Linux o Windows con un puerto personalizado, y el servicio explorador está deshabilitado.
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. los publicadores de Oracle omiten *publisher_db* .  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su** valor predeterminado es NULL. los publicadores de Oracle omiten *publisher_db* .  
   
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @independent_agent = ] 'independent_agent'` Especifica si hay un Agente de distribución independiente para esta publicación. *independent_agent* es de tipo **nvarchar (5)** y su valor predeterminado es true. Si es **true**, hay un agente de distribución independiente para esta publicación. Si es **false**, hay una agente de distribución para cada pareja de base de datos de publicador y base de datos de suscriptor. *independent_agent* es una propiedad de la publicación y debe tener el mismo valor aquí que en el publicador.  
   
@@ -62,7 +62,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 `[ @update_mode = ] 'update_mode'` Es el tipo de actualización. *update_mode* es **nvarchar (30)** y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Read Only** (predeterminado)|La suscripción es de solo lectura. Los cambios en el suscriptor no se devuelven al publicador. Se debe utilizar cuando las actualizaciones no se realicen en el suscriptor.|  
 |**Synctran**|Habilita la compatibilidad con las suscripciones de actualización inmediata.|  
@@ -81,7 +81,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  En el caso de las suscripciones de actualización en cola, utilice la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las conexiones a los suscriptores y especifique otra cuenta para la conexión a cada suscriptor. Al crear una suscripción de extracción que admita la actualización en cola, la replicación siempre establece el uso de la autenticación de Windows en la conexión (en suscripciones de extracción, la replicación no puede tener acceso a metadatos en el suscriptor con autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). En este caso, debe ejecutar [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) para cambiar la conexión para que use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación de después de configurar la suscripción.  
   
- Si el [MSreplication_subscriptions &#40;tabla de&#41;de Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) no existe en el suscriptor, **sp_addpullsubscription** lo crea. También agrega una fila a la [MSreplication_subscriptions &#40;tabla de&#41;de Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) . En el caso de las suscripciones de extracción, se debe llamar primero a [sp_addsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) en el publicador.  
+ Si el [MSreplication_subscriptions &#40;tabla de&#41;de Transact-SQL](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) no existe en el suscriptor, **sp_addpullsubscription** lo crea. También agrega una fila a la [MSreplication_subscriptions &#40;tabla de&#41;de Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) . En el caso de las suscripciones de extracción, se debe llamar primero a [sp_addsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) en el publicador.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-t_1.sql)]  

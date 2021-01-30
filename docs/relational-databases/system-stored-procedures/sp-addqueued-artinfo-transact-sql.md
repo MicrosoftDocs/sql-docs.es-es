@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addqueued_artinfo
 - sp_addqueued_artinfo_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16709ac2b02acf8641661831c4aee831ef95bc19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c0899ff490b553471fc766413fdf0cca27955fa0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548340"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206662"
 ---
 # <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,22 +50,22 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @artid = ] 'artid'` Es el nombre del identificador de artículo. *artid especificado* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @artid = ] 'artid'` Es el nombre del identificador de artículo. *artid especificado* es de **tipo int** y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre del artículo que se va a incluir en el script. *article* es de **tipo sysname**y no tiene ningún valor predeterminado  
+`[ @article = ] 'article'` Es el nombre del artículo que se va a incluir en el script. *article* es de **tipo sysname** y no tiene ningún valor predeterminado  
   
-`[ @publisher = ] 'publisher'` Es el nombre del servidor del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del servidor del publicador. *Publisher* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a incluir en el script. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a incluir en el script. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @dest_table = ] _'dest_table'` Es el nombre de la tabla de destino. *dest_table* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @dest_table = ] _'dest_table'` Es el nombre de la tabla de destino. *dest_table* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
- [** @owner =** ] **'**_propietario_**'**  
- Es el propietario de la suscripción. *Owner* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ [**@owner =** ] **'**_propietario_**'**  
+ Es el propietario de la suscripción. *Owner* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @cft_table = ] 'cft_table'` Nombre de la tabla de conflictos de actualización en cola de este artículo. *cft_table*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @cft_table = ] 'cft_table'` Nombre de la tabla de conflictos de actualización en cola de este artículo. *cft_table* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

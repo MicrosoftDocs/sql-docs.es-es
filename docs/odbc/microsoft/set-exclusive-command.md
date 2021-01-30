@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SET EXCLUSIVE command [ODBC]
 ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 413c9188decc9011c2816b692b1fb4b6112ec45b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 43cd58e5e9f714de0defe36cea020ccb96ac3efa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466357"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208625"
 ---
 # <a name="set-exclusive-command"></a>Comando exclusivo de Set
 Especifica si los archivos de tabla se abren para uso exclusivo o compartido en una red.  
@@ -40,5 +40,5 @@ SET EXCLUSIVE ON | OFF
 ## <a name="remarks"></a>Observaciones  
  Al cambiar la configuración de SET EXCLUSIVe no se cambia el estado de las tablas abiertas previamente. Por ejemplo, si se abre una tabla con SET EXCLUSIVe SET ON y SET EXCLUSIVe se cambia posteriormente a OFF, la tabla conserva su estado de uso exclusivo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cuadro de diálogo de configuración de Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

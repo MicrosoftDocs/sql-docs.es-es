@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_trace_setstatus_TSQL
 - sp_trace_setstatus
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23d74214176d70ef2d71e04b1d758b4e40fac808
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 69090ce81bf7a70d28cf12959c412d88f270cfdd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543047"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209712"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @traceid = ] trace_id` Es el ID. del seguimiento que se va a modificar. *trace_id* es de **tipo int**y no tiene ningún valor predeterminado. El usuario emplea este valor *trace_id* para identificar, modificar y controlar el seguimiento. Para obtener información sobre cómo recuperar el *trace_id*, vea [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+`[ @traceid = ] trace_id` Es el ID. del seguimiento que se va a modificar. *trace_id* es de **tipo int** y no tiene ningún valor predeterminado. El usuario emplea este valor *trace_id* para identificar, modificar y controlar el seguimiento. Para obtener información acerca de cómo recuperar el *trace_id*, vea [Sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
-`[ @status = ] status` Especifica la acción que se va a implementar en el seguimiento. *status* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @status = ] status` Especifica la acción que se va a implementar en el seguimiento. *status* es de **tipo int** y no tiene ningún valor predeterminado.  
   
  En la tabla siguiente se muestra una lista de los estados que podrían especificarse.  
   
@@ -80,7 +80,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
  El usuario debe tener permiso ALTER TRACE.  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;&#41;de Transact-SQL ](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

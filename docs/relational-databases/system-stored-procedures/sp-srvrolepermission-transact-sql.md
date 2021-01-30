@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_srvrolepermission_TSQL
 - sp_srvrolepermission
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fb7a553adf516002a61f54ef900fd579f9d15856
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98356145bf3333e6027cff6cef825e92a3e15afd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473718"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207313"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @srvrolename = ] 'role'` Es el nombre del rol fijo de servidor para el que se devuelven los permisos. *role* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica un rol, se devuelven los permisos de todos los roles fijos de servidor. el *rol* puede tener uno de los valores siguientes.  
+`[ @srvrolename = ] 'role'` Es el nombre del rol fijo de servidor para el que se devuelven los permisos. *role* es de **tipo sysname y su** valor predeterminado es NULL. Si no se especifica un rol, se devuelven los permisos de todos los roles fijos de servidor. el *rol* puede tener uno de los valores siguientes.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -82,9 +82,9 @@ EXEC sp_srvrolepermission 'sysadmin';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addsrvrolemember &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
+ [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [sp_helpsrvrole &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

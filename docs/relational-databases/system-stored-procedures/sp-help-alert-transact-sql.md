@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_alert
 - sp_help_alert_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b02f303a4465df18cb049d06ecef585dad29a504
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b39195e5f1dd21fead42a05850f9b5e5e5874b52
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549729"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208942"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,19 +46,19 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @alert_name = ] 'alert_name'` El nombre de la alerta. *alert_name* es **nvarchar (128)**. Si no se especifica *alert_name* , se devuelve información sobre todas las alertas.  
   
-`[ @order_by = ] 'order_by'` El criterio de ordenación que se va a usar para generar los resultados. *order_by*es de **tipo sysname y su**valor predeterminado es N '*Name*'.  
+`[ @order_by = ] 'order_by'` El criterio de ordenación que se va a usar para generar los resultados. *order_by* es de **tipo sysname y su** valor predeterminado es N '*Name*'.  
   
-`[ @alert_id = ] alert_id` El número de identificación de la alerta de la que se va a notificar información. *alert_id*es de **tipo int**y su valor predeterminado es NULL.  
+`[ @alert_id = ] alert_id` El número de identificación de la alerta de la que se va a notificar información. *alert_id* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @category_name = ] 'category'` La categoría de la alerta. *Category* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @category_name = ] 'category'` La categoría de la alerta. *Category* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @legacy_format = ] legacy_format` Indica si se va a generar un conjunto de resultados heredado. *legacy_format* es de **bit**y su valor predeterminado es **0**. Cuando *legacy_format* es **1**, **sp_help_alert** devuelve el conjunto de resultados devuelto por **sp_help_alert** en Microsoft SQL Server 2000.  
+`[ @legacy_format = ] legacy_format` Indica si se va a generar un conjunto de resultados heredado. *legacy_format* es de **bit** y su valor predeterminado es **0**. Cuando *legacy_format* es **1**, **sp_help_alert** devuelve el conjunto de resultados devuelto por **sp_help_alert** en Microsoft SQL Server 2000.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Cuando ** \@ legacy_format** es **0**, **sp_help_alert** genera el siguiente conjunto de resultados.  
+ Cuando **\@ legacy_format** es **0**, **sp_help_alert** genera el siguiente conjunto de resultados.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -68,7 +68,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Número del mensaje de error que define la alerta. (Normalmente se corresponde con un número de error en la tabla **sysmessages** ). Si se usa la gravedad para definir la alerta, **message_id** es **0** o null.|  
-|**severity**|**int**|Nivel de gravedad (de **9** a **25**, **110**, **120**, **130**o **140**) que define la alerta.|  
+|**severity**|**int**|Nivel de gravedad (de **9** a **25**, **110**, **120**, **130** o **140**) que define la alerta.|  
 |**enabled**|**tinyint**|Estado de si la alerta está habilitada (**1**) o no (**0**). Las alertas no habilitadas no se envían.|  
 |**delay_between_responses**|**int**|Intervalo de espera, en segundos, entre las respuestas a la alerta.|  
 |**last_occurrence_date**|**int**|Fecha de la última vez que se produjo la alerta.|  
@@ -92,7 +92,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**wmi_query**|**nvarchar(512)**|Si el **tipo** es **3**, esta columna muestra la consulta para el evento WMI.|  
 |**type**|**int**|Tipo del evento:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de rendimiento<br /><br /> **3** = alerta de evento WMI|  
   
- Cuando ** \@ legacy_format** es **1**, **sp_help_alert** genera el siguiente conjunto de resultados.  
+ Cuando **\@ legacy_format** es **1**, **sp_help_alert** genera el siguiente conjunto de resultados.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -102,7 +102,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Número del mensaje de error que define la alerta. (Normalmente se corresponde con un número de error en la tabla **sysmessages** ). Si se usa la gravedad para definir la alerta, **message_id** es **0** o null.|  
-|**severity**|**int**|Nivel de gravedad (de **9** a **25**, **110**, **120**, **130**o 1**40**) que define la alerta.|  
+|**severity**|**int**|Nivel de gravedad (de **9** a **25**, **110**, **120**, **130** o 1 **40**) que define la alerta.|  
 |**enabled**|**tinyint**|Estado de si la alerta está habilitada (**1**) o no (**0**). Las alertas no habilitadas no se envían.|  
 |**delay_between_responses**|**int**|Intervalo de espera, en segundos, entre las respuestas a la alerta.|  
 |**last_occurrence_date**|**int**|Fecha de la última vez que se produjo la alerta.|  

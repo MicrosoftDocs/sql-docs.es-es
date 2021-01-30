@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_agent_parameter_TSQL
 - sp_change_agent_parameter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6020788189dbd352b3a469809e0a95a85a6a5a5f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e8bfb83ad0b05f57d4be97838882288937ffbcc1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548276"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206598"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,12 +38,12 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id,` Es el identificador del perfil. *profile_id* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @profile_id = ] profile_id,` Es el identificador del perfil. *profile_id* es de **tipo int** y no tiene ningún valor predeterminado.  
   
-`[ @parameter_name = ] 'parameter_name'` Es el nombre del parámetro. *parameter_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Para los perfiles del sistema, los parámetros que se pueden cambiar dependen del tipo de agente. Para averiguar qué tipo de agente representa este *profile_id* , busque la columna *profile_id* en la tabla **Msagent_profiles** y anote el valor de *agent_type* .  
+`[ @parameter_name = ] 'parameter_name'` Es el nombre del parámetro. *parameter_name* es de **tipo sysname** y no tiene ningún valor predeterminado. Para los perfiles del sistema, los parámetros que se pueden cambiar dependen del tipo de agente. Para averiguar qué tipo de agente representa este *profile_id* , busque la columna *profile_id* en la tabla **Msagent_profiles** y anote el valor de *agent_type* .  
   
 > [!NOTE]  
->  Si un parámetro es compatible con una *agent_type*determinada, pero no se ha definido en el perfil del agente, se devuelve un error. Para agregar un parámetro a un perfil de agente, debe ejecutar [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
+>  Si un parámetro es compatible con una *agent_type* determinada, pero no se ha definido en el perfil del agente, se devuelve un error. Para agregar un parámetro a un perfil de agente, debe ejecutar [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
  En el caso de una Agente de instantáneas (*agent_type* = **1**), si se define en el perfil, se pueden cambiar las siguientes propiedades:  
   
@@ -239,7 +239,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **SQLQueueMode**  
   
- Para ver qué parámetros se han definido para un perfil determinado, ejecute **sp_help_agent_profile** y tenga en cuenta el *profile_name* asociado a la *profile_id*. Con el *profile_id*adecuado, ejecute **sp_help_agent_parameters** con ese *profile_id* para ver los parámetros asociados al perfil. Los parámetros se pueden agregar a un perfil ejecutando [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
+ Para ver qué parámetros se han definido para un perfil determinado, ejecute **sp_help_agent_profile** y tenga en cuenta el *profile_name* asociado a la *profile_id*. Con el *profile_id* adecuado, ejecute **sp_help_agent_parameters** con ese *profile_id* para ver los parámetros asociados al perfil. Los parámetros se pueden agregar a un perfil ejecutando [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
 `[ @parameter_value = ] 'parameter_value'` Es el nuevo valor del parámetro. *parameter_value* es de tipo **nvarchar (255)** y no tiene ningún valor predeterminado.  
   

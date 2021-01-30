@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_secondary_database
 - sp_add_log_shipping_secondary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 384884e2b2b076b20cb9c679c3494a7c292f77a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d13a58428c4fefe2cc19668de22e604f721d0a96
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464675"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206711"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,11 +54,11 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @secondary_database = ] 'secondary_database'` Es el nombre de la base de datos secundaria. *secondary_database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @secondary_database = ] 'secondary_database'` Es el nombre de la base de datos secundaria. *secondary_database* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @primary_server = ] 'primary_server'` Nombre de la instancia principal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración del trasvase de registros. *primary_server* es de **tipo sysname** y no puede ser null.  
   
-`[ @primary_database = ] 'primary_database'` Es el nombre de la base de datos del servidor principal. *primary_database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @primary_database = ] 'primary_database'` Es el nombre de la base de datos del servidor principal. *primary_database* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @restore_delay = ] 'restore_delay'` Cantidad de tiempo, en minutos, que el servidor secundario espera antes de restaurar un archivo de copia de seguridad determinado. *restore_delay* es de **tipo int** y no puede ser null. El valor predeterminado es 0.  
   
@@ -82,11 +82,11 @@ sp_add_log_shipping_secondary_database
   
 `[ @restore_threshold = ] 'restore_threshold'` Número de minutos que pueden transcurrir entre las operaciones de restauración antes de que se genere una alerta. *restore_threshold* es de **tipo int** y no puede ser null.  
   
-`[ @threshold_alert = ] 'threshold_alert'` Es la alerta que se generará cuando se supere el umbral de copia de seguridad. *threshold_alert* es de **tipo int**y su valor predeterminado es 14.420.  
+`[ @threshold_alert = ] 'threshold_alert'` Es la alerta que se generará cuando se supere el umbral de copia de seguridad. *threshold_alert* es de **tipo int** y su valor predeterminado es 14.420.  
   
 `[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Especifica si se genera una alerta cuando se supera *backup_threshold* . El valor uno (1), predeterminado, significa que se generará la alerta. *threshold_alert_enabled* es **bit**.  
   
-`[ @history_retention_period = ] 'history_retention_period'` Es el período de tiempo en minutos en el que se conserva el historial. *history_retention_period* es de **tipo int**y su valor predeterminado es NULL. Si no se especifica ningún valor, se utiliza 14420.  
+`[ @history_retention_period = ] 'history_retention_period'` Es el período de tiempo en minutos en el que se conserva el historial. *history_retention_period* es de **tipo int** y su valor predeterminado es NULL. Si no se especifica ningún valor, se utiliza 14420.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

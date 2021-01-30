@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - SQLCompleteAsync
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bb5ec8ff7c0aa96e37ce66cabb1e18c9993e95f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad9a84bcc5f8ae716394925d4935c384d29794c2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448766"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207108"
 ---
 # <a name="sqlcompleteasync-function"></a>Función SQLCompleteAsync
 **Conformidad**  
@@ -74,5 +74,5 @@ SQLRETURN SQLCompleteAsync(
 ## <a name="comments"></a>Comentarios  
  En el modo de procesamiento asincrónico basado en sondeo, *AsyncRetCodePtr* podría ser SQL_STILL_EXECUTING cuando **SQLCompleteAsync** devuelve SQL_SUCCESS. La aplicación debe seguir sondeando hasta que no se SQL_STILL_EXECUTING *AsyncRetCodePtr* . En el modo de procesamiento asincrónico basado en notificaciones, *AsyncRetCodePtr* nunca se SQL_STILL_EXECUTING.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejecución asincrónica (método de sondeo)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

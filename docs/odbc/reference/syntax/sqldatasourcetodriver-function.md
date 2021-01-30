@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLDataSourceToDriver
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 80a9f74f7711e252b1ee947a5ece7088c1a9aa04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20e4a4cf601990f014655f3c067e9304cc5f4388
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461177"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206090"
 ---
 # <a name="sqldatasourcetodriver-function"></a>Función SQLDataSourceToDriver
 **SQLDataSourceToDriver** supportstranslations para controladores ODBC. Las aplicaciones habilitadas para ODBC no llaman a esta función; las aplicaciones solicitan la traducción a través de **SQLSetConnectAttr**. El controlador asociado con el *ConnectionHandle* especificado en **SQLSetConnectAttr** llama al archivo dll especificado para realizar traducciones de todos los datos que fluyen desde el origen de datos al controlador. Se puede especificar un archivo DLL de traducción predeterminado en el archivo de inicialización de ODBC.  
@@ -97,7 +97,7 @@ BOOL SQLDataSourceToDriver(
   
  Si se especifica el mismo búfer para *rgbValueIn* y *rgbValueOut*, se llevará a cabo la traducción de los datos en el búfer.  
   
- Aunque *cbValueIn*, *cbValueOutMax*y *pcbValueOut* son del tipo SDWORD, **SQLDataSourceToDriver** no admite necesariamente punteros enormes.  
+ Aunque *cbValueIn*, *cbValueOutMax* y *pcbValueOut* son del tipo SDWORD, **SQLDataSourceToDriver** no admite necesariamente punteros enormes.  
   
  Si **SQLDataSourceToDriver** devuelve false, es posible que se haya producido un truncamiento de datos durante la traducción. Si *pcbValueOut* (el número de bytes disponibles para devolver en el búfer de salida) es mayor que *cbValueOutMax* (la longitud del búfer de salida), se produce un truncamiento. El controlador debe determinar si el truncamiento es aceptable. Si no se ha producido el truncamiento, el **SQLDataSourceToDriver** devolvió false debido a otro error. En cualquier caso, se devuelve un mensaje de error específico en *szErrorMsg*.  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_create_collection_item
 - sp_syscollector_create_collection_item_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a99c9adb21d6c9b09d4e1e29ad845253ba3c9b19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e58f8407c152be375099e9eb70e3fe63d0100e67
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538541"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207034"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_syscollector_create_collection_item
  *el nombre* debe ser único. Para obtener una lista de los nombres de elementos de recopilación actuales, consulte la vista del sistema syscollector_collection_items.  
   
  [ @frequency =] *frecuencia*  
- Se utiliza para especificar (en segundos) la frecuencia con la que este elemento de recopilación reúne los datos. *Frequency* es de **tipo int**y su valor predeterminado es 5. El valor mínimo que se puede especificar es 5 segundos.  
+ Se utiliza para especificar (en segundos) la frecuencia con la que este elemento de recopilación reúne los datos. *Frequency* es de **tipo int** y su valor predeterminado es 5. El valor mínimo que se puede especificar es 5 segundos.  
   
  Si el conjunto de recopilación se establece en modo sin almacenamiento en caché, se omite la frecuencia porque este modo hace que la recopilación de datos y la carga se produzcan con la programación especificada para el conjunto de recopilación. Para ver el modo de recopilación del conjunto de recopilación, consulte la vista del sistema [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) .  
   

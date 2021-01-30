@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergepublication
 - sp_dropmergepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0c787c7c2503f9182b704e83a04664d7d377cef4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 35024724255eea714de42f8fb3a974188730fcef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538979"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208214"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +41,11 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a quitar. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado. Si es **All**, se quitan todas las publicaciones de combinación existentes, así como el agente de instantáneas trabajo asociado a ellas. Si especifica un valor concreto para la *publicación*, solo se quitarán esa publicación y su trabajo de agente de instantáneas asociado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a quitar. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado. Si es **All**, se quitan todas las publicaciones de combinación existentes, así como el agente de instantáneas trabajo asociado a ellas. Si especifica un valor concreto para la *publicación*, solo se quitarán esa publicación y su trabajo de agente de instantáneas asociado.  
   
-`[ @ignore_distributor = ] ignore_distributor` Se utiliza para quitar una publicación sin realizar tareas de limpieza en el distribuidor. *ignore_distributor* es de **bit**y su valor predeterminado es **0**. Este parámetro también se utiliza al volver a instalar el distribuidor.  
+`[ @ignore_distributor = ] ignore_distributor` Se utiliza para quitar una publicación sin realizar tareas de limpieza en el distribuidor. *ignore_distributor* es de **bit** y su valor predeterminado es **0**. Este parámetro también se utiliza al volver a instalar el distribuidor.  
   
-`[ @reserved = ] reserved` Está reservado para uso futuro. *Reserved* es de **bit**y su valor predeterminado es **0**.  
+`[ @reserved = ] reserved` Está reservado para uso futuro. *Reserved* es de **bit** y su valor predeterminado es **0**.  
   
 `[ @ignore_merge_metadata = ] ignore_merge_metadata` Solo para uso interno.  
   

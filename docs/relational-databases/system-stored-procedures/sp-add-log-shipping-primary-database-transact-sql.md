@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_primary_database
 - sp_add_log_shipping_primary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ed823f2b6564593388893db74866931bc1c0c93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c967127366c935b42ac33158982c6734114b2d8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464673"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206722"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,13 +78,13 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 `[ @monitor_server_password = ] 'monitor_server_password'` Es la contraseña de la cuenta utilizada para obtener acceso al servidor de supervisión.  
   
-`[ @backup_threshold = ] backup_threshold` Es el período de tiempo, en minutos, después de la última copia de seguridad antes de que se produzca un error de *threshold_alert* . *backup_threshold* es de **tipo int**y su valor predeterminado es de 60 minutos.  
+`[ @backup_threshold = ] backup_threshold` Es el período de tiempo, en minutos, después de la última copia de seguridad antes de que se produzca un error de *threshold_alert* . *backup_threshold* es de **tipo int** y su valor predeterminado es de 60 minutos.  
   
-`[ @threshold_alert = ] threshold_alert` Es la alerta que se generará cuando se supere el umbral de copia de seguridad. *threshold_alert* es de **tipo int**y su valor predeterminado es 14.420.  
+`[ @threshold_alert = ] threshold_alert` Es la alerta que se generará cuando se supere el umbral de copia de seguridad. *threshold_alert* es de **tipo int** y su valor predeterminado es 14.420.  
   
 `[ @threshold_alert_enabled = ] threshold_alert_enabled` Especifica si se generará una alerta cuando se supere *backup_threshold* . El valor cero (0), valor predeterminado, significa que la alerta está deshabilitada y no se generará. *threshold_alert_enabled* es **bit**.  
   
-`[ @history_retention_period = ] history_retention_period` Es el período de tiempo en minutos en el que se retendrá el historial. *history_retention_period* es de **tipo int**y su valor predeterminado es NULL. Si no se especifica ninguno, se usará un valor de 14420.  
+`[ @history_retention_period = ] history_retention_period` Es el período de tiempo en minutos en el que se retendrá el historial. *history_retention_period* es de **tipo int** y su valor predeterminado es NULL. Si no se especifica ninguno, se usará un valor de 14420.  
   
 `[ @backup_job_id = ] backup_job_id OUTPUT` El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID. de trabajo del agente asociado al trabajo de copia de seguridad en el servidor principal. *backup_job_id* es de tipo **uniqueidentifier** y no puede ser null.  
   

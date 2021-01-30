@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_data_file_recover_suspect_db
 - sp_add_data_file_recover_suspect_db_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ae07b655dd7b693876c61b600315ac8874d988ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e6361871e82e64283dc4d2afb305baa2dc5e193
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481669"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206764"
 ---
 # <a name="sp_add_data_file_recover_suspect_db-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbName = ] 'database_ '` Es el nombre de la base de datos. *Database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @dbName = ] 'database_ '` Es el nombre de la base de datos. *Database* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @filegroup = ] 'filegroup_name_ '` Es el grupo de archivos al que se va a agregar el archivo. *filegroup_name* es de tipo **nvarchar (260)** y su valor predeterminado es null, que indica el archivo principal.  
   

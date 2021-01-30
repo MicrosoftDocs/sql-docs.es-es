@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a469e48f9de46453f60cfcbb468110dfb1f5d9dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b2ea205c92033e4dc5b39bd96f2e66e65bb98a8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424987"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209119"
 ---
 # <a name="reserved-keywords"></a>Palabras clave reservadas
 Las siguientes palabras están reservadas para su uso en llamadas a funciones de ODBC. Estas palabras no restringen la gramática de SQL mínima; sin embargo, para garantizar la compatibilidad con los controladores que admiten la gramática básica de SQL, las aplicaciones deben evitar el uso de cualquiera de estas palabras clave. El valor de #**define** SQL_ODBC_KEYWORDS contiene una lista separada por comas de estas palabras clave.  
@@ -91,7 +91,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
         DEFAULT  
         DEFERRABLE  
         DEFERRED  
-        SUPRIMIR  
+        DELETE  
         DESC  
         DESCRIBE  
         DESCRIPTOR  
@@ -112,7 +112,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
         EXISTS  
         EXTERNAL  
         EXTRACT  
-        false  
+        FALSE  
         FETCH  
         FIRST  
         FLOAT  
@@ -250,7 +250,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
         true  
         UNION  
         UNIQUE  
-        DESCONOCIDO  
+        UNKNOWN  
         UPDATE  
         UPPER  
         USAGE  

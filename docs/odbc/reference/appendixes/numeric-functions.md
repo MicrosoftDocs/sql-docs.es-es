@@ -7,26 +7,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - functions [ODBC], numeric functions
 - numeric functions [ODBC]
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7575d55ad6632ffa511da32a7155ab8c4d0edf3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bef4a075eefffd0f9ec4b918189d40ae71ea78ec
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425027"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207130"
 ---
 # <a name="numeric-functions"></a>Funciones numéricas
 En la tabla siguiente se describen las funciones numéricas que se incluyen en el conjunto de funciones escalares de ODBC. Al llamar a **SQLGetInfo** con un *tipo de información* de SQL_NUMERIC_FUNCTIONS, una aplicación puede determinar qué funciones numéricas son compatibles con un controlador.  
   
  Todas las funciones numéricas devuelven valores de tipo de datos SQL_FLOAT excepto ABS, ROUND, TRUNCAte, SIGN, FLOOR y CEILING, que devuelven valores del mismo tipo de datos que los parámetros de entrada.  
   
- Los argumentos indicados como *numeric_exp* pueden ser el nombre de una columna, el resultado de otra función escalar o un *valor numérico*l, donde el tipo de datos subyacente podría representarse como SQL_NUMERIC, SQL_DECIMAL, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT, SQL_FLOAT, SQL_REAL o SQL_DOUBLE.  
+ Los argumentos indicados como *numeric_exp* pueden ser el nombre de una columna, el resultado de otra función escalar o un *valor numérico* l, donde el tipo de datos subyacente podría representarse como SQL_NUMERIC, SQL_DECIMAL, SQL_TINYINT, SQL_SMALLINT, SQL_INTEGER, SQL_BIGINT, SQL_FLOAT, SQL_REAL o SQL_DOUBLE.  
   
  Los argumentos indicados como *float_exp* pueden ser el nombre de una columna, el resultado de otra función escalar o un *literal numérico*, donde el tipo de datos subyacente se puede representar como SQL_FLOAT.  
   

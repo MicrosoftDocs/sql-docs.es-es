@@ -6,7 +6,7 @@ ms.date: 06/26/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_external_script_requests
 - sys.dm_external_script_requests_TSQL
@@ -21,12 +21,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 972e9527db2eaa546210ccc54528d0ce60197b4c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ca4cfdd348d04ab0332653fa6851107ffa5f16d1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482686"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207120"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -50,7 +50,7 @@ Devuelve una fila para cada cuenta de trabajo activa que ejecuta un script exter
 > [!NOTE]
 > Los usuarios que ejecutan scripts externos deben tener el permiso adicional `EXECUTE ANY EXTERNAL SCRIPT` ; sin embargo, los administradores pueden usar esta DMV sin este permiso. 
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
 Esta vista se puede filtrar usando el identificador del lenguaje de script.
 
@@ -74,7 +74,7 @@ SELECT external_script_request_id
 FROM sys.dm_external_script_requests;
 ```  
 
-Results  
+Resultados  
 
 external_script_request_id  |language  |degree_of_parallelism  |external_user_name  
 ---------|---------|---------|---------

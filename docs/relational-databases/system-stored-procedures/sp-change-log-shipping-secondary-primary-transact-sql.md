@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_log_shipping_secondary_primary
 - sp_change_log_shipping_secondary_primary_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7b17019380bc65d1b3d2fcdb16352fe32477c6bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8352706512e71a5cba3a0b22befe2b7416d276bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474523"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209350"
 ---
 # <a name="sp_change_log_shipping_secondary_primary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,13 +50,13 @@ sp_change_log_shipping_secondary_primary
 ## <a name="arguments"></a>Argumentos  
 `[ @primary_server = ] 'primary_server'` Nombre de la instancia principal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración del trasvase de registros. *primary_server* es de **tipo sysname** y no puede ser null.  
   
-`[ @primary_database = ] 'primary_database'` Es el nombre de la base de datos del servidor principal. *primary_database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @primary_database = ] 'primary_database'` Es el nombre de la base de datos del servidor principal. *primary_database* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @backup_source_directory = ] 'backup_source_directory'` Directorio donde se almacenan los archivos de copia de seguridad del registro de transacciones del servidor principal. *backup_source_directory* es de tipo **nvarchar (500)** y no puede ser null.  
   
 `[ @backup_destination_directory = ] 'backup_destination_directory'` Directorio del servidor secundario donde se copian los archivos de copia de seguridad. *backup_destination_directory* es de tipo **nvarchar (500)** y no puede ser null.  
   
-`[ @file_retention_period = ] 'file_retention_period'` Es el período de tiempo en minutos en el que se retendrá el historial. *history_retention_period* es de **tipo int**y su valor predeterminado es NULL. Si no se especifica ninguno, se usará un valor de 14420.  
+`[ @file_retention_period = ] 'file_retention_period'` Es el período de tiempo en minutos en el que se retendrá el historial. *history_retention_period* es de **tipo int** y su valor predeterminado es NULL. Si no se especifica ninguno, se usará un valor de 14420.  
   
 `[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` El modo de seguridad usado para conectarse al servidor de supervisión.  
   

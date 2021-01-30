@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_repldropcolumn_TSQL
 - sp_repldropcolumn
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df9b2be3d6253bd3ba225d4cc444e705678109f3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6c5fdabf724c284e8a75244269321b92c81b46ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534942"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206426"
 ---
 # <a name="sp_repldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
   
 -   Si los procedimientos almacenados personalizados se vuelven a generar automáticamente, *schema_change_script* se pueden utilizar para quitar estos procedimientos almacenados personalizados y reemplazarlos con procedimientos almacenados personalizados definidos por el usuario que admitan el nuevo esquema.  
   
--   Si los procedimientos almacenados personalizados no se vuelven a generar automáticamente, *schema_change_script*se pueden usar para volver a generar estos procedimientos almacenados o para crear procedimientos almacenados personalizados definidos por el usuario.  
+-   Si los procedimientos almacenados personalizados no se vuelven a generar automáticamente, *schema_change_script* se pueden usar para volver a generar estos procedimientos almacenados o para crear procedimientos almacenados personalizados definidos por el usuario.  
   
  [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
  Habilita o deshabilita la capacidad de que se invalide una instantánea. *force_invalidate_snapshot* es un bit, con un valor predeterminado de 1.  

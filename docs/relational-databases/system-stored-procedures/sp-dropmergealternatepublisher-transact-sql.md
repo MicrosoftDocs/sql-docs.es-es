@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergealternatepublisher
 - sp_dropmergealternatepublisher_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c808c4326736a190dace9e6dd839306ec65c7307
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d787648f197c54623ba305503ddd878a3a7061d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536533"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208277"
 ---
 # <a name="sp_dropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,17 +38,17 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` Es el nombre del publicador actual. *Publisher*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador actual. *Publisher* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación actual. *publisher_db*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación actual. *publisher_db* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @publication = ] 'publication'` Es el nombre de la publicación actual. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación actual. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @alternate_publisher = ] 'alternate_publisher'` Es el nombre del publicador alternativo que se va a quitar como asociado de sincronización alternativo. *alternate_publisher*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @alternate_publisher = ] 'alternate_publisher'` Es el nombre del publicador alternativo que se va a quitar como asociado de sincronización alternativo. *alternate_publisher* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'` Es el nombre de la base de datos de publicación que se va a quitar como base de datos de publicación de asociados de sincronización alternativos. *alternate_publisher_db*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` Es el nombre de la base de datos de publicación que se va a quitar como base de datos de publicación de asociados de sincronización alternativos. *alternate_publisher_db* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @alternate_publication = ] 'alternate_publication'` Es el nombre de la publicación que se va a quitar como la publicación de asociado de sincronización alternativo. *alternate_publication*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @alternate_publication = ] 'alternate_publication'` Es el nombre de la publicación que se va a quitar como la publicación de asociado de sincronización alternativo. *alternate_publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - database_permissions
 - sys.database_permissions_TSQL
@@ -21,12 +21,12 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0af3adae81e4f0bb9489e3534427dfe03efebf09
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a488dcf39ecf3ab0fa6e82264245d38f163f8ed6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475256"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209482"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "97475256"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Identifica la clase en que existe el permiso.<br /><br /> 0 = Base de datos<br />1 = objeto o columna<br />3 = Esquema<br />4 = entidad de seguridad de base de datos<br />5 = ensamblado: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />6 = Tipo<br />10 = colección de esquemas XML: <br />                      **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />15 = tipo de mensaje: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />16 = contrato de servicio: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />17 = servicio: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />18 = enlace de servicio remoto: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />19 = ruta: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />23 = catálogo de texto completo: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />24 = clave simétrica: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />25 = certificado: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />26 = clave asimétrica: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.|  
-|**class_desc**|**nvarchar(60)**|Descripción de la clase en la que existe el permiso.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TIPO<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICADO<br /><br /> ASYMMETRIC_KEY|  
+|**class_desc**|**nvarchar(60)**|Descripción de la clase en la que existe el permiso.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICADO<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|Id. del elemento en que existe el permiso, interpretado según la clase. Normalmente, el **major_id** es simplemente el tipo de identificador que se aplica a lo que la clase representa. <br /><br /> 0 = la propia base de datos <br /><br /> >0 = Object-IDs para objetos de usuario <br /><br /> \<0 = Object-IDs para objetos del sistema |  
 |**minor_id**|**int**|Id. secundario del elemento en que existe el permiso, interpretado según la clase. A menudo, el **minor_id** es cero, porque no hay ninguna Subcategoría disponible para la clase de objeto. De lo contrario, es el ID. de columna de una tabla.|  
 |**grantee_principal_id**|**int**|Id. de la entidad de seguridad de base de datos a la que se conceden los permisos.|  

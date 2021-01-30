@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_category
 - sp_help_category_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d500bad167bda9085d4caf40bdaa9e442cb26efb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 68c8d1fcf243de008f889d4037bbd38a590c6403
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549718"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208931"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @class = ] 'class'` Clase sobre la que se solicita información. la *clase* es **VARCHAR (8)** y su valor predeterminado es **Job**. la *clase* puede ser uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**TRABAJO**|Proporciona información acerca de una categoría de trabajo.|  
 |**ONALERT**|Proporciona información acerca de una categoría de alerta.|  
@@ -53,21 +53,21 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'` Tipo de categoría para la que se solicita información. *Type* es de tipo **VARCHAR (12)**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**LOCAL**|Categoría de trabajo local.|  
 |**MULTI -SERVER**|Categoría de trabajo multiservidor.|  
 |**NONE**|Categoría para una clase distinta de **Job**.|  
   
-`[ @name = ] 'name'` Nombre de la categoría para la que se solicita información. *Name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @name = ] 'name'` Nombre de la categoría para la que se solicita información. *Name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @suffix = ] suffix` Especifica si la columna de **category_type** del conjunto de resultados es un identificador o un nombre. el *sufijo* es de **bit**y su valor predeterminado es **0**. **1** muestra el **category_type** como un nombre y **0** lo muestra como un identificador.  
+`[ @suffix = ] suffix` Especifica si la columna de **category_type** del conjunto de resultados es un identificador o un nombre. el *sufijo* es de **bit** y su valor predeterminado es **0**. **1** muestra el **category_type** como un nombre y **0** lo muestra como un identificador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Cuando el ** \@ sufijo** es **0**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
+ Cuando el **\@ sufijo** es **0**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -75,12 +75,12 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = local<br /><br /> **2** = multiservidor<br /><br /> **3** = ninguno|  
 |**name**|**sysname**|Nombre de la categoría|  
   
- Cuando el ** \@ sufijo** es **1**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
+ Cuando el **\@ sufijo** es **1**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Id. de categoría|  
-|**category_type**|**sysname**|Tipo de categoría. Uno de los **locales**, **varios servidores**o **ninguno**|  
+|**category_type**|**sysname**|Tipo de categoría. Uno de los **locales**, **varios servidores** o **ninguno**|  
 |**name**|**sysname**|Nombre de la categoría|  
   
 ## <a name="remarks"></a>Observaciones  

@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_disable_table (Transact-SQL)
-title: Sys. sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_cdc_disable_table
 - sp_cdc_disable_table
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0819c156cdc3e836028915d89a8d9100eef17c6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 53984d18923cef297e267374045f0f4cb4364419
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541173"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206022"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ sys.sp_cdc_disable_table
  None  
   
 ## <a name="remarks"></a>Observaciones  
- **Sys. sp_cdc_disable_table** quita la tabla de cambios de la captura de datos modificados y las funciones del sistema asociadas a la tabla de origen especificada y a la instancia de captura. Elimina las filas asociadas a la instancia de captura especificada de las tablas del sistema de captura de datos modificados y establece en 0 la columna de **is_tracked_by_cdc** para la entrada de la tabla en la vista de catálogo [Sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) .  
+ **Sys.sp_cdc_disable_table** quita la tabla de cambios de la captura de datos modificados y las funciones del sistema asociadas a la tabla de origen especificada y a la instancia de captura. Elimina las filas asociadas a la instancia de captura especificada de las tablas del sistema de captura de datos modificados y establece en 0 la columna de **is_tracked_by_cdc** para la entrada de la tabla en la vista de catálogo [Sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) .  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de base de datos **db_owner** .  

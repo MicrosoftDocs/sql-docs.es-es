@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_trace_setevent_TSQL
 - sp_trace_setevent
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f678427f05b5c3b136a7dfe18e1f51eb91773b91
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fffcbb5ec35fb329fa0ed3dac4782f0f1417ce82
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543010"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209730"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Agrega o quita un evento o una columna de evento en un seguimiento. **sp_trace_setevent** solo se puede ejecutar en seguimientos existentes que estén detenidos (el*Estado* es **0**). Se devuelve un error si este procedimiento almacenado se ejecuta en un seguimiento que no existe o cuyo *Estado* no es **0**.  
+  Agrega o quita un evento o una columna de evento en un seguimiento. **sp_trace_setevent** solo se puede ejecutar en seguimientos existentes que estén detenidos (el *Estado* es **0**). Se devuelve un error si este procedimiento almacenado se ejecuta en un seguimiento que no existe o cuyo *Estado* no es **0**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use eventos extendidos en su lugar.  
@@ -46,9 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @traceid = ] trace_id` Es el ID. del seguimiento que se va a modificar. *trace_id* es de **tipo int**y no tiene ningún valor predeterminado. El usuario emplea este valor *trace_id* para identificar, modificar y controlar el seguimiento.  
+`[ @traceid = ] trace_id` Es el ID. del seguimiento que se va a modificar. *trace_id* es de **tipo int** y no tiene ningún valor predeterminado. El usuario emplea este valor *trace_id* para identificar, modificar y controlar el seguimiento.  
   
-`[ @eventid = ] event_id` Es el identificador del evento que se va a activar. *event_id* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @eventid = ] event_id` Es el identificador del evento que se va a activar. *event_id* es de **tipo int** y no tiene ningún valor predeterminado.  
   
  Esta tabla muestra una lista de los eventos que pueden agregarse o quitarse de un seguimiento.  
   
@@ -59,8 +59,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |11|RPC:Starting|Se produce cuando se ha iniciado una RPC.|  
 |12|SQL:BatchCompleted|Se produce cuando se ha completado un proceso por lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |13|SQL:BatchStarting|Se produce cuando se ha iniciado un proceso por lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
-|14|Audit Login|Se produce cuando un usuario inicia una sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correctamente.|  
-|15|Audit Logout|Se produce cuando un usuario cierra la sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|14|Auditoría de inicio de sesión|Se produce cuando un usuario inicia una sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correctamente.|  
+|15|Auditoría de cierre de sesión|Se produce cuando un usuario cierra la sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |16|Atención|Se produce cuando tienen lugar eventos de atención como, por ejemplo, las solicitudes de interrupción de clientes o las conexiones de cliente interrumpidas.|  
 |17|ExistingConnection|Detecta toda la actividad de los usuarios conectados a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes del inicio del seguimiento.|  
 |18|Audit Server Starts and Stops|Se produce cuando se modifica el estado del servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -134,12 +134,12 @@ sp_trace_setevent [ @traceid = ] trace_id
 |102|Audit Database Scope GDR|Se produce siempre que un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emite una instrucción GRANT, DENY o REVOKE para acciones exclusivas de base de datos como la concesión de permisos en una base de datos.|  
 |103|Audit Object GDR Event|Se produce cada vez que un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emite GRANT, DENY, REVOKE para un permiso de objeto.|  
 |104|Audit AddLogin Event|Se produce cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se agrega o se quita un inicio de sesión; por **sp_addlogin** y **sp_droplogin**.|  
-|105|Audit Login GDR Event|Se produce cuando se agrega o se quita un derecho de inicio de sesión de Windows. por **sp_grantlogin**, **sp_revokelogin**y **sp_denylogin**.|  
+|105|Audit Login GDR Event|Se produce cuando se agrega o se quita un derecho de inicio de sesión de Windows. por **sp_grantlogin**, **sp_revokelogin** y **sp_denylogin**.|  
 |106|Audit Login Change Property Event|Se produce cuando se modifica una propiedad de un inicio de sesión, excepto las contraseñas; para **sp_defaultdb** y **sp_defaultlanguage**.|  
 |107|Audit Login Change Password Event|Se produce cuando se cambia una contraseña de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Las contraseñas no se registran.|  
-|108|Audit Add Login to Server Role Event|Se produce cuando se agrega o se quita un inicio de sesión de un rol fijo de servidor; por **sp_addsrvrolemember**y **sp_dropsrvrolemember**.|  
-|109|Audit Add DB User Event|Se produce cuando se agrega o se quita un inicio de sesión como un usuario de base de datos (Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) en una base de datos; por **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**y **sp_dropuser**.|  
-|110|Audit Add Member to DB Role Event|Se produce cuando se agrega o se quita un inicio de sesión como un usuario de base de datos (fijo o definido por el usuario) en una base de datos; por **sp_addrolemember**, **sp_droprolemember**y **sp_changegroup**.|  
+|108|Audit Add Login to Server Role Event|Se produce cuando se agrega o se quita un inicio de sesión de un rol fijo de servidor; por **sp_addsrvrolemember** y **sp_dropsrvrolemember**.|  
+|109|Audit Add DB User Event|Se produce cuando se agrega o se quita un inicio de sesión como un usuario de base de datos (Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) en una base de datos; por **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser** y **sp_dropuser**.|  
+|110|Audit Add Member to DB Role Event|Se produce cuando se agrega o se quita un inicio de sesión como un usuario de base de datos (fijo o definido por el usuario) en una base de datos; por **sp_addrolemember**, **sp_droprolemember** y **sp_changegroup**.|  
 |111|Audit Add Role Event|Se produce cuando se agrega o se quita un inicio de sesión como un usuario de base de datos en una base de datos; para **sp_addrole** y **sp_droprole**.|  
 |112|Audit App Role Change Password Event|Se produce cuando se cambia una contraseña de un rol de aplicación.|  
 |113|Audit Statement Permission Event|Se produce cuando se utiliza un permiso de instrucción (como CREATE TABLE).|  
@@ -237,11 +237,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Guía de plan incorrecta|Indica que SQL Server no pudo generar un plan de ejecución para una consulta o lote que contenía una guía de plan. SQL Server intentó generar un plan de ejecución para esta consulta o lote sin aplicar la guía de plan. Una guía de plan no válida puede ser la causa de este problema. Puede utilizar la función del sistema sys.fn_validate_plan_guide para validar la guía de plan.|  
 |235|Audit Fulltext||  
   
-`[ @columnid = ] column_id` Es el identificador de la columna que se va a agregar para el evento. *column_id* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @columnid = ] column_id` Es el identificador de la columna que se va a agregar para el evento. *column_id* es de **tipo int** y no tiene ningún valor predeterminado.  
   
  En la tabla siguiente se muestra una lista de las columnas que pueden agregarse para un evento.  
   
-|Número de columna|Nombre de columna|Descripción|  
+|Número de columna|Nombre de la columna|Descripción|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|Valor de texto que depende de la clase de eventos que se captura en el seguimiento.|  
 |2|**BinaryData**|Valor binario que depende de la clase de eventos que se captura en el seguimiento.|  
@@ -265,14 +265,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |20|**Gravedad**|Nivel de gravedad de una excepción.|  
 |21|**EventSubClass**|Tipo de la subclase de eventos. Esta columna de datos no se llena para todas las clases de evento.|  
 |22|**ObjectID**|Identificador del objeto asignado por el sistema.|  
-|23|**Success**|Utilización de permisos correcta; se utiliza para la auditoría.<br /><br /> **1** = correcto**0** = error|  
+|23|**Success**|Utilización de permisos correcta; se utiliza para la auditoría.<br /><br /> **1** = correcto **0** = error|  
 |24|**IndexID**|Id. del índice del objeto afectado por el evento. Para determinar el Id. de índice de un objeto, utilice la columna **indid** de la tabla del sistema **sysindexes** .|  
 |25|**IntegerData**|Valor entero que depende de la clase de eventos capturada en el seguimiento.|  
 |26|**ServerName**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ya sea *ServerName* o *nombredeservidor\nombredeinstancia*, de la que se realiza un seguimiento.|  
 |27|**EventClass**|Tipo de clase de evento que se está registrando.|  
 |28|**ObjectType**|Tipo de objeto, por ejemplo: tabla, función o procedimiento almacenado.|  
 |29|**NestLevel**|Nivel de anidamiento en el que se ejecuta este procedimiento almacenado. Vea [@ @NESTLEVEL &#40;TRANSACT-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
-|30|**State**|Estado del servidor, si se produce un error.|  
+|30|**Estado**|Estado del servidor, si se produce un error.|  
 |31|**Error**|Número de error.|  
 |32|**Modo**|Modo de bloqueo del bloqueo adquirido. Esta columna no se rellena con el evento **Lock: released** .|  
 |33|**Handle**|Identificador del objeto al que se hace referencia en el evento.|  
@@ -299,25 +299,25 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|Valor GUID que depende de la clase de evento capturado en el seguimiento.|  
 |55|**IntegerData2**|Valor entero, que depende de la clase de evento capturada en el seguimiento.|  
 |56|**ObjectID2**|Id. de la entidad u objeto relacionado si está disponible.|  
-|57|**Tipo**|Valor entero, que depende de la clase de evento capturada en el seguimiento.|  
+|57|**Type**|Valor entero, que depende de la clase de evento capturada en el seguimiento.|  
 |58|**OwnerID**|Tipo de objeto propietario de un bloqueo. Solo para eventos de bloqueo.|  
 |59|**ParentName**|Nombre del esquema en el que se encuentra el objeto.|  
 |60|**IsSystem**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario.<br /><br /> **1** = sistema<br /><br /> **0** = usuario.|  
 |61|**Offset**|Desplazamiento inicial de la instrucción en el procedimiento almacenado o lote.|  
 |62|**SourceDatabaseID**|Id. de la base de datos en la que se encuentra el origen del objeto.|  
 |63|**SqlHandle**|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a **sys.dm_exec_sql_text()** para recuperar el texto SQL asociado.|  
-|64|**SessionLoginName**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con **inicioDeSesión1** y ejecuta una instrucción como **inicioDeSesión2**, **SessionLoginName** muestra **inicioDeSesión1**y **LoginName** muestra **inicioDeSesión2**. En esta columna de datos se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|  
+|64|**SessionLoginName**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con **inicioDeSesión1** y ejecuta una instrucción como **inicioDeSesión2**, **SessionLoginName** muestra **inicioDeSesión1** y **LoginName** muestra **inicioDeSesión2**. En esta columna de datos se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|  
   
  **[ @on =]** *en*  
- Especifica la activación o desactivación del evento mediante ON (1) u OFF (0). *on es de* **bit**y no tiene ningún valor predeterminado.  
+ Especifica la activación o desactivación del evento mediante ON (1) u OFF (0). *on es de* **bit** y no tiene ningún valor predeterminado.  
   
- Si *on* está establecido en **1**y *column_id* es null, el evento se establece en on y se borran todas las columnas. Si *column_id* no es null, la columna se establece en ON para ese evento.  
+ Si *on* está establecido en **1** y *column_id* es null, el evento se establece en on y se borran todas las columnas. Si *column_id* no es null, la columna se establece en ON para ese evento.  
   
- Si *on* está establecido en **0**y *column_id* es null, el evento se desactiva y se borran todas las columnas. Si *column_id* no es null, la columna se desactiva.  
+ Si *on* está establecido en **0** y *column_id* es null, el evento se desactiva y se borran todas las columnas. Si *column_id* no es null, la columna se desactiva.  
   
- En esta tabla se muestra la interacción entre ** \@ on** y ** \@ columnid**.  
+ En esta tabla se muestra la interacción entre **\@ on** y **\@ columnid**.  
   
-|\@on|\@columnid|Resultado|  
+|\@en|\@columnid|Resultado|  
 |---------|---------------|------------|  
 |ON (**1**)|NULL|El evento está activado.<br /><br /> Se borran todas las columnas.|  
 ||NOT NULL|La columna está activada para el evento especificado.|  
@@ -348,7 +348,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- Los usuarios deben ejecutar **sp_trace_setevent** para cada columna agregada para cada evento. Durante cada ejecución, si ** \@ on** está establecido en **1**, **sp_trace_setevent** agrega el evento especificado a la lista de eventos del seguimiento. Si ** \@ on** está establecido en **0**, **sp_trace_setevent** quita el evento especificado de la lista.  
+ Los usuarios deben ejecutar **sp_trace_setevent** para cada columna agregada para cada evento. Durante cada ejecución, si **\@ on** está establecido en **1**, **sp_trace_setevent** agrega el evento especificado a la lista de eventos del seguimiento. Si **\@ on** está establecido en **0**, **sp_trace_setevent** quita el evento especificado de la lista.  
   
  Los parámetros de todos los procedimientos almacenados de seguimiento de SQL (**sp_trace_xx**) tienen un tipo estricto. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devolverá un error.  
   
@@ -358,7 +358,7 @@ sp_trace_setevent [ @traceid = ] trace_id
  El usuario debe tener permiso ALTER TRACE.  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;&#41;de Transact-SQL ](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [Referencia de las clase de eventos de SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   

@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ca796da60adf0c432b5bbd80065e58563664bc5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6158f79c589e446c2b3c106a1d14fd58715714f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466387"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208649"
 ---
 # <a name="set-collate-command"></a>Comando COLLATE Set
 Especifica una secuencia de intercalación para los campos de caracteres en operaciones posteriores de indización y ordenación.  
@@ -34,7 +34,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  Especifica una secuencia de intercalación. En la tabla siguiente se describen las opciones de la secuencia de intercalación disponibles.  
   
-|Opciones|Language|  
+|Opciones|Idioma|  
 |-------------|--------------|  
 |Holandés|Neerlandés|  
 |GENERAL|Inglés, Francés, alemán, español moderno, Portugués y otros idiomas de Europa occidental|  
@@ -74,5 +74,5 @@ SET COLLATE TO cSequenceName
   
  Por ejemplo, si se crea un índice con SET COLLAte establecido en GENERAL y la opción establecer intercalación se cambia posteriormente a español, el índice conserva la secuencia de intercalación GENERAL.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cuadro de diálogo de configuración de Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - GetPathLocator
 - GetPathLocator_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 155921b08c936bfb758f60c65b4ad737546141f5
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: fbdf65d45374fe9c85adaade284ac6a8aab65dbf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096365"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207461"
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ GetPathLocator(filenamespace_path)
   
  Cuando la base de datos pertenece a un grupo de disponibilidad de Always On, la función **función getpathlocator** acepta el nombre de red virtual (VNN) o el nombre de equipo.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **hierarchyid**  
   
 ## <a name="general-remarks"></a>Notas generales  

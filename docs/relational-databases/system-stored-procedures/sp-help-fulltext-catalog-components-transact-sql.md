@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_fulltext_catalog_components_TSQL
 - sp_help_fulltext_catalog_components
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2884cda986a99f23c88c71c8960d25a467de0663
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6a3854205649215de979c2421c2a8e506e826245
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548047"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208909"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_help_fulltext_catalog_components
 |-----------------|---------------|-----------------|  
 |**nombre del catálogo de texto completo**|**int**|Nombre del catálogo de texto completo.|  
 |**identificador del catálogo de texto completo**|**sysname**|Id. del catálogo de texto completo.|  
-|**componenttype**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> Filter<br /><br /> Controlador de protocolo<br /><br /> Separador de palabras|  
+|**componenttype**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> Filtrar<br /><br /> Controlador de protocolo<br /><br /> Separador de palabras|  
 |**componentName**|**sysname**|Nombre del componente.|  
 |**CLSID**|**uniqueidentifier**|Identificador de clase del componente.|  
 |**FullPath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el autor de la llamada no es miembro del rol fijo de servidor **ServerAdmin** .|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLCreateDataSource
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb65e0906e7b69666dd04824f9c4d0819837d2b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: feca3e6c135e4dba441a20b1fa458f990b437fde
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461217"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206109"
 ---
 # <a name="sqlcreatedatasource-function"></a>Función SQLCreateDataSource
 **Conformidad**  
@@ -54,7 +54,7 @@ BOOL SQLCreateDataSource(
  **SQLCreateDataSource** devuelve true si se crea el origen de datos. De lo contrario, devuelve FALSE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLCreateDataSource** devuelve false, se puede obtener un valor de * \* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLCreateDataSource** devuelve false, se puede obtener un valor de *\* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de *\* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
@@ -92,7 +92,7 @@ BOOL SQLCreateDataSource(
   
  El valor predeterminado para la opción **comprobar esta conexión** es true. Este valor predeterminado se aplica tanto si esta página del asistente está activada como si no. Si se hace clic en **Aceptar** , la cadena especificada en el cuadro de texto y el valor de la opción **comprobar esta conexión** se almacenan en caché. (Si se hace clic en el botón **cerrar** o en **Cancelar** , se perderá toda la información específica del controlador que se ha introducido recientemente, ya que la cadena especificada en el cuadro de texto y el valor de la opción **comprobar esta conexión** no se almacenan en caché).  
   
- Si se seleccionó **origen de datos de archivo** en la primera página del asistente, después de seleccionar un controlador y de especificar los valores de la palabra clave en la página avanzadas del asistente, se pide al usuario que escriba un nombre de archivo. Haga clic en **examinar** para buscar un nombre de archivo, en cuyo caso el directorio predeterminado del cuadro **examinar** se especifica mediante una combinación de la ruta de acceso especificada por CommonFileDir en HKEY_LOCAL_MACHINE \software\microsoft\windows\currentversion y "ODBC\DataSources". (Si CommonFileDir era "C:\Archivos de Programa\archivos files", el directorio predeterminado sería "C:\Archivos de Programa\archivos Files\ODBC\Data sources").  
+ Si se seleccionó **origen de datos de archivo** en la primera página del asistente, después de seleccionar un controlador y de especificar los valores de la palabra clave en la página avanzadas del asistente, se pide al usuario que escriba un nombre de archivo. Haga clic en **examinar** para buscar un nombre de archivo, en cuyo caso el directorio predeterminado del cuadro **examinar** se especifica mediante una combinación de la ruta de acceso especificada por CommonFileDir en HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion y "ODBC\DataSources". (Si CommonFileDir era "C:\Archivos de Programa\archivos files", el directorio predeterminado sería "C:\Archivos de Programa\archivos Files\ODBC\Data sources").  
   
  Cuando se especifica un nombre de archivo y se hace clic en **siguiente** , se comprueba la validez del nombre de archivo especificado para las reglas de nomenclatura de archivos estándar del sistema operativo. Si el nombre de archivo no es válido, un cuadro de mensaje de error notifica al usuario que se especificó un nombre de archivo no válido. Después de que el usuario confirme el cuadro de mensaje, el foco se devolverá a la página del asistente en la que se escribe el nombre de archivo. Si el nombre de archivo es válido, se muestra una página del asistente que muestra los pares palabra clave-valor seleccionados para su revisión, tal como se muestra en la siguiente ilustración.  
   

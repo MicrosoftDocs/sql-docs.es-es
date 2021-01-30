@@ -1,13 +1,13 @@
 ---
 description: 'C a SQL: Intervalos de día y hora'
-title: 'C a SQL: intervalos de fecha y hora | Microsoft Docs'
+title: 'C a SQL: intervalos de Day-Time | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - day-time intervals [ODBC]
 - data conversions from C to SQL types [ODBC], day-time intervals
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aba5bb40a34f100cf33d5c07fb6e796b227904dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e207a7533a0f09360925f6123e8797bdabecc21b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499998"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207826"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>C a SQL: Intervalos de día y hora
 Los identificadores de los tipos de datos de ODBC C Interval de fecha y hora son:  

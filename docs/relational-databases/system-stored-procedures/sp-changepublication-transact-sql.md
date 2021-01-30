@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changepublication
 - sp_changepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6e29fade73adba6cb82b6d4ac22cae122d4c60cd
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: a0e183d97b17936d5d7e1b414c2d492910a8a8b3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169448"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207073"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  Esta tabla describe las propiedades de la publicación que se pueden cambiar y las restricciones de los valores de esas propiedades.  
   
-|Propiedad|Valor|Descripción|  
+|Propiedad|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Se pueden crear suscripciones anónimas para la publicación dada y *immediate_sync* también deben ser **verdaderas**. No se pueden cambiar para publicaciones punto a punto.|  
 ||**false**|No se pueden crear suscripciones anónimas para la publicación indicada. No se pueden cambiar para publicaciones punto a punto.|  
@@ -134,7 +134,7 @@ Vea en la sección de Notas las propiedades que, si se cambian, requieren que se
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_changepublication** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
  Después de cambiar cualquiera de las siguientes propiedades, debe generar una nueva instantánea y debe especificar el valor **1** para el parámetro *force_invalidate_snapshot* .  

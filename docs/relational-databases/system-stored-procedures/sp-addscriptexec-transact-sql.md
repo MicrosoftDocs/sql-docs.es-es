@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addscriptexec
 - sp_addscriptexec_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 81d3b8ac9e8eda12ed27099fed5623d0fd3da489
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6349479d4f3ce3097771516640b0eec258e32f5b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536770"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207156"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,17 +41,17 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @scriptfile = ] 'scriptfile'` Es la ruta de acceso completa al archivo de script de SQL. *scriptfile* es de tipo **nvarchar (4000)** y no tiene ningún valor predeterminado.  
   
-`[ @skiperror = ] 'skiperror'` Indica si el Agente de distribución o Agente de mezcla debe detenerse cuando se produce un error durante el procesamiento del script. *SkipError* es de **bit**y su valor predeterminado es 0.  
+`[ @skiperror = ] 'skiperror'` Indica si el Agente de distribución o Agente de mezcla debe detenerse cuando se produce un error durante el procesamiento del script. *SkipError* es de **bit** y su valor predeterminado es 0.  
   
  **0** = el agente se detendrá.  
   
  **1** = el agente continúa el script y omite el error.  
   
-`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  no se debe usar el *publicador* al publicar desde un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_add_profile_sp_TSQL
 - sysmail_add_profile_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 904a6898bf3791a98d64228b85939275ad5c8548
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4eeb85dee2493a07b1476a25fc90f23c5ad42aeb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547262"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207975"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,14 +42,14 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_name = ] 'profile\_name'` Nombre del nuevo perfil. *profile_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @profile_name = ] 'profile\_name'` Nombre del nuevo perfil. *profile_name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
  
    > [!NOTE]
    > Se debe llamar al nombre de perfil que usa Azure SQL Instancia administrada Agente SQL **AzureManagedInstance_dbmail_profile**
   
 `[ @description = ] 'description'` Descripción opcional del nuevo perfil. la *Descripción* es de tipo **nvarchar (256)** y no tiene ningún valor predeterminado.  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT` Devuelve el identificador del nuevo perfil. *new_profile_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @profile_id = ] _new\_profile\_id OUTPUT` Devuelve el identificador del nuevo perfil. *new_profile_id* es de **tipo int** y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

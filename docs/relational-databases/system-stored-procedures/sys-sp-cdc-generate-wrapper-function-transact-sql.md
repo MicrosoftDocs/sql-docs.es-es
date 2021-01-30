@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_generate_wrapper_function (Transact-SQL)
-title: Sys. sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_generate_wrapper_function_TSQL
 - sp_cdc_generate_wrapper_function
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 069c0cb5eab377d0c2cd4bc92b68d7071f56681a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9f6dc9038b4f23b7e38e69555ceed06fab90ba92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540480"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205978"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de columna|Descripción|  
+|Nombre de la columna|Tipo de columna|Descripción|  
 |-----------------|-----------------|-----------------|  
 |**function_name**|**nvarchar (145)**|Nombre de la función generada.|  
 |**create_script**|**nvarchar(max)**|Es el script que crea la función de contenedor de la instancia de captura.|  

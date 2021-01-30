@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addpublication_TSQL
 - sp_addpublication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9aa65ff9b5b9c14441ac555d40788e92082f01c5
-ms.sourcegitcommit: 7791bd2ba339edc5cd2078a6537c8f6bfe72a19b
+ms.openlocfilehash: de6ba893e44d7bfddda4325cc15c1c4d3f875a0c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98564448"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206693"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -317,7 +317,7 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_addpublication** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
  Si existen varias publicaciones que publican el mismo objeto de base de datos, solo las publicaciones con un valor *replicate_ddl* de **1** REPLICARÁN las instrucciones ALTER TABLE, Alter View, ALTER PROCEDURE, ALTER FUNCTION y Alter Trigger DDL. Sin embargo, todas las publicaciones que publiquen la columna quitada replicarán una instrucción ALTER TABLE DROP COLUMN de DDL.  

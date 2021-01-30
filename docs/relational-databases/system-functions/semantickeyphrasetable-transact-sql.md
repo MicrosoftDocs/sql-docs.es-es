@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - semantickeyphrasetable
 - semantickeyphrasetable_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8026760d93132e3a18b51145bc1802e416bc0934
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05a3436512d37a2a18bbfd8e393385e01cb53bf8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464825"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207348"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,10 +57,10 @@ SEMANTICKEYPHRASETABLE
  **lista_de_columnas**  
  Indica varias columnas, separadas por comas y escritas entre paréntesis. Todas las columnas deben tener habilitada la indización semántica.  
   
- **\***  
+ **\** _  
  Indica que se incluyen todas las columnas que tienen la indización semántica habilitada.  
   
- **source_key**  
+ _ *source_key**  
  Clave única de la fila, para solicitar los resultados de una fila concreta.  
   
  La clave se convierte implícitamente al tipo de la clave única de texto completo en la tabla de origen siempre que sea posible. La clave se puede especificar como una constante o como una variable, pero no puede ser una expresión ni el resultado de una subconsulta escalar. Si se omite source_key, se devuelven resultados para todas las filas.  
@@ -71,9 +71,9 @@ SEMANTICKEYPHRASETABLE
 |Column_name|Tipo|Descripción|  
 |------------------|----------|-----------------|  
 |**column_id**|**int**|IDENTIFICADOR de la columna de la que se ha extraído la frase clave actual y se ha indexado.<br /><br /> Vea las funciones COL_NAME y COLUMNPROPERTY para obtener información detallada sobre cómo recuperar el nombre de columna desde column_id y viceversa.|  
-|**document_key**|**\***<br /><br /> Esta clave coincide con el tipo de la clave única de la tabla de origen.|Valor de clave único del documento o fila de los que se indizó la palabra clave actual.|  
-|**frase clave**|**NVARCHAR**|La frase clave encontrada en la columna identificada por column_id y asociada al documento especificado por document_key.|  
-|**carácter**|**IMPUESTOS**|Valor relativo de esta frase clave en su relación con todas las demás frases clave del mismo documento de la columna indizada.<br /><br /> El valor es un valor fraccionario decimal en el intervalo de [0.0, 1.0] donde una puntuación superior representa una ponderación mayor y 1.0 es la puntuación perfecta.|  
+|**document_key**|**\** _<br /><br /> Esta clave coincide con el tipo de la clave única de la tabla de origen.|Valor de clave único del documento o fila de los que se indizó la palabra clave actual.|  
+|_ *frase clave**|**NVARCHAR**|La frase clave encontrada en la columna identificada por column_id y asociada al documento especificado por document_key.|  
+|**score**|**REAL**|Valor relativo de esta frase clave en su relación con todas las demás frases clave del mismo documento de la columna indizada.<br /><br /> El valor es un valor fraccionario decimal en el intervalo de [0.0, 1.0] donde una puntuación superior representa una ponderación mayor y 1.0 es la puntuación perfecta.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Para obtener más información, vea [Buscar frases clave en documentos con la búsqueda semántica](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md).  

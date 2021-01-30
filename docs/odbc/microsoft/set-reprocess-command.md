@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SET REPROCESS command [ODBC]
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8daeebd38f295d437dc02c1c34126c30f6426b68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b45188db00eda553bb3443d791d889a4d8c31a77
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421829"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208602"
 ---
 # <a name="set-reprocess-command"></a>CONJUNTO de comandos de volver a procesar
 Especifica cuántas veces o cuánto tiempo se bloquea un archivo o registro después de un intento de bloqueo incorrecto.  
@@ -40,7 +40,7 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
  Si una rutina ON ERROR está en vigor y si los intentos de un comando para bloquear el registro o el archivo no son correctos, se ejecuta la rutina ON ERROR. Sin embargo, si una función intenta el bloqueo, no se ejecuta una rutina ON ERROR y la función devuelve false (. F.).  
   
- Si no está en vigor una rutina ON ERROR, un comando intenta bloquear el registro o el archivo y no se puede colocar el bloqueo, se genera un error. Si una función intenta colocar el bloqueo, la alerta no se muestra y la función devuelve false (. F.).  
+ Si no está en vigor una rutina ON ERROR, un comando intenta bloquear el registro o el archivo y no se puede colocar el bloqueo, se genera un error. Si una función intenta colocar el bloqueo, la alerta no se muestra y la función devuelve false (. F).  
   
  Si *nAttempts* es 0 (el valor predeterminado) y se emite un comando o una función que intenta bloquear un registro o un archivo, Visual FoxPro intenta bloquear el registro o el archivo de forma indefinida. Si el registro o el archivo están disponibles para bloquear mientras espera, se coloca el bloqueo y se borra el mensaje del sistema. Si una función ha intentado colocar el bloqueo, la función devuelve true (. T.).  
   

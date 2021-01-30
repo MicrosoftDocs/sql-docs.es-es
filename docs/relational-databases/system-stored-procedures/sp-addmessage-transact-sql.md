@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmessage
 - sp_addmessage_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 306fc9b2316d599380b3a6e781d4f8a1ef646626
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f9bdbbac913643bd0d44ba7e45b07c8bc3e09789
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89529299"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209376"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 `[ @lang = ] 'language'` Es el idioma de este mensaje. *Language* es de **tipo sysname y su** valor predeterminado es NULL. Dado que se pueden instalar varios idiomas en el mismo servidor, *idioma* especifica el idioma en el que se escribe cada mensaje. Cuando se omite *Language* , el idioma es el idioma predeterminado de la sesión.  
   
-`[ @with_log = ] { 'TRUE' | 'FALSE' }` Indica si el mensaje se debe escribir en el registro de aplicación de Windows cuando se produce. ** \@ with_log** es de tipo **VARCHAR (5)** y su valor predeterminado es false. Si es TRUE, el error siempre se escribe en el registro de aplicación Windows. Si es FALSE, el error no siempre se escribe en el registro de aplicación Windows, pero se puede escribir, dependiendo de cómo se haya producido el error. Solo los miembros del rol de servidor **sysadmin** pueden usar esta opción.  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }` Indica si el mensaje se debe escribir en el registro de aplicación de Windows cuando se produce. **\@ with_log** es de tipo **VARCHAR (5)** y su valor predeterminado es false. Si es TRUE, el error siempre se escribe en el registro de aplicación Windows. Si es FALSE, el error no siempre se escribe en el registro de aplicación Windows, pero se puede escribir, dependiendo de cómo se haya producido el error. Solo los miembros del rol de servidor **sysadmin** pueden usar esta opción.  
   
 > [!NOTE]  
 >  Si se escribe un mensaje en el registro de aplicación Windows, también se escribe en el archivo de registro de errores del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

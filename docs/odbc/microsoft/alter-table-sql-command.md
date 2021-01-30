@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c72d03abff792ff103bf009cd12b718c74bd497d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 186647c40517c5ecf77a55e6bbc08155c98ffed9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483708"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205759"
 ---
 # <a name="alter-table---sql-command"></a>Modificar tabla - comando SQL
 Modifica mediante programación la estructura de una tabla.  
@@ -151,13 +151,13 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  QUITAR COMPROBACIÓN  
  Quita la regla de validación de la tabla.  
   
- Agregar clave principal *eExpression3*etiqueta *TagName2*  
+ Agregar clave principal *eExpression3* etiqueta *TagName2*  
  Agrega un índice principal a la tabla. *eExpression3* especifica la expresión de clave de índice principal y *TagName2* especifica el nombre de la etiqueta de índice principal. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres. Si se omite la etiqueta *TagName2* y *eExpression3* es un campo único, la etiqueta del índice principal tiene el mismo nombre que el campo especificado en *eExpression3*.  
   
  QUITAR CLAVE PRINCIPAL  
  Quita el índice principal y su etiqueta de índice. Dado que una tabla solo puede tener una clave principal, no es necesario especificar el nombre de la clave principal. Al quitar el índice principal, también se eliminan todas las relaciones persistentes basadas en la clave principal.  
   
- AGREGAR *EEXPRESSION4*único [tag *TagName3*]  
+ AGREGAR *EEXPRESSION4* único [tag *TagName3*]  
  Agrega un índice candidato a la tabla. *eExpression4* especifica la expresión de clave de índice candidata y *TagName3* especifica el nombre de la etiqueta de índice candidata. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres. Si omite la etiqueta *TagName3* y si *eExpression4* es un campo único, la etiqueta del índice candidato tiene el mismo nombre que el campo especificado en *eExpression4*.  
   
  DROP UNIQUE TAG *TagName4*  
@@ -172,7 +172,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  QUITAR etiqueta de clave externa *TagName6*[Guardar]  
  Elimina una clave externa cuya etiqueta de índice es *TagName6*. Si omite SAVE, la etiqueta de índice se elimina del índice estructural. Incluya SAVE para evitar la eliminación de la etiqueta de índice del índice estructural.  
   
- Cambiar el nombre de la columna *FieldName4*a *FieldName5*  
+ Cambiar el nombre de la columna *FieldName4* a *FieldName5*  
  Permite cambiar el nombre de un campo de la tabla. *FieldName4* especifica el nombre del campo al que se cambia el nombre. *FieldName5* especifica el nuevo nombre del campo.  
   
 > [!CAUTION]  
@@ -192,6 +192,6 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Si la tabla que se modifica está en una base de datos, ALTER TABLE-SQL requiere el uso exclusivo de la base de datos. Para abrir una base de datos para su uso exclusivo, incluya EXCLUSIVe en OPEN DATABASE.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Comando CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [Comando de índice](../../odbc/microsoft/index-command.md)

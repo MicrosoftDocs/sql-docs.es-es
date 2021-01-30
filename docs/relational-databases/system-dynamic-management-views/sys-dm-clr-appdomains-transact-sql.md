@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_clr_appdomains
 - sys.dm_clr_appdomains
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ae934fc3b9d8f7664e2542450ee1456298548c85
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7579a0648bbc5eee90512bb70dfd667728b56834
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097785"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208111"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,13 +59,13 @@ ms.locfileid: "98097785"
   
 ## <a name="appdomain-initialization"></a>Inicialización de AppDomain  
   
-|State|Descripción|  
+|Estado|Descripción|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|Se está creando el **AppDomain** .|  
   
 ## <a name="appdomain-usage"></a>Uso de AppDomain  
   
-|State|Descripción|  
+|Estado|Descripción|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|El **AppDomain** en tiempo de ejecución está listo para que lo usen varios usuarios.|  
 |E_APPDOMAIN_SINGLEUSER|**AppDomain** está listo para su uso en operaciones DDL. Se diferencian de E_APPDOMAIN_SHARED en que AppDomains compartidos se usan para ejecuciones de integración CLR en contraposición con operaciones de DDL. Dichos AppDomains están aislados de las operaciones simultáneas.|  
@@ -73,7 +73,7 @@ ms.locfileid: "98097785"
   
 ## <a name="appdomain-cleanup"></a>Limpieza de AppDomain  
   
-|State|Descripción|  
+|Estado|Descripción|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha solicitado que CLR Descargue el **AppDomain**, normalmente porque se ha modificado o quitado el ensamblado que contiene los objetos de base de datos administrados.|  
 |E_APPDOMAIN_UNLOADED|CLR ha descargado el **AppDomain**. Esto suele ser el resultado de un procedimiento de extensión debido a **ThreadAbort**, **OutOfMemory**, o a una excepción no controlada en el código de usuario.|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergearticle
 - sp_dropmergearticle_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7c91fe7b1cc57630565fae398fc8cbc798df314a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 58759010972cd8bed8f32f909d0b326f8b964a13
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536543"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208268"
 ---
 # <a name="sp_dropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +44,11 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación de la que se va a quitar un artículo. *Publication*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación de la que se va a quitar un artículo. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre del artículo que se va a quitar de la publicación especificada. *article*es de **tipo sysname**y no tiene ningún valor predeterminado. Si es **All**, se quitan todos los artículos existentes en la publicación de combinación especificada. Aunque *article* sea **All**, la publicación se debe quitar de forma independiente del artículo.  
+`[ @article = ] 'article'` Es el nombre del artículo que se va a quitar de la publicación especificada. *article* es de **tipo sysname** y no tiene ningún valor predeterminado. Si es **All**, se quitan todos los artículos existentes en la publicación de combinación especificada. Aunque *article* sea **All**, la publicación se debe quitar de forma independiente del artículo.  
   
-`[ @ignore_distributor = ] ignore_distributor` Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es de **bit**y su valor predeterminado es **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es de **bit** y su valor predeterminado es **0**.  
   
 `[ @reserved = ] reserved` Está reservado para uso futuro. *Reserved* es de tipo **nvarchar (20)** y su valor predeterminado es NULL.  
   
@@ -58,7 +58,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
   
  **1** significa que los cambios en el artículo de mezcla pueden hacer que la instantánea no sea válida y, en ese caso, el valor **1** concede permiso para que se produzca la nueva instantánea.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Confirma que para quitar el artículo es necesario reinicializar las suscripciones existentes. *force_reinit_subscription* es de **bit**y su valor predeterminado es **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Confirma que para quitar el artículo es necesario reinicializar las suscripciones existentes. *force_reinit_subscription* es de **bit** y su valor predeterminado es **0**.  
   
  **0** especifica que al quitar el artículo no se reinicializará la suscripción.  
   

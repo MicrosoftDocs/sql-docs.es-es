@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - second intervals [ODBC]
 - data types [ODBC], interval data types
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5b54996c2f2897e47e05088b1985d190acafaad3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41418b59d61b184717c4a3654491154221b9a791
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429677"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207137"
 ---
 # <a name="interval-data-types"></a>Tipo de datos de intervalo
 Un intervalo se define como la diferencia entre dos fechas y horas. Los intervalos se expresan de una de estas dos maneras diferentes. Uno es un intervalo del *año* que expresa los intervalos en términos de años y un número entero de meses. El otro es un intervalo de *tiempo* que expresa los intervalos en términos de días, minutos y segundos. Estos dos tipos de intervalos son distintos y no se pueden mezclar, porque los meses pueden tener un número variable de días.  
@@ -42,21 +42,21 @@ Un intervalo se define como la diferencia entre dos fechas y horas. Los interval
   
  Hay 13 tipos de datos SQL de intervalo y 13 tipos de datos de intervalo C. Cada uno de los tipos de datos de intervalo C utiliza la misma estructura, SQL_INTERVAL_STRUCT, para contener los datos de intervalo. (Para obtener más información, vea la sección siguiente, [estructura de intervalo de C](../../../odbc/reference/appendixes/c-interval-structure.md)). Para obtener más información sobre los tipos de datos de SQL, vea [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md); para obtener más información sobre los tipos de datos de C, vea [tipos de datos de c](../../../odbc/reference/appendixes/c-data-types.md).  
   
-|Identificador de tipo|Clase|Descripción|  
+|Identificador de tipo|Class|Descripción|  
 |---------------------|-----------|-----------------|  
-|MONTH|Año-mes|Número de meses entre dos fechas.|  
-|YEAR|Año-mes|Número de años entre dos fechas.|  
-|YEAR_TO_MONTH|Año-mes|Número de años y meses entre dos fechas.|  
-|DAY|Fecha y hora|Número de días entre dos fechas.|  
-|HOUR|Fecha y hora|Número de horas entre dos fechas/horas.|  
-|MINUTE|Fecha y hora|Número de minutos entre dos fechas/horas.|  
-|SECOND|Fecha y hora|Número de segundos entre dos fechas/horas.|  
-|DAY_TO_HOUR|Fecha y hora|Número de días/horas entre dos fechas y horas.|  
-|DAY_TO_MINUTE|Fecha y hora|Número de días/horas/minutos entre dos fechas y horas.|  
-|DAY_TO_SECOND|Fecha y hora|Número de días/horas/minutos/segundos entre dos fechas/horas.|  
-|HOUR_TO_MINUTE|Fecha y hora|Número de horas/minutos entre dos fechas/horas.|  
-|HOUR_TO_SECOND|Fecha y hora|Número de horas/minutos/segundos entre dos fechas/horas.|  
-|MINUTE_TO_SECOND|Fecha y hora|Número de minutos/segundos entre dos fechas/horas.|  
+|MONTH|Year-Month|Número de meses entre dos fechas.|  
+|YEAR|Year-Month|Número de años entre dos fechas.|  
+|YEAR_TO_MONTH|Year-Month|Número de años y meses entre dos fechas.|  
+|DAY|Day-Time|Número de días entre dos fechas.|  
+|HOUR|Day-Time|Número de horas entre dos fechas/horas.|  
+|MINUTE|Day-Time|Número de minutos entre dos fechas/horas.|  
+|SECOND|Day-Time|Número de segundos entre dos fechas/horas.|  
+|DAY_TO_HOUR|Day-Time|Número de días/horas entre dos fechas y horas.|  
+|DAY_TO_MINUTE|Day-Time|Número de días/horas/minutos entre dos fechas y horas.|  
+|DAY_TO_SECOND|Day-Time|Número de días/horas/minutos/segundos entre dos fechas/horas.|  
+|HOUR_TO_MINUTE|Day-Time|Número de horas/minutos entre dos fechas/horas.|  
+|HOUR_TO_SECOND|Day-Time|Número de horas/minutos/segundos entre dos fechas/horas.|  
+|MINUTE_TO_SECOND|Day-Time|Número de minutos/segundos entre dos fechas/horas.|  
   
  Esta sección contiene los temas siguientes.  
   
