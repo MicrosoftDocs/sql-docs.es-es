@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsubscription_properties
 - sp_helpsubscription_properties_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4bcbd2ec90018561870d6159edb41105119ebc69
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 681a72a604af765311bb10833cc17842819e97f1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547965"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99103290"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,15 +41,15 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información sobre todos los publicadores.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve información sobre todos los publicadores.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información sobre todas las bases de datos del publicador.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve información sobre todas las bases de datos del publicador.  
   
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información sobre todas las publicaciones.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su** valor predeterminado es **%** , que devuelve información sobre todas las publicaciones.  
   
-`[ @publication_type = ] publication_type` Es el tipo de publicación. *publication_type* es de **tipo int**y su valor predeterminado es NULL. Si se proporciona, *publication_type* debe ser uno de los siguientes valores:  
+`[ @publication_type = ] publication_type` Es el tipo de publicación. *publication_type* es de **tipo int** y su valor predeterminado es NULL. Si se proporciona, *publication_type* debe ser uno de los siguientes valores:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Publicación transaccional|  
 |**1**|Publicación de instantáneas|  

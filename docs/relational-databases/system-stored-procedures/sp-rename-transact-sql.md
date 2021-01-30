@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_rename_TSQL
 - sp_rename
@@ -22,12 +22,12 @@ ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: c180d679075076168d3be510c22d0775ebc7af30
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a9aabbb180e01dcfec95d87861fc43dd0a1aca51
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478906"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99125947"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE [sql-asdb-asa](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -86,7 +86,7 @@ En sp_rename (versión preliminar) de [!INCLUDE[ssazuresynapse](../../includes/s
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 **Se aplica a** SQL Server (todas las versiones compatibles) y Azure SQL Database  
  sp_rename cambia automáticamente el nombre del índice asociado cuando se cambia el nombre de una restricción PRIMARY KEY o UNIQUE. Si un índice cuyo nombre se ha cambiado está enlazado a una restricción PRIMARY KEY, sp_rename también cambia automáticamente el nombre de esta restricción.  
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_revokelogin
 - xp_revokelogin_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 040560b9d69ecec0388109eaf4c032ac24a60688
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1d7c297c0598dbc6c12239673e09b831146266e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419209"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99123716"
 ---
 # <a name="xp_revokelogin-transact-sql"></a>xp_revokelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'` Es el nombre del usuario o grupo de Windows del que se va a revocar el acceso. el *Inicio de sesión* debe incluir el nombre de dominio, por ejemplo **[ADVWKS\sylvester1]**. *login* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @loginame = ] 'login'` Es el nombre del usuario o grupo de Windows del que se va a revocar el acceso. el *Inicio de sesión* debe incluir el nombre de dominio, por ejemplo **[ADVWKS\sylvester1]**. *login* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -55,9 +55,9 @@ xp_revokelogin {[@loginame=] 'login'}
  Requiere el permiso ALTER ANY LOGIN en el servidor.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_denylogin &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [sp_grantlogin &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_revokelogin &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados extendidos generales &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_loginconfig &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   

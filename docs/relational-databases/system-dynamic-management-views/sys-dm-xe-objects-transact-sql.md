@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_xe_objects
 - sys.dm_xe_objects
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6e54e02ec730fae0f57a8be8976d7fa694824bd0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 9e797a7010a23bfc8b13673d1efa1a90d849e6ef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098885"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99129338"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "98098885"
  |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|El nombre del objeto. el nombre es único dentro de un paquete para un tipo de objeto específico. No admite valores NULL.|  
-|object_type|**nvarchar(60)**|Tipo del objeto. object_type es uno de los siguientes:<br /><br /> event<br /><br /> acción<br /><br /> Destino<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> No admite valores NULL.|  
+|object_type|**nvarchar(60)**|Tipo del objeto. object_type es uno de los siguientes:<br /><br /> event<br /><br /> action<br /><br /> Destino<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> tipo<br /><br /> No admite valores NULL.|  
 |package_guid|**uniqueidentifier**|GUID del paquete que expone esta acción. Hay una relación de varios a uno con sys.dm_xe_packages.package_id. No admite valores NULL.|  
 |description|**nvarchar(256)**|Descripción de la acción. la descripción la establece el autor del paquete. No admite valores NULL.|  
 |capabilities|**int**|Mapa de bits que describe las capacidades del objeto. Acepta valores NULL.|  

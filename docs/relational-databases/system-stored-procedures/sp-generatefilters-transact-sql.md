@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_generatefilters
 - sp_generatefilters_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 15be33b6ce5ffdf30dc46952f88bf861101ffa45
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b77633f8ef226adcd27084060f9597f43ba48408
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543396"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99106507"
 ---
 # <a name="sp_generatefilters-transact-sql"></a>sp_generatefilters (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ sp_generatefilters [ @publication =] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a filtrar. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a filtrar. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

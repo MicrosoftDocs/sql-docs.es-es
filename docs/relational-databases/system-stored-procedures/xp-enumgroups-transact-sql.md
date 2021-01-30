@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_enumgroups_TSQL
 - xp_enumgroups
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 59535a5dd2d5df7b5d165e58a30358001378d360
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a0319158b7e2627bac7cd67a8f15e10dc4694b51
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551100"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99124074"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ xp_enumgroups [ 'domain_name' ]
   
 ## <a name="arguments"></a>Argumentos  
  **'** *domain_name* **'**  
- Es el nombre del dominio de Windows del que se va a enumerar la lista de grupos globales. *domain_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+ Es el nombre del dominio de Windows del que se va a enumerar la lista de grupos globales. *domain_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

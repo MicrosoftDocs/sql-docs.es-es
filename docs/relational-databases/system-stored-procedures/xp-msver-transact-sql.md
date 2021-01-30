@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_msver_TSQL
 - xp_msver
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a736447de4215d7f9c630036ae13872ff9d58bff
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8a23619f5a1bf12ddcde718fc95db484f6d3cf6e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544724"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99123846"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,10 +47,10 @@ xp_msver [ optname ]
 |-------------------------|-----------------|  
 |**ProductName**|Nombre del producto; por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**ProductVersion**|Versión del producto.|  
-|**Lenguaje**|Versión del idioma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Idioma**|Versión del idioma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Plataforma**|Nombre del sistema operativo, nombre del fabricante y nombre de la familia de circuitos integrados del equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Comentarios**|Información diversa acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Compañía**|Nombre de la compañía que produce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation.|  
+|**CompanyName**|Nombre de la compañía que produce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation.|  
 |**FileDescription**|Sistema operativo.|  
 |**FileVersion**|Versión del ejecutable de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**InternalName**|Nombre interno de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; por ejemplo, SQLSERVR.|  

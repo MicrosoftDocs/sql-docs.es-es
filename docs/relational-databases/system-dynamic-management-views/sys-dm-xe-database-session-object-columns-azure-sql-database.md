@@ -6,18 +6,18 @@ ms.date: 06/10/2016
 ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0831d3c4f6634e1b7c5ae2568d853567eeaf32b0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: b6e54ba259dcb6775b6107560a058053f370b851
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093955"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99130972"
 ---
 # <a name="sysdm_xe_database_session_object_columns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

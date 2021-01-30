@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_cmdshell
 - xp_cmdshell_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7f545d556069e31e349c0a8badf0fd9d95e6dcef
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 73bea06c7919c40b1080458f3e6982d2c10ebe47
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257612"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99125006"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ GO
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El proceso de Windows generado por **xp_cmdshell** tiene los mismos derechos de seguridad que la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de servicio.  
  
 > [!IMPORTANT]
@@ -90,7 +90,7 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
   
  Cuando se habilita por primera vez, **xp_cmdshell** requiere el permiso Control Server para ejecutarse y el proceso de Windows creado por **xp_cmdshell** tiene el mismo contexto de seguridad que la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de servicio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]A menudo, la cuenta de servicio tiene más permisos de los necesarios para el trabajo realizado por el proceso creado por **xp_cmdshell**. Para mejorar la seguridad, el acceso a **xp_cmdshell** debe estar restringido a los usuarios con privilegios elevados.  
   
- Para permitir que los usuarios que no son administradores puedan usar **xp_cmdshell**y permitir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que cree procesos secundarios con el token de seguridad de una cuenta con menos privilegios, siga estos pasos:  
+ Para permitir que los usuarios que no son administradores puedan usar **xp_cmdshell** y permitir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que cree procesos secundarios con el token de seguridad de una cuenta con menos privilegios, siga estos pasos:  
   
 1.  Cree y personalice una cuenta de usuario local de Windows o una cuenta de dominio con los permisos mínimos que los procesos requieran.  
   
@@ -99,7 +99,7 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
     > [!NOTE]  
     >  También puede configurar esta cuenta de proxy mediante haciendo clic [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] con el botón secundario en **propiedades** en el nombre del servidor en explorador de objetos y en la pestaña **seguridad** de la sección **cuenta de proxy del servidor** .  
   
-3.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , mediante la base de datos maestra, ejecute la `GRANT exec ON xp_cmdshell TO N'<some_user>';` instrucción para proporcionar a los usuarios que no son**administradores** de bases de datos específicos la capacidad de ejecutar **xp_cmdshell**. El usuario especificado debe existir en la base de datos maestra.  
+3.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , mediante la base de datos maestra, ejecute la `GRANT exec ON xp_cmdshell TO N'<some_user>';` instrucción para proporcionar a los usuarios que no son **administradores** de bases de datos específicos la capacidad de ejecutar **xp_cmdshell**. El usuario especificado debe existir en la base de datos maestra.  
   
  Ahora, los usuarios que no son administradores pueden iniciar procesos del sistema operativo con **xp_cmdshell** y esos procesos se ejecutan con los permisos de la cuenta de proxy que ha configurado. Los usuarios con el permiso CONTROL SERVER (miembros del rol fijo de servidor **sysadmin** ) seguirán recibiendo los permisos de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de servicio para los procesos secundarios iniciados por **xp_cmdshell**.  
   
