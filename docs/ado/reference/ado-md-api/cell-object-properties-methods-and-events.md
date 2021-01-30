@@ -7,18 +7,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Cell object [ADO MD], members
 ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec6801a03d1424f1df3ff09b0fc407720c826117
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 154367eb42fcbad2e95a780f2b7c6b50792d6040
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987186"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174345"
 ---
 # <a name="cell-object-properties-methods-and-events"></a>Propiedades de objetos, métodos y eventos de celda
 ## <a name="propertiescollections"></a>Propiedades/colecciones  
@@ -35,7 +35,7 @@ ms.locfileid: "88987186"
 ## <a name="methods"></a>Métodos  
  Ninguno.  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

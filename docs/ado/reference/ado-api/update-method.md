@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Update
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb673de86d48143a8869460eeab3377f3c0ec0d2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 279d0e82bff4d71a2c3b18bbdc7ff88f0b9581a9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988106"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172430"
 ---
 # <a name="update-method"></a>Update (método)
 Guarda los cambios realizados en la fila actual de un objeto de [conjunto de registros](./recordset-object-ado.md) o la colección de [campos](./fields-collection-ado.md) de un objeto de [registro](./record-object-ado.md) .  
@@ -35,7 +35,7 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Campos*  
+ *Fields*  
  Opcional. **Variante** que representa un nombre único o una matriz de **variantes** que representa los nombres o posiciones ordinales del campo o los campos que desea modificar.  
   
  *Valores*  
@@ -62,7 +62,7 @@ record.Fields.Update
   
  El registro actual sigue siendo actual después de llamar al método **Update** .  
   
-## <a name="record"></a>Registro  
+## <a name="record"></a>Grabar  
  El método **Update** finaliza las adiciones, eliminaciones y actualizaciones de los campos de la colección [Fields](./fields-collection-ado.md) de un objeto **Record** .  
   
  Por ejemplo, los campos eliminados con el método **Delete** se marcan para su eliminación inmediatamente, pero permanecen en la colección. Se debe llamar al método **Update** para eliminar realmente estos campos de la colección del proveedor.  

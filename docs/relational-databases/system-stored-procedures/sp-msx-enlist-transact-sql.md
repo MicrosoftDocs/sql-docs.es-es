@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_msx_enlist_TSQL
 - sp_msx_enlist
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9435c4b8628bb119b0ac81126e50e37a67650532
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 13a8c58ffa932199452db856b04e880dbbe2ff95
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541647"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174439"
 ---
 # <a name="sp_msx_enlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @msx_server_name = ] 'msx_server'` Nombre del servidor de administración multiservidor (maestra). *msx_server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @msx_server_name = ] 'msx_server'` Nombre del servidor de administración multiservidor (maestra). *msx_server* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @location = ] 'location'` Ubicación del servidor de destino que se va a agregar. *Location* es de tipo **nvarchar (100)** y su valor predeterminado es NULL.  
   

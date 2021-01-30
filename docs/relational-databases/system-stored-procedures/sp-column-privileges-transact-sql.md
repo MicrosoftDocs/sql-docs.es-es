@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_column_privileges_TSQL
 - sp_column_privileges
@@ -19,12 +19,12 @@ ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 279789c40dbc79dd3d7b2d421d757a936b0e6126
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: db99cb2e9acb8ede62a066291cce68d209e495c3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482406"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174529"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**VARCHAR (** 32 **)**|Uno de los permisos de columna disponibles. Los permisos de columna pueden ser uno de los valores siguientes (u otros valores compatibles con el origen de datos cuando se define la implementación):<br /><br /> SELECT = GRANTEE puede recuperar datos de las columnas.<br /><br /> INSERT = GRANTEE puede proporcionar datos para esta columna cuando se inserten nuevas filas (por parte de GRANTEE) en la tabla.<br /><br /> UPDATE = GRANTEE puede modificar datos existentes en la columna.<br /><br /> REFERENCES = GRANTEE puede hacer referencia a una columna de una tabla externa en una relación entre clave principal y clave externa. Las relaciones entre clave principal y clave externa se definen mediante restricciones de tabla.|  
 |IS_GRANTABLE|**VARCHAR (** 3 **)**|Indica si se permite que GRANTEE conceda permisos a otros usuarios (a menudo se hace referencia a esta operación como permiso “conceder por concesión”). Puede ser YES, NO o NULL. Un valor desconocido, o NULL, hace referencia a un origen de datos para el que “conceder por concesión” no se aplica.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los permisos se conceden mediante la instrucción GRANT y se retiran mediante la instrucción REVOKE.  
   
 ## <a name="permissions"></a>Permisos  

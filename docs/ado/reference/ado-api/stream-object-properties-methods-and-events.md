@@ -7,18 +7,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Stream object [ADO], members
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 309ad17e4d65f33ff109c2cdda87a0fb471f081a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 53477c6d8197ae7806fa0dfc29297e342e031c74
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988536"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172438"
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Stream
 ## <a name="properties"></a>Propiedades  
@@ -67,7 +67,7 @@ ms.locfileid: "88988536"
   
  [Método WriteText](./writetext-method.md)  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

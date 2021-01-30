@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OAGetProperty_TSQL
 - sp_OAGetProperty
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad769910b74dafd2727719980c6070d9487094da
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0542ae7cf67fb5b05c63a4c8cdb9ef9fb31c62e2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546002"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174409"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_OAGetProperty objecttoken , propertyname
  *propertyname*  
  Es el nombre de la propiedad del objeto OLE que se devolverá.  
   
- *propertyvalue* **resultados** de PropertyValue  
+  **resultados** de PropertyValue  
  Es el valor devuelto de la propiedad. Si se especifica, debe ser una variable local del tipo de datos adecuado.  
   
  Si la propiedad devuelve un objeto OLE, *PropertyValue* debe ser una variable local de tipo de datos **int**. Un token de objeto se almacena en la variable local y este token de objeto se puede utilizar con otros procedimientos almacenados de automatización OLE.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_msx_defect
 - sp_msx_defect_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1b5ea1139e0cfc1b27d7b79df29e6c1b1381b4d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2ca7f1d044ddfe0730052ff811e6084d5c070b6d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541557"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174446"
 ---
 # <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @forced_defection = ] forced_defection` Especifica si se debe forzar la baja o no si se ha perdido permanentemente el SQLServerAgent maestro debido a una base de datos **msdb** dañada irreversible o a ninguna copia de seguridad de base de datos **msdb** . *forced_defection*es de **bit**y su valor predeterminado es **0**, que indica que no se debe producir ninguna baja forzada. Un valor de **1** fuerza la baja.  
+`[ @forced_defection = ] forced_defection` Especifica si se debe forzar la baja o no si se ha perdido permanentemente el SQLServerAgent maestro debido a una base de datos **msdb** dañada irreversible o a ninguna copia de seguridad de base de datos **msdb** . *forced_defection* es de **bit** y su valor predeterminado es **0**, que indica que no se debe producir ninguna baja forzada. Un valor de **1** fuerza la baja.  
   
  Después de forzar una baja ejecutando **sp_msx_defect**, un miembro del rol fijo de servidor **sysadmin** en el SQLServerAgent maestro debe ejecutar el siguiente comando para completar la baja:  
   
