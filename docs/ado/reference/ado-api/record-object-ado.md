@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Record
@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6066d43bfa52d65ee133fd748f76fc651fac7379
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b6064030bd26ab6abb0bb003b2fcf26e72c4f24d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989866"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166752"
 ---
 # <a name="record-object-ado"></a>Objeto Record (ADO)
 Representa una fila de un [conjunto de registros](./recordset-object-ado.md) o del proveedor de datos, o un objeto devuelto por un proveedor de datos semiestructurados, como un archivo o un directorio.  
   
 ## <a name="remarks"></a>Observaciones  
- Un objeto de **registro** representa una fila de datos y tiene algunas similitudes conceptuales con un conjunto de **registros**de una fila. En función de las capacidades del proveedor, los objetos de **registro** pueden devolverse directamente desde el proveedor en lugar de un **conjunto de registros**de una fila, por ejemplo, cuando se ejecuta una consulta SQL que selecciona solo una fila. O bien, un objeto de **registro** se puede obtener directamente de un objeto de **conjunto de registros** . O bien, se puede devolver un **registro** directamente de un proveedor a datos semiestructurados, como el proveedor de OLE DB de Microsoft Exchange.  
+ Un objeto de **registro** representa una fila de datos y tiene algunas similitudes conceptuales con un conjunto de **registros** de una fila. En función de las capacidades del proveedor, los objetos de **registro** pueden devolverse directamente desde el proveedor en lugar de un **conjunto de registros** de una fila, por ejemplo, cuando se ejecuta una consulta SQL que selecciona solo una fila. O bien, un objeto de **registro** se puede obtener directamente de un objeto de **conjunto de registros** . O bien, se puede devolver un **registro** directamente de un proveedor a datos semiestructurados, como el proveedor de OLE DB de Microsoft Exchange.  
   
- Puede ver los campos asociados con el objeto de **registro** por medio de la colección [Fields](./fields-collection-ado.md) del objeto **Record** . ADO permite columnas con valores de objeto, incluidos **conjuntos de registros**, **SAFEARRAY**y valores escalares en la colección **Fields** de objetos **Record** .  
+ Puede ver los campos asociados con el objeto de **registro** por medio de la colección [Fields](./fields-collection-ado.md) del objeto **Record** . ADO permite columnas con valores de objeto, incluidos **conjuntos de registros**, **SAFEARRAY** y valores escalares en la colección **Fields** de objetos **Record** .  
   
  Si el objeto **Record** representa una fila de un **conjunto de registros**, es posible volver a ese **conjunto de registros** original con la propiedad [source](./source-property-ado-record.md) .  
   
@@ -60,7 +60,7 @@ Representa una fila de un [conjunto de registros](./recordset-object-ado.md) o d
   
 -   Indica el estado actual del **registro** con la propiedad [State](./state-property-ado.md) .  
   
--   Indicar el tipo de **registro**  -  *simple*, *colección*o *documento estructurado* : con la propiedad [RecordType](./recordtype-property-ado.md).  
+-   Indicar el tipo de **registro**  -  *simple*, *colección* o *documento estructurado* : con la propiedad [RecordType](./recordtype-property-ado.md).  
   
 -   Detiene la ejecución de una operación asincrónica con el método [Cancel](./cancel-method-ado.md) .  
   

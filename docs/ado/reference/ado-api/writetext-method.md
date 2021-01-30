@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::raw_WriteText
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d38d493fb57e8147f882056d07514ba9f405ecf9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b4c05ab892ce442db5eefefddf3eb0796af5dec9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987727"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166251"
 ---
 # <a name="writetext-method"></a>Método WriteText
 Escribe una cadena de texto especificada en un objeto de [secuencia](./stream-object-ado.md) .  
@@ -49,7 +49,7 @@ Stream.WriteText Data, Options
  Si escribe más allá de la posición actual de [EOS](./eos-property.md) , se aumentará el [tamaño](./size-property-ado-stream.md) de la **secuencia** para que contenga cualquier carácter nuevo y **EOS** se moverá al nuevo último byte de la **secuencia**.  
   
 > [!NOTE]
->  El método **WRITETEXT** se usa con secuencias de texto (el[tipo](./type-property-ado-stream.md) es **adTypeText**). En el caso de secuencias binarias (el**tipo** es **adTypeBinary**), utilice [Write](./write-method.md).  
+>  El método **WRITETEXT** se usa con secuencias de texto (el [tipo](./type-property-ado-stream.md) es **adTypeText**). En el caso de secuencias binarias (el **tipo** es **adTypeBinary**), utilice [Write](./write-method.md).  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de secuencia (ADO)](./stream-object-ado.md)  

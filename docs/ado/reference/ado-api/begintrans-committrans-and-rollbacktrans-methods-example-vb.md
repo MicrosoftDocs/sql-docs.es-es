@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac6978aba505110066229bc13f359e9215a25611
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 02b1296a81bed339071995d66bc9c1454ae86aa8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975926"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164799"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>Ejemplo de los métodos BeginTrans, CommitTrans y RollbackTrans (VB)
-En este ejemplo se cambia el tipo de libro de todos los libros de Psicología de la tabla ***titles*** de la base de datos. Después de que el método [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) inicia una transacción que aísla todos los cambios realizados en la tabla ***titles*** , el método [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) guarda los cambios. Puede usar el método [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) para deshacer los cambios que ha guardado con el método [Update](./update-method.md) .  
+En este ejemplo se cambia el tipo de libro de todos los libros de Psicología de la tabla ***titles** _ de la base de datos. Después de que el método [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) inicia una transacción que aísla todos los cambios realizados en la tabla _ *_titles_**, el método [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) guarda los cambios. Puede usar el método [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) para deshacer los cambios que ha guardado con el método [Update](./update-method.md) .  
   
 ```  
 'BeginBeginTransVB  

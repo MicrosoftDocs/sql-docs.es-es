@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - MarshalOptionsEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 134bf880c762e5b57d6a0ff270c65ef750c4255a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 27f9fcf5cadc8755ac17630f3e6fae852aeaf60b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990636"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167141"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 Especifica los registros que se deben devolver al servidor.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adMarshalAll**|0|Predeterminada. Devuelve todas las filas al servidor.|  
 |**adMarshalModifiedOnly**|1|Devuelve solo las filas modificadas en el servidor.|  

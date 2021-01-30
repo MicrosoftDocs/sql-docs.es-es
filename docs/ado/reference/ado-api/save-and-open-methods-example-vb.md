@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14668aba6cbc6817b951820bbdee4d5c69a51bc5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c76d26032d9986cba52442d62bb7ef8c10db5419
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989366"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166609"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Ejemplo de los métodos Save y Open (VB)
 En estos tres ejemplos se muestra cómo se pueden usar los métodos [Save](./save-method.md) y [Open](./open-method-ado-recordset.md) juntos.  
   
- Supongamos que está trabajando en un viaje de negocios y desea tomar una tabla de una base de datos. Antes de comenzar, debe tener acceso a los datos como un [conjunto de registros](./recordset-object-ado.md) y guardarlos en un formulario transportable. Cuando llegue a su destino, tendrá acceso al **conjunto** de registros como un **conjunto de registros**local y desconectado. Realice cambios en el **conjunto de registros**y, a continuación, guárdelo de nuevo. Por último, cuando vuelva a la Página principal, vuelva a conectarse a la base de datos y actualícelo con los cambios que haya realizado en la carretera.  
+ Supongamos que está trabajando en un viaje de negocios y desea tomar una tabla de una base de datos. Antes de comenzar, debe tener acceso a los datos como un [conjunto de registros](./recordset-object-ado.md) y guardarlos en un formulario transportable. Cuando llegue a su destino, tendrá acceso al **conjunto** de registros como un **conjunto de registros** local y desconectado. Realice cambios en el **conjunto de registros** y, a continuación, guárdelo de nuevo. Por último, cuando vuelva a la Página principal, vuelva a conectarse a la base de datos y actualícelo con los cambios que haya realizado en la carretera.  
   
- En primer lugar, acceda a la tabla ***authors*** y guárdela.  
+ En primer lugar, acceda a la tabla **_authors_* _ y guárdela.  
   
 ```  
 'BeginSaveVB  
@@ -85,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- Llegados a este punto, ha llegado a su destino. Tendrá acceso a la tabla ***authors*** como un **conjunto de registros**local y desconectado. Debe tener el proveedor **MSPersist** en el equipo que está usando para obtener acceso al archivo guardado, a:\Pubs.xml.  
+ Llegados a este punto, ha llegado a su destino. Tendrá acceso a la tabla _*_authors_*_ como un conjunto de registros local, desconectado _ * * *. Debe tener el proveedor **MSPersist** en el equipo que está usando para obtener acceso al archivo guardado, a:\Pubs.xml.  
   
 ```  
 Attribute VB_Name = "Save"  

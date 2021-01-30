@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::LineSeparator
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bd1e14d5c7ebc84ea4736da08296eca0e02ea38
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 629d2948bbbf62987f1352712df02521cf002189
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990726"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167176"
 ---
 # <a name="lineseparator-property-ado"></a>Separador de línea (propiedad, ADO)
 Indica el carácter binario que se va a utilizar como separador de línea en los objetos de [flujo](./stream-object-ado.md) de texto.  
@@ -30,9 +30,9 @@ Indica el carácter binario que se va a utilizar como separador de línea en los
  Establece o devuelve un valor de [LineSeparatorsEnum](./lineseparatorsenum.md) que indica el carácter separador de línea utilizado en la **secuencia**. El valor predeterminado es **adCRLF**.  
   
 ## <a name="remarks"></a>Observaciones  
- **LineSeparator** se usa para interpretar las líneas al leer el contenido de una **secuencia**de texto. Las líneas se pueden omitir con el método [SkipLine](./skipline-method.md) .  
+ **LineSeparator** se usa para interpretar las líneas al leer el contenido de una **secuencia** de texto. Las líneas se pueden omitir con el método [SkipLine](./skipline-method.md) .  
   
- **LineSeparator** solo se utiliza con objetos de **flujo** de texto (el[tipo](./type-property-ado-stream.md) es **adTypeText**). Esta propiedad se omite si el **tipo** es **adTypeBinary**.  
+ **LineSeparator** solo se utiliza con objetos de **flujo** de texto (el [tipo](./type-property-ado-stream.md) es **adTypeText**). Esta propiedad se omite si el **tipo** es **adTypeBinary**.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de secuencia (ADO)](./stream-object-ado.md)  

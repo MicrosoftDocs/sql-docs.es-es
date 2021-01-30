@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::UpdateBatch
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 648e6f8e64d4001851afb3838c901ab2b1172108
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8bc846e849df5980efca8f5e28982c964276f8bb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988006"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166322"
 ---
 # <a name="updatebatch-method"></a>Método UpdateBatch
 Escribe todas las actualizaciones de Batch pendientes en el disco.  
@@ -55,7 +55,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
   
  Si se establecen las propiedades dinámicas de [tabla única](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) y de [resincronización de actualizaciones](./update-resync-property-dynamic-ado.md) , y el **conjunto de registros** es el resultado de ejecutar una operación de combinación en varias tablas, la ejecución del método **UpdateBatch** va seguida implícitamente por el método [Resync](./resync-method.md) , dependiendo de la configuración de la propiedad de [resincronización](./update-resync-property-dynamic-ado.md) de la actualización.  
   
- El orden en que se realizan las actualizaciones individuales de un lote en el origen de datos no es necesariamente el mismo que el orden en el que se realizaron en el **conjunto de registros**local. El orden de actualización depende del proveedor. Tenga esto en cuenta al codificar las actualizaciones relacionadas entre sí, como las restricciones Foreign Key en una instrucción INSERT o Update.  
+ El orden en que se realizan las actualizaciones individuales de un lote en el origen de datos no es necesariamente el mismo que el orden en el que se realizaron en el **conjunto de registros** local. El orden de actualización depende del proveedor. Tenga esto en cuenta al codificar las actualizaciones relacionadas entre sí, como las restricciones Foreign Key en una instrucción INSERT o Update.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)  

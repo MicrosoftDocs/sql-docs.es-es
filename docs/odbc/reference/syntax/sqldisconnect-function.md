@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLDisconnect
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 604f5af6f425506996e7e15b7db73878f3d8b2c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5f246c3d5aafbc02a138e809a0a07805f8ae30f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428947"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165315"
 ---
 # <a name="sqldisconnect-function"></a>Función SQLDisconnect
 **Conformidad**  
@@ -40,7 +40,7 @@ ms.locfileid: "88428947"
 ```cpp  
   
 SQLRETURN SQLDisconnect(  
-     SQLHDBC     ConnectionHandle);  
+     SQLHDBC     ConnectionHandle);  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -59,10 +59,10 @@ SQLRETURN SQLDisconnect(
 |01002|Error de desconexión|Se produjo un error durante la desconexión. Sin embargo, la desconexión se ha realizado correctamente. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |08003|Conexión no abierta|(DM) la conexión especificada en el argumento *ConnectionHandle* no estaba abierta.|  
 |25000|Estado de transacción no válido|Había una transacción en proceso en la conexión especificada por el argumento *ConnectionHandle*. La transacción permanece activa.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer *\* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *ConnectionHandle*. Se llamó a la función y antes de finalizado la ejecución de la [función SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) en *ConnectionHandle*. A continuación, se llamó de nuevo a la función en *ConnectionHandle*.<br /><br /> Se llamó a la función y antes de que finalizara la ejecución de **SQLCancelHandle** se llamó a en *ConnectionHandle* desde un subproceso diferente en una aplicación multiproceso.|  
-|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para un *StatementHandle* asociado a *ConnectionHandle* y que todavía se estaba ejecutando cuando se llamó a **SQLDisconnect** .<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *ConnectionHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para un *StatementHandle* asociado con *ConnectionHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.|  
+|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para un *StatementHandle* asociado a *ConnectionHandle* y que todavía se estaba ejecutando cuando se llamó a **SQLDisconnect** .<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *ConnectionHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** o **SQLSetPos** para un *StatementHandle* asociado con *ConnectionHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
 |HY117|La conexión se suspendió debido a un estado de transacción desconocido. Solo se permiten las funciones de desconexión y de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Tiempo de espera de conexión agotado|El período de tiempo de espera de la conexión expiró antes de que el origen de datos respondiera a la solicitud y la conexión sigue activa. El período de tiempo de espera de la conexión se establece mediante **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::raw_LoadFromFile
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 76c00998c8fd7c3c6f737ab9b2ab0e2e35c74101
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ec0b77ba5588ffb13420970a41036e40757af51e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990706"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167167"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile (método) (ADO)
 Carga el contenido de un archivo existente en una [secuencia](./stream-object-ado.md).  
@@ -44,7 +44,7 @@ Stream.LoadFromFileFileName
   
  **LoadFromFile** sobrescribe el contenido actual del objeto de **secuencia** con los datos leídos del archivo. El contenido del archivo sobrescribe cualquier byte existente en la **secuencia** . Se truncan todos los bytes anteriores y restantes que siguen al [EOS](./eos-property.md) creado por **LoadFromFile**.  
   
- Después de una llamada a **LoadFromFile**, la posición actual se establece en el principio de la **secuencia** (la[posición](./position-property-ado.md) es 0).  
+ Después de una llamada a **LoadFromFile**, la posición actual se establece en el principio de la **secuencia** (la [posición](./position-property-ado.md) es 0).  
   
  Dado que se pueden agregar 2 bytes al principio de la secuencia para la codificación, el tamaño de la secuencia puede no coincidir exactamente con el tamaño del archivo desde el que se cargó.  
   

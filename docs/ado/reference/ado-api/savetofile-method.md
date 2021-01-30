@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::raw_SaveToFile
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6aa3269e73f9823eb47dddeb039b62e3affdd3c6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e52fe6b3b26a8bc4832952940c7e84c736f2da5e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989296"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166592"
 ---
 # <a name="savetofile-method"></a>Método SaveToFile
 Guarda el contenido binario de una [secuencia](./stream-object-ado.md) en un archivo.  
@@ -39,7 +39,7 @@ Stream.SaveToFile FileName, SaveOptions
  Valor de **cadena** que contiene el nombre completo del archivo en el que se guardará el contenido de la **secuencia** . Puede guardar en cualquier ubicación local válida o en cualquier ubicación a la que tenga acceso a través de un valor UNC.  
   
  *SaveOptions*  
- Valor [SaveOptionsEnum](./saveoptionsenum.md) que especifica si **SaveToFile**debe crear un nuevo archivo, si aún no existe. El valor predeterminado es **adSaveCreateNotExists**. Con estas opciones, puede especificar que se produzca un error si el archivo especificado no existe. También puede especificar que **SaveToFile** sobrescriba el contenido actual de un archivo existente.  
+ Valor [SaveOptionsEnum](./saveoptionsenum.md) que especifica si **SaveToFile** debe crear un nuevo archivo, si aún no existe. El valor predeterminado es **adSaveCreateNotExists**. Con estas opciones, puede especificar que se produzca un error si el archivo especificado no existe. También puede especificar que **SaveToFile** sobrescriba el contenido actual de un archivo existente.  
   
 > [!NOTE]
 >  Si sobrescribe un archivo existente (cuando se establece **adSaveCreateOverwrite** ), **SaveToFile** truncará cualquier byte del archivo existente original que siga el nuevo [EOS](./eos-property.md).  

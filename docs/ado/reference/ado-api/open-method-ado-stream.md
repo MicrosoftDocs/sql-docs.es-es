@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::raw_Open
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef760da2bad97cec017c7a58735200be1a14f85d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9151af754b245acc04dae70c120f01e37ac587cf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990326"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166976"
 ---
 # <a name="open-method-ado-stream"></a>Open (método) (Stream de ADO)
 Abre un objeto de [flujo](./stream-object-ado.md) para manipular flujos de datos binarios o de texto.  
@@ -36,7 +36,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
   
 #### <a name="parameters"></a>Parámetros  
  *Origen*  
- Opcional. Valor **Variant** que especifica el origen de datos para la **secuencia**. *Source* puede contener una cadena de dirección URL absoluta que apunta a un nodo existente en una estructura de árbol conocida, como un sistema de archivos o de correo electrónico. Se debe especificar una dirección URL mediante la palabra clave URL ("URL =*Scheme*:/*server*/ / *carpeta*del servidor"). Como alternativa, *source* puede contener una referencia a un objeto [Record](./record-object-ado.md) ya abierto, que abre la secuencia predeterminada asociada al **registro**. Si no se especifica *source* , se crea una instancia de un **flujo** y se abre, y se asocia sin ningún origen subyacente de forma predeterminada. Para obtener más información sobre los esquemas de dirección URL y sus proveedores asociados, consulte [direcciones URL absolutas y relativas](../../guide/data/absolute-and-relative-urls.md).  
+ Opcional. Valor **Variant** que especifica el origen de datos para la **secuencia**. *Source* puede contener una cadena de dirección URL absoluta que apunta a un nodo existente en una estructura de árbol conocida, como un sistema de archivos o de correo electrónico. Se debe especificar una dirección URL mediante la palabra clave URL ("URL =*Scheme*:// / *carpeta* del servidor"). Como alternativa, *source* puede contener una referencia a un objeto [Record](./record-object-ado.md) ya abierto, que abre la secuencia predeterminada asociada al **registro**. Si no se especifica *source* , se crea una instancia de un **flujo** y se abre, y se asocia sin ningún origen subyacente de forma predeterminada. Para obtener más información sobre los esquemas de dirección URL y sus proveedores asociados, consulte [direcciones URL absolutas y relativas](../../guide/data/absolute-and-relative-urls.md).  
   
  *Modo*  
  Opcional. Un valor [ConnectModeEnum](./connectmodeenum.md) que especifica el modo de acceso para la **secuencia** resultante (por ejemplo, de lectura/escritura o de solo lectura). El valor predeterminado es **adModeUnknown**. Vea la propiedad [mode](./mode-property-ado.md) para obtener más información sobre los modos de acceso. Si no se especifica *mode* , lo hereda el objeto de origen. Por ejemplo, si el **registro** de origen se abre en modo de solo lectura, el **flujo** también se abrirá de forma predeterminada en modo de solo lectura.  

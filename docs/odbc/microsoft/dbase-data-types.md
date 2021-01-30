@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], DBasedriver
 - desktop database drivers [ODBC], DBasedriver
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9eca7d603a136bd1921ee93656d38f59efcda5f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4ef5b42157a011bf719614b7378cd73733e28afc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412771"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165423"
 ---
 # <a name="dbase-data-types"></a>Tipos de datos de dBASE
 En la tabla siguiente se muestra cómo se asignan los tipos de datos de dBASE a los tipos de datos SQL de ODBC. Tenga en cuenta que no se admiten todos los tipos de datos SQL de ODBC.  

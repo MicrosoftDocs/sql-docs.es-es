@@ -7,27 +7,27 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13e126f070f188e47582227fabf4a1e37d6901a3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: dd98478cad7c13b2f4e6950586c1317c1d5d37dd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976376"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164906"
 ---
 # <a name="ado-methods"></a>Métodos de ADO
 
 |Método|Descripción|  
 |-|-|  
 |[AgregarNuevo](./addnew-method-ado.md)|Crea un nuevo registro para un objeto de **conjunto de registros** actualizable.|  
-|[Anexar](./append-method-ado.md)|Anexa un objeto a una colección. Si la colección es **campos**, puede crearse un nuevo objeto de **campo** antes de que se anexe a la colección.|  
-|[AppendChunk](./appendchunk-method-ado.md)|Anexa datos a un **campo**de datos binario o de texto grande, o a un objeto de **parámetro** .|  
+|[Append](./append-method-ado.md)|Anexa un objeto a una colección. Si la colección es **campos**, puede crearse un nuevo objeto de **campo** antes de que se anexe a la colección.|  
+|[AppendChunk](./appendchunk-method-ado.md)|Anexa datos a un **campo** de datos binario o de texto grande, o a un objeto de **parámetro** .|  
 |[BeginTrans, CommitTrans y RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)|Administra el procesamiento de transacciones dentro de un objeto de **conexión** de la manera siguiente:<br /><br /> **BeginTrans** : inicia una nueva transacción.<br /><br /> **CommitTrans** : guarda los cambios y finaliza la transacción actual. También puede iniciar una nueva transacción.<br /><br /> **RollbackTrans** : cancela cualquier cambio y finaliza la transacción actual. También puede iniciar una nueva transacción.|  
 |[Cancelar](./cancel-method-ado.md)|Cancela la ejecución de una llamada de método pendiente y asincrónica.|  
 |[CancelBatch](./cancelbatch-method-ado.md)|Cancela una actualización por lotes pendiente.|  
@@ -74,7 +74,7 @@ ms.locfileid: "88976376"
 |[Seek](./seek-method.md)|Busca el índice de un **conjunto de registros** para localizar rápidamente la fila que coincide con los valores especificados y cambia la posición de la fila actual a esa fila.|  
 |[Seteos](./seteos-method.md)|Establece la posición que es el final de la secuencia.|  
 |[SkipLine](./skipline-method.md)|Omite una línea completa cuando se lee una secuencia de texto.|  
-|[Necesidad](./stat-method.md)|Obtiene información estadística sobre un flujo abierto.|  
+|[Estadística](./stat-method.md)|Obtiene información estadística sobre un flujo abierto.|  
 |[Es compatible con](./supports-method.md)|Determina si un objeto de **conjunto de registros** especificado admite un tipo determinado de funcionalidad.|  
 |[Actualizar](./update-method.md)|Guarda los cambios realizados en la fila actual de un objeto de **conjunto de registros** o la colección de **campos** de un objeto de **registro** .|  
 |[UpdateBatch](./updatebatch-method.md)|Escribe todas las actualizaciones de Batch pendientes en el disco.|  

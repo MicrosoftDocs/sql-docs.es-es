@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Reset method [ADO]
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcebd112b389fe98b69b25852ef0504e88890261
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b4d1fa7427fd4c55ea8c53702ef4ac6a4a68b9b8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724264"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166134"
 ---
 # <a name="reset-method-rds"></a>Reset (método) (RDS)
 Ejecuta la ordenación o el filtro en un conjunto de **registros** del lado cliente basándose en las propiedades de ordenación y filtro especificadas.  
@@ -42,9 +42,9 @@ DataControl.Reset(value)
  Opcional. Un valor **booleano** que es **true** (valor predeterminado) Si desea filtrar por el conjunto de filas "filtrado" actual. **False** indica que se filtra por el conjunto de filas original y se quitan las opciones de filtro anteriores.  
   
 ## <a name="remarks"></a>Observaciones  
- Las propiedades [SortColumn](./sortcolumn-property-rds.md), [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), [FilterCriterion](./filtercriterion-property-rds.md)y [FilterColumn](./filtercolumn-property-rds.md) proporcionan funcionalidad de ordenación y filtrado en la memoria caché del lado cliente. La funcionalidad de ordenación ordena los registros por los valores de una columna. La funcionalidad de filtrado muestra un subconjunto de registros basándose en un criterio de búsqueda, mientras que el [conjunto de registros](../ado-api/recordset-object-ado.md) completo se mantiene en la memoria caché. El método **RESET** ejecutará los criterios y reemplazará el **conjunto de registros** actual por un **conjunto de registros**actualizable.  
+ Las propiedades [SortColumn](./sortcolumn-property-rds.md), [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), [FilterCriterion](./filtercriterion-property-rds.md)y [FilterColumn](./filtercolumn-property-rds.md) proporcionan funcionalidad de ordenación y filtrado en la memoria caché del lado cliente. La funcionalidad de ordenación ordena los registros por los valores de una columna. La funcionalidad de filtrado muestra un subconjunto de registros basándose en un criterio de búsqueda, mientras que el [conjunto de registros](../ado-api/recordset-object-ado.md) completo se mantiene en la memoria caché. El método **RESET** ejecutará los criterios y reemplazará el **conjunto de registros** actual por un **conjunto de registros** actualizable.  
   
- Si hay cambios en los datos originales que no se han enviado, se producirá un error en el método de **restablecimiento** . En primer lugar, use el método [SubmitChanges](./submitchanges-method-rds.md) para guardar los cambios en un **conjunto de registros**de lectura/escritura y, a continuación, utilice el método **RESET** para ordenar o filtrar los registros.  
+ Si hay cambios en los datos originales que no se han enviado, se producirá un error en el método de **restablecimiento** . En primer lugar, use el método [SubmitChanges](./submitchanges-method-rds.md) para guardar los cambios en un **conjunto de registros** de lectura/escritura y, a continuación, utilice el método **RESET** para ordenar o filtrar los registros.  
   
  Si desea realizar más de un filtro en el conjunto de filas, puede usar el argumento *booleano* opcional con el método **RESET** . El ejemplo siguiente muestra cómo hacerlo:  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC]
 - data conversions from SQL to C types [ODBC], about converting
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5c1306564a9e4a5c1cbd9cac74508529a1e6df9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cd8b0790426d9f3461d8ff1600471867ce94b55
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429697"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165381"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Convertir datos de SQL a tipos de datos C
-Cuando una aplicación llama a **SQLFetch**, **SQLFetchScroll**o **SQLGetData**, el controlador recupera los datos del origen de datos. Si es necesario, convierte los datos del tipo de datos en el que el controlador los recuperó en el tipo de datos especificado por el argumento *TargetType* en **SQLBindCol** o **SQLGetData.** Por último, almacena los datos en la ubicación a la que apunta el argumento *TargetValuePtr* de **SQLBindCol** o **SQLGetData** (y el campo SQL_DESC_DATA_PTR del ARD).  
+Cuando una aplicación llama a **SQLFetch**, **SQLFetchScroll** o **SQLGetData**, el controlador recupera los datos del origen de datos. Si es necesario, convierte los datos del tipo de datos en el que el controlador los recuperó en el tipo de datos especificado por el argumento *TargetType* en **SQLBindCol** o **SQLGetData.** Por último, almacena los datos en la ubicación a la que apunta el argumento *TargetValuePtr* de **SQLBindCol** o **SQLGetData** (y el campo SQL_DESC_DATA_PTR del ARD).  
   
  En la tabla siguiente se muestran las conversiones admitidas de tipos de datos SQL de ODBC a tipos de datos C de ODBC. Un círculo relleno indica la conversión predeterminada para un tipo de datos SQL (el tipo de datos C al que se convertirán los datos cuando el valor de *TargetType* sea SQL_C_DEFAULT). Un círculo hueco indica una conversión compatible.  
   
@@ -37,9 +37,9 @@ Cuando una aplicación llama a **SQLFetch**, **SQLFetchScroll**o **SQLGetData**,
   
  El formato de los datos convertidos no se ve afectado por la configuración del país de Windows®.  
   
- En las tablas de las secciones siguientes se describe cómo el controlador o el origen de datos convierte los datos recuperados del origen de datos; los controladores son necesarios para admitir las conversiones a todos los tipos de datos C de ODBC de los tipos de datos SQL de ODBC que admiten. Para un tipo de datos SQL de ODBC determinado, la primera columna de la tabla enumera los valores de entrada válidos del argumento *TargetType* en **SQLBindCol** y **SQLGetData**. En la segunda columna se muestran los resultados de una prueba, a menudo con el argumento *BufferLength* especificado en **SQLBindCol** o **SQLGetData**, que el controlador realiza para determinar si puede convertir los datos. Para cada resultado, la tercera y cuarta columnas enumeran los valores colocados en los búferes especificados por los argumentos *TargetValuePtr* y *StrLen_or_IndPtr* especificados en **SQLBindCol** o **SQLGetData** una vez que el controlador ha intentado convertir los datos. (El argumento *StrLen_or_IndPtr* corresponde al campo SQL_DESC_OCTET_LENGTH_PTR de ARD). La última columna muestra el SQLSTATE devuelto para cada resultado por **SQLFetch**, **SQLFetchScroll**o **SQLGetData**.  
+ En las tablas de las secciones siguientes se describe cómo el controlador o el origen de datos convierte los datos recuperados del origen de datos; los controladores son necesarios para admitir las conversiones a todos los tipos de datos C de ODBC de los tipos de datos SQL de ODBC que admiten. Para un tipo de datos SQL de ODBC determinado, la primera columna de la tabla enumera los valores de entrada válidos del argumento *TargetType* en **SQLBindCol** y **SQLGetData**. En la segunda columna se muestran los resultados de una prueba, a menudo con el argumento *BufferLength* especificado en **SQLBindCol** o **SQLGetData**, que el controlador realiza para determinar si puede convertir los datos. Para cada resultado, la tercera y cuarta columnas enumeran los valores colocados en los búferes especificados por los argumentos *TargetValuePtr* y *StrLen_or_IndPtr* especificados en **SQLBindCol** o **SQLGetData** una vez que el controlador ha intentado convertir los datos. (El argumento *StrLen_or_IndPtr* corresponde al campo SQL_DESC_OCTET_LENGTH_PTR de ARD). La última columna muestra el SQLSTATE devuelto para cada resultado por **SQLFetch**, **SQLFetchScroll** o **SQLGetData**.  
   
- Si el argumento *TargetType* de **SQLBindCol** o **SQLGetData** contiene un identificador para un tipo de datos C de ODBC que no se muestra en la tabla para un tipo de datos SQL de ODBC determinado, **SQLFetch**, **SQLFetchScroll**o **SQLGetData** devuelve SQLSTATE 07006 (infracción de atributo de tipo de datos restringida). Si el argumento *TargetType* contiene un identificador que especifica una conversión de un tipo de datos de SQL específico del controlador a un tipo de datos C de ODBC y esta conversión no es compatible con el controlador, **SQLFetch**, **SQLFETCHSCROLL**o **SQLGetData** devuelve SQLSTATE HYC00 (característica opcional no implementada).  
+ Si el argumento *TargetType* de **SQLBindCol** o **SQLGetData** contiene un identificador para un tipo de datos C de ODBC que no se muestra en la tabla para un tipo de datos SQL de ODBC determinado, **SQLFetch**, **SQLFetchScroll** o **SQLGetData** devuelve SQLSTATE 07006 (infracción de atributo de tipo de datos restringida). Si el argumento *TargetType* contiene un identificador que especifica una conversión de un tipo de datos de SQL específico del controlador a un tipo de datos C de ODBC y esta conversión no es compatible con el controlador, **SQLFetch**, **SQLFETCHSCROLL** o **SQLGetData** devuelve SQLSTATE HYC00 (característica opcional no implementada).  
   
  Aunque no se muestra en las tablas, el controlador devuelve SQL_NULL_DATA en el búfer especificado por el argumento *StrLen_or_IndPtr* cuando el valor de datos SQL es NULL. Para obtener una explicación del uso de *StrLen_or_IndPtr* cuando se realizan varias llamadas para recuperar datos, vea la descripción de la función [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md). Cuando los datos de SQL se convierten en datos de caracteres C, el número de caracteres devueltos en \* *StrLen_or_IndPtr* no incluye el byte de terminación null. Si *TargetValuePtr* es un puntero nulo, **SQLGETDATA** devuelve SQLSTATE HY009 (uso no válido de puntero nulo); en **SQLBindCol**, este desenlaza la columna.  
   

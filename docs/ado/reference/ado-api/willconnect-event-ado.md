@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - WillConnect
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 259ef55060d7968d9ec557c831412ad58609a6df
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a57b99597bea639eddb5e73b2d6e4c7137333bc2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987786"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166264"
 ---
 # <a name="willconnect-event-ado"></a>Evento WillConnect (ADO)
 Se llama al evento **WillConnect** antes de que se inicie una conexión.  
@@ -60,7 +60,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  Objeto de [conexión](./connection-object-ado.md) para el que se aplica esta notificación de eventos. Los cambios en los parámetros de la **conexión** mediante el controlador de eventos **WillConnect** no surtirán efecto en la **conexión**.  
   
 ## <a name="remarks"></a>Observaciones  
- Cuando se llama al método **WillConnect** , los parámetros *ConnectionString*, *userid*, *password*y *Options* se establecen en los valores establecidos por la operación que provocó este evento (la conexión pendiente) y se pueden cambiar antes de que el evento vuelva. **WillConnect** puede devolver una solicitud de cancelación de la conexión pendiente.  
+ Cuando se llama al método **WillConnect** , los parámetros *ConnectionString*, *userid*, *password* y *Options* se establecen en los valores establecidos por la operación que provocó este evento (la conexión pendiente) y se pueden cambiar antes de que el evento vuelva. **WillConnect** puede devolver una solicitud de cancelación de la conexión pendiente.  
   
  Cuando se cancela este evento, se llamará a **ConnectComplete** con su parámetro *adStatus* establecido en **adStatusErrorsOccurred**.  
   

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::MoveRecord
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3425326f9693d7c411f97f04ab5f87bba46578b4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d55a2a2aacc281271789d2c456ea5bdc8de44499
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990516"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167082"
 ---
 # <a name="moverecord-method-ado"></a>Método MoveRecord (ADO)
 Mueve la entidad representada por un [registro](./record-object-ado.md) a otra ubicación.  
@@ -54,17 +54,17 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  Opcional. Valor **booleano** que, cuando **es true**, especifica que esta operación debe ser asincrónica.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Valor de **cadena** . Normalmente, se devuelve el valor de *Destination* . Sin embargo, el valor exacto devuelto depende del proveedor.  
+ Un valor **String**. Normalmente, se devuelve el valor de *Destination* . Sin embargo, el valor exacto devuelto depende del proveedor.  
   
 ## <a name="remarks"></a>Observaciones  
  Los valores de *origen* y *destino* no deben ser idénticos; de lo contrario, se produce un error en tiempo de ejecución. Al menos los nombres de servidor, ruta de acceso y recurso deben ser diferentes.  
   
- En el caso de los archivos que se movieron mediante el proveedor de publicación en Internet, este método actualiza todos los vínculos de hipertexto de los archivos que se mueven, a *menos que se*especifique lo contrario Este método produce un error si el *destino* identifica un objeto existente (por ejemplo, un archivo o un directorio), a menos que se especifique **adMoveOverWrite** .  
+ En el caso de los archivos que se movieron mediante el proveedor de publicación en Internet, este método actualiza todos los vínculos de hipertexto de los archivos que se mueven, a *menos que se* especifique lo contrario Este método produce un error si el *destino* identifica un objeto existente (por ejemplo, un archivo o un directorio), a menos que se especifique **adMoveOverWrite** .  
   
 > [!NOTE]
 >  Use la opción **adMoveOverWrite** con prudencia. Por ejemplo, si se especifica esta opción cuando se mueve un archivo a un directorio, se eliminará el directorio y se reemplazará por el archivo.  
   
- Algunos atributos del objeto de **registro** , como la propiedad [ParentURL](./parenturl-property-ado.md) , no se actualizarán una vez completada esta operación. Actualice las propiedades del objeto **Record** cerrando el **registro**y, a continuación, vuelva a abrirlo con la dirección URL de la ubicación donde se ha despasado el archivo o directorio.  
+ Algunos atributos del objeto de **registro** , como la propiedad [ParentURL](./parenturl-property-ado.md) , no se actualizarán una vez completada esta operación. Actualice las propiedades del objeto **Record** cerrando el **registro** y, a continuación, vuelva a abrirlo con la dirección URL de la ubicación donde se ha despasado el archivo o directorio.  
   
  Si este **registro** se obtuvo de un [conjunto de registros](./recordset-object-ado.md), la nueva ubicación del archivo o directorio que se ha descargado no se reflejará inmediatamente en el **conjunto de registros**. Actualice el **conjunto de registros** . para ello, cierre y vuelva a abrirlo.  
   

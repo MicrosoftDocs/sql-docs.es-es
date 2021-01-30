@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cfb2f054e81bf2f34e3bc62331a573b626d713bd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d15933fec72109c58206c43dfc4b57db1ac29288
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988636"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166438"
 ---
 # <a name="stayinsync-property-example-vc"></a>Ejemplo de la propiedad StayInSync (VC ++)
 En este ejemplo se muestra cómo la propiedad [StayInSync](./stayinsync-property.md) facilita el acceso a las filas de un [conjunto de registros](./recordset-object-ado.md)jerárquico.  

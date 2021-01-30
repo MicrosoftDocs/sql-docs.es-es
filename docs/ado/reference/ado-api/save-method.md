@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Recordset::Save
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a32419db6e4dd04cc57b31b1d9267e80a30db41d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 54e75b3ed86a1522c7334f6948b2a5a105971c9f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97638135"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166600"
 ---
 # <a name="save-method"></a>Save (método)
 Guarda el [conjunto de registros](./recordset-object-ado.md) en un archivo o en un objeto de [secuencia](./stream-object-ado.md) .  

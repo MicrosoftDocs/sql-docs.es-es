@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLConfigDriver
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 04ee54bba13730504ed08cfc1307858edea56282
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abe28e8d870216cf090e57a93e0c75766db08231
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476161"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165330"
 ---
 # <a name="sqlconfigdriver-function"></a>Función SQLConfigDriver
 **Conformidad**  
@@ -69,7 +69,7 @@ BOOL SQLConfigDriver(
  Entradas El nombre del controlador tal como está registrado en la información del sistema.  
   
  *lpszArgs*  
- Entradas Una cadena terminada en null que contiene argumentos para un *fRequest*específico del controlador.  
+ Entradas Una cadena terminada en null que contiene argumentos para un *fRequest* específico del controlador.  
   
  *lpszMsg*  
  Genere Una cadena terminada en null que contiene un mensaje de salida de la configuración del controlador.  
@@ -84,7 +84,7 @@ BOOL SQLConfigDriver(
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLConfigDriver** devuelve false, se puede obtener un valor de * \* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLConfigDriver** devuelve false, se puede obtener un valor de *\* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de *\* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
@@ -101,7 +101,7 @@ BOOL SQLConfigDriver(
 ## <a name="comments"></a>Comentarios  
  **SQLConfigDriver** permite a una aplicación llamar a la rutina **ConfigDriver** de un controlador sin tener que conocer el nombre y cargar el archivo dll de instalación específico del controlador. Un programa de instalación llama a esta función una vez instalado el archivo DLL de instalación del controlador. El programa que realiza la llamada debe tener en cuenta que esta función podría no estar disponible para todos los controladores. En tal caso, el programa de llamada debe continuar sin errores.  
   
-## <a name="driver-specific-options"></a>Opciones específicas del controlador  
+## <a name="driver-specific-options"></a>Opciones de Driver-Specific  
  Una aplicación puede solicitar características específicas del controlador expuestas por el controlador mediante el argumento *fRequest* . El valor de *fRequest* de la primera opción será ODBC_CONFIG_DRIVER_MAX + 1, y las opciones adicionales se incrementarán en 1 a partir de ese valor. Los argumentos requeridos por el controlador para esa función deben proporcionarse en una cadena terminada en NULL pasada en el argumento *lpszArgs* . Los controladores que proporcionan esta funcionalidad deben mantener una tabla de opciones específicas del controlador. Las opciones deben estar completamente documentadas en la documentación del controlador. Los escritores de aplicaciones que usan opciones específicas del controlador deben tener en cuenta que este uso hará que la aplicación sea menos interoperable.  
   
 ## <a name="setting-connection-pooling-timeout"></a>Establecer tiempo de espera de agrupación de conexiones  
@@ -109,7 +109,7 @@ BOOL SQLConfigDriver(
   
  Cuando se llama a **SQLConfigDriver** con *fRequest* establecido en ODBC_INSTALL_DRIVER o ODBC_REMOVE_DRIVER, el administrador de controladores carga el archivo dll de instalación del controlador adecuado y llama a la función **ConfigDriver** . Cuando se llama a **SQLConfigDriver** con un *fRequest* de ODBC_CONFIG_DRIVER, todo el procesamiento se realiza en el instalador de ODBC, de modo que no es necesario cargar el archivo dll de instalación del controlador.  
   
-## <a name="messages"></a>error de Hadoop  
+## <a name="messages"></a>Messages  
  Una rutina de instalación del controlador puede enviar un mensaje de texto a una aplicación como cadenas terminadas en null en el búfer de *lpszMsg* . El mensaje se truncará en *cbMsgMax* menos el carácter de terminación null de la función **ConfigDriver** si es mayor o igual que *cbMsgMax* caracteres.  
   
 ## <a name="related-functions"></a>Funciones relacionadas  

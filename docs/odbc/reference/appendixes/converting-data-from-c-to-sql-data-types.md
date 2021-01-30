@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], about converting
 - converting data from c to SQL types [ODBC]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56af1e376edffa0268a2e27c840f035e5cda9763
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a326f91f0a10e8731153817cd8c2eed7ff0656e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429717"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165390"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Convertir datos de C en tipos de datos SQL
-Cuando una aplicación llama a **SQLExecute** o **SQLExecDirect**, el controlador recupera los datos para todos los parámetros enlazados con **SQLBindParameter** desde las ubicaciones de almacenamiento de la aplicación. Cuando una aplicación llama a **SQLSetPos**, el controlador recupera los datos para una operación de actualización o adición de columnas enlazadas con **SQLBindCol**. En el caso de los parámetros de datos en ejecución, la aplicación envía los datos de parámetro con **SQLPutData**. Si es necesario, el controlador convierte los datos del tipo de datos especificado por el argumento *ValueType* en **SQLBindParameter** al tipo de datos especificado por el argumento *ParameterType* en **SQLBindParameter**y, a continuación, envía los datos al origen de datos.  
+Cuando una aplicación llama a **SQLExecute** o **SQLExecDirect**, el controlador recupera los datos para todos los parámetros enlazados con **SQLBindParameter** desde las ubicaciones de almacenamiento de la aplicación. Cuando una aplicación llama a **SQLSetPos**, el controlador recupera los datos para una operación de actualización o adición de columnas enlazadas con **SQLBindCol**. En el caso de los parámetros de datos en ejecución, la aplicación envía los datos de parámetro con **SQLPutData**. Si es necesario, el controlador convierte los datos del tipo de datos especificado por el argumento *ValueType* en **SQLBindParameter** al tipo de datos especificado por el argumento *ParameterType* en **SQLBindParameter** y, a continuación, envía los datos al origen de datos.  
   
  En la tabla siguiente se muestran las conversiones admitidas de tipos de datos de C de ODBC a tipos de datos SQL de ODBC. Un círculo relleno indica la conversión predeterminada para un tipo de datos SQL (el tipo de datos C desde el que se convertirán los datos cuando el valor de *ValueType* o el campo descriptor de SQL_DESC_CONCISE_TYPE sea SQL_C_DEFAULT). Un círculo hueco indica una conversión compatible.  
   
@@ -37,7 +37,7 @@ Cuando una aplicación llama a **SQLExecute** o **SQLExecDirect**, el controlado
   
  ![Conversiones admitidas: de tipos de datos ODBC C a SQL](../../../odbc/reference/appendixes/media/apd1b.gif "apd1b")  
   
- En las tablas de las secciones siguientes se describe cómo el controlador o el origen de datos convierte los datos que se envían al origen de datos. los controladores son necesarios para admitir conversiones de todos los tipos de datos de C de ODBC en los tipos de datos de SQL de ODBC que admiten. Para un tipo de datos C de ODBC determinado, la primera columna de la tabla muestra los valores de entrada válidos del argumento *ParameterType* en **SQLBindParameter**. En la segunda columna se muestran los resultados de una prueba que el controlador realiza para determinar si puede convertir los datos. La tercera columna muestra el SQLSTATE devuelto para cada resultado por **SQLExecDirect**, **SQLExecute**, **SQLBulkOperations**, **SQLSetPos**o **SQLPutData**. Los datos se envían al origen de datos solo si se devuelve SQL_SUCCESS.  
+ En las tablas de las secciones siguientes se describe cómo el controlador o el origen de datos convierte los datos que se envían al origen de datos. los controladores son necesarios para admitir conversiones de todos los tipos de datos de C de ODBC en los tipos de datos de SQL de ODBC que admiten. Para un tipo de datos C de ODBC determinado, la primera columna de la tabla muestra los valores de entrada válidos del argumento *ParameterType* en **SQLBindParameter**. En la segunda columna se muestran los resultados de una prueba que el controlador realiza para determinar si puede convertir los datos. La tercera columna muestra el SQLSTATE devuelto para cada resultado por **SQLExecDirect**, **SQLExecute**, **SQLBulkOperations**, **SQLSetPos** o **SQLPutData**. Los datos se envían al origen de datos solo si se devuelve SQL_SUCCESS.  
   
  Si el argumento *ParameterType* de **SQLBindParameter** contiene el identificador de un tipo de datos SQL de ODBC que no se muestra en la tabla para un tipo de datos de C determinado, **SQLBindParameter** devuelve SQLSTATE 07006 (infracción de atributo de tipo de datos restringido). Si el argumento *ParameterType* contiene un identificador específico del controlador y el controlador no admite la conversión del tipo de datos de ODBC C específico a ese tipo de datos SQL específico del controlador, **SQLBINDPARAMETER** devuelve SQLSTATE HYC00 (característica opcional no implementada).  
   
@@ -54,7 +54,7 @@ Cuando una aplicación llama a **SQLExecute** o **SQLExecDirect**, el controlado
 -   **Número de dígitos** : número de caracteres que se usa para representar un número, incluido el signo menos, el separador decimal y el exponente (si es necesario).  
   
 -   **Palabras en**   
-     ***Italics***  : elementos de la gramática de SQL. Para obtener la sintaxis de los elementos de gramática, vea el [Apéndice C: gramática de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+     **_Italics_**  : elementos de la gramática de SQL. Para obtener la sintaxis de los elementos de gramática, vea el [Apéndice C: gramática de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  Esta sección contiene los temas siguientes.  
   

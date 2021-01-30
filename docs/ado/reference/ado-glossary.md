@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a9f2795906dce8c6a43b66397eefc1679ea22d6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 36ca4b14058b2728e60856f3c848452ad922107d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987666"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166240"
 ---
 # <a name="ado-glossary"></a>Glosario de términos de ADO
 En este tema se definen los términos relevantes para ADO.  
@@ -121,7 +121,7 @@ En este tema se definen los términos relevantes para ADO.
  enlace de datos  
  El proceso de asociar los objetos o controles de una aplicación a un origen de datos. Un control asociado a un origen de datos se denomina *control enlazado a datos*.  
   
- El contenido de un control enlazado a datos se asocia a los valores de una base de datos. Por ejemplo, un control de cuadrícula que está enlazado a un objeto de **conjunto de registros** puede actualizarse cuando se actualizan las filas del **conjunto de registros** . Cuando el **conjunto de registros**recupera nuevos valores, se muestran nuevos valores en la cuadrícula.  
+ El contenido de un control enlazado a datos se asocia a los valores de una base de datos. Por ejemplo, un control de cuadrícula que está enlazado a un objeto de **conjunto de registros** puede actualizarse cuando se actualizan las filas del **conjunto de registros** . Cuando el **conjunto de registros** recupera nuevos valores, se muestran nuevos valores en la cuadrícula.  
   
  proveedor de datos  
  Software que expone los datos a una aplicación ADO directamente o a través de un proveedor de servicios. Vea también proveedor de servicios.  
@@ -136,7 +136,7 @@ En este tema se definen los términos relevantes para ADO.
  Protocolo de conexión que permite a los componentes COM comunicarse directamente entre sí a través de una red. Vea también *com*, *componente*.  
   
  DDL (lenguaje de definición de datos)  
- Las instrucciones de SQL que definen, en lugar de manipular los datos. El esquema de una base de datos se crea o se modifica con DDL. Por ejemplo, **CREATE TABLE**, **Create index**, **Grant**y **REVOKE** son instrucciones DDL de SQL.  
+ Las instrucciones de SQL que definen, en lugar de manipular los datos. El esquema de una base de datos se crea o se modifica con DDL. Por ejemplo, **CREATE TABLE**, **Create index**, **Grant** y **REVOKE** son instrucciones DDL de SQL.  
   
  flujo predeterminado  
  Secuencia de texto o binaria (representada por un objeto de **flujo** ) que está asociada a objetos de **registro** o de **conjunto de registros** cuando se usan ciertos proveedores de OLE DB, como el proveedor de OLE DB de Microsoft para la publicación en Internet. Normalmente, el flujo predeterminado contiene el contenido de un archivo, como el código HTML de la raíz de un sitio Web.  
@@ -148,7 +148,7 @@ En este tema se definen los términos relevantes para ADO.
  Un objeto de **conjunto de registros** en una memoria caché de cliente que ya no tiene una conexión dinámica con el servidor. Si es necesario tener acceso de nuevo al origen de datos original por alguna razón, como actualizar los datos, se debe volver a establecer la conexión. Sin embargo, todavía se puede tener acceso a las colecciones, propiedades y métodos de un **conjunto de registros** desconectado.  
   
  DML (lenguaje de manipulación de datos)  
- Las instrucciones de SQL que manipulan los datos, en lugar de definirlos. Los valores de una base de datos se seleccionan y se modifican con DML. Por ejemplo, **Insert**, **Update**, **Delete**y **Select** son instrucciones DML de SQL.  
+ Las instrucciones de SQL que manipulan los datos, en lugar de definirlos. Los valores de una base de datos se seleccionan y se modifican con DML. Por ejemplo, **Insert**, **Update**, **Delete** y **Select** son instrucciones DML de SQL.  
   
  proveedor de origen de documento  
  Clase especial de proveedores que administran carpetas y documentos. Cuando un documento se representa mediante un objeto de **registro** , o una carpeta de documentos se representa mediante un objeto de **conjunto de registros** , el proveedor de origen del documento rellena esos objetos con un conjunto único de campos que describen las características del documento, en lugar del propio documento. Vea también registro de recursos.  
@@ -161,7 +161,7 @@ En este tema se definen los términos relevantes para ADO.
   
 ## <a name="e"></a>E  
  Enumeración  
- Lista de constantes con nombre. Los valores enumerados no deben ser únicos. Sin embargo, el nombre de cada valor debe ser único dentro del ámbito en el que se define la enumeración. En ADO, las enumeraciones se utilizan para los valores devueltos y los parámetros numéricos, para agregar significado al código ADO y para proteger al desarrollador de los valores numéricos (que pueden cambiar de una versión a una versión). Por ejemplo, para abrir un **conjunto de registros**estático, use el valor enumerado **adOpenStatic** : `Recordset.Open ,,adOpenStatic`  
+ Lista de constantes con nombre. Los valores enumerados no deben ser únicos. Sin embargo, el nombre de cada valor debe ser único dentro del ámbito en el que se define la enumeración. En ADO, las enumeraciones se utilizan para los valores devueltos y los parámetros numéricos, para agregar significado al código ADO y para proteger al desarrollador de los valores numéricos (que pueden cambiar de una versión a una versión). Por ejemplo, para abrir un **conjunto de registros** estático, use el valor enumerado **adOpenStatic** : `Recordset.Open ,,adOpenStatic`  
   
  También se conoce como *constante enumerada*. Vea también *constante*.  
   
