@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Index::Columns
@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1295aea12a1b9d60427864993630320d0f973ce
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 65b84850b8da3d85e8b4a013371119d4109eb6cf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985026"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169477"
 ---
 # <a name="columns-collection-adox"></a>Colección de columnas (ADOX)
 Contiene todos los objetos de [columna](./column-object-adox.md) de una tabla, un índice o una clave.  
   
 ## <a name="remarks"></a>Observaciones  
- El método [Append](./append-method-adox-columns.md) de una colección **Columns** es único para ADOX. Se puede hacer lo siguiente:  
+ El método [Append](./append-method-adox-columns.md) de una colección **Columns** es único para ADOX. Puede:  
   
 -   Agregue una nueva columna a la colección con el método **Append** .  
   
- Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Se puede hacer lo siguiente:  
+ Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
   
 -   Obtener acceso a una columna de la colección con la propiedad [Item](../ado-api/item-property-ado.md) .  
   

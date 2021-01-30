@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d857dfca2b690b06f43b9be50520b4530645128f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ba8a151178f165a1e5efadd6a130fb54ea8337fe
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983676"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169278"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>Ejemplo de propiedades PrimaryKey y Unique (VB)
 En este ejemplo se muestran las propiedades [PrimaryKey](./primarykey-property-adox.md) y [Unique](./unique-property-adox.md) de un [Índice](./index-object-adox.md). El código crea una nueva tabla con dos columnas. Las propiedades **PrimaryKey** y **Unique** se usan para convertir una columna en la clave principal para la que no se permiten valores duplicados.  

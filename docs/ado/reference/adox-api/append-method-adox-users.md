@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Users::raw_Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14b0c573b3ccf8a03b1c2f6513cdac67303fb4bf
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e321d3cf41e8edcd5a5bd29452050542257a908b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985436"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169571"
 ---
 # <a name="append-method-adox-users"></a>Append (método) (usuarios ADOX)
 Agrega un nuevo objeto de [usuario](./user-object-adox.md) a la colección de [usuarios](./users-collection-adox.md) .  
@@ -35,7 +35,7 @@ Users.Append User[,Password]
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Usuario*  
+ *User*  
  Valor de **tipo Variant** que contiene el objeto de **usuario** que se va a anexar o el nombre del usuario que se va a crear y anexar.  
   
  *Contraseña*  

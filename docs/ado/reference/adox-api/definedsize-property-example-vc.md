@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 534161539b19681779d50ec2a91e56c996c305bb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7915ec1c9f19e5a111196ae4d6029d903b6594f5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984636"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169442"
 ---
 # <a name="definedsize-property-example-vc"></a>Ejemplo de propiedad DefinedSize (VC++)
 En este ejemplo se muestra la propiedad [DefinedSize](./definedsize-property-adox.md) de una [columna](./column-object-adox.md). El código redefinirá el tamaño de la columna FirstName de la tabla **Employees** de la base de datos *Northwind* . A continuación, se muestra el cambio en los valores del [campo](../ado-api/field-object.md) FirstName de un [conjunto de registros](../ado-api/recordset-object-ado.md) basado en la tabla **Employees** . Tenga en cuenta que, de forma predeterminada, el campo FirstName se rellena con espacios después de volver a definir la propiedad **DefinedSize** .  

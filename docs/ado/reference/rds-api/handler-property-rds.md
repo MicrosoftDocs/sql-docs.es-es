@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5dc5a8cfc455d27a2bb17b40585e3e38cdd581cf
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7562c5ddc3a8360f2c8672e7526c86b7f77af04d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722054"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168909"
 ---
 # <a name="handler-property-rds"></a>Propiedad de controlador (RDS)
 Indica el nombre de un programa de personalización de servidor (controlador) que extiende la funcionalidad de [RDSServer. DataFactory](./datafactory-object-rdsserver.md)y cualquier parámetro utilizado por el *controlador*.  
@@ -48,7 +48,7 @@ DataControl.Handler = String
   
  El nombre del controlador y sus parámetros, si los hay, se separan mediante comas (","). Se producirá un comportamiento imprevisible si un punto y coma (";") aparece en cualquier parte de la *cadena*. Puede escribir su propio controlador, siempre que admita la interfaz **IDataFactoryHandler** .  
   
- El nombre del controlador predeterminado es **MSDFMAP. **Y su parámetro predeterminado es un archivo de personalización denominado **MSDFMAP.INI**. Utilice esta propiedad para invocar los archivos de personalización alternativos creados por el administrador del servidor.  
+ El nombre del controlador predeterminado es **MSDFMAP.** Y su parámetro predeterminado es un archivo de personalización denominado **MSDFMAP.INI**. Utilice esta propiedad para invocar los archivos de personalización alternativos creados por el administrador del servidor.  
   
  La alternativa a establecer la propiedad del **controlador** es especificar un controlador y parámetros en la propiedad [ConnectionString](../ado-api/connectionstring-property-ado.md) ; es decir, "**handler =**_handlerName, parámetro1, parámetro2,...;_".  
   

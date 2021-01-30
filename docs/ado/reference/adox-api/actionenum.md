@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ActionEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f948febd-c885-4621-823b-421e116fec4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02422de45f3e0ec28901678528468dc72f021549
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 35f4ddd60d4056cebbf0383aa0afb240c3ecb722
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985926"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169671"
 ---
 # <a name="actionenum"></a>ActionEnum
 Especifica el tipo de acción que se debe realizar cuando se llama a [SetPermissions](./setpermissions-method-adox.md) .  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adAccessDeny**|3|Al grupo o al usuario se le denegarán los permisos especificados.|  
 |**adAccessGrant**|1|El grupo o usuario tendrá al menos los permisos solicitados.|  

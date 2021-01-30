@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: adb68e81e177c52f1be349f04535237a1babf119
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 19e573a2beb425479faeaeabf2f42163300f4e95
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987215"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169948"
 ---
 # <a name="cellset-example-vb"></a>Ejemplo de conjunto de celdas (VB)
 En este Visual Basic proyecto se muestran los aspectos básicos del uso de ADO MD para tener acceso a los datos del cubo. Muestra los títulos de miembro de los encabezados de columna y de fila y, a continuación, muestra los valores con formato de las celdas específicas del interior del elemento Cellset.  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Columns::raw_Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c959f6d822724ee6e7480cf00941aaa1fc8012a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 40abf0ae298b469d0814e8dd3da85a8c8865be78
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985506"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169599"
 ---
 # <a name="append-method-adox-columns"></a>Append (método) (columnas ADOX)
 Agrega un nuevo objeto de [columna](./column-object-adox.md) a la colección de [columnas](./columns-collection-adox.md) .  
@@ -38,7 +38,7 @@ Columns.Append Column [,Type] [,DefinedSize]
  *Columna*  
  Objeto de **columna** que se va a anexar o nombre de la columna que se va a crear y anexar.  
   
- *Tipo*  
+ *Type*  
  Opcional. Valor **largo** que especifica el tipo de datos de la columna. El parámetro de *tipo* corresponde a la propiedad [Type](./type-property-column-adox.md) de un objeto **Column** .  
   
  *DefinedSize*  

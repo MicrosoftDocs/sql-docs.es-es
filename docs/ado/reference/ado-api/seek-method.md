@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset21::Seek
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b2058751177d0498e89d1f9bd631a3151490c9d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a7974464ad6302e7ce59b1ce458a46c8b43bcf45
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989166"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170283"
 ---
 # <a name="seek-method"></a>El método de búsqueda
 Busca el índice de un [conjunto de registros](./recordset-object-ado.md) para localizar rápidamente la fila que coincide con los valores especificados y cambia la posición de la fila actual a esa fila.  
@@ -39,16 +39,16 @@ recordset.Seek KeyValues, SeekOption
  Matriz de valores **Variant** . Un índice consta de una o más columnas y la matriz contiene un valor que se va a comparar con cada columna correspondiente.  
   
  *SeekOption*  
- Valor [SeekEnum](./seekenum.md) que especifica el tipo de comparación que se va a realizar entre las columnas del índice y el valor de *keyValues*correspondiente.  
+ Valor [SeekEnum](./seekenum.md) que especifica el tipo de comparación que se va a realizar entre las columnas del índice y el valor de *keyValues* correspondiente.  
   
 ## <a name="remarks"></a>Observaciones  
- Use el método **Seek** junto con la propiedad de [Índice](./index-property.md) si el proveedor subyacente admite índices en el objeto de **conjunto de registros** . Use el método [Supports](./supports-method.md)**(adSeek)** para determinar si el proveedor subyacente admite **Seek**y el método **Supports (adIndex)** para determinar si el proveedor admite índices. (Por ejemplo, el [proveedor de OLE DB para Microsoft Jet](../../guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) admite **Seek** e **index**).  
+ Use el método **Seek** junto con la propiedad de [Índice](./index-property.md) si el proveedor subyacente admite índices en el objeto de **conjunto de registros** . Use el método [Supports](./supports-method.md)**(adSeek)** para determinar si el proveedor subyacente admite **Seek** y el método **Supports (adIndex)** para determinar si el proveedor admite índices. (Por ejemplo, el [proveedor de OLE DB para Microsoft Jet](../../guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) admite **Seek** e **index**).  
   
  Si **Seek** no encuentra la fila deseada, no se produce ningún error y la fila se coloca al final del conjunto de **registros**. Establezca la propiedad **index** en el índice deseado antes de ejecutar este método.  
   
  Este método solo se admite con los cursores del lado servidor. No se admite Seek cuando el valor de la propiedad [CursorLocation](./cursorlocation-property-ado.md) del objeto de **conjunto de registros** es **adUseClient**.  
   
- Este método solo se puede usar cuando se ha abierto el objeto de **conjunto de registros** con el valor **adCmdTableDirect**de [commandtypeenum](./commandtypeenum.md) .  
+ Este método solo se puede usar cuando se ha abierto el objeto de **conjunto de registros** con el valor **adCmdTableDirect** de [commandtypeenum](./commandtypeenum.md) .  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)  

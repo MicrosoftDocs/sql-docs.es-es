@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38a28bf434998943b07ef6463970c26510195299
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1a4cb18c49513ff5f80e5be22f5480e4f6464cb4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974906"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167735"
 ---
 # <a name="connection-object-ado"></a>Objeto de conexión (ADO)
 Representa una conexión abierta a un origen de datos.  
@@ -64,7 +64,7 @@ Representa una conexión abierta a un origen de datos.
 >  No utilice esta característica (llamando a un comando o procedimiento almacenado con nombre como si fuera un método nativo en el objeto de **conexión** ) en una aplicación de Microsoft® .NET Framework, porque la implementación subyacente de la característica entra en conflicto con la forma en que el .NET Framework INTEROPERA con com.  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>Ejecutar un comando como método nativo de un objeto de conexión  
- Para ejecutar un comando, asigne un nombre al comando mediante la propiedad **Command** Object [Name](./name-property-ado.md) . Establezca la propiedad **ActiveConnection** del objeto de **comando** en la conexión. A continuación, emita una instrucción en la que el nombre de comando se usa como si fuera un método del objeto de **conexión** , seguido de cualquier parámetro y un objeto de **conjunto de registros** si se devuelven filas. Establezca las propiedades del conjunto de **registros** para personalizar el **conjunto de registros**resultante. Por ejemplo:  
+ Para ejecutar un comando, asigne un nombre al comando mediante la propiedad **Command** Object [Name](./name-property-ado.md) . Establezca la propiedad **ActiveConnection** del objeto de **comando** en la conexión. A continuación, emita una instrucción en la que el nombre de comando se usa como si fuera un método del objeto de **conexión** , seguido de cualquier parámetro y un objeto de **conjunto de registros** si se devuelven filas. Establezca las propiedades del conjunto de **registros** para personalizar el **conjunto de registros** resultante. Por ejemplo:  
   
 ```  
 Dim cnn As New ADODB.Connection  

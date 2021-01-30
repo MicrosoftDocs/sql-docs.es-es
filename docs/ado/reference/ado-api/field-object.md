@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Field
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4768281228e39ed8eeb6ffc003e463bf8a53450d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6042032018ea75eb7b2b13bb677ad48dca56290b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973236"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167376"
 ---
 # <a name="field-object"></a>Objeto Field
 Representa una columna de datos con un tipo de datos común.  
@@ -47,7 +47,7 @@ Representa una columna de datos con un tipo de datos común.
   
 -   Si el proveedor admite las actualizaciones por lotes, resuelva las discrepancias en los valores de campo durante la actualización por lotes con las propiedades [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) y [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) .  
   
- Todas las propiedades de metadatos (**Name**, **Type**, **DefinedSize**, **Precision**y **NumericScale**) están disponibles antes de abrir el conjunto de **registros**del objeto de **campo** . Establecerlos en ese momento es útil para la creación dinámica de formularios.  
+ Todas las propiedades de metadatos (**Name**, **Type**, **DefinedSize**, **Precision** y **NumericScale**) están disponibles antes de abrir el conjunto de **registros** del objeto de **campo** . Establecerlos en ese momento es útil para la creación dinámica de formularios.  
   
  Esta sección contiene el siguiente tema.  
   

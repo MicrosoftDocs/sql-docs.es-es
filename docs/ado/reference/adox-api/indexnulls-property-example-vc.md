@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 01ec70af18c70faec253aa7f1d0cbb2c6a1579b6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: eea25b680f578035ae4ca1f4c2dcdf8b1bbe6fdf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984096"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169345"
 ---
 # <a name="indexnulls-property-example-vc"></a>Ejemplo de propiedad IndexNulls (VC++)
-En este ejemplo se muestra la propiedad [IndexNulls](./indexnulls-property-adox.md) de un [Índice](./index-object-adox.md). El código crea un nuevo índice y establece el valor de **IndexNulls** en función de los datos proporcionados por el usuario. A continuación, el **Índice** se anexa a la [Tabla](./table-object-adox.md) **Employees** del *Northwind* [Catálogo](./catalog-object-adox.md)de Northwind. El nuevo **Índice** se aplica a un [conjunto de registros](../ado-api/recordset-object-ado.md) basado en la tabla **Employees** y se abre el **conjunto de registros** . Se agrega un nuevo registro a la tabla **Employees** , con un valor **null** en el campo indexado. El hecho de que se muestre este nuevo registro depende de la configuración de la propiedad **IndexNulls** .  
+En este ejemplo se muestra la propiedad [IndexNulls](./indexnulls-property-adox.md) de un [Índice](./index-object-adox.md). El código crea un nuevo índice y establece el valor de **IndexNulls** en función de los datos proporcionados por el usuario. A continuación, el **Índice** se anexa a la [Tabla](./table-object-adox.md) **Employees** del  [Catálogo](./catalog-object-adox.md)de Northwind. El nuevo **Índice** se aplica a un [conjunto de registros](../ado-api/recordset-object-ado.md) basado en la tabla **Employees** y se abre el **conjunto de registros** . Se agrega un nuevo registro a la tabla **Employees** , con un valor **null** en el campo indexado. El hecho de que se muestre este nuevo registro depende de la configuración de la propiedad **IndexNulls** .  
   
 ```  
 // BeignIndexNullCpp.cpp  

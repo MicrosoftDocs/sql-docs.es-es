@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3546816eb19d0b87d901b395959c2777dbb803c8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 32f67f8b6208dd6cb45fdc51434520c66f44bf32
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975606"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167808"
 ---
 # <a name="cancel-method-example-vc"></a>Ejemplo del método Cancel (VC ++)
 En este ejemplo se usa el método [Cancel](./cancel-method-ado.md) para cancelar un comando que se ejecuta en un objeto de [conexión](./connection-object-ado.md) si la conexión está ocupada.  

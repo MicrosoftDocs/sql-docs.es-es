@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Indexes::Append
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00b37055efe15f204049d02c337b54c228468419
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f451f93c41ba8fae501d9fb52233f9a4dbe03d30
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985516"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169580"
 ---
 # <a name="append-method-adox-indexes"></a>Append (método) (índices ADOX)
 Agrega un nuevo objeto [index](./index-object-adox.md) a la colección [Indexes](./indexes-collection-adox.md) .  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - StreamWriteEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c09a15f5c5aba9d36f038304b68cc1e64112ade3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5be021aab95fb9fa2c0571deba176f30836a7f4e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988446"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170107"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
 Especifica si un separador de línea se anexa a la cadena escrita en un objeto de [secuencia](./stream-object-ado.md) .  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adWriteChar**|0|Predeterminada. Escribe la cadena de texto especificada (especificada por el parámetro de *datos* ) en el objeto de **secuencia** .|  
 |**adWriteLine**|1|Escribe una cadena de texto y un carácter separador de líneas en un objeto de **secuencia** . Si no se define la propiedad [LineSeparator](./lineseparator-property-ado.md) , se devuelve un error en tiempo de ejecución.|  

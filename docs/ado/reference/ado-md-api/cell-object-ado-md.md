@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Cell
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6fceeea4ebe6728ae4adf9bce52cb6b642a926d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c1fd0cdb2322b3cad507745a97faa6b74f245b40
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987216"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169954"
 ---
 # <a name="cell-object-ado-md"></a>Objeto Cell (ADO MD)
 Representa los datos en la intersección de las coordenadas del eje contenidas en un Cellset.  

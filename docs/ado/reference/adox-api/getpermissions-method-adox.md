@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _User25::GetPermissions
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31d2bd1d17f790a29674b99ee24a668876e53492
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4c4d96176e4bdad70cbd5c09a59adcade6f99f81
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984426"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169384"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions (método, ADOX)
 Devuelve los permisos de un [Grupo](./group-object-adox.md) o [usuario](./user-object-adox.md) en un contenedor de objetos o objetos.  
@@ -33,7 +33,7 @@ Devuelve los permisos de un [Grupo](./group-object-adox.md) o [usuario](./user-o
   
 ```  
   
-ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])  
+ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])  
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  

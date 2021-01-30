@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::Source
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9c551e52864caca8834350d5107b76aed88700d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 232bebc8eabf96584a4513c3197f329ecf70fe87
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988951"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170237"
 ---
 # <a name="source-property-ado-record"></a>Propiedad Source (Record ADO)
 Indica el origen de datos o el objeto representado por el [registro](./record-object-ado.md).  
@@ -37,7 +37,7 @@ Indica el origen de datos o el objeto representado por el [registro](./record-ob
 ## <a name="remarks"></a>Observaciones  
  La propiedad **source** devuelve el argumento de *origen* del método [Open](./open-method-ado-record.md) del objeto **Record** . Puede contener una cadena de dirección URL absoluta o relativa. Se puede usar una dirección URL absoluta sin establecer la propiedad [ActiveConnection](./activeconnection-property-ado.md) para abrir directamente el objeto de **registro** . En este caso, se crea un objeto de **conexión** implícita.  
   
- La propiedad **source** también puede contener una referencia a un conjunto de **registros**ya abierto, que abre un objeto **Record** que representa la fila actual del **conjunto de registros**.  
+ La propiedad **source** también puede contener una referencia a un conjunto de **registros** ya abierto, que abre un objeto **Record** que representa la fila actual del **conjunto de registros**.  
   
  La propiedad **source** también podría contener una referencia a un objeto [Command](./command-object-ado.md) que devuelve una sola fila de datos del proveedor.  
   

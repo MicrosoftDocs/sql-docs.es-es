@@ -1,5 +1,5 @@
 ---
-description: 'Tabla única, esquema único, propiedades de catálogo únicas: dinámica (ADO)'
+description: Tabla única, esquema único, Properties-Dynamic de catálogo único (ADO)
 title: Controlar los cambios en la tabla base del conjunto de registros (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Unique Table property [ADO]
@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50a17938a2e1cffd3cc0bf76d3cc3758358318d2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 485fe00e6f55e6916341fd4420f0aaaa395fe54b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988166"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170047"
 ---
-# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabla única, esquema único, propiedades de catálogo únicas: dinámica (ADO)
+# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabla única, esquema único, Properties-Dynamic de catálogo único (ADO)
 Permite controlar estrechamente las modificaciones realizadas en una tabla base determinada de un [conjunto de registros](./recordset-object-ado.md) que formaba parte de una operación de combinación en varias tablas base.  
   
 -   **Tabla única** especifica el nombre de la tabla base en la que se permiten las actualizaciones, las inserciones y las eliminaciones.  
   
--   **Unique Schema** especifica el *esquema*o el nombre del propietario de la tabla.  
+-   **Unique Schema** especifica el *esquema* o el nombre del propietario de la tabla.  
   
--   **Catálogo único** especifica el *Catálogo*o el nombre de la base de datos que contiene la tabla.  
+-   **Catálogo único** especifica el *Catálogo* o el nombre de la base de datos que contiene la tabla.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un valor de **cadena** que es el nombre de una tabla, un esquema o un catálogo.  
@@ -38,7 +38,7 @@ Permite controlar estrechamente las modificaciones realizadas en una tabla base 
 ## <a name="remarks"></a>Observaciones  
  La tabla base deseada se identifica de forma única mediante el catálogo, el esquema y los nombres de tabla. Cuando se establece la propiedad de **tabla única** , se usan los valores de las propiedades **Unique Schema** o Unique **Catalog** para buscar la tabla base. Está previsto, pero no es necesario, que el **esquema único** y las propiedades del **catálogo único** se establezcan antes de que se establezca la propiedad de **tabla única** .  
   
- La clave principal de la **tabla única** se trata como la clave principal del conjunto de **registros**completo. Esta es la clave que se usa para cualquier método que requiera una clave principal.  
+ La clave principal de la **tabla única** se trata como la clave principal del conjunto de **registros** completo. Esta es la clave que se usa para cualquier método que requiera una clave principal.  
   
  Mientras se establece la **tabla única** , el método de [eliminación](./delete-method-ado-recordset.md) solo afecta a la tabla con nombre. Los métodos [AddNew](./addnew-method-ado.md), [Resync](./resync-method.md), [Update](./update-method.md)y [UpdateBatch](./updatebatch-method.md) afectan a las tablas base subyacentes adecuadas del **conjunto de registros**.  
   

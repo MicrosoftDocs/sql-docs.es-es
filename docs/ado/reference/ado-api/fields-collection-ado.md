@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Fields
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f16fd27e7bee9d3f9e922de4db625b897266a61
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2e16bf602bd0c54b425587fcf1a50d2cc60b2aa7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973126"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167355"
 ---
 # <a name="fields-collection-ado"></a>Fields (colección) (ADO)
 Contiene todos los objetos de [campo](./field-object.md) de un [conjunto de registros](./recordset-object-ado.md) o un objeto de [registro](./record-object-ado.md) .  
@@ -36,7 +36,7 @@ Contiene todos los objetos de [campo](./field-object.md) de un [conjunto de regi
   
  La colección **Fields** tiene un método [Append](./append-method-ado.md) , que crea y agrega de forma aprovisionada un objeto **Field** a la colección, y un método **Update** , que finaliza cualquier adición o eliminación.  
   
- Un objeto **Record** tiene dos campos especiales que se pueden indizar con constantes [FieldEnum](./fieldenum.md) . Una constante obtiene acceso a un campo que contiene la secuencia predeterminada del **registro**y el otro tiene acceso a un campo que contiene la cadena de dirección URL absoluta del **registro**.  
+ Un objeto **Record** tiene dos campos especiales que se pueden indizar con constantes [FieldEnum](./fieldenum.md) . Una constante obtiene acceso a un campo que contiene la secuencia predeterminada del **registro** y el otro tiene acceso a un campo que contiene la cadena de dirección URL absoluta del **registro**.  
   
  Algunos proveedores (por ejemplo, el [proveedor de Microsoft OLE DB para la publicación en Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) pueden rellenar la colección de **campos** con un subconjunto de campos disponibles para el **registro** o el **conjunto de registros**. No se agregarán otros campos a la colección hasta que se haga referencia a ellos por su nombre o se indexen por primera vez por su código.  
   

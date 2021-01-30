@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::raw_RollbackTrans
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02c19026d519cf5c115dedfbe4c4dcdbf89cd37b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: de30ee4629d66371e41180e0caf171a91237d65c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975936"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167862"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>Métodos BeginTrans, CommitTrans y RollbackTrans (ADO)
 Estos métodos de transacción administran el procesamiento de transacciones dentro de un objeto de [conexión](./connection-object-ado.md) de la manera siguiente:  
@@ -71,7 +71,7 @@ object.RollbackTrans
  Dependiendo de la propiedad [attributes](./attributes-property-ado.md) del objeto **Connection** , llamar a los métodos **CommitTrans** o **RollbackTrans** puede iniciar automáticamente una nueva transacción. Si la propiedad **attributes** está establecida en **adXactCommitRetaining**, el proveedor inicia automáticamente una nueva transacción después de una llamada a **CommitTrans** . Si la propiedad **attributes** está establecida en **adXactAbortRetaining**, el proveedor inicia automáticamente una nueva transacción después de una llamada a **RollbackTrans** .  
   
 ## <a name="remote-data-service"></a>Servicio de datos remotos  
- Los métodos **BeginTrans**, **CommitTrans**y **RollbackTrans** no están disponibles en un objeto de **conexión** del lado cliente.  
+ Los métodos **BeginTrans**, **CommitTrans** y **RollbackTrans** no están disponibles en un objeto de **conexión** del lado cliente.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conexión (ADO)](./connection-object-ado.md)  

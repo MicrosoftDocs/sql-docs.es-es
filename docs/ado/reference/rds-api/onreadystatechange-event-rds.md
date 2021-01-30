@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - onReadyStateChange event [ADO]
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ee9f48a3cba1190cdd9400b5ee5ecb30c35bfaed
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ce2a7fa6980f6b76c44b6934812c9736b5bf3bc8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724456"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168880"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange (evento, RDS)
 Se llama al evento **onreadystatechange** siempre que cambia el valor de la propiedad [ReadyState](./readystate-property-rds.md) .  

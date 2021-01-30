@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Parameter::Type
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f4dcfd3c22363ab4950e03844647f990a34f4d5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ac7cb237f0b3c3adb2621e8e7ad15912b907a4d7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988316"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170078"
 ---
 # <a name="type-property-ado"></a>Tipo (propiedad, ADO)
 Indica el tipo operativo o el tipo de datos de un [parámetro](./parameter-object.md), [campo](./field-object.md)o objeto de [propiedad](./property-object-ado.md) .  

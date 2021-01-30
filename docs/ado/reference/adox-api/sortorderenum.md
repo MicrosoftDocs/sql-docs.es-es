@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - SortOrderEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7f3b4552e63ce80e32af45ecfcc44096a0e3cdd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 096d2588a79f74be3d15594ff40bf850449b1225
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983286"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169185"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 Especifica la secuencia de ordenación para una columna indizada.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adSortAscending**|1|Predeterminada. La secuencia de ordenación de la columna es ascendente.|  
 |**adSortDescending**|2|La secuencia de ordenación de la columna es descendente.|  

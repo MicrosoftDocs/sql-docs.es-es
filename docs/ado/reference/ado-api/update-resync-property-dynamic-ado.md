@@ -1,25 +1,25 @@
 ---
 description: Propiedad dinámica Update Resync (ADO)
-title: 'Propiedad de resincronización de actualización: dinámica (ADO) | Microsoft Docs'
+title: Property-Dynamic de resincronización de actualización (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Update Resync property [ADO]
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 506fd7fecee179a055e23ffad1beab76bcd2fbe2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d92f70c5091ec2468199874c4a79843398bc7833
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988096"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170023"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Propiedad dinámica Update Resync (ADO)
 Especifica si el método [UpdateBatch](./updatebatch-method.md) va seguido de una operación de método [Resync](./resync-method.md) implícita y, en ese caso, el ámbito de esa operación.  

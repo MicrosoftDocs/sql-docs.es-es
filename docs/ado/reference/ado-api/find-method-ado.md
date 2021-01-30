@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18b4dc88dfedbb5a9a06968ebb5b02300439ed1b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8f581b2c4b4861c852a9e5a24aec5a219ee098f4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88972956"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167319"
 ---
 # <a name="find-method-ado"></a>Find (método) (ADO)
 Busca en un [conjunto de registros](./recordset-object-ado.md) la fila que cumple los criterios especificados. Opcionalmente, se puede especificar la dirección de la búsqueda, la fila inicial y el desplazamiento de la fila inicial. Si se cumplen los criterios, la posición de la fila actual se establece en el registro encontrado; de lo contrario, la posición se establece en el final (o en el inicio) del **conjunto de registros**.  
@@ -48,7 +48,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Opcional. Marcador de **variante** que funciona como la posición inicial de la búsqueda.  
   
 ## <a name="remarks"></a>Observaciones  
- En los *criterios*solo se puede especificar un nombre de una sola columna. Este método no admite búsquedas en varias columnas.  
+ En los *criterios* solo se puede especificar un nombre de una sola columna. Este método no admite búsquedas en varias columnas.  
   
  El operador de comparación de *criterios* puede ser " **>** " (mayor que), "* * \<**" (less than), "=" (equal), "> =" (mayor o igual que), "<=" (menor o igual que), "<>" (no igual) o "like" (coincidencia de patrones).  
   
@@ -70,5 +70,5 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo del método Find (VB)](./find-method-example-vb.md)   
  [Index (propiedad)](./index-property.md)   
- [Optimize (propiedad dinámica) (ADO)](./optimize-property-dynamic-ado.md)   
+ [Optimizar Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)   
  [El método de búsqueda](./seek-method.md)

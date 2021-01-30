@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 749137891e00e52f0ed2e321c689e8f4ae923f73
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ebd897f7c3de447afe13dea57c9e41e5b6b494fe
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988366"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170098"
 ---
 # <a name="supports-method-example-vb"></a>Ejemplo del método Supports (VB)
 En este ejemplo se usa el método [Supports](./supports-method.md) para mostrar las opciones admitidas por un conjunto de registros abierto con distintos tipos de cursor. El procedimiento DisplaySupport es necesario para que este procedimiento se ejecute.  

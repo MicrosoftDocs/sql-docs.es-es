@@ -7,18 +7,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Groups collection [ADOX], members
 ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c29037046d6ed45b3e749b1af0574ed061e00f1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f99405db467d6c84f380a2f516e02b6e9d06a581
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984346"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169382"
 ---
 # <a name="groups-collection-properties-methods-and-events"></a>Eventos, métodos y propiedades de la colección de grupos
 ## <a name="properties"></a>Propiedades  
@@ -33,7 +33,7 @@ ms.locfileid: "88984346"
   
  [Refresh (método)](../ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

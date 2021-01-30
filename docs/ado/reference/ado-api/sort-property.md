@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::get_Sort
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9397d99d2d020fcf2c703bd96420ee4af4b1a610
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 57f46248dc23d92752a6354a557285daeaf0a0f8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988996"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170247"
 ---
 # <a name="sort-property"></a>Propiedad de ordenación
 Indica uno o más nombres de campo en los que se ordena el [conjunto de registros](./recordset-object-ado.md) y si cada campo se ordena en orden ascendente o descendente.  
@@ -46,7 +46,7 @@ Indica uno o más nombres de campo en los que se ordena el [conjunto de registro
   
  Si establece la propiedad **Sort** en una cadena vacía, se restablecerán las filas a su orden original y se eliminarán los índices temporales. Los índices existentes no se eliminarán.  
   
- Supongamos que un **conjunto de registros** contiene tres campos denominados *FirstName*, *middleInitial*y *LastName*. Establezca la propiedad **Sort** en la cadena " `lastName DESC, firstName ASC` ", que ordenará el conjunto de **registros** por apellido en orden descendente y luego por nombre en orden ascendente. Se omite la inicial del segundo nombre.  
+ Supongamos que un **conjunto de registros** contiene tres campos denominados *FirstName*, *middleInitial* y *LastName*. Establezca la propiedad **Sort** en la cadena " `lastName DESC, firstName ASC` ", que ordenará el conjunto de **registros** por apellido en orden descendente y luego por nombre en orden ascendente. Se omite la inicial del segundo nombre.  
   
  No se puede llamar a ningún campo "ASC" o "DESC" porque esos nombres entran en conflicto con las palabras clave **ASC** y **DESC**. Puede crear un alias para un campo con un nombre en conflicto mediante la palabra clave **as** en la consulta que devuelve el **conjunto de registros**.  
   
@@ -56,6 +56,6 @@ Indica uno o más nombres de campo en los que se ordena el [conjunto de registro
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de la propiedad sort (VB)](./sort-property-example-vb.md)   
  [Ejemplo de propiedad de ordenación (VC + +)](./sort-property-example-vc.md)   
- [Optimize (propiedad dinámica) (ADO)](./optimize-property-dynamic-ado.md)   
+ [Optimizar Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)   
  [Propiedad SortColumn (RDS)](../rds-api/sortcolumn-property-rds.md)   
  [Propiedad SortDirection (RDS)](../rds-api/sortdirection-property-rds.md)

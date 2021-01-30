@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ADOStreamConstruction::GetStream
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1903644370172e716de78bc49a68af03a742c125
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b65a3bf2d4664be84250a9923f0ed3908c07f179
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988516"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170133"
 ---
 # <a name="stream-property"></a>Propiedad de la secuencia
 Obtiene o establece un objeto de **flujo** de OLE DB de/en un objeto **ADOStreamConstruction** .  

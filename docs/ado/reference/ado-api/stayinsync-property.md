@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset20::StayInSync
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9677a776273e83ad31fecde3a7ea436138d3784e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b7546889953e748d730a3b47ebc4cee5fcae3e10
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988626"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170145"
 ---
 # <a name="stayinsync-property"></a>Propiedad StayInSync
 Indica, en un objeto de [conjunto de registros](./recordset-object-ado.md) jerárquico, si la referencia a los registros secundarios subyacentes (es decir, el *capítulo*) cambia cuando cambia la posición de la fila primaria.  

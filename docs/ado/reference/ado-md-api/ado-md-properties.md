@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ADO MD, properties
 - properties [ADO MD]
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ffc556d5c4138f35b1831a8aebeb15622328d4c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: ed3add4b0920c493e7f83ccad14032a1ff227166
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637865"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170009"
 ---
 # <a name="ado-md-properties"></a>Propiedades de ADO MD
 
@@ -29,8 +29,8 @@ ms.locfileid: "97637865"
 |[Título](./caption-property-ado-md.md)|Indica el título de texto que se va a usar al mostrar un **nivel** o un objeto de **miembro** .|  
 |[ChildCount](./childcount-property-ado-md.md)|Indica el número de miembros para los que el objeto **miembro** actual es el elemento primario de una jerarquía.|  
 |[Children](./children-property-ado-md.md)|Devuelve una colección de **miembros** para los que el **miembro** actual es el elemento primario de la jerarquía.|  
-|[Count](../ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
-|[Profundidad](./depth-property-ado-md.md)|Indica el número de niveles entre el **nivel** y la raíz del nivel de la jerarquía.|  
+|[Recuento](../ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
+|[Depth](./depth-property-ado-md.md)|Indica el número de niveles entre el **nivel** y la raíz del nivel de la jerarquía.|  
 |[Descripción](./description-property-ado-md.md)|Devuelve una explicación de texto del objeto actual.|  
 |[DimensionCount](./dimensioncount-property-ado-md.md)|Indica el número de dimensiones de un eje.|  
 |[DrilledDown](./drilleddown-property-ado-md.md)|Indica si hay elementos secundarios inmediatamente después del miembro en el eje.|  
@@ -46,8 +46,8 @@ ms.locfileid: "97637865"
 |[Parent](./parent-property-ado-md.md)|Indica el miembro que es primario del miembro actual de una jerarquía.|  
 |[ParentSameAsPrev](./parentsameasprev-property-ado-md.md)|Indica si el elemento primario de este miembro de posición es igual que el elemento primario del miembro inmediatamente anterior.|  
 |[Origen](./source-property-ado-md.md)|Indica el origen de los datos del Cellset.|  
-|[State](./state-property-ado-md.md)|Indica el estado actual del Cellset.|  
-|[Tipo](./type-property-ado-md.md)|Indica el tipo del miembro actual.|  
+|[Estado](./state-property-ado-md.md)|Indica el estado actual del Cellset.|  
+|[Type](./type-property-ado-md.md)|Indica el tipo del miembro actual.|  
 |[UniqueName](./uniquename-property-ado-md.md)|Indica un nombre no ambiguo para el objeto actual.|  
 |[Valor](./value-property-ado-md.md)|Indica el valor de la celda actual.|  
   

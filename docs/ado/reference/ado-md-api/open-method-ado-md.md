@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Open
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c7b403ed89ae9933b4169af4e53921205318ccd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 75970571be282042338ab7a5eb870a725af5e201
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986236"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169745"
 ---
 # <a name="open-method-ado-md"></a>Open (método) (ADO MD)
 Recupera los resultados de una consulta multidimensional y devuelve los resultados a un [Cellset](./cellset-object-ado-md.md).  

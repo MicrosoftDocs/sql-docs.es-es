@@ -7,18 +7,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Axes collection [ADO MD], members
 ms.assetid: be459530-6f28-458f-ad70-759eae3ae08c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2db7cc811d4ae266bfbe3c86d5f254ba8a5cbaf5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 234dda022151a89cdadbd10a8d52f2ec7d47cc51
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987406"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169993"
 ---
 # <a name="axes-collection-properties-methods-and-events"></a>Propiedades de la colección de ejes, métodos y eventos
 ## <a name="properties"></a>Propiedades  
@@ -29,7 +29,7 @@ ms.locfileid: "88987406"
 ## <a name="methods"></a>Métodos  
  [Refresh (método)](../ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  
