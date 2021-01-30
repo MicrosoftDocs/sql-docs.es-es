@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_proxy
 - sp_update_proxy_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 052f78652c02b7486d930dbb7071a6b2a981074b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f12d4666ed97033b19d7a0d4e39b17806e4d0953
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473505"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171722"
 ---
 # <a name="sp_update_proxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,17 +48,17 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @proxy_id = ] id` Número de identificación del proxy que se va a cambiar. La *proxy_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @proxy_id = ] id` Número de identificación del proxy que se va a cambiar. La *proxy_id* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @proxy_name = ] 'proxy_name'` Nombre del proxy que se va a cambiar. La *proxy_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @proxy_name = ] 'proxy_name'` Nombre del proxy que se va a cambiar. La *proxy_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @credential_name = ] 'credential_name'` El nombre de la nueva credencial para el proxy. La *credential_name* es de **tipo sysname y su**valor predeterminado es NULL. Se puede especificar *credential_name* o *credential_id* .  
+`[ @credential_name = ] 'credential_name'` El nombre de la nueva credencial para el proxy. La *credential_name* es de **tipo sysname y su** valor predeterminado es NULL. Se puede especificar *credential_name* o *credential_id* .  
   
-`[ @credential_id = ] credential_id` El número de identificación de la nueva credencial para el proxy. La *credential_id* es de **tipo int**y su valor predeterminado es NULL. Se puede especificar *credential_name* o *credential_id* .  
+`[ @credential_id = ] credential_id` El número de identificación de la nueva credencial para el proxy. La *credential_id* es de **tipo int** y su valor predeterminado es NULL. Se puede especificar *credential_name* o *credential_id* .  
   
-`[ @new_name = ] 'new_name'` Nuevo nombre del proxy. La *new_name* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se proporciona, el procedimiento cambia el nombre del proxy a *new_name*. Si este argumento es NULL, el nombre del proxy no varía.  
+`[ @new_name = ] 'new_name'` Nuevo nombre del proxy. La *new_name* es de **tipo sysname y su** valor predeterminado es NULL. Cuando se proporciona, el procedimiento cambia el nombre del proxy a *new_name*. Si este argumento es NULL, el nombre del proxy no varía.  
   
-`[ @enabled = ] is_enabled` Indica si el proxy está habilitado. La marca *is_enabled* es **tinyint**y su valor predeterminado es NULL. Cuando *is_enabled* es **0**, el proxy no está habilitado y no se puede usar en un paso de trabajo. Si este argumento es NULL, el estado del proxy no varía.  
+`[ @enabled = ] is_enabled` Indica si el proxy está habilitado. La marca *is_enabled* es **tinyint** y su valor predeterminado es NULL. Cuando *is_enabled* es **0**, el proxy no está habilitado y no se puede usar en un paso de trabajo. Si este argumento es NULL, el estado del proxy no varía.  
   
 `[ @description = ] 'description'` Nueva descripción del proxy. La *Descripción* es de tipo **nvarchar (512)** y su valor predeterminado es NULL. Si este argumento es NULL, la descripción del proxy no varía.  
   
@@ -66,9 +66,9 @@ sp_update_proxy
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Observaciones  
- Se debe especificar ** \@ proxy_name** o ** \@ proxy_id** . Si se especifican los dos argumentos, deben hacer referencia al mismo proxy; de lo contrario, el procedimiento almacenado genera un error.  
+ Se debe especificar **\@ proxy_name** o **\@ proxy_id** . Si se especifican los dos argumentos, deben hacer referencia al mismo proxy; de lo contrario, el procedimiento almacenado genera un error.  
   
- Se debe especificar ** \@ credential_name** o ** \@ credential_id** para cambiar la credencial para el proxy. Si se especifican los dos argumentos, deben hacer referencia a la misma credencial; de lo contrario, el procedimiento almacenado genera un error.  
+ Se debe especificar **\@ credential_name** o **\@ credential_id** para cambiar la credencial para el proxy. Si se especifican los dos argumentos, deben hacer referencia a la misma credencial; de lo contrario, el procedimiento almacenado genera un error.  
   
  Este procedimiento cambia el proxy, pero no cambia el acceso al proxy. Para cambiar el acceso a un proxy, use **sp_grant_login_to_proxy** y **sp_revoke_login_from_proxy**.  
   

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Table::PutName
@@ -42,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd3a9fd328ce332c409d613ad468b96f0b94d31e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 83ef51697cd3ad1ad1a01355baead5d90788813f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983916"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171994"
 ---
 # <a name="name-property-adox"></a>Name (propiedad, ADOX)
 Indica el nombre del objeto.  
@@ -60,7 +60,7 @@ Indica el nombre del objeto.
   
  La propiedad **Name** es de lectura y escritura en objetos de [columna](./column-object-adox.md), [grupo](./group-object-adox.md), [clave](./key-object-adox.md), [Índice](./index-object-adox.md), [tabla](./table-object-adox.md)y [usuario](./user-object-adox.md) . La propiedad **Name** es de solo lectura en los objetos de [Catálogo](./catalog-object-adox.md), [procedimiento](./procedure-object-adox.md)y [vista](./view-object-adox.md) .  
   
- En el caso de objetos de lectura/escritura (objetos de**columnas**, **grupos**, **claves**, **índices**, **tablas** y **usuarios** ), el valor predeterminado es una cadena vacía ("").  
+ En el caso de objetos de lectura/escritura (objetos de **columnas**, **grupos**, **claves**, **índices**, **tablas** y **usuarios** ), el valor predeterminado es una cadena vacía ("").  
   
 > [!NOTE]
 >  En el caso de las claves, esta propiedad es de solo lectura en objetos de **clave** ya anexados a una colección. En el caso de las tablas, esta propiedad es de solo lectura para los objetos de **tabla** ya anexados a una colección.  

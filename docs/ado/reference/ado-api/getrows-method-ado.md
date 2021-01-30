@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::GetRows
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 666eabf1a375c6a86826bc94600846bd10a0ecfe
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: df59c3d464d1c19a3b98e8611e2db2983db2a833
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990916"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170995"
 ---
 # <a name="getrows-method-ado"></a>Método GetRows (ADO)
 Recupera varios registros de un objeto de [conjunto de registros](./recordset-object-ado.md) en una matriz.  
@@ -44,7 +44,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *Iniciar*  
  Opcional. Un valor de **cadena** o una **variante** que se evalúa como el marcador del registro del que debe comenzar la operación de **GetRows** . También puede usar un valor de [BookmarkEnum](./bookmarkenum.md) .  
   
- *Campos*  
+ *Fields*  
  Opcional. **Variante** que representa un nombre de campo único o una posición ordinal, o una matriz de nombres de campo o números de posición ordinal. ADO solo devuelve los datos de estos campos.  
   
 ## <a name="remarks"></a>Observaciones  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Field20::DefinedSize
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35330c6cae4a3450d4a970edddf360296ce33148
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 756fe40bf7916dfa3e56a3e559be2874b5e8cd85
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974156"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171312"
 ---
 # <a name="definedsize-property"></a>Propiedad DefinedSize
 Indica la capacidad de los datos de un objeto de [campo](../../../ado/reference/ado-api/field-object.md) .  
@@ -29,7 +29,7 @@ Indica la capacidad de los datos de un objeto de [campo](../../../ado/reference/
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un valor **Long** que refleja el tamaño definido de un campo, que depende del tipo de datos del objeto de campo. consulte [tipo](../../../ado/reference/ado-api/type-property-ado.md) para obtener más información. Para un campo que utiliza un tipo de datos de longitud fija, el valor devuelto es el tamaño del tipo de datos en bytes. Para un campo que utiliza un tipo de datos de longitud variable, es uno de los siguientes:  
   
-1.  La longitud máxima del campo en caracteres (para **advarchar** y **adVarWChar**) o en bytes (para **adVarBinary**y **adVarNumeric**) si el campo tiene una longitud definida. Por ejemplo, el campo **advarchar (5)** tiene una longitud máxima de 5.  
+1.  La longitud máxima del campo en caracteres (para **advarchar** y **adVarWChar**) o en bytes (para **adVarBinary** y **adVarNumeric**) si el campo tiene una longitud definida. Por ejemplo, el campo **advarchar (5)** tiene una longitud máxima de 5.  
   
 2.  La longitud máxima del tipo de datos en caracteres (para **adChar** y **adWChar**) o en bytes (para **adBinary** y **adNumeric**) si el campo no tiene una longitud definida.  
   

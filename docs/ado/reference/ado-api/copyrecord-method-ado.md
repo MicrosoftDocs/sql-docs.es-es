@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::raw_CopyRecord
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0056d33f1ad07ed48002bb7638acd84a963fb566
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d2f6cd1b8bb40b4c62ad2c75fef63fd641201e9a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974586"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171406"
 ---
 # <a name="copyrecord-method-ado"></a>Método CopyRecord (ADO)
 Copia una entidad representada por un [registro](./record-object-ado.md) en otra ubicación.  

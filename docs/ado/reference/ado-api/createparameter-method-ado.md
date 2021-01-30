@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command15::raw_CreateParameter
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8fd075dff5ae67c7965082a9b7d0f75f5c4d47eb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 61793ca158cee6d4143128eae7fdecf3722ae61e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974486"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171375"
 ---
 # <a name="createparameter-method-ado"></a>Método CreateParameter (ADO)
 Crea un nuevo objeto de [parámetro](./parameter-object.md) con las propiedades especificadas.  
@@ -41,7 +41,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Nombre*  
  Opcional. Valor de **cadena** que contiene el nombre del objeto de **parámetro** .  
   
- *Tipo*  
+ *Type*  
  Opcional. Valor de [DataTypeEnum](./datatypeenum.md) que especifica el tipo de datos del objeto de **parámetro** .  
   
  *Dirección*  

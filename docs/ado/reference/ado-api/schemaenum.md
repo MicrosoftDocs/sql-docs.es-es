@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - SchemaEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bcbe9bd3c3f4408be7d228c9edae4da20929f69
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 55a55d39117f2367b1b13c1a25b3785fe2d9cacc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989266"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170307"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Especifica el tipo de **conjunto de registros** de esquema que recupera el método [OpenSchema](./openschema-method.md) .  
@@ -33,9 +33,9 @@ Especifica el tipo de **conjunto de registros** de esquema que recupera el méto
   
  Puede traducir los tipos de datos de las columnas de la documentación de OLE DB a tipos de datos de ADO si hace referencia a la columna Description del tema de la [DataTypeEnum](./datatypeenum.md) de ADO. Por ejemplo, un tipo de datos OLE DB de **DBTYPE_WSTR** es equivalente a un tipo de datos ADO de **adWChar**.  
   
- ADO genera resultados similares a los esquemas para las constantes, **adSchemaDBInfoKeywords** y **adSchemaDBInfoLiterals**. ADO crea un **conjunto de registros**y, a continuación, rellena cada fila con los valores devueltos por los métodos **IDBInfo:: GetKeywords** y **IDBInfo:: GetLiteralInfo** . Puede encontrar información adicional sobre estos métodos en la sección [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) de la referencia del programador de OLE DB.  
+ ADO genera resultados similares a los esquemas para las constantes, **adSchemaDBInfoKeywords** y **adSchemaDBInfoLiterals**. ADO crea un **conjunto de registros** y, a continuación, rellena cada fila con los valores devueltos por los métodos **IDBInfo:: GetKeywords** y **IDBInfo:: GetLiteralInfo** . Puede encontrar información adicional sobre estos métodos en la sección [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) de la referencia del programador de OLE DB.  
   
-|Constante|Valor|Descripción|Columnas de restricción|  
+|Constante|Value|Descripción|Columnas de restricción|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Devuelve las aserciones definidas en el catálogo que son propiedad de un usuario determinado.<br /><br /> (Conjunto de filas ASERCIONES)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|Devuelve los atributos físicos asociados a los catálogos accesibles desde DBMS.<br /><br /> (Conjunto de filas CATALOGs)|CATALOG_NAME|  

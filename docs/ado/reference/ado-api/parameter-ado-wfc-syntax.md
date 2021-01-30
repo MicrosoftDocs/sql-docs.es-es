@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 365e843693def4f8a050dbc5f12c4a23768923f1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: be74f3405a3b8ade04f2598a125efde759cf4195
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990186"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170638"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parámetro (ADO - sintaxis WFC)
 ## <a name="package-commswfcdata"></a>paquete com. ms. wfc. Data  

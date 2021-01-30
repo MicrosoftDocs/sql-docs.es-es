@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ErrorValueEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48962e163804eaa779f82789082e5b8d493bc3cd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 238c8bf3d0c21625b9317690f70adbe16bd5075f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973586"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171163"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Especifica el tipo de error en tiempo de ejecución de ADO.  
@@ -32,20 +32,20 @@ Especifica el tipo de error en tiempo de ejecución de ADO.
   
 -   Decimal negativo: traducción decimal del número de error completo.  
   
--   Hexadecimal: representación hexadecimal del número de error completo. El código de la instalación de Windows está en el cuarto dígito. El código de instalación de los números de *error de ADO es.* Por ejemplo: 0x800***A***0E7B.  
+-   Hexadecimal-The representación hexadecimal del número de error completo. El código de la instalación de Windows está en el cuarto dígito. El código de instalación de los números de *error de ADO es.* Por ejemplo: 0x800 ***A** _0E7B.  
   
 > [!NOTE]
->  Se pueden pasar OLE DB errores a la aplicación ADO. Normalmente, se pueden identificar mediante un código de servicio de Windows de *4*. Por ejemplo, 0x800***4***.  
+>  Se pueden pasar OLE DB errores a la aplicación ADO. Normalmente, se pueden identificar mediante un código de servicio de Windows de _4 *. Por ejemplo, 0x800 * * * 4* *_.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
-|**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|No se puede cambiar la propiedad **ActiveConnection** de un objeto de **conjunto de registros** que tiene un objeto **Command** como su origen.|  
+|_ *adErrBoundToCommand**|3707-2146824581 0x800A0E7B|No se puede cambiar la propiedad **ActiveConnection** de un objeto de **conjunto de registros** que tiene un objeto **Command** como su origen.|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|El servidor no puede completar la operación.|  
 |**adErrCantChangeConnection**|3748-2146824540 0x800A0EA4|Se denegó la conexión. La nueva conexión que solicitó tiene características diferentes de la que ya se está usando.|  
 |**adErrCantChangeProvider**|3220-2146825068 0X800A0C94|El proveedor proporcionado difiere del que ya se está usando.|  
 |**adErrCantConvertvalue**|3724-2146824564 0x800A0E8C|No se puede convertir el valor de los datos por motivos distintos a un error de coincidencia de signos o desbordamiento de datos. Por ejemplo, la conversión tendría datos truncados.|  
 |**adErrCantCreate**|3725-2146824563 0x800A0E8D|No se puede establecer ni recuperar el valor de los datos porque el tipo de datos del campo era desconocido o el proveedor no tenía suficientes recursos para realizar la operación.|  
-|**adErrCatalogNotSet**|3747-2146824541 0x800A0EA3|La operación requiere un **ParentCatalog**válido.|  
+|**adErrCatalogNotSet**|3747-2146824541 0x800A0EA3|La operación requiere un **ParentCatalog** válido.|  
 |**adErrColumnNotOnThisRow**|3726-2146824562 0x800A0E8E|El registro no contiene este campo.|  
 |**adErrDataConversion**|3421-2146824867 0x800A0D5D|La aplicación usa un valor de tipo incorrecto para la operación actual.|  
 |**adErrDataOverflow**|3721-2146824567 0x800A0E89|El valor de los datos es demasiado grande para representarlo en el tipo de datos del campo.|  
@@ -91,8 +91,8 @@ Especifica el tipo de error en tiempo de ejecución de ADO.
 |**adErrURLNamedRowDoesNotExist**|3737-2146824551 0x800A0E99|El registro nombrado por esta dirección URL no existe.|  
 |**adErrVolumeNotFound**|3733-2146824555 0x800A0E95|El proveedor no encuentra el dispositivo de almacenamiento indicado por la dirección URL. Asegúrese de que la dirección URL está escrita correctamente.|  
 |**adErrWriteFile**|3004-2146825284 0x800A0BBC|No se pudo escribir en el archivo.|  
-|**adWrnSecurityDialog**|3717-2146824571 0x800A0E85|Sólo para uso interno. No debe usarse.|  
-|**adWrnSecurityDialogHeader**|3718-2146824570 0x800A0E86|Sólo para uso interno. No debe usarse.|  
+|**adWrnSecurityDialog**|3717-2146824571 0x800A0E85|Solo para uso interno. No debe usarse.|  
+|**adWrnSecurityDialogHeader**|3718-2146824570 0x800A0E86|Solo para uso interno. No debe usarse.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
  Paquete: **com. ms. wfc. Data**  

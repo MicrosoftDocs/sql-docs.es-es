@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Open
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 879456c30c3b34773d6f6b1395a88e04f5faaf9e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8a6c7b68f817bd3e4937833a4385819bd8de8aac
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990316"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170694"
 ---
 # <a name="open-method-ado-recordset"></a>Open (método) (conjunto de registros ADO)
 Abre un cursor en un objeto de [conjunto de registros](./recordset-object-ado.md) .  
@@ -51,7 +51,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  Opcional. Un valor de **tipo Long** que indica cómo el proveedor debe evaluar el argumento de *origen* si representa algo distinto de un objeto **Command** o si el **conjunto de registros** debe restaurarse a partir de un archivo en el que se guardó previamente. Puede ser uno o varios valores [CommandTypeEnum](./commandtypeenum.md) o [ExecuteOptionEnum](./executeoptionenum.md) , que se pueden combinar con un operador OR bit a bit.  
   
 > [!NOTE]
->  Si abre un **conjunto de registros** desde una **secuencia** que contiene un **conjunto de registros**persistente, el uso de un valor de [ExecuteOptionEnum](./executeoptionenum.md) de **adAsyncFetchNonBlocking** no tendrá ningún efecto; la captura será sincrónica y se bloqueará.  
+>  Si abre un **conjunto de registros** desde una **secuencia** que contiene un **conjunto de registros** persistente, el uso de un valor de [ExecuteOptionEnum](./executeoptionenum.md) de **adAsyncFetchNonBlocking** no tendrá ningún efecto; la captura será sincrónica y se bloqueará.  
   
 > [!NOTE]
 >  Los valores de **ExecuteOpenEnum** de **adExecuteNoRecords** o **adExecuteStream** no deben usarse con **Open**.  
@@ -59,7 +59,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 ## <a name="remarks"></a>Observaciones  
  El cursor predeterminado para un **conjunto de registros** ADO es un cursor de solo avance y de solo lectura que se encuentra en el servidor.  
   
- Al usar el método **Open** en un objeto de **conjunto de registros** , se abre un cursor que representa los registros de una tabla base, los resultados de una consulta o un **conjunto de registros**previamente guardado.  
+ Al usar el método **Open** en un objeto de **conjunto de registros** , se abre un cursor que representa los registros de una tabla base, los resultados de una consulta o un **conjunto de registros** previamente guardado.  
   
  Use el argumento *source* opcional para especificar un origen de datos mediante uno de los siguientes: una variable de objeto de **comando** , una instrucción SQL, un procedimiento almacenado, un nombre de tabla, una dirección URL o un nombre de ruta de acceso de archivo completo. Si el *origen* es un nombre de ruta de acceso de archivo, puede ser una ruta de acceso completa ("c:\dir\file.RST"), una ruta de acceso relativa (".. \file.RST ") o una dirección URL ( `https://files/file.rst` ).  
   
@@ -67,7 +67,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  El argumento *ActiveConnection* corresponde a la propiedad [ActiveConnection](./activeconnection-property-ado.md) y especifica en qué conexión se debe abrir el objeto de **conjunto de registros** . Si pasa una definición de conexión para este argumento, ADO abrirá una nueva conexión con los parámetros especificados. Después de abrir el **conjunto de registros** con un cursor del lado cliente estableciendo la propiedad [CursorLocation](./cursorlocation-property-ado.md) en **adUseClient**, puede cambiar el valor de esta propiedad para enviar las actualizaciones a otro proveedor. También puede establecer esta propiedad en **Nothing** (en Microsoft Visual Basic) o null para desconectar el **conjunto de registros** de cualquier proveedor. Sin embargo, si se cambia *ActiveConnection* para un cursor del servidor, se genera un error.  
   
- Para los demás argumentos que corresponden directamente a las propiedades de un objeto de **conjunto de registros** (*source*, *CursorType*y *LockType*), la relación de los argumentos con las propiedades es la siguiente:  
+ Para los demás argumentos que corresponden directamente a las propiedades de un objeto de **conjunto de registros** (*source*, *CursorType* y *LockType*), la relación de los argumentos con las propiedades es la siguiente:  
   
 -   La propiedad es de lectura y escritura antes de que se abra el objeto de **conjunto de registros** .  
   
@@ -86,7 +86,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  El valor predeterminado para el argumento *Options* es **adCmdFile** si no hay ninguna conexión asociada al **conjunto de registros**. Este suele ser el caso de los objetos de **conjunto de registros** almacenados de forma persistente.  
   
- Si el origen de datos no devuelve ningún registro, el proveedor establece las propiedades [BOF](./bof-eof-properties-ado.md) y [EOF](./bof-eof-properties-ado.md) en **true**y la posición del registro actual es indefinida. Todavía puede agregar nuevos datos a este objeto de **conjunto de registros** vacío si el tipo de cursor lo permite.  
+ Si el origen de datos no devuelve ningún registro, el proveedor establece las propiedades [BOF](./bof-eof-properties-ado.md) y [EOF](./bof-eof-properties-ado.md) en **true** y la posición del registro actual es indefinida. Todavía puede agregar nuevos datos a este objeto de **conjunto de registros** vacío si el tipo de cursor lo permite.  
   
  Cuando haya finalizado las operaciones sobre un objeto de **conjunto de registros** abierto, use el método [Close](./close-method-ado.md) para liberar los recursos del sistema asociados. Al cerrar un objeto no se quita de la memoria; puede cambiar la configuración de sus propiedades y usar el método **Open** para abrirla de nuevo más adelante. Para eliminar completamente un objeto de la memoria, establezca la variable de objeto en *Nothing*.  
   

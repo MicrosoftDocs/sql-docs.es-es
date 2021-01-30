@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::OpenSchema
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce524119367b53cac86c4bd29e3dc6927671c871
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9b5ca92e42a68639f6b9e3044894ec779109fff5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990286"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170674"
 ---
 # <a name="openschema-method"></a>Método OpenSchema
 Obtiene la información del esquema de la base de datos del proveedor.  
@@ -52,11 +52,11 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
   
  El argumento *QueryType* es un GUID que indica las columnas (esquemas) devueltas. La especificación OLE DB tiene una lista completa de esquemas.  
   
- El argumento *criteria* limita los resultados de una consulta de esquema. *Criterios* especifica una matriz de valores que se debe producir en un subconjunto correspondiente de columnas, denominadas columnas de restricción, en el **conjunto de registros**resultante.  
+ El argumento *criteria* limita los resultados de una consulta de esquema. *Criterios* especifica una matriz de valores que se debe producir en un subconjunto correspondiente de columnas, denominadas columnas de restricción, en el **conjunto de registros** resultante.  
   
  La constante **adSchemaProviderSpecific** se usa para el argumento *QueryType* si el proveedor define sus propias consultas de esquema no estándar fuera de las mencionadas anteriormente. Cuando se usa esta constante, se necesita el argumento *SchemaID* para pasar el GUID de la consulta de esquema que se va a ejecutar. Si *QueryType* se establece en **adSchemaProviderSpecific** , pero no se proporciona *SchemaID* , se producirá un error.  
   
- No es necesario que los proveedores admitan todas las consultas de esquema estándar de OLE DB. En concreto, la especificación OLE DB requiere solo **adSchemaTables**, **adSchemaColumns**y **adSchemaProviderTypes** . Sin embargo, no es necesario que el proveedor admita las restricciones de *criterios* enumeradas anteriormente para esas consultas de esquema.  
+ No es necesario que los proveedores admitan todas las consultas de esquema estándar de OLE DB. En concreto, la especificación OLE DB requiere solo **adSchemaTables**, **adSchemaColumns** y **adSchemaProviderTypes** . Sin embargo, no es necesario que el proveedor admita las restricciones de *criterios* enumeradas anteriormente para esas consultas de esquema.  
   
 > [!NOTE]
 >  **Uso del servicio de datos remotos** El método **OpenSchema** no está disponible en un objeto de [conexión](./connection-object-ado.md) del lado cliente.  

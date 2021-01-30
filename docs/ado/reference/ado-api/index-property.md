@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset21::Index
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44dab27756e71142b59ae27b2d8499e1dd2f639a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9e8c346ac48092d7a5dcaf09068bb64d63316a38
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990816"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170961"
 ---
 # <a name="index-property"></a>Propiedad Index
 Indica el nombre del índice actualmente activo para un objeto de [conjunto de registros](./recordset-object-ado.md) .  
@@ -44,7 +44,7 @@ Indica el nombre del índice actualmente activo para un objeto de [conjunto de r
   
  Si se puede establecer el índice, la posición de la fila actual puede cambiar. Esto producirá una actualización de la propiedad [AbsolutePosition](./absoluteposition-property-ado.md) y desencadenará los eventos **WillChangeRecordset**, **RecordsetChangeComplete**, [WillMove](./willmove-and-movecomplete-events-ado.md)y [MoveComplete](./willmove-and-movecomplete-events-ado.md) .  
   
- Si se puede establecer el índice y la propiedad [LockType](./locktype-property-ado.md) es **adLockPessimistic** o **adLockOptimistic**, se realiza una operación de [UpdateBatch](./updatebatch-method.md) implícita. Esto libera los grupos actuales y afectados. Se libera cualquier filtro existente y la posición de la fila actual se cambia a la primera fila del **conjunto de registros**reordenado.  
+ Si se puede establecer el índice y la propiedad [LockType](./locktype-property-ado.md) es **adLockPessimistic** o **adLockOptimistic**, se realiza una operación de [UpdateBatch](./updatebatch-method.md) implícita. Esto libera los grupos actuales y afectados. Se libera cualquier filtro existente y la posición de la fila actual se cambia a la primera fila del **conjunto de registros** reordenado.  
   
  La propiedad de **Índice** se utiliza junto con el método [Seek](./seek-method.md) . Si el proveedor subyacente no admite la propiedad de **Índice** y, por lo tanto, el método **Seek** , considere la posibilidad de usar el método [Find](./find-method-ado.md) en su lugar. Determine si el objeto de **conjunto de registros** admite índices con el método [Supports](./supports-method.md)**(adIndex)** .  
   

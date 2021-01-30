@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Close
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7843642c38a30d854cb6729fd5a418de8c91f2c7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9a7c0ea176f203bd9b7b2febc17475e6af385d7f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975396"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171522"
 ---
 # <a name="close-method-ado"></a>Close (método) (ADO)
 Cierra un objeto abierto y los objetos dependientes.  
@@ -46,7 +46,7 @@ object.Close
  Al cerrar un objeto de **conexión** mientras hay objetos de **conjunto de registros** abiertos en la conexión, se revierten los cambios pendientes en todos los objetos de **conjunto de registros** . Al cerrar explícitamente un objeto de **conexión** (llamando al método **Close** ) mientras una transacción está en curso, se genera un error. Si un objeto de **conexión** cae fuera del ámbito mientras una transacción está en curso, ADO revierte automáticamente la transacción.  
   
 ## <a name="recordset-record-stream"></a>Conjunto de registros, registro, secuencia  
- Al usar el método **Close** para cerrar un objeto de **conjunto de registros**, **registro**o **secuencia** , se liberan los datos asociados y cualquier acceso exclusivo que haya tenido a los datos a través de este objeto concreto. Después, puede llamar al método [Open](./open-method-ado-recordset.md) para volver a abrir el objeto con los mismos atributos, o modificados.  
+ Al usar el método **Close** para cerrar un objeto de **conjunto de registros**, **registro** o **secuencia** , se liberan los datos asociados y cualquier acceso exclusivo que haya tenido a los datos a través de este objeto concreto. Después, puede llamar al método [Open](./open-method-ado-recordset.md) para volver a abrir el objeto con los mismos atributos, o modificados.  
   
  Mientras se cierra un objeto de **conjunto de registros** , al llamar a cualquier método que requiera un cursor activo, se genera un error.  
   

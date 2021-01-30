@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - LineSeparatorsEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17fb6ac91f9cb9e0f4f78558010a96813b92ee18
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 650094030696b905fb153f982ba6281eefd7ef4c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990716"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170901"
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
 Especifica el carácter que se usa como separador de línea en los objetos de [flujo](./stream-object-ado.md) de texto.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adCR**|13|Indica el retorno de carro.|  
 |**adCRLF**|-1|Predeterminada. Indica el avance de línea de retorno de carro.|  

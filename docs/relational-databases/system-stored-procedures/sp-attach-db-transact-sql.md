@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_attach_db_TSQL
 - sp_attach_db
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79c3d518798c53342e67bfa42ce430d9ffe8e07a
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: cb1d6447fb73174817fe8105c3dea1866d09b789
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753477"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171776"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,9 +48,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbnam_ '` Es el nombre de la base de datos que se va a adjuntar al servidor. El nombre debe ser único. *dbname* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @dbname = ] 'dbnam_ '` Es el nombre de la base de datos que se va a adjuntar al servidor. El nombre debe ser único. *dbname* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @filename1 = ] 'filename_n'` Es el nombre físico, incluida la ruta de acceso, de un archivo de base de datos. *filename_n* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. Se pueden especificar hasta 16 nombres de archivo. Los nombres de parámetro comienzan en ** \@ nombreDeArchivo1** y se incrementan a ** \@ filename16**. La lista de nombres de archivo debe incluir al menos el archivo principal. El archivo principal contiene las tablas del sistema que señalan a otros archivos de la base de datos. La lista también debe contener los archivos que se hayan movido después de separar la base de datos.  
+`[ @filename1 = ] 'filename_n'` Es el nombre físico, incluida la ruta de acceso, de un archivo de base de datos. *filename_n* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. Se pueden especificar hasta 16 nombres de archivo. Los nombres de parámetro comienzan en **\@ nombreDeArchivo1** y se incrementan a **\@ filename16**. La lista de nombres de archivo debe incluir al menos el archivo principal. El archivo principal contiene las tablas del sistema que señalan a otros archivos de la base de datos. La lista también debe contener los archivos que se hayan movido después de separar la base de datos.  
   
 > [!NOTE]  
 >  Este argumento se asigna al parámetro FILENAME de la instrucción CREATE DATABASE. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-transact-sql.md).  

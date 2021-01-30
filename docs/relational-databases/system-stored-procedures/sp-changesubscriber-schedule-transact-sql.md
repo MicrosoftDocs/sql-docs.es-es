@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changesubscriber_schedule
 - sp_changesubscriber_schedule_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6fb42a19d3c1b844fdcff1d31201d9acb0a86adb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9e93079a747c3766a47ababf3fdd866053b40968
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543709"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171768"
 ---
 # <a name="sp_changesubscriber_schedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,29 +51,29 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ## <a name="arguments"></a>Argumentos  
 `[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. el *suscriptor* es de **tipo sysname**. El nombre del suscriptor tiene que ser único en la base de datos, no puede existir previamente y no puede ser NULL.  
   
-`[ @agent_type = ] type` Es el tipo de agente. el *tipo* es **smallint**y su valor predeterminado es **0**. **0** indica un agente de distribución. **1** indica un agente de mezcla.  
+`[ @agent_type = ] type` Es el tipo de agente. el *tipo* es **smallint** y su valor predeterminado es **0**. **0** indica un agente de distribución. **1** indica un agente de mezcla.  
   
-`[ @frequency_type = ] frequency_type` Es la frecuencia con la que se programa la tarea de distribución. *frequency_type* es de **tipo int**y su valor predeterminado es **64**. Hay 10 columnas de programación.  
+`[ @frequency_type = ] frequency_type` Es la frecuencia con la que se programa la tarea de distribución. *frequency_type* es de **tipo int** y su valor predeterminado es **64**. Hay 10 columnas de programación.  
   
-`[ @frequency_interval = ] frequency_interval` Es el valor que se aplica a la frecuencia establecida por *frequency_type*. *frequency_interval* es de **tipo int**y su valor predeterminado es **1**.  
+`[ @frequency_interval = ] frequency_interval` Es el valor que se aplica a la frecuencia establecida por *frequency_type*. *frequency_interval* es de **tipo int** y su valor predeterminado es **1**.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Es la fecha de la tarea de distribución. *frequency_relative_interval* es de **tipo int**y su valor predeterminado es **1**.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Es la fecha de la tarea de distribución. *frequency_relative_interval* es de **tipo int** y su valor predeterminado es **1**.  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int** y su valor predeterminado es **0**.  
   
-`[ @frequency_subday = ] frequency_subday` Es la frecuencia, en minutos, con la que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y su valor predeterminado es **4**.  
+`[ @frequency_subday = ] frequency_subday` Es la frecuencia, en minutos, con la que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int** y su valor predeterminado es **4**.  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int** y su valor predeterminado es **5**.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Es la hora del día en la que la tarea de distribución se programa por primera vez. *active_start_time_of_day* es de **tipo int**y su valor predeterminado es **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Es la hora del día en la que la tarea de distribución se programa por primera vez. *active_start_time_of_day* es de **tipo int** y su valor predeterminado es **0**.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Es la hora del día a la que la tarea de distribución deja de estar programada. *active_end_time_of_day* es de **tipo int**y su valor predeterminado es **235959**, lo que significa 11:59:59 P.M. en un reloj de 24 horas.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Es la hora del día a la que la tarea de distribución deja de estar programada. *active_end_time_of_day* es de **tipo int** y su valor predeterminado es **235959**, lo que significa 11:59:59 P.M. en un reloj de 24 horas.  
   
-`[ @active_start_date = ] active_start_date` Es la fecha en la que la tarea de distribución se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es de **tipo int**y su valor predeterminado es **0**.  
+`[ @active_start_date = ] active_start_date` Es la fecha en la que la tarea de distribución se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es de **tipo int** y su valor predeterminado es **0**.  
   
 `[ @active_end_date = ] active_end_date` Es la fecha en la que la tarea de distribución deja de estar programada, con el formato AAAAMMDD. *active_end_date* es de **tipo int**, con un valor predeterminado de **99991231**, que significa el 31 de diciembre de 9999.  
   
-`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  no se debe usar el *publicador* al cambiar las propiedades de un artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

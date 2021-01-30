@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d8cdeffd661ece8120078019792d306844e575d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 35db4866759c229556ae8f0a9b3b4470227c28ef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987946"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172402"
 ---
 # <a name="value-property-example-vc"></a>Ejemplo de la propiedad de valor (VC ++)
 En este ejemplo se muestra la propiedad [Value](./value-property-ado.md) con objetos [Field](./field-object.md) y [Property](./property-object-ado.md) al mostrar los valores de campo y propiedad de la tabla ***Employees*** .  

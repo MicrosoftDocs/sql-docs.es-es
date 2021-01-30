@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Collection::Refresh
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66324860f931a919cccc36d3de9464d2ad2e48d0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f72f41f58ed43665acd3838a5f8e2228c736fd78
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989616"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170402"
 ---
 # <a name="refresh-method-ado"></a>Actualizar (método, ADO)
 Actualiza los objetos de una colección para reflejar los objetos disponibles en el proveedor y específicos de este.  
@@ -48,7 +48,7 @@ collection.Refresh
 > [!NOTE]
 >  Si usa el método **Refresh** para obtener información de parámetros del proveedor y devuelve uno o más objetos de [parámetro](./parameter-object.md) de tipo de datos de longitud variable, ADO puede asignar memoria para los parámetros en función de su tamaño máximo potencial, lo que producirá un error durante la ejecución. Debe establecer explícitamente la propiedad [size](./size-property-ado-parameter.md) para estos parámetros antes de llamar al método [Execute](./execute-method-ado-command.md) para evitar errores.  
   
-### <a name="fields"></a>Fields  
+### <a name="fields"></a>Campos  
  El uso del método **Refresh** en la colección [Fields](./fields-collection-ado.md) no tiene ningún efecto visible. Para recuperar los cambios de la estructura de base de datos subyacente, debe utilizar el método [Requery](./requery-method.md) o, si el objeto de [conjunto de registros](./recordset-object-ado.md) no admite marcadores, el método [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) .  
   
 ### <a name="properties"></a>Propiedades  

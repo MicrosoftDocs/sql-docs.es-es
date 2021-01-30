@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command15::Execute
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5bd7e8d98f7d7ccecfce2ce66852f92efa1dae77
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1bc27de85c9c8e1e47ec3fb89ec8fadce07713c3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973516"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171160"
 ---
 # <a name="execute-method-ado-command"></a>Método Execute (Command ADO)
 Ejecuta la consulta, la instrucción SQL o el procedimiento almacenado especificado en la propiedad [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) o [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) del [objeto de comando](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -53,11 +53,11 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ## <a name="remarks"></a>Observaciones  
  El uso del método **Execute** en un objeto **Command** ejecuta la consulta especificada en la propiedad **CommandText** o en la propiedad **CommandStream** del objeto.  
   
- Los resultados se devuelven en un **conjunto de registros** (de forma predeterminada) o como un flujo de información binaria. Para obtener una secuencia binaria, especifique **adExecuteStream** en *Opciones*y, a continuación, proporcione un flujo estableciendo **Command. Properties ("flujo de salida")**. Se puede especificar un objeto de **secuencia** de ADO para recibir los resultados, o bien se puede especificar otro objeto de flujo, como el objeto de respuesta de IIS. Si no se especificó ningún flujo antes de llamar a **Execute** con **adExecuteStream**, se produce un error. La posición de la secuencia en la devolución de **Execute** es específica del proveedor.  
+ Los resultados se devuelven en un **conjunto de registros** (de forma predeterminada) o como un flujo de información binaria. Para obtener una secuencia binaria, especifique **adExecuteStream** en *Opciones* y, a continuación, proporcione un flujo estableciendo **Command. Properties ("flujo de salida")**. Se puede especificar un objeto de **secuencia** de ADO para recibir los resultados, o bien se puede especificar otro objeto de flujo, como el objeto de respuesta de IIS. Si no se especificó ningún flujo antes de llamar a **Execute** con **adExecuteStream**, se produce un error. La posición de la secuencia en la devolución de **Execute** es específica del proveedor.  
   
- Si el comando no está pensado para devolver resultados (por ejemplo, una consulta de actualización de SQL), el proveedor no devuelve **nada** mientras se especifique la opción **adExecuteNoRecords** ; de lo contrario, Execute devuelve un **conjunto de registros**cerrado. Algunos lenguajes de aplicación permiten omitir este valor devuelto si no se desea ningún **conjunto de registros** .  
+ Si el comando no está pensado para devolver resultados (por ejemplo, una consulta de actualización de SQL), el proveedor no devuelve **nada** mientras se especifique la opción **adExecuteNoRecords** ; de lo contrario, Execute devuelve un **conjunto de registros** cerrado. Algunos lenguajes de aplicación permiten omitir este valor devuelto si no se desea ningún **conjunto de registros** .  
   
- **Execute** genera un error si el usuario especifica un valor para **CommandStream** cuando **CommandType** es **adCmdStoredProc**, **adCmdTable**o **adCmdTableDirect**.  
+ **Execute** genera un error si el usuario especifica un valor para **CommandStream** cuando **CommandType** es **adCmdStoredProc**, **adCmdTable** o **adCmdTableDirect**.  
   
  Si la consulta tiene parámetros, se usan los valores actuales de los parámetros del objeto de **comando** , a menos que se reemplacen con los valores de parámetro pasados con la llamada a **Execute** . Puede invalidar un subconjunto de los parámetros omitiendo nuevos valores para algunos de los parámetros al llamar al método **Execute** . El orden en el que se especifican los parámetros es el mismo orden en el que el método los pasa. Por ejemplo, si hay cuatro (o más) parámetros y desea pasar valores nuevos solo para los parámetros primero y cuarto, pasaría `Array(var1,,,var4)` como el argumento *Parameters* .  
   

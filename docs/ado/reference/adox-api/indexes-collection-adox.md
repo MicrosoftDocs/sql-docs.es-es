@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Table::Indexes
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: daea070c8bd39d6208404f119578773382078634
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 74147f1168e9bf9789c0ab1111daa27536dfd64e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984196"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172015"
 ---
 # <a name="indexes-collection-adox"></a>Colección de índices (ADOX)
 Contiene todos los objetos de [Índice](./index-object-adox.md) de una tabla.  
   
 ## <a name="remarks"></a>Observaciones  
- El método [Append](./append-method-adox-indexes.md) de una colección **Indexes** es único para ADOX. Se puede hacer lo siguiente:  
+ El método [Append](./append-method-adox-indexes.md) de una colección **Indexes** es único para ADOX. Puede:  
   
 -   Agregue un nuevo índice a la colección con el método **Append** .  
   
- Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Se puede hacer lo siguiente:  
+ Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
   
 -   Obtener acceso a un índice de la colección con la propiedad [Item](../ado-api/item-property-ado.md) .  
   

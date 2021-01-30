@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::raw_CopyTo
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bbb394810ebbfe8d8c0e1d598641a1e77e7d204
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 07c5a4bc4db5fc05cb24ee51ac7a9ec989dd1e29
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974556"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171402"
 ---
 # <a name="copyto-method-ado"></a>CopyTo (método) (ADO)
 Copia el número especificado de caracteres o bytes (dependiendo del [tipo](./type-property-ado-stream.md)) de la [secuencia](./stream-object-ado.md) en otro objeto de **flujo** .  
@@ -42,7 +42,7 @@ Stream.CopyTo DestStream, NumChars
 >  Es posible que el parámetro *DestStream* no sea un proxy de objeto de **flujo** porque requiere acceso a una interfaz privada en el objeto de **secuencia** que no se puede enviar de forma remota al cliente.  
   
  *NumChars*  
- Opcional. Valor **entero** que especifica el número de bytes o caracteres que se van a copiar desde la posición actual en la **secuencia** de origen al **flujo**de destino. El valor predeterminado es-1, que especifica que se copian todos los caracteres o bytes de la posición actual a [EOS](./eos-property.md).  
+ Opcional. Valor **entero** que especifica el número de bytes o caracteres que se van a copiar desde la posición actual en la **secuencia** de origen al **flujo** de destino. El valor predeterminado es-1, que especifica que se copian todos los caracteres o bytes de la posición actual a [EOS](./eos-property.md).  
   
 ## <a name="remarks"></a>Observaciones  
  Este método copia el número especificado de caracteres o bytes, empezando por la posición actual especificada por la propiedad [Position](./position-property-ado.md) . Si el número especificado es mayor que el número de bytes disponible hasta **EOS**, solo se copian los caracteres o bytes de la posición actual a **EOS** . Si el valor de *NumChars* es-1, o se omite, se copian todos los caracteres o bytes a partir de la posición actual.  

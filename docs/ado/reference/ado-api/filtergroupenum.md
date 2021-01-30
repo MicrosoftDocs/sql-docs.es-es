@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - FilterGroupEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d9fdf420ee3b550bebfe394bf6722623307384a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8b28b3f23d1df661e5a142d85c3a066acfbf2f50
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88972996"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171042"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 Especifica el grupo de registros que se van a filtrar de un [conjunto de registros](./recordset-object-ado.md).  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adFilterAffectedRecords**|2|Filtros para ver solo los registros afectados por la llamada de última [eliminación](./delete-method-ado-recordset.md), [resincronización](./resync-method.md), [UpdateBatch](./updatebatch-method.md)o [CancelBatch](./cancelbatch-method-ado.md) .|  
 |**adFilterConflictingRecords**|5|Filtros para ver los registros que dieron error en la última actualización por lotes.|  

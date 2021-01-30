@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - KeyTypeEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3e597c52-caf4-4341-8471-d1ade563dbf7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9a914e1be7811dcace5c0e05c199cf18030c8d9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8e12ced9cf435df0b703b5277c6d0846987861df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983956"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172008"
 ---
 # <a name="keytypeenum"></a>KeyTypeEnum
 Especifica el tipo de [clave](./key-object-adox.md): principal, externa o única.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adKeyPrimary**|1|Predeterminada. La clave es una clave principal.|  
 |**adKeyForeign**|2|Se trata de una clave externa.|  

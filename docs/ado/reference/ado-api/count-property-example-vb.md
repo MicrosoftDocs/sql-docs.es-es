@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 772d06ca8fa854f2af77e45007944d7217dd36a7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c3b910450302c83486979f59d019405b97013c22
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974516"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171392"
 ---
 # <a name="count-property-example-vb"></a>Ejemplo de la propiedad de recuento (VB)
-En este ejemplo se muestra la propiedad [Count](./count-property-ado.md) con dos colecciones en la base de datos ***Employee*** . La propiedad obtiene el número de objetos de cada colección y establece el límite superior de los bucles que enumeran estas colecciones. Otra manera de enumerar estas colecciones sin usar la propiedad **Count** sería utilizar `For Each...Next` instrucciones.  
+En este ejemplo se muestra la propiedad [Count](./count-property-ado.md) con dos colecciones en la base de datos ***Employee**. La propiedad obtiene el número de objetos de cada colección y establece el límite superior de los bucles que enumeran estas colecciones. Otra manera de enumerar estas colecciones sin usar la propiedad _ *Count** sería utilizar `For Each...Next` instrucciones.  
   
 ```  
 'BeginCountVB  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - WillExecute
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f56e864efd37b927ae657edc2ef2e8307d839104
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cffc2e0a79ff4bffd83eadac20cf522df6d0c9cc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987776"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172371"
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 Se llama al evento **WillExecute** justo antes de que se ejecute un comando pendiente en una conexión.  
@@ -65,7 +65,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  **WillExecute** permite examinar y modificar los parámetros de ejecución pendientes. Este evento puede devolver una solicitud de cancelación del comando pendiente.  
   
 > [!NOTE]
->  Si el origen original de un **comando** es una secuencia especificada por la propiedad [CommandStream (ADO)](./commandstream-property-ado.md) , la asignación de una nueva cadena al parámetro de **WillExecute**_origen_ WillExecute cambia el origen del **comando**. La propiedad **CommandStream** se borrará y la propiedad [CommandText (ADO)](./commandtext-property-ado.md) se actualizará con el nuevo origen. La secuencia original especificada por **CommandStream** se liberará y no se podrá obtener acceso a ella.  
+>  Si el origen original de un **comando** es una secuencia especificada por la propiedad [CommandStream (ADO)](./commandstream-property-ado.md) , la asignación de una nueva cadena al parámetro de _origen_ WillExecute cambia el origen del **comando**. La propiedad **CommandStream** se borrará y la propiedad [CommandText (ADO)](./commandtext-property-ado.md) se actualizará con el nuevo origen. La secuencia original especificada por **CommandStream** se liberará y no se podrá obtener acceso a ella.  
   
  Si el dialecto de la nueva cadena de origen difiere del valor original de la propiedad de [propiedad de dialecto](./dialect-property.md) (que corresponde a **CommandStream**), se debe especificar el dialecto correcto estableciendo la propiedad de **dialecto** del objeto de comando al que se hace referencia en *pCommand*.  
   

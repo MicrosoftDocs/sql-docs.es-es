@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9c313233cfa82e5f3213366f9680ef3a4c567a5d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 91d55e44f9c9bd1a6bef3e5fc2689eb1899ae025
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88972926"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171022"
 ---
 # <a name="find-method-example-vc"></a>Ejemplo del método Find (VC ++)
 En este ejemplo se usa el método [Find](./find-method-ado.md) del objeto de [conjunto de registros](./recordset-object-ado.md) para buscar y contar el número de títulos de negocio en la base de datos **pubs** . En el ejemplo se da por supuesto que el proveedor subyacente no es compatible con una funcionalidad similar.  

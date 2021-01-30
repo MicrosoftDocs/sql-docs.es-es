@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9eb5e6136be37e120ae9570db661ff75f02d05c5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7710357ccb84d096aefcc1cca20bd87056326a5c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989206"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170298"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Ejemplo de la propiedad index y el método Seek (VB)
-En este ejemplo se usa el método de [búsqueda](./seek-method.md) y la propiedad de [Índice](./index-property.md) del objeto de [conjunto de registros](./recordset-object-ado.md) junto con un identificador de ***empleado***determinado para buscar el nombre del empleado en la tabla ***Employees*** de la base de datos nwind. mdb.  
+En este ejemplo se usa el método de [búsqueda](./seek-method.md) y la propiedad de [Índice](./index-property.md) del objeto de [conjunto de registros](./recordset-object-ado.md) junto con un ***employee id** _ determinado para buscar el nombre del empleado en la tabla _ *_Employees_** de la base de datos nwind. mdb.  
   
 ```  
 'BeginSeekVB  

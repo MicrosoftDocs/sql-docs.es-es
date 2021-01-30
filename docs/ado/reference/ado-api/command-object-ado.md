@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 252a59f63c4ce782a915a1e1cf11af58fd2f233b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b8926e551f97d60256758b7df6c9dabca5584123
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975236"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171488"
 ---
 # <a name="command-object-ado"></a>Objeto Command (ADO)
 Define un comando específico que se va a ejecutar en un origen de datos.  

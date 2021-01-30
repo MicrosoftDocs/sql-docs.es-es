@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 dev_langs:
 - C++
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d9c7abe0375f02d0bb0250d283acca2d5ca1a37
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fd7de2b8d8576bedce58e175a5eea53e7307c10f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973226"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171087"
 ---
 # <a name="field-visual-c-syntax-index-with-import"></a>Field (Visual C++ Índice de sintaxis con #import)
 ## <a name="methods"></a>Métodos  

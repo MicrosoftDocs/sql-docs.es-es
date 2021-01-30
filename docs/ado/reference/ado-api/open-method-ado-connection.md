@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::raw_Open
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3691f6b7b86d7f48ea570a542f85af75c53d017
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a3bca1379c776f6fad1f4ab2aa7368b424ff9e7f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990336"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170708"
 ---
 # <a name="open-method-ado-connection"></a>Open (método) (conexión de ADO)
 Abre una conexión a un origen de datos.  
@@ -55,7 +55,7 @@ connection.Open ConnectionString, UserID, Password, Options
   
  Si pasa la información de usuario y contraseña en el argumento *ConnectionString* y en los argumentos opcionales de *userid* y *password* , los argumentos *userid* y *password* invalidarán los valores especificados en *ConnectionString*.  
   
- Cuando haya finalizado las operaciones en una **conexión**abierta, use el método [Close](./close-method-ado.md) para liberar los recursos del sistema asociados. Al cerrar un objeto no se quita de la memoria; puede cambiar la configuración de sus propiedades y usar el método **Open** para abrirla de nuevo más adelante. Para eliminar completamente un objeto de la memoria, establezca la variable de objeto en *Nothing*.  
+ Cuando haya finalizado las operaciones en una **conexión** abierta, use el método [Close](./close-method-ado.md) para liberar los recursos del sistema asociados. Al cerrar un objeto no se quita de la memoria; puede cambiar la configuración de sus propiedades y usar el método **Open** para abrirla de nuevo más adelante. Para eliminar completamente un objeto de la memoria, establezca la variable de objeto en *Nothing*.  
   
 > [!NOTE]
 >  **Uso del servicio de datos remotos** Cuando se usa en un objeto de **conexión** de cliente, el método **Open** no establece realmente una conexión con el servidor hasta que se abre un [conjunto de registros](./recordset-object-ado.md) en el objeto de **conexión** .  

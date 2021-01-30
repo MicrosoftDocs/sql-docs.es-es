@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: be0ff00fa2f4afd5e003ce37d45b3631512812e1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ae16eb25678f369ed33772b9282e1e8ba3437669
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990656"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170868"
 ---
 # <a name="marshaloptions-property-example-vc"></a>Ejemplo de la propiedad MarshalOptions (VC ++)
 En este ejemplo se usa la propiedad [MarshalOptions](./marshaloptions-property-ado.md) para especificar las filas que se devuelven al servidor: todas las filas o solo las filas modificadas.  

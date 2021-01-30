@@ -6,7 +6,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Stream::raw_Read
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d4b0ab7c3cc77c1f83eac4c3a30e9f637d950ba
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0adf12bc63745f739aaf8b71a92c660c1c1ad2fd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989906"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170491"
 ---
 # <a name="read-method"></a>Método Read
 Lee un número especificado de bytes de un objeto de [flujo](./stream-object-ado.md) binario.  
@@ -44,7 +44,7 @@ Variant = Stream.Read ( NumBytes)
  Si *numbytes* es mayor que el número de bytes que quedan en la **secuencia**, solo se devuelven los bytes restantes. Los datos leídos no se rellenan para coincidir con la longitud especificada por *numbytes*. Si no quedan bytes para leer, se devuelve una variante con un valor null. **Read** no se puede usar para leer hacia atrás.  
   
 > [!NOTE]
->  *Numbytes* siempre mide bytes. En el caso de los objetos de **flujo** de texto (el[tipo](./type-property-ado-stream.md) es **AdTypeText**), use [READTEXT](./readtext-method.md).  
+>  *Numbytes* siempre mide bytes. En el caso de los objetos de **flujo** de texto (el [tipo](./type-property-ado-stream.md) es **AdTypeText**), use [READTEXT](./readtext-method.md).  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de secuencia (ADO)](./stream-object-ado.md)  

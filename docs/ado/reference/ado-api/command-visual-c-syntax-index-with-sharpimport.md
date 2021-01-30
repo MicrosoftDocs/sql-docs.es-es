@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 dev_langs:
 - C++
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ef0aaa3819f60a2dd0488ce57868db09c8b1f1d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3749d117adc930b02f022b4238bfcf94bfbee787
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975216"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171475"
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>Comando (Visual C++ Índice de sintaxis con #import)
 ## <a name="methods"></a>Métodos  

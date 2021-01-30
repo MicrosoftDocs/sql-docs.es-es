@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Field20::OriginalValue
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab73e79f86ac1e504322a0606ee3839997ce5811
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: dd53935335a4f5df694a5a5175f2bd7d3505a108
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990216"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170647"
 ---
 # <a name="originalvalue-property-ado"></a>Propiedad OriginalValue (ADO)
 Indica el valor de un [campo](./field-object.md) que existía en el registro antes de que se realizaran cambios.  
@@ -36,7 +36,7 @@ Indica el valor de un [campo](./field-object.md) que existía en el registro ant
   
  En el *modo de actualización por lotes* (en el que el proveedor almacena en caché varios cambios y los escribe en el origen de datos subyacente solo cuando se llama al método [UpdateBatch](./updatebatch-method.md) ), la propiedad **OriginalValue** devuelve el valor del campo que existía antes de cualquier cambio (es decir, desde la última llamada al método **UpdateBatch** ). Este es el mismo valor que utiliza el método [CancelBatch](./cancelbatch-method-ado.md) para reemplazar la propiedad **Value** . Cuando se usa esta propiedad con la propiedad [UnderlyingValue](./underlyingvalue-property.md) , se pueden resolver los conflictos que surgen de las actualizaciones por lotes.  
   
-## <a name="record"></a>Registro  
+## <a name="record"></a>Grabar  
  En el caso de los objetos de [registro](./record-object-ado.md) , la propiedad **OriginalValue** estará vacía para los campos agregados antes de llamar a [Update](./update-method.md) .  
   
 ## <a name="applies-to"></a>Se aplica a  

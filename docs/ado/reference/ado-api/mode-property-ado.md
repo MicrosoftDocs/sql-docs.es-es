@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::Mode
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eab9f3db1bfe9417411dc832cfa24e3d4496257b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 86b6f8b9f7e55f78242427ab5a648896978ecc0a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990606"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170841"
 ---
 # <a name="mode-property-ado"></a>Propiedad Mode (ADO)
 Indica los permisos disponibles para modificar los datos de un objeto de [conexión](./connection-object-ado.md), [registro](./record-object-ado.md)o [secuencia](./stream-object-ado.md) .  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32f9ab33c3beac21ae82e2a5e4cf5dd9447d6844
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5ba12e7b85dd0434686fdd682818a0a227f7a2ca
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990566"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170821"
 ---
 # <a name="move-method-example-vc"></a>Ejemplo del método Move (VC ++)
 En este ejemplo se usa el método [Move](./move-method-ado.md) para colocar el puntero de registro en función de los datos proporcionados por el usuario.  

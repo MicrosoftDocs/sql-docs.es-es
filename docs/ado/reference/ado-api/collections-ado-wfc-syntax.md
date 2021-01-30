@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - syntax indexes [ADO], ADO/WFC
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6afa603b169949673544791849ecbbc5d312cfb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d8fca0d29736fb9a57d9a8f72703d3870db15087
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975346"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171504"
 ---
 # <a name="collections-ado---wfc-syntax"></a>Colecciones (ADO - sintaxis WFC)
 **paquete com. ms. wfc. Data**  
@@ -45,7 +45,7 @@ public Parameter getItem(String s)
 public int getCount()  
 ```  
   
-## <a name="fields"></a>Fields  
+## <a name="fields"></a>Campos  
   
 ### <a name="methods"></a>Métodos  
   
@@ -66,7 +66,7 @@ public com.ms.wfc.data.Field getItem(String s)
 public int getCount()  
 ```  
   
-## <a name="errors"></a>Errores  
+## <a name="errors"></a>Errors  
   
 ### <a name="methods"></a>Métodos  
   
