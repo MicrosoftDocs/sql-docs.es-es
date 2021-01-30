@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addlinkedsrvlogin_TSQL
 - sp_addlinkedsrvlogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4658625065876f35e3eb892381be67226795584f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bcefbe0acef90deb488a1d95f162a4d94f60aa95
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548444"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202382"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,21 +44,21 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
   
 ## <a name="arguments"></a>Argumentos  
  `[ @rmtsrvname = ] 'rmtsrvname'`  
- Es el nombre de un servidor vinculado al que se aplica la asignación de inicio de sesión. *rmtsrvname* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ Es el nombre de un servidor vinculado al que se aplica la asignación de inicio de sesión. *rmtsrvname* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
  `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
  Determina si se va a conectar a *rmtsrvname* mediante la suplantación de inicios de sesión locales o el envío explícito de un inicio de sesión y una contraseña. El tipo de datos es **VARCHAR (** 8 **)** y su valor predeterminado es true.  
   
- Un valor de TRUE especifica que los inicios de sesión usan sus propias credenciales para conectarse a *rmtsrvname*, con los argumentos *rmtuser* y *rmtpassword* que se omiten. FALSE especifica que los argumentos *rmtuser* y *rmtpassword* se usan para conectarse a *rmtsrvname* para el *locallogin*especificado. Si *rmtuser* y *rmtpassword* también se establecen en null, no se usa ningún inicio de sesión ni contraseña para conectarse al servidor vinculado.  
+ Un valor de TRUE especifica que los inicios de sesión usan sus propias credenciales para conectarse a *rmtsrvname*, con los argumentos *rmtuser* y *rmtpassword* que se omiten. FALSE especifica que los argumentos *rmtuser* y *rmtpassword* se usan para conectarse a *rmtsrvname* para el *locallogin* especificado. Si *rmtuser* y *rmtpassword* también se establecen en null, no se usa ningún inicio de sesión ni contraseña para conectarse al servidor vinculado.  
   
  `[ @locallogin = ] 'locallogin'`  
- Es un inicio de sesión en el servidor local. *locallogin* es de **tipo sysname y su**valor predeterminado es NULL. NULL especifica que esta entrada se aplica a todos los inicios de sesión locales que se conectan a *rmtsrvname*. Si no es NULL, *locallogin* puede ser un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un inicio de sesión de Windows. El inicio de sesión de Windows debe disponer de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ya sea directamente o en calidad de miembro de un grupo de Windows al que se ha concedido acceso.  
+ Es un inicio de sesión en el servidor local. *locallogin* es de **tipo sysname y su** valor predeterminado es NULL. NULL especifica que esta entrada se aplica a todos los inicios de sesión locales que se conectan a *rmtsrvname*. Si no es NULL, *locallogin* puede ser un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un inicio de sesión de Windows. El inicio de sesión de Windows debe disponer de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ya sea directamente o en calidad de miembro de un grupo de Windows al que se ha concedido acceso.  
   
  `[ @rmtuser = ] 'rmtuser'`  
- Es el inicio de sesión remoto utilizado para conectarse a *rmtsrvname* cuando @useself es false. Cuando el servidor remoto es una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no utiliza la autenticación de Windows, *rmtuser* es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión. *rmtuser* es de **tipo sysname y su**valor predeterminado es NULL.  
+ Es el inicio de sesión remoto utilizado para conectarse a *rmtsrvname* cuando @useself es false. Cuando el servidor remoto es una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no utiliza la autenticación de Windows, *rmtuser* es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión. *rmtuser* es de **tipo sysname y su** valor predeterminado es NULL.  
   
  `[ @rmtpassword = ] 'rmtpassword'`  
- Es la contraseña asociada a *rmtuser*. *rmtpassword* es de **tipo sysname y su**valor predeterminado es NULL.  
+ Es la contraseña asociada a *rmtuser*. *rmtpassword* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_MSxe_read_event_stream_TSQL
 - sys.fn_MSxe_read_event_stream_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 739d2b4298ec91064063acee702d1c4c6df5c4a0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: dc8eff18237f4796d36812cf0afee363effcbf99
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101351"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201929"
 ---
 # <a name="sysfn_msxe_read_event_stream-transact-sql"></a>sys.fn_MSxe_read_event_stream (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

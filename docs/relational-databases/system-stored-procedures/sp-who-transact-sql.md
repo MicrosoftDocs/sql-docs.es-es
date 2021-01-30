@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_who_TSQL
 - sp_who
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a3d3af35b9d886e41d43e0c480c49a7e593e00f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db60af487d1ee7b7475b0b4d6ec1d8f67decb1ca
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463995"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201801"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,14 +59,14 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |Columna|Tipo de datos|Descripción|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|Id. de sesión.|  
-|**ecid**|**smallint**|Id. de contexto de ejecución de un subproceso determinado, asociado con un Id. de sesión específico.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, donde 0 siempre representa el subproceso principal o primario, y {1, 2, 3,... *n*} representan los subprocesos.|  
-|**status**|**NCHAR (30)**|Estado del proceso. Los valores posibles son:<br /><br /> **inactivo**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la sesión.<br /><br /> en **ejecución**. La sesión está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **en segundo plano**. La sesión está ejecutando una tarea en segundo plano, como una detección de interbloqueos.<br /><br /> **revertir**. La sesión está realizando una reversión de una transacción.<br /><br /> **pendiente**. La sesión está esperando que un subproceso de trabajo esté disponible.<br /><br /> **runnable**. La tarea de la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **spinloop**. La tarea de la sesión está esperando que se libere un bloqueo por bucle.<br /><br /> **suspendido**. La sesión está esperando a que finalice un evento, como una entrada o salida.|  
+|**ECID**|**smallint**|Id. de contexto de ejecución de un subproceso determinado, asociado con un Id. de sesión específico.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, donde 0 siempre representa el subproceso principal o primario, y {1, 2, 3,... *n*} representan los subprocesos.|  
+|**status**|**NCHAR (30)**|Estado del proceso. Los valores posibles son:<br /><br /> **inactivo**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la sesión.<br /><br /> en **ejecución**. La sesión está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **en segundo plano**. La sesión está ejecutando una tarea en segundo plano, como una detección de interbloqueos.<br /><br /> **revertir**. La sesión está realizando una reversión de una transacción.<br /><br /> **pendiente**. La sesión está esperando que un subproceso de trabajo esté disponible.<br /><br /> **ejecutable**. La tarea de la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **spinloop**. La tarea de la sesión está esperando que se libere un bloqueo por bucle.<br /><br /> **suspendido**. La sesión está esperando a que finalice un evento, como una entrada o salida.|  
 |**loginame**|**nchar(128)**|Nombre de inicio de sesión asociado al proceso específico.|  
 |**hostname**|**nchar(128)**|Nombre del host o equipo de cada proceso.|  
 |**blk**|**Char (5)**|Id. de sesión del proceso de bloqueo, si existe. De lo contrario, esta columna tiene el valor cero.<br /><br /> Cuando una transacción huérfana distribuida bloquea una transacción asociada con un Id. de sesión determinado, esta columna devolverá '-2' para la transacción huérfana de bloqueo.|  
 |**nombrebd**|**nchar(128)**|Base de datos utilizada por el proceso.|  
 |**cmd**|**nchar(16)**|Comando de [!INCLUDE[ssDE](../../includes/ssde-md.md)] (instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)], proceso de [!INCLUDE[ssDE](../../includes/ssde-md.md)] interno, etc.) que se ejecuta para el proceso. En SQL Server 2019, el tipo de datos ha cambiado a **NCHAR (26)**.|  
-|**request_id**|**int**|Id. de las solicitudes que se ejecutan en una sesión específica.|  
+|**id_de_solicitud**|**int**|Id. de las solicitudes que se ejecutan en una sesión específica.|  
   
  En el caso de procesamiento paralelo, se crean subprocesos secundarios para el identificador de sesión específico. El subproceso principal se indica como `spid = <xxx>` y `ecid =0`. Los demás subprocesos tienen el mismo `spid = <xxx>` , pero con **ECID** > 0.  
   
@@ -75,7 +75,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  A todas las transacciones distribuidas huérfanas se les asigna como identificador de sesión el valor '-2'. Las transacciones distribuidas huérfanas son transacciones distribuidas que no están asociadas con ningún identificador de sesión. Para obtener más información, vea [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
- Consulte el **is_user_process** columna de sys. dm_exec_sessions para separar los procesos del sistema de los procesos de usuario.  
+ Consulte la columna **is_user_process** de sys.dm_exec_sessions para separar los procesos del sistema de los procesos de usuario.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW SERVER STATE en el servidor para ver todas las sesiones en ejecución en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De lo contrario, el usuario solo ve la sesión actual.  

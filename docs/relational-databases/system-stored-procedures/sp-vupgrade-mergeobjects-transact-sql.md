@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_vupgrade_mergeobjects
 - sp_vupgrade_mergeobjects_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4df6f9a1f945de42836dd624010a313081955054
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 26e7405647b80d26c760bf88caf5e6aa786346ff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538517"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201835"
 ---
 # <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @login = ] 'login'` Es el inicio de sesión del administrador del sistema que se va a usar al crear nuevos objetos del sistema en la base de datos de distribución. *login* es de tipo **sysname** y su valor predeterminado es NULL. Este parámetro no es necesario si *security_mode* está establecido en **1**, que es la autenticación de Windows.  
   
-`[ @password = ] 'password'` Es la contraseña de administrador del sistema que se va a usar al crear nuevos objetos del sistema en la base de datos de distribución. *password* es de **tipo sysname y su**valor predeterminado es **' '** (cadena vacía). Este parámetro no es necesario si *security_mode* está establecido en **1**, que es la autenticación de Windows.  
+`[ @password = ] 'password'` Es la contraseña de administrador del sistema que se va a usar al crear nuevos objetos del sistema en la base de datos de distribución. *password* es de **tipo sysname y su** valor predeterminado es **' '** (cadena vacía). Este parámetro no es necesario si *security_mode* está establecido en **1**, que es la autenticación de Windows.  
   
 `[ @security_mode = ] 'security_mode'` Es el modo de seguridad de inicio de sesión que se va a usar al crear nuevos objetos del sistema en la base de datos de distribución. *security_mode* es de **bits** con un valor predeterminado de **1**. Si es **0**, se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará la autenticación. Si es **1**, se utilizará la autenticación de Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   

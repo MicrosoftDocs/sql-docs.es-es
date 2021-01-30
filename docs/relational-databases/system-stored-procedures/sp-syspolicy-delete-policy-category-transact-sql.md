@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_delete_policy_category_TSQL
 - sp_syspolicy_delete_policy_category
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fb0df2c440f1198dfe18d4615ab9e8962d93a37e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f6812c255f48f346144d7c69609a76ca457391d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464004"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201232"
 ---
 # <a name="sp_syspolicy_delete_policy_category-transact-sql"></a>sp_syspolicy_delete_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,9 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` Es el nombre de la categoría de directiva. *Name* es de **tipo sysname**y se debe especificar si *policy_category_id* es NULL.  
+`[ @name = ] 'name'` Es el nombre de la categoría de directiva. *Name* es de **tipo sysname** y se debe especificar si *policy_category_id* es NULL.  
   
-`[ @policy_category_id = ] policy_category_id` Es el identificador de la categoría de directiva. *policy_category_id* es de **tipo int**y se debe especificar si *Name* es NULL.  
+`[ @policy_category_id = ] policy_category_id` Es el identificador de la categoría de directiva. *policy_category_id* es de **tipo int** y se debe especificar si *Name* es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

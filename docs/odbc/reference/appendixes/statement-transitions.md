@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3515b1d6aea4cab66bc01ee3d071727e6cb8f447
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7fb43bb8aa7ad9bd71906036a081dac4ec91c794
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386521"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202550"
 ---
 # <a name="statement-transitions"></a>Transiciones de instrucción
 Las instrucciones ODBC tienen los Estados siguientes.  
   
-|State|Descripción|  
+|Estado|Descripción|  
 |-----------|-----------------|  
 |S0|Instrucción sin asignar. (El estado de conexión debe ser C4, C5 o C6. Para obtener más información, vea [transiciones de conexión](../../../odbc/reference/appendixes/connection-transitions.md)).|  
 |S1|Instrucción asignada.|  
@@ -62,7 +62,7 @@ Las instrucciones ODBC tienen los Estados siguientes.
   
  [4] esta fila muestra las transiciones cuando se SQL_HANDLE_DESC *HandleType* .  
   
- [5] si se llama a **SQLAllocHandle** con *OutputHandlePtr* que apuntan a un identificador válido, se sobrescribe ese identificador sin tener en cuenta el contenido anterior para ese identificador y podrían producirse problemas con los controladores ODBC. La programación de aplicaciones ODBC es incorrecta para llamar a **SQLAllocHandle** dos veces con la misma variable de aplicación definida para * \* OutputHandlePtr* sin llamar a **SQLFreeHandle** para liberar el identificador antes de reasignarlo. Si se sobrescriben los identificadores ODBC de tal manera, se podría producir un comportamiento incoherente o errores en la parte de los controladores ODBC.  
+ [5] si se llama a **SQLAllocHandle** con *OutputHandlePtr* que apuntan a un identificador válido, se sobrescribe ese identificador sin tener en cuenta el contenido anterior para ese identificador y podrían producirse problemas con los controladores ODBC. La programación de aplicaciones ODBC es incorrecta para llamar a **SQLAllocHandle** dos veces con la misma variable de aplicación definida para *\* OutputHandlePtr* sin llamar a **SQLFreeHandle** para liberar el identificador antes de reasignarlo. Si se sobrescriben los identificadores ODBC de tal manera, se podría producir un comportamiento incoherente o errores en la parte de los controladores ODBC.  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
@@ -108,7 +108,7 @@ Las instrucciones ODBC tienen los Estados siguientes.
   
  [4]   **SQLSetPos** devolvió SQL_NEED_DATA.  
   
- [5] no se llamó a   **SQLFetch**, **SQLFetchScroll**o **SQLExtendedFetch** .  
+ [5] no se llamó a   **SQLFetch**, **SQLFetchScroll** o **SQLExtendedFetch** .  
   
  [6] se ha llamado a   **SQLFetch** o **SQLFetchScroll** .  
   

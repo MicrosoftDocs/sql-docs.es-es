@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sql13.TSQLSysNoExpandPortal.f1
 - sql13.TSQLSysNoExpandPortal.f1_TSQL
@@ -23,18 +23,18 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60d30105f0c56224748a3c676ba4d76b73aa989b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 603a16d94c185783b3b90566d71b90e195949254
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462676"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203650"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Procedimientos almacenados del sistema (Transact-SQL)
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], muchas actividades administrativas e informativas se pueden realizar mediante los procedimientos almacenados del sistema. Los procedimientos almacenados del sistema se agrupan en las categorías que aparecen en la siguiente tabla.  
+  En [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], muchas actividades administrativas e informativas se pueden realizar mediante los procedimientos almacenados del sistema. Los procedimientos almacenados del sistema se agrupan en las categorías que aparecen en la siguiente tabla.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

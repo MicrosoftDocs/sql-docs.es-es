@@ -1,12 +1,12 @@
 ---
-title: Sys. sp_rda_set_query_mode (Transact-SQL) | Microsoft Docs
-description: Use sys. sp_rda_set_query_mode para especificar si las consultas realizadas en la base de datos habilitada para Stretch actual y sus tablas devuelven datos locales y remotos, o solo datos locales.
+title: sys.sp_rda_set_query_mode (Transact-SQL) | Microsoft Docs
+description: Utilice sys.sp_rda_set_query_mode para especificar si las consultas realizadas en la base de datos habilitada para Stretch actual y sus tablas devuelven datos locales y remotos, o solo datos locales.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_rda_set_query_mode
 - sys.sp_rda_set_query_mode_TSQL
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26b8a363de2faf9e39bc88e3dd1e0a26bd016e16
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ed9e5afda379b094a61c9f6d3130b986e0b83ca3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540457"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211723"
 ---
-# <a name="syssp_rda_set_query_mode-transact-sql"></a>Sys. sp_rda_set_query_mode (Transact-SQL)
+# <a name="syssp_rda_set_query_mode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Especifica si las consultas realizadas en la base de datos habilitada para Stretch actual y en sus tablas devuelven datos locales y remotos (el valor predeterminado) o solo los datos locales.  
@@ -40,16 +40,16 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @mode =] * \@ modo*  
+ [ @mode =] *\@ modo*  
  Es uno de los valores siguientes.  
   
 -   **Deshabilitado** Se produce un error en todas las consultas en tablas habilitadas para Stretch.  
   
 -   **LOCAL_ONLY** Las consultas realizadas en tablas habilitadas para Stretch solo devuelven datos locales.  
   
--   **LOCAL_AND_REMOTE** Las consultas en tablas habilitadas para Stretch devuelven datos locales y remotos. Este es el comportamiento predeterminado.  
+-   **LOCAL_AND_REMOTE** Las consultas en tablas habilitadas para Stretch devuelven datos locales y remotos. Éste es el comportamiento predeterminado.  
   
- [ @force =] * \@ forzar*  
+ [ @force =] *\@ forzar*  
  Es un valor de bit opcional que se puede establecer en 1 si se desea cambiar el modo de consulta sin validación.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -65,16 +65,16 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
      Después de ejecutar **sp_rda_deauthorize_db** , se producirá un error en todas las consultas de bases de datos y tablas habilitadas para Stretch. Es decir, el modo de consulta se establece en Disabled. Para salir de este modo, realice una de las siguientes acciones.  
   
-    -   Ejecute [Sys. sp_rda_reauthorize_db &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectar con la base de datos remota de Azure. Esta operación restablece automáticamente el modo de consulta en LOCAL_AND_REMOTE, que es el comportamiento predeterminado de Stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
+    -   Ejecute [sys.sp_rda_reauthorize_db &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectar con la base de datos de Azure remota. Esta operación restablece automáticamente el modo de consulta en LOCAL_AND_REMOTE, que es el comportamiento predeterminado de Stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
   
-    -   Ejecute [Sys. sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) con el argumento LOCAL_ONLY para permitir que las consultas sigan ejecutándose solo con datos locales.  
+    -   Ejecute [Sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) con el argumento LOCAL_ONLY para permitir que las consultas sigan ejecutándose solo con datos locales.  
   
 -   **sp_rda_reauthorize_db**  
   
-     Al ejecutar [Sys. sp_rda_reauthorize_db &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectar con la base de datos remota de Azure, esta operación restablece automáticamente el modo de consulta en LOCAL_AND_REMOTE, que es el comportamiento predeterminado de stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
+     Al ejecutar [sys.sp_rda_reauthorize_db &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectar con la base de datos remota de Azure, esta operación restablece automáticamente el modo de consulta en LOCAL_AND_REMOTE, que es el comportamiento predeterminado de stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [sys.sp_rda_deauthorize_db &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6dadd93f13418d520c4ab908ba0d9402d07c893a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5dbce167ea65daa030030bd32a909c5af3d06262
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421529"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212460"
 ---
 # <a name="c-data-types"></a>Tipos de datos C
 Los tipos de datos C de ODBC indican el tipo de datos de los búferes de C que se usan para almacenar datos en la aplicación.  
@@ -109,7 +109,7 @@ struct tagSQL_NUMERIC_STRUCT {
    SQLCHAR precision;  
    SQLSCHAR scale;  
    SQLCHAR sign[g];  
-   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
+   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
 } SQL_NUMERIC_STRUCT;  
 ```  
   
@@ -136,7 +136,7 @@ struct tagSQLGUID {
   
  [d] las aplicaciones ODBC 3 *. x* deben usar SQL_C_VARBOOKMARK, no SQL_C_BOOKMARK. Cuando una aplicación ODBC 3 *. x* funciona con ODBC 2. *x* , el administrador de controladores ODBC 3 *. x* asignará SQL_C_VARBOOKMARK a SQL_C_BOOKMARK.  
   
- [e] un número se almacena en el campo *Val* de la estructura SQL_NUMERIC_STRUCT como un entero con escala, en el modo Little Endian (el byte más a la izquierda es el byte menos significativo). Por ejemplo, el número 10,001 base 10, con una escala de 4, se escala a un entero de 100010. Dado que se 186AA en formato hexadecimal, el valor de SQL_NUMERIC_STRUCT sería "AA 86 01 00 00... 00 ", con el número de bytes definido por la **#define**SQL_MAX_NUMERIC_LEN.  
+ [e] un número se almacena en el campo *Val* de la estructura SQL_NUMERIC_STRUCT como un entero con escala, en el modo Little Endian (el byte más a la izquierda es el byte menos significativo). Por ejemplo, el número 10,001 base 10, con una escala de 4, se escala a un entero de 100010. Dado que se 186AA en formato hexadecimal, el valor de SQL_NUMERIC_STRUCT sería "AA 86 01 00 00... 00 ", con el número de bytes definido por la **#define** SQL_MAX_NUMERIC_LEN.  
   
  Para obtener más información acerca de **SQL_NUMERIC_STRUCT**, vea [HOWTO: recuperar datos numéricos con SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
   

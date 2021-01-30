@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_tableoption_TSQL
 - sp_tableoption
@@ -19,12 +19,12 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05de24f511f5d72bc4eba1947d1731491e3c1a37
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d2846b289c31777adec6d548addba11a9c7e463d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472686"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204336"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +69,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o número de error (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_tableoption se puede utilizar únicamente para definir valores de opción de tablas definidas por el usuario. Para mostrar las propiedades de la tabla, use OBJECTPROPERTY o consulte sys. tables.  
   
  La opción text in row en sp_tableoption puede habilitarse o deshabilitarse solo en tablas que contengan columnas de texto. Si la tabla no contiene una columna de texto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un error.  

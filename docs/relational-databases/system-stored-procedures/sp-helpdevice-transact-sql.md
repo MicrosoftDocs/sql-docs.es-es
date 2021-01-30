@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdevice
 - sp_helpdevice_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ae8e3db950ceab576786340ca396b25d774cb774
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 95c63d822851d7d1ccf9493e3e0d4cc9beedd624
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528183"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204736"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89528183"
   Proporciona información acerca de los dispositivos de copia de seguridad de Microsoft® SQL Server™.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se recomienda utilizar la vista de catálogo [Sys. backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, se recomienda usar la vista de catálogo [Sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |**size**|**int**|Tamaño del dispositivo en páginas de 2 KB.|  
   
 ## <a name="remarks"></a>Observaciones  
- Si se especifica *Name* , **sp_helpdevice** muestra información sobre el dispositivo de volcado de memoria especificado. Si no se especifica *Name* , **sp_helpdevice** muestra información acerca de todos los dispositivos de volcado en la vista de catálogo **Sys. backup_devices** .  
+ Si se especifica *Name* , **sp_helpdevice** muestra información sobre el dispositivo de volcado de memoria especificado. Si no se especifica *Name* , **sp_helpdevice** muestra información acerca de todos los dispositivos de volcado en la vista de catálogo **Sys.backup_devices** .  
   
  Los dispositivos de volcado de memoria se agregan al sistema mediante **sp_addumpdevice**.  
   

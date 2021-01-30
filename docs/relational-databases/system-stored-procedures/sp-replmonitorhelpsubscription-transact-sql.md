@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelpsubscription_TSQL
 - sp_replmonitorhelpsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dab0e5d4f8f655b0e3140878279a8abca090d262
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 898104516115207bd0cee45bf05f187922c13f6e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543137"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204369"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,24 +45,24 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` Es el nombre del publicador cuyo estado se está supervisando. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. Si es **null**, se devuelve información para todos los publicadores que utilizan el distribuidor.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador cuyo estado se está supervisando. *Publisher* es de **tipo sysname y su** valor predeterminado es NULL. Si es **null**, se devuelve información para todos los publicadores que utilizan el distribuidor.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos publicada. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL, se devuelve información sobre todas las bases de datos publicadas en el publicador.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos publicada. *publisher_db* es de **tipo sysname y su** valor predeterminado es NULL. Si es NULL, se devuelve información sobre todas las bases de datos publicadas en el publicador.  
   
-`[ @publication = ] 'publication'` Es el nombre de la publicación que se está supervisando. *Publication* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se está supervisando. *Publication* es de **tipo sysname y su** valor predeterminado es NULL.  
   
-`[ @publication_type = ] publication_type` Si el tipo de publicación. *publication_type* es de **tipo int**y puede tener uno de estos valores.  
+`[ @publication_type = ] publication_type` Si el tipo de publicación. *publication_type* es de **tipo int** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Publicación transaccional.|  
 |**1**|Publicación de instantáneas.|  
 |**2**|Publicación de combinación.|  
 |NULL (predeterminado)|La replicación intenta determinar el tipo de publicación.|  
   
-`[ @mode = ] mode` Es el modo de filtrado que se va a utilizar al devolver información de supervisión de suscripciones. *mode* es de **tipo int**y puede tener uno de estos valores.  
+`[ @mode = ] mode` Es el modo de filtrado que se va a utilizar al devolver información de supervisión de suscripciones. *mode* es de **tipo int** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Devuelve todas las suscripciones.|  
 |**1**|Solo devuelve las suscripciones con errores.|  
@@ -73,9 +73,9 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|Solo devuelve las suscripciones que se están sincronizando en ese momento.|  
 |**7**|Solo devuelve las suscripciones que no se están sincronizando en ese momento.|  
   
-`[ @topnum = ] topnum` Restringe el conjunto de resultados solo al número especificado de suscripciones en la parte superior de los datos devueltos. *topnum* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @topnum = ] topnum` Restringe el conjunto de resultados solo al número especificado de suscripciones en la parte superior de los datos devueltos. *topnum* es de **tipo int** y no tiene ningún valor predeterminado.  
   
-`[ @exclude_anonymous = ] exclude_anonymous` Es si se excluyen las suscripciones de extracción anónimas del conjunto de resultados. *exclude_anonymous* es de **bit**y su valor predeterminado es **0**; un valor de **1** significa que se excluyen las suscripciones anónimas y un valor de **0** significa que se incluyen.  
+`[ @exclude_anonymous = ] exclude_anonymous` Es si se excluyen las suscripciones de extracción anónimas del conjunto de resultados. *exclude_anonymous* es de **bit** y su valor predeterminado es **0**; un valor de **1** significa que se excluyen las suscripciones anónimas y un valor de **0** significa que se incluyen.  
   
 `[ @refreshpolicy = ] refreshpolicy` Solo para uso interno.  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addlogin
 - sp_addlogin_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 585461904b68f26d3ea71e255b24e9ed6d38786a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a85da6cb0e9f0d2a490c802e4d67f8096999f217
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474567"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202397"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,19 +53,19 @@ sp_addlogin [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>Argumentos  
  [ @loginame =] '*Inicio de sesión*'  
- Es el nombre del inicio de sesión. *login* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ Es el nombre del inicio de sesión. *login* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
  [ @passwd =] '*contraseña*'  
- Es la contraseña de inicio de sesión. *password* es de **tipo sysname y su**valor predeterminado es NULL.  
+ Es la contraseña de inicio de sesión. *password* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
  [ @defdb =] '*base de datos*'  
- Es la base de datos predeterminada del inicio de sesión (la base de datos a la que primero se conecta el inicio de sesión después de iniciarse la sesión). *Database* es de **tipo sysname y su**valor predeterminado es **Master**.  
+ Es la base de datos predeterminada del inicio de sesión (la base de datos a la que primero se conecta el inicio de sesión después de iniciarse la sesión). *Database* es de **tipo sysname y su** valor predeterminado es **Master**.  
   
  [ @deflanguage =] '*idioma*'  
- Es el idioma predeterminado del inicio de sesión. *Language* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *Language* , el idioma *predeterminado del nuevo inicio de sesión* se establece en el idioma predeterminado actual del servidor.  
+ Es el idioma predeterminado del inicio de sesión. *Language* es de **tipo sysname y su** valor predeterminado es NULL. Si no se especifica *Language* , el idioma *predeterminado del nuevo inicio de sesión* se establece en el idioma predeterminado actual del servidor.  
   
  [ @sid =] '*SID*'  
  Especifica el número de identificación de seguridad (SID). *SID* es **varbinary (16)** y su valor predeterminado es NULL. Si *SID* es null, el sistema genera un SID para el nuevo inicio de sesión. A pesar del uso de un tipo de datos **varbinary** , los valores distintos de NULL deben tener exactamente 16 bytes de longitud y no deben existir. La especificación de *SID* resulta útil, por ejemplo, cuando se genera un script o se mueven [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicios de sesión de un servidor a otro y se desea que los inicios de sesión tengan el mismo SID en servidores diferentes.  
@@ -141,9 +141,9 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
   
 ## <a name="see-also"></a>Consulte también  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_droplogin &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpuser &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [sp_revokelogin &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [xp_logininfo &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

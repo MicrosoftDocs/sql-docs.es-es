@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_spatial_geography_histogram_TSQL
 - sp_help_spatial_geography_histogram
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0c7368b8991fe442cab30b724532e8899502e18f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 3554c8b385a14f588c4f7f8dd6248ba36ad7b16d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809397"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212069"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +43,11 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ## <a name="arguments"></a>Argumentos  
 `[ @tabname = ] 'tabname'` Es el nombre completo o no completo de la tabla para la que se ha especificado el índice espacial.  
   
- Se requieren comillas únicamente si se especifica una tabla certificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *tabname* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ Se requieren comillas únicamente si se especifica una tabla certificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *tabname* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @colname = ] 'columnname'` Es el nombre de la columna espacial especificada. *columnName* es un **sysname**y no tiene ningún valor predeterminado.  
+`[ @colname = ] 'columnname'` Es el nombre de la columna espacial especificada. *columnName* es un **sysname** y no tiene ningún valor predeterminado.  
   
-`[ @resolution = ] 'resolution'` Es la resolución del cuadro de límite. Los valores válidos van del 10 al 5000. la *resolución* es de **tinyint**y no tiene ningún valor predeterminado.  
+`[ @resolution = ] 'resolution'` Es la resolución del cuadro de límite. Los valores válidos van del 10 al 5000. la *resolución* es de **tinyint** y no tiene ningún valor predeterminado.  
   
 `[ @sample = ] 'sample'` Es el porcentaje de la tabla que se utiliza. Los valores válidos son de 0 a 100. *tablesample* es un valor **float**. El valor predeterminado es 100.  
   

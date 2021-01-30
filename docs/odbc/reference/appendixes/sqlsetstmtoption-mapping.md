@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetStmtOption
 - SQLSetStmtOption function [ODBC], mapping
 ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f2c4a65ade202003d454988372895ba40fb6eeef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8907de6d6ac80737ba0bb47ca3c6954a482c857f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424886"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202577"
 ---
 # <a name="sqlsetstmtoption-mapping"></a>Asignación de SQLSetStmtOption
 Cuando una aplicación llama a **SQLSetStmtOption** a través de un controlador ODBC *3. x* , la llamada a  
@@ -48,7 +48,7 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
     SQLSetStmtAttr(StatementHandle, fOption, ValuePtr, BufferLength)  
     ```  
   
- En los tres casos anteriores, el argumento **StatementHandle** se establece en el valor de *hstmt*, el argumento del *atributo* se establece en el valor de *fOption*y el argumento *ValuePtr* se establece en el valor como *vParam*.  
+ En los tres casos anteriores, el argumento **StatementHandle** se establece en el valor de *hstmt*, el argumento del *atributo* se establece en el valor de *fOption* y el argumento *ValuePtr* se establece en el valor como *vParam*.  
   
  Dado que el administrador de controladores no sabe si el atributo de instrucción definido por el controlador necesita una cadena o un valor entero de 32 bits, debe pasar un valor válido para el argumento *StringLength* de **SQLSetStmtAttr**. Si el controlador tiene una semántica especial definida para los atributos de instrucción definidos por el controlador y debe llamarse mediante **SQLSetStmtOption**, debe admitir **SQLSetStmtOption**.  
   

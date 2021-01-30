@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - IHpublishers
 - IHpublishers_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 037778000e56bf49e99d46d560fd6fda8f4ce484
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: fd1632e18831779d33b5faa572b179eb1226379b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98092457"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201652"
 ---
 # <a name="ihpublishers-transact-sql"></a>IHpublishers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "98092457"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Identifica un publicador que no es de SQL Server.|  
-|**proveedor**|**sysname**|Nombre del proveedor de la base de datos que no es de SQL Server.|  
+|**vendor**|**sysname**|Nombre del proveedor de la base de datos que no es de SQL Server.|  
 |**publisher_guid**|**uniqueidentifier**|GUID que identifica al publicador que no es de SQL Server.|  
 |**flush_request_time**|**datetime**|Indica la fecha y hora en que se produjo el último cambio en los metadatos del artículo que requirió que el Agente de registro del LOG actualizara su caché de metadatos.|  
 |**version**|**sysname**|Cadena de texto que caracteriza a la versión del publicador que no es de SQL Server.|  

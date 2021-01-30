@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8b81b43d40d3552959ade377cb7b967eb7331b7f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67c14205590ccdf9d20a30f44c13aa2da5abbe8d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411621"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212570"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Apéndice B: Tablas de transición de estado de ODBC
 En las tablas de este apéndice se muestra cómo las funciones ODBC causan transiciones del entorno, la conexión, la instrucción y los Estados del descriptor. Normalmente, el estado del entorno, la conexión, la instrucción o el descriptor determina cuándo se puede llamar a las funciones que utilizan el tipo de identificador (entorno, conexión, instrucción o descriptor) correspondiente. Los Estados del entorno, la conexión, la instrucción y el descriptor se superponen aproximadamente, tal y como se muestra en las ilustraciones siguientes. Por ejemplo, la superposición exacta de los Estados de conexión C5 y C6 y los Estados de instrucción S1 a través de S12 es dependiente del origen de datos, ya que las transacciones se inician en distintos momentos en orígenes de datos diferentes, y el estado de descriptor D1i (descriptor asignado implícitamente) depende del estado de la instrucción a la que está asociado el descriptor, Para obtener una descripción de cada Estado, vea [transiciones de entorno](../../../odbc/reference/appendixes/environment-transitions.md), [transiciones de conexión](../../../odbc/reference/appendixes/connection-transitions.md), [transiciones de instrucciones](../../../odbc/reference/appendixes/statement-transitions.md)y [transiciones de descriptor](../../../odbc/reference/appendixes/descriptor-transitions.md), más adelante en este apéndice.  
@@ -45,7 +45,7 @@ En las tablas de este apéndice se muestra cómo las funciones ODBC causan trans
   
 -   **--** -El estado no cambia después de ejecutar la función.  
   
--   **E:.**  
+-   **E**  
 
      **_n_** , **C_n_**, **S_n_** o **D_n_** : el entorno, la conexión, la instrucción o el estado del descriptor se mueven al estado especificado.  
  
@@ -65,9 +65,9 @@ En las tablas de este apéndice se muestra cómo las funciones ODBC causan trans
 |b|Antes o después de. El cursor se colocó antes del inicio del conjunto de resultados o después del final del conjunto de resultados.|  
 |c|Función actual. La función actual se estaba ejecutando de forma asincrónica.|  
 |d|Necesita datos. La función devolvió SQL_NEED_DATA.|  
-|e|Error. La función devolvió SQL_ERROR.|  
+|h|Error. La función devolvió SQL_ERROR.|  
 |i|Fila no válida. El cursor se colocó en una fila del conjunto de resultados y se eliminó la fila o se produjo un error en una operación de la fila. Si existe la matriz de estado de fila, el valor de la matriz de estado de fila de la fila se SQL_ROW_DELETED o SQL_ROW_ERROR. (El atributo de instrucción SQL_ATTR_ROW_STATUS_PTR apunta a la matriz de estado de fila).|  
-|nf|Not found. La función devolvió SQL_NO_DATA. Esto no se aplica cuando **SQLExecDirect**, **SQLExecute**o **SQLParamData** devuelven SQL_NO_DATA después de ejecutar una instrucción UPDATE o DELETE buscada.|  
+|nf|Not found. La función devolvió SQL_NO_DATA. Esto no se aplica cuando **SQLExecDirect**, **SQLExecute** o **SQLParamData** devuelven SQL_NO_DATA después de ejecutar una instrucción UPDATE o DELETE buscada.|  
 |np|No preparado. No se ha preparado la instrucción.|  
 |nr|Especifica que no hay resultados. La instrucción no creará o no un conjunto de resultados.|  
 |o|Otra función. Otra función se estaba ejecutando de forma asincrónica.|  

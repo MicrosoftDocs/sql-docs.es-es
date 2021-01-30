@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetConnectOption
 ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6c1f1379bfd2bbc2faccf719d68009ed63b350fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 919220fed87878bf0bcf23359f0714f702f9a6a8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476967"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202657"
 ---
 # <a name="sqlsetconnectoption-mapping"></a>Asignación de SQLSetConnectOption
 Cuando se trata de un ODBC 2. la aplicación *x* llama a **SQLSetConnectOption** a través de un controlador ODBC 3 *. x* , la llamada a  
@@ -48,7 +48,7 @@ SQLSetConnectOption(hdbc, fOption, vParam)
     SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength)  
     ```  
   
- En los tres casos anteriores, el argumento *ConnectionHandle* se establece en el valor de *hdbc*, el argumento del *atributo* se establece en el valor de *fOption*y el argumento *ValuePtr* se establece en el mismo valor que *vParam*.  
+ En los tres casos anteriores, el argumento *ConnectionHandle* se establece en el valor de *hdbc*, el argumento del *atributo* se establece en el valor de *fOption* y el argumento *ValuePtr* se establece en el mismo valor que *vParam*.  
   
  Dado que el administrador de controladores no sabe si el atributo de conexión definido por el controlador necesita una cadena o un valor entero de 32 bits, tiene que pasar un valor válido para el argumento *BufferLength* de **SQLSetConnectAttr**. Si el controlador tiene una semántica especial definida para los atributos de conexión definidos por el controlador y debe llamarse mediante **SQLSetConnectOption**, debe admitir **SQLSetConnectOption**.  
   

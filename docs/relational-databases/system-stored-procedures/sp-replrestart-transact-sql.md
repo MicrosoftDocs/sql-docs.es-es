@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replrestart_TSQL
 - sp_replrestart
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d1c1ce05fe21325331a9319de270d860a2b6e44a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2cdcac7e3193922ece51ac76f8a879a1142e7a0f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534903"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211661"
 ---
 # <a name="sp_replrestart-transact-sql"></a>sp_replrestart (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

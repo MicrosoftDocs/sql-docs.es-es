@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_rename_policy_TSQL
 - sp_syspolicy_rename_policy
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 782128b1d41f94c63f4e9de22e618378c4ec6e6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 962e15744221175abd5732df7fe4e29d7b924ae0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481031"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211837"
 ---
 # <a name="sp_syspolicy_rename_policy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` Es el nombre de la Directiva a la que desea cambiar el nombre. *Name* es de **tipo sysname**y se debe especificar si *policy_id* es NULL.  
+`[ @name = ] 'name'` Es el nombre de la Directiva a la que desea cambiar el nombre. *Name* es de **tipo sysname** y se debe especificar si *policy_id* es NULL.  
   
-`[ @policy_id = ] policy_id` Es el identificador de la Directiva cuyo nombre se desea cambiar. *policy_id* es de **tipo int**y se debe especificar si *Name* es NULL.  
+`[ @policy_id = ] policy_id` Es el identificador de la Directiva cuyo nombre se desea cambiar. *policy_id* es de **tipo int** y se debe especificar si *Name* es NULL.  
   
-`[ @new_name = ] 'new_name'` Es el nuevo nombre de la Directiva. *new_name* es **sysname**y es obligatorio. No puede ser NULL ni una cadena vacía.  
+`[ @new_name = ] 'new_name'` Es el nuevo nombre de la Directiva. *new_name* es **sysname** y es obligatorio. No puede ser NULL ni una cadena vacía.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

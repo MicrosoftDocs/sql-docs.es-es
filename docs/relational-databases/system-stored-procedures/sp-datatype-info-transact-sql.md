@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_datatype_info_TSQL
 - sp_datatype_info
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff2af6626004412a028777634269c6dc13e4fa8c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 22d01167f9dbe1a268dc436efb506507e1fbe7f9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546135"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201298"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -41,9 +41,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @data_type = ] data_type` Es el número de código del tipo de datos especificado. Para obtener una lista de todos los tipos de datos, omita este parámetro. *data_type* es de **tipo int**y su valor predeterminado es 0.  
+`[ @data_type = ] data_type` Es el número de código del tipo de datos especificado. Para obtener una lista de todos los tipos de datos, omita este parámetro. *data_type* es de **tipo int** y su valor predeterminado es 0.  
   
-`[ @ODBCVer = ] odbc_version` Es la versión de ODBC que se utiliza. *odbc_version* es de **tinyint**y su valor predeterminado es 2.  
+`[ @ODBCVer = ] odbc_version` Es la versión de ODBC que se utiliza. *odbc_version* es de **tinyint** y su valor predeterminado es 2.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -68,7 +68,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |MINIMUM_SCALE|**smallint**|Escala mínima del tipo de datos en el origen de datos. Si un tipo de datos tiene una escala fija, las columnas MINIMUM_SCALE y MAXIMUM_SCALE contienen este valor. Se devuelve NULL cuando no se puede aplicar la escala.|  
 |MAXIMUM_SCALE|**smallint**|Escala máxima del tipo de datos en el origen de datos. Si la escala máxima no está definida por separado en el origen de datos, sino que se define igual que la precisión máxima, esta columna contendrá el mismo valor que la columna PRECISION.|  
 |SQL_DATA_TYPE|**smallint**|Valor del tipo de datos SQL tal como aparece en el campo TYPE del descriptor. Esta columna es igual que la columna DATA_TYPE, excepto los tipos de datos **DateTime** y **Interval** ANSI. Este campo siempre devuelve un valor.|  
-|SQL_DATETIME_SUB|**smallint**|el subcódigo de **intervalo** **DateTime** o ANSI si el valor de SQL_DATA_TYPE es SQL_DATETIME o SQL_INTERVAL. En el caso de los tipos de datos distintos de **DateTime** e **Interval**ANSI, este campo es NULL.|  
+|SQL_DATETIME_SUB|**smallint**|el subcódigo de **intervalo** **DateTime** o ANSI si el valor de SQL_DATA_TYPE es SQL_DATETIME o SQL_INTERVAL. En el caso de los tipos de datos distintos de **DateTime** e **Interval** ANSI, este campo es NULL.|  
 |NUM_PREC_RADIX|**int**|Número de bits o dígitos para calcular el número máximo que puede tener una columna. Si el tipo de datos es numérico aproximado, esta columna contendrá el valor 2 para indicar varios bits. Para tipos numéricos exactos, esta columna contiene el valor 10 que indica varias cifras decimales. De lo contrario, esta columna es NULL. Mediante la combinación de la precisión con la base, la aplicación puede calcular el número máximo que puede tener la columna.|  
 |INTERVAL_PRECISION|**smallint**|Valor de precisión inicial del intervalo si *data_type* es **Interval**; de lo contrario, NULL.|  
 |USERTYPE|**smallint**|valor **usertype** de la tabla systypes.|  

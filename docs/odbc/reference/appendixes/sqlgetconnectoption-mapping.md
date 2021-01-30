@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLGetConnectOption
 - SQLGetConnectOption function [ODBC], mapping
 ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fbb8578b881e8eb04ef3b699fa7030e4670fab4d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cdc5f2e9249e262d0d3da9a69607861bfe64bc25
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421479"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202794"
 ---
 # <a name="sqlgetconnectoption-mapping"></a>Asignación de SQLGetConnectOption
 Cuando una aplicación llama a **SQLGetConnectOption** a través de un controlador ODBC *3. x* , la llamada a  
@@ -48,7 +48,7 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- En los tres casos anteriores, el argumento *ConnectionHandle* se establece en el valor de *hdbc*, el argumento del *atributo* se establece en el valor de *fOption*y el argumento *ValuePtr* se establece en el mismo valor que *pvParam*.  
+ En los tres casos anteriores, el argumento *ConnectionHandle* se establece en el valor de *hdbc*, el argumento del *atributo* se establece en el valor de *fOption* y el argumento *ValuePtr* se establece en el mismo valor que *pvParam*.  
   
  En el caso de las opciones de conexión de cadenas definidas por ODBC, el administrador de controladores establece el argumento *BufferLength* en la llamada a **SQLGetConnectAttr** en la longitud máxima predefinida (SQL_MAX_OPTION_STRING_LENGTH); en el caso de una opción de conexión que no sea de cadena, *BufferLength* se establece en 0.  
   

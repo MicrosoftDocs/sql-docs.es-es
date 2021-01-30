@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6558dda3bf0cb87f3cdfc14b3beda0fc2c329557
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4854c6e7e7b02b127cd8622ecb3c089485da5464
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094639"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203837"
 ---
 # <a name="sysexternal_data_sources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "98094639"
 |name|**sysname**|Nombre del origen de datos externo.||  
 |ubicación|**nvarchar(4000)**|La cadena de conexión, que incluye el protocolo, la dirección IP y el puerto para el origen de datos externo.||  
 |type_desc|**nvarchar(255)**|Tipo de origen de datos que se muestra como una cadena.|HADOOP, RDBMS, SHARD_MAP_MANAGER, RemoteDataArchiveTypeExtDataSource|  
-|type|**tinyint**|Tipo de origen de datos que se muestra como un número.|0-HADOOP<br /><br /> 1: RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-RemoteDataArchiveTypeExtDataSource|  
+|tipo|**tinyint**|Tipo de origen de datos que se muestra como un número.|0-HADOOP<br /><br /> 1: RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-RemoteDataArchiveTypeExtDataSource|  
 |resource_manager_location|**nvarchar(4000)**|Para el tipo HADOOP, la dirección IP y el puerto del administrador de recursos de Hadoop. Se usa para enviar un trabajo en un origen de datos de Hadoop.<br /><br /> NULL para otros tipos de orígenes de datos externos.||  
 |credential_id|**int**|IDENTIFICADOR de objeto de la credencial con ámbito de base de datos utilizada para conectarse al origen de datos externo.||  
 |database_name|**sysname**|Para el tipo RDBMS, el nombre de la base de datos remota. En tipo, SHARD_MAP_MANAGER, el nombre de la base de datos del administrador de mapa de particiones. NULL para otros tipos de orígenes de datos externos.||  

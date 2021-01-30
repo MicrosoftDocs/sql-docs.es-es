@@ -1,12 +1,12 @@
 ---
-description: 'Vistas de administración dinámica de búsqueda de texto completo y semántica: funciones'
-title: 'Vistas de administración dinámica de búsqueda de texto completo y semántica: funciones | Microsoft Docs'
+description: 'Vistas de administración dinámica de Full-Text y semántica: funciones'
+title: 'Vistas de administración dinámica de Full-Text y semántica: funciones | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3f2d7a48bfbccf174b26a08ec3a887f44247a457
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: cd9e072fa2c4aafceaad2d4aad57eb9dcc4bb38b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834290"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201355"
 ---
-# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Vistas de administración dinámica de búsqueda de texto completo y semántica: funciones
+# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Vistas de administración dinámica de Full-Text y semántica: funciones
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En esta sección se incluyen las siguientes funciones y vistas de administración dinámica que están relacionadas con la búsqueda de texto completo y la búsqueda semántica.  

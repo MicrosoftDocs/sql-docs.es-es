@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_proxy
 - sp_delete_proxy_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ccc9d7639bbe7f929a28b249e6767d0d703a0068
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7f9bb86ebdcc58ea116bf9eebd3ac7e2acb6f0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89529245"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204456"
 ---
 # <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @proxy_id = ] id` Número de identificación del proxy que se va a quitar. La *proxy_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @proxy_id = ] id` Número de identificación del proxy que se va a quitar. La *proxy_id* es de **tipo int** y su valor predeterminado es NULL.  
   
-`[ @proxy_name = ] 'proxy_name'` Nombre del proxy que se va a quitar. La *proxy_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @proxy_name = ] 'proxy_name'` Nombre del proxy que se va a quitar. La *proxy_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -52,7 +52,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  None  
   
 ## <a name="remarks"></a>Observaciones  
- Se debe especificar ** \@ proxy_name** o ** \@ proxy_id** . Si se especifican los dos argumentos, deben hacer referencia al mismo proxy; de lo contrario, el procedimiento almacenado genera un error.  
+ Se debe especificar **\@ proxy_name** o **\@ proxy_id** . Si se especifican los dos argumentos, deben hacer referencia al mismo proxy; de lo contrario, el procedimiento almacenado genera un error.  
   
  Si un paso de trabajo hace referencia al proxy especificado, este último no se podrá eliminar y el procedimiento almacenado generará un error.  
   

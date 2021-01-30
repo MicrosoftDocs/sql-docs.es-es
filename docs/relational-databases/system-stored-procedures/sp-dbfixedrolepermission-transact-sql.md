@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dbfixedrolepermission
 - sp_dbfixedrolepermission_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a7abd42379d62d9a2c34adb50b7610494493b6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 78f1381d05c5841ce48e395f8cc1cd477b820e01
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536633"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201279"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'` Es el nombre de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rol fijo de base de datos válido. *role* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *role* , se muestran los permisos de todos los roles fijos de base de datos.  
+`[ @rolename = ] 'role'` Es el nombre de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rol fijo de base de datos válido. *role* es de **tipo sysname y su** valor predeterminado es NULL. Si no se especifica *role* , se muestran los permisos de todos los roles fijos de base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

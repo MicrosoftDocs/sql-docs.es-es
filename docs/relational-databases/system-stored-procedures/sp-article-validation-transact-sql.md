@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_article_validation_TSQL
 - sp_article_validation
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 111b11b9563373f972ba6d30338e67075f992bed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1b2dda5e359b062716c9c0fead89b4ad2628488a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536747"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203225"
 ---
 # <a name="sp_article_validation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,11 +45,11 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación en la que existe el artículo. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en la que existe el artículo. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre del artículo que se va a validar. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre del artículo que se va a validar. *article* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @rowcount_only = ] type_of_check_requested` Especifica si solo se devuelve el recuento de filas de la tabla. *type_of_check_requested* es de **smallint**y su valor predeterminado es **1**.  
+`[ @rowcount_only = ] type_of_check_requested` Especifica si solo se devuelve el recuento de filas de la tabla. *type_of_check_requested* es de **smallint** y su valor predeterminado es **1**.  
   
  Si es **0**, se realiza un recuento de filas y una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suma de comprobación compatible con 7,0.  
   
@@ -57,7 +57,7 @@ sp_article_validation [ @publication = ] 'publication'
   
  Si es **2**, realice un recuento de filas y una suma de comprobación binaria.  
   
-`[ @full_or_fast = ] full_or_fast` Es el método utilizado para calcular el recuento de filas. *full_or_fast* es **tinyint**y puede tener uno de estos valores.  
+`[ @full_or_fast = ] full_or_fast` Es el método utilizado para calcular el recuento de filas. *full_or_fast* es **tinyint** y puede tener uno de estos valores.  
   
 |**Valor**|**Descripción**|  
 |---------------|---------------------|  
@@ -65,13 +65,13 @@ sp_article_validation [ @publication = ] 'publication'
 |**1**|Realiza un recuento rápido desde **sysindexes. Rows**. Contar las filas en **sysindexes** es más rápido que contar las filas de la tabla real. Sin embargo, **sysindexes** se actualiza de forma diferida y es posible que el recuento de filas no sea preciso.|  
 |**2** (predeterminado)|Realiza un recuento rápido condicional probando primero con el método rápido. Si el método rápido muestra diferencias, se utiliza el método completo. Si *expected_rowcount* es NULL y se usa el procedimiento almacenado para obtener el valor, siempre se usa un recuento completo (*).|  
   
-`[ @shutdown_agent = ] shutdown_agent` Especifica si el agente de distribución debe cerrarse inmediatamente al completarse la validación. *shutdown_agent* es de **bit**y su valor predeterminado es **0**. Si es **0**, el agente de distribución no se cierra. Si es **1**, el agente de distribución se cierra después de validar el artículo.  
+`[ @shutdown_agent = ] shutdown_agent` Especifica si el agente de distribución debe cerrarse inmediatamente al completarse la validación. *shutdown_agent* es de **bit** y su valor predeterminado es **0**. Si es **0**, el agente de distribución no se cierra. Si es **1**, el agente de distribución se cierra después de validar el artículo.  
   
-`[ @subscription_level = ] subscription_level` Especifica si un conjunto de suscriptores recoge o no la validación. *subscription_level* es de **bit**y su valor predeterminado es **0**. Si es **0**, la validación se aplica a todos los suscriptores. Si es **1**, la validación solo se aplica a un subconjunto de los suscriptores especificados por las llamadas a **sp_marksubscriptionvalidation** en la transacción abierta actual.  
+`[ @subscription_level = ] subscription_level` Especifica si un conjunto de suscriptores recoge o no la validación. *subscription_level* es de **bit** y su valor predeterminado es **0**. Si es **0**, la validación se aplica a todos los suscriptores. Si es **1**, la validación solo se aplica a un subconjunto de los suscriptores especificados por las llamadas a **sp_marksubscriptionvalidation** en la transacción abierta actual.  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  no se debe usar el *publicador* al solicitar la validación en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  

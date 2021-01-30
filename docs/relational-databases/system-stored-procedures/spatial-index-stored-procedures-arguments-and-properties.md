@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 840668495c620ca3cb7a403d3775238b12a52ec8
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: f9faf0901643b07420f8627d6afda4b9713d034a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809731"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201757"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Procedimientos almacenados de índice espacial: argumentos y propiedades
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "91809731"
 `[ @xml_output = ] 'xml_output'` Es un parámetro de salida que devuelve el conjunto de resultados de un fragmento XML. *xml_output* es **XML** y no tiene ningún valor predeterminado.  
   
 ## <a name="properties"></a>Propiedades  
- Establezca ** \@ verboseoutput** = 0 para que se devuelvan las propiedades básicas como se muestra en la tabla siguiente. ** \@ verboseoutput** > 0 para devolver todas las propiedades del índice espacial.  
+ Establezca **\@ verboseoutput** = 0 para que se devuelvan las propiedades básicas como se muestra en la tabla siguiente. **\@ verboseoutput** > 0 para devolver todas las propiedades del índice espacial.  
   
  **Base_Table_Rows**  
  Número de filas de la tabla base. El valor es **BIGINT**.  

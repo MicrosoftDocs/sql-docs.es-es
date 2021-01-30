@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval data type [ODBC], structure
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89962558fdbd6f0de5b5e030fe504669d51c40be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e470d0e30864c953fa3937725bcd5597bf542f41
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411211"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212440"
 ---
 # <a name="c-interval-structure"></a>Estructura de intervalo de C
-Cada uno de los tipos de datos de intervalo de C que se enumeran en la sección [tipos de datos de c](../../../odbc/reference/appendixes/c-data-types.md) utiliza la misma estructura para contener los datos de intervalo. Cuando se llama a **SQLFetch**, **SQLFetchScroll**o **SQLGetData** , el controlador devuelve datos en la estructura de SQL_INTERVAL_STRUCT, utiliza el valor especificado por la aplicación para los tipos de datos de C (en la llamada a **SQLBindCol**, **SQLGetData**o **SQLBindParameter**) para interpretar el contenido de SQL_INTERVAL_STRUCT y rellena el campo de *Interval_type* de la estructura con el valor de *enumeración* correspondiente al tipo C. Tenga en cuenta que los controladores no leen el campo *interval_type* para determinar el tipo de intervalo; recuperan el valor del campo descriptor de SQL_DESC_CONCISE_TYPE. Cuando la estructura se usa para los datos de parámetros, el controlador usa el valor especificado por la aplicación en el campo SQL_DESC_CONCISE_TYPE de APD para interpretar el contenido de SQL_INTERVAL_STRUCT, incluso si la aplicación establece el valor del campo *interval_type* en un valor diferente.  
+Cada uno de los tipos de datos de intervalo de C que se enumeran en la sección [tipos de datos de c](../../../odbc/reference/appendixes/c-data-types.md) utiliza la misma estructura para contener los datos de intervalo. Cuando se llama a **SQLFetch**, **SQLFetchScroll** o **SQLGetData** , el controlador devuelve datos en la estructura de SQL_INTERVAL_STRUCT, utiliza el valor especificado por la aplicación para los tipos de datos de C (en la llamada a **SQLBindCol**, **SQLGetData** o **SQLBindParameter**) para interpretar el contenido de SQL_INTERVAL_STRUCT y rellena el campo de *Interval_type* de la estructura con el valor de *enumeración* correspondiente al tipo C. Tenga en cuenta que los controladores no leen el campo *interval_type* para determinar el tipo de intervalo; recuperan el valor del campo descriptor de SQL_DESC_CONCISE_TYPE. Cuando la estructura se usa para los datos de parámetros, el controlador usa el valor especificado por la aplicación en el campo SQL_DESC_CONCISE_TYPE de APD para interpretar el contenido de SQL_INTERVAL_STRUCT, incluso si la aplicación establece el valor del campo *interval_type* en un valor diferente.  
   
  Esta estructura se define de la siguiente manera:  
   

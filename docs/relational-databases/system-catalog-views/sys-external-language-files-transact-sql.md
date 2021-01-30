@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - external_languages
 - external_languages_TSQL
@@ -20,12 +20,12 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: f09590931848f963ebe62736d4a890c0cf11ed0d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f283066ac99b4ef41b0fc6d46fc7b1a2a64b1270
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477466"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203779"
 ---
 # <a name="sysexternal_language_files-transact-sql"></a>sys.external_language_files (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]

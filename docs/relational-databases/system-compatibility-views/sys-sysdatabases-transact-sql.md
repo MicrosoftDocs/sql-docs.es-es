@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysdatabases_TSQL
 - sys.sysdatabases_TSQL
@@ -22,12 +22,12 @@ ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a5ed7033605db917f972e83bcf6c014c49f52bd
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: f742ce25d05d588cb70e9d68b254e06f8e478500
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099170"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201416"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98099170"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nombre de la base de datos|  
-|**dbid**|**smallint**|Identificador de base de datos|  
+|**DBID**|**smallint**|Identificador de base de datos|  
 |**Junction**|**varbinary(85)**|Id. de sistema del creador de la base de datos|  
 |**mode**|**smallint**|Utilizado internamente para bloquear una base de datos mientras se crea.|  
 |**status**|**int**|Bits de estado, algunos de los cuales se pueden establecer mediante [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) , como se indica a continuación:<br /><br /> 1 = **autoclose** (ALTER DATABASE)<br /><br /> 4 = **SELECT INTO/bulkcopy** (ALTER DATABASE con set Recovery)<br /><br /> 8 = **trunc. log on chkpt** (ALTER DATABASE con set Recovery)<br /><br /> 16 = **detección de página rasgada** (ALTER DATABASE)<br /><br /> 32 = **cargando**<br /><br /> 64 = **pre-Recovery**<br /><br /> 128 = en **recuperación**<br /><br /> 256 = **no recuperado**<br /><br /> 512 = **sin conexión** (ALTER DATABASE)<br /><br /> 1024 = **solo lectura** (ALTER DATABASE)<br /><br /> 2048 = **solo uso de DBO** (ALTER DATABASE con set RESTRICTED_USER)<br /><br /> 4096 = **usuario único** (ALTER DATABASE)<br /><br /> 32768 = **modo de emergencia**<br /><br /> 65536 = **checksum** (ALTER DATABASE)<br /><br /> 4194304 = **AutoShrink** (ALTER DATABASE)<br /><br /> 1073741824 = **apagado limpio**<br /><br /> Puede haber varios bits establecidos en ON a la vez.|  

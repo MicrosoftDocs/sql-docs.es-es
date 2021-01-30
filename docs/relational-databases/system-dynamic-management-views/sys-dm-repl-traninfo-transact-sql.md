@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_repl_traninfo
 - dm_repl_traninfo
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: f8a0613d83cebfed56ba5202a6c3535ef31c8a84
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e3c062d6a8aafffc9621a0932e38d9c190877b72
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098856"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203391"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98098856"
 |**fsinfo_address**|**varbinary(8**|Dirección de memoria de la estructura de información de la secuencia de archivo en caché.|  
 |**begin_lsn**|**nvarchar (64)**|Número de flujo de registro (LSN) de la entrada de registro de inicio para la transacción.|  
 |**commit_lsn**|**nvarchar (64)**|LSN de la entrada de registro de confirmación para la transacción.|  
-|**dbid**|**smallint**|Id. de la base de datos.|  
+|**DBID**|**smallint**|Id. de la base de datos.|  
 |**rows**|**int**|Id. del comando replicado en la transacción.|  
 |**elemento xdesid**|**nvarchar (64)**|Id. de la transacción.|  
 |**artcache_table_address**|**varbinary(8**|Dirección de memoria de la última estructura de la tabla de artículos en caché utilizada para esta transacción.|  

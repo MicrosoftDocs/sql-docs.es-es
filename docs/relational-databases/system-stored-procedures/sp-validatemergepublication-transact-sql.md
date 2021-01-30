@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_validatemergepublication
 - sp_validatemergepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff7a9cb80717ee6b8015c5ed1b597eb5eae7a6c3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0cf0b85db695458be4b9a48b74bfdc598f76f544
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534716"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201832"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,10 +39,10 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [** \@ publicación =**] **'***publicación***'**  
- Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ [**\@ publicación =**] **'**_publicación_*_'_*  
+ Es el nombre de la publicación. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @level = ] level` Es el tipo de validación que se va a realizar. *LEVEL* es de **tinyint**y no tiene ningún valor predeterminado. Puede ser uno de estos valores.  
+`[ @level = ] level` Es el tipo de validación que se va a realizar. *LEVEL* es de **tinyint** y no tiene ningún valor predeterminado. Puede ser uno de estos valores.  
   
 |Valor de nivel|Descripción|  
 |-----------------|-----------------|  

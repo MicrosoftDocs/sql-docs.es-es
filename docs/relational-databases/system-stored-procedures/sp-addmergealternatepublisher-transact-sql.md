@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmergealternatepublisher_TSQL
 - sp_addmergealternatepublisher
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0589b82f3126819e1638d90c8e67dea7556aafe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7c0caf60fb3b1323c24924f177ca4d8cdf1105ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548369"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202354"
 ---
 # <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,19 +46,19 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @alternate_publisher = ] 'alternate_synchronization_partner'` Es el nombre del publicador alternativo. *alternate_synchronization_partner* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'` Es el nombre del publicador alternativo. *alternate_synchronization_partner* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'` Es el nombre de la base de datos de publicación en el publicador alternativo. *alternate_publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` Es el nombre de la base de datos de publicación en el publicador alternativo. *alternate_publisher_db* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @alternate_publication = ] 'alternate_synchronization_partner'` Es el nombre de la publicación en el asociado de sincronización alternativo. *alternate_synchronization_partner* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'` Es el nombre de la publicación en el asociado de sincronización alternativo. *alternate_synchronization_partner* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @alternate_distributor = ] 'alternate_distributor'` Es el nombre del distribuidor para el asociado de sincronización alternativo. *alternate_distributor* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @alternate_distributor = ] 'alternate_distributor'` Es el nombre del distribuidor para el asociado de sincronización alternativo. *alternate_distributor* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
 `[ @friendly_name = ] 'friendly_name'` Es un nombre para mostrar con el que se puede identificar la Asociación del publicador, la publicación y el distribuidor que conforma un asociado de sincronización alternativo. *friendly_name* es de tipo **nvarchar (255)** y su valor predeterminado es NULL.  
   
