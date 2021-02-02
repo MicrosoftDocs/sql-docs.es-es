@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: a723e1278c0319e4dd80bc6bb69aa58d9a9a8d9a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ac96eec67c1421e55bc4533c995a85aa6c404a4e
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99204851"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236078"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "99204851"
   
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores)
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |feature_name|**sysname**|Nombre externo de la característica que está habilitada en la base de datos pero no admitida en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta característica se debe quitar para poder migrar la base de datos a todas las ediciones disponibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |feature_id|**int**|Id. de la característica asociado a la característica. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
@@ -42,7 +42,7 @@ ms.locfileid: "99204851"
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Notas  
  Si no se usa ninguna característica que pueda estar restringida por una edición específica en la base de datos, la vista no devuelve ninguna fila.  
   
  sys.dm_db_persisted_sku_features pueden enumerar las siguientes características de cambio de base de datos como restringidas a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ediciones específicas:  
@@ -66,7 +66,7 @@ ms.locfileid: "99204851"
 -   **TransparentDataEncryption.** Indica que una base de datos se ha cifrado utilizando el cifrado de datos transparente. Para quitar el cifrado de datos transparente, utilice la instrucción ALTER DATABASE. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 > [!NOTE]
-> A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Service Pack 1, estas características, excepto **TransparentDataEncryption.** están disponibles en varias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ediciones y no se limitan únicamente a las ediciones Enterprise o developer.
+> A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1, estas características, excepto **TransparentDataEncryption.** están disponibles en varias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ediciones y no se limitan únicamente a las ediciones Enterprise o developer.
 
  Para determinar si una base de datos utiliza alguna característica que esté restringida a ediciones concretas, ejecute la instrucción siguiente en la base de datos:  
   

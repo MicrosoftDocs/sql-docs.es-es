@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 9bfce6f56bdf39597def73884f12ca06f6eb56b7
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: a74539209e56e1e2da9053cfffccd7d528684a30
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170277"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235837"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 
@@ -56,8 +56,8 @@ sys.dm_exec_query_statistics_xml(session_id)
 |plan_handle|**varbinary (64)**|Es un token que identifica de forma única un plan de ejecución de consulta para un lote que se está ejecutando actualmente. Acepta valores NULL.|
 |query_plan|**xml**|Contiene la representación del plan de presentación en tiempo de ejecución del plan de ejecución de consultas especificado con *plan_handle* que contienen estadísticas parciales. El plan de presentación está en formato XML. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario. Acepta valores NULL.|
 
-## <a name="remarks"></a>Comentarios
-Esta función del sistema está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1. Consulte KB [3190871](https://support.microsoft.com/help/3190871)
+## <a name="remarks"></a>Notas
+Esta función del sistema está disponible a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1. Consulte KB [3190871](https://support.microsoft.com/help/3190871)
 
 Esta función del sistema funciona en la infraestructura de generación de perfiles de estadísticas de ejecución de consultas **estándar** y **ligera** . Para obtener más información, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).  
 

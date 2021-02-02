@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 21224e52ae9109f5404fc6a6ee11ad59e525995b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: a365a3fc39d31dd57a11d068eff5d0f4706ae2e6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171177"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236463"
 ---
 # <a name="database-requirements-master-data-services"></a>Requisitos de base de datos (Master Data Services)
 
@@ -36,9 +36,9 @@ ms.locfileid: "98171177"
  La base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] se puede hospedar en las siguientes ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
  
--   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Enterprise (64 bits) x64  
+-   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Enterprise (64 bits) x64  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Developer (64 bits) x64  
+-   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Developer (64 bits) x64  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence (64 bits) x64  
   

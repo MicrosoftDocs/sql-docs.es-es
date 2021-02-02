@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7e731d14967d808aa57f3fa0e001e5e593238ffd
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 7c5a436e6958d89f26ec0836b82850bd914d6c41
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170437"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237141"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novedades de Master Data Services (MDS)
 
@@ -30,7 +30,7 @@ ms.locfileid: "98170437"
   
  **Descargar**  
   
--   Para descargar [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], vaya al  **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
+-   Para descargar [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], vaya al  **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
   
 -   ¿Tiene una cuenta de Azure?  Si es así, haga clic **[aquí](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** para poner en marcha una máquina virtual con [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ya instalado.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "98170437"
   
  En esta versión de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se proporcionan más niveles de permisos mediante la introducción de los siguientes permisos nuevos: lectura, creación, actualización y eliminación. Por ejemplo, un usuario que solo tenga el permiso de actualización, ahora puede actualizar los datos maestros sin crear ni eliminar los datos. Cuando se le concede a un usuario el permiso de creación, actualización y eliminación, se le asigna automáticamente el permiso de lectura. También puede combinar los permisos de lectura, creación, actualización y eliminación.  
   
- Cuando se actualiza a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los permisos anteriores se convierten en permisos nuevos, tal como se muestra en la tabla siguiente.  
+ Cuando se actualiza a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los permisos anteriores se convierten en permisos nuevos, tal como se muestra en la tabla siguiente.  
   
 |Permiso en la versión anterior|Permiso nuevo|  
 |------------------------------------|--------------------|  
@@ -113,7 +113,7 @@ ms.locfileid: "98170437"
   
 ## <a name="improved-troubleshooting"></a>Mejora en la solución de problemas  
   
- En [!INCLUDE[ssSQL15](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se agregaron características para mejorar la depuración y facilitar la solución de problemas. Para más información, consulte [Seguimiento &#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md).  
+ En [!INCLUDE[sssql15-md](../includes/sssql16-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se agregaron características para mejorar la depuración y facilitar la solución de problemas. Para más información, consulte [Seguimiento &#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md).  
   
 ## <a name="improved-manageability"></a>Mejora en la capacidad de administración  
   

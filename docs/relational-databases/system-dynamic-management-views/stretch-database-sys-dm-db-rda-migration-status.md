@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: a08b50c897735183d2b3ac39a11cba09b11102e7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fc0253df9c1f9c593ef2169f03cb3ff98382cdad
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99202458"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236834"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database sys.dm_db_rda_migration_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "99202458"
   
  **Sys.dm_db_rda_migration_status** está en el ámbito del contexto de la base de datos actual. Asegúrese de que se encuentra en el contexto de la base de datos de las tablas habilitadas para stretch para los que desea ver el estado de la migración.  
   
- En [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] , la salida de **Sys.dm_db_rda_migration_status** está limitada a 200 filas.  
+ En [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] , la salida de **Sys.dm_db_rda_migration_status** está limitada a 200 filas.  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|IDENTIFICADOR de la tabla desde la que se migraron las filas.|  
 |**database_id**|**int**|IDENTIFICADOR de la base de datos desde la que se migraron las filas.|  

@@ -21,12 +21,12 @@ ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98a753e6eb1a61aa4be832188919ed1ed0e8bb36
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e0b0252dc739f688e88575f11715594a3972e256
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99190165"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235850"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,14 +34,14 @@ ms.locfileid: "99190165"
 Un componente interno denominado SQLOS crea las estructuras de nodo que imitan el procesador de hardware. Estas estructuras se pueden cambiar mediante [el uso de Soft-Numa](../../database-engine/configure-windows/soft-numa-sql-server.md) para crear diseños de nodo personalizados.  
 
 > [!NOTE]
-> A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] , el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usará automáticamente Soft-Numa para ciertas configuraciones de hardware. Para obtener más información, consulte [Automatic Soft-Numa](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
+> A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] , el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usará automáticamente Soft-Numa para ciertas configuraciones de hardware. Para obtener más información, consulte [Automatic Soft-Numa](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
   
 En la tabla siguiente se proporciona información acerca de estos nodos.  
   
 > [!NOTE]
 > Para llamar a esta DMV desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys.dm_pdw_nodes_os_nodes**.  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|Identificador del nodo.|  
 |node_state_desc|**nvarchar(256)**|Descripción del estado del nodo. Los valores se muestran primero con los valores mutuamente exclusivos, seguidos de los valores combinables. Por ejemplo:<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Hay cuatro valores node_state_desc mutuamente excluyentes. Se enumeran a continuación con sus descripciones.<br /><ul><li>EN línea: el nodo está en línea<li>SIN conexión: el nodo está sin conexión<li>IDLE: el nodo no tiene ninguna solicitud de trabajo pendiente y ha entrado en un estado de inactividad.<li>IDLE_READY: el nodo no tiene ninguna solicitud de trabajo pendiente y está listo para entrar en un estado de inactividad.</li></ul><br />Hay tres valores node_state_desc combinables, que se enumeran a continuación con sus descripciones.<br /><ul><li>DAC: este nodo está reservado para la [conexión administrativa dedicada](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: no se pueden crear subprocesos nuevos en este nodo debido a una condición de memoria insuficiente.<li>AGREGADO en caliente: indica que los nodos se agregaron como respuesta a un evento de CPU de adición activa.</li></ul>|  

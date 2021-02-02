@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6374bdcc748ab528c4cb70c2db6387d3b55f6cb6
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b5290d2e9650acc8ee540e572109b51b377e5235
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171537"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236581"
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>Información general: importación de datos de tablas (Master Data Services)
 
@@ -50,7 +50,7 @@ ms.locfileid: "98171537"
      Puede usar los procedimientos almacenados de almacenamiento provisional o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para cargar los datos.  
   
 > [!NOTE]  
->  En [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], la compatibilidad con los procesos de almacenamiento provisional de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] está en desuso.  
+>  En [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], la compatibilidad con los procesos de almacenamiento provisional de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] está en desuso.  
   
 ## <a name="deactivating-and-deleting-members-mds"></a>Desactivación y eliminación de miembros (MSD)  
  La desactivación significa que el miembro se puede reactivar. Si reactiva un miembro, se restauran sus atributos y su pertenencia a jerarquías y colecciones. Todas las transacciones anteriores quedan intactas. Las transacciones desactivación son visibles para los administradores en el área funcional de **Administración de versiones** de Master Data Manager.  

@@ -21,12 +21,12 @@ ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9fdfede86fd67c4911a8ec7bb0cdd75df012283
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 94af612964f33f9f463701593f9cddc4b3b992bb
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99160149"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235976"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "99160149"
  Para obtener más información, vea [&#40;de OLTP en memoria In-Memory&#41;de optimización ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) y [directrices para usar índices en tablas de Memory-Optimized](/previous-versions/sql/sql-server-2016/dn133166(v=sql.130)).  
 
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|Id. del objeto al que pertenece este índice.|  
-|xtp_object_id|**bigint**|IDENTIFICADOR interno correspondiente a la versión actual del objeto.<br /><br /> Nota: se aplica a [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .|  
+|xtp_object_id|**bigint**|IDENTIFICADOR interno correspondiente a la versión actual del objeto.<br /><br /> Nota: se aplica a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] .|  
 |index_id|**bigint**|Id. del índice. El index_id es exclusivo solo dentro del objeto.|  
 |scans_started|**bigint**|Número de recorridos de índice OLTP en memoria realizados. Cada selección, inserción, actualización o eliminación requiere un recorrido de índice.|  
 |scans_retried|**bigint**|Número de recorridos de índice que tuvieron que reintentarse.|  

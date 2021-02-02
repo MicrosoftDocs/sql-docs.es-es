@@ -21,12 +21,12 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31071c4fd89d6542b1d2bd87fc8f445a43c641b0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 20ad2ca8797dd9e3f094028422edef5b935cd2ae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99135127"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237525"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "99135127"
 > [!NOTE]  
 >  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys.dm_pdw_nodes_resource_governor_workload_groups**.  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|Id. del grupo de cargas de trabajo No admite valores NULL.|  
 |name|**sysname**|Nombre del grupo de cargas de trabajo No admite valores NULL.|  
 |{1}pool_id{2}|**int**|Id. del grupo de recursos de servidor. No admite valores NULL.|  
-|external_pool_id|**int**|**Se aplica a: a** partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .<br /><br /> IDENTIFICADOR del grupo de recursos externos. No admite valores NULL.|  
+|external_pool_id|**int**|**Se aplica a: a** partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] .<br /><br /> IDENTIFICADOR del grupo de recursos externos. No admite valores NULL.|  
 |statistics_start_time|**datetime**|Tiempo en que se restableció la colección de estadísticas para el grupo de cargas de trabajo. No admite valores NULL.|  
 |total_request_count|**bigint**|El recuento acumulado de solicitudes completadas en el grupo de cargas de trabajo. No admite valores NULL.|  
 |total_queued_request_count|**bigint**|El recuento acumulado de solicitudes en cola una vez alcanzado el límite de GROUP_MAX_REQUESTS. No admite valores NULL.|  
@@ -65,11 +65,11 @@ ms.locfileid: "99135127"
 |group_max_requests|**int**|Valor actual del número máximo de solicitudes simultáneas. No admite valores NULL.|  
 |max_dop|**int**|Grado máximo de paralelismo configurado para el grupo de cargas de trabajo. El valor predeterminado, 0, utiliza la configuración global. No admite valores NULL.| 
 |effective_max_dop|**int**|**Se aplica a: a** partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .<br /><br />Grado máximo efectivo de paralelismo para el grupo de cargas de trabajo. No admite valores NULL.| 
-|total_cpu_usage_preemptive_ms|**bigint**|**Se aplica a: a** partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .<br /><br />Tiempo total de CPU usado durante la programación de modo preferente para el grupo de cargas de trabajo, medido en MS. No admite valores NULL.<br /><br />Para ejecutar código situado fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, en procedimientos almacenados extendidos y consultas distribuidas), se tiene que ejecutar un subproceso fuera del control del programador no preferente. Para hacerlo, un trabajador se cambia al modo preferente.| 
-|request_max_memory_grant_percent_numeric|**float**|**Se aplica a: a** partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br /><br />Valor actual de la concesión máxima de memoria, en porcentaje, para una única solicitud. No admite valores NULL.| 
+|total_cpu_usage_preemptive_ms|**bigint**|**Se aplica a: a** partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] .<br /><br />Tiempo total de CPU usado durante la programación de modo preferente para el grupo de cargas de trabajo, medido en MS. No admite valores NULL.<br /><br />Para ejecutar código situado fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, en procedimientos almacenados extendidos y consultas distribuidas), se tiene que ejecutar un subproceso fuera del control del programador no preferente. Para hacerlo, un trabajador se cambia al modo preferente.| 
+|request_max_memory_grant_percent_numeric|**float**|**Se aplica a: a** partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] .<br /><br />Valor actual de la concesión máxima de memoria, en porcentaje, para una única solicitud. No admite valores NULL.| 
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Notas  
  Esta vista de administración dinámica muestra la configuración en memoria. Para ver los metadatos de la configuración almacenada, use el sys.resource_governor_workload_groups &#40;vista de catálogo [de Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) .  
   
  Cuando `ALTER RESOURCE GOVERNOR RESET STATISTICS` se ejecuta correctamente, se restablecen los contadores siguientes `statistics_start_time` : `total_request_count` , `total_queued_request_count` ,, `total_cpu_limit_violation_count` , `total_cpu_usage_ms` , `max_request_cpu_time_ms` ,,,,, `total_lock_wait_count` `total_lock_wait_time_ms` `total_query_optimization_count` `total_suboptimal_plan_generation_count` `total_reduced_memgrant_count` y `max_request_grant_memory_kb` . El contador `statistics_start_time` se establece en la fecha y hora actuales del sistema, y los otros contadores se establecen en cero (0).  

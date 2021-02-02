@@ -21,12 +21,12 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: 429f8049ef0b92168be5e3e0fc90c91e3d37224e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 10756b0297cdc731468ea8983c5378d5b380fef9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472816"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236015"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "97472816"
 Devuelve información sobre una página de una base de datos.  La función devuelve una fila que contiene la información de encabezado de la página, incluidos `object_id` , `index_id` y `partition_id` .  Esta función reemplaza la necesidad de usar `DBCC PAGE` en la mayoría de los casos.
 
 > [!NOTE]
-> `sys.dm_db_page_info` Actualmente solo se admite en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.
+> `sys.dm_db_page_info` Actualmente solo se admite en [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] y versiones posteriores.
 
 
 ## <a name="syntax"></a>Sintaxis   
@@ -58,7 +58,7 @@ Determina el nivel de detalle de la salida de la función. ' LIMITED ' devolver�
 
 ## <a name="table-returned"></a>Tabla devuelta  
 
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |database_id |int |Identificador de base de datos |
 |file_id |int |Id. de archivo |
@@ -114,7 +114,7 @@ Determina el nivel de detalle de la salida de la función. ' LIMITED ' devolver�
 |xdes_id |nvarchar (64) |Última transacción aportada por m_reserved <br> Solo con fines de depuración |
 ||||
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Notas
 La `sys.dm_db_page_info` función de administración dinámica devuelve información de página como `page_id` , `file_id` , `index_id` , `object_id` etc. que se encuentra en un encabezado de página. Esta información es útil para la solución de problemas y la depuración de diversos problemas de rendimiento (contención de bloqueos y bloqueos temporales) y daños.
 
 `sys.dm_db_page_info` se puede usar en lugar de la `DBCC PAGE` instrucción en muchos casos, pero solo devuelve la información del encabezado de página, no el cuerpo de la página. `DBCC PAGE` seguirá siendo necesario para los casos de uso en los que se requiera todo el contenido de la página.

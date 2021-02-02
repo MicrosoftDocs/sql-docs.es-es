@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6b0a49e257760e44398da7426933f6a9050a62f2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8cf9c34360cfabff16dd4823738168b9611a90ba
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99160667"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235874"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "99160667"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |spid|**smallint**|Identificador de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |kpid|**smallint**|Identificador de subproceso de Windows.|  
@@ -70,9 +70,9 @@ ms.locfileid: "99160667"
 |stmt_start|**int**|Desplazamiento inicial de la instrucción SQL actual para el identificador sql_handle especificado.|  
 |stmt_end|**int**|Desplazamiento final de la instrucción SQL actual para el identificador sql_handle especificado.<br /><br /> -1 = La instrucción actual se ejecuta al final de los resultados devueltos por la función fn_get_sql para el identificador sql_handle especificado.|  
 |request_id|**int**|IDENTIFICADOR de la solicitud. Se utiliza para identificar solicitudes que se ejecutan en una sesión específica.|
-|page_resource |**Binary(8** |**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> Representación hexadecimal de 8 bytes del recurso de página si la `waitresource` columna contiene una página. |  
+|page_resource |**Binary(8** |**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] <br /><br /> Representación hexadecimal de 8 bytes del recurso de página si la `waitresource` columna contiene una página. |  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Notas  
  Si un usuario tiene el permiso VIEW SERVER STATE en el servidor, verá todas las sesiones en ejecución de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; de lo contrario, el usuario solo verá la sesión actual.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 0f685d3d6782aa003d36788757ed76bc41fdb2de
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a34af15094cdd70833c16b2e3b3bfa1ce0ca4fca
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99193739"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235959"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**supports_sparse_files**|**tinyint**|Indica si el volumen admite archivos dispersos.  No puede ser null en Windows y devuelve null en el sistema operativo Linux.|  
 |**is_read_only**|**tinyint**|Indica si el volumen está marcado actualmente como de solo lectura. No puede ser NULL.|  
 |**is_compressed**|**tinyint**|Indica si el volumen está comprimido actualmente. No puede ser null en Windows y devuelve null en el sistema operativo Linux.|  
-|**incurs_seek_penalty**|**tinyint**|Indica el tipo de almacenamiento que admite este volumen. Los valores posibles son:<br /><br />0: no hay penalización de búsqueda en este volumen, normalmente cuando el dispositivo de almacenamiento es PMM o SSD<br /><br />1: buscar penalización en este volumen, normalmente cuando el dispositivo de almacenamiento es HDD<br /><br />2: no se puede determinar el tipo de almacenamiento cuando el volumen está en una ruta de acceso UNC o en recursos compartidos montados<br /><br />NULL: el tipo de almacenamiento no se puede determinar en el sistema operativo Linux<br /><br />**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] )|  
+|**incurs_seek_penalty**|**tinyint**|Indica el tipo de almacenamiento que admite este volumen. Los valores posibles son:<br /><br />0: no hay penalización de búsqueda en este volumen, normalmente cuando el dispositivo de almacenamiento es PMM o SSD<br /><br />1: buscar penalización en este volumen, normalmente cuando el dispositivo de almacenamiento es HDD<br /><br />2: no se puede determinar el tipo de almacenamiento cuando el volumen está en una ruta de acceso UNC o en recursos compartidos montados<br /><br />NULL: el tipo de almacenamiento no se puede determinar en el sistema operativo Linux<br /><br />**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] )|  
   
 ## <a name="security"></a>Seguridad  
   

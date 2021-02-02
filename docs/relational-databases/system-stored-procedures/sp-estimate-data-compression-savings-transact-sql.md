@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 938e6994f5d19f59023009cf9806ca62280dc5b9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 93d169d364369e87f1c363297c2a5c73c58e442b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99193559"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237853"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,7 +79,7 @@ sp_estimate_data_compression_savings
 ## <a name="result-sets"></a>Conjuntos de resultados  
  El siguiente conjunto de resultados se devuelve para proporcionar el tamaño actual y estimado de la tabla, índice o partición.  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_name|**sysname**|Nombre de la tabla o vista indizada.|  
 |schema_name|**sysname**|Esquema de la tabla o vista indizada.|  
@@ -90,7 +90,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (KB)|**bigint**|Tamaño del ejemplo con la opción de compresión actual. Esto incluye cualquier fragmentación.|  
 |sample_size_with_requested_compression_setting (KB)|**bigint**|Tamaño del ejemplo que se crea utilizando el valor de compresión solicitado y, si es aplicable, factor de relleno existente, sin fragmentación.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Notas  
  Use `sp_estimate_data_compression_savings` para calcular el ahorro que se puede producir al habilitar una tabla o partición para la compresión de archivo de fila, página, almacén de columnas o almacén de columnas. Por ejemplo, si el tamaño medio de una fila se puede reducir un 40 por ciento, potencialmente también se puede reducir el tamaño del objeto en un 40 por ciento. Es posible que no consiga ahorrar espacio, ya que depende del factor de relleno y del tamaño de la fila. Por ejemplo, si tiene una fila de 8.000 bytes de longitud y reduce su tamaño en un 40 por ciento, puede ajustar solo una fila en una página de datos. No se obtiene ningún ahorro.  
   
  Si los resultados de ejecutar `sp_estimate_data_compression_savings` indican que la tabla crecerá, eso quiere decir que muchas filas de la tabla utilizan prácticamente toda la precisión en los tipos de datos y la adición de la mínima sobrecarga necesaria para el formato comprimido es mayor que el ahorro obtenido por la compresión. En este caso excepcional, no habilite la compresión.  
@@ -110,10 +110,10 @@ sp_estimate_data_compression_savings
  Antes de SQL Server 2019, este procedimiento no se aplicaba a los índices de almacén de columnas y, por lo tanto, no aceptó los parámetros de compresión de datos de almacén de columnas y COLUMNSTORE_ARCHIVE.  A partir de SQL Server 2019, los índices de almacén de columnas se pueden usar como un objeto de origen para la estimación y como un tipo de compresión solicitado.
 
  > [!IMPORTANT]
- > Cuando se habilitan los [metadatos de tempdb optimizados para memoria](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , no se admite la creación de índices de almacén de columnas en tablas temporales. Debido a esta limitación, no se admite sp_estimate_data_compression_savings con los parámetros de compresión de datos de almacén de columnas y COLUMNSTORE_ARCHIVE cuando Memory-Optimized los metadatos de TempDB están habilitados.
+ > Cuando se habilitan los [metadatos de tempdb optimizados para memoria](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) en [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] , no se admite la creación de índices de almacén de columnas en tablas temporales. Debido a esta limitación, no se admite sp_estimate_data_compression_savings con los parámetros de compresión de datos de almacén de columnas y COLUMNSTORE_ARCHIVE cuando Memory-Optimized los metadatos de TempDB están habilitados.
 
 ## <a name="considerations-for-columnstore-indexes"></a>Consideraciones para los índices de almacén de columnas
- A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , admite la estimación de la `sp_estimate_compression_savings` compresión de archivo de almacén de columnas y de almacén de columnas. A diferencia de la compresión de página y fila, la aplicación de la compresión de almacén de columnas a un objeto requiere la creación de un nuevo índice de almacén de columnas. Por esta razón, al usar las opciones de almacén de columnas y COLUMNSTORE_ARCHIVE de este procedimiento, el tipo del objeto de origen proporcionado al procedimiento determina el tipo de índice de almacén de columnas usado para la estimación del tamaño comprimido. En la tabla siguiente se muestran los objetos de referencia que se utilizan para calcular el ahorro de compresión para cada tipo de objeto de origen cuando el @data_compression parámetro se establece en el almacén de columnas o en el COLUMNSTORE_ARCHIVE.
+ A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] , admite la estimación de la `sp_estimate_compression_savings` compresión de archivo de almacén de columnas y de almacén de columnas. A diferencia de la compresión de página y fila, la aplicación de la compresión de almacén de columnas a un objeto requiere la creación de un nuevo índice de almacén de columnas. Por esta razón, al usar las opciones de almacén de columnas y COLUMNSTORE_ARCHIVE de este procedimiento, el tipo del objeto de origen proporcionado al procedimiento determina el tipo de índice de almacén de columnas usado para la estimación del tamaño comprimido. En la tabla siguiente se muestran los objetos de referencia que se utilizan para calcular el ahorro de compresión para cada tipo de objeto de origen cuando el @data_compression parámetro se establece en el almacén de columnas o en el COLUMNSTORE_ARCHIVE.
 
  |Objeto de origen|Objeto de referencia|
  |-----------------|---------------|

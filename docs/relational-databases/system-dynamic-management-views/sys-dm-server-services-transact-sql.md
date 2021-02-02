@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: fd00b91eb2ba5018a7ae9865f323ac2f3faeb39d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7b37fc021c8d324076e81c8f864099ddd9fdad14
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99134589"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235952"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "99134589"
   Devuelve información acerca de los servicios de SQL Server, texto completo SQL Server Launchpad (SQL Server 2017 +) y Agente SQL Server en la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use esta vista de administración dinámica para notificar información de estado sobre estos servicios.  
   
  
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|Nombre del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servicio de, de texto completo o de Agente SQL Server. No puede ser NULL.|  
 |startup_type|**int**|Indica el modo de inicio del servicio. A continuación se muestran los valores posibles y sus descripciones correspondientes.<br /><br /> 0: otros<br />1: otros<br />2: automático<br />3: manual<br />4: deshabilitado<br /><br /> Acepta valores NULL.|  
@@ -45,7 +45,7 @@ ms.locfileid: "99134589"
 |nombreDeArchivo|**nvarchar(256)**|Ruta de acceso y nombre del archivo ejecutable del servicio. No puede ser NULL.|  
 |is_clustered|**nvarchar (1)**|Indica si el servicio está instalado como un recurso de un servidor en clúster. No puede ser NULL.|  
 |cluster_nodename|**nvarchar(256)**|Nombre del nodo de clúster en el que está instalado el servicio. Acepta valores NULL.|
-|instant_file_initialization_enabled|**nvarchar (1)**|Especifica si la inicialización instantánea de archivos está habilitada para el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servicio.<br /><br />Y = la inicialización instantánea de archivos está habilitada para el servicio.<br /><br />N = la inicialización instantánea de archivos está deshabilitada para el servicio.<br /><br /> Acepta valores NULL.<br /><br /> **Nota:** No se aplica a otros servicios como el Agente SQL Server.<br /><br /> **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir de [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 y [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 y versiones posteriores).|  
+|instant_file_initialization_enabled|**nvarchar (1)**|Especifica si la inicialización instantánea de archivos está habilitada para el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servicio.<br /><br />Y = la inicialización instantánea de archivos está habilitada para el servicio.<br /><br />N = la inicialización instantánea de archivos está deshabilitada para el servicio.<br /><br /> Acepta valores NULL.<br /><br /> **Nota:** No se aplica a otros servicios como el Agente SQL Server.<br /><br /> **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir de [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 y [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 y versiones posteriores).|  
 
 ## <a name="security"></a>Seguridad  
   
