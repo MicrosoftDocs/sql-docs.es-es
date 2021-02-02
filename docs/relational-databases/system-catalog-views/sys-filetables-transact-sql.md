@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: a740be59-cd52-4707-9ad2-5203669a63ac
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: dd4fca9b22862bb628961c62a8ffcf8658ec2e86
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 144091f2574f428433c515bee2df13054f7eb5c6
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99191538"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250111"
 ---
 # <a name="sysfiletables-transact-sql"></a>sys.filetables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Devuelve una fila para cada objeto FileTable de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para más información sobre FileTables, vea [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).    
+  Devuelve una fila para cada objeto FileTable de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Para más información sobre FileTables, vea [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).    
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**||Número de identificación del objeto. Es único en una base de datos.<br /><br /> Para obtener más información, [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**is_enabled**|**bit**|1 = FileTable está en el estado "habilitado".|  

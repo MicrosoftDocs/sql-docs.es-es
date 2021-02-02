@@ -21,23 +21,23 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6749867b40c0673c63b8a6c4279bc31b6fb0682
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ce3894ac989047dc8274c6770e881066023ccabd
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184974"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250392"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Devuelve información acerca de todas las páginas de datos que están actualmente en el grupo de búferes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La salida de esta vista se puede utilizar para determinar la distribución de páginas de la base de datos en el grupo de búferes según la base de datos, el objeto o el tipo. En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esta vista de administración dinámica también devuelve información sobre las páginas de datos del archivo de la extensión del grupo de búferes. Para obtener más información, consulte la [extensión del grupo de búferes](../../database-engine/configure-windows/buffer-pool-extension.md).  
+  Devuelve información acerca de todas las páginas de datos que están actualmente en el grupo de búferes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La salida de esta vista se puede utilizar para determinar la distribución de páginas de la base de datos en el grupo de búferes según la base de datos, el objeto o el tipo. En [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], esta vista de administración dinámica también devuelve información sobre las páginas de datos del archivo de la extensión del grupo de búferes. Para obtener más información, consulte la [extensión del grupo de búferes](../../database-engine/configure-windows/buffer-pool-extension.md).  
   
  Cuando se lee una página de datos del disco, esta se copia en el grupo de búferes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se almacena en caché para volver a utilizarla. Cada página de datos almacenada en caché tiene un descriptor de búfer. Los descriptores de búfer únicamente identifican cada página de datos que está almacenada actualmente en memoria caché en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors devuelve páginas en memoria caché para todas las bases de datos de usuario y de sistema. Esto incluye las páginas que están asociadas a la base de datos Resource.  
   
 > **Nota:** Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys.dm_pdw_nodes_os_buffer_descriptors**.  
 
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Identificador de la base de datos asociada con la página en el grupo de búferes. Acepta valores NULL.|  
 |file_id|**int**|Identificador del archivo que almacena la imagen permanente de la página. Acepta valores NULL.|  
@@ -58,7 +58,7 @@ ms.locfileid: "99184974"
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, `Server admin` `Azure Active Directory admin` se requiere la cuenta o. En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
    
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Notas  
  sys.dm_os_buffer_descriptors devuelve páginas que utiliza la base de datos de recursos. sys.dm_os_buffer_descriptors no devuelve información acerca de las páginas liberadas o robadas, o de las páginas que tenían errores cuando se leyeron.  
   
 |From|En|Por|Relación|  

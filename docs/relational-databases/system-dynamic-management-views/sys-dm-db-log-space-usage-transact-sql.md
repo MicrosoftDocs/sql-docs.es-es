@@ -21,12 +21,12 @@ ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08ea257d4c9cd2afb006c64528141fab1c31aad7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0f6c2f10d5865305896a2e10405e2ca6f05399f8
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094185"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251146"
 ---
 # <a name="sysdm_db_log_space_usage-transact-sql"></a>sys.dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,13 +36,13 @@ Devuelve información de uso de espacio para el registro de transacciones.
 > [!NOTE]
 > Se combinan todos los archivos de registro de transacciones.  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|Id. de la base de datos.|  
 |total_log_size_in_bytes |**bigint** |Tamaño del registro  |
 |used_log_space_in_bytes |**bigint** |Tamaño ocupado del registro  |     
 |used_log_space_in_percent |**real** |Tamaño ocupado del registro como porcentaje del tamaño total del registro |
-|log_space_in_bytes_since_last_backup |**bigint** |La cantidad de espacio que se usa desde la última copia de seguridad de registros <br />**Se aplica a:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] a través [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] de,  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|
+|log_space_in_bytes_since_last_backup |**bigint** |La cantidad de espacio que se usa desde la última copia de seguridad de registros <br />**Se aplica a:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] a través [!INCLUDE[sscurrent-md](../../includes/ssnoversion-md.md)] de,  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|
     
   
 ## <a name="permissions"></a>Permisos  

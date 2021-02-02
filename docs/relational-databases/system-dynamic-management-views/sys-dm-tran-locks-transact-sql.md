@@ -21,24 +21,24 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a39e58fb6ca60a30a73531988eeffac89e7b46e1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ec5ad1373336d3cc3873e0a0b81c2ad6c27291fa
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99133968"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250424"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Devuelve información acerca de los recursos del administrador de bloqueos activos actualmente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Cada fila representa una solicitud activa al administrador de bloqueos sobre un bloqueo que se ha concedido o está esperando a ser concedido.  
+  Devuelve información acerca de los recursos del administrador de bloqueos activos actualmente en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Cada fila representa una solicitud activa al administrador de bloqueos sobre un bloqueo que se ha concedido o está esperando a ser concedido.  
   
  Las columnas del conjunto de resultados se dividen en dos grupos principales: recurso y solicitud. El grupo sobre el recurso describe el recurso en que se ha solicitado realizar el bloqueo; el grupo sobre la solicitud describe la solicitud de bloqueo.  
   
 > [!NOTE]  
 > Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys.dm_pdw_nodes_tran_locks**.  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**resource_type**|**nvarchar(60)**|Representa el tipo de recurso. El valor puede ser uno de los siguientes: DATABASE, FILE, OBJECT, PAGE, KEY, EXTENT, RID, APPLICATION, METADATA, HOBT o ALLOCATION_UNIT.|  
 |**resource_subtype**|**nvarchar(60)**|Representa un subtipo de **resource_type**. Adquirir un bloqueo de subtipo sin mantener un bloqueo sin subtipos del tipo primario es técnicamente válido. Los diferentes subtipos no entran en conflicto, ni entre sí, ni con el tipo primario sin subtipos. No todos los tipos de recurso tienen subtipos.|  
@@ -65,7 +65,7 @@ ms.locfileid: "99133968"
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, `Server admin` `Azure Active Directory admin` se requiere la cuenta o. En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
  
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Notas  
  Un estado de solicitud Granted indica que se ha concedido el bloqueo sobre un recurso al solicitante. Una solicitud en espera indica que la solicitud aún no se ha concedido. La columna **request_status** devuelve los siguientes tipos de solicitud en espera:  
   
 -   Un estado de solicitud Convert indica que el solicitante ya tiene concedida una solicitud para un recurso y está esperando la concesión de una actualización a la solicitud inicial.  
