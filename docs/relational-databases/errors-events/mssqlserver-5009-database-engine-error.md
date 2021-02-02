@@ -6,18 +6,18 @@ ms.date: 08/20/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: reference
 helpviewer_keywords:
 - 5009 (Database Engine error)
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 1ca7fb52969d9ec08d8c80c48ec1325277a13fa7
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: 70269ab1c31eb5b66c6853688243c872359aaddf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418913"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99154275"
 ---
 # <a name="mssqlserver_5009"></a>MSSQLSERVER_5009
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -82,4 +82,4 @@ Para solucionar este problema, siga estos pasos:
     ```
 
 1. Cree una copia de seguridad del registro de transacciones de la base de datos.
-1. Intente quitar de nuevo el archivo lógico con el nombre *db_file1* .
+1. Intente quitar de nuevo el archivo lógico con el nombre *db_file1*.
