@@ -15,12 +15,12 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5159591eeafc76ca16fde95f8a7b9789acc084e1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 48d4d4b9602049c0c09e9e60ac8991c5c9a74154
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485317"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049262"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97485317"
     > [!IMPORTANT]  
     >  El rendimiento de un sistema de base de datos depende de diversos de factores, no todos los cuales puede observar y medir el recopilador de rendimiento de las transacciones. Por consiguiente, el informe de análisis del rendimiento de las transacciones no garantiza que las mejoras reales en el rendimiento coincidirán con las predicciones, en el caso de que las haya.  
   
- El informe de análisis de rendimiento de transacción y los asesores de migración se instalan como parte de SQL Server Management Studio (SSMS) cuando se selecciona **Herramientas de administración - Básica** o **Herramientas de administración - Avanzada** al instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], o bien al [descargar SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).    
+ El informe de análisis de rendimiento de transacción y los asesores de migración se instalan como parte de SQL Server Management Studio (SSMS) cuando se selecciona **Herramientas de administración - Básica** o **Herramientas de administración - Avanzada** al instalar [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], o bien al [descargar SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).    
   
 ## <a name="transaction-performance-analysis-reports"></a>Informes de análisis del rendimiento de las transacciones  
  Puede generar informes de análisis del rendimiento de las transacciones en **Explorador de objetos** haciendo clic con el botón derecho en la base de datos, seleccionando **Informes** y, después, **Informes estándar** e **Información general de análisis del rendimiento de las transacciones**. La base de datos debe tener una carga de trabajo activa o haber ejecutado una recientemente para generar un informe de análisis significativo.  

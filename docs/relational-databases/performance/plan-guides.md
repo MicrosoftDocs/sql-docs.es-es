@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: aa12afd7721c83f834c3c3f9311cb0436b57e38b
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: e230b163fdbe9f48ec4f436b4ef2453040b89b24
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505088"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048865"
 ---
 # <a name="plan-guides"></a>Guías de plan
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Las guías de plan permiten optimizar el rendimiento de las consultas cuando no pueda o no desee cambiar directamente el texto de la consulta real en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Las guías de plan influyen en la optimización de las consultas adjuntando sugerencias de consulta o un plan de consulta fijo para ellas. Las guías de plan pueden ser de gran utilidad cuando el rendimiento de un pequeño subconjunto de consultas de una aplicación de base de datos proporcionado por otro proveedor no es el esperado. En la guía de plan, se especifica la instrucción Transact-SQL que se desea optimizar y además una cláusula OPTION que incluye las sugerencias de consulta que se desean usar o un plan de consulta específico con el que desea optimizar la consulta. Cuando la consulta se ejecuta, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hace coincidir la instrucción Transact-SQL con la guía de plan y además adjunta en tiempo de ejecución la cláusula OPTION a la consulta o usa el plan de consulta especificado.  
+  Las guías de plan permiten optimizar el rendimiento de las consultas cuando no pueda o no desee cambiar directamente el texto de la consulta real en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Las guías de plan influyen en la optimización de las consultas adjuntando sugerencias de consulta o un plan de consulta fijo para ellas. Las guías de plan pueden ser de gran utilidad cuando el rendimiento de un pequeño subconjunto de consultas de una aplicación de base de datos proporcionado por otro proveedor no es el esperado. En la guía de plan, se especifica la instrucción Transact-SQL que se desea optimizar y además una cláusula OPTION que incluye las sugerencias de consulta que se desean usar o un plan de consulta específico con el que desea optimizar la consulta. Cuando la consulta se ejecuta, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hace coincidir la instrucción Transact-SQL con la guía de plan y además adjunta en tiempo de ejecución la cláusula OPTION a la consulta o usa el plan de consulta especificado.  
   
  El número total de guías de plan que se pueden crear solo está limitado por los recursos de los que disponga el sistema. No obstante, las guías de plan deberían limitarse a aquellas consultas de gran importancia cuyo rendimiento se desea mejorar o estabilizar. No se deben usar las guías de plan para influenciar la mayor parte de la carga de la consulta de una aplicación implementada.  
   

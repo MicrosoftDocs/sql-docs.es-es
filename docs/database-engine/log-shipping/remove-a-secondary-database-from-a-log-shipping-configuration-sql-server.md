@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 3cb7354772f10be060dd541d2394f146df4eca17
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: dc470be3681350bdac2d58778c9c01ed8a3a30c9
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643892"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813176"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>Quitar una base de datos secundaria desde una configuración del trasvase de registros (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo quitar una base de datos secundaria de trasvase de registros en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo quitar una base de datos secundaria de trasvase de registros en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
   

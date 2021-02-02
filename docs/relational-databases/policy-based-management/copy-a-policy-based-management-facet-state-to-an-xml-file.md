@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 7d604ab1-6dd6-4f8e-a79c-eba99ab106fd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 05235a6f2bc0ed2450e71397770599a5e22ea3d1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f1fc174835560ec7d96ffac265406449e4503163
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654732"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048808"
 ---
 # <a name="copy-a-policy-based-management-facet-state-to-an-xml-file"></a>Copiar en un archivo XML un estado de faceta de administración basada en directivas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo copiar el estado de una faceta de administración basada en directivas en un archivo XML en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  En este tema se describe cómo copiar el estado de una faceta de administración basada en directivas en un archivo XML en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **En este tema**  
   

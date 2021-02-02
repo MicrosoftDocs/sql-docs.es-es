@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c8b658fc2589ad0c39173ac206036b8274acc858
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: deb83a831430dd6ad57bf50eca26b9e30c49f22c
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774135"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076217"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Suscribir una base de datos a una categoría de directiva o anular la suscripción
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo se suscribe una base de datos a una categoría de directiva o se cancela la suscripción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo se suscribe una base de datos a una categoría de directiva o se cancela la suscripción en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
   
@@ -51,7 +51,7 @@ ms.locfileid: "85774135"
   
 2.  Haga clic en el signo más para expandir la carpeta **Bases de datos** .  
   
-3.  Haga clic con el botón derecho en la base de datos que contiene las suscripciones que quiera administrar, seleccione **Directivas**y, después, seleccione **Categorías**.  
+3.  Haga clic con el botón derecho en la base de datos que contiene las suscripciones que quiera administrar, seleccione **Directivas** y, después, seleccione **Categorías**.  
   
      En el cuadro de diálogo **Categorías** están disponibles las siguientes opciones:  
   

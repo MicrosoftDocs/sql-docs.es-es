@@ -17,16 +17,16 @@ ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 531790cbcf7bfcc903daaf101be6a7cc42836155
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 1da4312a4eb0f25b82b820ef9004bb9c64e5fff7
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479976"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076397"
 ---
 # <a name="delete-a-pull-subscription"></a>Eliminar una suscripción de extracción
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  En este tema se describe cómo eliminar una suscripción de extracción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
+  En este tema se describe cómo eliminar una suscripción de extracción en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
   
  **En este tema**  
   

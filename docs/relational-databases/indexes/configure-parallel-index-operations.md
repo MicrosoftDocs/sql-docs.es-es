@@ -18,17 +18,17 @@ ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17e25922d8d4e12a407960c384a695084b032873
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 41f1cb29f7bd1671166c7eaa0504a7c22c796a30
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480086"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048994"
 ---
 # <a name="configure-parallel-index-operations"></a>Configurar operaciones de índice en paralelo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-En este tema se define el grado máximo de paralelismo y se explica cómo modificar este valor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+En este tema se define el grado máximo de paralelismo y se explica cómo modificar este valor en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
 En los sistemas multiprocesador que ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise o superior, las instrucciones de índice pueden usar varios procesadores (CPU) para realizar las operaciones de examen, ordenación e indización asociadas a la instrucción de índice, al igual que hacen otras consultas. El número de CPU que se usan para ejecutar una sola instrucción de índice viene determinado por la opción de configuración del servidor [Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), la carga de trabajo actual y las estadísticas de índices. La opción max degree of parallelism determina el número máximo de procesadores que se utilizarán en la ejecución de planes paralelos. Si [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detecta que el sistema está ocupado, el grado de paralelismo de la operación de índice se reduce automáticamente antes de comenzar la ejecución de la instrucción. [!INCLUDE[ssDE](../../includes/ssde-md.md)] también puede reducir el grado de paralelismo si la columna de clave inicial de un índice sin particiones tiene un número limitado de valores distintos o la frecuencia de cada valor distinto varía significativamente. Para obtener más información, consulte [Guía de arquitectura de procesamiento de consulta](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing). 
   

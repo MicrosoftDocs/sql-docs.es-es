@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4fddf58b0f7473ea2ae46812d9908dcbbafb7b66
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 304dbec65d26c1d7daa63ca127a545a587f76bd1
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195730"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813601"
 ---
 # <a name="create-a-database"></a>Crear una base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo crear una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo crear una base de datos en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
 > [!NOTE]
 > Para crear una base de datos en Azure SQL Database mediante T-SQL, vea [CREATE DATABASE (Azure SQL Database)](../../t-sql/statements/create-database-transact-sql.md).
@@ -76,7 +76,7 @@ ms.locfileid: "92195730"
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y expándala.  
   
-2.  Haga clic con el botón derecho en **Bases de datos**y, después, haga clic en **Nueva base de datos**.  
+2.  Haga clic con el botón derecho en **Bases de datos** y, después, haga clic en **Nueva base de datos**.  
   
 3.  En **Nueva base de datos**, especifique un nombre de base de datos.  
   

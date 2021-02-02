@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d1780847dda15ac7171473d4a163443bedd9bdf8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eccedfef8f3e882425ccbeb6476cfef2e0ebf9e0
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756172"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813316"
 ---
 # <a name="detach-a-database"></a>Separar una base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo separar una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los archivos separados permanecen y se pueden volver a adjuntar utilizando CREATE DATABASE con la opción FOR ATTACH o FOR ATTACH_REBUILD_LOG. Los archivos se pueden mover a otro servidor y adjuntarse allí.  
+  En este tema se describe cómo separar una base de datos en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los archivos separados permanecen y se pueden volver a adjuntar utilizando CREATE DATABASE con la opción FOR ATTACH o FOR ATTACH_REBUILD_LOG. Los archivos se pueden mover a otro servidor y adjuntarse allí.  
   
  **En este tema**  
   
@@ -57,9 +57,9 @@ ms.locfileid: "85756172"
   
 1.  En el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conéctese a la instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y expándala.  
   
-2.  Expanda **Bases de datos**y seleccione el nombre de la base de datos de usuarios que desee separar.  
+2.  Expanda **Bases de datos** y seleccione el nombre de la base de datos de usuarios que desee separar.  
   
-3.  Haga clic con el botón derecho en el nombre de la base de datos, seleccione **Tareas**y haga clic en **Separar**. Aparecerá el cuadro de diálogo **Separar base de datos** .  
+3.  Haga clic con el botón derecho en el nombre de la base de datos, seleccione **Tareas** y haga clic en **Separar**. Aparecerá el cuadro de diálogo **Separar base de datos** .  
   
      **Bases de datos que se van a separar**  
      Enumera las bases de datos que se van a separar.  

@@ -16,19 +16,19 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8584c274304757724d0eceb88a91257112ef694a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 82314d905d6336ae35d564096db00aa4e426436c
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474006"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049090"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>Archivos de formato para importar y exportar datos (SQL Server)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Al importar masivamente datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o exportar masivamente datos de una tabla, puede usar un *archivo de formato* para almacenar toda la información de formato necesaria para exportar o importar datos masivamente. Esto incluye la información de formato para cada campo de un archivo de datos relativo a la tabla.
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite dos tipos de archivos de formato: formatos XML y archivos de formato no XML. Tanto los archivos con formato XML como los archivos no XML contienen descripciones de todos los campos de un archivo de datos, y los archivos de formato XML también contienen descripciones de las columnas de tabla correspondientes. Por lo general, los archivos de formato XML y no XML son intercambiables. Sin embargo, es recomendable utilizar la sintaxis XML para los nuevos archivos de formato porque proporciona varias ventajas con relación a los archivos de formato no XML. Para obtener más información, vea [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] admite dos tipos de archivos de formato: formatos XML y archivos de formato no XML. Tanto los archivos con formato XML como los archivos no XML contienen descripciones de todos los campos de un archivo de datos, y los archivos de formato XML también contienen descripciones de las columnas de tabla correspondientes. Por lo general, los archivos de formato XML y no XML son intercambiables. Sin embargo, es recomendable utilizar la sintaxis XML para los nuevos archivos de formato porque proporciona varias ventajas con relación a los archivos de formato no XML. Para obtener más información, vea [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).
 
 ## <a name="benefits-of-format-files"></a><a name="Benefits"></a> Ventajas de los archivos de formato
 

@@ -17,16 +17,16 @@ ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 91de6a53c6caf9e0bfd0339ea3c1354ce8984f4b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 53c7c3b803a16fd7ee95f35f33ee2439deb86199
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468906"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076623"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>Especificar opciones de esquema para la replicación de SQL Server
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  En este tema se describe cómo especificar las opciones de esquema en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Al publicar una tabla o una vista, puede controlar las opciones de creación de objetos que se replican para el objeto publicado. Puede establecer estas opciones cuando se haya creado el artículo y también puede modificarlas posteriormente. Si no especifican explícitamente estas opciones para un artículo, se definirá un conjunto predeterminado de opciones.  
+  En este tema se describe cómo especificar las opciones de esquema en [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Al publicar una tabla o una vista, puede controlar las opciones de creación de objetos que se replican para el objeto publicado. Puede establecer estas opciones cuando se haya creado el artículo y también puede modificarlas posteriormente. Si no especifican explícitamente estas opciones para un artículo, se definirá un conjunto predeterminado de opciones.  
   
 > [!NOTE]  
 >  Las opciones de esquema predeterminadas cuando se usan procedimientos almacenados de replicación pueden diferir de las opciones predeterminadas cuando los artículos se agregan mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  

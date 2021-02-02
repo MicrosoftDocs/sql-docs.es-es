@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 05f3dd9658ca51e1208476f8d11b387a79eb0234
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 4038ba678af8635f3ac2bd12f68c818a61e2c87f
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96125567"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075638"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurar una base de datos de SQL Server a un momento dado (modelo de recuperación completa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  En este tema se describe cómo restaurar una base de datos a un momento dado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Este tema solo es pertinente para las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usan los modelos de recuperación optimizados para cargas masivas de registros.  
+  En este tema se describe cómo restaurar una base de datos a un momento dado en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Este tema solo es pertinente para las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usan los modelos de recuperación optimizados para cargas masivas de registros.  
   
 > [!IMPORTANT]  
 >  En el modelo de recuperación optimizado para cargas masivas de registros, si la copia de seguridad de registros contiene cambios registrados de forma masiva, no es posible la recuperación a un momento dado de la copia de seguridad. La base de datos debe recuperarse al final de la copia de seguridad del registro de transacciones.  

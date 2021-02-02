@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a58c4a27a90a36acc47c3338b39a802a2209060d
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: a7381574bccfa00aa58c1666d3aae2b842c32be1
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96130988"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076517"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Especificar asignaciones de tipos de datos para un publicador de Oracle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo especificar asignaciones de tipos de datos para un publicador de Oracle en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Aunque se proporciona un conjunto de asignaciones de tipo de datos predeterminado para los publicadores de Oracle, es posible que sea necesario especificar las diferentes asignaciones para una publicación determinada.  
+  En este tema se describe cómo especificar asignaciones de tipos de datos para un publicador de Oracle en [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Aunque se proporciona un conjunto de asignaciones de tipo de datos predeterminado para los publicadores de Oracle, es posible que sea necesario especificar las diferentes asignaciones para una publicación determinada.  
   
  **En este tema**  
   

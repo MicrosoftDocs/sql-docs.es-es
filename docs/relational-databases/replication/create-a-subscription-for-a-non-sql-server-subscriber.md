@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cecd24ccf5aba44beff0a258ee75cf26722358f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36c15a9d7de2c613b3a25b16827bfcc037393524
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773905"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076227"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Crear una suscripción para un suscriptor que no sea de SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo crear una suscripción para un suscriptor que no sea de SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La replicación transaccional y la de instantáneas admiten la publicación de datos en suscriptores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre plataformas de suscriptores admitidos, vea [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+  En este tema se describe cómo crear una suscripción para un suscriptor que no sea de SQL Server en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La replicación transaccional y la de instantáneas admiten la publicación de datos en suscriptores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre plataformas de suscriptores admitidos, vea [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
  **En este tema**  
   
@@ -102,11 +102,11 @@ ms.locfileid: "85773905"
   
 9. En el cuadro de diálogo **Seguridad del Agente de distribución** :  
   
-    -   En los campos **Cuenta de proceso**, **Contraseña**y **Confirmar contraseña** , especifique la cuenta y contraseña de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con las que se deberá ejecutar el Agente de distribución y establecer las conexiones locales al distribuidor.  
+    -   En los campos **Cuenta de proceso**, **Contraseña** y **Confirmar contraseña** , especifique la cuenta y contraseña de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con las que se deberá ejecutar el Agente de distribución y establecer las conexiones locales al distribuidor.  
   
          La cuenta requiere los siguientes permisos mínimos: miembro del rol fijo de base de datos **db_owner** de la base de datos de distribución; miembro de la lista de acceso a la publicación (PAL); disponer de permisos de lectura en el recurso compartido de instantáneas y disponer de permiso de lectura en el directorio de instalación del proveedor OLE DB. Para obtener más información sobre la PAL, vea [Secure the Publisher](../../relational-databases/replication/security/secure-the-publisher.md) (Proteger el publicador).  
   
-    -   En **Conectar al suscriptor**, en los campos **Inicio de sesión**, **Contraseña**y **Confirmar contraseña** , escriba el nombre de inicio de sesión y la contraseña que deben utilizarse para conectar al suscriptor. Este inicio de sesión ya debería estar configurado y disponer de los permisos suficientes para crear objetos en la base de datos de suscripciones.  
+    -   En **Conectar al suscriptor**, en los campos **Inicio de sesión**, **Contraseña** y **Confirmar contraseña** , escriba el nombre de inicio de sesión y la contraseña que deben utilizarse para conectar al suscriptor. Este inicio de sesión ya debería estar configurado y disponer de los permisos suficientes para crear objetos en la base de datos de suscripciones.  
   
     -   En el campo **Opciones de conexión adicionales** , especifique cualquier opción de conexión para el suscriptor en forma de cadena de conexión (Oracle no requiere opciones adicionales). Las opciones deben ir separadas con punto y coma. A continuación se ofrece un ejemplo de una cadena de conexión DB2 (se han incluido saltos de línea para facilitar la lectura):  
   

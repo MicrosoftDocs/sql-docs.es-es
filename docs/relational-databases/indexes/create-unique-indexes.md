@@ -19,17 +19,17 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46b70b81745047bc85f2d7bbc677321dde618c81
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e2c41e97ad36387fe1f3644e5039eb5cd2b6a61d
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480066"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048963"
 ---
 # <a name="create-unique-indexes"></a>Crear índices únicos
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  En este tema se describe cómo crear un índice único en una tabla de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un índice único garantiza que la clave de índice no contiene valores duplicados y, por tanto, cada fila de la tabla es en cierta forma única. No existen diferencias significativas entre crear una restricción UNIQUE y crear un índice único que es independiente de una restricción. La validación de datos se produce de igual modo y el optimizador de consultas no distingue entre un índice único creado mediante una restricción o creado manualmente. Sin embargo, la creación de una restricción UNIQUE en la columna aclara el objetivo del índice. Para obtener más información acerca de las restricciones UNIQUE, vea [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
+  En este tema se describe cómo crear un índice único en una tabla de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un índice único garantiza que la clave de índice no contiene valores duplicados y, por tanto, cada fila de la tabla es en cierta forma única. No existen diferencias significativas entre crear una restricción UNIQUE y crear un índice único que es independiente de una restricción. La validación de datos se produce de igual modo y el optimizador de consultas no distingue entre un índice único creado mediante una restricción o creado manualmente. Sin embargo, la creación de una restricción UNIQUE en la columna aclara el objetivo del índice. Para obtener más información acerca de las restricciones UNIQUE, vea [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
  Cuando cree o modifique un índice único, puede establecer una opción para omitir claves duplicadas. Si esta opción está establecida en **Sí** e intenta crear claves duplicadas al agregar datos que afectan a varias filas (con la instrucción INSERT), no se agregará la fila que contenga un duplicado. Si el valor es **No**, se producirá un error en toda la operación de inserción y se revertirán todos los datos.  
   

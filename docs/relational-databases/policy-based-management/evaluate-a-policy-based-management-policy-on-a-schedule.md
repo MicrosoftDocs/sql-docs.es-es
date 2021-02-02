@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 79e16f9a39e235f7ceed5a77e55d03f4c5efed72
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 971a5107d09977a5ae731417c59625e2764bd6bd
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127876"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049010"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>Evaluar una directiva de administración basada en directivas según una programación
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo evaluar una directiva de administración basada en directivas según una programación en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  En este tema se describe cómo evaluar una directiva de administración basada en directivas según una programación en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **En este tema**  
   

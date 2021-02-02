@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 094fa6511875a77751eda2132529ce5548d2d215
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: e6fd86e44411fafef9e70e8981d0fa8728af9e76
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505247"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048969"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Habilitar o deshabilitar una guía de plan
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Puede deshabilitar y habilitar las guías de plan de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se puede habilitar o deshabilitar una única guía de plan o todas las guías de plan de una base de datos.  
+  Puede deshabilitar y habilitar las guías de plan de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se puede habilitar o deshabilitar una única guía de plan o todas las guías de plan de una base de datos.  
   
  **En este tema**  
   

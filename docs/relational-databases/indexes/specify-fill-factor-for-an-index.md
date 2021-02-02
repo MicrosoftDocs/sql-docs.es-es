@@ -15,17 +15,17 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016
-ms.openlocfilehash: d80ece2cf3b8974f203bf03601dd9c41bfc9bf79
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e1e0a2b406d6817c43a5a4a51bea90b556c5cea6
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478146"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048780"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Especificar el factor de relleno para un índice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Este tema describe qué es el factor de relleno y cómo especificar un valor de factor de relleno en un índice de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Este tema describe qué es el factor de relleno y cómo especificar un valor de factor de relleno en un índice de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  La opción de factor de relleno permite optimizar el almacenamiento y rendimiento de los datos de índice. Cuando se crea o se vuelve a generar un índice, el valor de factor de relleno determina el porcentaje de espacio en cada página de nivel de hoja que se tiene que rellenar con datos, por lo que se reserva el resto de cada página como espacio disponible para seguir creciendo. Por ejemplo, si se especifica un valor de factor de relleno de 80, significa que el 20 por ciento de cada página de nivel de hoja se dejará vacío para proporcionar espacio para la expansión del índice a medida que se agreguen datos a la tabla subyacente. El espacio vacío se reserva entre las filas de índice en lugar de al final del índice.  
   

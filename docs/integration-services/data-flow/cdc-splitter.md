@@ -13,19 +13,19 @@ f1_keywords:
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 38ecdd11aa4527fee14b558deb05dcfe578f4d84
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 9029051054c1fcec0e082da2e4e5883e0ff72375
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127312"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048796"
 ---
 # <a name="cdc-splitter"></a>Divisor CDC
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  El divisor CDC divide un único flujo de filas de un flujo de datos de origen de CDC en varios flujos de datos para las operaciones de inserción, actualización y eliminación. El flujo de datos se divide según la columna obligatoria `__$operation` y sus valores estándar en las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+  El divisor CDC divide un único flujo de filas de un flujo de datos de origen de CDC en varios flujos de datos para las operaciones de inserción, actualización y eliminación. El flujo de datos se divide según la columna obligatoria `__$operation` y sus valores estándar en las tablas de cambios de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   
 |Valor de la operación|Output|Descripción|  
 |------------------------|------------|-----------------|  

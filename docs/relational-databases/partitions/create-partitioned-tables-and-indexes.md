@@ -30,16 +30,16 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 387a2f88afd22004f7146384ce29ddc2ba2f2da7
-ms.sourcegitcommit: 629229a7c33a3ed99db63b89127bb016449f7d3d
+ms.openlocfilehash: 273e6f625b0a86be179da529e8b52e0d7ce991cc
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97952058"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049168"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Crear tablas e índices con particiones
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Puede crear una tabla o índice con particiones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los datos en tablas e índices con particiones se dividen horizontalmente en unidades que pueden propagarse por más de un grupo de archivos de la base de datos. Las particiones pueden hacer que las tablas y los índices grandes sean más escalables y fáciles de administrar.  
+  Puede crear una tabla o índice con particiones en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los datos en tablas e índices con particiones se dividen horizontalmente en unidades que pueden propagarse por más de un grupo de archivos de la base de datos. Las particiones pueden hacer que las tablas y los índices grandes sean más escalables y fáciles de administrar.  
   
  La creación de una tabla o índice con particiones tiene lugar normalmente en cuatro partes:  
   

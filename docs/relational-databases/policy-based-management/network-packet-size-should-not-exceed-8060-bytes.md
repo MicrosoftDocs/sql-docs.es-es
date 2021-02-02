@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86db5da1-afe4-4fbb-8bf8-33cedc7e4361
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec56bc58723d14f0997da2ce5c69a2a81451a90c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 737bad4dd5994bebdf23ea8ebab5f4ed6f788266
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88406441"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076417"
 ---
 # <a name="network-packet-size-should-not-exceed-8060-bytes"></a>El tamaño de paquete de red no debería superar 8060 bytes
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88406441"
  El tamaño de paquete de red no debería superar 8060 bytes.  
   
 ## <a name="for-more-information"></a>Para obtener más información  
- [Artículo 903002 de Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?linkid=117749)  
+ [Artículo 903002 de Microsoft Knowledge Base](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/903002)  
   
 ## <a name="see-also"></a>Consulte también  
  [Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

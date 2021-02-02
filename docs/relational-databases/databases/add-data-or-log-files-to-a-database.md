@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 563a075ec3cba0cc25980e59a228a5c319075caa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0e411e82a6492fda48cc8d3541dbd272075f994
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727584"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813139"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Agregar archivos de datos o de registro a una base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo agregar archivos de datos o de registro a una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo agregar archivos de datos o de registro a una base de datos en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
   

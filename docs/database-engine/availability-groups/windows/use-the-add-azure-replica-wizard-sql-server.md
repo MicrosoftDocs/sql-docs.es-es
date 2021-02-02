@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7fb9c44c90dbedbdc0a123f4b8c09088f7392d50
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 91f906b996c44cd9798d9754ca0345ca8892db10
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641833"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076367"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>Configuración de una máquina virtual de Azure como una réplica secundaria en un grupo de disponibilidad
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "97641833"
   
 1.  En primer lugar, descargue un certificado de administración para la suscripción de Azure. Haga clic en **Descargar** para abrir la página de inicio de sesión.  
   
-2.  Inicie sesión en Microsoft Azure con la cuenta de Microsoft o la cuenta corporativa. La cuenta corporativa o de Microsoft presenta el formato de una dirección de correo electrónico, como HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Para obtener más información sobre las credenciales de Azure, vea [Preguntas frecuentes sobre Cuenta para organizaciones de Microsoft](/previous-versions/jj592903(v=msdn.10)) y [Solución de problemas de inicio de sesión con la cuenta corporativa](https://support.microsoft.com/kb/2756852).  
+2.  Inicie sesión en Microsoft Azure con la cuenta de Microsoft o la cuenta corporativa. La cuenta corporativa o de Microsoft presenta el formato de una dirección de correo electrónico, como HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Para obtener más información sobre las credenciales de Azure, vea [Preguntas frecuentes sobre Cuenta para organizaciones de Microsoft](/previous-versions/jj592903(v=msdn.10)) y [Solución de problemas de inicio de sesión con la cuenta corporativa](http://web.archive.org/web/20121016005434/http://support.microsoft.com:80/kb/2756852).  
   
 3.  A continuación, haga clic en **Conectar** para conectarse a su suscripción. Cuando lo haya hecho, las listas desplegables se rellenan con los parámetros de Azure, como **Red virtual** y **Subred de la red virtual**.  
   

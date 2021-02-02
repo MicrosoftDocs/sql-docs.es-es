@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 19ff3852dad4b98b739bfc058ba7a532af932ee1
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: c0b65303e9c23977f658e3efef0d87a6713d55e4
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125573"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075827"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar una base de datos a una nueva ubicación (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se explica cómo restaurar una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una nueva ubicación y, opcionalmente, cómo cambiar el nombre de la base de datos, en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante SQL Server Management Studio(SSMS) o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puede mover una base de datos a una nueva ruta de acceso de directorio o crear una copia de una base de datos en la misma instancia de servidor o en una instancia de servidor diferente.  
+  En este tema se explica cómo restaurar una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una nueva ubicación y, opcionalmente, cómo cambiar el nombre de la base de datos, en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante SQL Server Management Studio(SSMS) o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puede mover una base de datos a una nueva ruta de acceso de directorio o crear una copia de una base de datos en la misma instancia de servidor o en una instancia de servidor diferente.  
     
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -47,7 +47,7 @@ ms.locfileid: "96125573"
   
 -   Para consideraciones adicionales sobre cómo mover una base de datos, consulte [Copiar bases de datos con Copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
--   Si restaura una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos se actualiza automáticamente. Normalmente, la base de datos está disponible inmediatamente. Pero si la base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor  **upgrade_option** . Si la opción de actualización se establece en importar (**upgrade_option** = 2) o en volver a generar (**upgrade_option** = 0), los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Observe también que cuando la opción de actualización se establece en importar, se vuelven a generar los índices de texto completo asociados si no se dispone de un catálogo de texto completo. Para cambiar el valor de la propiedad de servidor **upgrade_option** , use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
+-   Si restaura una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], la base de datos se actualiza automáticamente. Normalmente, la base de datos está disponible inmediatamente. Pero si la base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor  **upgrade_option** . Si la opción de actualización se establece en importar (**upgrade_option** = 2) o en volver a generar (**upgrade_option** = 0), los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Observe también que cuando la opción de actualización se establece en importar, se vuelven a generar los índices de texto completo asociados si no se dispone de un catálogo de texto completo. Para cambiar el valor de la propiedad de servidor **upgrade_option** , use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
 ###  <a name="security"></a><a name="Security"></a> Seguridad  
  Por razones de seguridad, se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Para usar una base de datos desde un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) en la base de datos de un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  

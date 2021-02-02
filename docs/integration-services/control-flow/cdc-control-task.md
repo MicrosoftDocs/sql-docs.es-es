@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 685ac46fd80e92d115dcf8aed3c49abb1ac9d144
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 492a0cd4b510b91d1f5f17ad04de54b005502bba
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96123582"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049120"
 ---
 # <a name="cdc-control-task"></a>Tarea Control CDC
 
@@ -37,9 +37,9 @@ ms.locfileid: "96123582"
 |Operación|Descripción|  
 |---------------|-----------------|  
 |ResetCdcState|Esta operación se usa para restablecer el estado CDC persistente asociado al contexto CDC actual. Después de ejecutar esta operación, el LSN máximo actual de la tabla de `sys.fn_cdc_get_max_lsn` de la marca de tiempo de LSN se convierte en el inicio del intervalo para el siguiente intervalo de procesamiento. Esta operación requiere una conexión a la base de datos de origen.|  
-|MarkInitialLoadStart|Esta operación se usa al comienzo de un paquete de carga inicial para registrar el LSN actual en la base de datos de origen antes de que el paquete de carga inicial comience a leer las tablas de origen. Esto requiere una conexión a la base de datos de origen para llamar a `sys.fn_cdc_get_max_lsn`.<br /><br /> Si selecciona MarkInitialLoadStart cuando trabaja en CDC de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser db_owner o sysadmin.|  
-|MarkInitialLoadEnd|Esta operación se usa al final de un paquete de carga inicial para registrar el LSN actual en la base de datos de origen después de que el paquete de carga inicial termine de leer las tablas de origen. Este LSN se determina mediante el registro de la hora en el momento en que se produjo esta operación y, posteriormente, mediante consulta a la tabla de asignación de `cdc.lsn_time_`de la base de datos CDC en busca de un cambio que hubiera tenido lugar después de dicha hora.<br /><br /> Si selecciona MarkInitialLoadEnd cuando trabaja en CDC de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser db_owner o sysadmin.|  
-|MarkCdcStart|Esta operación se usa cuando la carga inicial se realiza desde una base de datos de instantáneas. En este caso, el procesamiento de cambios debe iniciarse inmediatamente después del LSN de la instantánea. Puede especificar el nombre de la base de datos de instantáneas que se usará y la tarea Control CDC consulta a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] el LSN de la instantánea. También tiene la opción de especificar directamente el LSN de la instantánea<br /><br /> Si selecciona MarkCdcStart cuando trabaja en CDC de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser db_owner o sysadmin.|  
+|MarkInitialLoadStart|Esta operación se usa al comienzo de un paquete de carga inicial para registrar el LSN actual en la base de datos de origen antes de que el paquete de carga inicial comience a leer las tablas de origen. Esto requiere una conexión a la base de datos de origen para llamar a `sys.fn_cdc_get_max_lsn`.<br /><br /> Si selecciona MarkInitialLoadStart cuando trabaja en CDC de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser db_owner o sysadmin.|  
+|MarkInitialLoadEnd|Esta operación se usa al final de un paquete de carga inicial para registrar el LSN actual en la base de datos de origen después de que el paquete de carga inicial termine de leer las tablas de origen. Este LSN se determina mediante el registro de la hora en el momento en que se produjo esta operación y, posteriormente, mediante consulta a la tabla de asignación de `cdc.lsn_time_`de la base de datos CDC en busca de un cambio que hubiera tenido lugar después de dicha hora.<br /><br /> Si selecciona MarkInitialLoadEnd cuando trabaja en CDC de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser db_owner o sysadmin.|  
+|MarkCdcStart|Esta operación se usa cuando la carga inicial se realiza desde una base de datos de instantáneas. En este caso, el procesamiento de cambios debe iniciarse inmediatamente después del LSN de la instantánea. Puede especificar el nombre de la base de datos de instantáneas que se usará y la tarea Control CDC consulta a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] el LSN de la instantánea. También tiene la opción de especificar directamente el LSN de la instantánea<br /><br /> Si selecciona MarkCdcStart cuando trabaja en CDC de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser db_owner o sysadmin.|  
   
  Las operaciones siguientes se usan para administrar el intervalo de procesamiento:  
   
@@ -108,17 +108,17 @@ ms.locfileid: "96123582"
   
 -   **Marcar comienzo de carga inicial**: esta operación se usa cuando se ejecuta una carga inicial desde una base de datos activa sin una instantánea. Se invoca al comienzo de un paquete de carga inicial para registrar el LSN actual en la base de datos de origen antes de que el paquete de carga inicial comience a leer las tablas de origen. Esto requiere una conexión a la base de datos de origen.  
   
-     Si selecciona **Mark Initial Load Start** (Marcar comienzo de carga inicial) cuando trabaja en CDC de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser  **db_owner** o **sysadmin**.  
+     Si selecciona **Mark Initial Load Start** (Marcar comienzo de carga inicial) cuando trabaja en CDC de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser  **db_owner** o **sysadmin**.  
   
 -   **Marcar final de carga inicial**: esta operación se usa al ejecutar una carga inicial desde una base de datos activa sin una instantánea. Se invoca al final de un paquete de carga inicial para registrar el LSN actual en la base de datos de origen después de que el paquete de carga inicial termine de leer las tablas de origen. Este LSN se determina mediante el registro de la hora en el momento en que se produjo esta operación y, posteriormente, mediante consulta a la tabla de asignación de `cdc.lsn_time_`de la base de datos CDC en busca de un cambio que hubiera tenido lugar después de dicha hora.  
   
-     Si selecciona **Mark Initial Load End** (Marcar final de carga inicial) cuando trabaja en CDC de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser  **db_owner** o **sysadmin**.  
+     Si selecciona **Mark Initial Load End** (Marcar final de carga inicial) cuando trabaja en CDC de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser  **db_owner** o **sysadmin**.  
   
 -   **Marcar comienzo de CDC**: esta operación se utiliza cuando la carga inicial se realiza desde una base de datos de base de datos de instantánea o desde una base de datos de inactividad. Se invoca en cualquier punto del paquete de carga inicial. La operación acepta un parámetro que puede ser un LSN de instantánea, un nombre de una base de datos de instantánea (desde la que el LSN de instantánea se deriva automáticamente) o se puede dejar vacío, en cuyo caso el LSN de la base de datos actual se usa como el LSN de inicio para el paquete de procesamiento de cambios.  
   
      Esta operación se usa en lugar de las operaciones Marcar comienzo/final de carga inicial.  
   
-     Si selecciona **Mark CDC Start** (Marcar comienzo de CDC) cuando trabaja en CDC de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser  **db_owner** o **sysadmin**.  
+     Si selecciona **Mark CDC Start** (Marcar comienzo de CDC) cuando trabaja en CDC de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser  **db_owner** o **sysadmin**.  
   
 -   **Obtener intervalo de procesamiento**: esta operación se usa en un paquete de procesamiento de cambios antes de invocar el flujo de datos que usa el flujo de datos de origen de CDC. Establece un intervalo de LSN que lee el flujo de datos de origen de CDC cuando se invoca. El intervalo se almacena en una variable de paquete SSIS que usa el origen de CDC durante el procesamiento del flujo de datos.  
   

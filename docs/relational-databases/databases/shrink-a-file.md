@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 14fe5218577618cea4957fc819879374233210a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 077f7d98470c385b8333fc9db2f55d04bd13bb44
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715500"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98812969"
 ---
 # <a name="shrink-a-file"></a>Reducir un archivo
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo reducir un archivo de datos o de registro en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo reducir un archivo de datos o de registro en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  La reducción de los archivos de datos permite recuperar espacio moviendo páginas de datos del final del archivo a espacio desocupado próximo al principio del archivo. Cuando se crea suficiente espacio libre al final del archivo, las páginas de datos situadas al final del archivo pueden desasignarse y devolverse al sistema de archivos.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "85715500"
   
 2.  Expanda **Bases de datos** y, después, haga clic con el botón derecho en la base de datos que quiera reducir.  
   
-3.  Seleccione **Tareas**y **Reducir**y haga clic en **Archivos**.  
+3.  Seleccione **Tareas** y **Reducir** y haga clic en **Archivos**.  
   
      **Base de datos**  
      Muestra el nombre de la base de datos seleccionada.  

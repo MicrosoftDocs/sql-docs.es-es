@@ -17,17 +17,17 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbad843d482945a29cb03fde9545b1c19fb354f9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: cd8b60ec5b302183fdb1a0713e71568821dae2fe
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098404"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813096"
 ---
 # <a name="contained-databases"></a>Bases de datos independientes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Una *base de datos independiente* es una base de datos que está aislada de otras bases de datos y de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ayuda al usuario a aislar su base de datos de la instancia de 4 maneras.  
+  Una *base de datos independiente* es una base de datos que está aislada de otras bases de datos y de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos.  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ayuda al usuario a aislar su base de datos de la instancia de 4 maneras.  
   
 -   Muchos de los metadatos que describen una base de datos se mantienen en la base de datos. (Además, o en lugar de, mantenerse los metadatos en la base de datos maestra).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "98098404"
   
 -   El entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DMV, XEvents, etc.) informa y puede actuar en la información de contención.  
   
- Algunas características de las bases de datos parcialmente independientes, como el almacenamiento de la base de datos, se aplican a todas las bases de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Algunas ventajas de las bases de datos parcialmente independientes, como la autenticación en el nivel de base de datos y la intercalación de catálogo, se deben habilitar para que estén disponibles. La contención parcial se habilita mediante las instrucciones **CREATE DATABASE** y **ALTER DATABASE** o mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información acerca de cómo habilitar la contención parcial de bases de datos, vea [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
+ Algunas características de las bases de datos parcialmente independientes, como el almacenamiento de la base de datos, se aplican a todas las bases de datos de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . Algunas ventajas de las bases de datos parcialmente independientes, como la autenticación en el nivel de base de datos y la intercalación de catálogo, se deben habilitar para que estén disponibles. La contención parcial se habilita mediante las instrucciones **CREATE DATABASE** y **ALTER DATABASE** o mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información acerca de cómo habilitar la contención parcial de bases de datos, vea [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
   
 ##  <a name="partially-contained-database-concepts"></a><a name="Concepts"></a> Conceptos de las bases de datos parcialmente independientes  
  Una base de datos totalmente independiente incluye todos los metadatos y opciones de configuración necesarios para definirla y no tiene dependencias de configuración en la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] donde esté instalada. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la separación de una base de datos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría necesitar mucho tiempo y un conocimiento detallado de la relación entre la base de datos y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las bases de datos parcialmente independientes facilitan la separación de una base de datos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de otras bases de datos.  

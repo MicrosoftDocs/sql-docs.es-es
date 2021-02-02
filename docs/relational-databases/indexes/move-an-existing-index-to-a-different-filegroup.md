@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: abbd77be3e20cc69bc12cd69f07fa82ec99d95db
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 4ccacb2b46b609b61485821f250644596f0e3955
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88470475"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048888"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Mover un índice existente a un grupo de archivos diferente
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  En este tema se describe cómo mover un índice existente de su grupo de archivos actual a otro distinto en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo mover un índice existente de su grupo de archivos actual a otro distinto en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
   
@@ -98,7 +98,7 @@ ms.locfileid: "88470475"
   
      Si lo que desea mover es un índice clúster, puede utilizar el procesamiento en línea. El procesamiento en línea permite que varios usuarios obtengan acceso al mismo tiempo a los datos subyacentes, así como a índices no clúster durante la operación de índice. Para más información, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
-     En equipos multiprocesador que usan [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede configurar el número de procesadores que desea usar para ejecutar la instrucción de índice; para ello, especifique un valor máximo de grado de paralelismo. La característica Operaciones indizadas en paralelo no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea Características compatibles con las ediciones de SQL Server 2016. Para obtener más información sobre las operaciones indexadas en paralelo, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+     En equipos multiprocesador que usan [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], puede configurar el número de procesadores que desea usar para ejecutar la instrucción de índice; para ello, especifique un valor máximo de grado de paralelismo. La característica Operaciones indizadas en paralelo no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea Características compatibles con las ediciones de SQL Server 2016. Para obtener más información sobre las operaciones indexadas en paralelo, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 8.  Haga clic en **Aceptar**.  
   

@@ -13,16 +13,16 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 46d577d8488a4b696ef5736a1bb94127e24bc53a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 931aa85fbb37d8dba1c9bb3e06e00760d3f16caf
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667706"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049170"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Crear un plan de mantenimiento (superficie de diseño del plan de mantenimiento)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo crear un plan de mantenimiento de varios servidores o de uno mediante la superficie de diseño del plan de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Aunque el **Asistente para plan de mantenimiento** es mejor para crear planes de mantenimiento básicos, crear un plan con la superficie de diseño le permite usar un flujo de trabajo mejorado.  
+  En este tema se describe cómo crear un plan de mantenimiento de varios servidores o de uno mediante la superficie de diseño del plan de mantenimiento de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Aunque el **Asistente para plan de mantenimiento** es mejor para crear planes de mantenimiento básicos, crear un plan con la superficie de diseño le permite usar un flujo de trabajo mejorado.  
   
  **En este tema**  
   
@@ -94,7 +94,7 @@ ms.locfileid: "85667706"
      **Superficie del diseñador**  
      Diseña y mantiene los planes de mantenimiento. Utilice la superficie del diseñador para agregar o eliminar tareas de mantenimiento a un plan, especificar los vínculos de precedencia entre las tareas e indicar la bifurcación y el paralelismo de tareas.  
   
-     Un vínculo de precedencia entre dos tareas establece una relación entre ellas. La segunda tarea (la *tarea dependiente*) solo se ejecuta si el resultado de la ejecución de la primera tarea (la *tarea precedente*) coincide con el criterio especificado. Por lo general, el resultado de la ejecución es **Correcto**, **Error**o **Conclusión**. Para obtener más información, vea el paso **8** a continuación.  
+     Un vínculo de precedencia entre dos tareas establece una relación entre ellas. La segunda tarea (la *tarea dependiente*) solo se ejecuta si el resultado de la ejecución de la primera tarea (la *tarea precedente*) coincide con el criterio especificado. Por lo general, el resultado de la ejecución es **Correcto**, **Error** o **Conclusión**. Para obtener más información, vea el paso **8** a continuación.  
   
 5.  En el encabezado del espacio de diseño, haga doble clic en **Subplan_1** y escriba un nombre y una descripción para el subplán en el cuadro de diálogo **Propiedades del subplán** .  
   
@@ -109,7 +109,7 @@ ms.locfileid: "85667706"
      **Programación**  
      Indica en qué programación se ejecutó el subplán. Haga clic en **Programación del subplán** para abrir el cuadro de diálogo **Nueva programación de trabajo** . Haga clic en **Quitar programación** para eliminar la programación del subplán.  
   
-     Lista de**Ejecutar como**  
+     Lista de **Ejecutar como**  
      Seleccione la cuenta que se utilizará para ejecutar esta subtarea.  
   
 6.  Haga clic en **Programación del subplán** para escribir detalles de programación en el cuadro de diálogo **Nueva programación del trabajo** .  
@@ -144,7 +144,7 @@ ms.locfileid: "85667706"
   
     1.  En el menú **Herramientas** , haga clic en **Elegir elementos del cuadro de herramientas**.  
   
-    2.  Seleccione las herramientas que desee que aparezcan en el **Cuadro de herramientas**y, a continuación, haga clic en **Aceptar**.  
+    2.  Seleccione las herramientas que desee que aparezcan en el **Cuadro de herramientas** y, a continuación, haga clic en **Aceptar**.  
   
      Agregar tareas del plan de mantenimiento al **Cuadro de herramientas** también hace que estén disponibles en el **Asistente para planes de mantenimiento**. Para obtener más información sobre las tareas individuales anteriores, vea [Using Maintenance Plan Wizard (Usar el Asistente para planes de mantenimiento)](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) en **Start the Maintenance Plan Wizard (Iniciar el Asistente para planes de mantenimiento)** .  
   
@@ -161,17 +161,17 @@ ms.locfileid: "85667706"
          **Opción de restricción**  
          Define cómo funciona una restricción entre dos tareas.  
   
-         Lista**Operación de evaluación**  
+         Lista **Operación de evaluación**  
          Permite especificar la operación de evaluación que utiliza la restricción de precedencia. Las operaciones son: **Restricción**, **Expresión**, **Expresión y restricción** y **Expresión o restricción**.  
   
-         Lista**Valor**  
+         Lista **Valor**  
          Especifique el valor de restricción: **Correcto**, **Error** o **Finalización**. **Correcto** es el valor predeterminado.  
   
         > [!NOTE]  
-        >  La línea de restricción de precedencia es verde para **Correcto**, roja para **Error**y azul para **Conclusión**.  
+        >  La línea de restricción de precedencia es verde para **Correcto**, roja para **Error** y azul para **Conclusión**.  
   
          **Expression**  
-         Si usa las operaciones **Expresión**, **Expresión y restricción**o **Expresión o restricción**, escriba una expresión. La expresión debe evaluarse como un valor booleano.  
+         Si usa las operaciones **Expresión**, **Expresión y restricción** o **Expresión o restricción**, escriba una expresión. La expresión debe evaluarse como un valor booleano.  
   
          **Test**  
          Permite validar la expresión.  
@@ -244,7 +244,7 @@ ms.locfileid: "85667706"
      Actualice la vista de los registros seleccionados. El botón **Actualizar** hace que se vuelvan a leer los registros seleccionados del servidor de destino al tiempo que se aplica una configuración de filtro.  
   
      **Filter**  
-     Abre un cuadro de diálogo que permite especificar la configuración que se usa para filtrar el archivo de registro, como **Conexión**, **Fecha**u otros criterios de filtro de **General** .  
+     Abre un cuadro de diálogo que permite especificar la configuración que se usa para filtrar el archivo de registro, como **Conexión**, **Fecha** u otros criterios de filtro de **General** .  
   
      **Búsqueda**  
      Permite buscar texto específico en el archivo de registro. No se admite la búsqueda con caracteres comodín.  

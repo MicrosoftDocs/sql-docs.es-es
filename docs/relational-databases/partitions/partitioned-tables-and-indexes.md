@@ -17,19 +17,19 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8471695cfde49d36ba107264fa23654757d8c2ab
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: 8a8f1575cab349c6c501f6aa98509e8595efeb77
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241886"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049143"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es compatible con la creación de particiones de tabla e índice. Los datos de tablas e índices con particiones se dividen en unidades que pueden propagarse por más de un grupo de archivos de la base de datos. Los datos se dividen en sentido horizontal, de forma que los grupos de filas se asignan a particiones individuales. Las particiones de un índice o una tabla deben encontrarse en la misma base de datos. La tabla o el índice se tratarán como una sola entidad lógica cuando se realicen consultas o actualizaciones en los datos. Antes de [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1, las tablas e índices con particiones no estaban disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite hasta 15.000 particiones de forma predeterminada. En versiones anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], el número de particiones se limitaba a 1000 de forma predeterminada.  
+> [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] admite hasta 15.000 particiones de forma predeterminada. En versiones anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], el número de particiones se limitaba a 1000 de forma predeterminada.  
   
 ## <a name="benefits-of-partitioning"></a>Ventajas de la creación de particiones  
  La creación de particiones de tablas o índices grandes puede tener las siguientes ventajas de administración y rendimiento.  

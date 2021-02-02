@@ -1,8 +1,7 @@
 ---
-title: Propiedades de base de datos (página del Almacén de consultas) | Microsoft Docs
+title: Propiedades de base de datos (página del Almacén de consultas)
 description: Obtenga información sobre cómo usar la ficha Almacén de consultas del cuadro de diálogo Propiedades de la base de datos para configurar modos de almacén de consultas, intervalos, umbrales y otras propiedades.
 ms.custom: ''
-ms.date: 11/09/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -10,23 +9,20 @@ ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.querystore.f1
-ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a0a7612c37ff63f851e5c3a42215192f9f982bdf
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.date: 01/25/2021
+ms.openlocfilehash: 786d73d8f90b12d094a5f53e1045448e05fa7517
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171827"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98812787"
 ---
 # <a name="database-properties-query-store-page"></a>Propiedades de base de datos (página del Almacén de consultas)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+
   Obtenga acceso a esta página desde la base de datos principal y úsela para configurar y modificar las propiedades del almacén de consultas de la base de datos. Estas opciones también se pueden configurar mediante las [opciones ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md). Para información sobre el almacén de consultas, vea [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
-  
-||  
-|-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] hasta la [versión actual](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
 ## <a name="options"></a>Opciones  
  Modo de operación  

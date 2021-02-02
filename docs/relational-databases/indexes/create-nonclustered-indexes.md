@@ -18,17 +18,17 @@ ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c1831a5b16577b608629a09beb3c8d6e12c3634
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9200edd16f0a33a52b12493660b18cfe45ae6086
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481186"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048991"
 ---
 # <a name="create-nonclustered-indexes"></a>Crear índices no clúster
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Puede crear índices no clúster en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un índice no clúster es una estructura de índice independiente de los datos almacenados en una tabla que reordena una o más columnas seleccionadas. Con frecuencia, los índices no clúster pueden ayudarle a encontrar datos más rápidamente que cuando se busca en la tabla subyacente; las consultas a veces pueden responderse completamente con los datos del índice no clúster o el índice no clúster puede apuntar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] hacia las filas de la tabla subyacente. Normalmente, los índices no clúster se crean para mejorar el rendimiento de las consultas usadas con frecuencia no cubiertas por el índice clúster o para buscar filas en una tabla sin un índice clúster (denominado montón). Se pueden crear varios índices no clúster en una tabla o una vista indizada.  
+  Puede crear índices no clúster en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un índice no clúster es una estructura de índice independiente de los datos almacenados en una tabla que reordena una o más columnas seleccionadas. Con frecuencia, los índices no clúster pueden ayudarle a encontrar datos más rápidamente que cuando se busca en la tabla subyacente; las consultas a veces pueden responderse completamente con los datos del índice no clúster o el índice no clúster puede apuntar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] hacia las filas de la tabla subyacente. Normalmente, los índices no clúster se crean para mejorar el rendimiento de las consultas usadas con frecuencia no cubiertas por el índice clúster o para buscar filas en una tabla sin un índice clúster (denominado montón). Se pueden crear varios índices no clúster en una tabla o una vista indizada.  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b4e7a72b8a9efa3eefbd4217d2628e78e9c6fda3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cac3695cd99d5065862604a77a986921568ac292
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725950"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049135"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Propiedades personalizadas de la tarea de control CDC
 
@@ -27,8 +27,8 @@ ms.locfileid: "91725950"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|Conexión|Conexión ADO.NET|Una conexión ADO.NET en la base de datos CDC de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para acceder a las tablas de cambios y al estado CDC si se almacenan en la misma base de datos.<br /><br /> Es preciso realizar la conexión a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilitada para CDC y donde se encuentre la tabla de cambios seleccionada.|  
-|TaskOperation|Integer (enumeración)|Operación seleccionada para la tarea de control CDC. Los valores posibles son **Mark Initial Load Start**, **Mark Initial Load End**, **Mark CDC Start**, **Get Processing Range**, **Mark Processed Range**y **Reset CDC State**.<br /><br /> Si selecciona **MarkCdcStart**, **MarkInitialLoadStart**o **MarkInitialLoadEnd** al trabajar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC (es decir, no en Oracle), el usuario especificado en el administrador de conexiones tiene que ser  **db_owner** o **sysadmin**.<br /><br /> Para obtener más información acerca de estas operaciones, vea [CDC Control Task Editor](./cdc-control-task.md) y [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
+|Conexión|Conexión ADO.NET|Una conexión ADO.NET en la base de datos CDC de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] para acceder a las tablas de cambios y al estado CDC si se almacenan en la misma base de datos.<br /><br /> Es preciso realizar la conexión a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilitada para CDC y donde se encuentre la tabla de cambios seleccionada.|  
+|TaskOperation|Integer (enumeración)|Operación seleccionada para la tarea de control CDC. Los valores posibles son **Mark Initial Load Start**, **Mark Initial Load End**, **Mark CDC Start**, **Get Processing Range**, **Mark Processed Range** y **Reset CDC State**.<br /><br /> Si selecciona **MarkCdcStart**, **MarkInitialLoadStart** o **MarkInitialLoadEnd** al trabajar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC (es decir, no en Oracle), el usuario especificado en el administrador de conexiones tiene que ser  **db_owner** o **sysadmin**.<br /><br /> Para obtener más información acerca de estas operaciones, vea [CDC Control Task Editor](./cdc-control-task.md) y [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |OperationParameter|String|Utilizado actualmente a la operación **MarkCdcStart** . Este parámetro permite que se requiera una entrada adicional para la operación específica. Por ejemplo, el número de LSN necesario para la operación **MarkCdcStart**|  
 |StateVariable|String|Una variable de paquete SSIS que almacena el estado CDC del contexto CDC actual. La tarea de control CDC lee y escribe el estado en **StateVariable** y no lo carga ni lo almacena en un almacenamiento persistente a menos que se seleccione **AutomaticStatePersistence** . Vea [Definir una variable de estado](../../integration-services/data-flow/define-a-state-variable.md).|  
 |AutomaticStatePersistence|Boolean|La tarea control CDC lee el estado CDC de la variable de paquete de estado CDC. Después de una operación, la tarea de control CDC actualiza el valor de la variable de paquete de estado CDC. La propiedad **AutomaticStatePersistence** indica la tarea de control CDC que es responsable de conservar el valor de estado CDC entre las ejecuciones de los paquetes SSIS.<br /><br /> Cuando esta propiedad es **true**, la tarea de control CDC carga automáticamente el valor de la variable de estado CDC desde una tabla de estado. Cuando la tarea de control CDC actualiza el valor de la variable de estado CDC, también actualiza su valor en el mismo estado **table.stores**, el estado de una tabla especial y actualiza la variable de estado. El programador puede controlar la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene la tabla de estado y su nombre. La estructura de esta tabla de estado está predefinida.<br /><br /> Cuando es **false**, la tarea de control CDC no se ocupa de conservar su valor. Cuando es true, la tarea de control CDC almacena el estado de una tabla especial y actualiza StateVariable.<br /><br /> El valor predeterminado es **true**, que indica que la persistencia de estado se actualiza automáticamente.|  

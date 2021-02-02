@@ -25,17 +25,17 @@ ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d06bb8ed9286c22a2381f31a36814ea305642365
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 97718ff757e09cd33116c47f31155f6ae0edb08b
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481176"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048899"
 ---
 # <a name="disable-indexes-and-constraints"></a>Deshabilitar índices y restricciones
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  En este tema se describe cómo deshabilitar un índice o restricciones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al deshabilitar un índice, se impide que el usuario pueda tener acceso al mismo y, en el caso de los índices clúster, a los datos de la tabla subyacente. La definición del índice se conserva en los metadatos y las estadísticas de índice se mantienen en índices no clúster. La deshabilitación de un índice clúster o no clúster en una vista elimina físicamente los datos del índice. Al deshabilitar un índice clúster en una tabla, se impide el acceso a los datos, que siguen en la tabla pero dejan de estar disponibles para las operaciones de lenguaje de manipulación de datos (DML) hasta que se quite o recompile el índice.  
+  En este tema se describe cómo deshabilitar un índice o restricciones en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al deshabilitar un índice, se impide que el usuario pueda tener acceso al mismo y, en el caso de los índices clúster, a los datos de la tabla subyacente. La definición del índice se conserva en los metadatos y las estadísticas de índice se mantienen en índices no clúster. La deshabilitación de un índice clúster o no clúster en una vista elimina físicamente los datos del índice. Al deshabilitar un índice clúster en una tabla, se impide el acceso a los datos, que siguen en la tabla pero dejan de estar disponibles para las operaciones de lenguaje de manipulación de datos (DML) hasta que se quite o recompile el índice.  
   
  **En este tema**  
   

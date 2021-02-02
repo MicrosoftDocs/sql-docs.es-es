@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3f275d1f2c5ce4142bb357a1c1b314b694ef589
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: f0e4c13745057b1276f06f3bc77ace266921a43d
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783045"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076277"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>Ocultar una instancia del motor de base de datos de SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ Para evitarlo, cree un alias en todos los nodos de la instancia en clúster o de
   
 ## <a name="see-also"></a>Consulte también  
  [Configuración de red del servidor](../../database-engine/configure-windows/server-network-configuration.md)   
- [Descripción de las conexiones de cliente del servidor virtual de SQL](https://support.microsoft.com/kb/273673)   
+ [Descripción de las conexiones de cliente del servidor virtual de SQL](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/273673)   
  [Cómo asignar un puerto estático a una instancia con nombre de SQL Server y evitar un problema común](https://deep.data.blog/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall/)  
   
   

@@ -16,19 +16,19 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7bd7f2478a08b00d1eb970b80ca3e5fb9f168d21
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 9c10e3f1aa1460f63f3fcd3e95bb95bef8e63065
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196475"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049222"
 ---
 # <a name="cdc-source"></a>origen de CDC
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  El origen CDC lee un intervalo de datos modificados de las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y entrega los cambios de nivel inferior a otros componentes de SSIS.  
+  El origen CDC lee un intervalo de datos modificados de las tablas de cambios de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] y entrega los cambios de nivel inferior a otros componentes de SSIS.  
   
  El intervalo de lectura de los datos modificados por el origen CDC se denomina intervalo de procesamiento CDC y se determina con la tarea Control CDC que se ejecuta antes de que el flujo de datos actual se inicie. El intervalo de procesamiento CDC se deriva del valor de una variable de paquete que mantiene el estado del procesamiento CDC para un grupo de tablas.  
   
@@ -126,7 +126,7 @@ use <cdc-enabled-database-name>
 -   [Extraer datos de modificaciones mediante el origen de CDC](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
   
 ## <a name="cdc-source-editor-connection-manager-page"></a>Editor de origen de CDC (página Administrador de conexiones)
-  Use la página **Administrador de conexiones** del cuadro de diálogo del **Editor de origen de CDC** con el fin de seleccionar el administrador de conexiones de ADO.NET para la base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] donde el origen de CDC lee las filas de cambios (la base de datos CDC). Una vez que se haya seleccionado la base de datos CDC, debe seleccionar una tabla capturada en la base de datos.  
+  Use la página **Administrador de conexiones** del cuadro de diálogo del **Editor de origen de CDC** con el fin de seleccionar el administrador de conexiones de ADO.NET para la base de datos de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] donde el origen de CDC lee las filas de cambios (la base de datos CDC). Una vez que se haya seleccionado la base de datos CDC, debe seleccionar una tabla capturada en la base de datos.  
   
  Para obtener más información acerca del origen de CDC, vea [CDC Source](../../integration-services/data-flow/cdc-source.md).  
   

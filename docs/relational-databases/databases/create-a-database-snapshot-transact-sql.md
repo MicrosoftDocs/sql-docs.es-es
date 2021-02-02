@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e427b52c416fe3ca325fd476959827c67ecacaaa
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d0418f33afd634cc5ec4d9d7b7a887e6bdae6fc9
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483677"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813265"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Crear una instantánea de base de datos (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "97483677"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  La base de datos de origen, que puede usar cualquier modelo de recuperación, debe cumplir los siguientes requisitos previos:  
   
--   La instancia del servidor debe ejecutarse en una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admita instantáneas de bases de datos. Para obtener más información sobre la compatibilidad con la creación de instantáneas de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+-   La instancia del servidor debe ejecutarse en una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admita instantáneas de bases de datos. Para obtener más información sobre la compatibilidad con la creación de instantáneas de base de datos en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 -   La base de datos de origen debe estar en línea, a menos que sea una base de datos reflejada dentro de una sesión de creación de reflejo de la base de datos.  
   

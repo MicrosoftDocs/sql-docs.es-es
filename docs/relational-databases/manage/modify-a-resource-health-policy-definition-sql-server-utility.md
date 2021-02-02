@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 77837f50ba3bf9d3e89ecddd0e7deb7df891a54e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cef58a5cd2587c4845fe2f4a0c090abb8970877a
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725195"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049098"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>Modificar una definición de la directiva de mantenimiento de recursos (utilidad de SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo modificar una definición de directiva de mantenimiento de recursos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Antes de modificar una directiva de uso de recursos en la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe crear un punto de control de la utilidad (UCP). Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
+  En este tema se describe cómo modificar una definición de directiva de mantenimiento de recursos en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Antes de modificar una directiva de uso de recursos en la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe crear un punto de control de la utilidad (UCP). Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Las directivas de uso de recursos de la utilidad se pueden configurar para las aplicaciones de capa de datos y las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las directivas de uso de recursos se pueden definir globalmente para todas las aplicaciones de capa de datos y las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o se pueden definir individualmente para cada aplicación de capa de datos y para cada instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También es posible implementar directivas globales y configurar aplicaciones de capa de datos e instancias administradas individuales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con sus propias definiciones de la directiva.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85725195"
   
 4.  Utilice los controles en el lado derecho de las descripciones de la directiva para establecer los umbrales de infrautilización o sobreutilización.  
   
-5.  Utilice los botones **Aplicar**, **Descartar**o **Restaurar valores predeterminados** según sea necesario. El cambio de la directiva puede tardar hasta 15 minutos en propagarse en el panel de la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en los detalles de la vista de lista.  
+5.  Utilice los botones **Aplicar**, **Descartar** o **Restaurar valores predeterminados** según sea necesario. El cambio de la directiva puede tardar hasta 15 minutos en propagarse en el panel de la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en los detalles de la vista de lista.  
   
 6.  Para actualizar los datos, haga clic con el botón derecho en el nodo **Administración de la utilidad** en el panel de navegación del explorador de la utilidad y seleccione **Actualizar**.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "85725195"
   
 1.  Conéctese al UCP en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  En el panel de navegación del explorador de la utilidad, haga clic en **Aplicaciones de capa de datos implementadas**o haga clic en **Instancias administradas**para ver o modificar las directivas de supervisión para una aplicación de capa de datos o instancia administrada individual.  
+2.  En el panel de navegación del explorador de la utilidad, haga clic en **Aplicaciones de capa de datos implementadas** o haga clic en **Instancias administradas** para ver o modificar las directivas de supervisión para una aplicación de capa de datos o instancia administrada individual.  
   
 3.  En la vista de lista de panel de contenido del explorador de la utilidad, haga clic en la aplicación de capa de datos o nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyas directivas le gustaría modificar y después haga clic en la pestaña **Detalles de la directiva** .  
   
@@ -56,7 +56,7 @@ ms.locfileid: "85725195"
   
 6.  Use los controles en el lado derecho de la descripción de la directiva para establecer los umbrales de infrautilización o sobreutilización.  
   
-7.  Utilice los botones **Aplicar**, **Descartar**o **Restaurar valores predeterminados** según sea necesario. El cambio de la directiva puede tardar hasta 15 minutos en propagarse en el panel de la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en los detalles de la vista de lista.  
+7.  Utilice los botones **Aplicar**, **Descartar** o **Restaurar valores predeterminados** según sea necesario. El cambio de la directiva puede tardar hasta 15 minutos en propagarse en el panel de la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en los detalles de la vista de lista.  
   
 8.  Para actualizar los datos, haga clic con el botón derecho en el nodo **Aplicaciones de capa de datos implementadas** en el panel de navegación del explorador de la utilidad y seleccione **Actualizar**.  
   

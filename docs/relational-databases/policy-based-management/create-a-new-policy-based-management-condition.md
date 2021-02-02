@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 76c60d4561eacda47648d2cac710e64c2ccc1f4e
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: f8eef68a189d9e3c3c8cce16de803ce3b87f0207
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127912"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048825"
 ---
 # <a name="create-a-new-policy-based-management-condition"></a>Crear una nueva condición de administración basada en directivas.
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo crear una condición de administración basada en directivas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  En este tema se describe cómo crear una condición de administración basada en directivas en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **En este tema**  
   

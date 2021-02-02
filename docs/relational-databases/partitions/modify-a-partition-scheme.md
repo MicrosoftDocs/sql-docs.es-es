@@ -11,16 +11,16 @@ ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb261e69d3491f717be8b34bb2b0f699a4d37840
-ms.sourcegitcommit: 629229a7c33a3ed99db63b89127bb016449f7d3d
+ms.openlocfilehash: 1cba23d0d043004f1f5a71d8e4af4844470ff163
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97952042"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049111"
 ---
 # <a name="modify-a-partition-scheme"></a>Modificar un esquema de partición
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Para modificar un esquema de partición en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , puede diseñar un grupo de archivos que contenga la siguiente partición que se agregará a la tabla con particiones mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para hacerlo debe asignar la propiedad NEXT USED a un grupo de archivos. Puede asignar la propiedad NEXT USED a un grupo de archivos vacío o a uno que ya contenga una partición. Es decir, un grupo de archivos puede tener más de una partición.  
+  Para modificar un esquema de partición en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , puede diseñar un grupo de archivos que contenga la siguiente partición que se agregará a la tabla con particiones mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para hacerlo debe asignar la propiedad NEXT USED a un grupo de archivos. Puede asignar la propiedad NEXT USED a un grupo de archivos vacío o a uno que ya contenga una partición. Es decir, un grupo de archivos puede tener más de una partición.  
   
  **En este tema**  
   

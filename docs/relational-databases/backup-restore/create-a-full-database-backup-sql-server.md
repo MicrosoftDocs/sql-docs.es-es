@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e0c103fba0dae4f6e31d976c151b7c01c487f658
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 3eb0b33f2891c8f48d63b4446d31c1918fcb7aab
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129285"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076117"
 ---
 # <a name="create-a-full-database-backup"></a>Crear una copia de seguridad completa de base de datos
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-En este tema se explica cómo crear una copia de seguridad completa de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.
+En este tema se explica cómo crear una copia de seguridad completa de la base de datos en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.
 
 Para obtener información sobre la copia de seguridad de SQL Server en el servicio Azure Blob Storage, vea [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) y [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 

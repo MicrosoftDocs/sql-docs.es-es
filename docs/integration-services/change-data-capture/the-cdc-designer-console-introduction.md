@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ac65acde470d75c616e77d21f6e62ab8d1f5e4e4
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: 8b18603ce1dce86a304a1da06fcdd8b7b1414519
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241863"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813131"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Introducción a la Consola del diseñador CDC
 
@@ -51,7 +51,7 @@ ms.locfileid: "98241863"
 
 ### <a name="target-sql-server-database"></a>Base de datos de SQL Server de destino
   
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con compatibilidad para CDC de SQL Server  
+-   [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] con compatibilidad para CDC de SQL Server  
   
 ## <a name="software-prerequisites"></a>Requisitos previos de software  
  En función de la versión de la Consola del diseñador CDC de Oracle instalada, es necesario usar la versión de 32 bits o de 64 bits del software cliente de Oracle.  

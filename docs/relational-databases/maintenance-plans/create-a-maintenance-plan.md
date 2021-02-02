@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c8e76cdbc5adfb617511d81a1c5af938a95dba10
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d220ed52edbf86f84071c2194658af1c3306ef5
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667478"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049173"
 ---
 # <a name="create-a-maintenance-plan"></a>Crear un plan de mantenimiento
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo crear un plan de mantenimiento de un solo servidor o multiservidor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Hay dos formas de crear estos planes de mantenimiento con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]: con el Asistente para planes de mantenimiento o con la superficie de diseño. El uso del asistente es más conveniente si desea crear planes de mantenimiento básicos, mientras que la superficie de diseño le permite utilizar un flujo de trabajo mejorado.  
+  En este tema se describe cómo crear un plan de mantenimiento de un solo servidor o multiservidor en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Hay dos formas de crear estos planes de mantenimiento con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]: con el Asistente para planes de mantenimiento o con la superficie de diseño. El uso del asistente es más conveniente si desea crear planes de mantenimiento básicos, mientras que la superficie de diseño le permite utilizar un flujo de trabajo mejorado.  
   
  **En este tema**  
   

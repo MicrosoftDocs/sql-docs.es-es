@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0229c5fb1166d49c8e4db2e80fbed03c0ea95a9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 89a470964db8b0475a6c5d4f20a5007337645cb1
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868308"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076157"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Crear una instantánea para una publicación de mezcla con filtros con parámetros
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-En este tema se describe cómo se crea una instantánea de una publicación de combinación con filtros con parámetros en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
+En este tema se describe cómo se crea una instantánea de una publicación de combinación con filtros con parámetros en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
 
 Cuando se utilizan filtros de fila con parámetros en las publicaciones de combinación, la replicación inicializa cada suscripción con una instantánea en dos partes. Primero, se crea una instantánea de esquema que contiene todos los objetos necesarios para la replicación y el esquema de los objetos publicados, pero no los datos. Después, se inicializa cada suscripción con una instantánea que incluye los objetos y el esquema de la instantánea de esquema, y los datos que pertenecen a la partición de la suscripción. Si hay más de una suscripción que recibe una partición determinada (es decir, que reciben el mismo esquema y los mismos datos), la instantánea de esa partición se creará una sola vez; se inicializarán varias suscripciones con la misma instantánea. Para obtener más información acerca de los filtros de fila con parámetros, vea [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   

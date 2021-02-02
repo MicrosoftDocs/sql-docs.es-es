@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 3a02f42c2fdec705894c0c583c634b756602e1b1
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 71fd673e2453f49540d30567c8007f0fc5ad4c61
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643930"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813189"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurar el trasvase de registros (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo configurar el trasvase de registros en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo configurar el trasvase de registros en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
 >  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] y las versiones posteriores admiten la compresión de copia de seguridad. Al crear una configuración de trasvase de registros, puede controlar el comportamiento de la compresión de copia de seguridad de las copias de seguridad del registro. Para obtener más información, vea [Compresión de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
@@ -79,7 +79,7 @@ ms.locfileid: "97643930"
   
 8.  Tenga presente la programación de copia de seguridad que aparece en el cuadro **Programación** bajo **Trabajo de copia de seguridad**. Si desea personalizar la programación de su instalación, a continuación, haga clic en **Programar** y ajuste la programación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] según sus necesidades.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). Al crear una configuración de trasvase de registros, puede controlar el comportamiento de la compresión de copia de seguridad de las copias de seguridad del registro eligiendo una de las opciones siguientes: **Usar la configuración de servidor predeterminada**, **Comprimir copia de seguridad** o **No comprimir copia de seguridad**. Para obtener más información, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] admite la [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). Al crear una configuración de trasvase de registros, puede controlar el comportamiento de la compresión de copia de seguridad de las copias de seguridad del registro eligiendo una de las opciones siguientes: **Usar la configuración de servidor predeterminada**, **Comprimir copia de seguridad** o **No comprimir copia de seguridad**. Para obtener más información, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Haga clic en **OK**.  
   

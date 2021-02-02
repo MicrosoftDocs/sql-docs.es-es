@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 6015242cd42a2e3b932a88cff827968cfb514c39
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 028e5b2d1f26da698edae325b003fb402f721ee1
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129187"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075847"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Restauración de una copia de seguridad diferencial de la base de datos (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  En este tema se describe cómo restaurar una copia de seguridad diferencial de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo restaurar una copia de seguridad diferencial de la base de datos en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "96129187"
   
 -   Las copias de seguridad que se crean en una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se pueden restaurar en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede restaurar una base de datos de usuario a partir de una copia de seguridad de la base de datos creada utilizando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior.  
+-   En [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], puede restaurar una base de datos de usuario a partir de una copia de seguridad de la base de datos creada utilizando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior.  
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   

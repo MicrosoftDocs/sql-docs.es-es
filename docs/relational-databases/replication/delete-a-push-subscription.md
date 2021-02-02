@@ -17,16 +17,16 @@ ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016
-ms.openlocfilehash: 348d8dddcd7314adc50f058ab1043f7024458a2a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 958919536049d4a2c023ee7b00a02f54daebed00
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479966"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076407"
 ---
 # <a name="delete-a-push-subscription"></a>Eliminar una suscripción de inserción
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
-  En este tema se describe cómo eliminar una suscripción de inserción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
+  En este tema se describe cómo eliminar una suscripción de inserción en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
   
  **En este tema**  
   

@@ -16,16 +16,16 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 630b6a3c00d3bd4fccdb13acaadad64279a460c1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d5f90439c622e9740ffe5d58789ce3d950be0279
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465526"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049298"
 ---
 # <a name="xml-format-files-sql-server"></a>XML, archivos de formato (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona un esquema XML que define la sintaxis para escribir *archivos de formato XML* que se usarán para la importación masiva de datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los archivos de formato XML deben adherirse a este esquema, que se define en el lenguaje de definición de esquemas XML (XSDL). Los archivos con formato XML solamente se admiten cuando se instalan herramientas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] proporciona un esquema XML que define la sintaxis para escribir *archivos de formato XML* que se usarán para la importación masiva de datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los archivos de formato XML deben adherirse a este esquema, que se define en el lenguaje de definición de esquemas XML (XSDL). Los archivos con formato XML solamente se admiten cuando se instalan herramientas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  Puede usar un archivo de formato XML con un comando **bcp**, una instrucción BULK INSERT o una instrucción INSERT... Instrucción SELECT \* FROM OPENROWSET(BULK...). El comando **bcp** permite generar automáticamente un archivo de formato XML para una tabla; para más información, consulte [bcp Utility](../../tools/bcp-utility.md).  
   

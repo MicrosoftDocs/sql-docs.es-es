@@ -12,12 +12,12 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02c99d9cee2eb257c0254c15bd92a0e2812ccc54
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 26b598865668ce5fb10e34eb9558fe018a7c60a8
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534774"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075897"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Uso de Always Encrypted con el proveedor de datos .NET Framework para SQL Server
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ Para configurar la aplicación:
 
 4. Establezca la palabra clave `Enclave Attestation URL` de la cadena de conexión de base de datos en una dirección URL de atestación (un punto de conexión de servicio de atestación). Debe obtener una dirección URL de atestación para su entorno por parte del administrador del servicio de atestación.
    1. Si usa [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] y el Servicio de protección de host (HGS), vea [Determinación y uso compartido de la dirección URL de atestación de HGS](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-   2. Si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] y Microsoft Azure Attestation, vea [Determinación de la dirección URL de atestación de la directiva de atestación](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
+   2. Si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] y Microsoft Azure Attestation, vea [Determinación de la dirección URL de atestación de la directiva de atestación](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation).
 
 Para seguir un tutorial paso a paso, consulte [Tutorial: Desarrollo de una aplicación de .NET Framework mediante Always Encrypted con enclaves seguros](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 

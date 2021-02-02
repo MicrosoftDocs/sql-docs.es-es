@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 885a40a622f70649e004226fdfb9f317bad6bbdf
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: f95e730dac286be230c27a8e0fc14aa52d07cfee
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98597089"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813028"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,7 +94,7 @@ DBCC CHECKFILEGROUP
 >  Si se especifica PHYSICAL_ONLY, DBCC CHECKFILEGROUP omite todas las comprobaciones de datos de FILESTREAM.  
   
  MAXDOP  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 a la [versión actual](../../sql-server/what-s-new-in-sql-server-2016.md).  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 a la [versión actual](/troubleshoot/sql/general/determine-version-edition-update-level).  
   
  Invalida la opción de configuración de **grado máximo de paralelismo** de **sp_configure** para la instrucción. MAXDOP puede superar el valor configurado con sp_configure. Si MAXDOP supera el valor configurado con Resource Governor, el motor de base de datos usa el valor MAXDOP de Resource Governor, descrito en ALTER WORKLOAD GROUP (Transact-SQL). Se pueden aplicar todas las reglas semánticas utilizadas con la opción de configuración max degree of parallelism cuando se utiliza la sugerencia de consulta MAXDOP. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   

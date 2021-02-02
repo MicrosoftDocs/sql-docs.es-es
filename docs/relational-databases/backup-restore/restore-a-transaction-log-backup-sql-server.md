@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 6c983279a1fe317b2e7975b972e5471b9724b65d
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 7d18348dbfc80a6f3b5bec94eb47a8bf17baa76a
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129108"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075837"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar una copia de seguridad de registros de transacciones (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  En este tema se describe cómo restaurar una copia de seguridad del registro de transacciones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo restaurar una copia de seguridad del registro de transacciones en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3265e970fbad572e09527dedcb35397d811daefa
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: fb34d9ab423008e8b3fe2c8e926f0f397c14b5cb
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96127892"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049189"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>Eliminar una condición de administración basada en directivas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo eliminar una condición de administración basada en directivas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  En este tema se describe cómo eliminar una condición de administración basada en directivas en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **En este tema**  
   

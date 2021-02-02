@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0b3214bd-d0ab-45ab-9281-3d95507abe54
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 28b605b52600fe9855fb9e96f9f2dbc99bbc6a20
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d2df2f0ea2c9f582053c10330931ed88e92bd172
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760534"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049051"
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-that-policy"></a>Evaluar una directiva de administración basada en directivas desde dicha directiva
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo evaluar una directiva utilizando esa directiva en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  En este tema se describe cómo evaluar una directiva utilizando esa directiva en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **En este tema**  
   

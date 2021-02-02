@@ -18,16 +18,16 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: a5696940a7b2eb5d633d6077217ff30b259876e5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d57963f6203ab107c19ff1713f21a41378995725
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461073"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813490"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Traslado de una base de datos mediante Separar y Adjuntar (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo mover una base de datos separada a otra ubicación y volver a adjuntarla a la misma instancia de servidor o a otra en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. No obstante, se recomienda mover las bases de datos mediante el procedimiento de reubicación programada ALTER DATABASE, en lugar usar las operaciones de separar y adjuntar. Para más información, consulte [Move User Databases](../../relational-databases/databases/move-user-databases.md).  
+  En este tema se describe cómo mover una base de datos separada a otra ubicación y volver a adjuntarla a la misma instancia de servidor o a otra en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. No obstante, se recomienda mover las bases de datos mediante el procedimiento de reubicación programada ALTER DATABASE, en lugar usar las operaciones de separar y adjuntar. Para más información, consulte [Move User Databases](../../relational-databases/databases/move-user-databases.md).  
   
 > [!IMPORTANT]  
 >  Se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Para usar una base de datos desde un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) en la base de datos de un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  

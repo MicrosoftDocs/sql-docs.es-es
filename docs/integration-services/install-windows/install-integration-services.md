@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6721d36159003077cf771fbff6a0e7a50a182ed2
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: abb62aec3a712ace96d6db82ea8eb0085d8a9e74
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97490015"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049284"
 ---
 # <a name="install-integration-services-ssis"></a>Instalar Integration Services (SSIS)
 
@@ -81,7 +81,7 @@ Para usar un servidor dedicado para los procesos de extracción, transformación
 
 ### <a name="configuring-ssis-event-logging"></a>Configuración del registro de eventos SSIS
 
-De forma predeterminada, en una instalación nueva, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se configura para no registrar en el registro de eventos de aplicación los eventos relacionados con la ejecución de paquetes. Esta configuración impide la generación de demasiadas entradas en el registro de eventos al usar la característica de recopilador de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Los eventos que no se registran son EventID 12288, "Se ha iniciado el paquete" y EventID 12289, "El paquete finalizó correctamente". Para registrar estos eventos en el registro de eventos de aplicación, abra el Registro para editarlo. A continuación, en el Registro, busque el nodo HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS y cambie el valor DWORD de la opción LogPackageExecutionToEventLog de 0 a 1.
+De forma predeterminada, en una instalación nueva, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se configura para no registrar en el registro de eventos de aplicación los eventos relacionados con la ejecución de paquetes. Esta configuración impide la generación de demasiadas entradas en el registro de eventos al usar la característica de recopilador de datos de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Los eventos que no se registran son EventID 12288, "Se ha iniciado el paquete" y EventID 12289, "El paquete finalizó correctamente". Para registrar estos eventos en el registro de eventos de aplicación, abra el Registro para editarlo. A continuación, en el Registro, busque el nodo HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS y cambie el valor DWORD de la opción LogPackageExecutionToEventLog de 0 a 1.
 
 ## <a name="install-additional-components-for-integration-services"></a>Instalación de componentes adicionales para Integration Services
 

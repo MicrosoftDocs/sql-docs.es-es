@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 3dff6cb9b3a65ea5f38a97786e10701bc1f31749
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 0544531bf30bc99781c51b7664f4f5a756f5b00f
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170307"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049201"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, réplica de base de datos
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  El objeto de rendimiento **SQLServer:Database Replica** contiene contadores de rendimiento que ofrecen información sobre las bases de datos secundarias de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este objeto solamente es válido en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda una réplica secundaria.  
+  El objeto de rendimiento **SQLServer:Database Replica** contiene contadores de rendimiento que ofrecen información sobre las bases de datos secundarias de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Este objeto solamente es válido en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda una réplica secundaria.  
   
 |Nombre del contador|Descripción|Vista en...|  
 |------------------|-----------------|--------------|  

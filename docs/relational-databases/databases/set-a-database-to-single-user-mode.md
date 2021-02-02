@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: fb5254eb-b635-4b39-8361-136fd36f2b1f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 591a2d22a603c51f44bdfa16d4072e6b9ad36c73
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 68d806e83c389c256737da8054a788697f0bd773
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88471164"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98812992"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>Establecer una base de datos en modo de usuario único
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo establecer una base de datos definida por el usuario en modo de usuario único en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. El modo de usuario único se suele utilizar para operaciones de mantenimiento y especifica que solo un usuario puede tener acceso a la base de datos cada vez.  
+  En este tema se describe cómo establecer una base de datos definida por el usuario en modo de usuario único en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. El modo de usuario único se suele utilizar para operaciones de mantenimiento y especifica que solo un usuario puede tener acceso a la base de datos cada vez.  
   
  **En este tema**  
   
