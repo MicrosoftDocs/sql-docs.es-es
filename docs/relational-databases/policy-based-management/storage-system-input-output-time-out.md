@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d212a0ae0f42877340ff16acdb8e3b0adc00bb83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a78ff89c0017c4e4091bbf9a6ed1b0a9518c3de
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482563"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076803"
 ---
 # <a name="storage-system-input-output-time-out"></a>Tiempo de espera de entrada y salida del sistema de almacenamiento
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "88482563"
 ## <a name="best-practices-recommendations"></a>Prácticas recomendadas  
  Revise los artículos de Microsoft Knowledge Base siguientes para obtener más información sobre cómo solucionar este error:  
   
--   [Artículo 259237 de Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?linkid=117746)  
+-   [Artículo 259237 de Microsoft Knowledge Base](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/259237)  
   
--   [Artículo 154690 de Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=117747)  
+-   [Artículo 154690 de Microsoft Knowledge Base](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/154690)  
   
 ## <a name="for-more-information"></a>Para obtener más información  
  [Elementos fundamentales de E/S de SQL Server, capítulo 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  

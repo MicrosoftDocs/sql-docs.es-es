@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 481f534c719d188d108ee1d9edd0776ee8b2bc9d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 7ae8429bb51ec2a58a167784b701b7ae0532bb92
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192459"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076933"
 ---
 # <a name="performance-counters"></a>Contadores de rendimiento
 
@@ -78,7 +78,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   Vídeo, [Medir y conocer el rendimiento de los paquetes SSIS en la empresa (vídeo de SQL Server)](/previous-versions/sql/sql-server-2008/dd795223(v=sql.100)), en msdn.microsoft.com.  
   
--   Artículo de soporte técnico, [El contador de rendimiento de SSIS ya no está disponible en el monitor de rendimiento después de actualizar a Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319), en support.microsoft.com.  
+-   Artículo de soporte técnico, [El contador de rendimiento de SSIS ya no está disponible en el monitor de rendimiento después de actualizar a Windows Server 2008](https://web.archive.org/web/20111112202346/http://support.microsoft.com:80/kb/955632), en support.microsoft.com.  
 
 ## <a name="add-a-log-for-data-flow-performance-counters"></a>Agregar un registro para los contadores de rendimiento del flujo de datos
   Este procedimiento describe cómo agregar un registro para los contadores de rendimiento que proporciona el motor de flujo de datos.  
@@ -92,7 +92,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 2.  Haga clic en **Rendimiento**.  
   
-3.  En el cuadro de diálogo **Rendimiento** , expanda **Registros y alertas de rendimiento**, haga clic con el botón derecho en **Registros de contador**y, después, haga clic en **Nueva configuración de registro**. Escriba el nombre del registro. Por ejemplo, escriba **miRegistro**.  
+3.  En el cuadro de diálogo **Rendimiento** , expanda **Registros y alertas de rendimiento**, haga clic con el botón derecho en **Registros de contador** y, después, haga clic en **Nueva configuración de registro**. Escriba el nombre del registro. Por ejemplo, escriba **miRegistro**.  
   
 4.  Haga clic en **OK**.  
   

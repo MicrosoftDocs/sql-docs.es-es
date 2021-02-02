@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 85373b2e-d9fe-42ef-9653-6e22fe5ecab0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3a6b1654d673759b949eb24fee0ec9c905054579
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbeea21b271175608973f3d3d42134113377d6b8
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470301"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99077023"
 ---
 # <a name="detect-failed-input-and-output-requests"></a>Detect Failed Input and Output Requests
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,8 +27,8 @@ ms.locfileid: "88470301"
 ## <a name="best-practices-recommendations"></a>Prácticas recomendadas  
  Revise los artículos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base siguientes para obtener más información sobre cómo solucionar este error:  
   
--   [Artículo 311081 de Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?linkid=117744)  
+-   [Artículo 311081 de Microsoft Knowledge Base](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/311081)  
   
--   [Artículo 885688 de Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?linkid=117745)  
+-   [Artículo 885688 de Microsoft Knowledge Base](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/885688)  
   
   

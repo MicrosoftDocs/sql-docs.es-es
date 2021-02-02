@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8617d6aba180ff6089e61eb00df1dca509905eb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5f359156a50efba7dff23b43df10945f52ec4cb4
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88406471"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99077123"
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>Detectar problemas de adaptadores de host SCSI
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,6 +27,6 @@ ms.locfileid: "88406471"
 ## <a name="best-practices-recommendations"></a>Prácticas recomendadas  
  Revise el artículo de Microsoft Knowledge Base siguiente para obtener más información sobre cómo solucionar este error:  
   
--   [Artículo 311081 de Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?linkid=117744)  
+-   [Artículo 311081 de Microsoft Knowledge Base](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/311081)  
   
   
