@@ -6,19 +6,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Deadlock Chain event class
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91a44b8d2db79a7c22ac99b2125540f9f332667a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 75d130e91c7dca0591aebef54ee890f5bd042fb7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97420608"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194856"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Lock:Deadlock Chain (clase de eventos)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

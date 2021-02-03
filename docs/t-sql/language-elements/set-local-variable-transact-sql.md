@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caf0fcb2a9b00c8f391280395629348f055d4039
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0cf40a6b16c1a2750180a5646e17ad317fe3c1bf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100966"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194290"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -184,7 +184,7 @@ Para más información, vea [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/
   
 Puede utilizar el operador de asignación compuesta en cualquier lugar donde haya una asignación con una expresión en el lado derecho del operador, incluso las variables, y un SET en una instrucción UPDATE, SELECT y RECEIVE.  
   
-No use una variable en una instrucción SELECT para concatenar valores (es decir, para calcular valores de agregado). Pueden producirse resultados de consulta inesperados. Esto se debe a que no todas las expresiones de la lista de SELECT (incluidas las asignaciones) se ejecutan necesaria y exactamente una vez por cada fila de salida. Para más información, vea [este artículo de KB](https://support.microsoft.com/kb/287515).  
+No use una variable en una instrucción SELECT para concatenar valores (es decir, para calcular valores de agregado). Pueden producirse resultados de consulta inesperados. Esto se debe a que no todas las expresiones de la lista de SELECT (incluidas las asignaciones) se ejecutan necesaria y exactamente una vez por cada fila de salida. Para más información, vea [este artículo de KB](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/287515).  
   
 ## <a name="permissions"></a>Permisos  
 Debe pertenecer al rol public. Todos los usuarios pueden usar SET **@** _variable_local_.  

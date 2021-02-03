@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ERROR_LINE
 - ERROR_LINE_TSQL
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 44402d9f0af858381041e9f5bb5ff989971f44f1
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8ec5cf07de8e7a32c52101b195ca32ff1caf2a12
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097192"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199530"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
 
@@ -56,7 +56,7 @@ Cuando se llama en un bloque CATCH, `ERROR_LINE` devuelve
 -   el número de línea de una rutina, si el error se produjo en un procedimiento almacenado o desencadenador.  
 -   NULL, si se llamó desde fuera del ámbito del bloque CATCH.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 Una llamada a `ERROR_LINE` se puede producir en cualquier lugar del ámbito de un bloque CATCH.  
   
 `ERROR_LINE` devuelve el número de línea en que se produjo el error. Esto ocurre independientemente de la ubicación de la llamada a `ERROR_LINE` dentro del ámbito del bloque CATCH y del número de llamadas a `ERROR_LINE`. Esto contrasta con las funciones, como @@ERROR. @@ERROR devuelve el número de error en la instrucción inmediatamente posterior a la que produjo el error o en la primera instrucción de un bloque CATCH.  

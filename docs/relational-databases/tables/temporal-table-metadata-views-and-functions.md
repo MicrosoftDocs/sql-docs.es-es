@@ -12,12 +12,12 @@ ms.assetid: e5d23ec9-7d18-40f6-add4-bea13132d0b9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a552f940165a2bf45810dd4f6abbbd4f71513299
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a8c13f9bcbbe501e369e2dd536c90d180bd88f6d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477186"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201160"
 ---
 # <a name="temporal-table-metadata-views-and-functions"></a>Funciones y vistas de metadatos de la tabla temporal
 
@@ -25,7 +25,7 @@ ms.locfileid: "97477186"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] incluyen una serie de funciones y vistas de metabase que permiten a los administradores recuperar información acerca de las tablas temporales.
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] incluyen una serie de funciones y vistas de metabase que permiten a los administradores recuperar información acerca de las tablas temporales.
 
 La información acerca de las tablas temporales se expone en las siguientes vistas de metadatos:
 

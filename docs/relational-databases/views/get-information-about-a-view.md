@@ -23,16 +23,16 @@ ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9af0931fd8f45bf226a3ed3bcd619c329ed651ef
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ae6a5c1c83832dc5c50d19289caec44df57ebe0f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484427"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195804"
 ---
 # <a name="get-information-about-a-view"></a>Obtener información acerca de una vista
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Puede obtener información sobre la definición o las propiedades de una vista de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Es posible que necesite ver la definición de la vista para entender cómo derivan sus datos de las tablas de origen o para ver los datos que ella misma define.  
+  Puede obtener información sobre la definición o las propiedades de una vista de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Es posible que necesite ver la definición de la vista para entender cómo derivan sus datos de las tablas de origen o para ver los datos que ella misma define.  
   
 > [!IMPORTANT]  
 >  Si cambia el nombre de un objeto al que hace referencia una vista, deberá modificar ésta para que el texto refleje el nuevo nombre. Por lo tanto, antes de cambiar el nombre de un objeto, observe las dependencias del mismo a fin de determinar si el cambio propuesto afecta a alguna vista.  

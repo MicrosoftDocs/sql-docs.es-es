@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - MERGE
 - MERGE_TSQL
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: 664ef8a40e341f52bda0658d532849a278ae49b9
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: cbc1286bbbced3a546c1057433dba5bbc4289281
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679083"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199388"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -133,10 +133,10 @@ La cláusula TOP se aplica después de que se combinen toda la tabla de origen y
 Dado que la instrucción MERGE realiza recorridos de tabla completos de ambas tablas, de destino y de origen, el rendimiento de E/S a veces se ve afectado al utilizar la cláusula TOP para modificar una tabla grande mediante la creación de varios lotes. En este escenario, es importante asegurarse de que todos los lotes sucesivos tengan como destino nuevas filas.  
   
 *database_name*  
-El nombre de la base de datos donde se encuentra *target_table* .  
+El nombre de la base de datos donde se encuentra *target_table*.  
   
 *schema_name*  
-El nombre del esquema al que pertenece *target_table* .  
+El nombre del esquema al que pertenece *target_table*.  
   
 *target_table*  
 La tabla o vista con la que se hacen coincidir las filas de datos de \<table_source> según \<clause_search_condition>. *target_table* es el destino de las operaciones de inserción, actualización o eliminación especificado por las cláusulas WHEN de la instrucción MERGE.  
@@ -146,7 +146,7 @@ Si *target_table* es una vista, cualquier acción con ella debe satisfacer las c
 *target_table* no puede ser una tabla remota. *target_table* no puede tener ninguna regla definida.  
   
 [ AS ] *table_alias*  
-Nombre alternativo para hacer referencia a una tabla para *target_table* .  
+Nombre alternativo para hacer referencia a una tabla para *target_table*.  
   
 USING \<table_source>  
 Especifica el origen de datos que se hace coincidir con las filas de datos de *target_table* en función de \<merge_search condition>. El resultado de esta coincidencia dicta las acciones que tomarán las cláusulas WHEN de la instrucción MERGE. \<table_source> puede ser una tabla remota o una tabla derivada que acceda a las tablas remotas.
@@ -170,7 +170,7 @@ Especifica que todas las filas de *target_table que coinciden con las filas devu
 La instrucción MERGE puede tener, a lo sumo, dos cláusulas WHEN MATCHED. Si se especifican dos cláusulas, la primera debe ir acompañada de una cláusula AND \<search_condition>. Para una fila determinada, la segunda cláusula WHEN MATCHED se aplica solamente si no se aplica la primera. Si hay dos cláusulas WHEN MATCHED, una debe especificar una acción UPDATE y la otra una acción DELETE. Si se especifica UPDATE en la cláusula \<merge_matched> y más de una fila de \<table_source> coincide con una de *target_table* según \<merge_search_condition>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un error. La instrucción MERGE no puede actualizar la misma fila más de una vez, ni actualizar o eliminar la misma fila.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-Especifica que una fila se inserta en *target_table* para cada fila devuelta por \<table_source> ON \<merge_search_condition> que no coincide con una fila de *target_table* , pero satisface una condición de búsqueda adicional, si está presente. La cláusula \<merge_not_matched> especifica los valores que se van a insertar. La instrucción MERGE solo puede tener una cláusula WHEN NOT MATCHED [ BY TARGET ].
+Especifica que una fila se inserta en *target_table* para cada fila devuelta por \<table_source> ON \<merge_search_condition> que no coincide con una fila de *target_table*, pero satisface una condición de búsqueda adicional, si está presente. La cláusula \<merge_not_matched> especifica los valores que se van a insertar. La instrucción MERGE solo puede tener una cláusula WHEN NOT MATCHED [ BY TARGET ].
 
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 Especifica que todas las filas de *target_table que no coinciden con las filas devueltas por \<table_source> ON \<merge_search_condition> y que satisfacen alguna condición de búsqueda adicional se actualizan o eliminan según la cláusula \<merge_matched>.  
@@ -210,15 +210,15 @@ Especifica la lista de nombres de columna o de variable que se van a actualizar 
 Para más información sobre la sintaxis y los argumentos de esta cláusula, vea [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md). No se admite el establecimiento de una variable con el mismo valor que una columna.  
   
 Delete  
-Especifica que se eliminarán las filas que coincidan con las filas de *target_table* .  
+Especifica que se eliminarán las filas que coincidan con las filas de *target_table*.  
   
 \<merge_not_matched>  
 Especifica los valores que insertar en la tabla de destino.  
   
-( *column_list* )  
+(*column_list*)  
 Una lista de una o varias columnas de la tabla de destino en la que insertar los datos. Las columnas se deben especificar como un nombre de una sola parte o, de lo contrario, se producirá un error en la instrucción MERGE. *column_list* debe ir entre paréntesis y delimitada con comas.  
   
-VALUES ( *values_list* )  
+VALUES ( *values_list*)  
 Una lista separada por comas de constantes, variables o expresiones que devuelve los valores que se insertarán en la tabla de destino. Las expresiones no pueden contener una instrucción EXECUTE.  
   
 DEFAULT VALUES  
@@ -264,9 +264,9 @@ Para cada acción de inserción, actualización o eliminación especificada en l
   
 Si la tabla de destino tiene habilitado un desencadenador INSTEAD OF definido en ella para una acción de inserción, actualización o eliminación realizada por una instrucción MERGE, debe tener habilitado un desencadenador INSTEAD OF para todas las acciones especificadas en la instrucción MERGE.  
   
-Si se ha definido un desencadenador INSTEAD OF UPDATE o INSTEAD OF DELETE en *target_table* , las operaciones de actualización o eliminación no se ejecutan. En su lugar, se activan los desencadenadores y las tablas **inserted** y **deleted** se rellenan en consecuencia.  
+Si se ha definido un desencadenador INSTEAD OF UPDATE o INSTEAD OF DELETE en *target_table*, las operaciones de actualización o eliminación no se ejecutan. En su lugar, se activan los desencadenadores y las tablas **inserted** y **deleted** se rellenan en consecuencia.  
   
-Si se definen desencadenadores INSTEAD OF INSERT en *target_table* , la operación de inserción no se realiza. En su lugar, la tabla se rellena en consecuencia.  
+Si se definen desencadenadores INSTEAD OF INSERT en *target_table*, la operación de inserción no se realiza. En su lugar, la tabla se rellena en consecuencia.  
   
 ## <a name="permissions"></a>Permisos
 
