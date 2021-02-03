@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 1/22/2020
-ms.openlocfilehash: 65daa495933d0dc974b6ae4d1c14ff9e59bd6249
-ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
+ms.openlocfilehash: 1a8de5f990d9f3a8a974705d090dad8dccc1bae6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98711971"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235725"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Descarga e instalación de Azure Data Studio
 
@@ -174,7 +174,7 @@ Las actualizaciones en entornos sin conexión se pueden aplicar mediante la [ins
 
 ## <a name="supported-sql-offerings"></a>Ofertas de SQL admitidas
 
-- Esta versión de Azure Data Studio funciona con todas las [versiones admitidas de SQL Server 2014[!INCLUDE[sql-server-2019](../includes/sssqlv15-MD.md)]](https://support.microsoft.com/lifecycle?C2=1044) y, además, proporciona compatibilidad para trabajar con las características de nube más recientes en Azure SQL Database y Azure Synapse Analytics. Azure Data Studio también proporciona compatibilidad de vista previa con instancias administradas de Azure SQL.
+- Esta versión de Azure Data Studio funciona con todas las [versiones admitidas de [!INCLUDE [sssql14-md](../includes/sssql14-md.md)] - [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) y, además, proporciona compatibilidad para trabajar con las características de la nube más recientes en Azure SQL Database y Azure Synapse Analytics. Azure Data Studio también proporciona compatibilidad de vista previa con instancias administradas de Azure SQL.
 
 ## <a name="move-user-settings"></a>Migrar la configuración del usuario
 
