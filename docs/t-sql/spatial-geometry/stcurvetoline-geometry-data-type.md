@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e4eb3aa1d61d49b70a9526f352807a1569dfb7e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81b1a222937a19a8fe18e3cb2261581011206d1b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488109"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189501"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (tipo de datos de geometría)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ Devuelve una aproximación poligonal de una instancia de **geometry** que contie
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Devuelve una instancia vacía de **GeometryCollection** para variables vacías de la instancia de **geometry** y devuelve **NULL** para variables de **geometry** sin inicializar.  
   
  La aproximación poligonal devuelta por el método depende de la instancia de **geometry** que se use para llamar al método:  
