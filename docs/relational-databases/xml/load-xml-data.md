@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 01790e4eacf793926725770f980c8194013a155a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 19a0518477c37b9f45f22cdf6b5ded1464cf145e
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738412"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250674"
 ---
 # <a name="load-xml-data"></a>Cargar datos XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Puede transferir los datos XML a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de varias maneras. Por ejemplo:  
+  Puede transferir los datos XML a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] de varias maneras. Por ejemplo:  
   
 -   Si tiene datos en una columna [n]text o image en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede importar la tabla mediante [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Cambie el tipo de columna a XML mediante la instrucción ALTER TABLE.  
   

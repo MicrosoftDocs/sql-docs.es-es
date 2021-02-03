@@ -16,16 +16,16 @@ ms.assetid: 3ca24b23-fdc3-408e-8208-a2ace48fc8e3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 439e400c4ae4298e7e7c55548ffeb7874917a573
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a8c254caf9d8142b9135d7424dda35095b2ff72a
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463176"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250598"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Sincronización de una suscripción de extracción
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  En este tema se describe cómo sincronizar una suscripción de extracción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicación](../../relational-databases/replication/agents/replication-agents-overview.md) o Replication Management Objects (RMO).  
+  En este tema se describe cómo sincronizar una suscripción de extracción en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicación](../../relational-databases/replication/agents/replication-agents-overview.md) o Replication Management Objects (RMO).  
   
  **En este tema**  
   

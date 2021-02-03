@@ -14,18 +14,18 @@ ms.assetid: bda1e452-397b-4757-82a4-181217361589
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016'
-ms.openlocfilehash: 1a5de33ab7ee67f6c74ddff58219d779092cdcec
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 994c22db58c0d06b5a763769688d911cd739b367
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485527"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250723"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Deshabilitar compresión de una tabla o un índice
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  En este tema se describe cómo deshabilitar la compresión en una tabla o un índice en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo deshabilitar la compresión en una tabla o un índice en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
   

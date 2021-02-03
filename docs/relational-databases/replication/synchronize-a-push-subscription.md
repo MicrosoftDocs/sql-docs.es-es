@@ -16,16 +16,16 @@ ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016
-ms.openlocfilehash: 9f20f527694fd0ed33de68fbcbabd93e0ef96683
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 14240f40dcd00f439c0aa5f368ebe4f331641414
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468756"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250576"
 ---
 # <a name="synchronize-a-push-subscription"></a>Sincronizar una suscripción de inserción
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
-  En este tema se describe cómo sincronizar una suscripción de inserción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicación](../../relational-databases/replication/agents/replication-agents-overview.md)o Replication Management Objects (RMO).  
+  En este tema se describe cómo sincronizar una suscripción de inserción en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicación](../../relational-databases/replication/agents/replication-agents-overview.md)o Replication Management Objects (RMO).  
   
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 

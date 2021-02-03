@@ -17,16 +17,16 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 23011d3e0cbe952253c6f3601384d374b12daa3c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a0dac3922e006d34bf1f93c617ae70d79aff27f6
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479726"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250612"
 ---
 # <a name="specify-synchronization-schedules"></a>Especificar programaciones de sincronización
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  En este tema se describe cómo especificar programaciones de sincronización en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO). Al crear una suscripción, puede definir una programación de sincronización que controla cuándo se ejecutará el agente de replicación para la suscripción. Si no especifica parámetros de programación, la suscripción usará la programación predeterminada.  
+  En este tema se describe cómo especificar programaciones de sincronización en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO). Al crear una suscripción, puede definir una programación de sincronización que controla cuándo se ejecutará el agente de replicación para la suscripción. Si no especifica parámetros de programación, la suscripción usará la programación predeterminada.  
   
  El Agente de distribución (para las instantáneas y la replicación transaccional) o el Agente de mezcla (para la replicación de mezcla) sincronizan las suscripciones. Los agentes pueden ejecutarse continuamente, a petición o según una programación.  
   

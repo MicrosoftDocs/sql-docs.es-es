@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5b13b4fcc5fd0071a5b008f4fa8186379ffecf41
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 562769cc1f9ce3e895b59811a61026747c0a3724
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193055"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251109"
 ---
 # <a name="data-tier-applications"></a>Aplicaciones de capa de datos
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,14 +50,14 @@ ms.locfileid: "92193055"
   
     -   Además de las bases de datos de SQL 2016, las herramientas proporcionadas con SQL Server 2016 pueden leer archivos DACPAC generados por las herramientas de DAC proporcionadas con SQL Server 2008 R2 o SQL Server 2012. Esto incluye las bases de datos de SQL Server 2014, 2012, 2008 R2, 2008 y 2005, pero **no** las de SQL Server 2000.  
   
-    -   Las herramientas de DAC de SQL Server 2008 R2 no pueden leer archivos de DACPAC generados por las herramientas de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ni  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+    -   Las herramientas de DAC de SQL Server 2008 R2 no pueden leer archivos de DACPAC generados por las herramientas de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ni  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 -   Un DACPAC es un archivo de Windows con una extensión .dacpac. El archivo admite un formato abierto que consta de varias secciones XML que representan detalles del origen de DACPAC, los objetos de la base de datos y otras características. Un usuario experto puede desempaquetar el archivo mediante la utilidad DacUnpack.exe que se proporciona con el producto para inspeccionar cada sección de forma más minuciosa.  
   
 -   El usuario debe ser miembro del rol **dbmanager** o tener asignados permisos **CREATE DATABASE** para crear una base de datos, incluida la creación de una base de datos para implementar un paquete DAC. El usuario debe ser miembro del rol **dbmanager**, o tener asignados permisos **DROP DATABASE** para quitar una base de datos.  
   
 ## <a name="dac-tools"></a>Herramientas de DAC  
- Un DACPAC se puede utilizar sin problemas con las herramientas que se proporcionan con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Estas herramientas abordan los requisitos de los diferentes usuarios que utilizan un DACPAC como unidad de interoperabilidad.  
+ Un DACPAC se puede utilizar sin problemas con las herramientas que se proporcionan con [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Estas herramientas abordan los requisitos de los diferentes usuarios que utilizan un DACPAC como unidad de interoperabilidad.  
   
 -   Desarrolladores de aplicaciones:  
   

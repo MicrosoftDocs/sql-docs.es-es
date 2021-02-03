@@ -23,18 +23,18 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016'
-ms.openlocfilehash: 59d15d0f056a757fea1545025832990254a7e4ae
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: 79a7a0fa7932f058218359b8bbe607b45f567a6b
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766359"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251160"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Habilitar compresión de una tabla o un índice
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  En este artículo se describe cómo habilitar la [compresión de datos](../../relational-databases/data-compression/data-compression.md) en una tabla o un índice de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+En este artículo se describe cómo habilitar la [compresión de datos](../../relational-databases/data-compression/data-compression.md) en una tabla o un índice de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
  **En este artículo**  
   

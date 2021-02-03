@@ -24,17 +24,17 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5c6647b06d058b1b97188810c4a23644d05c4f7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bc69ec8ee89cf994c61450804887b8c60388291f
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468596"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250930"
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  En este tema se describe cómo crear un inicio de sesión en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] o en [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un inicio de sesión es la identidad de la persona o proceso que se está conectando a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  En este tema se describe cómo crear un inicio de sesión en [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] o en [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un inicio de sesión es la identidad de la persona o proceso que se está conectando a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ##  <a name="background"></a><a name="Background"></a> Información previa  
  Un inicio de sesión es una entidad de seguridad o una entidad que puede ser autenticada por un sistema seguro. Los usuarios necesitan iniciar sesión para conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede crear un inicio de sesión basado en una entidad de seguridad de Windows (como un usuario de dominio o un grupo de dominio de Windows) o puede crear un inicio de sesión que no lo esté (como un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  

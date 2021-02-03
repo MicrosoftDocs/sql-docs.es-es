@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 77cbe9eebacbf1656dc018f6811805636aded45f
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: b96e066b275ebd406fcecd81c185a65ac65abc22
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125298"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250364"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>Consulta de los archivos de datos y de registro en un conjunto de copia de seguridad (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  En este tema se describe cómo ver los archivos de datos y de registro de una copia de seguridad en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo ver los archivos de datos y de registro de una copia de seguridad en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
   

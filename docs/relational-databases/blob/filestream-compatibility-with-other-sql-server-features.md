@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f6d34e2db139a4b38f073f693d3828f9d403c660
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 53ea4630f147ce576ad071d1ac593e00452944a3
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809940"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250643"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilidad de FILESTREAM con otras características de SQL Server
 
@@ -72,7 +72,7 @@ ms.locfileid: "91809940"
  Una columna **varbinary(max)** que tiene el atributo FILESTREAM habilitado en el publicador puede replicarse en un suscriptor con o sin el atributo FILESTREAM. Para especificar la manera en la que se replica la columna, utilice el cuadro de diálogo **Propiedades del artículo: \<Article>** o el parámetro @schema_option de [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) o [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Los datos que se replican en una columna **varbinary(max)** que no tiene el atributo FILESTREAM no deben superar el límite de 2 GB para ese tipo de datos; de lo contrario, se genera un error en tiempo de ejecución. Se recomienda que replique el atributo FILESTREAM, a menos que esté replicando datos a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. No se admite la replicación de tablas que incluyen columnas FILESTREAM en suscriptores de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] , independientemente opción de esquema especificada.  
   
 > [!NOTE]  
->  La replicación de valores de datos de gran tamaño de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a suscriptores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] está limitada a un máximo de 256 MB de valores de datos. Para obtener más información, vea [Especificaciones de capacidad máxima](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
+>  La replicación de valores de datos de gran tamaño de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] a suscriptores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] está limitada a un máximo de 256 MB de valores de datos. Para obtener más información, vea [Especificaciones de capacidad máxima](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
 ### <a name="considerations-for-transactional-replication"></a>Consideraciones acerca de la replicación transaccional  
  Si utiliza columnas FILESTREAM en tablas que se publican para la replicación transaccional, tenga en cuenta las consideraciones siguientes:  
@@ -107,7 +107,7 @@ ms.locfileid: "91809940"
  La creación de reflejo de la base de datos no es compatible con FILESTREAM. No se puede crear un grupo de archivos FILESTREAM en el servidor principal. La creación de reflejo de la base de datos no puede configurarse para una base de datos que contiene grupos de archivos FILESTREAM.  
   
 ##  <a name="full-text-indexing"></a><a name="FullText"></a> Indización de texto completo  
- La[indexación de texto completo](../../relational-databases/search/populate-full-text-indexes.md) funciona con una columna FILESTREAM del mismo modo que con una columna **varbinary(max)** . La tabla FILESTREAM debe tener una columna con la extensión de nombre de archivo para cada BLOB FILESTREAM. Para obtener más información, vea [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md), [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md) y [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).  
+ La [indexación de texto completo](../../relational-databases/search/populate-full-text-indexes.md) funciona con una columna FILESTREAM del mismo modo que con una columna **varbinary(max)** . La tabla FILESTREAM debe tener una columna con la extensión de nombre de archivo para cada BLOB FILESTREAM. Para obtener más información, vea [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md), [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md) y [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).  
   
  El motor de texto completo indiza el contenido de los BLOB FILESTREAM. Indizar archivos como las imágenes podría no ser útil. Cuando se actualiza un BLOB FILESTREAM, vuelve a indizarse.  
   

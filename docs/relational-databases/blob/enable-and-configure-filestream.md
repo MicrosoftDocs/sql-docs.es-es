@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e9e0fca818c4988acacfbfa89af718eda8d8ac5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ea678a62f4453232fe8442cf2053c3b951e361ef
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246590"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250664"
 ---
 # <a name="enable-and-configure-filestream"></a>Habilitar y configurar FILESTREAM
 
@@ -28,9 +28,9 @@ ms.locfileid: "87246590"
   
 #### <a name="to-enable-and-change-filestream-settings"></a>Para habilitar y cambiar la configuración de FILESTREAM  
   
-1.  En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **Herramientas de configuración**y, por último, **Administrador de configuración de SQL Server**.  
+1.  En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], **Herramientas de configuración** y, por último, **Administrador de configuración de SQL Server**.  
   
-2.  En la lista de servicios, haga clic con el botón derecho en **Servicios de SQL Server**y, después, haga clic en **Abrir**.  
+2.  En la lista de servicios, haga clic con el botón derecho en **Servicios de SQL Server** y, después, haga clic en **Abrir**.  
   
 3.  En el complemento **Administrador de configuración de SQL Server** , busque la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que quiera habilitar FILESTREAM.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "87246590"
 ###  <a name="physical-database-design"></a><a name="database"></a> Diseño físico de base de datos  
  Cuando diseñe una base de datos de FILESTREAM, tenga en cuenta las directrices siguientes:  
   
--   Las columnas FILESTREAM deben ir acompañadas de una columna **uniqueidentifier**ROWGUID correspondiente. Estos tipos de tablas también deben ir acompañados de un índice único. Normalmente, este índice no es un índice clúster. Si la lógica de negocios de bases de datos requiere un índice clúster, debe asegurarse de que los valores almacenados en el índice no sean aleatorios. Los valores aleatorios harán que el índice se vuelva a ordenar cada vez que se agregue o se quite una fila en la tabla.  
+-   Las columnas FILESTREAM deben ir acompañadas de una columna **uniqueidentifier** ROWGUID correspondiente. Estos tipos de tablas también deben ir acompañados de un índice único. Normalmente, este índice no es un índice clúster. Si la lógica de negocios de bases de datos requiere un índice clúster, debe asegurarse de que los valores almacenados en el índice no sean aleatorios. Los valores aleatorios harán que el índice se vuelva a ordenar cada vez que se agregue o se quite una fila en la tabla.  
   
 -   Por razones de rendimiento, los contenedores y grupos de archivos FILESTREAM deben residir en volúmenes distintos del sistema operativo, base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tempdb o archivo de paginación.  
   

@@ -33,12 +33,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99ef20a9db20238f24361327b79068ed39d430f4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e2a5f205d7182d1ffedf07b885e7411920ca7b27
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465676"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251210"
 ---
 # <a name="collation-and-unicode-support"></a>Compatibilidad con la intercalación y Unicode
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ Una intercalación especifica los patrones de bits que representan a cada carác
     
 Los resultados de las instrucciones de[!INCLUDE[tsql](../../includes/tsql-md.md)] pueden variar cuando se ejecutan en el contexto de bases de datos distintas que tengan una configuración de intercalación diferente. Si es posible, use una intercalación normalizada para su organización. De esta manera no tiene que especificar la intercalación en todos los caracteres o expresiones Unicode. Si debe trabajar con objetos que tienen configuraciones de intercalación y de página de códigos diferentes, conviene codificar las consultas para tener en cuenta las reglas de prioridad de intercalación. Para obtener más información, vea [Prioridad de intercalación (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
-Las opciones asociadas con una intercalación son la distinción de mayúsculas y minúsculas, la distinción de acentos, la distinción de kana, la distinción de ancho y la distinción de selector de variación. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] presenta una opción adicional para la codificación [UTF-8](https://www.wikipedia.org/wiki/UTF-8). 
+Las opciones asociadas con una intercalación son la distinción de mayúsculas y minúsculas, la distinción de acentos, la distinción de kana, la distinción de ancho y la distinción de selector de variación. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] presenta una opción adicional para la codificación [UTF-8](https://www.wikipedia.org/wiki/UTF-8). 
 
 Para especificar estas opciones se anexan al nombre de la intercalación. Por ejemplo, la intercalación **Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8** es una intercalación con distinción entre mayúsculas y minúsculas, distinción de acentos, distinción de tipos de kana, distinción de ancho y con codificación UTF-8. Otro ejemplo: la intercalación **Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS** no distingue entre mayúsculas y minúsculas ni acentos, distingue los tipos de kana, el ancho, el selector de variación y usa codificación distinta de Unicode. 
 
@@ -76,7 +76,7 @@ El comportamiento asociado a estas diversas opciones se describe en la tabla sig
 |Distinguir acentos (\_AS)|Distingue entre caracteres acentuados y no acentuados. Por ejemplo, "a" no es igual a "ấ". Si esta opción no está seleccionada, la intercalación no distinguirá los acentos. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera las versiones acentuadas y no acentuadas de las letras como letras idénticas a efectos de ordenación. Puede seleccionar explícitamente no distinguir acentos especificando \_AI.|    
 |Distinguir kana (\_KS)|Distingue entre dos tipos de caracteres kana japoneses: Hiragana y Katakana. Si esta opción no está seleccionada, la intercalación no distinguirá los caracteres kana. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera los caracteres Hiragana y Katakana como caracteres iguales a efectos de ordenación. La omisión de esta opción es el único método para especificar que no se distinguen los caracteres kana.|   
 |Distinguir ancho (\_WS)|Distingue entre caracteres de ancho total y ancho medio. Si no se selecciona esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que la representación de ancho completo y de ancho medio del mismo carácter son idénticas con fines de ordenación. La omisión de esta opción es el único método para especificar no distinción de ancho.|  
-|Distinguir selector de variación (\_VSS)|Distingue entre varios selectores de variación ideográfica en las intercalaciones del japonés **Japanese_Bushu_Kakusu_140** y **Japanese_XJIS_140**, introducidas en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Una secuencia de variación consta de un carácter base y de un selector de variación adicional. Si no se selecciona esta opción \_VSS, la intercalación no distinguirá el selector de variación y este no se tendrá en cuenta en la comparación. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que los caracteres que se basan en el mismo carácter base con diferentes selectores de variación son idénticos con fines de ordenación. Para más información, vea [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/) (Base de datos de variaciones ideográficas de Unicode).<br/><br/> Las intercalaciones que distinguen selectores de variación (\_VSS) no se admiten en los índices de búsqueda de texto completo. Los índices de búsqueda de texto completo solo admiten opciones que distinguen acentos (\_AS), que distinguen kana (\_KS) y que distinguen ancho (\_WS). Los motores XML y CLR de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admiten selectores de variación (\_VSS).|      
+|Distinguir selector de variación (\_VSS)|Distingue entre varios selectores de variación ideográfica en las intercalaciones del japonés **Japanese_Bushu_Kakusu_140** y **Japanese_XJIS_140**, introducidas en [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. Una secuencia de variación consta de un carácter base y de un selector de variación adicional. Si no se selecciona esta opción \_VSS, la intercalación no distinguirá el selector de variación y este no se tendrá en cuenta en la comparación. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que los caracteres que se basan en el mismo carácter base con diferentes selectores de variación son idénticos con fines de ordenación. Para más información, vea [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/) (Base de datos de variaciones ideográficas de Unicode).<br/><br/> Las intercalaciones que distinguen selectores de variación (\_VSS) no se admiten en los índices de búsqueda de texto completo. Los índices de búsqueda de texto completo solo admiten opciones que distinguen acentos (\_AS), que distinguen kana (\_KS) y que distinguen ancho (\_WS). Los motores XML y CLR de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admiten selectores de variación (\_VSS).|      
 |Binario (\_BIN)<sup>1</sup>|Ordena y compara datos de las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] basándose en los patrones de bits definidos para cada carácter. El orden binario distingue entre mayúsculas y minúsculas, y acentos. El orden binario es también el más rápido. Para más información, vea la sección [Intercalaciones binarias](#Binary-collations) de este artículo.|      
 |Punto de código binario (\_BIN2)<sup>1</sup> | Ordena y compara datos de las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] según los puntos de código Unicode de datos Unicode. Para los datos que no son Unicode, el punto de código binario usa comparaciones idénticas a las de las ordenaciones binarias.<br/><br/> La ventaja de usar un criterio de ordenación de punto de código binario es que no es necesaria ninguna reordenación de los datos en aplicaciones que comparan los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordenados. Por consiguiente, el criterio de ordenación de punto de código binario proporciona un desarrollo más simple de las aplicaciones y posibles aumentos en el rendimiento. Para más información, vea la sección [Intercalaciones binarias](#Binary-collations) de este artículo.|
 |UTF-8 (\_UTF8)|Permite que los datos con codificación UTF-8 se almacenen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si no se selecciona esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el formato de codificación distinto de Unicode predeterminado para los tipos de datos aplicables. Para más información, vea la sección [Compatibilidad con UTF-8](#utf8) de este artículo.| 
@@ -461,7 +461,7 @@ Si almacena datos de caracteres que reflejan varios idiomas [!INCLUDE[ssNoVersio
 > [!NOTE]
 > Para los tipos de datos Unicode, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] puede representar hasta 65 535 caracteres mediante UCS-2, o el intervalo completo de Unicode (1 114 111 caracteres) si se usan caracteres adicionales. Para más información sobre cómo habilitar caracteres adicionales, vea [Caracteres adicionales](#Supplementary_Characters).
 
-Como alternativa, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], si se usa una intercalación compatible con UTF-8 (\_UTF8), los tipos de datos anteriores que no son Unicode (**char** y **varchar**) se convierten en tipos de datos Unicode con la codificación UTF-8. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] no cambia el comportamiento de los tipos de datos Unicode que existieran antes (**nchar**, **nvarchar** y **ntext**), que seguirán usando la codificación UCS-2 o UTF-16. Para más información, vea [Diferencias de almacenamiento entre UTF-8 y UTF-16](#storage_differences).
+Como alternativa, a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], si se usa una intercalación compatible con UTF-8 (\_UTF8), los tipos de datos anteriores que no son Unicode (**char** y **varchar**) se convierten en tipos de datos Unicode con la codificación UTF-8. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] no cambia el comportamiento de los tipos de datos Unicode que existieran antes (**nchar**, **nvarchar** y **ntext**), que seguirán usando la codificación UCS-2 o UTF-16. Para más información, vea [Diferencias de almacenamiento entre UTF-8 y UTF-16](#storage_differences).
 
 ### <a name="unicode-considerations"></a>Consideraciones de Unicode
 Hay limitaciones significativas asociadas a los tipos de datos no Unicode. Esto se debe a que un equipo que no es Unicode está limitado a usar una única página de códigos. Es posible que experimente una ganancia de rendimiento al usar Unicode, ya que requiere menos conversiones de páginas de códigos. Las intercalaciones Unicode se deben seleccionar de forma individual en el nivel de expresión, base de datos o columna porque no se admiten en el nivel de servidor.    
@@ -473,7 +473,7 @@ Al mover los datos de un servidor a un cliente, los controladores de cliente ant
 >
 > Para usar las intercalaciones UTF-16 disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores) a fin de mejorar la búsqueda y la ordenación de algunos caracteres Unicode (solo en las intercalaciones de Windows), puede seleccionar una de las intercalaciones de caracteres adicionales (\_SC), o bien una de las de la versión 140.    
  
-Para usar las intercalaciones UTF- 8 disponibles en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] a fin de mejorar la búsqueda y la ordenación de algunos caracteres Unicode (solo en las intercalaciones de Windows), debe seleccionar las intercalaciones compatibles con la codificación UTF-8 (\_UTF8).
+Para usar las intercalaciones UTF- 8 disponibles en [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] a fin de mejorar la búsqueda y la ordenación de algunos caracteres Unicode (solo en las intercalaciones de Windows), debe seleccionar las intercalaciones compatibles con la codificación UTF-8 (\_UTF8).
  
 -   La marca UTF8 se puede aplicar a:    
     -   Intercalaciones lingüísticas que ya son compatibles con caracteres adicionales (\_SC) o reconocimiento de la distinción de selector de variación (\_VSS)
@@ -484,8 +484,8 @@ Para usar las intercalaciones UTF- 8 disponibles en [!INCLUDE[sql-server-2019](.
     -   Intercalaciones binarias BIN o BIN2<sup>2</sup>
     -   Intercalaciones SQL\_*  
     
-<sup>1</sup> A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 reemplazó la intercalación **UTF8_BIN2** por **Latin1_General_100_BIN2_UTF8**.        
-<sup>2</sup> Hasta con [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3.    
+<sup>1</sup> A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 3.0 reemplazó la intercalación **UTF8_BIN2** por **Latin1_General_100_BIN2_UTF8**.        
+<sup>2</sup> Hasta con [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 2.3.    
     
 Para evaluar completamente los problemas relacionados con el uso de tipos de datos Unicode y no Unicode, pruebe su escenario para cuantificar las diferencias de rendimiento en su entorno. Se recomienda normalizar la intercalación que se usa en los sistemas de una organización e implementar servidores y clientes Unicode siempre que sea posible.    
     
@@ -512,7 +512,7 @@ Pero Unicode Consortium estableció 16 "planos" adicionales de caracteres, cada 
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introdujo una nueva familia de intercalaciones de caracteres adicionales (\_SC) que se pueden usar con los tipos de datos **nchar**, **nvarchar** y **sql_variant** para representar el intervalo de caracteres Unicode completo (de 000000 a 10FFFF). Por ejemplo: **Latin1_General_100_CI_AS_SC** o, si se usa una intercalación japonesa, **Japanese_Bushu_Kakusu_100_CI_AS_SC**. 
  
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] amplía la compatibilidad de los caracteres adicionales a los tipos de datos **char** y **varchar** con las nuevas intercalaciones habilitadas para UTF-8 ([\_UTF8](#utf8)). Estos tipos de datos también son capaces de representar el intervalo completo de caracteres Unicode.   
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] amplía la compatibilidad de los caracteres adicionales a los tipos de datos **char** y **varchar** con las nuevas intercalaciones habilitadas para UTF-8 ([\_UTF8](#utf8)). Estos tipos de datos también son capaces de representar el intervalo completo de caracteres Unicode.   
 
 > [!NOTE]
 > A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], las nuevas intercalaciones \_140 admiten de forma automática caracteres adicionales.
@@ -545,7 +545,7 @@ En la siguiente tabla se compara el comportamiento de algunas funciones de caden
 ## <a name="gb18030-support"></a><a name="GB18030"></a> Compatibilidad con GB18030    
 GB18030 es un estándar independiente que se usa en la República Popular China para codificar caracteres chinos. En GB18030, los caracteres pueden tener una longitud de 1, 2 o 4 bytes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite caracteres de codificación GB18030, reconociéndolos en el momento de su entrada en un servidor procedentes de una aplicación del lado cliente y convirtiéndolos y almacenándolos de forma nativa como caracteres Unicode. Una vez almacenados en el servidor, se tratan como caracteres Unicode en las operaciones siguientes. 
 
-Puede usar cualquier intercalación china, preferentemente la más reciente: la versión 100. Todas las intercalaciones de nivel \_100 admiten la ordenación lingüística con caracteres GB18030. Si los datos incluyen caracteres adicionales (pares suplentes), puede usar las intercalaciones SC disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para mejorar la búsqueda y la ordenación.    
+Puede usar cualquier intercalación china, preferentemente la más reciente: la versión 100. Todas las intercalaciones de nivel \_100 admiten la ordenación lingüística con caracteres GB18030. Si los datos incluyen caracteres adicionales (pares suplentes), puede usar las intercalaciones SC disponibles en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] para mejorar la búsqueda y la ordenación.    
 
 > [!NOTE]
 > Asegúrese de que las herramientas de cliente, como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], usan la fuente Dengxian para mostrar correctamente las cadenas que contienen caracteres con codificación GB18030.
@@ -559,9 +559,9 @@ Puede usar cualquier intercalación china, preferentemente la más reciente: la 
     
 Las aplicaciones de base de datos que interactúan con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben utilizar controles que sean compatibles con escritura compleja. Los controles de formulario estándar de Windows creados en código administrado están habilitados para escritura compleja.    
 
-## <a name="japanese-collations-added-in--sssqlv14_md"></a><a name="Japanese_Collations"></a> Intercalaciones japonesas agregadas en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+## <a name="japanese-collations-added-in--sssql17-md"></a><a name="Japanese_Collations"></a> Intercalaciones japonesas agregadas en [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]
  
-A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], se admiten nuevas familias de intercalaciones japonesas, con las permutaciones de varias opciones (\_CS, \_AS, \_KS, \_WS y \_VSS). 
+A partir de [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], se admiten nuevas familias de intercalaciones japonesas, con las permutaciones de varias opciones (\_CS, \_AS, \_KS, \_WS y \_VSS). 
 
 Para escuchar en estas intercalaciones, puede consultar [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:      
 
@@ -577,12 +577,12 @@ Estas intercalaciones se admiten en los índices, las tablas optimizadas para me
 <a name="ctp23"></a>
 
 ## <a name="utf-8-support"></a><a name="utf8"></a> Compatibilidad con UTF-8
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] presenta compatibilidad total con la codificación de caracteres UTF-8 ampliamente utilizada como codificación de importación o exportación, y como intercalación de columna o base de datos para los datos de cadena. UTF-8 se permite en los tipos de datos **char** y **varchar**, y se habilita al crear o cambiar la intercalación de un objeto a una intercalación con un sufijo *UTF8*. Un ejemplo es cambiar **LATIN1_GENERAL_100_CI_AS_SC** a **LATIN1_GENERAL_100_CI_AS_SC_UTF8**. 
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] presenta compatibilidad total con la codificación de caracteres UTF-8 ampliamente utilizada como codificación de importación o exportación, y como intercalación de columna o base de datos para los datos de cadena. UTF-8 se permite en los tipos de datos **char** y **varchar**, y se habilita al crear o cambiar la intercalación de un objeto a una intercalación con un sufijo *UTF8*. Un ejemplo es cambiar **LATIN1_GENERAL_100_CI_AS_SC** a **LATIN1_GENERAL_100_CI_AS_SC_UTF8**. 
 
 UTF-8 solo está disponible para las intercalaciones de Windows que admiten caracteres adicionales, como se presentó en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Los tipos de datos **nchar** y **nvarchar** solo permiten la codificación UCS-2 o UTF-16, y permanecen sin cambios.
 
 ### <a name="storage-differences-between-utf-8-and-utf-16"></a><a name="storage_differences"></a> Diferencias de almacenamiento entre UTF-8 y UTF-16
-Unicode Consortium asigna a cada carácter un punto de código único, que es un valor en el intervalo comprendido entre 000000 y 10FFFF. Con [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], ambas codificaciones, UTF-8 y UTF-16, están disponibles para representar el intervalo completo:    
+Unicode Consortium asigna a cada carácter un punto de código único, que es un valor en el intervalo comprendido entre 000000 y 10FFFF. Con [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], ambas codificaciones, UTF-8 y UTF-16, están disponibles para representar el intervalo completo:    
 -  Con la codificación UTF-8, los caracteres del intervalo ASCII (entre 000000 y 00007F) requieren 1 byte, los puntos de código entre 000080 y 0007FF requieren 2 bytes, los puntos de código entre 000800 y 00FFFF requieren 3 bytes y los puntos de código entre 0010000 y 0010FFFF requieren 4 bytes. 
 -  Con la codificación UTF-16, los puntos de código entre 000000 y 00FFFF requieren 2 bytes y los puntos de código entre 0010000 y 0010FFFF requieren 4 bytes. 
 

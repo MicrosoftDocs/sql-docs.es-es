@@ -16,16 +16,16 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df42c1651d460b0be7b0e2900338982168ebd597
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b9d77743864b3b5425379ec7b5c570629b470e04
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468566"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250760"
 ---
 # <a name="create-an-application-role"></a>Crear un rol de aplicación
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  En este tema se describe cómo crear un rol de aplicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Los roles de aplicación limitan el acceso de los usuarios a una base de datos excepto a través de aplicaciones específicas. Los roles de aplicación no tienen usuarios, de modo que no aparece la lista **Miembros del rol** cuando se selecciona **Rol de aplicación** .  
+  En este tema se describe cómo crear un rol de aplicación en [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Los roles de aplicación limitan el acceso de los usuarios a una base de datos excepto a través de aplicaciones específicas. Los roles de aplicación no tienen usuarios, de modo que no aparece la lista **Miembros del rol** cuando se selecciona **Rol de aplicación** .  
   
 > [!IMPORTANT]  
 >  Al establecer las contraseñas de los roles de aplicación se comprueba la complejidad de la contraseña. Las aplicaciones que invocan roles de aplicación deben almacenar sus propias contraseñas. Las contraseñas de roles de aplicación deben almacenarse cifradas.  

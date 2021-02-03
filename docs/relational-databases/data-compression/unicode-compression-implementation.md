@@ -15,12 +15,12 @@ ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0a63694f22f825604e5a3b2d453e58ea73766c4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f78e0bbe469861251c95a0d7fc382be4ed333dd0
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485477"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251127"
 ---
 # <a name="unicode-compression-implementation"></a>Implementación de la compresión Unicode
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "97485477"
 >  La compresión Unicode no se admite para los datos **nvarchar(max)** aunque estén almacenados de forma consecutiva. Sin embargo, este tipo de datos puede seguir beneficiándose de la compresión de página.  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>Actualizar de versiones anteriores de SQL Server  
- Cuando una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se actualiza a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los cambios relacionados con la compresión Unicode no se llevan a cabo en ningún objeto de base de datos, tanto si está comprimido como si no. Una vez actualizada la base de datos, los objetos se ven afectados de la siguiente forma:  
+ Cuando una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se actualiza a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], los cambios relacionados con la compresión Unicode no se llevan a cabo en ningún objeto de base de datos, tanto si está comprimido como si no. Una vez actualizada la base de datos, los objetos se ven afectados de la siguiente forma:  
   
 -   Si el objeto no está comprimido, no se realiza ningún cambio y sigue funcionando como lo hacía anteriormente.  
   

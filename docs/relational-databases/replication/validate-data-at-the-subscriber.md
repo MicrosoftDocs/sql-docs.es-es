@@ -18,16 +18,16 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016
-ms.openlocfilehash: bd2d4604e35c42b4b9689934b9fb41dd3e4fb6fb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 1b5109c2bf93a49370f005e94a824fd5bfb70921
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460158"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250628"
 ---
 # <a name="validate-replicated-data"></a>Validar datos replicados
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
-  En este tema se describe cómo validar datos en el suscriptor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
+  En este tema se describe cómo validar datos en el suscriptor en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
   
 La replicación transaccional y la replicación de mezcla le permiten validar que los datos del suscriptor coinciden con los del publicador. Es posible realizar la validación de determinadas suscripciones o de todas las suscripciones a una publicación. Especifique uno de los siguientes tipos de validación y el Agente de distribución o el Agente de mezcla validarán los datos la próxima vez que se ejecuten:  
   

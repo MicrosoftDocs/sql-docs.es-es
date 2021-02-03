@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: c333346b0c8ef728966f8e0b6d42a5be53d1b187
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7c95feda5457c3623a893e77771dbdc10ea28257
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895908"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250695"
 ---
 # <a name="back-up-the-service-master-key"></a>Hacer una copia de seguridad de la clave maestra de servicio
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  En este artículo se describe cómo realizar una copia de seguridad de la clave maestra de servicio en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La clave maestra de servicio es la raíz de la jerarquía de cifrado. Debe realizar una copia de seguridad de la clave maestra de servicio y almacenarla en una ubicación segura y fuera de las instalaciones. Crear esta copia de seguridad debe ser una de las primeras acciones de administración que se realicen en el servidor.  
+  En este artículo se describe cómo realizar una copia de seguridad de la clave maestra de servicio en [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La clave maestra de servicio es la raíz de la jerarquía de cifrado. Debe realizar una copia de seguridad de la clave maestra de servicio y almacenarla en una ubicación segura y fuera de las instalaciones. Crear esta copia de seguridad debe ser una de las primeras acciones de administración que se realicen en el servidor.  
 
 ## <a name="before-you-begin"></a>Antes de empezar  
   
