@@ -19,12 +19,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd89afe79f1e6cf7a5745b04378c1b403142c56e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6f78a502be14ffcf51937823d61bd61c144777f5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97426428"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187259"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar las tablas insertadas y eliminadas
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "97426428"
 > [!NOTE]  
 >  Si las acciones del desencadenador dependen del número de filas afectadas por una modificación de datos, use pruebas (como, por ejemplo, un examen de @@ROWCOUNT) para las modificaciones de datos que afecten a varias filas (instrucciones INSERT, DELETE o UPDATE basadas en una instrucción SELECT) y tome las medidas oportunas. Para más información, consulte [Crear desencadenadores DML para administrar varias filas de datos](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no permite referencias a las columnas **text**, **ntext** o **image** en las tablas insertadas y eliminadas por los desencadenadores AFTER. Sin embargo, estos tipos de datos se incluyen únicamente por motivos de compatibilidad con versiones anteriores. El método preferido para almacenar datos grandes es usar los tipos de datos **varchar(max)** , **nvarchar(max)** y **varbinary(max)** . Tanto los desencadenadores AFTER como INSTEAD OF admiten los datos **varchar(max)** , **nvarchar(max)** y **varbinary(max)** en las tablas insertadas y eliminadas. Para obtener más información, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] no permite referencias a las columnas **text**, **ntext** o **image** en las tablas insertadas y eliminadas por los desencadenadores AFTER. Sin embargo, estos tipos de datos se incluyen únicamente por motivos de compatibilidad con versiones anteriores. El método preferido para almacenar datos grandes es usar los tipos de datos **varchar(max)** , **nvarchar(max)** y **varbinary(max)** . Tanto los desencadenadores AFTER como INSTEAD OF admiten los datos **varchar(max)** , **nvarchar(max)** y **varbinary(max)** en las tablas insertadas y eliminadas. Para obtener más información, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  **Ejemplo del uso de la tabla inserted en un desencadenador para exigir reglas de negocios**  
   

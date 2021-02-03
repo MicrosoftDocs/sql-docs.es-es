@@ -6,18 +6,18 @@ ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: reference
 helpviewer_keywords:
 - 4846 (Database Engine error)
 ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9654cb637d07bb8bbf658e0daecc4361c195b81d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 789b6220c0b3b61fba1567c88ca5405d7b1e8895
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471047"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185584"
 ---
 # <a name="mssqlserver_4846"></a>MSSQLSERVER_4846
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ Para solucionar errores de memoria, siga estos pasos generales:
   
     -   **memoria mínima por consulta**  
   
-    Observe si hay algún valor fuera de lo normal. Corríjalos según sea necesario. Investigue los requisitos de memoria para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La configuración predeterminada se enumera en "Establecer las opciones de configuración del servidor" en los Libros en pantalla de SQL Server.  
+    Observe si hay algún valor fuera de lo normal. Corríjalos según sea necesario. Investigue los requisitos de memoria para [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. La configuración predeterminada se enumera en "Establecer las opciones de configuración del servidor" en los Libros en pantalla de SQL Server.  
   
 4.  Observe la salida de DBCC MEMORYSTATUS y la forma en que cambia cuando aparecen estos mensajes de error.  
   

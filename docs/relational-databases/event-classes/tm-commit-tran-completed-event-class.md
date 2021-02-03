@@ -6,19 +6,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - 'TM: Commit Tran Completed event class'
 ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab6066ba9f9732d66df73125acc56c3a79ca98ce
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 17a7488242304c12b64b5f7890cd4f42326a5e23
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483557"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183186"
 ---
 # <a name="tm-commit-tran-completed-event-class"></a>TM: Clase de eventos Commit Tran Completed
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "97483557"
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
-|Correcto|**int**|1 = correcto. 0 = error (por ejemplo, 1 significa que se ha comprobado un permiso correctamente y 0 significa que se ha producido un error en la comprobación).|23|Sí|  
+|Correcto|**int**|1 = correcto. 0 = error (por ejemplo, 1 significa que una comprobación de permisos se realizó correctamente y 0 significa error en dicha comprobación).|23|Sí|  
 |TextData|**ntext**|Valor de texto que depende de la clase de eventos capturada en el seguimiento.|1|Sí|  
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  

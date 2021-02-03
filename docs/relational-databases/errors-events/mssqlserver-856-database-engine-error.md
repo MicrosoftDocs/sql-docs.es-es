@@ -6,18 +6,18 @@ ms.date: 08/20/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: reference
 helpviewer_keywords:
 - 856 (Database Engine error)
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: f94f6f4e8f8eebee48bbb0c2a6d0faefa4218c25
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: d0cb60c6117ebd17ce566f182c65423537100f04
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418919"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180960"
 ---
 # <a name="mssqlserver_856"></a>MSSQLSERVER_856
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - STBuffer (geography Data Type)
 - STBuffer_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1d39e58c6dd4fa648d8d4118414925777eb3535b
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 5b8b15017c53da5fe6020742fe5d3b5cdc5be1da
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92038324"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186006"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (tipo de datos geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

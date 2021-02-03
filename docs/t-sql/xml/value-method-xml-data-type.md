@@ -6,7 +6,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ce7382722999e7120cafc3fcc7aeff496d1b97c8
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: dce7148340136615b79d4bf4e4ec9dd15627c88e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116553"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181729"
 ---
 # <a name="value-method-xml-data-type"></a>value() (método del tipo de datos xml)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

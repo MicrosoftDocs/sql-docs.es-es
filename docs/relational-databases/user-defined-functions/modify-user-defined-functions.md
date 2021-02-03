@@ -12,16 +12,16 @@ ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9696fef382c0a7a039d83ec8499c10829803b473
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9669c52ab060f05429dbdaca2aff9cf1f2590dd3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466746"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184268"
 ---
 # <a name="modify-user-defined-functions"></a>Modificar funciones definidas por el usuario
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Puede modificar funciones definidas por el usuario en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La modificación de las funciones definidas por el usuario como se describe a continuación no cambiará los permisos de las funciones ni afectará a las funciones, procedimientos almacenados, o desencadenadores dependientes.  
+  Puede modificar funciones definidas por el usuario en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La modificación de las funciones definidas por el usuario como se describe a continuación no cambiará los permisos de las funciones ni afectará a las funciones, procedimientos almacenados, o desencadenadores dependientes.  
   
  **En este tema**  
   

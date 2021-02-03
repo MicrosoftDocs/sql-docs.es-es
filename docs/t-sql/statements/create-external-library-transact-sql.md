@@ -2,11 +2,11 @@
 description: 'CREATE EXTERNAL LIBRARY (Transact-SQL): SQL Server'
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/26/2020
+ms.date: 01/28/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE EXTERNAL LIBRARY
 - CREATE_EXTERNAL_LIBRARY_TSQL
@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 9839a6fa8bd678afdce426f9dcd5657500c5a6cd
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1cb25ebe0b24e2656f6b206b8a56eb24b81f45af
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100798"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186846"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -98,8 +98,7 @@ WITH ( LANGUAGE = 'R' )
 
 <file_spec> ::=  
 {  
-    (CONTENT = { <client_library_specifier> | <library_bits> }  
-    [, PLATFORM = WINDOWS ])  
+    (CONTENT = { <client_library_specifier> | <library_bits> })  
 }  
 
 <client_library_specifier> :: = 
@@ -171,6 +170,8 @@ El archivo se puede especifica como una ruta de acceso local o una ruta de acces
 
 Cuando se intenta acceder al archivo especificado en **<especificador_biblioteca_cliente>** , SQL Server suplanta el contexto de seguridad del inicio de sesión de Windows actual. Si **<especificador_biblioteca_cliente>** especifica una ubicación de red (ruta de acceso UNC), la suplantación del inicio de sesión actual no se mantiene en la ubicación de red debido a las limitaciones de delegación. En este caso, el acceso se realiza mediante el contexto de seguridad de la cuenta del servicio SQL Server. Para más información, vea [Credenciales (motor de base de datos)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
+::: moniker-end
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 Opcionalmente, se puede especificar una plataforma de sistema operativo para el archivo. Solo se permite un artefacto de archivo o contenido para cada plataforma de sistema operativo para un determinado lenguaje o tiempo de ejecución.
 ::: moniker-end
 
@@ -179,13 +180,6 @@ Opcionalmente, se puede especificar una plataforma de sistema operativo para el 
 Especifica el contenido del paquete como un literal hexadecimal, similar a los ensamblados. 
 
 Esta opción es útil si necesita crear una biblioteca o modificar una ya existente (y tiene los permisos necesarios para hacerlo), pero el sistema de archivos en el servidor está restringido y no puede copiar los archivos de la biblioteca en una ubicación a la que pueda tener acceso el servidor.
-
-::: moniker range="=sql-server-2017"
-**PLATFORM = WINDOWS**
-
-Especifica la plataforma para el contenido de la biblioteca. El valor se establece de forma predeterminada en la plataforma de host en la que SQL Server se ejecuta, con lo cual no es necesario que el usuario lo especifique. Es necesario en caso de que se admitan varias plataformas o si el usuario debe especificar una plataforma diferente.
-En SQL Server 2017, Windows es la única plataforma admitida.
-::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **PLATFORM**
@@ -211,8 +205,6 @@ Especifica el lenguaje del paquete. El valor puede ser `R` o `Python` en Azure S
 
 Especifica el lenguaje del paquete. El valor puede ser `R`, `Python` o el nombre de un lenguaje externo (consulte [CREAR LENGUAJE EXTERNO](create-external-language-transact-sql.md)).
 ::: moniker-end
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>Observaciones
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - GROUPING_ID_TSQL
 - GROUPING_ID
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f2c8332aabe8c6583cd76429aaf1679417a956d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: e071cc947160ef741486e8e9eaea988687d4af9e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111112"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182390"
 ---
 # <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +65,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`abc`|`111`|`7`|  
   
 ## <a name="technical-definition-of-grouping_id-"></a>Definición técnica de GROUPING_ID ()  
- Cada argumento de GROUPING_ID debe ser un elemento de la lista GROUP BY. GROUPING_ID () devuelve un mapa de bits de **integer** cuyos bits N más bajos pueden ser literales. Un **bit** literal indica que el argumento correspondiente no es una columna de agrupación en la fila de salida determinada. El **bit** de menor orden corresponde al argumento N y el **bit** de menor orden de N-1<sup>ésimo</sup>, al argumento 1.  
+ Cada argumento de GROUPING_ID debe ser un elemento de la lista GROUP BY. GROUPING_ID () devuelve un mapa de bits de **integer** cuyos bits N más bajos pueden ser literales. Un **bit** literal indica que el argumento correspondiente no es una columna de agrupación en la fila de salida determinada. El **bit** de menor orden corresponde al argumento N y el **bit** de menor orden de N-1 <sup>ésimo</sup>, al argumento 1.  
   
 ## <a name="grouping_id--equivalents"></a>Equivalentes de GROUPING_ID ()  
  En una consulta de agrupación única, GROUPING (\<column_expression>) equivale a GROUPING_ID (\<column_expression>) y ambos devuelven 0.  

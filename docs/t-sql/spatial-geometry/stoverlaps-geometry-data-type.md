@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - STOverlaps (geometry Data Type)
 - STOverlaps_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d92e984fb803cc8b15c58f4b137df2dd51e83f9b
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: e5ffa914fb4124d30a7bc7f4365a756187f75548
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88454281"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184653"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
