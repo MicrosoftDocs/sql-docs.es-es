@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DROP TRIGGER
 - DROP_TRIGGER_TSQL
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6ef0daca8b2c593c5d451c25471cef73cf8034fa
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 0be25328507c6afa210cd4d51817551395f94770
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688959"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237760"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ ON ALL SERVER
 
 ## <a name="arguments"></a>Argumentos
  *IF EXISTS*  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] hasta la [versión actual](../../sql-server/what-s-new-in-sql-server-2016.md), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] hasta la [versión actual](/troubleshoot/sql/general/determine-version-edition-update-level), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
  Quita el desencadenador condicionalmente solo si ya existe.  
   
@@ -107,7 +107,7 @@ ON ALL SERVER
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. Quitar un desencadenador DML  
- En el siguiente ejemplo se quita el desencadenador `employee_insupd` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. (A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] se puede usar la sintaxis DROP TRIGGER IF EXISTS).  
+ En el siguiente ejemplo se quita el desencadenador `employee_insupd` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. (A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] se puede usar la sintaxis DROP TRIGGER IF EXISTS).  
   
 ```sql  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  

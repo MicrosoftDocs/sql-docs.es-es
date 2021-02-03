@@ -28,12 +28,12 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c98d84c8e3bc08bfae13c149cfc0487c57e40008
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 259e58dcf9ef713a9bb8787a63ac8cbf3a349c88
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171577"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237730"
 ---
 # <a name="database-checkpoints-sql-server"></a>Puntos de comprobación de base de datos (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -107,11 +107,11 @@ Si se produce un bloqueo del sistema, los puntos de comprobación indirectos pro
 Pero una carga de trabajo transaccional en línea en una base de datos que esté configurada para puntos de comprobación indirectos puede experimentar un deterioro del rendimiento. Esto se debe a que el escritor en segundo plano que usa el punto de comprobación indirecto en ocasiones aumenta la carga de escritura total para una instancia de servidor.  
  
 > [!IMPORTANT]
-> El punto de comprobación indirecto es el comportamiento predeterminado para nuevas bases de datos creadas en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], incluidas las bases de datos Model y TempDB.          
+> El punto de comprobación indirecto es el comportamiento predeterminado para nuevas bases de datos creadas en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], incluidas las bases de datos Model y TempDB.          
 > Las bases de datos que se actualizan in situ o se restauraron a partir de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usarán el comportamiento de punto de comprobación automático anterior, a menos que explícitamente se modifique para usar el punto de comprobación indirecto.       
 
 ### <a name="improved-indirect-checkpoint-scalability"></a><a name="ctp23"></a> Escalabilidad mejorada de puntos de control indirectos
-Antes de [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)], es posible que experimente errores de programador que no rinde cuando hay una base de datos que genera un gran número de páginas desfasadas, como `tempdb`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]se presenta una mejor escalabilidad para los puntos de control indirectos, lo que debería evitar estos errores en las bases de datos con una gran carga de trabajo `UPDATE`/`INSERT`.
+Antes de [!INCLUDE[ssNoVersion](../../includes/sssql19-md.md)], es posible que experimente errores de programador que no rinde cuando hay una base de datos que genera un gran número de páginas desfasadas, como `tempdb`. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]se presenta una mejor escalabilidad para los puntos de control indirectos, lo que debería evitar estos errores en las bases de datos con una gran carga de trabajo `UPDATE`/`INSERT`.
   
 ##  <a name="internal-checkpoints"></a><a name="EventsCausingChkpt"></a> Puntos de comprobación internos  
 Hay distintos componentes del servidor que generan puntos de comprobación internos para garantizar que las imágenes de disco coinciden con el estado actual del registro. Los puntos de comprobación internos se generan en respuesta a los siguientes eventos:  

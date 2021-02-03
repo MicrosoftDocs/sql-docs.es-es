@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 76aa3e890169e73d30d9a15aa57aa4fd832a7ef9
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: bec58a74422cbe15ed9b82f5f46ad7f56288de8e
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171317"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236183"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Realizar copias de seguridad y restaurar bases de datos de SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "98171317"
   
  El componente de copia de seguridad y restauración de SQL Server ofrece una protección esencial para los datos críticos almacenados en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para minimizar el riesgo de una pérdida de datos catastrófica, debe realizar de forma periódica copias de seguridad de las bases de datos para conservar las modificaciones realizadas en los datos. Una estrategia bien diseñada de copia de seguridad y restauración le ayuda a proteger las bases de datos frente a la pérdida de datos provocada por diversos errores. Pruebe su estrategia con la restauración de un conjunto de copias de seguridad y, después, recupere la base de datos para prepararse para dar una respuesta eficaz en caso de desastre.
   
- Además del almacenamiento local para almacenar las copias de seguridad, SQL Server también admite la copia de seguridad y la restauración en el servicio Azure Blob Storage. Para más información, consulte [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para archivos de base de datos almacenados mediante el servicio de almacenamiento de blobs de Microsoft Azure, [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] proporciona la opción de usar instantáneas de Azure para copias de seguridad casi instantáneas y restauraciones más rápidas. Para obtener más información, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Azure ofrece también una solución de copia de seguridad de clase empresarial para las instancias de SQL Server que se ejecutan en máquinas virtuales de Azure. Una solución de copia de seguridad totalmente administrada admite Grupos de disponibilidad Always On, retención a largo plazo, recuperación a un momento dado y administración y supervisión centrales. Para obtener más información, vea [Azure Backup para SQL Server en máquina virtual de Azure](/azure/backup/backup-azure-sql-database).
+ Además del almacenamiento local para almacenar las copias de seguridad, SQL Server también admite la copia de seguridad y la restauración en el servicio Azure Blob Storage. Para más información, consulte [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para archivos de base de datos almacenados mediante el servicio de almacenamiento de blobs de Microsoft Azure, [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] proporciona la opción de usar instantáneas de Azure para copias de seguridad casi instantáneas y restauraciones más rápidas. Para obtener más información, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Azure ofrece también una solución de copia de seguridad de clase empresarial para las instancias de SQL Server que se ejecutan en máquinas virtuales de Azure. Una solución de copia de seguridad totalmente administrada admite Grupos de disponibilidad Always On, retención a largo plazo, recuperación a un momento dado y administración y supervisión centrales. Para obtener más información, vea [Azure Backup para SQL Server en máquina virtual de Azure](/azure/backup/backup-azure-sql-database).
   
 ##  <a name="why-back-up"></a>Por qué realizar copias de seguridad  
 -   La copia de seguridad de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la ejecución de procedimientos de restauración de prueba de las copias de seguridad y el almacenamiento de las copias en una ubicación segura y fuera del sitio contribuyen a protegerse ante una pérdida de datos catastrófica. **Las copias de seguridad son la única forma de proteger los datos.**

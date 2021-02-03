@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DATETIMEOFFSETFROMPARTS_TSQL
 - DATETIMEOFFSETFROMPARTS
@@ -19,12 +19,12 @@ ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab37520d60c482afccb40bde7392de2515a79753
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 9f8ce697a414d095e91214626b4ae4f8e1e2a83b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101204"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237920"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,7 +82,7 @@ Valor literal entero que especifica la precisión del valor **datetimeoffset** q
   
 El argumento *fractions* depende del argumento precision. Por ejemplo, para un valor precision de 7, cada fracción representa 100 nanosegundos; si precision es 3, cada fracción representa un milisegundo. Para un valor de precision de cero, el valor de fractions también debe ser cero; de lo contrario, `DATETIMEOFFSETFROMPARTS` generará un error.  
   
-Esta función admite la conexión remota a servidores de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y versiones posteriores. No admitirá la conexión remota a servidores que tengan una versión inferior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Esta función se puede enviar de forma remota a servidores de [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] y superiores. No se puede enviar de forma remota a servidores que tengan una versión inferior a [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  
   

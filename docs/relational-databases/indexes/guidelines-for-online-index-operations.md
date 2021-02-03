@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17c91b53c786934d292692493fa886698128b34d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9612070531dc13d9646d439501925f59f62c8da7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465306"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236909"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
 
@@ -119,7 +119,7 @@ Por lo general, no hay ninguna diferencia en la calidad de desfragmentación ent
 ## <a name="online-default-options"></a>Opciones predeterminadas en línea
 
 > [!IMPORTANT]
-> Estas opciones están en fase de versión preliminar pública para [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)].
+> Estas opciones están en fase de versión preliminar pública para [!INCLUDE[ssNoVersion](../../includes/sssql19-md.md)].
 
 Para establecer opciones predeterminadas para ONLINE o RESUMABLE en un nivel de base de datos, establezca las opciones de configuración de ámbito de base de datos ELEVATE_ONLINE o ELEVATE_RESUMABLE. Con estas opciones predeterminadas puede evitar que se lleve a cabo por error una operación que desactive la tabla de base de datos. Ambas opciones harán que el motor eleve automáticamente determinadas operaciones a la ejecución ONLINE o RESUMABLE.  
 Puede establecer estas opciones en FAIL_UNSUPPORTED, WHEN_SUPPORTED u OFF con el comando [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Puede establecer valores diferentes para ONLINE y RESUMABLE.
@@ -129,7 +129,7 @@ ELEVATE_ONLINE y ELEVATE_RESUMABLE solo se aplican a las instrucciones de DDL qu
 > [!NOTE]
 > ELEVATE_ONLINE y ELEVATE_RESUMABLE no se aplican a las operaciones de índice XML.
 
-## <a name="related-content"></a>Contenidos relacionados
+## <a name="related-content"></a>Contenido relacionado
 
 - [Cómo funcionan las operaciones de índice en línea](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [Realizar operaciones de índice en línea](../../relational-databases/indexes/perform-index-operations-online.md)  

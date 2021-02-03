@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - INSERT_TSQL
 - INSERT
@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 206aefdd3cd58b94124a0840cef7e788c5a29390
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b5a6fd7131b63741a82c120e1e0b222405865a9d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171277"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237183"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -319,7 +319,7 @@ Las filas que se insertan en un montón como el resultado de una acción de inse
   
 A diferencia de la instrucción `BULK INSERT`, que contiene un bloqueo de actualización masiva (BU) menos restrictivo, `INSERT INTO … SELECT` con la sugerencia `TABLOCK` retiene un bloqueo exclusivo (X) en la tabla. Esto significa que no se pueden insertar filas mediante varias operaciones de inserción que se ejecutan simultáneamente. 
 
-Sin embargo, a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y del nivel de compatibilidad de la base de datos 130, una única instrucción `INSERT INTO … SELECT` se puede ejecutar en paralelo al realizar la inserción en montones o en índices de almacén de columnas (CCI) agrupados. Las inserciones paralelas son posibles cuando se usa la sugerencia `TABLOCK`.  
+Sin embargo, a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y del nivel de compatibilidad de la base de datos 130, una única instrucción `INSERT INTO … SELECT` se puede ejecutar en paralelo al realizar la inserción en montones o en índices de almacén de columnas (CCI) agrupados. Las inserciones paralelas son posibles cuando se usa la sugerencia `TABLOCK`.  
 
 El paralelismo de la instrucción anterior tiene los siguientes requisitos, que son similares a los requisitos para el registro mínimo:  
 -   La tabla de destino es un montón vacío o no vacío.  
@@ -785,7 +785,7 @@ GO
 #### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>P. Insertar en una tabla externa creada con PolyBase  
  Exporte datos de SQL Server a Hadoop o Azure Storage. En primer lugar, cree una tabla externa que apunte al directorio o archivo de destino. A continuación, utilice INSERT INTO para exportar datos de una tabla de SQL Server local a un origen de datos externo. La instrucción INSERT INTO crea el archivo o directorio de destino si no existe y los resultados de la instrucción SELECT se exportan a la ubicación especificada en el formato de archivo especificado.  Para obtener más información, vea [Introducción a PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
-**Se aplica a**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Se aplica a**: [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ```sql
 -- Create an external table.   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER SERVER CONFIGURATION
 - ALTER_SERVER_CONFIGURATION_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ce637e88679747faf40ec7f262ceaea3c0f01f5f
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 7a61ed11e141376c0b0c769f961fad4e9520c271
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688894"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237052"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -245,7 +245,7 @@ Deshabilita la opción de extensión del grupo de búferes. Deshabilite la opci�
   
 **\<soft_numa>**  
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]).  
   
 ACTIVAR  
 Permite la creación automática de particiones para dividir grandes nodos de hardware NUMA en nodos NUMA más pequeños. Para cambiar el valor de ejecución, es necesario reiniciar el motor de base de datos.  
@@ -264,7 +264,7 @@ Deshabilita la creación automática de particiones de software de grandes nodos
 
 **\<memory_optimized> ::=**
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]).
 
 ACTIVAR <br>
 Habilita todas las características en el nivel de instancia que forman parte de la familia de características de la [base de datos en memoria](../../relational-databases/in-memory-database.md). Esto incluye los [metadatos tempdb optimizados para memoria](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) y el [grupo de búferes híbrido](../../database-engine/configure-windows/hybrid-buffer-pool.md). Es necesario llevar a cabo un reinicio para que surta efecto.
@@ -447,7 +447,7 @@ GO
 
 ### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a> Configurar las opciones de base de datos en memoria
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]).
 
 #### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. Habilitar todas las características de base de datos en memoria con las opciones predeterminadas
 

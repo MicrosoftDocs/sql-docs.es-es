@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 1b7be0ce3e3be27633c32e031f7c674804a43d8b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 4d08635e146a7eb5e4af3c26fde87fed64071cd1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170817"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237383"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Descarga de cargas de trabajo de solo lectura a la réplica secundaria de un grupo de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "98170817"
  Esto significa que hay latencia, normalmente solo se trata de unos segundos, entre las réplicas principales y secundarias. No obstante, en casos excepcionales, por ejemplo, si los problemas de red reducen el rendimiento, la latencia puede ser importante. La latencia aumenta cuando se producen cuellos de botella de E/S y cuando se suspende el movimiento de los datos. Para supervisar el movimiento de datos suspendido, puede usar el [panel AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) o la vista de administración dinámica [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
 ####  <a name="data-latency-on-databases-with-memory-optimized-tables"></a><a name="bkmk_LatencyWithInMemOLTP"></a> Latencia de datos en bases de datos con tablas optimizadas para memoria  
- En [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] existían consideraciones especiales en torno a la latencia de datos en las secundarias activas: vea [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secundarias activas: réplicas secundarias legibles](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). A partir de [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] , no existe ninguna consideración especial en torno a la latencia de datos para tablas optimizadas para memoria. La latencia de datos esperada para tablas optimizadas para memoria es comparable a la latencia para tablas basadas en disco.  
+ En [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] existían consideraciones especiales en torno a la latencia de datos en las secundarias activas: vea [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secundarias activas: réplicas secundarias legibles](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). A partir de [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] , no existe ninguna consideración especial en torno a la latencia de datos para tablas optimizadas para memoria. La latencia de datos esperada para tablas optimizadas para memoria es comparable a la latencia para tablas basadas en disco.  
   
 ###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a> Repercusión de la carga de trabajo de solo lectura  
  Al configurar una réplica secundaria para el acceso de solo lectura, las cargas de trabajo de solo lectura en las bases de datos secundarias utilizan los recursos del sistema, como la CPU y E/S (para tablas basadas en disco) de los subprocesos REDO, especialmente si las cargas de trabajo de solo lectura en tablas basadas en disco realizan un uso intensivo de E/S. No hay ningún impacto en la E/S cuando se tiene acceso a tablas con optimización para memoria porque todas las filas residen en memoria.  

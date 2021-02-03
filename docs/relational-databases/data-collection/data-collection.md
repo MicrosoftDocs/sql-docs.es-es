@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dd4827f08c9e21ccd45f128bcc64ab9e03c1474b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 3dd72fbcc8f46f505e086043800ec68068a3cb5e
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193425"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250116"
 ---
 # <a name="data-collection"></a>Recopilación de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  El recopilador de datos es un componente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que recopila diferentes conjuntos de datos. La recopilación de datos se ejecuta de forma constante o según una programación definida por el usuario. El recopilador de datos almacena los datos recopilados en una base de datos relacional conocida como almacén de administración de datos.  
+  El recopilador de datos es un componente de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] que recopila diferentes conjuntos de datos. La recopilación de datos se ejecuta de forma constante o según una programación definida por el usuario. El recopilador de datos almacena los datos recopilados en una base de datos relacional conocida como almacén de administración de datos.  
   
 ## <a name="what-is-data-collector"></a>¿Qué es el recopilador de datos? 
- El recopilador de datos es un componente básico de la plataforma de recopilación de datos para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y las herramientas que se proporcionan a través de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El recopilador de datos proporciona un punto central para la recopilación de datos de los servidores de bases de datos y aplicaciones. Este punto de recopilación puede obtener datos de una variedad de orígenes y no se limita a los datos de rendimiento, a diferencia de Seguimiento de SQL.  
+ El recopilador de datos es un componente básico de la plataforma de recopilación de datos para [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] y las herramientas que se proporcionan a través de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El recopilador de datos proporciona un punto central para la recopilación de datos de los servidores de bases de datos y aplicaciones. Este punto de recopilación puede obtener datos de una variedad de orígenes y no se limita a los datos de rendimiento, a diferencia de Seguimiento de SQL.  
   
  El recopilador de datos permite ajustar el ámbito de recopilación de datos de acuerdo con cada entorno de producción y pruebas. El recopilador de datos también usa almacenamiento de datos, que es una base de datos relacional que permite administrar los datos recopilados estableciendo diferentes períodos de retención para los mismos.  
   
  El recopilador de datos admite la optimización dinámica para la recopilación de datos y es extensible a través de su API. Para más información, consulte [Data Collector Programming](../system-functions/data-collector-functions-transact-sql.md).  
   
- La ilustración siguiente muestra cómo encaja el recopilador de datos en la estrategia global para la recopilación y la administración de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ La ilustración siguiente muestra cómo encaja el recopilador de datos en la estrategia global para la recopilación y la administración de datos de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
  ![Rol del recopilador de datos en Administración de datos](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "Rol del recopilador de datos en Administración de datos")  
   

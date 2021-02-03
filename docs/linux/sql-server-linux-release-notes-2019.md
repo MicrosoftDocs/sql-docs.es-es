@@ -7,12 +7,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 434345c505eaab389063fbc5b2c7fffc51708634
-ms.sourcegitcommit: af64e2b8d498af26b973e86db5c00f8d72991295
+ms.openlocfilehash: 56ac6b94c281cd97c53e290b5bc387131518bbcd
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98193002"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235913"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Notas de la versión de SQL Server 2019 en Linux
 
@@ -290,7 +290,7 @@ En las secciones siguientes, se describen problemas conocidos con la versión de
           sudo systemctl restart mssql-server
           ```
 
-- Las bases de datos de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] en Windows que usan OLTP en memoria no se pueden restaurar en SQL Server 2019 (15.x) en Linux. Para restaurar una base de datos de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] que use OLTP en memoria, primero actualice las bases de datos a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], SQL Server 2017 o SQL Server 2019 en Windows antes de moverlas a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux mediante las funciones de copia de seguridad y restauración, o asociar/desasociar.
+- Las bases de datos de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] en Windows que usan OLTP en memoria no se pueden restaurar en SQL Server 2019 (15.x) en Linux. Para restaurar una base de datos de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] que use OLTP en memoria, primero actualice las bases de datos a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], SQL Server 2017 o SQL Server 2019 en Windows antes de moverlas a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux mediante las funciones de copia de seguridad y restauración, o asociar/desasociar.
 
 - El permiso de usuario **ADMINISTER BULK OPERATIONS** no se admite en Linux en este momento.
 

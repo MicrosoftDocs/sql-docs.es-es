@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - PROC
 - PROCEDURE
@@ -47,12 +47,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a23a11bf4968179baad9d3cc88e5a64acae68b76
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c1c781ab64e5ec0a3dde6a298b320a3520667fd3
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170167"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237825"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -148,7 +148,7 @@ AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 
 OR ALTER
 
-**Se aplica a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1).
+**Se aplica a**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1).
 
 Modifica el procedimiento si es que ya existe.
 
@@ -220,7 +220,7 @@ Los procedimientos creados mediante esta opción no se pueden publicar como part
 
 *Cláusula* EXECUTE AS: especifica el contexto de seguridad en el que se ejecuta el procedimiento.
 
-Para los procedimientos almacenados compilados de forma nativa, a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], no hay limitaciones en la cláusula EXECUTE AS. En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], las cláusulas SELF, OWNER y *'user_name'* son compatibles con procedimientos almacenados compilados de forma nativa.
+Para los procedimientos almacenados compilados de forma nativa, a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], no hay limitaciones en la cláusula EXECUTE AS. En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], las cláusulas SELF, OWNER y *'user_name'* son compatibles con procedimientos almacenados compilados de forma nativa.
 
 Para obtener más información, vea [EXECUTE AS &#40;cláusula de Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).
 

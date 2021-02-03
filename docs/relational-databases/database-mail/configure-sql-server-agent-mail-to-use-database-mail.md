@@ -13,16 +13,16 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 44252fa011dcdeaca457d6aa7f9819f581dbeb11
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: d3740fd3c1e6030eda7428bc73a11f6c65fec68f
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96125258"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250338"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurar el Agente SQL Server para que use el Correo electrónico de base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usar Correo electrónico de base de datos a fin de enviar notificaciones y alertas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  Para obtener información sobre cómo habilitar y configurar Correo electrónico de base de datos, vea [Configurar Correo electrónico de base de datos](../../relational-databases/database-mail/configure-database-mail.md).  Para un ejemplo de uso de [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Crear un perfil de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-profile.md).
+  En este tema se describe cómo configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usar Correo electrónico de base de datos a fin de enviar notificaciones y alertas en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  Para obtener información sobre cómo habilitar y configurar Correo electrónico de base de datos, vea [Configurar Correo electrónico de base de datos](../../relational-databases/database-mail/configure-database-mail.md).  Para un ejemplo de uso de [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Crear un perfil de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-profile.md).
   
 -   **Antes de empezar:**  
   

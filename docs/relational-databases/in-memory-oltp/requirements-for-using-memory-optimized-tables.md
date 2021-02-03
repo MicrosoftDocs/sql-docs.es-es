@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cbe2b75a46e63b5e388b91ace3d74c0db3be49b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 5a7c64a949ad4eabfbd02ad78229b04a919ab032
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170737"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237190"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para utilizar las tablas con optimización para memoria
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "98170737"
   
  Además de los [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), estos son los requisitos para usar OLTP en memoria:  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 (o posterior), cualquier edición. Para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] RTM (anterior a SP1) necesita las ediciones Enterprise, Developer o Evaluation.
+-   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 (o posterior), cualquier edición. Para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] RTM (anterior a SP1) necesita las ediciones Enterprise, Developer o Evaluation.
     
     > [!NOTE]
     > Nota: OLTP en memoria necesita la versión de 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -46,12 +46,12 @@ ms.locfileid: "98170737"
   
 ## <a name="important-notes-on-using-hek_2"></a>Información importante sobre el uso de [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   
--   A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] no hay límite para el tamaño de las tablas optimizadas para memoria más que la memoria disponible. 
+-   A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] no hay límite para el tamaño de las tablas optimizadas para memoria más que la memoria disponible. 
 
 -   En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], el tamaño total en memoria de todas las tablas durables de una base de datos no debe superar los 250 GB. Para obtener más información, vea [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).  
 
 > [!NOTE]
-> A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1, las ediciones Standard y Express admiten OLTP en memoria, pero imponen cuotas con respecto a la cantidad de memoria que se puede usar para las tablas optimizadas para memoria en una base de datos determinada. En la edición Standard es de 32 GB por base de datos; en la edición Express es de 352 MB por base de datos. 
+> A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1, las ediciones Standard y Express admiten OLTP en memoria, pero imponen cuotas con respecto a la cantidad de memoria que se puede usar para las tablas optimizadas para memoria en una base de datos determinada. En la edición Standard es de 32 GB por base de datos; en la edición Express es de 352 MB por base de datos. 
   
 -   Si crea una o más bases de datos con tablas optimizadas para memoria, debe habilitar la inicialización instantánea de archivos (IFI) mediante la concesión del derecho de usuario *SE_MANAGE_VOLUME_NAME* a la cuenta de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin IFI, los archivos de almacenamiento optimizados para memoria (datos y archivos delta) se inicializarán en el momento de la creación, lo cual puede tener un impacto negativo en el rendimiento de la carga de trabajo. Para obtener más información sobre IFI, incluido cómo habilitarla, consulte [Inicialización instantánea de archivos de la base de datos](../../relational-databases/databases/database-instant-file-initialization.md).
   

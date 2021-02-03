@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7f773a1ee50395eeebd40e0f08672c324170ccf3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d015a1adf0bdd5e5f47b49a8dabb6783b8538b7e
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883545"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250091"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Creación de una especificación de auditoría de servidor y de base de datos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  En este artículo se describe cómo crear una especificación de auditoría de servidor y de base de datos en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  En este artículo se describe cómo crear una especificación de auditoría de servidor y de base de datos en [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  La auditoría de una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implica el seguimiento y registro de los eventos que se producen en el sistema. El objeto *SQL Server Audit* recopila una única instancia de acciones y grupos de acciones de nivel de servidor o de nivel de base de datos para su supervisión. La auditoría se realiza en el nivel de instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Es posible tener varias auditorías por cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El objeto *Especificación de auditoría de base de datos* pertenece a una auditoría. Puede crear una única especificación de auditoría de base de datos para cada base de datos de SQL Server y cada auditoría. Para más información, vea [SQL Server Audit (motor de base de datos)](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "85883545"
      Especifica los grupos de acciones de auditoría y las acciones de auditoría en el nivel de base de datos que se desean capturar. Para obtener una lista de grupos de acciones de auditoría y de acciones de auditoría de nivel de base de datos, así como una descripción de los eventos que contienen, vea [Grupos de acciones y acciones de SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
      **Esquema de objeto**  
-     Muestra el esquema para el **Nombre de objeto**especificado.  
+     Muestra el esquema para el **Nombre de objeto** especificado.  
   
      **Nombre de objeto**  
      Nombre del objeto que se va a auditar. Esta opción solo está disponible para las acciones de auditoría. No se aplica a los grupos de auditoría.  

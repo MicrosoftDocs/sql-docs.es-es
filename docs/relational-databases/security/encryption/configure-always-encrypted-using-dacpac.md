@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 506abf476e04ab1a40059d04031949fa80b31acf
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: 7a42972d4a0cd5e6b456d72ccdba6786ad66c734
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97559327"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237112"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Configuración del cifrado de columna mediante Always Encrypted con un paquete DAC 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ Para realizar operaciones criptográficas, la herramienta que se use para implem
 ::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
-> Si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] y su instancia de SQL Server está configurada con un enclave seguro, puede ejecutar las operaciones criptográficas en contexto, sin sacar los datos de la base de datos. Vea [Configuración del cifrado de columnas en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md). Tenga en cuenta que el cifrado en contexto no está disponible para las implementaciones de DACPAC.
+> Si usa [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] y su instancia de SQL Server está configurada con un enclave seguro, puede ejecutar las operaciones criptográficas en contexto, sin sacar los datos de la base de datos. Vea [Configuración del cifrado de columnas en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md). Tenga en cuenta que el cifrado en contexto no está disponible para las implementaciones de DACPAC.
 
 ::: moniker-end
 

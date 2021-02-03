@@ -12,17 +12,17 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: 73f4abc0c1b2a7cd6943ab6b216133812c145d19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ccf508d0415bc6baabc9c054a95ec26cf7989880
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772430"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236523"
 ---
 # <a name="hybrid-buffer-pool"></a>Grupo de búferes híbrido
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-El grupo de búferes híbridos permite que los objetos de grupo de búfer hagan referencia a las páginas de datos de los archivos de base de datos que residen en dispositivos de memoria persistente (PMEM), en lugar de a copias de las páginas de datos almacenadas en caché en DRAM volátil. Esta característica se introdujo en [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
+El grupo de búferes híbridos permite que los objetos de grupo de búfer hagan referencia a las páginas de datos de los archivos de base de datos que residen en dispositivos de memoria persistente (PMEM), en lugar de a copias de las páginas de datos almacenadas en caché en DRAM volátil. Esta característica se introdujo en [!INCLUDE[sqlv15](../../includes/sssql19-md.md)].
 
 ![Grupo de búferes híbrido](./media/hybrid-buffer-pool.png)
 
@@ -42,7 +42,7 @@ Para más información, consulte:
 
 ## <a name="enable-hybrid-buffer-pool"></a>Habilitar el grupo de búferes híbrido
 
-[!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] presenta el lenguaje dinámico de datos (DDL) para controlar el grupo de búferes híbrido.
+[!INCLUDE[sqlv15](../../includes/sssql19-md.md)] presenta el lenguaje dinámico de datos (DDL) para controlar el grupo de búferes híbrido.
 
 En el ejemplo siguiente se habilita el grupo de búferes híbrido para una instancia de SQL Server:
 

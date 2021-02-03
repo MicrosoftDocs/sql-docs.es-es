@@ -1,13 +1,13 @@
 ---
 description: DATETIME2FROMPARTS (Transact-SQL)
-title: DATETIME2FROMPARTS (Transact-SQL) | Microsoft Docs
+title: DATETIME2FROMPARTS (Transact-SQL)
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DATETIME2FROMPARTS_TSQL
 - DATETIME2FROMPARTS
@@ -15,16 +15,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - DATETIME2FROMPARTS function
-ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eed7298a5f4ca77192baba346232cd42bb433ab6
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: cbf14683e7d501ef44ccaff757ace45f7045f304
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101244"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237932"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +73,7 @@ Expresión entera que especifica la precisión del valor **datetime2** que `DATE
 
 El argumento *fractions* depende del argumento *precision*. Por ejemplo, para un valor *precision* de 7, cada fracción representa 100 nanosegundos; si *precision* es 3, cada fracción representa un milisegundo. Para un valor de *precision* de cero, el valor de *fractions* también debe ser cero; de lo contrario, `DATETIME2FROMPARTS` generará un error.
   
-Esta función admite la conexión remota a servidores de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y versiones posteriores. No admitirá la conexión remota a servidores que tengan una versión inferior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Esta función se puede enviar de forma remota a servidores de [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] y superiores. No se puede enviar de forma remota a servidores que tengan una versión inferior a [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  
   

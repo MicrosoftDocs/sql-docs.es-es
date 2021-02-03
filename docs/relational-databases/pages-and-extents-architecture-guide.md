@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22e1a4832e3ef02d2b596ecd0dd4af3a08a7ec6e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: ae2204f4d4562b35cde84b66608efee9dc727562
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171877"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236479"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guía de arquitectura de páginas y extensiones
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -92,19 +92,19 @@ Las extensiones son la unidad básica en la que se administra el espacio. Una ex
 
 Hasta [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (incluido), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no asigna extensiones completas a tablas con pequeñas cantidades de datos. A las tablas o índices nuevos se les suelen asignar páginas de extensiones mixtas. Cuando la tabla o el índice crecen hasta el punto de ocupar ocho páginas, se pasan a extensiones uniformes para las posteriores asignaciones. Si crea un índice de una tabla existente que dispone de filas suficientes para generar ocho páginas en el índice, todas las asignaciones del índice están en extensiones uniformes. 
 
-A partir de [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], el valor predeterminado para la mayoría de asignaciones en una base de datos de usuario y tempdb es usar extensiones uniformes, salvo en el caso de las asignaciones que pertenezcan a las primeras ocho páginas de una [cadena IAM](#IAM). Las asignaciones relativas a bases de datos modelo, master y msdb conservarán el comportamiento anterior. 
+A partir de [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], el valor predeterminado para la mayoría de asignaciones en una base de datos de usuario y tempdb es usar extensiones uniformes, salvo en el caso de las asignaciones que pertenezcan a las primeras ocho páginas de una [cadena IAM](#IAM). Las asignaciones relativas a bases de datos modelo, master y msdb conservarán el comportamiento anterior. 
 
 > [!NOTE]
 > Hasta [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (incluido), puede usarse la marca de seguimiento 1118 para cambiar la asignación predeterminada para que siempre use extensiones uniformes. Para más información sobre esta marca de seguimiento, vea [DBCC TRACEON: marcas de seguimiento (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 >   
-> A partir de [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], la función proporcionada por TF 1118 se habilita automáticamente para tempdb y para todas las bases de datos de usuario. Para las bases de datos de usuario, este comportamiento se controla mediante la opción `SET MIXED_PAGE_ALLOCATION` de `ALTER DATABASE`, con el valor predeterminado establecido en Desactivado, y la marca de seguimiento 1118 no tiene ningún efecto. Para más información, vea [Opciones de ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+> A partir de [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], la función proporcionada por TF 1118 se habilita automáticamente para tempdb y para todas las bases de datos de usuario. Para las bases de datos de usuario, este comportamiento se controla mediante la opción `SET MIXED_PAGE_ALLOCATION` de `ALTER DATABASE`, con el valor predeterminado establecido en Desactivado, y la marca de seguimiento 1118 no tiene ningún efecto. Para más información, vea [Opciones de ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la función del sistema `sys.dm_db_database_page_allocations` puede notificar información de asignación de páginas relativa a una base de datos, tabla, índice o partición.
 
 > [!IMPORTANT]
 > La función del sistema `sys.dm_db_database_page_allocations` no está documentada y está sujeta a cambios. la compatibilidad no está garantizada. 
 
-A partir de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], la función del sistema [sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) está disponible y devuelve información sobre una página de una base de datos. La función devuelve una fila que contiene la información del encabezado de la página, incluidos object_id, index_id y partition_id. Esta función reemplaza la necesidad de usar `DBCC PAGE` en la mayoría de los casos.
+A partir de [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], la función del sistema [sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) está disponible y devuelve información sobre una página de una base de datos. La función devuelve una fila que contiene la información del encabezado de la página, incluidos object_id, index_id y partition_id. Esta función reemplaza la necesidad de usar `DBCC PAGE` en la mayoría de los casos.
 
 ## <a name="managing-extent-allocations-and-free-space"></a>Administrar las asignaciones de extensiones y el espacio disponible 
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8ff53ca4e4118b105eabac256663a8b052e218fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5e968978dd641f78dfb17d515ab07e3b7e27485
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429057"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250161"
 ---
 # <a name="data-collector-security"></a>Seguridad del recopilador de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88429057"
  En las secciones siguientes se describe la seguridad de la recopilación de datos en general, así como los roles que debe conceder a los usuarios para que puedan configurar y utilizar el recopilador de datos y llevar a cabo tareas asociadas al almacén de administración de datos.  
   
 ## <a name="general-security"></a>Seguridad general  
- El recopilador de datos se instala según los estándares especificados para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ El recopilador de datos se instala según los estándares especificados para [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="network-security"></a>Seguridad de redes  
  Se puede pasar información confidencial entre las instancias de destino, la instancia relacional asociada al servidor de configuración, los conjuntos de recopilación que se están ejecutando y el servidor que hospeda el almacén de administración de datos.  

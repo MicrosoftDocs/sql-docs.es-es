@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ae64e777b08cdf4df6f7e8fdd05ff8c3822a06b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 3f1e5c31fdd51a7db14540bfeea3229c170dd2fa
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171527"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236663"
 ---
 # <a name="foreach-loop-container"></a>Contenedor Foreach Loop
 
@@ -461,7 +461,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
 ####  <a name="enumerator--foreach-azure-blob-enumerator"></a><a name="ForeachAzureBlob"></a> Enumerador = Enumerador de blob de Azure para Para cada uno  
  El  **Enumerador de blob de Azure** habilita un paquete SSIS para enumerar los archivos de blob en la ubicación de blob especificada. Puede almacenar el nombre del archivo de blob enumerado en una variable y usarlo en tareas en el Contenedor de bucles Para cada uno.  
   
- El **Enumerador de blobs de Azure** es un componente de SQL Server Integration Services (SSIS) Feature Pack para Azure para [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Descargue el Feature Pack [aquí](https://go.microsoft.com/fwlink/?LinkID=626967).  
+ El **Enumerador de blobs de Azure** es un componente de SQL Server Integration Services (SSIS) Feature Pack para Azure para [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Descargue el Feature Pack [aquí](https://go.microsoft.com/fwlink/?LinkID=626967).  
   
  **Administrador de conexiones de almacenamiento de Azure**  
  Seleccione un administrador de conexiones de almacenamiento de Azure existente o cree uno que haga referencia a una cuenta de almacenamiento de Azure.  

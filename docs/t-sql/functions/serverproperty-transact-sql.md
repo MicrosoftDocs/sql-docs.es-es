@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SERVERPROPERTY_TSQL
 - SERVERPROPERTY
@@ -25,12 +25,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aed106ed3915c779c558ff919128320f97174c8d
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: cd1ebb88dc0a3cad6ae8712ec68f7d63fc0c655a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241896"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237413"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -70,20 +70,20 @@ Es una expresión que contiene la información de propiedad que se va a devolver
 |FilestreamEffectiveLevel|Nivel efectivo de acceso de FILESTREAM. Este valor puede ser diferente de FilestreamConfiguredLevel si el nivel ha cambiado y queda pendiente un reinicio de la instancia o del equipo. Para más información, vea [filestream access level (opción de configuración del servidor)](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md).<br /><br /> Tipo de datos base: **int**|  
 |FilestreamShareName|Nombre del recurso compartido usado por FILESTREAM.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **nvarchar(128)**| 
 |HadrManagerStatus|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Indica si el administrador de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ha iniciado.<br /><br /> 0 = No iniciado, pendiente de comunicación.<br /><br /> 1 = Iniciado y en ejecución.<br /><br /> 2 = No iniciado y con error.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
-|InstanceDefaultBackupPath|**Se aplica a**: [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] y posterior.<br /><br /> Nombre de la ruta de acceso predeterminada a los archivos de copia de seguridad de la instancia.|  
+|InstanceDefaultBackupPath|**Se aplica a**: [!INCLUDE[ssSQL2019](../../includes/sssql19-md.md)] y posterior.<br /><br /> Nombre de la ruta de acceso predeterminada a los archivos de copia de seguridad de la instancia.|  
 |InstanceDefaultDataPath|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta la versión actual en actualizaciones a partir de finales de 2015.<br /><br /> Nombre de la ruta de acceso predeterminada a los archivos de datos de instancia.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |InstanceDefaultLogPath|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta la versión actual en actualizaciones a partir de finales de 2015.<br /><br /> Nombre de la ruta de acceso predeterminada a los archivos de registro de instancia.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |InstanceName|Nombre de la instancia a la que está conectado el usuario.<br /><br /> Devuelve NULL si el nombre de la instancia es la instancia predeterminada o si es una entrada no válida o un error.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |IsAdvancedAnalyticsInstalled|Devuelve 1 si se ha instalado la característica Análisis avanzado durante la instalación; 0 si no se instaló Análisis avanzado.<br /><br /> Tipo de datos base: **int**|  
-|IsBigDataCluster| Introducido en [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] a partir de CU4.<br /><br />Devuelve 1 si la instancia es un clúster de macrodatos de SQL Server; en caso contrario, devuelve 0.<br /><br /> Tipo de datos base: **int**|  
+|IsBigDataCluster| Introducido en [!INCLUDE[ssSQL2019](../../includes/sssql19-md.md)] a partir de CU4.<br /><br />Devuelve 1 si la instancia es un clúster de macrodatos de SQL Server; en caso contrario, devuelve 0.<br /><br /> Tipo de datos base: **int**|  
 |IsClustered|La instancia del servidor está configurada en un clúster de conmutación por error.<br /><br /> 1 = Clúster.<br /><br /> 0 = No clúster.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
 |IsFullTextInstalled|Los componentes de indización de texto completo y semántica están instalados en la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Los componentes de indización de texto completo y semántica están instalados.<br /><br /> 0 = Los componentes de indización de texto completo y semántica no están instalados.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
 |IsHadrEnabled|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] está habilitado en esta instancia del servidor.<br /><br /> 0 = La característica [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] está deshabilitada.<br /><br /> 1 = La característica [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] está habilitada.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**<br /><br /> Para que las réplicas de disponibilidad se creen y se ejecuten en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] debe estar habilitado en la instancia del servidor. Para más información, vea [Habilitar y deshabilitar grupos de disponibilidad de AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Nota:** La propiedad IsHadrEnabled pertenece solamente a [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Otras características de alta disponibilidad o de recuperación ante desastres, como la creación de reflejo de la base de datos o el trasvase de registros, no se ven afectadas por esta propiedad de servidor.|  
 |IsIntegratedSecurityOnly|El servidor está en modo de seguridad integrada.<br /><br /> 1= Seguridad integrada (Autenticación de Windows)<br /><br /> 0 = Seguridad no integrada. (Tanto la autenticación de Windows como la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
 |IsLocalDB|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> El servidor es una instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
-|IsPolyBaseInstalled|**Se aplica a**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Devuelve un valor que indica si la instancia del servidor tiene instalada la característica PolyBase.<br /><br /> 0 = PolyBase no está instalada.<br /><br /> 1 = PolyBase está instalada.<br /><br /> Tipo de datos base: **int**|  
+|IsPolyBaseInstalled|**Se aplica a**: [!INCLUDE[ssSQL2016](../../includes/sssql16-md.md)].<br /><br /> Devuelve un valor que indica si la instancia del servidor tiene instalada la característica PolyBase.<br /><br /> 0 = PolyBase no está instalada.<br /><br /> 1 = PolyBase está instalada.<br /><br /> Tipo de datos base: **int**|  
 |IsSingleUser|El servidor está en modo de usuario único.<br /><br /> 1 = Usuario único.<br /><br /> 0 = Usuario no único.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
-|IsTempDbMetadataMemoryOptimized|**Válido para** : [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br /><br />Devuelve 1 si tempdb se ha habilitado para usar tablas optimizadas para memoria para metadatos y 0 si tempdb usa tablas normales basadas en disco para los metadatos. Para obtener más información, consulte [tempdb Database](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).<br /><br /> Tipo de datos base: **int**|  
+|IsTempDbMetadataMemoryOptimized|**Válido para** : [!INCLUDE[ssSQL2019](../../includes/sssql19-md.md)] y versiones posteriores.<br /><br />Devuelve 1 si tempdb se ha habilitado para usar tablas optimizadas para memoria para metadatos y 0 si tempdb usa tablas normales basadas en disco para los metadatos. Para obtener más información, consulte [tempdb Database](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).<br /><br /> Tipo de datos base: **int**|  
 |IsXTPSupported|**Se aplica a**: SQL Server ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> El servidor admite OLTP en memoria.<br /><br /> 1= El servidor admite OLTP en memoria.<br /><br /> 0= El servidor no admite OLTP en memoria.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
 |LCID|Identificador de configuración regional (LCID) de Windows de la intercalación.<br /><br /> Tipo de datos base: **int**|  
 |LicenseType|Sin usar. El producto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no conserva ni mantiene la información sobre la licencia. Siempre devuelve DISABLED.<br /><br /> Tipo de datos base: **nvarchar(128)**|  

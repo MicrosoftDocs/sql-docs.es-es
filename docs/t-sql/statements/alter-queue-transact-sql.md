@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER_QUEUE_TSQL
 - ALTER QUEUE
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 09303d17e8cb284251d9c8e585eeadb5a1a1e898
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: e1a858efef550632d3d5c8913222ab86a22a9543
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170847"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237771"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -107,12 +107,12 @@ WITH
  Especifica si una cola activa o no el procedimiento almacenado. Si STATUS = ON, la cola inicia el procedimiento almacenado especificado con PROCEDURE_NAME cuando el número de procedimientos que se ejecutan actualmente es menor que MAX_QUEUE_READERS y cuando los mensajes llegan a la cola antes de que los procedimientos almacenados reciban mensajes. Si STATUS = OFF, la cola no activa el procedimiento almacenado.  
   
  REBUILD [ WITH \<queue_rebuild_options> ]  
- **Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores.  
+ **Válido para** : [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores.  
   
  Vuelve a compilar todos los índices de la tabla interna de colas. Use esta función cuando experimente problemas de fragmentación debido a una carga elevada. MAXDOP es la única opción de recompilación de cola admitida. REBUILD siempre es una operación sin conexión.  
   
  REORGANIZE [ WITH ( LOB_COMPACTION = { ON | OFF } ) ]  
- **Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores.  
+ **Válido para** : [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores.  
   
  Vuelve a organizar todos los índices de la tabla interna de colas.   
 A diferencia de REORGANIZE en tablas de usuario, REORGANIZE en una cola siempre se realiza como una operación sin conexión porque los bloqueos de nivel de página se deshabilitan explícitamente en las colas.  
@@ -121,7 +121,7 @@ A diferencia de REORGANIZE en tablas de usuario, REORGANIZE en una cola siempre 
 >  Para obtener información general sobre la fragmentación del índice, cuando la fragmentación se encuentre entre el 5 % y el 30 %, reorganice el índice. Cuando la fragmentación sea superior al 30 %, recompile el índice. Aun así, estas cifras solo aportan información general que se puede tomar como punto de partida para el entorno. Para determinar la cantidad de fragmentación del índice, use [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md). Vea el ejemplo G del artículo para obtener ejemplos.  
   
  MOVE TO { *file_group* | "default" }  
- **Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores.  
+ **Válido para** : [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores.  
   
  Mueve la tabla interna de colas (con sus índices) a un grupo de archivos especificado por el usuario.  El nuevo grupo de archivos no debe ser de solo lectura.  
   
@@ -226,7 +226,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
 ### <a name="g-rebuilding-queue-indexes"></a>G. Recompilar índices de cola  
   
-**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores.  
+**Válido para** : [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores.  
   
  En el ejemplo siguiente se recompilan índices de cola.  
   
@@ -236,7 +236,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
 ### <a name="h-reorganizing-queue-indexes"></a>H. Reorganizar índices de cola  
   
-**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores.  
+**Válido para** : [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores.  
   
  En el ejemplo siguiente se reorganizan índices de cola.  
   
@@ -246,7 +246,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 ### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I: Mover una tabla interna de colas a otro grupo de archivos  
   
-**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores.  
+**Válido para** : [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores.  
   
 ```sql  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   

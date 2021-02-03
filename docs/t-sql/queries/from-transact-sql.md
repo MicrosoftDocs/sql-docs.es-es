@@ -5,7 +5,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - JOIN
 - FROM_TSQL
@@ -37,12 +37,12 @@ ms.author: vanto
 ms.custom: ''
 ms.date: 06/01/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1ac3e525ba2e7f3cf459a7ce0ae309d22263aa1
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c13c477c5042658edd47f5f9be53a707e47628d2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172407"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235965"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Cláusula FROM más JOIN, APPLY, PIVOT (Transact-SQL)
 
@@ -229,7 +229,7 @@ Proporciona una vista de un conjunto de filas en un documento XML. Para obtener 
  *column_alias*  
  Es un alias opcional para sustituir el nombre de una columna en el conjunto de resultados de la tabla derivada. Incluya un alias de columna para cada columna de la lista de selección y delimite la lista de alias de columna con paréntesis.  
   
- *nombre_de_tabla_o_vista* FOR SYSTEM_TIME \<system_time> se aplica a **: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ *nombre_de_tabla_o_vista* FOR SYSTEM_TIME \<system_time> se aplica a **: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 Especifica que se devuelva una versión determinada de los datos de la tabla temporal especificada y su tabla de historial de versiones del sistema vinculada.  
   
 ### <a name="tablesample-clause"></a>Cláusula Tablesample
@@ -369,19 +369,19 @@ ON (p.ProductID = v.ProductID);
  Especifica que la tabla de entrada se restrinja a partir de varias columnas de *column_list* en una sola columna denominada *pivot_column*. Para obtener más información sobre PIVOT y UNPIVOT, vea [Usar PIVOT y UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
 AS OF \<date_time>  
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+**Se aplica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 Devuelve una tabla con un único registro por cada fila que contenga los valores que fueran reales (actuales) en el momento determinado especificado en el pasado. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial, y los resultados se filtran para devolver los valores de la fila que era válida en el momento especificado por el parámetro *\<date_time>* . El valor de una fila se considera válido si el valor de *system_start_time_column_name* es menor o igual que el valor del parámetro *\<date_time>* y el valor de *system_end_time_column_name* es mayor que el valor del parámetro *\<date_time>* .   
   
 FROM \<start_date_time> TO \<end_date_time>
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Se aplica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 Devuelve una tabla con los valores de todas las versiones de registro que estaban activas dentro del intervalo de tiempo especificado, independientemente de si empezaron a estar activas antes del valor del parámetro *\<start_date_time>* en el argumento FROM o si dejaron de estarlo después del valor del parámetro *\<end_date_time>* en el argumento TO. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial y los resultados se filtran para devolver los valores de todas las versiones de fila que estaban activas en cualquier momento dentro del intervalo de tiempo especificado. Se incluyen las filas que se activaron justamente en el límite inferior definido por el punto de conexión FROM y no se incluyen aquellas que se activaron exactamente en el límite superior definido por el punto de conexión TO.  
   
 BETWEEN \<start_date_time> AND \<end_date_time>  
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+**Se aplica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 Igual que la descripción anterior de **FROM \<start_date_time> TO \<end_date_time>** , salvo que incluye las filas que se activaron en el límite superior definido por el punto de conexión \<end_date_time>.  
   
 CONTAINED IN (\<start_date_time> , \<end_date_time>)  
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+**Se aplica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 Devuelve una tabla con los valores de todas las versiones de registro que se abrieron y cerraron dentro del intervalo de tiempo especificado definido por los dos valores de fecha y hora en el argumento CONTAINED IN. Se incluyen las filas que se activaron justamente en el límite inferior o que dejaron de estarlo exactamente en el límite superior.  
   
 ALL  
@@ -610,7 +610,7 @@ GO
   
 ### <a name="m-using-for-system_time"></a>M. Usar FOR SYSTEM_TIME  
   
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
+**Se aplica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 En el ejemplo siguiente se usa el argumento FOR SYSTEM_TIME AS OF date_time_literal_or_variable para devolver filas de tabla que eran reales (actuales) el 1 de enero de 2014.  
   
 ```sql

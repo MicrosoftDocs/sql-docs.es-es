@@ -1,13 +1,13 @@
 ---
 description: DROP DATABASE (Transact-SQL)
-title: DROP DATABASE (Transact-SQL) | Microsoft Docs
+title: DROP DATABASE (Transact-SQL)
 ms.custom: ''
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DROP DATABASE
 - DROP_DATABASE_TSQL
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - databases [SQL Server], dropping
 - DROP DATABASE statement
 - database removal [SQL Server], DROP DATABASE statement
-ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa18ed40692767751703f72f9e48e91180bf797f
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: ffdf0615671d2f3e019bccde83159bdb75eddcdd
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688844"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236276"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -57,8 +56,8 @@ DROP DATABASE database_name [;]
 
 ## <a name="arguments"></a>Argumentos
 
-*IF EXISTS*
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] hasta [versión actual](../../sql-server/what-s-new-in-sql-server-2016.md)).
+ *IF EXISTS*  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] hasta la [versión actual](/troubleshoot/sql/general/determine-version-edition-update-level)).
 
 Quita la base de datos condicionalmente solo si ya existe.
 
@@ -80,7 +79,7 @@ Cuando se quita una base de datos, debe realizarse una copia de seguridad de la 
 Al quitar una base de datos, se elimina la base de datos de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], así como los archivos de disco físico que usa. Si la base de datos o alguno de sus archivos están sin conexión cuando se quita, no se eliminan los archivos de disco. Estos archivos se pueden eliminar manualmente en el Explorador de Windows. Para quitar una base de datos del servidor actual sin eliminar los archivos del sistema de archivos, use [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).
 
 > [!WARNING]
-> La acción de quitar una base de datos que tenga asociadas copias de seguridad de FILE_SNAPSHOT se llevará a cabo correctamente, pero no se eliminarán los archivos de base de datos que tengan instantáneas asociadas para evitar que se invaliden las copias de seguridad que hagan referencia a dichos archivos de base de datos. El archivo se truncará, pero no se eliminará físicamente con el fin de mantener intactas las copias de seguridad de FILE_SNAPSHOT. Para más información, consulte [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] a la [versión actual](../../sql-server/what-s-new-in-sql-server-2016.md).
+> La acción de quitar una base de datos que tenga asociadas copias de seguridad de FILE_SNAPSHOT se llevará a cabo correctamente, pero no se eliminarán los archivos de base de datos que tengan instantáneas asociadas para evitar que se invaliden las copias de seguridad que hagan referencia a dichos archivos de base de datos. El archivo se truncará, pero no se eliminará físicamente con el fin de mantener intactas las copias de seguridad de FILE_SNAPSHOT. Para más información, consulte [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Se aplica a**: de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] a la [versión actual](/troubleshoot/sql/general/determine-version-edition-update-level).
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

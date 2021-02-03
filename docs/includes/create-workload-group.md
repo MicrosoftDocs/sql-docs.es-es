@@ -41,7 +41,7 @@ IMPORTANCE es local para el grupo de recursos de servidor; los grupos de cargas 
 REQUEST_MAX_MEMORY_GRANT_PERCENT = *valor*</br>
 Especifica la cantidad máxima de memoria que una única solicitud puede tomar del grupo. *valor* es un porcentaje relativo al tamaño del grupo de recursos de servidor especificado por MAX_MEMORY_PERCENT.
 
-El elemento *value* es un entero hasta [!INCLUDE[ssSQL17](sssql17-md.md)], y un elemento float a partir de [!INCLUDE[sql-server-2019](sssqlv15-md.md)] y en Azure SQL Managed Instance. El valor predeterminado es de 25. El intervalo permitido para *value* es de 1 a 100.
+El elemento *value* es un entero hasta [!INCLUDE[ssSQL17](sssql17-md.md)], y un elemento float a partir de [!INCLUDE[sql-server-2019](sssql19-md.md)] y en Azure SQL Managed Instance. El valor predeterminado es de 25. El intervalo permitido para *value* es de 1 a 100.
 
 > [!IMPORTANT]  
 > La cantidad especificada se refiere únicamente a la memoria concedida para la ejecución de la consulta.
@@ -64,7 +64,7 @@ Especifica la cantidad máxima de tiempo de CPU, en segundos, que puede usar una
 > [!NOTE]
 > De forma predeterminada, Resource Governor no evita que una solicitud continúe si se supera el tiempo máximo. Sin embargo, se generará un evento. Para obtener más información, vea [Clase de eventos Umbral de la CPU superado](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).
 > [!IMPORTANT]
-> A partir de [!INCLUDE[ssSQL15](sssql16-md.md)] SP2 y [!INCLUDE[ssSQL17](sssql17-md.md)] CU3, y si se usa la [marca de seguimiento 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor anula una solicitud cuando se supera el tiempo máximo.
+> A partir de [!INCLUDE[sssql16-md](sssql16-md.md)] SP2 y [!INCLUDE[ssSQL17](sssql17-md.md)] CU3, y si se usa la [marca de seguimiento 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor anula una solicitud cuando se supera el tiempo máximo.
 
 REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *valor*</br>
 Especifica el tiempo máximo, en segundos, que una consulta puede esperar hasta que esté disponible una concesión de memoria (memoria de búfer de trabajo). *valor* debe ser 0 o un entero positivo. El valor predeterminado de *valor*, 0, usa un cálculo interno basado en el costo de la consulta para determinar el tiempo máximo.
@@ -97,7 +97,7 @@ Asocia el grupo de cargas de trabajo al grupo de recursos de servidor definido p
 > Todos los grupos de cargas de trabajo y de recursos de servidor predefinidos usan nombres en minúsculas, como "predeterminado". Debe tenerse esto en cuenta en los servidores que usan una intercalación que distingue entre mayúsculas y minúsculas. En los servidores que usan una intercalación que no distingue entre mayúsculas y minúsculas, como SQL_Latin1_General_CP1_CI_AS, los nombres "predeterminado" y "Predeterminado" son equivalentes.
 
 EXTERNAL external_pool_name | "default"</br>
-**Se aplica a**: [!INCLUDE[ssNoVersion](ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](sssql16-md.md)]).
+**Se aplica a**: [!INCLUDE[ssNoVersion](ssnoversion-md.md)] (a partir de [!INCLUDE[sssql16-md](sssql16-md.md)]).
 
 El grupo de cargas de trabajo puede especificar un grupo de recursos externos. Se puede definir un grupo de cargas de trabajo y asociarlo con dos grupos:
 
@@ -106,7 +106,7 @@ El grupo de cargas de trabajo puede especificar un grupo de recursos externos. S
 
 ## <a name="remarks"></a>Observaciones
 
-Cuando se utiliza `REQUEST_MEMORY_GRANT_PERCENT`, se permite que la creación de índices use más memoria del área de trabajo que la concedida inicialmente para mejorar el rendimiento. El regulador de recursos de [!INCLUDE[ssCurrent](sscurrent-md.md)] admite este tratamiento especial. Sin embargo, la concesión inicial y cualquier concesión de memoria adicional están limitadas por la configuración del grupo de cargas de trabajo y el grupo de recursos de servidor.
+Cuando se utiliza `REQUEST_MEMORY_GRANT_PERCENT`, se permite que la creación de índices use más memoria del área de trabajo que la concedida inicialmente para mejorar el rendimiento. El regulador de recursos de [!INCLUDE[ssCurrent](ssnoversion-md.md)] admite este tratamiento especial. Sin embargo, la concesión inicial y cualquier concesión de memoria adicional están limitadas por la configuración del grupo de cargas de trabajo y el grupo de recursos de servidor.
 
 El límite de `MAX_DOP` se establece por [tarea](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). No es un límite por [solicitud](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) ni por consulta. Esto significa que durante una ejecución de consultas en paralelo, una sola solicitud puede generar varias tareas que se asignan a un [programador](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Para más información, consulte la [guía de arquitectura de subprocesos y tareas](../relational-databases/thread-and-task-architecture-guide.md).
 

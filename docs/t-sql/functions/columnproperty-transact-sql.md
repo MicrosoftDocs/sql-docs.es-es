@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLUMNPROPERTY
 - COLUMNPROPERTY_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4bd06800692eb8f27494055dfa391169ced45803
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 320b9c78fadcef3ba70585def88f744bf16e7767
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171367"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237431"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +57,7 @@ Para el argumento *id*, el argumento *propiedad* especifica el tipo de informaci
 |**AllowsNull**|Permite valores NULL.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**ColumnId**|Valor del Id. de columna correspondiente a **sys.columns.column_id**.|Identificador de columna<br /><br /> **Nota:** Cuando se consultan varias columnas, pueden aparecer espacios en la secuencia de valores de los Id. de columna.|  
 |**FullTextTypeColumn**|El valor TYPE COLUMN de la tabla que contiene la información del tipo de documento de la *columna*.|Id. de TYPE COLUMN de texto completo para la expresión de nombre de columna que se pasa como segundo parámetro de esta función.|  
-|**GeneratedAlwaysType**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.generated_always_type**|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores.<br /><br /> 0: no siempre se genera.<br /><br /> 1: se genera siempre como comienzo de fila.<br /><br /> 2: se genera siempre como fin de fila.|  
+|**GeneratedAlwaysType**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.generated_always_type**|**Válido para** : [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores.<br /><br /> 0: no siempre se genera.<br /><br /> 1: se genera siempre como comienzo de fila.<br /><br /> 2: se genera siempre como fin de fila.|  
 |**IsColumnSet**|La columna es un conjunto de columnas. Para obtener más información, vea [Usar conjuntos de columnas](../../relational-databases/tables/use-column-sets.md).|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsComputed**|La columna es una columna calculada.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsCursorType**|El parámetro de procedimiento es del tipo CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  

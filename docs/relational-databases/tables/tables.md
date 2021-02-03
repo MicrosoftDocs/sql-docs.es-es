@@ -15,12 +15,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40416d9ccd36e8de4ac1e4196a769607af3b5545
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4e8b8a82580fbe6f1a60a82d54e90c5ee106280f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482361"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236789"
 ---
 # <a name="tables"></a>Tablas
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ Las tablas son objetos de base de datos que contienen todos sus datos. En las ta
 
 ### <a name="partitioned-tables"></a>Tablas con particiones
 
-Las tablas con particiones son tablas cuyos datos se han dividido horizontalmente entre unidades que pueden repartirse por más de un grupo de archivos de una base de datos. Las particiones facilitan la administración de índices y tablas grandes al permitir el acceso y la administración de subconjuntos de datos rápidamente y con eficacia, mientras se mantiene la integridad de la colección global. De forma predeterminada, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite hasta 15.000 particiones. Para obtener más información, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
+Las tablas con particiones son tablas cuyos datos se han dividido horizontalmente entre unidades que pueden repartirse por más de un grupo de archivos de una base de datos. Las particiones facilitan la administración de índices y tablas grandes al permitir el acceso y la administración de subconjuntos de datos rápidamente y con eficacia, mientras se mantiene la integridad de la colección global. De forma predeterminada, [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] admite hasta 15.000 particiones. Para obtener más información, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
 ### <a name="temporary-tables"></a>Tablas temporales
 
@@ -47,7 +47,7 @@ Las tablas temporales se almacenan en **tempdb**. Hay dos tipos de tablas tempor
 
 #### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes"></a><a name="ctp23"></a> Recompilaciones reducidas para cargas de trabajo mediante tablas temporales en varios ámbitos
 
-[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)], en todos los niveles de compatibilidad de la base de datos, reduce las recompilaciones para cargas de trabajo mediante tablas temporales en varios ámbitos. Esta característica también está habilitada en Azure SQL Database en el nivel de compatibilidad de la base de datos 150 para todos los modelos de implementación.  Antes de esta característica, al hacer referencia a una tabla temporal con una instrucción de lenguaje de manipulación de datos DML (`SELECT`, `INSERT`, `UPDATE` o `DELETE`), si la tabla temporal se había creado mediante un lote de ámbito externo, el resultado era una recompilación de la instrucción DML en cada ejecución. Con esta mejora, SQL Server realiza comprobaciones ligeras adicionales para evitar recompilaciones innecesarias:
+[!INCLUDE[ss2019](../../includes/sssql19-md.md)], en todos los niveles de compatibilidad de la base de datos, reduce las recompilaciones para cargas de trabajo mediante tablas temporales en varios ámbitos. Esta característica también está habilitada en Azure SQL Database en el nivel de compatibilidad de la base de datos 150 para todos los modelos de implementación.  Antes de esta característica, al hacer referencia a una tabla temporal con una instrucción de lenguaje de manipulación de datos DML (`SELECT`, `INSERT`, `UPDATE` o `DELETE`), si la tabla temporal se había creado mediante un lote de ámbito externo, el resultado era una recompilación de la instrucción DML en cada ejecución. Con esta mejora, SQL Server realiza comprobaciones ligeras adicionales para evitar recompilaciones innecesarias:
 
 - Se comprueba si el módulo de ámbito externo que se usa para crear la tabla temporal en tiempo de compilación es el mismo que el de las ejecuciones consecutivas. 
 - Se realiza el seguimiento de los cambios de lenguaje de definición de datos (DDL) realizados en la compilación inicial y se comparan con las operaciones DDL para ejecuciones consecutivas.

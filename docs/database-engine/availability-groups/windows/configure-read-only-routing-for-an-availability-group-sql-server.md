@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f7e96df4eba36bbcb3da18a1423b5162aef557a7
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 5f31e0e3a961736bb514c31bfabf670893dc78e8
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170807"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236321"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Configuración del enrutamiento de solo lectura para un grupo de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Para configurar un grupo de disponibilidad AlwaysOn para admitir el enrutamiento de solo lectura en [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], puede usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell. El *enrutamiento de solo lectura* hace referencia a la capacidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de enrutar las solicitudes de conexión de solo lectura a una [réplica secundaria legible](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) de AlwaysOn disponible (es decir, una réplica configurada para permitir cargas de trabajo de solo lectura al ejecutarse en un rol secundario). Para admitir el enrutamiento de solo lectura, el grupo de disponibilidad debe poseer un [agente de escucha de grupo de disponibilidad](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). Los clientes de solo lectura deben dirigir sus solicitudes de conexión a este agente de escucha y las cadenas de conexión del cliente deben especificar el intento de aplicación como de “solo lectura”. Es decir, deben ser *solicitudes de conexión de intento de lectura*.  
 
-El enrutamiento de solo lectura está disponible en [!INCLUDE[sssql15](../../../includes/sssql16-md.md)] y versiones posteriores.
+El enrutamiento de solo lectura está disponible en [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] y versiones posteriores.
 
 > [!NOTE]  
 >  Para obtener información sobre cómo configurar una réplica secundaria legible, vea [Configurar el acceso de solo lectura en una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
@@ -104,7 +104,7 @@ El enrutamiento de solo lectura está disponible en [!INCLUDE[sssql15](../../../
         >  Debe establecer la dirección URL de enrutamiento de solo lectura antes de configurar la lista de enrutamiento de solo lectura.  
   
 ###  <a name="configure-load-balancing-across-read-only-replicas"></a><a name="loadbalancing"></a> Configuración del equilibrio de carga entre réplicas de solo lectura  
- A partir de [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)], puede configurar el equilibrio de carga entre un conjunto de réplicas de solo lectura. Anteriormente, el enrutamiento de solo lectura siempre dirigía el tráfico a la primera réplica disponible de la lista de enrutamiento. Para aprovechar esta característica, use un nivel de paréntesis anidados alrededor de las instancias de servidor **READ_ONLY_ROUTING_LIST** en los comandos **CREATE AVAILABILITY GROUP** o **ALTER AVAILABILITY GROUP** .  
+ A partir de [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)], puede configurar el equilibrio de carga entre un conjunto de réplicas de solo lectura. Anteriormente, el enrutamiento de solo lectura siempre dirigía el tráfico a la primera réplica disponible de la lista de enrutamiento. Para aprovechar esta característica, use un nivel de paréntesis anidados alrededor de las instancias de servidor **READ_ONLY_ROUTING_LIST** en los comandos **CREATE AVAILABILITY GROUP** o **ALTER AVAILABILITY GROUP** .  
   
  Por ejemplo, la siguiente carga de la lista de enrutamiento equilibra la solicitud de conexión con intención de lectura entre dos réplicas de solo lectura, `Server1` y `Server2`. Los paréntesis anidados que rodean estos servidores identifican el conjunto con equilibrio de carga. Si ninguna réplica está disponible en dicho conjunto, tratará de conectarse de forma secuencial a las demás réplicas, `Server3` y `Server4`, en la lista de enrutamiento de solo lectura.  
   

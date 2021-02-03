@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - FUNCTION
 - CREATE FUNCTION
@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 717ffe936bef35c9794e160e56c7ea7b0658058f
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: bf80bb7b33dc28941791cd4fa6f09f384ee858f1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170707"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237311"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
@@ -271,12 +271,12 @@ RETURNS return_data_type
 ## <a name="arguments"></a>Argumentos
 
 *OR ALTER*
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Modifica condicionalmente la función solo si ya existe.
 
 > [!NOTE]
-> Desde [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU1 hay disponible una sintaxis [OR ALTER] opcional para CLR.
+> Desde [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU1 hay disponible una sintaxis [OR ALTER] opcional para CLR.
 
 *nombre_de_esquema* Nombre del esquema al que pertenece la función definida por el usuario.
 

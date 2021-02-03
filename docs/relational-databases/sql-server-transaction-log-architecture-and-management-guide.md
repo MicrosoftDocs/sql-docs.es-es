@@ -22,12 +22,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a445552a69033bec7564e05d7fc86d7416a5ff47
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ed532d22800cd10530ecc7db8595fcf75e3737da
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461836"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237937"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guía de arquitectura y administración de registros de transacciones de SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -239,7 +239,7 @@ El registro activo debe incluir cada una de las partes de todas las transaccione
 * Si se cierra el sistema después de que la transacción haya realizado un gran número de modificaciones no confirmadas, la fase de recuperación del siguiente reinicio puede durar bastante más que el tiempo especificado en la opción **recovery interval** .
 * Puede que el tamaño del registro aumente de forma considerable, porque no se puede truncar pasado el MinLSN. Esto ocurre incluso si la base de datos utiliza el modelo de recuperación simple, donde el registro de transacciones se suele truncar en cada punto de comprobación automático.
 
-A partir de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] y en [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], se puede evitar la recuperación de transacciones de ejecución prolongada y los problemas descritos anteriormente mediante la [recuperación acelerada de bases de datos](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).  
+A partir de [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] y en [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], se puede evitar la recuperación de transacciones de ejecución prolongada y los problemas descritos anteriormente mediante la [recuperación acelerada de bases de datos](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).  
 
 ### <a name="replication-transactions"></a>Transacciones de replicación
 El Agente de registro del LOG supervisa el registro de transacciones de cada base de datos configurada para la replicación transaccional y copia las transacciones marcadas para la replicación desde el registro de transacciones a la base de datos de distribución. El registro activo debe contener todas las transacciones marcadas para la replicación, pero que aún no se han entregado a la base de datos de distribución. Si estas transacciones no se replican puntualmente, pueden evitar el truncamiento del registro. Para obtener más información, consulte [Replicación transaccional](../relational-databases/replication/transactional/transactional-replication.md).

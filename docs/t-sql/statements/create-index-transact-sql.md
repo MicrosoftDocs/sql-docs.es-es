@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE INDEX
 - INDEX
@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f1322f21ed7ad3f09f30a0f5a5e71e5614a8d47
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: 8591620ce92aca8a6c272539721f20a8a64fd9ae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766231"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237098"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -90,7 +90,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 
 **Escenario clave:**
 
-A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)], utilice un índice no agrupado en un índice de almacén de columnas para mejorar el rendimiento de las consultas de almacenamiento de datos. Para obtener más información, vea [Almacenamiento de datos de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
+A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)], utilice un índice no agrupado en un índice de almacén de columnas para mejorar el rendimiento de las consultas de almacenamiento de datos. Para obtener más información, vea [Almacenamiento de datos de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
 
 Para los tipos adicionales de índices, consulte:
 
@@ -250,7 +250,7 @@ Si no se especifica, el tipo de índice predeterminado es NONCLUSTERED.
 *column*      
  Es la columna o columnas en las que se basa el índice. Especifique dos o más nombres de columna para crear un índice compuesto sobre los valores combinados de las columnas especificadas. Enumere las columnas que desee incluir en el índice compuesto (en orden de prioridad) entre paréntesis después de *table_or_view_name*.
 
-Se pueden combinar hasta 32 columnas en la clave de un único índice compuesto. Todas las columnas de una clave del índice compuesto deben encontrarse en la misma tabla o vista. El tamaño máximo permitido de los valores de índice combinados es de 900 bytes para un índice agrupado o de 1700 para un índice no agrupado. Los límites son 16 columnas y 900 bytes para las versiones anteriores a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].
+Se pueden combinar hasta 32 columnas en la clave de un único índice compuesto. Todas las columnas de una clave del índice compuesto deben encontrarse en la misma tabla o vista. El tamaño máximo permitido de los valores de índice combinados es de 900 bytes para un índice agrupado o de 1700 para un índice no agrupado. Los límites son 16 columnas y 900 bytes para las versiones anteriores a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].
 
 Las columnas de los tipos de datos de objetos grandes (LOB) **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** o **image** no pueden especificarse como columnas clave para un índice. Además, una definición de vista no puede incluir columnas **ntext**, **text** ni **image**, aunque no se haga referencia a ellas en la instrucción CREATE INDEX.
 
@@ -351,7 +351,7 @@ Es el nombre de la tabla o la vista que se va a indizar.
 
 La vista debe definirse con SCHEMABINDING para crear un índice en ella. Es necesario crear un índice clúster único en una vista antes de crear los índices no clúster. Para obtener más información acerca de las vistas indizadas, vea la sección Comentarios.
 
-A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], el objeto puede ser una tabla almacenada con un índice de almacén de columnas agrupado.
+A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], el objeto puede ser una tabla almacenada con un índice de almacén de columnas agrupado.
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] admite el formato de nombre de tres partes _database_name_.[_schema_name_]._object_name_ cuando *database_name* es la base de datos actual o _database_name_ es `tempdb` y _object_name_ comienza por #.
 
@@ -498,7 +498,7 @@ Para más información, vea [Cómo funcionan las operaciones de índice en líne
 
 RESUMABLE **=** { ON | **OFF**}      
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
  Especifica si una operación de índice en línea se puede reanudar.
 
@@ -510,7 +510,7 @@ la operación de índice no se puede reanudar.
 
 MAX_DURATION **=** *time* [**MINUTES**] se usa con **RESUMABLE = ON** (requiere **ONLINE = ON**)   
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Indica el tiempo (valor entero especificado en minutos) durante el cual se ejecuta una operación de índice en línea reanudable antes de ponerse en pausa.
 
@@ -543,7 +543,7 @@ Apagado
 No se utilizan bloqueos de página.
 
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica si se deben optimizar la contención de inserción de la última página. El valor predeterminado es OFF. Consulte la sección [Claves secuenciales](#sequential-keys) para obtener más información.
 
@@ -621,7 +621,7 @@ Los índices admiten propiedades extendidas.
 La creación de un índice clúster en una tabla (montón) o la eliminación y nueva creación de un índice clúster existente requiere área de espacio adicional disponible en la base de datos para acomodar la ordenación de datos y una copia temporal de la tabla original o datos del índice clúster existente. Para obtener más información sobre los índices agrupados, vea [Creación de índices agrupados](../../relational-databases/indexes/create-clustered-indexes.md) y la [Guía de diseño y de arquitectura de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
 ## <a name="nonclustered-indexes"></a>Índices no agrupados
-A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], puede crear un índice no agrupado en una tabla almacenada como un índice de almacén de columnas agrupado. Si primero crea un índice no agrupado en una tabla almacenada como un índice agrupado o montón, el índice se conservará si más adelante convierte la tabla a un índice de almacén de columnas agrupado. Además, no es necesario quitar el índice no agrupado al volver a generar el índice de almacén de columnas agrupado.
+A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], puede crear un índice no agrupado en una tabla almacenada como un índice de almacén de columnas agrupado. Si primero crea un índice no agrupado en una tabla almacenada como un índice agrupado o montón, el índice se conservará si más adelante convierte la tabla a un índice de almacén de columnas agrupado. Además, no es necesario quitar el índice no agrupado al volver a generar el índice de almacén de columnas agrupado.
 
 Limitaciones y restricciones:
 
@@ -682,7 +682,7 @@ Para obtener información sobre los índices espaciales, vea [CREATE SPATIAL IND
 Para obtener información sobre los índices XML, vea [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md) e [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).
 
 ## <a name="index-key-size"></a>Tamaño de clave de índice
-El tamaño máximo de una clave de índice es de 900 bytes para un índice agrupado y de 1700 bytes para un índice no agrupado. (Antes de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], el límite era siempre de 900 bytes). Se pueden crear índices en las columnas **varchar** cuyo tamaño sea superior al límite de bytes si los datos que contienen no superan ese tamaño al crearse el índice. Sin embargo, se producirá un error en las acciones de inserción o actualización posteriores en las columnas que hagan que el tamaño total sea mayor que el límite. La clave de índice de un índice agrupado no puede contener columnas **varchar** con datos existentes en la unidad de asignación ROW_OVERFLOW_DATA. Si se crea un índice agrupado en una columna **varchar** y los datos existentes están en la unidad de asignación IN_ROW_DATA, no se realizarán correctamente las siguientes acciones de inserción o actualización en la columna que intenten insertar los datos de manera no consecutiva.
+El tamaño máximo de una clave de índice es de 900 bytes para un índice agrupado y de 1700 bytes para un índice no agrupado. (Antes de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], el límite era siempre de 900 bytes). Se pueden crear índices en las columnas **varchar** cuyo tamaño sea superior al límite de bytes si los datos que contienen no superan ese tamaño al crearse el índice. Sin embargo, se producirá un error en las acciones de inserción o actualización posteriores en las columnas que hagan que el tamaño total sea mayor que el límite. La clave de índice de un índice agrupado no puede contener columnas **varchar** con datos existentes en la unidad de asignación ROW_OVERFLOW_DATA. Si se crea un índice agrupado en una columna **varchar** y los datos existentes están en la unidad de asignación IN_ROW_DATA, no se realizarán correctamente las siguientes acciones de inserción o actualización en la columna que intenten insertar los datos de manera no consecutiva.
 
 Los índices no clúster pueden incluir columnas que no son de clave en el nivel de hoja del índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] no tiene en cuenta estas columnas al calcular el tamaño de clave de índice. Para obtener más información vea [Creación de índices con columnas incluidas](../../relational-databases/indexes/create-indexes-with-included-columns.md) y [Guía de diseño y arquitectura de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
@@ -754,7 +754,7 @@ Las directrices siguientes se aplican para el desarrollo de operaciones de índi
 Para más información, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
 
 ### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a> Operaciones de índice reanudable
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Se aplican las directrices siguientes para las operaciones de índice reanudable:
 
@@ -797,7 +797,7 @@ Si `ALLOW_ROW_LOCKS = ON` y `ALLOW_PAGE_LOCK = ON`, se permiten los bloqueos de 
 Si `ALLOW_ROW_LOCKS = OFF` y `ALLOW_PAGE_LOCK = OFF`, solo se permite un bloqueo de nivel de tabla al obtener acceso al índice.
 
 ## <a name="sequential-keys"></a>Claves secuenciales
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 La contención de inserción de la última página es un problema común de rendimiento que se produce cuando un gran número de subprocesos simultáneos intentan insertar filas en un índice con una clave secuencial. Un índice se considera secuencial cuando la columna de clave inicial contiene valores que siempre aumentan (o disminuyen), como una columna de identidad o una fecha que toma como valor predeterminado la fecha y hora actuales. Dado que las claves que se insertan son secuenciales, todas las nuevas filas se insertarán al final de la estructura del índice, es decir, en la misma página. Esta situación conduce a la contención de la página en memoria que se puede observar cuando varios subprocesos están a la espera de PAGELATCH_EX para la página en cuestión.
 
@@ -1104,7 +1104,7 @@ GO
 ```
 
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. Crear, reanudar, pausar y anular operaciones de índices reanudables
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1133,7 +1133,7 @@ ALTER INDEX test_idx2 ON test_table ABORT;
 ### <a name="n-basic-syntax"></a>Hora Sintaxis básica
 Crear, reanudar, pausar y anular operaciones de índices reanudables       
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

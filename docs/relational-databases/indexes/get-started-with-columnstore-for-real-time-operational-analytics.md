@@ -12,17 +12,17 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e62692402f33bfc42957363794bad9a698b18bb
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: dbc0867b71cadb33b1eb9174132b2031134a72f0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172767"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236941"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introducción al almacén de columnas para análisis operativos en tiempo real
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] incorpora análisis operativo en tiempo real, esto es, la capacidad de ejecutar simultáneamente análisis y cargas de trabajo OLTP en las mismas tablas de base de datos. Aparte de poder ejecutar análisis en tiempo real, también puede prescindir del uso de ETL y de un almacén de datos.  
+  [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] incorpora análisis operativo en tiempo real, esto es, la capacidad de ejecutar simultáneamente análisis y cargas de trabajo OLTP en las mismas tablas de base de datos. Aparte de poder ejecutar análisis en tiempo real, también puede prescindir del uso de ETL y de un almacén de datos.  
   
 ## <a name="real-time-operational-analytics-explained"></a>Explicación de los análisis operativos en tiempo real  
  Tradicionalmente, las empresas siempre han tenido sistemas independientes para las cargas de trabajo operativas (es decir, OLTP) y de análisis. En estos sistemas, los trabajos de extracción, transformación y carga de datos (ETL) mueven periódicamente los datos desde el almacén operativo a un almacenamiento de análisis. Los datos de análisis suelen residir en un almacén de datos o data mart dedicado a ejecutar consultas de análisis. Si bien esto ha venido siendo lo habitual, plantea tres retos importantes:  

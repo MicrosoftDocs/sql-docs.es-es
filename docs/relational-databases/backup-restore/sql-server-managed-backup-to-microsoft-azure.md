@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fa041d70aa80d44194859c92ad58f518cfa14c45
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: c925c4a8361b54ff563b6a1443e392f0ca392df9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783381"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237268"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Copia de seguridad administrada en Microsoft Azure para SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] administra y automatiza las copias de seguridad de SQL Server en el servicio Almacenamiento de blobs de Microsoft Azure. Puede dejar que SQL Server determine la programación copia de seguridad según la carga de trabajo de transacciones de la base de datos. Como alternativa, puede usar las opciones avanzadas para definir una programación. La configuración de retención determina durante cuánto tiempo se almacenan las copias de seguridad en Almacenamiento de blobs de Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] admite la restauración a un momento dado para el período de retención especificado.  
   
- A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], los procedimientos y el comportamiento subyacente de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ha cambiado. Para obtener más información, consulte [Migración de la configuración de copia de seguridad administrada de SQL Server 2014 a SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
+ A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], los procedimientos y el comportamiento subyacente de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ha cambiado. Para obtener más información, consulte [Migración de la configuración de copia de seguridad administrada de SQL Server 2014 a SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] se recomienda para las instancias de SQL Server que se ejecutan en máquinas virtuales de Microsoft Azure.  

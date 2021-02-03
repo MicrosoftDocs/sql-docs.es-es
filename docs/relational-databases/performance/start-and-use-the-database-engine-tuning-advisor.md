@@ -19,23 +19,23 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 5b83b5781d8c40c0acc6ee79ab0730c249def7c5
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: da72d129bac65b1b9210e49d33782b257ea9e182
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172527"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236433"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar y utilizar el Asistente para la optimización de motor de base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo iniciar y usar el Asistente para la optimización de motor de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información sobre cómo ver y trabajar con los resultados después de optimizar una base de datos, vea [Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
+  En este tema se describe cómo iniciar y usar el Asistente para la optimización de motor de base de datos en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre cómo ver y trabajar con los resultados después de optimizar una base de datos, vea [Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> Inicializar el Asistente para la optimización de motor de base de datos  
  La primera vez que se utilice, un usuario que sea miembro del rol fijo de servidor **sysadmin** debe inicializar el Asistente para la optimización de motor de base de datos. Esto se debe a que varias tablas del sistema se deben crear en la base de datos de **msdb** para admitir las operaciones de optimización. La inicialización permite además que usuarios miembros del rol fijo de base de datos **db_owner** optimicen cargas de trabajo en tablas de bases de datos que son de su propiedad.  
   
  Un usuario que tenga permisos de administrador del sistema debe realizar una de las siguientes acciones:  
   
--   Usar la interfaz gráfica de usuario del Asistente para la optimización de motor de base de datos para conectarse a una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [Iniciar el Asistente para la optimización de motor de base de datos](#Start) más adelante en este tema.  
+-   Usar la interfaz gráfica de usuario del Asistente para la optimización de motor de base de datos para conectarse a una instancia de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Iniciar el Asistente para la optimización de motor de base de datos](#Start) más adelante en este tema.  
   
 -   Use la utilidad **dta** para optimizar la primera carga de trabajo. Para obtener más información, vea [Usar la utilidad dta](#dta) más adelante en este tema.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "98172527"
 
       ||  
       |-|  
-      |**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores.|  
+      |**Válido para** : [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores.|  
 
   
 -   Utilice la memoria caché del plan como carga de trabajo. De este modo, podrá evitar la necesidad de tener que crear manualmente una carga de trabajo. Para obtener más información, vea [Optimizar una base de datos](#Tune) más adelante en este tema.  

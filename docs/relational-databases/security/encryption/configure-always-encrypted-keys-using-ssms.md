@@ -16,12 +16,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35f08a014fd1abbc8af6db994ba4c2d9b85a0bd4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f31a17d3f8bf2285bc41c7462deec4e53008efd1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97405720"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237079"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,7 @@ El cuadro de diálogo **Nueva clave maestra de columna** permite generar una cla
    
     Para obtener más información sobre los anteriores almacenes de claves, vea [Creación y almacenamiento de claves maestras de columna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-5. Si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] y su instancia de SQL Server está configurada con un enclave seguro, puede activar la casilla **Permitir cálculos de enclave** para que la clave maestra esté habilitada para el enclave. Para obtener más información, vea [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md). 
+5. Si usa [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] y su instancia de SQL Server está configurada con un enclave seguro, puede activar la casilla **Permitir cálculos de enclave** para que la clave maestra esté habilitada para el enclave. Para obtener más información, vea [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md). 
 
     > [!NOTE]
     > La casilla **Permitir cálculos de enclave** no aparece si la instancia de SQL Server no se ha configurado correctamente con un enclave seguro.

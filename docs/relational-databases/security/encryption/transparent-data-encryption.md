@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06288dc0bc6e16ab8928322005254f5fac1ddc61
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: adc1affe33d1172b3e648c510b2dbc1d00326849
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171487"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237982"
 ---
 # <a name="transparent-data-encryption-tde"></a>Cifrado de datos transparente (TDE)
 
@@ -227,7 +227,7 @@ Para cifrar una clave de cifrado de la base de datos con una clave asimétrica, 
 
 Para habilitar TDE en una base de datos, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe realizar un examen de cifrado. Este examen lee cada página de los archivos de datos en el grupo de búferes y, tras ello, vuelve a escribir las páginas cifradas en el disco.
 
-Para proporcionarle más control sobre el examen de cifrado, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] incluye el examen de TDE, que tiene sintaxis de suspensión y reanudación. Así, el examen se puede pausar cuando la carga de trabajo del sistema sea muy intensa o durante las horas críticas del negocio y reanudarlo más adelante.
+Para proporcionarle más control sobre el examen de cifrado, [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] incluye el examen de TDE, que tiene sintaxis de suspensión y reanudación. Así, el examen se puede pausar cuando la carga de trabajo del sistema sea muy intensa o durante las horas críticas del negocio y reanudarlo más adelante.
 
 Use la siguiente sintaxis para poner en pausa el análisis de cifrado TDE:
 
@@ -314,7 +314,7 @@ Cuando una base de datos se cifra con TDE, los archivos relacionados con la exte
 
 ## <a name="tde-and-in-memory-oltp"></a>TDE y OLTP en memoria
 
-TDE se puede habilitar en una base de datos que tenga objetos de OLTP en memoria. En [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] y [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], los datos y registros de OLTP en memoria se cifran si TDE está habilitado. En [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], los registros de OLTP en memoria se cifran si TDE está habilitado, pero no los archivos del grupo de archivos MEMORY_OPTIMIZED_DATA.
+TDE se puede habilitar en una base de datos que tenga objetos de OLTP en memoria. En [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] y [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], los datos y registros de OLTP en memoria se cifran si TDE está habilitado. En [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], los registros de OLTP en memoria se cifran si TDE está habilitado, pero no los archivos del grupo de archivos MEMORY_OPTIMIZED_DATA.
 
 ## <a name="related-tasks"></a>Tareas relacionadas
 

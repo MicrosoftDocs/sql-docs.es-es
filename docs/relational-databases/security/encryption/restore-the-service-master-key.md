@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: b4e2d053a232d374360177159cb3b97785f73a4f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8df8f8a8a01b8ade5372147f274d329baf346ffd
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898026"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250176"
 ---
 # <a name="restore-the-service-master-key"></a>Restaurar la clave maestra de servicio
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo restaurar la clave maestra de servicio en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  En este tema se describe cómo restaurar la clave maestra de servicio en [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!WARNING]  
 > Es improbable que alguna vez deba restaurar la clave maestra de servicio. Si tiene que hacerlo, debe proceder con mucha precaución. Para obtener más información, consulte [Back Up the Service Master Key](../../../relational-databases/security/encryption/back-up-the-service-master-key.md).  

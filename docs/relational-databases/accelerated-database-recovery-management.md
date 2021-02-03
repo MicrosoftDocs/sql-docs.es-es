@@ -13,12 +13,12 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: 3d4896fe862a20d94204d3b620c1255ea5b96a4c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: cfd5a901f38dacf9e17baff4d65363796ab3cd73
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483627"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236113"
 ---
 # <a name="manage-accelerated-database-recovery"></a>Administrar la recuperación de bases de datos acelerada
 
@@ -26,7 +26,7 @@ ms.locfileid: "97483627"
 
 ## <a name="enabling-and-controlling-adr"></a>Habilitar y controlar la recuperación de bases de datos acelerada
 
-La recuperación de bases de datos acelerada (ADR) está desactivada de forma predeterminada en [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] y se puede controlar mediante la sintaxis de DDL:
+La recuperación de bases de datos acelerada (ADR) está desactivada de forma predeterminada en [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] y se puede controlar mediante la sintaxis de DDL:
 ```sql
 ALTER DATABASE [DB] SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 [(PERSISTENT_VERSION_STORE_FILEGROUP = { filegroup name }) ];

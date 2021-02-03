@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - EXEC
 - EXECUTE_TSQL
@@ -32,12 +32,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ed27623969b2390f1d5b5b36b51a4c2eb5129e7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 32a9e7f42747c6ddf5ef92f8bde260b4a0b234f0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100432"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236007"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -374,7 +374,7 @@ Si pasa una sola palabra que no comienzan por `@` y que no está incluida entre 
  WITH \<execute_option>  
  Opciones de ejecución posibles. Las opciones de RESULT SETS no se pueden especificar en una instrucción INSERT… EXEC.  
  
-AT DATA_SOURCE data_source_name **Se aplica a**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] y posterior
+AT DATA_SOURCE data_source_name **Se aplica a**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] y posterior
   
  Especifica que *command_string* se ejecuta en *data_source_name* y los resultados, si los hubiera, se devuelven al cliente. *data_source_name* debe hacer referencia a una definición de EXTERNAL DATA SOURCE existente en la base de datos. Solo se admiten los orígenes de datos que apuntan a SQL Server. Además, en los orígenes de datos del clúster de macrodatos de SQL Server que apuntan al grupo de proceso, se admite el grupo de datos o el bloque de almacenamiento. Los orígenes de datos se definen mediante [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md).  
   
@@ -744,7 +744,7 @@ WITH RESULT SETS
   
  En el ejemplo siguiente se pasa una cadena de comandos a un origen de datos externo que apunta a una instancia de SQL Server. 
   
-**Válido para** [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[sssql19](../../includes/sssql19-md.md)] y versiones posteriores.
   
 ```sql    
 EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE my_sql_server;  
@@ -755,7 +755,7 @@ GO
 
  En el ejemplo siguiente se pasa una cadena de comandos a un origen de datos externo que apunta a un grupo de proceso de un clúster de macrodatos de SQL Server. En el ejemplo se crea un origen de datos `SqlComputePool` en un grupo de proceso de un clúster de macrodatos de SQL Server y se ejecuta una instrucción `SELECT` en el origen de datos. 
   
-**Válido para** [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[sssql19](../../includes/sssql19-md.md)] y versiones posteriores.
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlComputePool 
@@ -767,7 +767,7 @@ GO
 ### <a name="q-using-execute-with-at-data_source-data_source_name-to-query-data-pool-in-sql-server-big-data-cluster"></a>Q. Empleo de EXECUTE con AT DATA_SOURCE data_source_name para consultar un grupo de datos en un clúster de macrodatos de SQL Server 
  En el ejemplo siguiente se pasa una cadena de comandos a un origen de datos externo que apunta a un grupo de proceso de un clúster de macrodatos de SQL Server. En el ejemplo se crea un origen de datos `SqlDataPool` en un grupo de datos de un clúster de macrodatos de SQL Server y se ejecuta una instrucción `SELECT` en el origen de datos. 
   
-**Válido para** [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[sssql19](../../includes/sssql19-md.md)] y versiones posteriores.
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlDataPool 
@@ -780,7 +780,7 @@ GO
 
  En el ejemplo siguiente se pasa una cadena de comandos a un origen de datos externo que apunta a un grupo de proceso de un clúster de macrodatos de SQL Server. En el ejemplo se crea un origen de datos `SqlStoragePool` en un grupo de datos de un clúster de macrodatos de SQL Server y se ejecuta una instrucción `SELECT` en el origen de datos. 
   
-**Válido para** [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[sssql19](../../includes/sssql19-md.md)] y versiones posteriores.
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlStoragePool

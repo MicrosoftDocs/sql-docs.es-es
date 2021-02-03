@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - varchar
 - varchar_TSQL
@@ -25,18 +25,18 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f78cfecbfcf99ec3ae855b41bb802a0c6b12864
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a54d7e0abbbb15379f83a13fc0e604b6d087326d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462556"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236387"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char y varchar (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Los tipos de datos de caracteres son de tamaño fijo, **char**, o de tamaño variable, **varchar**. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], cuando se usa una intercalación con UTF-8 habilitado, estos tipos de datos almacenan el intervalo completo de datos de caracteres [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) y usan la codificación de caracteres [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Si se especifica una intercalación cuyo formato no es UTF-8, estos tipos de datos solo almacenan un subconjunto de caracteres admitidos por la página de códigos correspondiente de esa intercalación.
+Los tipos de datos de caracteres son de tamaño fijo, **char**, o de tamaño variable, **varchar**. A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], cuando se usa una intercalación con UTF-8 habilitado, estos tipos de datos almacenan el intervalo completo de datos de caracteres [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) y usan la codificación de caracteres [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Si se especifica una intercalación cuyo formato no es UTF-8, estos tipos de datos solo almacenan un subconjunto de caracteres admitidos por la página de códigos correspondiente de esa intercalación.
 
 ## <a name="arguments"></a>Argumentos
 
@@ -56,11 +56,11 @@ Los objetos que utilizan **char** o **varchar** se asignan a la intercalación p
 Las codificaciones multibyte de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluyen:
 
 - Juegos de caracteres de doble byte (DBCS) para algunos lenguajes asiáticos orientales que usan páginas de códigos 936 y 950 (chino), 932 (japonés) o 949 (coreano).
-- UTF-8 con página de códigos 65001. **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]))
+- UTF-8 con página de códigos 65001. **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]))
 
 Si tiene sitios que admiten varios idiomas:
 
-- A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], considere el uso de una intercalación con UTF-8 habilitado para admitir Unicode y minimizar los problemas de conversión de caracteres.
+- A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], considere el uso de una intercalación con UTF-8 habilitado para admitir Unicode y minimizar los problemas de conversión de caracteres.
 - Si usa una versión anterior de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], considere la posibilidad de usar tipos de datos Unicode **nchar** o **nvarchar** para minimizar los problemas de conversión de caracteres.
 
 Si usa **char** o **varchar**, se recomienda:

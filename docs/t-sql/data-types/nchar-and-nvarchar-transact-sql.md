@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a33a9bfe6409c08eba3d3f212c95619634699a55
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 038cb4e80af0423a5581ef2b7b51c1bbc54bb5cc
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480546"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237625"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar y nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ Los objetos que usan **nchar** o **nvarchar** se asignan a la intercalación pre
   
 SET ANSI_PADDING siempre es ON para **nchar** y **nvarchar**. SET ANSI_PADDING OFF no se aplica a los tipos de datos **nchar** ni **nvarchar**.
   
-Prefijo de una constante de cadena de caracteres Unicode con la letra N para señalar la entrada UCS-2 o UTF-16, dependiendo de si se utiliza una intercalación SC o no. Sin el prefijo N, la cadena se convierte a la página de códigos predeterminada de la base de datos que puede no reconocer determinados caracteres. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], cuando se utiliza una intercalación con UTF-8 habilitado, la página de códigos predeterminada es capaz de almacenar el juego de caracteres UNICODE UTF-8. 
+Prefijo de una constante de cadena de caracteres Unicode con la letra N para señalar la entrada UCS-2 o UTF-16, dependiendo de si se utiliza una intercalación SC o no. Sin el prefijo N, la cadena se convierte a la página de códigos predeterminada de la base de datos que puede no reconocer determinados caracteres. A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], cuando se utiliza una intercalación con UTF-8 habilitado, la página de códigos predeterminada es capaz de almacenar el juego de caracteres UNICODE UTF-8. 
  
 > [!NOTE]  
 > Cuando se antepone un prefijo con la letra N en una constante de cadena, la conversión implícita dará como resultado una cadena UCS-2 o UTF-16 si la constante que se convierte no supera la longitud máxima de un tipo de datos de cadena nvarchar (4000). En caso contrario, la conversión implícita generará un valor grande nvarchar(max).

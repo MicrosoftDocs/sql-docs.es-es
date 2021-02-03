@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 4028f19dc9d7ac319b083b5e6077021da59e7a9b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 065cf98e5ada04d4ac192c50f4c5b5a3d1790bf6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172317"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237363"
 ---
 # <a name="resource-governor-resource-pool"></a>Grupo de recursos de servidor del regulador de recursos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -105,7 +105,7 @@ El grupo interno representa los recursos utilizados por el propio [!INCLUDE[ssNo
   
 **Grupo predeterminado**  
   
-El grupo predeterminado es el primer grupo de usuario predefinido. Antes de realizar cualquier configuración, el grupo de recursos de servidor predeterminado solo contiene el grupo predeterminado. El grupo de recursos de servidor predeterminado no se puede crear o quitar, pero se puede modificar. El grupo de recursos de servidor predeterminado puede contener grupos definidos por el usuario además del grupo predeterminado. A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] hay un grupo de recursos predeterminado para las operaciones rutinarias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un grupo de recursos externo predeterminado para los procesos externos, como la ejecución de scripts de R.  
+El grupo predeterminado es el primer grupo de usuario predefinido. Antes de realizar cualquier configuración, el grupo de recursos de servidor predeterminado solo contiene el grupo predeterminado. El grupo de recursos de servidor predeterminado no se puede crear o quitar, pero se puede modificar. El grupo de recursos de servidor predeterminado puede contener grupos definidos por el usuario además del grupo predeterminado. A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] hay un grupo de recursos predeterminado para las operaciones rutinarias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un grupo de recursos externo predeterminado para los procesos externos, como la ejecución de scripts de R.  
   
 > [!NOTE]  
 >  El grupo predeterminado se puede modificar, pero no puede moverse fuera del grupo de recursos de servidor predeterminado.  

@@ -16,16 +16,16 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f421e3a0e07b73037e9b789bd29778791f699561
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 93974ff7f7ef5d0dd28ae8ce6989da2f0b496548
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473076"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250252"
 ---
 # <a name="recompile-a-stored-procedure"></a>Volver a compilar un procedimiento almacenado
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  En este tema se describe cómo volver a compilar un procedimiento almacenado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. Hay tres formas de hacerlo: la opción **WITH RECOMPILE** en la definición del procedimiento o cuando se llama al procedimiento, la sugerencia de consulta **RECOMPILE** en instrucciones individuales o usando el procedimiento almacenado del sistema **sp_recompile** . En este tema se describe el uso de la opción WITH RECOMPILE al crear una definición de procedimiento y ejecutar un procedimiento existente. También se describe el uso del procedimiento almacenado del sistema sp_recompile para volver a compilar un procedimiento existente.  
+  En este tema se describe cómo volver a compilar un procedimiento almacenado en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. Hay tres formas de hacerlo: la opción **WITH RECOMPILE** en la definición del procedimiento o cuando se llama al procedimiento, la sugerencia de consulta **RECOMPILE** en instrucciones individuales o usando el procedimiento almacenado del sistema **sp_recompile** . En este tema se describe el uso de la opción WITH RECOMPILE al crear una definición de procedimiento y ejecutar un procedimiento existente. También se describe el uso del procedimiento almacenado del sistema sp_recompile para volver a compilar un procedimiento existente.  
   
  **En este tema**  
   

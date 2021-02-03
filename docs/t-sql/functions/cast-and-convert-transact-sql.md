@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CAST_TSQL
 - CONVERT_TSQL
@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f17a896316ca0e85f11cf8359aa50a11c35faa5
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 1572028c2aa575078392c34fca37fa8105e25661
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171947"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236378"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST y CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -138,7 +138,7 @@ En el caso de una *expression* **float** o **real**, *style* puede tener uno de 
 |**0** (valor predeterminado)|Un máximo de 6 dígitos. Utilícelo en notación científica cuando proceda.|  
 |**1**|Siempre 8 dígitos. Utilícelo siempre en notación científica.|  
 |**2**|Siempre 16 dígitos. Utilícelo siempre en notación científica.|  
-|**3**|Siempre 17 dígitos. Se usa para la conversión sin pérdida de información. Con este estilo, se garantiza que cada valor de float o real distinto se va a convertir en una cadena de caracteres distinta.<br /><br /> **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**3**|Siempre 17 dígitos. Se usa para la conversión sin pérdida de información. Con este estilo, se garantiza que cada valor de float o real distinto se va a convertir en una cadena de caracteres distinta.<br /><br /> **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**126, 128, 129**|Se incluye por razones heredadas. Una versión futura podría dejar estos valores en desuso.|  
   
 ## <a name="money-and-smallmoney-styles"></a>Estilos money y smallmoney

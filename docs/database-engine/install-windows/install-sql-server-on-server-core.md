@@ -11,12 +11,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: ab5a2352358fdb678241425e0ca5e8f999d8a2f2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: f704712b5d2fe7adde99a6440db5a085163e5f31
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170177"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236407"
 ---
 # <a name="install-sql-server-on-server-core"></a>Instalar SQL Server en Server Core
 
@@ -74,7 +74,7 @@ La opción de instalación Server Core proporciona un entorno mínimo para ejecu
 |Edición de Windows|Windows Server 2019 Datacenter <br/><br/> Windows Server 2019 Standard <br /><br />  [!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
 ## <a name="upgrade"></a>Actualizar 
- En las instalaciones básicas Server Core, se admite la actualización de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .  
+ En las instalaciones básicas Server Core, se admite la actualización de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] .  
   
 ## <a name="install"></a>Instalar  
  [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] no admite la instalación con el asistente de instalación en el sistema operativo Server Core. Al realizar la instalación en Server Core, el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el modo totalmente silencioso mediante el uso del parámetro /Q o el modo silencioso simple mediante el parámetro /QS. Para más información, consulte [Instalar SQL Server 2016 desde el símbolo del sistema](./install-sql-server-from-the-command-prompt.md).  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - TOP_TSQL
 - TOP
@@ -22,17 +22,17 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb6024d0ad3ef6f34d170201c0fbacc3447dab26
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: d007bd92518d4ce5f898c400bad53f09d2e93642
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783603"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237784"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Limita las filas devueltas en un conjunto de resultados de la consulta a un número o porcentaje de filas especificado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Al usar TOP con la cláusula ORDER BY, el conjunto de resultados se limita al primer número *N* de filas ordenadas. De lo contrario, TOP devuelve el primer número *N* de filas en un orden indefinido. Use esta cláusula para especificar el número de filas devueltas de una instrucción SELECT. O bien, use TOP para especificar las filas afectadas por una instrucción INSERT, UPDATE, MERGE o DELETE.  
+Limita las filas devueltas en un conjunto de resultados de la consulta a un número o porcentaje de filas especificado en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Al usar TOP con la cláusula ORDER BY, el conjunto de resultados se limita al primer número *N* de filas ordenadas. De lo contrario, TOP devuelve el primer número *N* de filas en un orden indefinido. Use esta cláusula para especificar el número de filas devueltas de una instrucción SELECT. O bien, use TOP para especificar las filas afectadas por una instrucción INSERT, UPDATE, MERGE o DELETE.  
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

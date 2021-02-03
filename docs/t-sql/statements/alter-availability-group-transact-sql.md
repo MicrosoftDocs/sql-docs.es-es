@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER_AVAILABILITY_GROUP_TSQL
 - ALTER_AVAILABILITY_TSQL
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 23cd700fd8b25778118b2141bf0205dcbd87c92e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: dc5c1829eaa8be1116c07ae8f4cc3e6d80501f60
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170467"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237873"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -228,10 +228,10 @@ ALTER AVAILABILITY GROUP group_name
  Para obtener más información sobre este valor, vea [Opción de conmutación por error de detección del estado del nivel de la base de datos de un grupo de disponibilidad](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). 
 
 DTC_SUPPORT  **=** { PER_DB | NONE }  
-Especifica si las transacciones distribuidas están habilitadas para este grupo de disponibilidad. Las transacciones distribuidas para bases de datos de grupo de disponibilidad solo se admiten a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], y las transacciones entre bases de datos solo a partir de [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP2. `PER_DB` crea el grupo de disponibilidad con compatibilidad con estas transacciones y promoverá de forma automática a transacciones distribuidas las transacciones entre las bases de datos relacionadas con las bases de datos del grupo de disponibilidad. `NONE` impide la promoción automática de transacciones entre bases de datos a transacciones distribuidas y no registra la base de datos con un RMID estable en DTC. Las transacciones distribuidas no se evitan cuando se usa el valor `NONE`, pero es posible que la conmutación por error de base de datos y la recuperación automática no se puedan realizar correctamente en algunas circunstancias. Para obtener más información, vea [Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md). 
+Especifica si las transacciones distribuidas están habilitadas para este grupo de disponibilidad. Las transacciones distribuidas para bases de datos de grupo de disponibilidad solo se admiten a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], y las transacciones entre bases de datos solo a partir de [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP2. `PER_DB` crea el grupo de disponibilidad con compatibilidad con estas transacciones y promoverá de forma automática a transacciones distribuidas las transacciones entre las bases de datos relacionadas con las bases de datos del grupo de disponibilidad. `NONE` impide la promoción automática de transacciones entre bases de datos a transacciones distribuidas y no registra la base de datos con un RMID estable en DTC. Las transacciones distribuidas no se evitan cuando se usa el valor `NONE`, pero es posible que la conmutación por error de base de datos y la recuperación automática no se puedan realizar correctamente en algunas circunstancias. Para obtener más información, vea [Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md). 
  
 > [!NOTE]
-> La compatibilidad para cambiar la configuración de DTC_SUPPORT de un grupo de disponibilidad se introdujo en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Service Pack 2. Esta opción no se puede usar con versiones anteriores. Para cambiar esta configuración en versiones anteriores de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], debe usar DROP y CREATE en el grupo de disponibilidad.
+> La compatibilidad para cambiar la configuración de DTC_SUPPORT de un grupo de disponibilidad se introdujo en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2. Esta opción no se puede usar con versiones anteriores. Para cambiar esta configuración en versiones anteriores de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], debe usar DROP y CREATE en el grupo de disponibilidad.
  
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  Introducido en SQL Server 2017. Se usa para establecer un número mínimo de réplicas secundarias sincrónicas que se deben confirmar antes de que la réplica principal confirme una transacción. Garantiza que las transacciones de SQL Server esperen hasta que se actualicen los registros de transacciones en el número mínimo de réplicas secundarias. El valor predeterminado es 0, que proporciona el mismo comportamiento que SQL Server 2016. El valor mínimo es 0. El valor máximo es el número de réplicas menos 1. Esta opción se relaciona con las réplicas en el modo de confirmación sincrónica. Cuando las réplicas están en modo de confirmación sincrónica, las escrituras en la réplica principal esperan hasta que las escrituras en las réplicas secundarias sincrónicas se confirman en el registro de transacciones de la base de datos de réplica. Si un servidor SQL Server que hospeda una réplica secundaria sincrónica deja de responder, el servidor SQL Server que hospeda la réplica principal marcará esa réplica secundaria como NO SINCRONIZADA y continuará. Cuando la base de datos que no responde vuelve a estar en línea, se encontrará en un estado "no sincronizado" y la réplica se marcará como incorrecta hasta que la réplica principal la convierta en sincrónica nuevo. Esta configuración garantiza que la réplica principal no continúe hasta que el número mínimo de réplicas haya confirmado cada transacción. Si el número mínimo de réplicas no está disponible, se producirá un error en las confirmaciones de la réplica principal. Para el tipo de clúster `EXTERNAL`, se ha cambiado esta configuración cuando se agrega el grupo de disponibilidad a un recurso de clúster. Vea [Alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](../../linux/sql-server-linux-availability-group-ha.md).
@@ -406,7 +406,7 @@ Especifica si las transacciones distribuidas están habilitadas para este grupo 
   
  Use una lista separada por comas para especificar todas las instancias del servidor que pueden hospedar una réplica secundaria inteligible. El enrutamiento de solo lectura seguirá el orden en que las instancias de servidor se especifican en la lista. Si incluye la instancia del servidor de host de una réplica en la lista de enrutamiento de solo lectura de la réplica, por lo general, resulta recomendable colocar esta instancia del servidor al final de la lista, ya que las conexiones de intención de lectura van a una réplica secundaria, si hay alguna disponible. .  
   
- A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], puede equilibrar la carga de las solicitudes de intención de lectura en las réplicas secundarias legibles. Para especificarlo, coloque las réplicas en un conjunto anidado de paréntesis dentro de la lista de enrutamiento de solo lectura. Para obtener más información y ejemplos, vea [Configuración del equilibrio de carga entre réplicas de solo lectura](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
+ A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], puede equilibrar la carga de las solicitudes de intención de lectura en las réplicas secundarias legibles. Para especificarlo, coloque las réplicas en un conjunto anidado de paréntesis dentro de la lista de enrutamiento de solo lectura. Para obtener más información y ejemplos, vea [Configuración del equilibrio de carga entre réplicas de solo lectura](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
   
  Ninguno  
  Especifica que cuando esta réplica de disponibilidad es la réplica primaria, no se admitirá en el enrutamiento de solo lectura. Este es el comportamiento predeterminado. Cuando se utiliza con MODIFY REPLICA ON, este valor deshabilita una lista existente, en caso de que la hubiera.  

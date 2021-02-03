@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a665d78d180d87fe0d412b025bcce75d509285d4
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 30d1635e0d58af970cae609fb2e3a6a7f2335791
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171207"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237743"
 ---
 # <a name="integration-services-service-ssis-service"></a>Servicio Integration Services (servicio SSIS)
 
@@ -274,7 +274,7 @@ Cuando se instala [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)],
 ```  
   
 ### <a name="modify-the-configuration-file-location"></a>Modificación de la ubicación del archivo de configuración  
- La clave del Registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** especifica la ubicación y el nombre del archivo de configuración que usa el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. El valor predeterminado de la clave del Registro es **C:\Archivos de programa\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. Puede actualizar el valor de la clave del Registro para utilizar un nombre y una ubicación diferentes para el archivo de configuración. Tenga en cuenta que el número de versión en la ruta de acceso (120 para [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 para [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], etc.) varía según la versión de SQL Server.
+ La clave del Registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** especifica la ubicación y el nombre del archivo de configuración que usa el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. El valor predeterminado de la clave del Registro es **C:\Archivos de programa\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. Puede actualizar el valor de la clave del Registro para utilizar un nombre y una ubicación diferentes para el archivo de configuración. Tenga en cuenta que el número de versión en la ruta de acceso (120 para [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 para [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], etc.) varía según la versión de SQL Server.
   
 > [!CAUTION]  
 >  Editar el Registro de forma incorrecta puede originar problemas graves que requieran volver a instalar el sistema operativo. [!INCLUDE[msCoName](../../includes/msconame-md.md)] no puede garantizar la resolución de dichos problemas. Haga una copia de seguridad de los datos importantes antes de modificar el Registro. Para obtener información sobre cómo hacer una copia de seguridad, restaurar y modificar el Registro, vea el artículo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, [Definición del Registro de Microsoft Windows](https://support.microsoft.com/kb/256986).  

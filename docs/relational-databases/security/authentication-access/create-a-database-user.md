@@ -25,12 +25,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5088cb94c4c4387cd77835bbe02502764d3c2384
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: ce4d006d0df8f17b487a515e3179d43fefd501d5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171707"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236434"
 ---
 # <a name="create-a-database-user"></a>Crear un usuario de base de datos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "98171707"
   
  Si no está familiarizado con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puede resultarle difícil determinar qué tipo de usuario quiere crear. En primer lugar, pregúntese lo siguiente: ¿tiene credenciales de inicio de sesión la persona o el grupo que necesita acceder a la base de datos? Los inicios de sesión en la base de datos maestra son habituales para las personas que administran [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y para las personas que necesitan acceder a la mayoría de las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](o a todas). En este caso, creará un **usuario SQL con inicio de sesión**. El usuario de la base de datos es la identidad del inicio de sesión cuando está conectado a una base de datos. El usuario de la base de datos puede utilizar el mismo nombre que el inicio de sesión, pero no es necesario. En este tema se supone que ya existe un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener información sobre cómo crear un inicio de sesión, vea [Crear un inicio de sesión](../../../relational-databases/security/authentication-access/create-a-login.md).  
   
- Si la persona o el grupo que necesita tener acceso a la base de datos no tiene credenciales de inicio de sesión y solo necesita tener acceso a una o a pocas bases de datos, cree un **usuario de Windows** o un **usuario SQL con contraseña**. También se denomina "usuario de base de datos independiente" y no está asociado con un inicio de sesión en la base de datos maestra. Se trata de una excelente opción si quiere mover fácilmente su base de datos entre instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para usar esta opción en [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)], es necesario que un administrador habilite las bases de datos independientes para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]y que la base de datos esté habilitada para la contención. Para obtener más información, vea [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+ Si la persona o el grupo que necesita tener acceso a la base de datos no tiene credenciales de inicio de sesión y solo necesita tener acceso a una o a pocas bases de datos, cree un **usuario de Windows** o un **usuario SQL con contraseña**. También se denomina "usuario de base de datos independiente" y no está asociado con un inicio de sesión en la base de datos maestra. Se trata de una excelente opción si quiere mover fácilmente su base de datos entre instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para usar esta opción en [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)], es necesario que un administrador habilite las bases de datos independientes para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]y que la base de datos esté habilitada para la contención. Para obtener más información, vea [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 > **IMPORTANTE:** Al conectarse como un usuario de base de datos independiente, debe proporcionar el nombre de la base de datos como parte de la cadena de conexión. Para especificar la base de datos en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], en el cuadro de diálogo **Conectar a** , haga clic en **Opciones** y en la pestaña **Propiedades de la conexión** .  
   

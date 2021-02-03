@@ -17,12 +17,12 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27af6771eeccf660b1eac623f80e663d93e411b8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bedf502949e206b45bf7e1e332962c8c093d1bcb
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97406036"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236694"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Configuración del cifrado de columnas mediante el asistente para Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ El asistente sirve para sacar datos de la base de datos y realizar operaciones c
 ::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
-> Si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] y su instancia de SQL Server está configurada con un enclave seguro, puede ejecutar las operaciones criptográficas en contexto, sin sacar los datos de la base de datos. Vea [Configuración del cifrado de columnas en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md). Tenga en cuenta que el asistente no admite el cifrado en contexto.
+> Si usa [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] y su instancia de SQL Server está configurada con un enclave seguro, puede ejecutar las operaciones criptográficas en contexto, sin sacar los datos de la base de datos. Vea [Configuración del cifrado de columnas en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md). Tenga en cuenta que el asistente no admite el cifrado en contexto.
 
 ::: moniker-end
 

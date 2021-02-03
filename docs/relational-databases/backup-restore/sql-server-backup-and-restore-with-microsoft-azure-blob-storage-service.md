@@ -12,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e1dcbea42043d1077dd2b0c9e0f1127c9319842b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: cc9fa042411cdbd308ea40ae9584f039f155dc29
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170747"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236138"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage.
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "98170747"
   
  SQL Server permite almacenar las copias de seguridad del servicio de Almacenamiento de blobs de Microsoft Azure de las maneras siguientes:  
   
--   **Administrar las copias de seguridad de Microsoft Azure:** con los mismos métodos usados para hacer una copia de seguridad en disco y cinta, ahora puede realizar la copia de seguridad en el Almacenamiento de Microsoft Azure especificando la dirección URL como destino de copia de seguridad. Puede utilizar esta característica para realizar la copia de seguridad manualmente o para configurar su propia estrategia de copia de seguridad como haría para un almacenamiento local u otras opciones fuera de las instalaciones. Esta característica también se conoce como **Copia de seguridad en URL de SQL Server**. Para más información, consulte [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Esta característica está disponible en SQL Server 2012 SP1 CU2 o posterior. Esta característica se ha mejorado en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] para proporcionar un mayor rendimiento y funcionalidad mediante el uso de blobs en bloques, firmas de acceso compartido y la creación de bandas.  
+-   **Administrar las copias de seguridad de Microsoft Azure:** con los mismos métodos usados para hacer una copia de seguridad en disco y cinta, ahora puede realizar la copia de seguridad en el Almacenamiento de Microsoft Azure especificando la dirección URL como destino de copia de seguridad. Puede utilizar esta característica para realizar la copia de seguridad manualmente o para configurar su propia estrategia de copia de seguridad como haría para un almacenamiento local u otras opciones fuera de las instalaciones. Esta característica también se conoce como **Copia de seguridad en URL de SQL Server**. Para más información, consulte [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Esta característica está disponible en SQL Server 2012 SP1 CU2 o posterior. Esta característica se ha mejorado en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] para proporcionar un mayor rendimiento y funcionalidad mediante el uso de blobs en bloques, firmas de acceso compartido y la creación de bandas.  
   
     > [!NOTE]  
     >  En las versiones de SQL Server anteriores a SQL Server 2012 SP1 CU2, puede usar el complemento de la herramienta de Microsoft Azure Copia de seguridad de SQL Server para crear rápida y fácilmente copias de seguridad del Almacenamiento de Microsoft Azure. Para obtener más información, vea [centro de descarga](https://go.microsoft.com/fwlink/?LinkID=324399).  
@@ -42,7 +42,7 @@ ms.locfileid: "98170747"
 -   Almacenamiento externo flexible, confiable e ilimitado: el almacenamiento de las copias de seguridad en el servicio BLOB de Microsoft Azure puede ser una opción externa cómoda, flexible y de fácil acceso. La creación de almacenamiento externo para las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ser tan sencillo como modificar los scripts y trabajos existentes. Normalmente, el almacenamiento externo debe estar suficientemente alejado de la ubicación de la base de datos de producción para impedir que un desastre afecte a las ubicaciones de las bases de datos externa y de producción. La elección de la replicación geográfica en el almacenamiento de blobs permite disponer de un nivel de protección adicional en caso de que se produzca un desastre que pueda afectar a toda la región. Además, las copias de seguridad están disponibles desde cualquier lugar y en cualquier momento y se puede tener acceso a ellas fácilmente para las restauraciones.  
   
     > [!IMPORTANT]  
-    >  Mediante el uso de blobs en bloques en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], puede crear bandas en su conjunto de copia de seguridad para admitir archivos de copia de seguridad de hasta 12,8 TB.  
+    >  Mediante el uso de blobs en bloques en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], puede crear bandas en su conjunto de copia de seguridad para admitir archivos de copia de seguridad de hasta 12,8 TB.  
   
 -   Archivado de copias de seguridad: el servicio de Microsoft Azure Blob Storage ofrece una alternativa mejor que la opción de cinta que se suele usar para archivar copias de seguridad. El almacenamiento en cinta puede requerir el transporte físico a una instalación externa y medidas para proteger los medios. El almacenamiento de las copias de seguridad en el servicio Azure Blob Storage proporciona una opción de archivado instantánea, de alta disponibilidad y duradera.  
   

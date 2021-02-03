@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e46f34d32b857145131108e32dd762538964f00a
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 8eea754a9a19c64287778aeef55504ebe5b76b0f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170117"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237646"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>Últimos cambios en la replicación de SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describen cambios recientes en la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Estos cambios pueden provocar errores en las aplicaciones, en los scripts o en las funcionalidades basados en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Podría encontrar estos problemas al actualizar.  
   
-## <a name="breaking-changes-made-in-sssql15"></a>Cambios substanciales realizados en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
- [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] no admite la replicación a o desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
+## <a name="breaking-changes-made-in-sssql16-md"></a>Cambios substanciales realizados en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]  
+ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] no admite la replicación a o desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  
  [Compatibilidad con versiones anteriores de replicación](../../relational-databases/replication/replication-backward-compatibility.md)  

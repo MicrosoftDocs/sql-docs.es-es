@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f612518baa1d933cfe174af58426db99e01f61d7
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 17e7b0702ca66548fb1133d05f0a5b598e3c383c
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171217"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237277"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidad de las tablas con optimización para memoria
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "98171217"
   
  Cuando se elimina o actualiza una fila, no se quita ni se cambia en su lugar en el archivo de datos sino que las filas eliminadas se registran en otro tipo de archivo: el archivo delta. Se procesan las operaciones de actualización como una tupla de las operaciones de eliminación e inserción para cada fila. Esto elimina la E/S aleatoria en el archivo de datos.  
  
-   Tamaño: Cada archivo de datos tiene un tamaño aproximado de 128 MB en los equipos con más de 16 GB de memoria y de 16 MB en los equipos con 16 GB o menos. En [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SQL Server puede usar el modo de punto de comprobación grande si considera que el subsistema de almacenamiento es lo suficientemente rápido. En el modo de punto de comprobación grande, los archivos de datos tienen un tamaño de 1 GB. Esto permite una mayor eficacia en el subsistema de almacenamiento para las cargas de trabajo de alto rendimiento.  
+   Tamaño: Cada archivo de datos tiene un tamaño aproximado de 128 MB en los equipos con más de 16 GB de memoria y de 16 MB en los equipos con 16 GB o menos. En [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SQL Server puede usar el modo de punto de comprobación grande si considera que el subsistema de almacenamiento es lo suficientemente rápido. En el modo de punto de comprobación grande, los archivos de datos tienen un tamaño de 1 GB. Esto permite una mayor eficacia en el subsistema de almacenamiento para las cargas de trabajo de alto rendimiento.  
    
 ### <a name="the-delta-file"></a>El archivo delta  
  Cada archivo de datos está emparejado con un archivo delta que tiene el mismo intervalo de transacciones y hace un seguimiento de las filas eliminadas insertadas por transacciones en el intervalo de transacciones. El archivo de datos y el archivo delta se denominan “par de archivos de punto de comprobación” (CFP), que es la unidad de asignación y desasignación, y también la unidad de las operaciones Merge. Por ejemplo, un archivo delta correspondiente al intervalo de transacciones (100, 200) almacenará las filas eliminadas que insertaron las transacciones del intervalo (100, 200). Como los archivos de datos, se tiene acceso al archivo delta de forma secuencial.  
@@ -50,7 +50,7 @@ ms.locfileid: "98171217"
  Cuando se elimina una fila, no se quita del archivo de datos sino se anexa una referencia a la fila al archivo delta asociado al intervalo de transacciones donde se ha insertado esta fila de datos. Puesto que la fila que se va a eliminar ya existe en el archivo de datos, el archivo delta solo almacena la información de referencia `{inserting_tx_id, row_id, deleting_tx_id }` y sigue el orden del registro transaccional de las operaciones de eliminación o actualización de origen.  
   
 
- Tamaño: cada archivo delta tiene un tamaño aproximado de 16 MB en los equipos con más de 16 GB de memoria y de 1 MB en los equipos con 16 GB o menos. A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SQL Server, puede usar el modo de punto de comprobación grande si considera que el subsistema de almacenamiento es lo suficientemente rápido. En el modo de punto de comprobación grande, los archivos delta tienen un tamaño de 128 MB.  
+ Tamaño: cada archivo delta tiene un tamaño aproximado de 16 MB en los equipos con más de 16 GB de memoria y de 1 MB en los equipos con 16 GB o menos. A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SQL Server, puede usar el modo de punto de comprobación grande si considera que el subsistema de almacenamiento es lo suficientemente rápido. En el modo de punto de comprobación grande, los archivos delta tienen un tamaño de 128 MB.  
  
 ## <a name="populating-data-and-delta-files"></a>Rellenar los archivos delta y de datos  
  Los archivos delta y de datos se rellenan según los registros de transacciones generados por las transacciones confirmadas en las tablas optimizadas para memoria y se anexa información sobre las filas insertadas y eliminadas en los archivos de datos y delta correspondientes. A diferencia de las tablas basadas en disco donde las páginas de índice o datos se vacían con E/S aleatoria cuando se realiza el punto de comprobación, la persistencia de la tabla optimizada para memoria es una operación en segundo plano continua. Se obtiene acceso a varios archivos delta porque una transacción puede eliminar o actualizar cualquier fila que fuera insertada por alguna transacción anterior. La información de eliminación siempre se anexa al final del archivo delta. Por ejemplo, una transacción con una marca de tiempo de confirmación de 600 inserta una nueva fila y elimina las filas insertadas por las transacciones con una marca de tiempo de confirmación de 150, 250 y 450, como se muestra en la imagen siguiente. Las cuatro operaciones de E/S de archivo (tres para las filas eliminadas y 1 para las filas recién insertadas) son operaciones de solo anexar para los archivos de datos y delta correspondientes.  
@@ -61,7 +61,7 @@ ms.locfileid: "98171217"
  Se tiene acceso a los pares de archivos delta y de datos cuando ocurre lo siguiente.  
   
  Trabajadores de punto de comprobación sin conexión  
- Este subproceso anexa las inserciones y eliminaciones para las filas de datos optimizadas para memoria a los pares correspondientes de archivos delta y de datos. En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hay un trabajador de punto de comprobación sin conexión; a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] , hay varios trabajadores de punto de comprobación.  
+ Este subproceso anexa las inserciones y eliminaciones para las filas de datos optimizadas para memoria a los pares correspondientes de archivos delta y de datos. En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hay un trabajador de punto de comprobación sin conexión; a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] , hay varios trabajadores de punto de comprobación.  
   
  Operación de combinación  
  La operación combina uno o varios pares de archivos delta y de datos y crea un nuevo par de archivos delta y de datos.  

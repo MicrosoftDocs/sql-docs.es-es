@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ebedb1071dc5953bc78918f928f0f53a7145e282
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: fdb18826c75e55f41e3c02a97e2f8374a22778b3
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98167897"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237556"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configurar el almacenamiento para las tablas con optimización para memoria
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ Un buen punto de partida para ajustar el tamaño del almacenamiento para esta á
 -   Los archivos de punto de comprobación normalmente se distribuyen uniformemente entre todos los contenedores con espacio disponible. Con SQL Server 2014, debe aprovisionar un número impar de contenedores para lograr una distribución uniforme; a partir de 2016, la distribución uniforme se consigue con cantidades pares e impares de contenedores.
   
 ## <a name="encryption"></a>Cifrado  
- En [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores, el almacenamiento de las tablas optimizadas para memoria se cifra en reposo como parte de la habilitación de Cifrado de datos transparente (TDE) en la base de datos. Para obtener más información, vea [Cifrado de datos transparente](../../relational-databases/security/encryption/transparent-data-encryption.md). En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], los archivos de punto de comprobación no se cifran, aunque el TDE esté habilitado en la base de datos.
+ En [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores, el almacenamiento de las tablas optimizadas para memoria se cifra en reposo como parte de la habilitación de Cifrado de datos transparente (TDE) en la base de datos. Para obtener más información, vea [Cifrado de datos transparente](../../relational-databases/security/encryption/transparent-data-encryption.md). En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], los archivos de punto de comprobación no se cifran, aunque el TDE esté habilitado en la base de datos.
 
  Los datos de tablas optimizadas para memoria (SCHEMA_ONLY) [no duraderas](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md) no se escriben en el disco en ningún momento. Por lo tanto, TDE no se aplica a esas tablas.
   

@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: 05f3d283e90affc8a89e32e2e0f249153f2e4935
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3db484c1279546ab76ebf302582dbb984f991fa4
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899081"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250130"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Crear una auditoría de servidor y una especificación de auditoría de servidor
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo crear una auditoría de servidor y una especificación de auditoría de servidor en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La*auditoría* de una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implica el seguimiento y registro de los eventos que se producen en el sistema. El objeto *SQL Server Audit* recopila una única instancia de acciones y grupos de acciones de nivel de servidor o de base de datos para su supervisión. La auditoría se realiza en el nivel de instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Es posible tener varias auditorías por cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El objeto *Especificación de auditoría de servidor* pertenece a una auditoría. Puede crear una especificación de auditoría de servidor por cada auditoría, ya que ambos se crean en el ámbito de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  En este tema se describe cómo crear una auditoría de servidor y una especificación de auditoría de servidor en [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La *auditoría* de una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implica el seguimiento y registro de los eventos que se producen en el sistema. El objeto *SQL Server Audit* recopila una única instancia de acciones y grupos de acciones de nivel de servidor o de base de datos para su supervisión. La auditoría se realiza en el nivel de instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Es posible tener varias auditorías por cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El objeto *Especificación de auditoría de servidor* pertenece a una auditoría. Puede crear una especificación de auditoría de servidor por cada auditoría, ya que ambos se crean en el ámbito de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  **En este tema**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "85899081"
     > [!IMPORTANT]  
     >  Cuando la auditoría está en un estado de error, la conexión de administrador dedicada puede seguir realizando eventos auditados.  
   
-     Lista**Destino de auditoría**  
+     Lista **Destino de auditoría**  
      Especifica el destino de los datos de la auditoría. Las opciones disponibles son un archivo binario, el registro de aplicación Windows o el registro de seguridad de Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no puede escribir en el registro de seguridad de Windows sin configurar valores adicionales en Windows. Para obtener más información, vea [Escribir eventos de auditoría de SQL Server en el registro de seguridad](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
   
      **Ruta de acceso del archivo**  
@@ -106,16 +106,16 @@ ms.locfileid: "85899081"
      **Número máximo de archivos**  
      Especifica que, si se alcanza el número máximo de archivos de auditoría, cualquier acción que ocasione la generación de eventos de auditoría adicionales producirá un error y se mostrará un mensaje.  
   
-     Casilla**Ilimitado**  
+     Casilla **Ilimitado**  
      Cuando se activa la casilla **Ilimitado** en **Máximo de archivos de sustitución incremental** , no se impone ningún límite en cuanto al número de archivos de auditoría que se crearán. La casilla **Ilimitado** está activada de forma predeterminada y se aplica a las selecciones de **Máximo de archivos de sustitución incremental** y **Máximo de archivos** .  
   
-     Casilla**Número de archivos**  
+     Casilla **Número de archivos**  
      Especifica el número de archivos de auditoría que se crearán, hasta 2.147.483.647. Esta opción solo está disponible si se desactiva la casilla **Ilimitado** .  
   
      **Tamaño máximo del archivo**  
      Especifica el tamaño máximo de un archivo de auditoría en megabytes (MB), gigabytes (GB) o terabytes (TB). Puede especificar un número hasta 2 147 483 647 TB. La activación de la casilla **Ilimitado** no pone un límite en el tamaño del archivo. La casilla **Ilimitado** está activada de forma predeterminada.  
   
-     Casilla**Reservar espacio en disco**  
+     Casilla **Reservar espacio en disco**  
      Especifica que se debe preasignar una cantidad de espacio en disco igual al tamaño máximo de archivo especificado. Este valor solo se puede utilizar si la casilla **Ilimitado** en **Tamaño máximo del archivo** no está activada. Esta casilla no está activada de forma predeterminada.  
   
 3.  Opcionalmente, en la página **Filtrar** , escriba un predicado, o la cláusula `WHERE` , para la auditoría de servidor de modo que se especifiquen opciones adicionales no disponibles en la página **General** . Encierre el predicado entre paréntesis; por ejemplo: `(object_name = 'EmployeesTable')`.  
@@ -140,19 +140,19 @@ ms.locfileid: "85899081"
      Especifica los grupos de acciones de auditoría y las acciones de auditoría en el nivel de servidor que se desea capturar. Para obtener la lista de grupos de acciones de auditoría y de acciones de auditoría de nivel de servidor, así como una descripción de los eventos que contienen, vea [Grupos de acciones y acciones de SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
      **Esquema de objeto**  
-     Muestra el esquema para el **Nombre de objeto**especificado.  
+     Muestra el esquema para el **Nombre de objeto** especificado.  
   
      **Nombre de objeto**  
      Nombre del objeto que se va a auditar. Este valor solo está disponible para las acciones de auditoría, no se aplica a los grupos de auditoría.  
   
      **Puntos suspensivos (...)**  
-     Abre el cuadro de diálogo **Seleccionar objetos** para buscar y seleccionar un objeto disponible, basándose en el **Tipo de acción de auditoría**especificado.  
+     Abre el cuadro de diálogo **Seleccionar objetos** para buscar y seleccionar un objeto disponible, basándose en el **Tipo de acción de auditoría** especificado.  
   
      **Nombre de la entidad**  
      La cuenta por la que se va filtrar la auditoría para el objeto que se va a auditar.  
   
      **Puntos suspensivos (...)**  
-     Abre el cuadro de diálogo **Seleccionar objetos** para buscar y seleccionar un objeto disponible, basándose en el **Nombre de objeto**especificado.  
+     Abre el cuadro de diálogo **Seleccionar objetos** para buscar y seleccionar un objeto disponible, basándose en el **Nombre de objeto** especificado.  
   
 3.  Cuando haya terminado, haga clic en **Aceptar**.  
   

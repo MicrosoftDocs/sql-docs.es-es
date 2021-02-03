@@ -18,12 +18,12 @@ ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0271ca850648af434d225429976b4e111e49d498
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 9a14e09f0c914404261816b8edf84e0b4693ab65
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171387"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236310"
 ---
 # <a name="about-change-tracking-sql-server"></a>Acerca del seguimiento de cambios (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +76,7 @@ La información de seguimiento de cambios de todas las tablas (habilitado para e
 
 Cada tabla habilitada para el seguimiento de cambios tiene una tabla interna en disco que las funciones de seguimiento de cambios utilizan para determinar la versión de cambio y las filas que han cambiado desde una versión determinada. Cada vez que el subproceso de **limpieza automática** se activa, examina todas las bases de datos de usuario en la instancia de SQL Server para identificar las bases de datos habilitadas para el seguimiento de cambios. Según la configuración del período de retención de la base de datos, se purgan los registros expirados de cada tabla en disco interna.
 
-Se agregó un procedimiento almacenado en los Service Packs para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] para realizar la limpieza manual para las tablas internas del seguimiento de cambios interno. En [KB173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking-side-table-in-sql-server-2014-sp2-or-2016-sp1) encontrará más información sobre el procedimiento almacenado. 
+Se agregó un procedimiento almacenado en los Service Packs para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] para realizar la limpieza manual para las tablas internas del seguimiento de cambios interno. En [KB173157](https://support.microsoft.com/help/3173157/adds-a-stored-procedure-for-the-manual-cleanup-of-the-change-tracking-side-table-in-sql-server-2014-sp2-or-2016-sp1) encontrará más información sobre el procedimiento almacenado. 
   
 ## <a name="see-also"></a>Consulte también  
  [Habilitar y deshabilitar el seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)   

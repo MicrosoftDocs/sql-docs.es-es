@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - AVAILABILITY GROUP
 - CREATE_AVAILABILITY_TSQL
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fde4d33f9de2bd3103d1c48ad1a80fe211c8e1a3
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 1ba1a89e21c7eb57c2f3dd603e35472d56ab62d7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170347"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236290"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 
@@ -180,13 +180,13 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   Para obtener más información sobre este valor, vea [Opción de conmutación por error de detección del estado del nivel de la base de datos de un grupo de disponibilidad](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). 
   
  DTC_SUPPORT  **=** { PER_DB | NONE }  
- Especifica si se admiten transacciones entre bases de datos en el Coordinador de transacciones distribuidas (DTC). Solo se admiten transacciones entre bases de datos a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. PER_DB crea el grupo de disponibilidad con compatibilidad con estas transacciones. Para obtener más información, vea [Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
+ Especifica si se admiten transacciones entre bases de datos en el Coordinador de transacciones distribuidas (DTC). Solo se admiten transacciones entre bases de datos a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. PER_DB crea el grupo de disponibilidad con compatibilidad con estas transacciones. Para obtener más información, vea [Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
  BASIC  
- Se usa para crear un grupo de disponibilidad básica. Los grupos de disponibilidad básica se limitan a una base de datos y dos réplicas: una réplica principal y una secundaria. Esta opción sustituye a la característica de creación de reflejo de la base de datos en desuso en SQL Server Standard Edition. Para obtener más información, vea [Grupos de disponibilidad básica &#40;grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md). Los grupos de disponibilidad básica se admiten a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].  
+ Se usa para crear un grupo de disponibilidad básica. Los grupos de disponibilidad básica se limitan a una base de datos y dos réplicas: una réplica principal y una secundaria. Esta opción sustituye a la característica de creación de reflejo de la base de datos en desuso en SQL Server Standard Edition. Para obtener más información, vea [Grupos de disponibilidad básica &#40;grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md). Los grupos de disponibilidad básica se admiten a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  
 
  DISTRIBUTED  
- Se usa para crear un grupo de disponibilidad distribuido. Esta opción se usa con el parámetro AVAILABILITY GROUP ON para conectar dos grupos de disponibilidad de clústeres de conmutación por error de Windows Server independientes.  Para obtener más información, vea [Distributed Availability Groups &#40;Always On Availability Groups&#41; (Grupos de disponibilidad distribuida &#40;grupos de disponibilidad AlwaysOn&#41;)](../../database-engine/availability-groups/windows/distributed-availability-groups.md). Los grupos de disponibilidad distribuidos se admiten a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. 
+ Se usa para crear un grupo de disponibilidad distribuido. Esta opción se usa con el parámetro AVAILABILITY GROUP ON para conectar dos grupos de disponibilidad de clústeres de conmutación por error de Windows Server independientes.  Para obtener más información, vea [Distributed Availability Groups &#40;Always On Availability Groups&#41; (Grupos de disponibilidad distribuida &#40;grupos de disponibilidad AlwaysOn&#41;)](../../database-engine/availability-groups/windows/distributed-availability-groups.md). Los grupos de disponibilidad distribuidos se admiten a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  Introducido en SQL Server 2017. Se usa para establecer un número mínimo de réplicas secundarias sincrónicas que se deben confirmar antes de que la réplica principal confirme una transacción. Garantiza que las transacciones de SQL Server esperen hasta que se actualicen los registros de transacciones en el número mínimo de réplicas secundarias. El valor predeterminado es 0, que proporciona el mismo comportamiento que SQL Server 2016. El valor mínimo es 0. El valor máximo es el número de réplicas menos 1. Esta opción se relaciona con las réplicas en el modo de confirmación sincrónica. Cuando las réplicas están en modo de confirmación sincrónica, las escrituras en la réplica principal esperan hasta que las escrituras en las réplicas secundarias sincrónicas se confirman en el registro de transacciones de la base de datos de réplica. Si un servidor SQL Server que hospeda una réplica secundaria sincrónica deja de responder, el servidor SQL Server que hospeda la réplica principal marca esa réplica secundaria como NOT SYNCHRONIZED y continúa. Cuando la base de datos que no responde vuelve a estar en línea, se encuentra en un estado "no sincronizado" y la réplica se marca como incorrecta hasta que la réplica principal la convierte en sincrónica de nuevo. Esta configuración garantiza que la réplica principal espere hasta que el número mínimo de réplicas hayan confirmado cada transacción. Si el número mínimo de réplicas no está disponible, se produce un error en las confirmaciones de la réplica principal. Para el tipo de clúster `EXTERNAL`, se ha cambiado esta configuración cuando se agrega el grupo de disponibilidad a un recurso de clúster. Vea [Alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](../../linux/sql-server-linux-availability-group-ha.md).
@@ -356,7 +356,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   
  Use una lista separada por comas para especificar todas las instancias del servidor que pueden hospedar una réplica secundaria inteligible. El enrutamiento de solo lectura sigue el orden en que se hayan especificado las instancias de servidor en la lista. Si incluye la instancia del servidor de host de una réplica en la lista de enrutamiento de solo lectura de la réplica, por lo general, resulta recomendable colocar esta instancia del servidor al final de la lista, ya que las conexiones de intención de lectura van a una réplica secundaria, si hay alguna disponible. .  
   
- A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], puede equilibrar la carga de las solicitudes de intención de lectura en las réplicas secundarias legibles. Para especificarlo, coloque las réplicas en un conjunto anidado de paréntesis dentro de la lista de enrutamiento de solo lectura. Para obtener más información y ejemplos, vea [Configuración del equilibrio de carga entre réplicas de solo lectura](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
+ A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], puede equilibrar la carga de las solicitudes de intención de lectura en las réplicas secundarias legibles. Para especificarlo, coloque las réplicas en un conjunto anidado de paréntesis dentro de la lista de enrutamiento de solo lectura. Para obtener más información y ejemplos, vea [Configuración del equilibrio de carga entre réplicas de solo lectura](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
   
  Ninguno  
  Especifica que cuando esta réplica de disponibilidad es la réplica principal, no se admite el enrutamiento de solo lectura. Este es el comportamiento predeterminado.  

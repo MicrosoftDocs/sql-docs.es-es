@@ -12,12 +12,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ea031ed8c733a2ced272bf05c952b7f32aa7da4
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 6501f3148ab906c8ac719407a489db6a4be1e62b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172777"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236711"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Rendimiento de las consultas de índices de almacén de columnas
 
@@ -32,7 +32,7 @@ ms.locfileid: "98172777"
     
 ### <a name="1-organize-data-to-eliminate-more-rowgroups-from-a-full-table-scan"></a>1. Organización de los datos para eliminar más grupos de filas de un recorrido de tabla completo    
     
--   **Aproveche el orden de inserción.** Normalmente, en el almacén de datos tradicional, los datos se insertan realmente en orden cronológico y el análisis se realiza en la dimensión de tiempo. Por ejemplo, en los análisis de ventas por trimestre. Para este tipo de carga de trabajo, se produce la eliminación del grupo de filas automáticamente. En [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], puede encontrar que se ha omitido una serie de grupos de filas como parte del procesamiento de consulta.    
+-   **Aproveche el orden de inserción.** Normalmente, en el almacén de datos tradicional, los datos se insertan realmente en orden cronológico y el análisis se realiza en la dimensión de tiempo. Por ejemplo, en los análisis de ventas por trimestre. Para este tipo de carga de trabajo, se produce la eliminación del grupo de filas automáticamente. En [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], puede encontrar que se ha omitido una serie de grupos de filas como parte del procesamiento de consulta.    
     
 -   **Aproveche el índice agrupado del almacén de filas.** Si el predicado de consulta común está en una columna (por ejemplo, C1) que no está relacionada con el orden de inserción de la fila, puede crear un índice agrupado de almacenamiento de filas en la columna C1 y, después, crear un índice agrupado de almacén de columnas al quitar el índice agrupado de almacenamiento de filas. Si crea el índice de almacén de columnas agrupado explícitamente con `MAXDOP = 1`, el índice de almacén de columnas agrupado se ordena perfectamente en la columna C1. Si especifica `MAXDOP = 8`, verá la superposición de los valores en los ocho grupos de filas. Un caso común de esta estrategia es cuando crea inicialmente el índice de almacén de columnas con un conjunto grande de datos. Tenga en cuenta que, para el índice de almacén de columnas no agrupado (NCCI), si la tabla de base del almacén de filas tiene un índice agrupado, las filas ya están ordenadas. En este caso, el índice de almacén de columnas no agrupado resultante se ordenará automáticamente. Un punto importante a tener en cuenta es que ese índice de almacén de columnas no mantiene de manera inherente el orden de las filas. Como se insertan filas nuevas o se actualizan las filas más antiguas, deberá repetir el proceso, ya que el rendimiento de la consulta de análisis puede deteriorarse.    
     
@@ -41,7 +41,7 @@ ms.locfileid: "98172777"
 -   **Evite la eliminación de grandes cantidades de datos**. Quitar las filas comprimidas de un grupo de filas no es una operación sincrónica. Resultaría caro descomprimir un grupo de filas, eliminar la fila y, a continuación, volver a comprimirla. Por lo tanto, si elimina datos de grupos de filas comprimidos, estos grupos de filas se seguirán analizando aunque devuelvan menos filas. Si el número de filas eliminadas para varios grupos de filas es lo suficientemente grande como para combinar estos en menos grupos de filas, la reorganización del almacén de columnas mejora la calidad del índice y el rendimiento de las consultas. Si el proceso de eliminación de datos normalmente vacía grupos de filas completos, considere la posibilidad de usar la creación de particiones de tabla, desactivar las particiones que ya no son necesarias y truncarlas en lugar de eliminarlas. 
 
     > [!NOTE]
-    > A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], el motor de tupla cuenta con la ayuda de una tarea de combinación en segundo plano que comprime automáticamente los grupos de filas delta OPEN que han existido durante algún tiempo, según lo determinado por un umbral interno, o combina los grupos de filas COMPRESSED desde donde se ha eliminado un gran número de filas. De este modo, se mejora la calidad del índice de almacén de columnas a lo largo del tiempo.   
+    > A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], el motor de tupla cuenta con la ayuda de una tarea de combinación en segundo plano que comprime automáticamente los grupos de filas delta OPEN que han existido durante algún tiempo, según lo determinado por un umbral interno, o combina los grupos de filas COMPRESSED desde donde se ha eliminado un gran número de filas. De este modo, se mejora la calidad del índice de almacén de columnas a lo largo del tiempo.   
     > Si se requiere la eliminación de grandes cantidades de datos del índice de almacén de columnas, considere la posibilidad de dividir esa operación en lotes de eliminación más pequeños a lo largo del tiempo. De este modo, se permite que la tarea de combinación en segundo plano administre la tarea de combinar grupos de filas más pequeños y mejorar la calidad del índice y se elimina la necesidad de programar ventanas de mantenimiento de reorganización de índices tras la eliminación de datos.    
     > Para obtener más información sobre los términos y conceptos de almacén de columnas, vea [Índices de almacén de columnas: Información general](../../relational-databases/indexes/columnstore-indexes-overview.md).
     
@@ -52,7 +52,7 @@ ms.locfileid: "98172777"
     
  Si la tabla tiene más de un millón de filas pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede obtener una concesión de memoria suficiente para crear el índice mediante MAXDOP, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reducirá automáticamente el valor de `MAXDOP` según sea necesario para ajustarse a la concesión de memoria disponible.  En algunos casos, se debe reducir a uno el DOP para generar el índice cuando la memoria está restringida.    
     
- A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], la consulta siempre funcionará en modo por lotes. En versiones anteriores, la ejecución por lotes solo se utiliza cuando DOP es mayor que uno.    
+ A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], la consulta siempre funcionará en modo por lotes. En versiones anteriores, la ejecución por lotes solo se utiliza cuando DOP es mayor que uno.    
     
 ## <a name="columnstore-performance-explained"></a>Explicación del rendimiento del almacén de columnas    
  Los índices de almacén de columnas logran un rendimiento de consulta elevado mediante la combinación del procesamiento en modo por lotes en memoria de alta velocidad con técnicas que reducen en gran medida los requisitos de E/S. Puesto que las consultas de análisis examinan grandes cantidades de filas, tienen normalmente un enlace de optimización de la infraestructura y, por tanto, la reducción de la E/S durante la ejecución de la consulta es fundamental para el diseño de los índices de almacén de columnas. Una vez que se han leído los datos en la memoria, es fundamental reducir el número de operaciones en memoria.    
@@ -82,7 +82,7 @@ ms.locfileid: "98172777"
     
  **¿Cuándo un índice de almacén de columnas tiene que realizar un análisis de tabla completa?**    
     
- A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], puede crear uno o varios índices no agrupados normales de árbol B en un índice agrupado de almacén de columnas exactamente igual que en un montón de almacén de filas. Los índices no agrupados de árbol B pueden acelerar una consulta que tenga un predicado de igualdad o un predicado con un pequeño intervalo de valores. Para predicados más complicados, el optimizador de consultas puede elegir un análisis de tabla completa. Sin la capacidad para omitir los grupos de filas, un análisis de tabla completa sería muy lento, especialmente para las tablas grandes.    
+ A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], puede crear uno o varios índices no agrupados normales de árbol B en un índice agrupado de almacén de columnas exactamente igual que en un montón de almacén de filas. Los índices no agrupados de árbol B pueden acelerar una consulta que tenga un predicado de igualdad o un predicado con un pequeño intervalo de valores. Para predicados más complicados, el optimizador de consultas puede elegir un análisis de tabla completa. Sin la capacidad para omitir los grupos de filas, un análisis de tabla completa sería muy lento, especialmente para las tablas grandes.    
     
  **¿Cuándo se beneficia una consulta de análisis de la eliminación del grupo de filas para un análisis de tabla completa?**    
     
@@ -99,7 +99,7 @@ ms.locfileid: "98172777"
     
  No todos los operadores de ejecución de consultas se pueden ejecutar en el modo por lotes. Por ejemplo, las operaciones de DML Insert, Delete o Update ejecutan una fila cada vez. Los operadores de modo por lote destinan operadores para la aceleración del rendimiento de las consultas como Scan, Join, Aggregate, sort, etc. Dado que el índice de almacén de columnas se introdujo en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], hay un esfuerzo sostenido para expandir los operadores que se pueden ejecutar en el modo por lotes. En la tabla siguiente se muestran los operadores que se ejecutan en el modo por lotes según la versión del producto.    
     
-|Operadores del modo por lotes|¿Cuándo se usa?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|Comentarios|    
+|Operadores del modo por lotes|¿Cuándo se usa?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|Comentarios|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |Operaciones de DML (insert, delete, update y merge)||no|no|no|DML no es una operación de modo por lotes porque no es paralela. Incluso cuando se habilita el procesamiento por lotes del modo serie, no vemos importantes mejoras si se permite que DML se procese en el modo por lotes.|    
 |Exploración de índice de almacén de columnas|SCAN|N/D|sí|sí|Para los índices de almacén de columnas, podemos insertar el predicado en el nodo SCAN.|    
@@ -116,14 +116,14 @@ ms.locfileid: "98172777"
 |Consultas uniproceso con un plan de consulta en serie||no|no|sí||    
 |sort|Cláusula Order by en SCAN con índice de almacén de columnas|no|no|sí||    
 |Top Sort||no|no|sí||    
-|Agregados de ventana||N/D|N/D|sí|Nuevo operador en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].|    
+|Agregados de ventana||N/D|N/D|sí|Nuevo operador en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].|    
     
-<sup>1</sup> se aplica a [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] a los niveles Premium, Standard, S3 y superiores, a todos los niveles de núcleo virtual y a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+<sup>1</sup> se aplica a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] a los niveles Premium, Standard, S3 y superiores, a todos los niveles de núcleo virtual y a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
 
 Para más información, vea la [Guía de arquitectura de procesamiento de consulta](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution).
     
 ### <a name="aggregate-pushdown"></a>Aplicación de agregados    
- Ruta de acceso de ejecución normal para el cálculo de agregados para capturar las filas calificadas desde el nodo SCAN y agregar los valores en el modo por lotes. Aunque esto proporciona un buen rendimiento, con [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], la operación de agregación se puede insertar en el nodo SCAN para mejorar el rendimiento del cálculo de la agregación mediante órdenes de magnitud en la parte superior de la ejecución en el modo por lotes una vez que se cumplan las condiciones siguientes: 
+ Ruta de acceso de ejecución normal para el cálculo de agregados para capturar las filas calificadas desde el nodo SCAN y agregar los valores en el modo por lotes. Aunque esto proporciona un buen rendimiento, con [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], la operación de agregación se puede insertar en el nodo SCAN para mejorar el rendimiento del cálculo de la agregación mediante órdenes de magnitud en la parte superior de la ejecución en el modo por lotes una vez que se cumplan las condiciones siguientes: 
  
 -    Los agregados son `MIN`, `MAX`, `SUM`, `COUNT` y `COUNT(*)`. 
 -  El operador de agregación debe estar en la parte superior del nodo SCAN o el nodo SCAN con `GROUP BY`.
@@ -157,7 +157,7 @@ Por ejemplo, un hecho puede ser un registro que representa una venta de un produ
     
 Consideremos un elemento `Products` de tabla de dimensiones. Una clave principal típica será `ProductCode`, que normalmente se representa como tipo de datos de cadena. Para el rendimiento de las consultas, es aconsejable crear una clave suplente, normalmente una columna de enteros, para hacer referencia a la fila en la tabla de dimensiones de la tabla de hechos. 
     
-El índice de almacén de columnas ejecuta las consultas de análisis con combinaciones y predicados que implican claves basadas en enteros o números de forma muy eficiente. Pero en muchas cargas de trabajo de cliente, encontramos el uso de las columnas basadas en cadenas que se vinculan con tablas de dimensiones/hechos, lo que, como resultado, genera un rendimiento de la consulta del índice del almacén de columna diferente del esperado. [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] mejora el rendimiento de las consultas de análisis con las columnas basadas en cadenas notablemente mediante la aplicación de los predicados con las columnas de cadena en el nodo SCAN.    
+El índice de almacén de columnas ejecuta las consultas de análisis con combinaciones y predicados que implican claves basadas en enteros o números de forma muy eficiente. Pero en muchas cargas de trabajo de cliente, encontramos el uso de las columnas basadas en cadenas que se vinculan con tablas de dimensiones/hechos, lo que, como resultado, genera un rendimiento de la consulta del índice del almacén de columna diferente del esperado. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] mejora el rendimiento de las consultas de análisis con las columnas basadas en cadenas notablemente mediante la aplicación de los predicados con las columnas de cadena en el nodo SCAN.    
     
 La aplicación del predicado de cadena aprovecha el diccionario principal y secundario creado para que las columnas mejoren el rendimiento de las consultas. Por ejemplo, consideremos el segmento de columna de cadena dentro de un grupo de filas que consta de 100 valores de cadena distintos. Esto significa que se hace referencia a cada valor de cadena distinto 10 000 veces de media, lo que supone un millón de filas.    
     

@@ -14,12 +14,12 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc483082fe25fbed8a8e989544e189ccdc81bb73
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: a65e01d5d4e43e25d122c614508f8f9c1c05bf39
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596246"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236193"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introducción a los permisos de los motores de bases de datos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -100,7 +100,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `AUTHORIZATION` debe ser `GRANT`, `REVOKE` o `DENY`.  
   
--   `PERMISSION` establece las acciones permitidas o prohibidas. [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] puede especificar 230 permisos. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] tiene menos permisos porque algunas acciones no son pertinentes en Azure. Los permisos se muestran en el tema [Permissions &#40;Database Engine&#41;](../../../relational-databases/security/permissions-database-engine.md) (Permisos [motor de base de datos]) y en el gráfico al que se hace referencia más abajo.  
+-   `PERMISSION` establece las acciones permitidas o prohibidas. [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] puede especificar 230 permisos. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] tiene menos permisos porque algunas acciones no son pertinentes en Azure. Los permisos se muestran en el tema [Permissions &#40;Database Engine&#41;](../../../relational-databases/security/permissions-database-engine.md) (Permisos [motor de base de datos]) y en el gráfico al que se hace referencia más abajo.  
   
 -   `ON SECURABLE::NAME` es el tipo de elemento protegible (servidor, objeto de servidor, base de datos u objeto de base de datos) y su nombre. Algunos permisos no requieren `ON SECURABLE::NAME` porque este es inequívoco o bien no procede en el contexto. Por ejemplo, el permiso `CREATE TABLE` no requiere la cláusula `ON SECURABLE::NAME`. (Por ejemplo, `GRANT CREATE TABLE TO Mary;` permite a Mary crear tablas).  
   
@@ -157,7 +157,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  El primer permiso mencionado antes (`GRANT SELECT ON OBJECT::Region TO Ted;`) es el más pormenorizado, es decir, esa instrucción es el permiso mínimo posible que concede `SELECT`. No incluye permisos para los objetos subordinados. Se recomienda conceder siempre el permiso mínimo posible, pero, por el contrario, concederlo en los niveles superiores para simplificar el sistema de concesiones. Por tanto, si Ted necesita permisos para todo el esquema, conceda `SELECT` una vez en el nivel de esquema, en lugar de conceder `SELECT` en el nivel de tabla o vista varias veces. El diseño de la base de datos ejerce un impacto importante sobre el éxito que puede tener esta estrategia. Esta estrategia funcionará mejor si la base de datos está diseñada de forma que los objetos que necesiten permisos idénticos se incluyan en un único esquema.  
   
 ## <a name="list-of-permissions"></a>Lista de permisos  
- [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] tiene 230 permisos. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] tiene 219 permisos. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] tiene 214 permisos. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] tiene 195 permisos. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]y [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] tienen menos permisos porque solo exponen una parte del motor de base de datos, aunque cada uno tiene permisos que no son aplicables a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
+ [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] tiene 230 permisos. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] tiene 219 permisos. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] tiene 214 permisos. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] tiene 195 permisos. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]y [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] tienen menos permisos porque solo exponen una parte del motor de base de datos, aunque cada uno tiene permisos que no son aplicables a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
  
  [!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
  

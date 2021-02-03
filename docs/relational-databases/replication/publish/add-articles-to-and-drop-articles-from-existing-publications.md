@@ -21,12 +21,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 183619e1802b435fbc21c2b44e32848bf7e578de
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 7c3f54328d1c614f04f5f9fb9d2571d78f1b8733
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171907"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236642"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Agregar y quitar artículos de publicaciones existentes
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "98171907"
  Como se indicó antes, en algunos casos es necesario quitar, volver a crear y sincronizar las suscripciones después de quitar un artículo. Para obtener más información, consulte [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md) y [Sincronizar datos](../../../relational-databases/replication/synchronize-data.md).  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** o versiones posteriores y **[!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] Service Pack 1** o versiones posteriores permiten eliminar una tabla con el comando **DROP TABLE** DDL para artículos que participan en la replicación transaccional. Si un DROP TABLE DDL es compatible con las publicaciones, la operación DROP TABLE quitará la tabla de la publicación y la base de datos. El agente de registro del LOG enviará un comando de limpieza de la base de datos de distribución de la tabla quitada y realizará la limpieza de los metadatos del publicador. Si el registro del LOG no ha procesado todas las entradas del registro que hacen referencia a la tabla quitada, omitirá los comandos nuevos que estén asociados a la tabla quitada. Los registros ya procesados se entregarán a la base de datos de distribución. Se pueden aplicar a la base de datos del suscriptor si el agente de distribución los procesa antes de que el registro del LOG limpie los artículos obsoletos (quitados). La configuración **predeterminada** para todas las publicaciones de replicación transaccional es no admitir DROP TABLE DDL. En [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) se incluyen más detalles sobre esta mejora.
+ > **[!INCLUDE[sssql14-md](../../../includes/sssql14-md.md)] Service Pack 2** o versiones posteriores y **[!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] Service Pack 1** o versiones posteriores permiten eliminar una tabla con el comando **DROP TABLE** DDL para artículos que participan en la replicación transaccional. Si un DROP TABLE DDL es compatible con las publicaciones, la operación DROP TABLE quitará la tabla de la publicación y la base de datos. El agente de registro del LOG enviará un comando de limpieza de la base de datos de distribución de la tabla quitada y realizará la limpieza de los metadatos del publicador. Si el registro del LOG no ha procesado todas las entradas del registro que hacen referencia a la tabla quitada, omitirá los comandos nuevos que estén asociados a la tabla quitada. Los registros ya procesados se entregarán a la base de datos de distribución. Se pueden aplicar a la base de datos del suscriptor si el agente de distribución los procesa antes de que el registro del LOG limpie los artículos obsoletos (quitados). La configuración **predeterminada** para todas las publicaciones de replicación transaccional es no admitir DROP TABLE DDL. En [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) se incluyen más detalles sobre esta mejora.
 
   
 ## <a name="see-also"></a>Consulte también  

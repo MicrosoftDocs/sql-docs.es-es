@@ -12,16 +12,16 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 25e6685166177b6adc436a1fc024d899be5f0233
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 4b2f20965b3bdff081368c2e1fcaa2bc255aca47
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96128837"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250106"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Usar SQL Server Profiler para crear un conjunto de recopilación de Seguimiento de SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] puede aprovechar la funcionalidad de seguimiento del lado servidor de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exportar una definición de seguimiento y emplearla después para crear un conjunto de recopilación que use el tipo de recopilador genérico de Seguimiento de SQL. En este proceso hay dos partes:  
+  En [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] puede aprovechar la funcionalidad de seguimiento del lado servidor de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exportar una definición de seguimiento y emplearla después para crear un conjunto de recopilación que use el tipo de recopilador genérico de Seguimiento de SQL. En este proceso hay dos partes:  
   
 1.  Crear y exportar un seguimiento de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   

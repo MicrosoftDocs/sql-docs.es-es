@@ -34,12 +34,12 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 710a6211b588ab0dd4745b41af1f330c81241294
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 375a31ab7ec07bdbc35251d22940a17df047e578
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170507"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237466"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 
@@ -58,7 +58,7 @@ DBCC SHOW_STATISTICS muestra el encabezado, el histograma y el vector de densida
 > A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, la vista de administración dinámica [sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md) está disponible para recuperar mediante programación la información de encabezado incluida en el objeto de estadísticas para las estadísticas incrementales.
 
 > [!IMPORTANT]
-> A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU2, la vista de administración dinámica [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) está disponible para recuperar mediante programación la información del histograma incluida en el objeto de estadísticas.
+> A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU2, la vista de administración dinámica [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) está disponible para recuperar mediante programación la información del histograma incluida en el objeto de estadísticas.
 
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -120,7 +120,7 @@ En la tabla siguiente se describen las columnas devueltas en el conjunto de resu
 |String Index|Sí indica que el objeto de estadísticas contiene estadísticas de resumen de las cadenas para mejorar los cálculos de cardinalidad de los predicados de consulta que utilizan el operador LIKE; por ejemplo, `WHERE ProductName LIKE '%Bike'`. Las estadísticas de resumen de cadenas se almacenan de forma independiente del histograma y se crean en la primera columna de clave del objeto de estadísticas cuando es de tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text** o **ntext**.|  
 |Expresión de filtro|Predicado del subconjunto de filas de la tabla incluido en el objeto de estadísticas. NULL = Estadísticas no filtradas. Para más información sobre los predicados filtrados, vea [Crear índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md). Para más información sobre las estadísticas filtradas, vea [Estadísticas](../../relational-databases/statistics/statistics.md).|  
 |Filas sin filtrar|Número total de filas de la tabla antes de aplicar la expresión de filtro. Si Expresión de filtro es NULL, las Filas sin filtrar son iguales a Filas.|  
-|Persisted Sample Percent|Porcentaje de ejemplo persistente empleado en las actualizaciones de estadísticas en las que no se especifica explícitamente un porcentaje de muestreo. Si el valor es cero, significa que no hay establecido ningún porcentaje de ejemplo persistente para esta estadística.<br /><br /> **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU4| 
+|Persisted Sample Percent|Porcentaje de ejemplo persistente empleado en las actualizaciones de estadísticas en las que no se especifica explícitamente un porcentaje de muestreo. Si el valor es cero, significa que no hay establecido ningún porcentaje de ejemplo persistente para esta estadística.<br /><br /> **Se aplica a:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4| 
   
 En la tabla siguiente se describen las columnas devueltas en el conjunto de resultados si se especifica DENSITY_VECTOR.
   

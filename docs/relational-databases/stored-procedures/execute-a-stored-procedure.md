@@ -20,17 +20,17 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7cff43378cdffd2015040d9de4d8ffb7b014291
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 115220ef0fabbe98a0c4a1bf5f185409c5a82829
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475306"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250289"
 ---
 # <a name="execute-a-stored-procedure"></a>Ejecutar un procedimiento almacenado
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-En este tema se describe cómo ejecutar un procedimiento almacenado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+En este tema se describe cómo ejecutar un procedimiento almacenado en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Hay dos formas diferentes de ejecutar un procedimiento almacenado. El primer método y más común es que una aplicación o un usuario llame al procedimiento. El segundo método consiste en establecer el procedimiento para que se ejecute automáticamente cuando se inicie una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando una aplicación o un usuario llama a un procedimiento, la palabra clave EXECUTE o EXEC de [!INCLUDE[tsql](../../includes/tsql-md.md)] se indica explícitamente en la llamada. Como alternativa, se puede llamar al procedimiento y ejecutarlo sin la palabra clave si el procedimiento es la primera instrucción del lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   

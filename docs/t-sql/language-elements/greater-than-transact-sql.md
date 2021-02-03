@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - Greater
 - Than
@@ -24,17 +24,17 @@ ms.assetid: 50a7b098-a3fb-4df6-ae42-1272d6346338
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9a41c2123ff477ecf3321d6fa03de4ed8fe27e7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 17d559da1affd2fea887620bc7da3b81d06c53ef
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98085585"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235985"
 ---
 # <a name="gt-greater-than-transact-sql"></a>&gt; (Mayor que) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Compara dos expresiones (un operador de comparación) en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Cuando se comparan expresiones no NULL, el resultado es TRUE si el operando de la izquierda tiene un valor mayor que el de la derecha; de lo contrario, el resultado es FALSE. Si uno o los dos operandos son NULL, vea el tema [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
+  Compara dos expresiones (un operador de comparación) en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Cuando se comparan expresiones no NULL, el resultado es TRUE si el operando de la izquierda tiene un valor mayor que el de la derecha; de lo contrario, el resultado es FALSE. Si uno o los dos operandos son NULL, vea el tema [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

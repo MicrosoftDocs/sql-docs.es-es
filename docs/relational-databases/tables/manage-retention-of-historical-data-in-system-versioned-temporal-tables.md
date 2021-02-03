@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0dac2b5d344969f96016a86622ee4e07ab8c23d
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2e37f8234a1b8ee2ab72c76a423ea72ac9d3f14a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98168189"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235824"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Administración de la retención de datos históricos en las tablas temporales con versiones del sistema
 
@@ -51,9 +51,9 @@ Una vez que determine el período de retención de datos, el siguiente paso es d
 ## <a name="using-stretch-database-approach"></a>Uso del enfoque de Stretch Database
 
 > [!NOTE]
-> El uso del enfoque de Stretch Database solo se aplica a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y no se aplica a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+> El uso del enfoque de Stretch Database solo se aplica a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] y no se aplica a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
-[Stretch Database](../../sql-server/stretch-database/stretch-database.md) en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migra los datos históricos de forma transparente a Azure. Para obtener seguridad adicional, puede cifrar los datos en movimiento con la característica [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) de SQL Server. Además, puede usar [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md) y otras características de seguridad avanzadas de SQL Server con Temporal y Stretch Database para proteger los datos.
+[Stretch Database](../../sql-server/stretch-database/stretch-database.md) en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] migra los datos históricos de forma transparente a Azure. Para obtener seguridad adicional, puede cifrar los datos en movimiento con la característica [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) de SQL Server. Además, puede usar [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md) y otras características de seguridad avanzadas de SQL Server con Temporal y Stretch Database para proteger los datos.
 
 Con el enfoque de Stretch Database, puede ajustar algunas o todas las tablas de historial temporales en Azure y SQL Server moverá de forma silenciosa los datos históricos a Azure. La habilitación del ajuste de una tabla de historial no cambia la forma en la que interactúa con la tabla temporal en términos de modificación de datos y consultas temporales.
 
@@ -70,7 +70,7 @@ Puede configurar una tabla de historial temporal para Stretch con el Asistente d
 
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Uso del Asistente de Stretch para ajustar la tabla de historial completo
 
-El método más sencillo para los principiantes es usar el Asistente de Stretch para habilitar el ajuste para la base de datos completa y, después, seleccionar la tabla de historial temporal en el Asistente de Stretch (en este ejemplo se supone que ha configurado la tabla de departamento como una tabla temporal con versiones del sistema en una base de datos vacía). En [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], no puede hacer clic con el botón derecho en la propia tabla de historial temporal y hacer clic en Stretch.
+El método más sencillo para los principiantes es usar el Asistente de Stretch para habilitar el ajuste para la base de datos completa y, después, seleccionar la tabla de historial temporal en el Asistente de Stretch (en este ejemplo se supone que ha configurado la tabla de departamento como una tabla temporal con versiones del sistema en una base de datos vacía). En [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], no puede hacer clic con el botón derecho en la propia tabla de historial temporal y hacer clic en Stretch.
 
 1. Haga clic con el botón derecho en la base de datos y seleccione **Tareas**, seleccione **Stretch** y, después, haga clic en **Habilitar** para iniciar el asistente.
 2. En la ventana **Seleccionar tablas** , seleccione la casilla de la tabla de historial temporal y haga clic en Siguiente.

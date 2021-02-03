@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - INDEXPROPERTY
 - INDEXPROPERTY_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db2534117dff3c3cfeac92f5e3cec1b12713eb33
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: f5a6a6491baa20201ead80fe59b85ae5697624b3
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097239"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237453"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsStatistics**|*index_or_statistics_name* son estadísticas creadas por la instrucción CREATE STATISTICS o por la opción AUTO_CREATE_STATISTICS de ALTER DATABASE.|1 = True<br /><br /> 0 = Falso o índice XML.|  
 |**IsUnique**|El índice es exclusivo.|1 = True<br /><br /> 0 = Falso o índice XML.|  
 |**IsColumnstore**|El índice es un índice de almacén de columnas optimizado de memoria xVelocity.|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> 1 = True<br /><br /> 0 = False| 
-|**IsOptimizedForSequentialKey**|El índice tiene habilitada la optimización para inserciones de la última página.|**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores. <br><br>1 = True<br><br>0 = False| 
+|**IsOptimizedForSequentialKey**|El índice tiene habilitada la optimización para inserciones de la última página.|**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] y versiones posteriores. <br><br>1 = True<br><br>0 = False| 
   
 ## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  

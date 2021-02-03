@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - BACKUP_TSQL
 - BACKUP
@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016'
-ms.openlocfilehash: 55b1a81a5cbb5078f331df0fb7f1f93048555337
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 5b2a61299d684dcd5711969feb1ef1cd16f43b32
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170567"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237749"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -250,7 +250,7 @@ Especifica un archivo de disco o un dispositivo de cinta, o bien un servicio Mic
 > [!NOTE]
 > El dispositivo de disco NUL descartará toda la información que se le envíe y solo se debe usar para realizar pruebas. No se debe usar en entornos de producción.
 > [!IMPORTANT]
-> A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], cuando se hagan copias de seguridad en URL, solo se podrán hacer en un único dispositivo. Para hacer una copia de seguridad en varios dispositivos al realizar copias de seguridad en direcciones URL, debe usar [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores, y tokens de firma de acceso compartido (SAS). Para ver ejemplos sobre cómo crear una Firma de acceso compartido, vea [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).
+> A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], cuando se hagan copias de seguridad en URL, solo se podrán hacer en un único dispositivo. Para hacer una copia de seguridad en varios dispositivos al realizar copias de seguridad en direcciones URL, debe usar [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores, y tokens de firma de acceso compartido (SAS). Para ver ejemplos sobre cómo crear una Firma de acceso compartido, vea [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).
 
 **URL se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y versiones posteriores)
 
@@ -288,7 +288,7 @@ Especifica las opciones que se van a utilizar con una operación de copia de seg
 CREDENTIAL **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y versiones posteriores)
 Solo se usa al crear una copia de seguridad en el servicio Microsoft Azure Blob Storage.
 
-FILE_SNAPSHOT **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores)
+FILE_SNAPSHOT **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores)
 
 Se usa para crear una instantánea de Azure de los archivos de base de datos cuando todos los archivos de base de datos de SQL Server se han almacenado usando el servicio Azure Blob Storage. Para más información, vea [Archivos de datos de SQL Server en Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). La copia de seguridad de instantánea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toma instantáneas de Azure de los archivos de base de datos (archivos de datos y de registro) en un estado coherente. Un conjunto coherente de instantáneas de Azure conforma una copia de seguridad y se registra en el archivo de copia de seguridad. La única diferencia entre `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` y `BACKUP LOG TO URL WITH FILE_SNAPSHOT` es que este último también trunca el registro de transacciones, cosa que no hace el primero. Con la copia de seguridad de instantánea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], después de la copia de seguridad completa inicial que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere para establecer la cadena de copia de seguridad, solo se necesita una copia de seguridad del registro de transacciones para restaurar una base de datos al momento en el tiempo de la copia de seguridad del registro de transacciones. Además, solo se necesitan dos copias de seguridad del registro de transacciones para restaurar una base de datos a un momento en el tiempo dentro del intervalo entre ambas copias de seguridad del registro de transacciones.
 
@@ -696,9 +696,9 @@ La instrucción BACKUP no se permite en una transacción explícita o implícita
 
 Se pueden realizar operaciones de copia de seguridad entre plataformas, incluso entre diferentes tipos de procesador, siempre que el sistema operativo admita la intercalación de la base de datos.
 
-Desde [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], el valor `MAXTRANSFERSIZE` **mayor que 65536 (64 KB)** habilita un algoritmo de compresión optimizada para bases de datos con [cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) que, en primer lugar, descifra una página, la comprime y, luego, la vuelve a cifrar. Si `MAXTRANSFERSIZE` no se especifica o si se usa `MAXTRANSFERSIZE = 65536` (64 KB), la compresión de copia de seguridad en bases de datos con cifrado TDE comprime directamente las páginas cifradas, con lo cual existe la posibilidad de no lograr una buena razón de compresión. Para más información, vea [Backup Compression for TDE-enabled Databases](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases) (Compresión de copia de seguridad en bases de datos con TDE habilitado).
+Desde [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], el valor `MAXTRANSFERSIZE` **mayor que 65536 (64 KB)** habilita un algoritmo de compresión optimizada para bases de datos con [cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) que, en primer lugar, descifra una página, la comprime y, luego, la vuelve a cifrar. Si `MAXTRANSFERSIZE` no se especifica o si se usa `MAXTRANSFERSIZE = 65536` (64 KB), la compresión de copia de seguridad en bases de datos con cifrado TDE comprime directamente las páginas cifradas, con lo cual existe la posibilidad de no lograr una buena razón de compresión. Para más información, vea [Backup Compression for TDE-enabled Databases](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases) (Compresión de copia de seguridad en bases de datos con TDE habilitado).
 
-Desde [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5, ya no es necesario establecer `MAXTRANSFERSIZE` para habilitar este algoritmo de compresión optimizada con TDE. Si se especifica el comando de copia de seguridad `WITH COMPRESSION` o la configuración de servidor  *predeterminada de compresión de copia de seguridad* se establece en 1, `MAXTRANSFERSIZE` aumentará automáticamente a 128K para habilitar el algoritmo optimizado. Si se especifica `MAXTRANSFERSIZE` en el comando de copia de seguridad con un valor > 64K, se respetará el valor proporcionado. En otras palabras, SQL Server nunca disminuirá automáticamente el valor, solo lo aumentará. Si necesita hacer una copia de seguridad de una base de datos con cifrado TDE con `MAXTRANSFERSIZE = 65536`, debe especificar `WITH NO_COMPRESSION` o asegurarse de que la configuración de servidor *predeterminada de compresión de copia de seguridad* esté establecida en 0.
+Desde [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU5, ya no es necesario establecer `MAXTRANSFERSIZE` para habilitar este algoritmo de compresión optimizada con TDE. Si se especifica el comando de copia de seguridad `WITH COMPRESSION` o la configuración de servidor  *predeterminada de compresión de copia de seguridad* se establece en 1, `MAXTRANSFERSIZE` aumentará automáticamente a 128K para habilitar el algoritmo optimizado. Si se especifica `MAXTRANSFERSIZE` en el comando de copia de seguridad con un valor > 64K, se respetará el valor proporcionado. En otras palabras, SQL Server nunca disminuirá automáticamente el valor, solo lo aumentará. Si necesita hacer una copia de seguridad de una base de datos con cifrado TDE con `MAXTRANSFERSIZE = 65536`, debe especificar `WITH NO_COMPRESSION` o asegurarse de que la configuración de servidor *predeterminada de compresión de copia de seguridad* esté establecida en 0.
 
 > [!NOTE]
 > Hay algunos casos en los que el `MAXTRANSFERSIZE` predeterminado es mayor que 64 KB:
@@ -706,7 +706,7 @@ Desde [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5, ya no es n
 > - Cuando la base de datos tiene varios archivos de datos creados, usa `MAXTRANSFERSIZE` > 64 KB.
 > - Al realizar una copia de seguridad en una dirección URL, el `MAXTRANSFERSIZE = 1048576` predeterminado (1 MB)
 >
-> Incluso si se aplica alguna de estas condiciones, debe establecer explícitamente `MAXTRANSFERSIZE` mayor que 64 KB en el comando de copia de seguridad para poder obtener el algoritmo de compresión de copia de seguridad optimizado, a menos que esté utilizando [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5 o una versión posterior.
+> Incluso si se aplica alguna de estas condiciones, debe establecer explícitamente `MAXTRANSFERSIZE` mayor que 64 KB en el comando de copia de seguridad para poder obtener el algoritmo de compresión de copia de seguridad optimizado, a menos que esté utilizando [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU5 o una versión posterior.
 
 De forma predeterminada, cada operación de copia de seguridad correcta agrega una entrada en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en el registro de eventos del sistema. Si hace una copia de seguridad del registro de transacciones con frecuencia, estos mensajes que indican la corrección de la operación pueden acumularse rápidamente, con lo que se crean registros de errores muy grandes que pueden dificultar la búsqueda de otros mensajes. En esos casos, puede suprimir estas entradas de registro utilizando la marca de seguimiento 3226 si ninguno de los scripts depende de esas entradas. Para obtener más información, vea [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 

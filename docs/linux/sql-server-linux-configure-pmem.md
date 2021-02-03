@@ -9,22 +9,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15'
-ms.openlocfilehash: 4630a96f1abf961174ece179aabfd160a5784ad9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5b99f12aebc27d04b384ff0b8d51b5359ca76d19
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471616"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236917"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Configuración de la memoria persistente (PMEM) para SQL Server en Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-Este artículo describe cómo configurar la memoria persistente (PMEM) para [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] en Linux.
+Este artículo describe cómo configurar la memoria persistente (PMEM) para [!INCLUDE[sqlv15](../includes/sssql19-md.md)] en Linux.
 
 ## <a name="overview"></a>Información general
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] tiene una serie de características en memoria que usan la memoria persistente. En este documento se describen los pasos necesarios para configurar la memoria persistente para SQL Server en Linux.
+[!INCLUDE[sqlv15](../includes/sssql19-md.md)] tiene una serie de características en memoria que usan la memoria persistente. En este documento se describen los pasos necesarios para configurar la memoria persistente para SQL Server en Linux.
 
 > [!NOTE]
 > El término _habilitación_ se incluyó para transmitir el concepto de trabajar con un sistema de archivos con reconocimiento de memoria persistente. Se facilita acceso directo al sistema de archivos desde aplicaciones de espacio de usuario mediante la asignación de memoria (`mmap()`). Cuando se crea una asignación de memoria para un archivo, la aplicación puede emitir instrucciones de carga o almacenamiento que omiten por completo la pila de E/S. Esto se considera un método de acceso a archivos "habilitado" desde la perspectiva de la aplicación de extensión de host (que es el código de caja negra que permite a SQLPAL interactuar con el sistema operativo Windows o Linux).

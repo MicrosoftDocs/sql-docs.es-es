@@ -11,12 +11,12 @@ ms.topic: how-to
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c7bffa36b256b959048953a5438fec6a336c3acc
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: dc6bcbecdb29cdf0cf1fca8c41e971463bb0d6b9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534889"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236361"
 ---
 # <a name="troubleshoot-common-issues-for-always-encrypted-with-secure-enclaves"></a>Solución de problemas comunes de Always Encrypted con enclaves seguros
 
@@ -29,7 +29,7 @@ Para obtener información sobre cómo ejecutar consultas mediante enclaves segur
 Para ejecutar instrucciones mediante un enclave seguro, debe habilitar Always Encrypted y especificar una dirección URL de atestación para la conexión de base de datos, como se explica en [Requisitos previos para ejecutar instrucciones con enclaves seguros](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves). Pero se producirá un error en la conexión si especifica una dirección URL de atestación pero la base de datos en [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] o la instancia de [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] de destino no es compatible con los enclaves seguros, o bien no se ha configurado correctamente.
 
 - Si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], compruebe que en la base de datos se utiliza la configuración de hardware de la [serie DC](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series). Para obtener más información, vea [Habilitación de Intel SGX para la base de datos de Azure SQL](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx).
-- Si usa [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], compruebe que el enclave seguro está configurado correctamente para la instancia. Para obtener más información, vea [Configuración del enclave seguro en SQL Server](always-encrypted-enclaves-configure-enclave-type.md).
+- Si usa [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], compruebe que el enclave seguro está configurado correctamente para la instancia. Para obtener más información, vea [Configuración del enclave seguro en SQL Server](always-encrypted-enclaves-configure-enclave-type.md).
 
 ## <a name="attestation-errors-when-using-microsoft-azure-attestation"></a>Errores de atestación al usar Microsoft Azure Attestation
 
@@ -61,7 +61,7 @@ Se pueden producir errores en varios pasos del flujo de trabajo anterior debido 
 ## <a name="attestation-errors-when-using-host-guardian-service"></a>Errores de atestación al usar el Servicio de protección de host
 
 > [!NOTE]
-> Esta sección solo se aplica a [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
+> Esta sección solo se aplica a [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
 
 Antes de que un controlador cliente envíe una instrucción T-SQL a [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] para su ejecución, el controlador desencadena el siguiente flujo de trabajo de atestación de enclave mediante el Servicio de protección de host (HGS).
 

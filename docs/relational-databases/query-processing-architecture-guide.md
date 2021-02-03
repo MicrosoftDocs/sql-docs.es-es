@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 303b560a40d5c87e49a8d5d2693aa0f814d03f45
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 05f33d170224ee079b4d23598e88e1802bebfbbb
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170517"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237675"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -695,7 +695,7 @@ En los ejemplos siguientes se muestra qué planes de ejecución se quitan de la 
 * Se suele hacer referencia a un plan de ejecución como si su costo nunca llegara a ser cero. El plan permanece en la caché de planes y no se quita a menos que haya presión de memoria y el costo actual sea cero.
 * Se insertó un plan de ejecución ad hoc y no se le vuelve a hacer referencia antes de que exista presión de memoria. Dado que los planes ad hoc se inician con un costo actual de cero, cuando [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] examina el plan de ejecución, verá el costo actual de cero y quitará el plan de la caché de planes. El plan de ejecución ad hoc permanece en la caché de planes con el costo actual de cero cuando ya no hay presión de memoria.
 
-Para quitar manualmente un único plan o todos los planes de la memoria caché, utilice [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). También se puede usar [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) para borrar cualquier memoria caché, incluida la caché de planes. Desde [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` borra la memoria caché (de plan) de procedimientos de la base de datos en ámbito. Los cambios en algunos parámetros de configuración mediante [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) y [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) también harán que se eliminen los planes de la caché de planes. Puede encontrar la lista de estos parámetros de configuración en la sección Comentarios del artículo [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks). Este tipo de cambios de configuración registrarán el siguiente mensaje informativo en el registro de errores:
+Para quitar manualmente un único plan o todos los planes de la memoria caché, utilice [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). También se puede usar [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) para borrar cualquier memoria caché, incluida la caché de planes. Desde [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` borra la memoria caché (de plan) de procedimientos de la base de datos en ámbito. Los cambios en algunos parámetros de configuración mediante [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) y [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) también harán que se eliminen los planes de la caché de planes. Puede encontrar la lista de estos parámetros de configuración en la sección Comentarios del artículo [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks). Este tipo de cambios de configuración registrarán el siguiente mensaje informativo en el registro de errores:
 
 > `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations.`
 
@@ -1023,7 +1023,7 @@ Durante la optimización de una consulta, [!INCLUDE[ssNoVersion](../includes/ssn
 
 Entre las construcciones que impiden el paralelismo se incluyen las siguientes:
 -   **UDF escalares**        
-    Para obtener más información sobre las funciones escalares definidas por el usuario, vea [Crear funciones definidas por el usuario](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). A partir de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] tiene la capacidad de insertar estas funciones y desbloquear el uso del paralelismo durante el procesamiento de consultas. Para obtener más información sobre la inserción de UDF escalares, vea [Procesamiento de consultas inteligente en bases de datos SQL](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
+    Para obtener más información sobre las funciones escalares definidas por el usuario, vea [Crear funciones definidas por el usuario](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). A partir de [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] tiene la capacidad de insertar estas funciones y desbloquear el uso del paralelismo durante el procesamiento de consultas. Para obtener más información sobre la inserción de UDF escalares, vea [Procesamiento de consultas inteligente en bases de datos SQL](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
     
 -   **Remote Query**        
     Para obtener más información sobre Remote Query, vea [Referencia de operadores lógicos y físicos del plan de presentación](../relational-databases/showplan-logical-and-physical-operators-reference.md).
@@ -1098,7 +1098,7 @@ Hasta [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], el operador Insert tambié
 
 A partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] y del nivel de compatibilidad de la base de datos 110, la instrucción `SELECT … INTO` se puede ejecutar en paralelo. Otras formas de operadores Insert funcionan de la misma manera que se describe para [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
 
-A partir de [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] y del nivel de compatibilidad de la base de datos 130, la instrucción `INSERT … SELECT` se puede ejecutar en paralelo al realizar la inserción en montones o en índices de almacén de columnas (CCI) agrupados y mediante la sugerencia TABLOCK. Las inserciones en las tablas temporales locales (identificadas por el prefijo #) y las tablas temporales globales (identificadas por prefijos ##) también se habilitan para el paralelismo mediante la sugerencia TABLOCK. Para más información, vea [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices).
+A partir de [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] y del nivel de compatibilidad de la base de datos 130, la instrucción `INSERT … SELECT` se puede ejecutar en paralelo al realizar la inserción en montones o en índices de almacén de columnas (CCI) agrupados y mediante la sugerencia TABLOCK. Las inserciones en las tablas temporales locales (identificadas por el prefijo #) y las tablas temporales globales (identificadas por prefijos ##) también se habilitan para el paralelismo mediante la sugerencia TABLOCK. Para más información, vea [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices).
 
 Los cursores estáticos y los dinámicos pueden llenarse mediante planes de ejecución en paralelo. Sin embargo, el comportamiento de los cursores dinámicos solo puede proporcionarse mediante la ejecución en serie. El optimizador de consultas siempre genera un plan de ejecución en serie para una consulta que es parte de un cursor dinámico.
 
@@ -1108,7 +1108,7 @@ El grado de paralelismo establece el número de procesadores que se van a utiliz
 1.  Nivel de servidor, mediante la [opción de configuración de servidor](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) de **grado máximo de paralelismo (MAXDOP)** .</br> **Se aplica a:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
     > [!NOTE]
-    > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] presenta recomendaciones automáticas para establecer la opción de configuración de servidor MAXDOP durante el proceso de instalación. La interfaz de usuario del programa de instalación permite aceptar la configuración recomendada o introducir su propio valor. Para obtener más información, vea la [página Configuración del Motor de base de datos: MaxDOP](../sql-server/install/instance-configuration.md#maxdop).
+    > [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] presenta recomendaciones automáticas para establecer la opción de configuración de servidor MAXDOP durante el proceso de instalación. La interfaz de usuario del programa de instalación permite aceptar la configuración recomendada o introducir su propio valor. Para obtener más información, vea la [página Configuración del Motor de base de datos: MaxDOP](../sql-server/install/instance-configuration.md#maxdop).
 
 2.  Nivel de carga de trabajo, con la [opción de configuración del grupo de cargas de trabajo Resource Governor](../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.</br> **Se aplica a:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
@@ -1273,7 +1273,7 @@ En [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], se ha perfeccionado el rend
 
 > [!NOTE]
 > Hasta [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], las tablas e índices con particiones solo se admiten en las ediciones Enterprise, Developer y Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].   
-> A partir de [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1, las tablas e índices con particiones también se admiten en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition. 
+> A partir de [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1, las tablas e índices con particiones también se admiten en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition. 
 
 ### <a name="new-partition-aware-seek-operation"></a>Nueva operación de búsqueda orientada a particiones
 

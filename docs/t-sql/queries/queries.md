@@ -7,25 +7,25 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e79bf08e7cbd4364d473a96032e226758b724134
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: abe6b791139a4fbc110b4aeb43e0de267a927e96
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460928"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235996"
 ---
 # <a name="queries"></a>Consultas
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  El lenguaje de manipulación de datos (DML) es un vocabulario usado para recuperar y trabajar con datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y en SQL Database. La mayoría funciona también en [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (revise cada instrucción individual para más información). Use estas instrucciones para agregar, modificar, consultar o quitar datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  El lenguaje de manipulación de datos (DML) es un vocabulario usado para recuperar y trabajar con datos en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] y en SQL Database. La mayoría funciona también en [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (revise cada instrucción individual para más información). Use estas instrucciones para agregar, modificar, consultar o quitar datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
  En la siguiente tabla se describen las instrucciones DML que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

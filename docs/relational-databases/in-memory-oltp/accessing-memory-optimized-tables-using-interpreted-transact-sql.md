@@ -11,12 +11,12 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c88fd07e9af86a3c12561935364514b23bc2ea91
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 3bce064f00aa3f16a9fc4710fc9dd7dcd53e1534
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172287"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236867"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Acceso a tablas con optimización para memoria mediante Transact-SQL interpretado
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "98172287"
   
 [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado hace referencia a procedimientos almacenados o lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] distintos de un procedimiento almacenado compilado de forma nativa. El acceso de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas optimizadas para memoria se conoce como acceso de interoperabilidad.  
 
-A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], las consultas en [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado puede examinar tablas optimizadas para memoria en paralelo, en lugar de solamente en modo de serie.
+A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], las consultas en [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado puede examinar tablas optimizadas para memoria en paralelo, en lugar de solamente en modo de serie.
 
 También se puede tener acceso a las tablas con optimización para memoria mediante un procedimiento almacenado compilado de forma nativa. Los procedimientos almacenados compilados de forma nativa se recomiendan para las operaciones OLTP donde el rendimiento es un factor crítico.  
   

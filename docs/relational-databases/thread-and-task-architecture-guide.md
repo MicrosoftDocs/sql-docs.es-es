@@ -23,12 +23,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02ddc1ad96f45ba67ed613ee7446d8a1c12e1e5b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 3eb9fd5897029fedb0e53378ecbe5f6c12f635ef
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171407"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237663"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guía de arquitectura de subprocesos y tareas
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ En resumen, una **solicitud** puede generar una o varias **tareas** para llevar 
 > -  El trabajo 2 está realizando tareas por debajo de milisegundos más cortas y, por lo tanto, es necesario esperar antes de que se agote su cuanto completo.     
 >
 > En este escenario y hasta [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], se permite que el trabajo 1 monopolice el programador porque tiene más tiempo de cuanto en general.   
-> A partir de [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], la programación cooperativa incluye la programación de tipo Déficit grande primero (LDF). Con la programación de LDF, se supervisan los patrones de uso del cuanto y un subproceso de trabajo no monopoliza un programador. En el mismo escenario, se permite que el trabajo 2 consuma repetidos cuantos antes de que el trabajo 1 tenga más cuanto, por lo que se evita que el trabajo 1 monopolice el programador de forma no deseada.
+> A partir de [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], la programación cooperativa incluye la programación de tipo Déficit grande primero (LDF). Con la programación de LDF, se supervisan los patrones de uso del cuanto y un subproceso de trabajo no monopoliza un programador. En el mismo escenario, se permite que el trabajo 2 consuma repetidos cuantos antes de que el trabajo 1 tenga más cuanto, por lo que se evita que el trabajo 1 monopolice el programador de forma no deseada.
 
 ### <a name="scheduling-parallel-tasks"></a>Programación de tareas paralelas
 Imagine un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configurado con MaxDOP 8 y que la afinidad de CPU se ha configurado para 24 CPU (programadores) en los nodos NUMA 0 y 1. Los programadores del 0 al 11 pertenecen al nodo NUMA 0, y los programadores del 12 al 23 pertenecen al nodo NUMA 1. Una aplicación envía la siguiente consulta (solicitud) al [!INCLUDE[ssde_md](../includes/ssde_md.md)]:

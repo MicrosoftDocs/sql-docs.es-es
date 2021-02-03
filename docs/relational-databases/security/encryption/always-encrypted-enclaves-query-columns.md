@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8aecf4b22cf02ae91d259f45daff1d2cd8414f97
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: bc92b0af972236b588369869afc5b023735ae699
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534694"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237132"
 ---
 # <a name="run-transact-sql-statements-using-secure-enclaves"></a>Configuración y uso de Always Encrypted con enclaves seguros
 
@@ -45,15 +45,15 @@ En las siguientes instrucciones del [Lenguaje de manipulación de datos (DML)](.
   - [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md)
   - [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md)
   - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select)
-  - Las [combinaciones](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] solo admiten combinaciones de bucle anidadas. [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] admite combinaciones de bucle anidadas, de hash y de combinación
-  - [Cláusula SELECT - ORDER BY (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Se admite en [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. No se admiten en [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
-  - [Cláusula SELECT - GROUP BY (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Se admite en [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. No se admiten en [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
+  - Las [combinaciones](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] solo admiten combinaciones de bucle anidadas. [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] admite combinaciones de bucle anidadas, de hash y de combinación
+  - [Cláusula SELECT - ORDER BY (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Se admite en [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. No se admiten en [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
+  - [Cláusula SELECT - GROUP BY (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Se admite en [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. No se admiten en [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
 - Las consultas que insertan, actualizan o eliminan filas, que a su vez desencadenan la inserción o eliminación de una clave de índice en un índice de una columna habilitada para el enclave. Para más información, vea [Creación y uso de índices en columnas de Always Encrypted con enclaves seguros](always-encrypted-enclaves-create-use-indexes.md).
 
 > [!NOTE]
 > Las operaciones en índices y consultas DML confidenciales que usan enclaves solo se admiten en columnas habilitadas para el enclave en las que se utiliza el cifrado aleatorio. No se admite el cifrado determinista.
 >
-> En [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], en las consultas confidenciales que utilizan enclaves en columnas de cadena de caracteres (`char`, `nchar`) es necesario usar una intercalación de criterio de ordenación binary2 (BIN2) para la columna. En [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], es necesario utilizar intercalaciones BIN2 o UTF-8.
+> En [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], en las consultas confidenciales que utilizan enclaves en columnas de cadena de caracteres (`char`, `nchar`) es necesario usar una intercalación de criterio de ordenación binary2 (BIN2) para la columna. En [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], es necesario utilizar intercalaciones BIN2 o UTF-8.
 
 ### <a name="dbcc-commands-using-secure-enclaves"></a>Comandos DBCC con enclaves seguros
 
@@ -67,7 +67,7 @@ El entorno debe cumplir los requisitos siguientes para admitir la ejecución de 
 - Debe obtener por parte del administrador del servicio de atestación una dirección URL de atestación del entorno.
 
   - Si usa [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] y el Servicio de protección de host (HGS), vea [Determinación y uso compartido de la dirección URL de atestación de HGS](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - Si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] y Microsoft Azure Attestation, vea [Determinación de la dirección URL de atestación de la directiva de atestación](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
+  - Si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] y Microsoft Azure Attestation, vea [Determinación de la dirección URL de atestación de la directiva de atestación](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation).
 
 - Si se va a conectar a la base de datos mediante la aplicación, debe usar un controlador cliente que admita Always Encrypted con enclaves seguros. La aplicación se debe conectar a la base de datos con Always Encrypted habilitado para la conexión de base de datos y el protocolo y la dirección URL de atestación configurados correctamente. Para obtener más información, vea [Desarrollo de aplicaciones mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-client-development.md).
 - Si usa SQL Server Management Studio (SSMS) o Azure SQL Data Studio, debe habilitar Always Encrypted y configurar el protocolo y la dirección URL de atestación al conectarse a la base de datos. Vea las secciones siguientes para obtener información.
@@ -104,7 +104,7 @@ Asegúrese de ejecutar las instrucciones desde una ventana de consulta que use u
 1. En el cuadro de diálogo **Conexión**, haga clic en **Avanzada...** .
 2. Para habilitar Always Encrypted para la conexión, establezca el campo **Always Encrypted** en **Habilitado**.
 3. Especifique el protocolo y la dirección URL de atestación.
-    - Si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)], establezca **Protocolo de atestación** en **Servicio de protección de host** y escriba la dirección URL de atestación del Servicio de protección de host en el campo **Dirección URL de atestación de enclave**.
+    - Si usa [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)], establezca **Protocolo de atestación** en **Servicio de protección de host** y escriba la dirección URL de atestación del Servicio de protección de host en el campo **Dirección URL de atestación de enclave**.
     - Si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], establezca **Protocolo de atestación** en **Azure Attestation** y escriba la dirección URL de atestación que hace referencia a la directiva de Microsoft Azure Attestation en el campo **Dirección URL de atestación de enclave**.
 
     ![Conexión al servidor con atestación mediante Azure Data Studio](./media/always-encrypted-enclaves/azure-data-studio-connect-with-enclaves.png)
@@ -191,7 +191,7 @@ GO
 
 La consulta siguiente ordena los registros de empleados en función de la columna `Salary` cifrada y recupera los 10 empleados con los salarios más altos.
 > [!NOTE]
-> La ordenación de columnas cifradas se admite en [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], pero no en [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
+> La ordenación de columnas cifradas se admite en [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], pero no en [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
 
 ```sql
 SELECT TOP(10) * FROM [HR].[Employees]

@@ -12,17 +12,17 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 71a245f6263b938cef7a3841b3570a3a9137a1db
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: a2dd5e112230540c519fad2b4926d70f374bbcfc
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172207"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236327"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicación en suscriptores de tablas con optimización para memoria
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Las tablas que actúan como instantáneas y suscriptores de replicación transaccional, excluida la replicación transaccional punto a punto, pueden configurarse como tablas optimizadas para memoria. Otras configuraciones de replicación no son compatibles con las tablas optimizadas para memoria. Esta característica está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].  
+  Las tablas que actúan como instantáneas y suscriptores de replicación transaccional, excluida la replicación transaccional punto a punto, pueden configurarse como tablas optimizadas para memoria. Otras configuraciones de replicación no son compatibles con las tablas optimizadas para memoria. Esta característica está disponible a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  
   
 ## <a name="two-configurations-are-required"></a>Son necesarias dos configuraciones  
   

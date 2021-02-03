@@ -12,12 +12,12 @@ ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f03f5dc54c525e850c7654c5860fb56d35ad75c7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a5568667a9618046556b5bc586ae241093603c35
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475606"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237315"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>Configuración del cifrado de columna mediante Always Encrypted con PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +27,7 @@ En este artículo se proporcionan los pasos necesarios para establecer la config
 ::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
-> Si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] y su instancia de SQL Server está configurada con un enclave seguro, puede ejecutar las operaciones criptográficas en contexto, sin sacar los datos de la base de datos. Vea [Configuración del cifrado de columnas en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md). Tenga en cuenta que PowerShell no admite el cifrado en contexto.
+> Si usa [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] y su instancia de SQL Server está configurada con un enclave seguro, puede ejecutar las operaciones criptográficas en contexto, sin sacar los datos de la base de datos. Vea [Configuración del cifrado de columnas en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md). Tenga en cuenta que PowerShell no admite el cifrado en contexto.
 
 ::: moniker-end
 Para más información sobre la compatibilidad de Always Encrypted con el módulo SqlServer de PowerShell, consulte [Configurar Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).

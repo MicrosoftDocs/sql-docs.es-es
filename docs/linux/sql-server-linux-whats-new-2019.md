@@ -7,12 +7,12 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9ec5d4f34d299876614383c79fb79f2c2be9114d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 10a60b3a56b4835f9c6e68918046a6ebb98e31ae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641296"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235886"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Novedades de SQL Server 2019 en Linux
 
@@ -41,8 +41,8 @@ Las actualizaciones se han realizado en SQL Server 2019 en Linux:
 |Mejoras de `tempdb` | De forma predeterminada, una nueva instalación de SQL Server en Linux crea varios archivos de datos `tempdb` en función del número de núcleos lógicos (con un máximo de 8 archivos de datos). Esto no es aplicable a actualizaciones de versión principal o secundaria en contexto. Cada archivo `tempdb` es de 8 MB con un crecimiento automático de 64 MB. Este comportamiento es similar a la instalación de SQL Server predeterminada en Windows. |
 | PolyBase en Linux | [Instale PolyBase](../relational-databases/polybase/polybase-linux-setup.md) en Linux para conectores que no son Hadoop.<br/><br/>[Asignación del tipo de PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Compatibilidad con Captura de datos modificados (CDC) | Captura de datos modificados (CDC) ahora es compatible con Linux para SQL Server 2019. |
-| Registro de contenedor de Microsoft | Ahora [Registro de contenedor de Microsoft](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) reemplaza a Docker Hub para nuevas imágenes de contenedor de Microsoft oficiales, incluido [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
-| Contenedores no raíz | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] presenta la capacidad de crear contenedores más seguros mediante el inicio del proceso de [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] como un usuario no raíz de forma predeterminada. Vea [Compilación y ejecución de contenedores de SQL Server como un usuario no raíz](./sql-server-linux-docker-container-security.md#buildnonrootcontainer) para más información. |
+| Registro de contenedor de Microsoft | Ahora [Registro de contenedor de Microsoft](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) reemplaza a Docker Hub para nuevas imágenes de contenedor de Microsoft oficiales, incluido [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]. |
+| Contenedores no raíz | [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] presenta la capacidad de crear contenedores más seguros mediante el inicio del proceso de [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] como un usuario no raíz de forma predeterminada. Vea [Compilación y ejecución de contenedores de SQL Server como un usuario no raíz](./sql-server-linux-docker-container-security.md#buildnonrootcontainer) para más información. |
 
 ## <a name="next-steps"></a>Pasos siguientes
 
