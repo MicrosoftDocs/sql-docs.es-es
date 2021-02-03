@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 893400411c6f3d2faf6313923aa0f6127a3f2cf0
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: dc1ff18d464c03d1eb5e96834f4d753bfead5559
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171077"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233979"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>access check cache (opciones de configuración del servidor)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ La opción **access check cache bucket count** controla el número de cubos de h
 
 La opción **access check cache quota** controla el número de entradas que se almacenan en la caché de resultados de comprobación de acceso. Cuando se alcanza el número máximo de entradas, las más antiguas se quitan de la caché de resultados de comprobación de acceso.
   
-Los valores predeterminados de 0 indican que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está administrando estas opciones. A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], los valores predeterminados se traducen a las configuraciones internas siguientes:
+Los valores predeterminados de 0 indican que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está administrando estas opciones. A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], los valores predeterminados se traducen a las configuraciones internas siguientes:
 -   En el caso de "check cache bucket count", el valor 0 establece un valor predeterminado de 256 cubos.
 -   En el caso de "access check cache quota", el valor 0 establece un valor predeterminado de 1024 entradas.
 

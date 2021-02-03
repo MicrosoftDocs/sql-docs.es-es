@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - HASHBYTES_TSQL
 - HASHBYTES
@@ -20,12 +20,12 @@ ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da6f1b1bdb357a6321207720d2ea64938f4ada41
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: dd4bc13a7d1e6d980ceb391c7dd548bf71a5acd3
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170247"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233223"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 
@@ -48,7 +48,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="arguments"></a>Argumentos
 
 `<algorithm>`  
-Identifica el algoritmo hash que se va a utilizar para realizar el hash de la entrada. Es un argumento requerido y no tiene valor predeterminado. Las comillas simples son necesarias. A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], todos los algoritmos están en desuso, salvo SHA2_256 y SHA2_512.  
+Identifica el algoritmo hash que se va a utilizar para realizar el hash de la entrada. Es un argumento requerido y no tiene valor predeterminado. Las comillas simples son necesarias. A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], todos los algoritmos están en desuso, salvo SHA2_256 y SHA2_512.  
   
 `@input`  
 Especifica una variable que contiene los datos en los que se va a realizar el hash. `@input` es **varchar**, **nvarchar** o **varbinary**.  
@@ -68,7 +68,7 @@ Especifica una expresión que se evalúa como un carácter o una cadena binaria 
 ## <a name="remarks"></a>Observaciones  
 Plantéese usar `CHECKSUM` o `BINARY_CHECKSUM` como alternativas para calcular un valor hash.
 
-Los algoritmos MD2, MD4, MD5, SHA y SHA1 están en desuso desde [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Use SHA2_256 o SHA2_512 en su lugar. Los algoritmos antiguos seguirán funcionando, pero generarán un evento de desuso.
+Los algoritmos MD2, MD4, MD5, SHA y SHA1 están en desuso desde [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Use SHA2_256 o SHA2_512 en su lugar. Los algoritmos antiguos seguirán funcionando, pero generarán un evento de desuso.
 
 ## <a name="examples"></a>Ejemplos  
 ### <a name="return-the-hash-of-a-variable"></a>Devuelve el valor hash de una variable  

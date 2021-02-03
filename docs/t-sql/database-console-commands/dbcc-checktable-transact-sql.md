@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 78a84099b202ca55588e1365b27d80004d2cdaa5
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: adf908dbd20532903ba8bcc40251419d0bb956d6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172617"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233231"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -156,7 +156,7 @@ La comprobación de coherencia lógica en índices varía según el nivel de com
          Estas comprobaciones de coherencia lógica realizan una comprobación cruzada de la tabla de índices interna del objeto de índice con la tabla de usuario a la que hace referencia. Para buscar las filas periféricas, se crea una consulta interna que lleve a cabo una intersección completa de las tablas internas y del usuario. La ejecución de esta consulta puede afectar mucho al rendimiento y no se puede realizar el seguimiento de su progreso. Por consiguiente, se recomienda especificar únicamente WITH EXTENDED_LOGICAL_CHECKS si cree que existen problemas del índice que no estén relacionados con daños físicos, o si las sumas de comprobación del nivel de página se han desactivado y sospecha que puedan existir daños de hardware de nivel de columna.    
     -   Si el índice es un índice filtrado, DBCC CHECKDB realizará las comprobaciones de coherencia para comprobar que las entradas de índice satisfacen el predicado de filtro.   
       
-- A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], no se ejecutarán de forma predeterminada comprobaciones adicionales en las columnas calculadas persistentes, las columnas UDT y los índices filtrados para evitar evaluaciones de expresiones costosas. Este cambio reduce considerablemente la duración de CHECKDB en bases de datos que contienen estos objetos. A pesar de ello, las comprobaciones de coherencia física de estos objetos siempre se completan. Solo cuando se especifica la opción EXTENDED_LOGICAL_CHECKS se realizarán las evaluaciones de expresiones además de las comprobaciones lógicas ya presentes (vista indexada, índices XML e índices espaciales) como parte de la opción EXTENDED_LOGICAL_CHECKS.
+- A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], no se ejecutarán de forma predeterminada comprobaciones adicionales en las columnas calculadas persistentes, las columnas UDT y los índices filtrados para evitar evaluaciones de expresiones costosas. Este cambio reduce considerablemente la duración de CHECKDB en bases de datos que contienen estos objetos. A pesar de ello, las comprobaciones de coherencia física de estos objetos siempre se completan. Solo cuando se especifica la opción EXTENDED_LOGICAL_CHECKS se realizarán las evaluaciones de expresiones además de las comprobaciones lógicas ya presentes (vista indexada, índices XML e índices espaciales) como parte de la opción EXTENDED_LOGICAL_CHECKS.
 -  Si el nivel de compatibilidad es 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) o inferior, a menos que se especifique NOINDEX, DBCC CHECKTABLE realizará las comprobaciones de coherencia física y lógica en una única tabla o vista indexada, y en todos sus índices XML y no agrupados. Los índices espaciales no se admiten.
     
  **Conocer el nivel de compatibilidad de una base de datos**    
