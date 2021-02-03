@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: ef87d8cdfb44d36faff5e06cfdc0b0f691142c03
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: ad05914c851b30c567f15cfa43e85299b37b81c5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170407"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235792"
 ---
 # <a name="performance-dashboard"></a>Panel de rendimiento
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,7 +76,7 @@ En el informe **Índices que faltan** se muestran los índices que es posible qu
 
 En el informe **Esperas** se filtran todas las esperas inactivas y en suspensión. Para más información sobre las esperas, vea [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) y [Optimización del rendimiento de SQL Server 2005 mediante esperas y colas](https://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc).
 
-Los informes **Consultas que consumen muchos recursos** se restablecen cuando se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque se borran los datos de las DMV subyacentes. A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], puede encontrar información detallada sobre las consultas que consumen muchos recursos en el Almacén de consultas. 
+Los informes **Consultas que consumen muchos recursos** se restablecen cuando se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque se borran los datos de las DMV subyacentes. A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], puede encontrar información detallada sobre las consultas que consumen muchos recursos en el Almacén de consultas. 
 
 
 > [!NOTE]

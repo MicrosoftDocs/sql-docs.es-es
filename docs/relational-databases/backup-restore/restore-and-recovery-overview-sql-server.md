@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ef3d409ae656776b870119ccd14cb211cc16b32c
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 72bf9910a86d66ac36cbebbb0be66f8a8df832e5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125554"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235770"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Información general sobre restauración y recuperación (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -179,9 +179,9 @@ Para obtener más información sobre el Asistente para recuperación de base de 
 -   [Asistente para la recuperación: uso de SSMS para crear o restaurar copias de seguridad de división](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> Recuperación acelerada de bases de datos
-La [recuperación acelerada de bases de datos](/azure/sql-database/sql-database-accelerated-database-recovery/) está disponible en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La recuperación acelerada de bases de datos mejora considerablemente la disponibilidad de la base de datos, especialmente en presencia de transacciones de larga duración, al volver a diseñar el [proceso de recuperación](#TlogAndRecovery) de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Una base de datos para la que se ha habilitado la recuperación acelerada de base de datos completa el proceso de recuperación más rápidamente después de una conmutación por error u otro apagado no limpio. Cuando está habilitada, la recuperación acelerada de base de datos también completa la reversión de las transacciones de larga ejecución canceladas significativamente más rápido.
+La [recuperación acelerada de bases de datos](/azure/sql-database/sql-database-accelerated-database-recovery/) está disponible en [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La recuperación acelerada de bases de datos mejora considerablemente la disponibilidad de la base de datos, especialmente en presencia de transacciones de larga duración, al volver a diseñar el [proceso de recuperación](#TlogAndRecovery) de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Una base de datos para la que se ha habilitado la recuperación acelerada de base de datos completa el proceso de recuperación más rápidamente después de una conmutación por error u otro apagado no limpio. Cuando está habilitada, la recuperación acelerada de base de datos también completa la reversión de las transacciones de larga ejecución canceladas significativamente más rápido.
 
-Se puede habilitar la recuperación acelerada de bases de datos en cada base de datos en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] mediante la sintaxis siguiente:
+Se puede habilitar la recuperación acelerada de bases de datos en cada base de datos en [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] mediante la sintaxis siguiente:
 
 ```sql
 ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;

@@ -12,12 +12,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ca8263c5d75fca3bc59164d8d3ff7acaa9c5f2e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: cf8e82f8ebaa0a8b5b30cc4ffd460f7db7d4d121
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172737"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99234864"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Almacenamiento de datos de índices de almacén de columnas
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "98172737"
   Los índices de almacén de columnas, junto con las particiones, son esenciales para crear un almacenamiento de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="whats-new"></a>Novedades  
- [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] presenta estas características para mejorar el rendimiento del almacén de columnas:  
+ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] presenta estas características para mejorar el rendimiento del almacén de columnas:  
   
 -   AlwaysOn permite consultar un índice de almacén de columnas en una réplica secundaria legible.  
 -   Multiple Active Result Sets (MARS) admite índices de almacén de columnas.  
@@ -39,7 +39,7 @@ ms.locfileid: "98172737"
 -   Aislamiento de instantánea en el nivel de compatibilidad de base de datos 130 y niveles superiores.  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Mejora del rendimiento al combinar índices de almacén de columnas y no agrupados  
- A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], puede definir índices no agrupados en un índice de almacén de columnas agrupado.   
+ A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], puede definir índices no agrupados en un índice de almacén de columnas agrupado.   
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Ejemplo: mejorar la eficacia de las búsquedas de tabla con un índice no agrupado  
  Para mejorar la eficacia de las búsquedas de tabla en un almacenamiento de datos, puede crear un índice no agrupado diseñado para ejecutar consultas que realicen las mejores búsquedas de tabla. Por ejemplo, las consultas que buscan valores coincidentes o que devuelven un pequeño intervalo de valores tienen un rendimiento mejor en un índice de árbol B que en un índice de almacén de columnas. No requieren un recorrido de tabla completo a través del índice de almacén de columnas y devolverán el resultado correcto más rápidamente si se realiza una búsqueda binaria a través de un índice de árbol B.  
@@ -101,7 +101,7 @@ WITH CHECK ADD FOREIGN KEY([AccountKey]) REFERENCES my_dimension(Accountkey);
 ```  
   
 ### <a name="improve-performance-by-enabling-row-level-and-row-group-level-locking"></a>Mejorar el rendimiento al habilitar el bloqueo de nivel de fila y de grupo de filas  
- Para complementar al índice no agrupado en una característica de índice de almacén de columnas [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] ofrece una función de bloqueo pormenorizado para seleccionar, actualizar y eliminar operaciones. Se pueden ejecutar consultas con un bloqueo de nivel de fila en las búsquedas de índice en un índice no agrupado y con un bloqueo de nivel de grupo de filas en los recorridos de tabla completa en el índice de almacén de columnas. Use el bloqueo de nivel de fila y el bloqueo de nivel de grupo de filas adecuadamente para conseguir una mayor simultaneidad de lectura y escritura.  
+ Para complementar al índice no agrupado en una característica de índice de almacén de columnas [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] ofrece una función de bloqueo pormenorizado para seleccionar, actualizar y eliminar operaciones. Se pueden ejecutar consultas con un bloqueo de nivel de fila en las búsquedas de índice en un índice no agrupado y con un bloqueo de nivel de grupo de filas en los recorridos de tabla completa en el índice de almacén de columnas. Use el bloqueo de nivel de fila y el bloqueo de nivel de grupo de filas adecuadamente para conseguir una mayor simultaneidad de lectura y escritura.  
   
 ```sql  
 --Granular locking example  

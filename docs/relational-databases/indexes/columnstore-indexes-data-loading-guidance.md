@@ -12,12 +12,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6a0b60d8b690490074187d977d9bd636d88aea3
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 37827d1de9b99acb585762da094fd6cdaf905298
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172687"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235389"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Índices de almacén de columnas: Guía de carga de datos
 
@@ -89,7 +89,7 @@ INSERT INTO <columnstore index>
 SELECT <list of columns> FROM <Staging Table>  
 ```  
   
- Este comando carga los datos en el índice de almacén de columnas de una forma similar a bcp o la tarea de inserción masiva, solo que en un único lote. Si el número de filas de la tabla de almacenamiento provisional es menor que 102400, las filas se cargarán en un grupo de filas delta; en caso contrario, se cargarán directamente en un grupo de filas comprimido. Antes existía una limitación importante: esta operación `INSERT` era de un solo subproceso. Para cargar los datos en paralelo, podía crear varias tablas de almacenamiento provisional o ejecutar `INSERT`/`SELECT` con intervalos no superpuestos de filas desde la tabla de almacenamiento provisional. Esta limitación desaparece en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. El siguiente comando carga los datos en paralelo de la tabla de almacenamiento provisional, pero tendrá que especificar `TABLOCK`. Puede que le resulte contradictorio con respecto a lo que se dijo anteriormente de la carga masiva, pero la principal diferencia es que la carga de datos en paralelo desde la tabla de almacenamiento provisional se ejecuta en la misma transacción.
+ Este comando carga los datos en el índice de almacén de columnas de una forma similar a bcp o la tarea de inserción masiva, solo que en un único lote. Si el número de filas de la tabla de almacenamiento provisional es menor que 102400, las filas se cargarán en un grupo de filas delta; en caso contrario, se cargarán directamente en un grupo de filas comprimido. Antes existía una limitación importante: esta operación `INSERT` era de un solo subproceso. Para cargar los datos en paralelo, podía crear varias tablas de almacenamiento provisional o ejecutar `INSERT`/`SELECT` con intervalos no superpuestos de filas desde la tabla de almacenamiento provisional. Esta limitación desaparece en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. El siguiente comando carga los datos en paralelo de la tabla de almacenamiento provisional, pero tendrá que especificar `TABLOCK`. Puede que le resulte contradictorio con respecto a lo que se dijo anteriormente de la carga masiva, pero la principal diferencia es que la carga de datos en paralelo desde la tabla de almacenamiento provisional se ejecuta en la misma transacción.
   
 ```sql  
 INSERT INTO <columnstore index> WITH (TABLOCK) 
