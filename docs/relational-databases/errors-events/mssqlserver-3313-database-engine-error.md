@@ -6,18 +6,18 @@ ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: reference
 helpviewer_keywords:
 - 3313 (Database Engine error)
 ms.assetid: a244227b-8553-42df-9435-034f906c4c74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d176bcd729ca1d72b8f1e6b3d3951cb94ca000e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54d19e8b37d0cf4154bb14b3909c1af60afb0743
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456257"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208390"
 ---
 # <a name="mssqlserver_3313"></a>MSSQLSERVER_3313
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ Tenga en cuenta que si este error se produce para **tempdb**, la instancia de [!
 ## <a name="user-action"></a>Acción del usuario  
 Una condición transitoria que se dio en el sistema durante un intento determinado de iniciar la instancia del servidor o recuperar una base de datos puede producir este error. También puede deberse a un error permanente que se produce cada vez que se intenta iniciar la base de datos. Para obtener información acerca de la causa, examine el registro de eventos de Windows para ver si contiene un error anterior que indique el error concreto.  
   
-Tenga en cuenta que cuando se encuentra esta condición de error, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente genera tres archivos en la carpeta **LOG** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El archivo SQLDump*nnnn*.txt contiene información de diagnóstico avanzada relacionada con los errores, incluidos detalles sobre la transacción y la página en las que se encontró el problema. El equipo de soporte técnico de productos suele usar esta información para analizar el motivo del error.  
+Tenga en cuenta que cuando se encuentra esta condición de error, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente genera tres archivos en la carpeta **LOG** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El archivo SQLDump *nnnn*.txt contiene información de diagnóstico avanzada relacionada con los errores, incluidos detalles sobre la transacción y la página en las que se encontró el problema. El equipo de soporte técnico de productos suele usar esta información para analizar el motivo del error.  
   
 Para obtener información sobre la causa de esta repetición del error 3313, busque en el registro de eventos de Windows un error anterior que indique el error específico. La acción del usuario adecuada depende de si la información del registro de eventos de Windows indica que el error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo causó una condición transitoria o un error permanente. Para obtener información sobre las acciones del usuario para solucionar el error 3313, consulte los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SELECT Clause
 - SELECT_Clause_TSQL
@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 84099c48344e27070433483eeac829640c3ce4c2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 2a633f4cfb8a0c9e5158b24c89035c5e97588a46
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115898"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207597"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT (cláusula de Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,7 +82,7 @@ SELECT [ ALL | DISTINCT ]
  \*  
  Especifica que se deben devolver todas las columnas de todas las tablas y vistas de la cláusula FROM. Las columnas se devuelven por tabla o vista, tal como se especifique en la cláusula FROM, en el orden en que se encuentran en la tabla o vista.  
   
- *table_name* | *view_name* | *table*_*alias*.*  
+ *table_name* | *view_name* | *table* _ *alias*.*  
  Limita el ámbito de \* a la tabla o vista especificada.  
   
  *column_name*  

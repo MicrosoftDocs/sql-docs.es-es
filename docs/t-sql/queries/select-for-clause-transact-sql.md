@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - FOR
 - FOR CLAUSE
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a3f8fb497c95bd7f1df6f1ea8a51be938bc1a555
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99b47c3d47e7403e04cfff4b62ff5c1d78bb6071
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479482"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207546"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT: cláusula FOR (Transact-SQL)
 
@@ -265,7 +265,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
   
  PATH  
  Para mantener el control total sobre el formato de la salida JSON, especifique   
-            **FOR JSON PATH**. El modo**PATH** le permite crear objetos contenedores y anidar propiedades complejas. Para más información y ejemplos, vea [Format Nested JSON Output with PATH Mode &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md) (Aplicar formato a la salida JSON automáticamente con el modo PATH &#40;SQL Server&#41;).  
+            **FOR JSON PATH**. El modo **PATH** le permite crear objetos contenedores y anidar propiedades complejas. Para más información y ejemplos, vea [Format Nested JSON Output with PATH Mode &#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md) (Aplicar formato a la salida JSON automáticamente con el modo PATH &#40;SQL Server&#41;).  
   
  INCLUDE_NULL_VALUES  
  Para incluir valores NULL en la salida JSON, especifique la opción **INCLUDE_NULL_VALUES** con la cláusula **FOR JSON**. Si no especifica esta opción, la salida no incluye las propiedades JSON de los valores NULL en los resultados de la consulta. Para más información y ejemplos, vea [Inclusión de valores Null en la salida de JSON con la opción INCLUDE_NULL_VALUES &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).  

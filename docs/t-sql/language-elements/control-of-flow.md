@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1115a779-484a-4f32-bcd2-d8f0675945b7
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 71a337ad8cd9b857e8765cfb0afad8d44f1c1fd1
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: f22976606649a6495dff437d3829bff999ee8ced
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097152"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208763"
 ---
 # <a name="control-of-flow"></a>Lenguaje de control de flujo
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

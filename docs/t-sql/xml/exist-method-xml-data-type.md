@@ -6,7 +6,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1788db3b0baec4f9ab7279f13ff792e6d7764ea6
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: b29a0143b2fca6bbcafaa94acd60e096a121480d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117210"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206884"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() (método del tipo de datos xml)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -90,7 +90,7 @@ SELECT @f;
   
  Observe lo siguiente en la consulta anterior:  
   
--   El método**text()** devuelve un nodo de texto que incluye el valor sin tipo `2002-01-01`. (El tipo XQuery es **xdt:untypedAtomic**). Debe convertir explícitamente este valor con tipo de **x** a **xsd:date**, puesto que en este caso no se admite la conversión implícita.  
+-   El método **text()** devuelve un nodo de texto que incluye el valor sin tipo `2002-01-01`. (El tipo XQuery es **xdt:untypedAtomic**). Debe convertir explícitamente este valor con tipo de **x** a **xsd:date**, puesto que en este caso no se admite la conversión implícita.  
   
 ### <a name="example-specifying-the-exist-method-against-a-typed-xml-variable"></a>Ejemplo: especificar el método exist() con una variable xml con tipo  
  En el ejemplo siguiente se muestra el uso del método **exist()** con una variable del tipo **xml**. Se trata de una variable XML con tipo, pues especifica el nombre de la colección del espacio de nombres del esquema, `ManuInstructionsSchemaCollection`.  

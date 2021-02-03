@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - REMOTE_PROC_TRANSACTIONS_TSQL
 - SET REMOTE_PROC_TRANSACTIONS
@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ecfcda70eb37c4b7b10db2ac49a02996140060da
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6164638072a8cc41c07bb46e0337a0d3be5498cc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100705"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206967"
 ---
 # <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
  ON | OFF  
  Cuando es ON, al ejecutarse un procedimiento almacenado remoto desde una transacción local, se inicia una transacción distribuida de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cuando es OFF, al llamar a procedimientos almacenados remotos desde una transacción local, no se inicia una transacción distribuida de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando REMOTE_PROC_TRANSACTIONS es ON, al llamar a un procedimiento almacenado remoto se inicia una transacción distribuida y se da de alta en MS DTC. La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que efectúa la llamada al procedimiento almacenado remoto es el originador de la transacción y controla su realización. Posteriormente, cuando se ejecuta para la conexión una instrucción COMMIT TRANSACTION o ROLLBACK TRANSACTION, la instancia que controla la transacción solicita a MS DTC que administre la realización de la transacción distribuida entre los servidores participantes.  
   
  Una vez iniciada una transacción distribuida de [!INCLUDE[tsql](../../includes/tsql-md.md)], se pueden realizar llamadas a procedimientos almacenados remotos en otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se hayan definido como servidores remotos. Todos los servidores remotos se dan de alta en la transacción distribuida de [!INCLUDE[tsql](../../includes/tsql-md.md)] y MS DTC se asegura de que la transacción se complete en cada uno de ellos.  
