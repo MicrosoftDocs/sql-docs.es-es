@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DROP_ENDPOINT_TSQL
 - DROP ENDPOINT
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 87359ee2b2059d27c0e49fc623bf42340d3fd89d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1682eb03ed6f2997168ce0c4aa84ff5d1190ce6a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095747"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171648"
 ---
 # <a name="drop-endpoint-transact-sql"></a>DROP ENDPOINT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ DROP ENDPOINT endPointName
  *endPointName*  
  Es el nombre del extremo que se va a quitar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las instrucciones ENDPOINT DDL no se pueden ejecutar dentro de una transacción de usuario.  
   
 ## <a name="permissions"></a>Permisos  

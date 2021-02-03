@@ -12,12 +12,12 @@ ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67d1c661f7157081f2693555667c439d589292e4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: acfdadf0216bd243f61339982615c4bf83796dfa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472566"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177982"
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>Trabajo con tablas temporales con control de versiones del sistema con optimización para memoria
 
@@ -28,7 +28,7 @@ ms.locfileid: "97472566"
 En este tema se describen las diferencias entre trabajar con una tabla temporal con versiones del sistema optimizadas para memoria y trabajar con una tabla temporal con versiones del sistema basadas en disco.
 
 > [!NOTE]
-> El uso de tablas temporales con tablas con optimización para memoria solo se aplica a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y no a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+> El uso de tablas temporales con tablas con optimización para memoria solo se aplica a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] y no a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 ## <a name="discovering-metadata"></a>Detección de metadatos
 
