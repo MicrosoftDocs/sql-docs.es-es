@@ -1,7 +1,7 @@
 ---
 title: Compatibilidad del explorador de Reporting Services y Power View | Microsoft Docs
 description: Obtenga información sobre las versiones del explorador que son compatibles para administrar y ver SQL Server Reporting Services, los controles ReportViewer y Power View.
-ms.date: 07/02/2017
+ms.date: 01/28/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa8a9fbbcadfcdd3c266de4b1453ea7e5402e1af
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e246db4f2a7b2a94ce17f8a48acf05b16aebbdf4
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466656"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049026"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Compatibilidad del explorador de Reporting Services y Power View
 
@@ -95,8 +95,8 @@ Esta es la lista actual de exploradores admitidos para el portal web.
 
 |**Tipo de explorador**|**Es compatible con**|**Configuración predeterminada del explorador**|**Configuración predeterminada del servidor**|
 |----------------------|------------------|-------------------------|------------------------|
-|**Microsoft Edge** (+)|Negotiate, Kerberos, NTLM, Basic|Negotiate|Sí. La configuración de autenticación predeterminada funciona con Edge.|
-|**Microsoft Internet Explorer**|Negotiate, Kerberos, NTLM, Basic|Negotiate|Sí. La configuración de autenticación predeterminada funciona con Internet Explorer.|
+|**Microsoft Edge** (+)|Negotiate, NTLM, Basic|Negotiate|Sí. La configuración de autenticación predeterminada funciona con Edge.|
+|**Microsoft Internet Explorer**|Negotiate, NTLM, Basic|Negotiate|Sí. La configuración de autenticación predeterminada funciona con Internet Explorer.|
 |**Google Chrome**(+)|Negotiate, NTLM, Basic|Negotiate|Sí. La configuración de autenticación predeterminada funciona con Chrome.|
 |**Mozilla Firefox**(+)|NTLM, Basic|NTLM|Sí. La configuración de autenticación predeterminada funciona con Firefox.|
 |**Apple Safari**(+)|NTLM, Basic|Básico|Sí. La configuración de autenticación predeterminada funciona con Safari.|

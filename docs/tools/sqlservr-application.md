@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67f25ef21a7d4897bba7242da796bd41f9fc655e
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9422651db34ab9c423a960b9d945d1c748f25d93
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642226"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075957"
 ---
 # <a name="sqlservr-application"></a>sqlservr (aplicación)
 
@@ -81,7 +81,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 En la mayoría de los casos, el programa sqlserver.exe solo se usa para solucionar problemas o realizar las tareas principales de mantenimiento. Si se inicia [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde el símbolo del sistema con sqlservr.exe, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no se inicia como servicio, de forma que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no se puede detener mediante los comandos **net** . Los usuarios pueden conectar con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], pero las herramientas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] muestran el estado del servicio, de forma que el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] indica correctamente que el servicio se ha detenido. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] puede conectarse al servidor, pero también indica que el servicio está detenido.
 
 ## <a name="compatibility-support"></a>Soporte de compatibilidad
-Los parámetros siguientes están obsoletos y no se admiten en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
+Los parámetros siguientes están obsoletos y no se admiten en [!INCLUDE[sssql19-md](../includes/sssql19-md.md)].
 
 |Parámetro | Más información|
 |:-----|:-----|

@@ -11,12 +11,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: adfd91c6771626aa0979da622d95766a2e4e5613
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ad4cdfc2ba27051b5186a4934b2afceb42245b49
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97409681"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076027"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ Además, tenga en cuenta las revisiones siguientes:
 SQL Server 2014 SP1 contiene revisiones proporcionadas en SQL Server 2014 CU 1 hasta CU 5 (incluido), así como una acumulación de revisiones enviadas a SQL Server 2012 SP2.
 
 > [!NOTE]
-> Si su instancia de SQL Server tiene habilitado el catálogo de SSISDB y recibe un error de instalación al actualizar a SP1, siga las instrucciones descritas para este problema en [Error 912 o 3417 al instalar SQL Server 2014 SP1](https://support.microsoft.com/help/3018269/error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050/).
+> Si su instancia de SQL Server tiene habilitado el catálogo de SSISDB y recibe un error de instalación al actualizar a SP1, siga las instrucciones descritas para este problema en [Error 912 o 3417 al instalar SQL Server 2014 SP1](https://support.microsoft.com/topic/kb3018269-error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050-0-7f34525c-d517-6399-a31b-e7033db13706).
 
 ### <a name="download-pages-and-more-information-for-sp1"></a>Páginas de descarga y más información para SP1
 

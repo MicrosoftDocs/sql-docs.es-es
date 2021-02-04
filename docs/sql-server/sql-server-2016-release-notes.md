@@ -14,12 +14,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: 720da25fe19f064c6a6eb3b363832b76113e2c5b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: dad7665ffa825a80aa6bcb3050b04a96060c3f65
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97409701"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076047"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notas de la versión de SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -60,7 +60,7 @@ Mejoras relacionadas con la compatibilidad y el diagnóstico incluidas en SQL Se
 |Compatibilidad total de DTC con las bases de datos de un grupo de disponibilidad   |   Las transacciones entre varias bases de datos que no forman parte de un grupo de disponibilidad no se admiten por el momento en SQL Server 2016. Con SQL Server 2016 SP2, introducimos la compatibilidad total de transacciones distribuidas con las bases de datos de grupos de disponibilidad.   |      |
 |Actualización a la columna is_encrypted de sys.databases para reflejar con precisión el estado de cifrado de TempDB   |   El valor de la columna is_encryptedcolumn en sys.databases es 1 para TempDB, incluso después de desactivar el cifrado para todas las bases de datos de usuario y reiniciar SQL Server. El comportamiento esperado sería que el valor de este parámetro fuese 0, porque TempDB ya no está cifrado en esta situación. A partir de SQL Server 2016 SP2, sys.databases.is_encrypted ahora refleja con precisión el estado de cifrado de TempDB.   |      |
 |Nuevas opciones de DBCC CLONEDATABASE para generar una copia de seguridad y un clon comprobado   |   Con SQL Server 2016 SP2, DBCC CLONEDATABASE permite dos opciones nuevas: generar un clon comprobado o un clon de copia de seguridad. Cuando se crea una base de datos de clonación con la opción WITH VERIFY_CLONEDB, se crea un clon de base de datos coherente y se comprueba que Microsoft lo admitirá para su uso en el entorno de producción. Se ha introducido una propiedad nueva para validar si el clon es del tipo SELECT DATABASEPROPERTYEX("clone_database_name", "IsVerifiedClone") comprobado. Cuando se crea un clon con la opción BACKUP_CLONEDB, se genera una copia de seguridad en la misma carpeta en que está el archivo de datos para facilitar que los clientes muevan el clon a un servidor distinto o lo envíen a Soporte al cliente de Microsoft (CSS) para la solución de problemas.   |      |
-|Compatibilidad de Service Broker (SSB) con DBCC CLONEDATABASE   |   Comando DBCC CLONEDATABASE mejorado para permitir el scripting de objetos SSB.   |   [KB4092075](https://support.microsoft.com/help/4092075)   |
+|Compatibilidad de Service Broker (SSB) con DBCC CLONEDATABASE   |   Comando DBCC CLONEDATABASE mejorado para permitir el scripting de objetos SSB.   |      |
 |Nueva DMV para supervisar el uso del espacio de almacenamiento de versiones de TempDB   |   En SQL Server 2016 SP2 se introduce una nueva DMV de sys.dm_tran_version_store_space_usage para permitir la supervisión de TempDB para el uso del almacenamiento de versiones. Los administradores de base de datos ahora pueden planear de manera proactiva el tamaño de TempDB en función del requisito de uso de almacenamiento de versiones por base de datos, sin ninguna sobrecarga de rendimiento cuando se ejecuta en los servidores de producción.   |      |
 |Compatibilidad de volcados de memoria completos con los agentes de replicación | En este momento, si los agentes de replicación detectan una excepción no controlada, la configuración predeterminada es crear un minivolcado de los síntomas de la excepción. Esto dificulta mucho solucionar los problemas de excepciones no controladas. Con este cambio, estamos incorporando una nueva clave del Registro, la que permitiría crear un volcado completo para los agentes de replicación.   |      |
 |Mejora de los eventos extendidos para el error de enrutamiento de lectura de un grupo de disponibilidad   |   Antes, el xEvent read_only_rout_fail se desencadenada si había una lista de enrutamiento, pero ninguno de los servidores de esta lista estaba disponible para las conexiones. SQL Server 2016 SP2 incluye información adicional para ayudar a solucionar el problema y además se expande en los puntos de código donde se desencadena este xEvent.   |      |

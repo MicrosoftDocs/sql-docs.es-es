@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72e29a5be172bdf00f9c57358cbbaa1e9bae5a09
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: b13ca53aad69647aee5158d86de2cfb16ac04710
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594825"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076107"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protección ampliada para la autenticación con Reporting Services
 
@@ -25,7 +25,7 @@ ms.locfileid: "98594825"
 SQL Server Reporting Services (SSRS) admite y aplica la protección ampliada que se ha habilitado en el sistema operativo y se ha configurado en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acepta solicitudes que especifican la autenticación Negotiate o NTLM y, por tanto, pueden beneficiarse de la compatibilidad de la protección ampliada del sistema operativo y de las características de la protección ampliada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
->  De forma predeterminada, Windows no habilita la protección ampliada. Para obtener información sobre cómo habilitar la protección ampliada de Windows, vea [Protección ampliada para la autenticación](https://go.microsoft.com/fwlink/?LinkID=178431). Tanto el sistema operativo como la pila de autenticación de cliente deben ser compatibles con la protección ampliada para la autenticación se realice correctamente. En sistemas operativos más antiguos, quizá deba instalar varias actualizaciones para disponer de un equipo totalmente preparado para la protección ampliada. Para obtener información sobre los desarrollos recientes con la protección ampliada, vea [Actualizar información con protección ampliada](/previous-versions/sql/sql-server-2008/dd146365(v=sql.100)).  
+>  De forma predeterminada, Windows no habilita la protección ampliada. Para obtener información sobre cómo habilitar la protección ampliada de Windows, vea [Protección ampliada para la autenticación](https://support.microsoft.com/topic/microsoft-security-advisory-extended-protection-for-authentication-7dd2ee6d-c2e9-3484-2d8e-466261d3f0c7). Tanto el sistema operativo como la pila de autenticación de cliente deben ser compatibles con la protección ampliada para la autenticación se realice correctamente. En sistemas operativos más antiguos, quizá deba instalar varias actualizaciones para disponer de un equipo totalmente preparado para la protección ampliada. Para obtener información sobre los desarrollos recientes con la protección ampliada, vea [Actualizar información con protección ampliada](/previous-versions/sql/sql-server-2008/dd146365(v=sql.100)).  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Información general sobre la protección ampliada de Reporting Services
 

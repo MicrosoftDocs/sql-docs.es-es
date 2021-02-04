@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6d76229a17951c4b0bad35ee78e95a903bb590e3
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 0532c42a5bd080b7f686c1663c6f88d8066bc9ff
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594965"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076267"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>Configuración de conexiones TLS en un servidor de informes en modo nativo
 
@@ -86,7 +86,7 @@ ms.locfileid: "98594965"
   
  Los enlaces TLS son un recurso compartido en Microsoft Windows. Los cambios realizados por el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] u otras herramientas como el Administrador de IIS pueden afectar a otras aplicaciones ubicadas en el mismo equipo. Se recomienda usar la misma herramienta para editar los enlaces que usó para crearlos.  Por ejemplo, si creó enlaces TLS mediante Configuration Manager, se recomienda usar este administrador para configurar el ciclo de vida de los enlaces. Si utiliza el administrador de IIS para crear enlaces, se recomienda usar este administrador para administrar el ciclo de vida de los enlaces. Si IIS estaba instalado en el equipo antes de que se instalara [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], es recomendable que revise la configuración de TLS en IIS antes de configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Si quita enlaces TLS de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con el Administrador de configuración del servidor de informes, puede que los enlaces TLS ya no funcionen para los sitios web en un servidor que ejecute Internet Information Services (IIS) o en otro servidor HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager quita la siguiente clave del Registro: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** Cuando se quita esta clave del Registro, también se quita el enlace TLS para IIS. Sin este enlace, TLS no se proporciona para el protocolo HTTPS. Para diagnosticar este problema, utilice el Administrador de IIS o la utilidad de línea de comandos HTTPCFG.exe. Para resolver el problema, restaure el enlace TLS para los sitios web mediante el Administrador de IIS. Para evitar este problema en el futuro, use el Administrador de IIS para quitar los enlaces TLS y luego vuelva a emplearlo para restaurar el enlace para los sitios web que quiera. Para más información, consulte el artículo de la base de conocimiento [SSL no funciona después de quitar un enlace SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
+ Si quita enlaces TLS de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con el Administrador de configuración del servidor de informes, puede que los enlaces TLS ya no funcionen para los sitios web en un servidor que ejecute Internet Information Services (IIS) o en otro servidor HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager quita la siguiente clave del Registro: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** Cuando se quita esta clave del Registro, también se quita el enlace TLS para IIS. Sin este enlace, TLS no se proporciona para el protocolo HTTPS. Para diagnosticar este problema, utilice el Administrador de IIS o la utilidad de línea de comandos HTTPCFG.exe. Para resolver el problema, restaure el enlace TLS para los sitios web mediante el Administrador de IIS. Para evitar este problema en el futuro, use el Administrador de IIS para quitar los enlaces TLS y luego vuelva a emplearlo para restaurar el enlace para los sitios web que quiera. Para más información, consulte el artículo de la base de conocimiento [SSL no funciona después de quitar un enlace SSL (https://support.microsoft.com/kb/956209/n)](https://web.archive.org/web/20150215042139/http://support.microsoft.com:80/kb/956209).  
   
 ## <a name="see-also"></a>Consulte también  
  [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)   

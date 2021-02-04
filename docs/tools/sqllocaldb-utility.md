@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 65646c84e7e0840e2dfeb3ec4e926deb847237fe
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 269bdcc45622fdf0c422e1aae50537bbd9275d46
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643434"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076067"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB (utilidad)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ SqlLocalDB.exe
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-creating-an-instance-of-localdb"></a>A. Crear una instancia de LocalDB  
- En el ejemplo siguiente se crea una instancia de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** denominada `DEPARTMENT` utilizando los binarios de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] y se inicia la instancia.  
+ En el ejemplo siguiente se crea una instancia de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** denominada `DEPARTMENT` utilizando los binarios de [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] y se inicia la instancia.  
   
 ```  
 SqlLocalDB.exe create "DEPARTMENT" 12.0 -s  

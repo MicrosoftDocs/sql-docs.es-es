@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: 68546680f73674b416aa42d141c7ea5d2f8b51b7
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 67ad8b940787f50f36ea6798282b651c290d4fca
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081914"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076207"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
 
@@ -40,7 +40,7 @@ Las rutas de acceso que implementa el proveedor de [!INCLUDE[ssNoVersion](../inc
 
 Los productos cuyos datos o modelos de objetos se pueden representar en una jerarquía usan proveedores de Windows PowerShell para exponer las jerarquías. La jerarquía se expone mediante el uso de una unidad y una estructura parecidas a las que usa el sistema de archivos de Windows.  
   
- Cada proveedor de Windows PowerShell implementa una o varias unidades. Cada unidad es el nodo raíz de una jerarquía de objetos relacionados. El proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa un SQLSERVER: unidad de disco. El proveedor también define un conjunto de carpetas principales para el SQLSERVER: unidad de disco. Cada carpeta y sus subcarpetas representan el conjunto de objetos a los que se puede tener acceso usando un modelo de objetos de administración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Cuando se centra en una subcarpeta de una ruta de acceso que se inicia con una de estas carpetas principales, se pueden usar los métodos del modelo de objetos asociado para realizar las acciones en el objeto representado por el nodo. En la tabla siguiente se muestran las carpetas de Windows PowerShell que implementa el proveedor [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
+ Cada proveedor de Windows PowerShell implementa una o varias unidades. Cada unidad es el nodo raíz de una jerarquía de objetos relacionados. El proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa un SQLSERVER: unidad de disco. El proveedor también define un conjunto de carpetas principales para el SQLSERVER: unidad de disco. Cada carpeta y sus subcarpetas representan el conjunto de objetos a los que se puede tener acceso usando un modelo de objetos de administración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Cuando se centra en una subcarpeta de una ruta de acceso que se inicia con una de estas carpetas principales, se pueden usar los métodos del modelo de objetos asociado para realizar las acciones en el objeto representado por el nodo. En la tabla siguiente se muestran las carpetas de Windows PowerShell que implementa el proveedor [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]:  
   
 |Carpeta|Espacio de nombres del modelo de objetos de SQL Server|Objetos|  
 |------------|---------------------------------------|-------------|  

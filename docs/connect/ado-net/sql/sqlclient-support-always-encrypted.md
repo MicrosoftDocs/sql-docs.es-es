@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 12b25a6e8d7b9a5ac77a198ab047150c94b745df
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 7fdf55463bada69b93a657e7aff69bdabf0e8de0
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534496"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075987"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Uso de Always Encrypted con el proveedor de datos Microsoft .NET para SQL Server
 
@@ -87,7 +87,7 @@ Para habilitar los cálculos de enclave para una conexión de base de datos, deb
 - `Enclave Attestation URL`: especifica una dirección URL de atestación (un punto de conexión de servicio de atestación). Debe obtener una dirección URL de atestación para su entorno por parte del administrador del servicio de atestación.
 
   - Si usa [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] y el Servicio de protección de host (HGS), vea [Determinación y uso compartido de la dirección URL de atestación de HGS](../../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - Si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] y Microsoft Azure Attestation, vea [Determinación de la dirección URL de atestación de la directiva de atestación](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
+  - Si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] y Microsoft Azure Attestation, vea [Determinación de la dirección URL de atestación de la directiva de atestación](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation).
 
 Para seguir un tutorial paso a paso, consulte [Tutorial: Desarrolle una aplicación de .NET mediante Always Encrypted con enclaves seguros](tutorial-always-encrypted-enclaves-develop-net-apps.md).
 

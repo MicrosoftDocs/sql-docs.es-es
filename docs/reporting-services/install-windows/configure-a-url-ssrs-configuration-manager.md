@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0ff8cd92d090424bbf7a17315dc09dfb7b8a06f
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 7a58a11e71c471bf02ca68ddaf4a416c3d9c554b
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934786"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075707"
 ---
 # <a name="configure-a-url--report-server-configuration-manager"></a>Configuración de una URL (Administrador de configuración del servidor de informes)
   Para poder usar el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o el servicio web del servidor de informes, debe configurar al menos una dirección URL para cada aplicación. Configurar las direcciones URL es obligatorio si ha instalado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de "solo archivos" (es decir, al seleccionar la opción **Install but do not configure the server (Instalar pero no configurar el servidor)** en la página Opciones de instalación del servidor de informes del Asistente para la instalación). Si instaló [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada, las direcciones URL ya están configuradas para cada aplicación.  
@@ -79,7 +79,7 @@ ms.locfileid: "91934786"
   
          `netstat -anp tcp`  
   
-    -   Revise el artículo de soporte técnico de Microsoft, [Información acerca de las asignaciones de puertos TCP/IP](https://support.microsoft.com/kb/174904), para leer sobre las asignaciones de puertos TCP y las diferencias entre los puertos conocidos (0 a 1023), los puertos registrados (1024 a 49151) y los puertos dinámicos o los privados (49152 a 65535).  
+    -   Revise el artículo de soporte técnico de Microsoft, [Información acerca de las asignaciones de puertos TCP/IP](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/174904), para leer sobre las asignaciones de puertos TCP y las diferencias entre los puertos conocidos (0 a 1023), los puertos registrados (1024 a 49151) y los puertos dinámicos o los privados (49152 a 65535).  
   
     -   Si usa Firewall de Windows, debe abierto el puerto. Para obtener instrucciones, consulte [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
