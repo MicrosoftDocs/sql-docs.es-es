@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.getPacketSize
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: b2e9f01a-2e51-47e5-90bf-43c62d1be74d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d21f76ecf79406a3016e9891b0fb2af0e2232def
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1fb42a8d875cd3e3e72eebc212a8050a41e389b6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88435097"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99162575"
 ---
 # <a name="getpacketsize-method-sqlserverdatasource"></a>Método getPacketSize (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
