@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.isAfterLast
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 19f9d124-3184-4985-8b97-503a8ab8b4f9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4f0f982ebfce1e4920c98583f31bb7a9e14ba867
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68e4832445686d11cd4489d55112fd4775e6d0be
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433677"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177502"
 ---
 # <a name="isafterlast-method-sqlserverresultset"></a>Método isAfterLast (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

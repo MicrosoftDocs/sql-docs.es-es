@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 91e18137748b34012c73860071fa0be93af0277f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 45b917246037b9c333ba07bece6f6630e0ae2464
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642773"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251239"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>Recuperación de un error en una instancia de clúster de conmutación por error
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  En este tema se describe cómo puede recuperarse de los errores de clúster usando el complemento Administrador de clústeres de conmutación por error después de que se produzca una conmutación por error en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. El complemento Administrador de clústeres de conmutación por error es la aplicación de administración de clústeres del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
+  En este tema se describe cómo puede recuperarse de los errores de clúster usando el complemento Administrador de clústeres de conmutación por error después de que se produzca una conmutación por error en [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. El complemento Administrador de clústeres de conmutación por error es la aplicación de administración de clústeres del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
   
 -   [Recuperarse de un error irreparable](#Scenario1)  
   

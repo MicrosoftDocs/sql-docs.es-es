@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_fetch_array
 apitype: NA
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9067a7ffa6bd6379fb9384b915d07cb64893467
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 6e0df700729db03d2d0dd52ac5d0a251827db7d8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92080645"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195660"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -64,7 +64,7 @@ Para obtener más información sobre estos valores, vea [Especificación de un t
 ## <a name="return-value"></a>Valor devuelto  
 Si se recupera una fila de datos, se devuelve una **matriz** . Si no hay más filas para recuperar, se devolverá el valor **Null** . Si se produce un error, se devuelve el valor **False** .  
   
-En función del valor del parámetro *$fetchType* , la **matriz** que se devuelve puede ser una **matriz**indizada numéricamente, una **matriz**asociativa o ambas. De forma predeterminada, se devuelve una **matriz** con claves numérica y asociativas. El tipo de datos de un valor de la matriz devuelta será el tipo de datos PHP predeterminados. Para obtener información sobre los tipos de datos PHP predeterminados, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
+En función del valor del parámetro *$fetchType* , la **matriz** que se devuelve puede ser una **matriz** indizada numéricamente, una **matriz** asociativa o ambas. De forma predeterminada, se devuelve una **matriz** con claves numérica y asociativas. El tipo de datos de un valor de la matriz devuelta será el tipo de datos PHP predeterminados. Para obtener información sobre los tipos de datos PHP predeterminados, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
 ## <a name="remarks"></a>Observaciones  
 Si se devuelve una columna sin nombre, la clave del elemento de la matriz asociativa será una cadena vacía (""). Por ejemplo, observe esta instrucción de Transact-SQL que inserta un valor en una tabla de base de datos y recupera la clave principal generada por el servidor:  
@@ -83,7 +83,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 Si un conjunto de resultados contiene varias columnas sin nombre, se asignará el valor de la última columna sin nombre a clave de la cadena vacía ("").  
   
 ## <a name="associative-array-example"></a>Ejemplo de matriz asociativa  
-En el siguiente ejemplo se recupera cada fila de un conjunto de resultados como una **matriz**asociativa. En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el siguiente ejemplo se recupera cada fila de un conjunto de resultados como una **matriz** asociativa. En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  

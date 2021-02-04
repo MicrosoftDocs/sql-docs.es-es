@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fa75cc2e8a120510edc711aafc37d268fec4dba7
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9101f2cf26e797cc63a909a85c3eefa3fb083b4f
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642746"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251208"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Directiva de conmutación por error para instancias de clústeres de conmutación por error
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  En una instancia de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , solo puede haber un nodo propietario del grupo de recursos de clúster de conmutación por error de Windows Server (WSFC) en cada momento. Las solicitudes del cliente se sirven a través de este nodo de la FCI. En caso de que se produzca un error o un reinicio incorrecto, la propiedad del grupo se traslada a otro nodo de WSFC de la FCI. Este proceso se denomina conmutación por error. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aumenta la confiabilidad de la detección de errores y proporciona una directiva de conmutación por error flexible.  
+  En una instancia de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , solo puede haber un nodo propietario del grupo de recursos de clúster de conmutación por error de Windows Server (WSFC) en cada momento. Las solicitudes del cliente se sirven a través de este nodo de la FCI. En caso de que se produzca un error o un reinicio incorrecto, la propiedad del grupo se traslada a otro nodo de WSFC de la FCI. Este proceso se denomina conmutación por error. [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] aumenta la confiabilidad de la detección de errores y proporciona una directiva de conmutación por error flexible.  
   
  Una FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] depende del servicio de WSFC subyacente para la detección de conmutaciones por error. Por tanto, son dos los mecanismos que determinan el comportamiento de conmutación por error de la FCI: el primero es la funcionalidad nativa de WSFC y el segundo es la funcionalidad agregada por la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

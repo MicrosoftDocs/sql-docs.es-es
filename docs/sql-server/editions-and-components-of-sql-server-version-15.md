@@ -1,5 +1,5 @@
 ---
-description: Ediciones y características admitidas de [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
+description: Ediciones y características admitidas de [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 title: Ediciones y características admitidas de SQL Server 2019 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -34,18 +34,18 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: e0a8f226602ab41422715368fb12c13809fa6b40
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9987384899eeb9087a938d8fd8e8b156ff8e1962
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477156"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236269"
 ---
-# <a name="editions-and-supported-features-of-sssqlv15-md"></a>Ediciones y características admitidas de [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
+# <a name="editions-and-supported-features-of-sssql19-md"></a>Ediciones y características admitidas de [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/applies-to-version/sqlserver.md)]
 
-En este tema se proporcionan detalles de las características compatibles con las diversas ediciones de [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)].
+En este tema se proporcionan detalles de las características compatibles con las diversas ediciones de [!INCLUDE[sssql19-md](../includes/sssql19-md.md)].
 
 Para obtener información sobre versiones anteriores, consulte:
 
@@ -58,10 +58,10 @@ La edición de evaluación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
 
 Para leer las notas de la versión más reciente e información sobre las novedades, vea lo siguiente:
 
-* [Notas de la versión de [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]](../sql-server/sql-server-version-15-release-notes.md)
+* [Notas de la versión de [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]](../sql-server/sql-server-version-15-release-notes.md)
 * [Novedades de la versión [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-**Pruebe [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [Descargar[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] del Centro de evaluación](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
+**Pruebe [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [Descargar[!INCLUDE[sssql19-md](../includes/sssql19-md.md)] del Centro de evaluación](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
 
 ## <a name="ssnoversion-editions"></a>Ediciones de[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]
 
@@ -103,8 +103,8 @@ Use la información de las tablas siguientes para determinar el conjunto de cara
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye componentes de servidor y de cliente para crear, administrar e implementar informes tabulares, matriciales, gráficos y de forma libre. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] es también una plataforma extensible que se puede usar para desarrollar aplicaciones de informes.|
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es un conjunto de herramientas gráficas y objetos programables para mover, copiar y transformar datos. También incluye el componente de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) es la solución de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para la administración de datos maestros. MDS se pueden configurar para administrar cualquier dominio (productos, clientes, cuentas) e incluye jerarquías, seguridad específica, transacciones, creación de versiones de datos y reglas de negocios, así como un [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] que se puede usar para administrar datos.|
-|Machine Learning Services (en base de datos)|Machine Learning Services (en base de datos) admite soluciones de aprendizaje automático distribuidas y escalables con orígenes de datos empresariales. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016, se admitía el lenguaje R. [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] admite R y Python.|
-|Machine Learning Server (independiente)|Machine Learning Server (independiente) admite la implementación de soluciones de aprendizaje automático distribuidas y escalables en varias plataformas y con varios orígenes de datos empresariales, incluidos Linux y Hadoop. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016, se admitía el lenguaje R. [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] admite R y Python.|
+|Machine Learning Services (en base de datos)|Machine Learning Services (en base de datos) admite soluciones de aprendizaje automático distribuidas y escalables con orígenes de datos empresariales. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016, se admitía el lenguaje R. [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] admite R y Python.|
+|Machine Learning Server (independiente)|Machine Learning Server (independiente) admite la implementación de soluciones de aprendizaje automático distribuidas y escalables en varias plataformas y con varios orígenes de datos empresariales, incluidos Linux y Hadoop. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016, se admitía el lenguaje R. [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] admite R y Python.|
 
 |Herramientas de administración|Descripción|
 |----------------------|-----------------|
@@ -188,7 +188,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [[!INCLUDE[
 
 ## <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> Escalabilidad y rendimiento de RDBMS
 
-|Característica|Enterprise|Estándar|Web|Express con<br/>Advanced Services|Rápida|
+|Característica|Enterprise|Estándar|Web|Express con<br/>Advanced Services|Express|
 |------:|:--------:|:------:|:-:|:-------------------------------:|:------:|
 |Almacén de columnas<sup>1</sup> <sup>2</sup>|Sí|Sí|Sí|Sí|Sí|
 |Archivos binarios de objetos de gran tamaño en índices de almacén de columnas en clúster|Sí|Sí|Sí|Sí|Sí|
@@ -246,7 +246,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [[!INCLUDE[
 
 ## <a name="replication"></a><a name="Replication"></a> Replicación
 
-|Característica|Enterprise|Estándar|Web|Express con<br/>Advanced Services|Rápida|
+|Característica|Enterprise|Estándar|Web|Express con<br/>Advanced Services|Express|
 |-------|:---------:|:-------:|:--:|:--------------------------------:|:------:|
 |Suscriptores heterogéneos|Sí|Sí|No|No|No|
 |Replicación de mezcla|Sí|Sí|Sí<sup>1</sup>|Sí<sup>1</sup>|Sí<sup>1</sup>|
@@ -287,7 +287,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [[!INCLUDE[
 
 ## <a name="rdbms-manageability"></a><a name="RDBMSM"></a> Capacidad de administración de RDBMS
 
-|Característica|Enterprise|Estándar|Web|Express con<br/>Advanced Services|Rápida|
+|Característica|Enterprise|Estándar|Web|Express con<br/>Advanced Services|Express|
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |Instancias de usuario|No|No|No|Sí|Sí|
 |LocalDB|No|No|No|Sí|No|
@@ -320,7 +320,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [[!INCLUDE[
 
 ## <a name="development-tools"></a><a name="DevTools"></a> Herramientas de desarrollo
 
-|Característica|Enterprise|Estándar|Web|Express con<br/>Advanced Services|Rápida|
+|Característica|Enterprise|Estándar|Web|Express con<br/>Advanced Services|Express|
 |-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |Integración de Microsoft Visual Studio|Sí|Sí|Sí|Sí|Sí|
 |IntelliSense (Transact-SQL y MDX)|Sí|Sí|Sí|Sí|Sí|
@@ -408,14 +408,14 @@ Para obtener información sobre las características de Business Intelligence Cl
 
 ## <a name="additional-database-services"></a><a name="ADS"></a> Servicios de bases de datos adicionales
 
-|Nombre de la característica|Enterprise|Estándar|Web|Express con<br/>Advanced Services|Rápida|
+|Nombre de la característica|Enterprise|Estándar|Web|Express con<br/>Advanced Services|Express|
 |------------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|Sí|Sí|Sí|Sí|Sí|
 |Correo electrónico de base de datos|Sí|Sí|Sí|No|No|
 
 ## <a name="other-components"></a><a name="Other"></a> Otros componentes
 
-|Nombre de la característica|Enterprise|Estándar|Web|Express con<br/>Advanced Services|Rápida|
+|Nombre de la característica|Enterprise|Estándar|Web|Express con<br/>Advanced Services|Express|
 |------------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|No|No|
 |StreamInsight HA|StreamInsight Premium Edition|No|No|No|No|

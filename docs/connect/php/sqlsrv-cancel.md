@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_cancel
 apitype: NA
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 463ccadd953bd628f7f7fc0f5a99f414fe2f8ed1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d93f74d4b2df35e83ad4fbd72f0b0dcbd91e216
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414241"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190267"
 ---
 # <a name="sqlsrv_cancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

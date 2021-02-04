@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016
-ms.openlocfilehash: 58d9f3921500e2fd7fd1fa02046d4f89d67ccbeb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: cc8adae5672f14e25e9094befd455ac6ee599850
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478796"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251006"
 ---
 # <a name="sql-server-agent"></a>Agente SQL Server
 
@@ -29,7 +29,7 @@ ms.locfileid: "97478796"
 > [!IMPORTANT]  
 > En [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un servicio de Microsoft Windows que ejecuta tareas administrativas programadas, denominadas *trabajos* en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un servicio de Microsoft Windows que ejecuta tareas administrativas programadas, denominadas *trabajos* en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
 
 ## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>Ventajas del Agente SQL Server 
 
@@ -38,7 +38,7 @@ ms.locfileid: "97478796"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ejecutar un trabajo según una programación, como respuesta a un evento específico o a petición. Por ejemplo, si desea realizar una copia de seguridad de todos los servidores de la organización todos los días entre semana después del horario de trabajo, puede automatizar esta tarea. Programe la copia de seguridad para que se ejecute después de las 22:00 h de lunes a viernes; si la copia de seguridad encuentra un problema, el Agente SQL Server puede registrar el evento y notificárselo.  
   
 > [!NOTE]  
-> El servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está deshabilitado de manera predeterminada cuando se instala [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , a menos que el usuario elija explícitamente iniciar automáticamente el servicio.  
+> El servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está deshabilitado de manera predeterminada cuando se instala [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , a menos que el usuario elija explícitamente iniciar automáticamente el servicio.  
   
 ## <a name="sql-server-agent-components"></a><a name="Components"></a>Componentes del Agente SQL Server  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emplea los siguientes componentes para definir las tareas que se van a realizar, cuándo se van a llevar a cabo y cómo se va a informar de si se han realizado correctamente o no.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerConnection.isClosed
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3560ab18-4350-4d02-9716-439f0c2f7142
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09d4a5e3c1d3634e52fd9b2d8244262c40fada06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8a524b7d5aa5af4cd002741786ea2fb0cea2bb2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433597"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177453"
 ---
 # <a name="isclosed-method-sqlserverconnection"></a>Método isClosed (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public boolean isClosed()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **true**si la conexión está cerrada, **false** si no lo está.  
+ **true** si la conexión está cerrada, **false** si no lo está.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

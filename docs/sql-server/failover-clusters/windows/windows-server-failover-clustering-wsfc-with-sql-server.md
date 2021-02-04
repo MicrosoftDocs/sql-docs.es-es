@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 56cfc62709e24fc48704ed44b86a866b07a0b0ef
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 11e424ef4f32b91a7c4d65faf796335a3f7faf26
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642673"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251228"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Clústeres de conmutación por error de Windows Server con SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Un *clúster de conmutación por error de Windows Server* (WSFC) es un grupo de servidores independientes que funcionan conjuntamente para aumentar la disponibilidad de aplicaciones y servicios. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aprovecha los servicios y las capacidades de WSFC para admitir instancias de clúster de conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+  Un *clúster de conmutación por error de Windows Server* (WSFC) es un grupo de servidores independientes que funcionan conjuntamente para aumentar la disponibilidad de aplicaciones y servicios. [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] aprovecha los servicios y las capacidades de WSFC para admitir instancias de clúster de conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
    
 ##  <a name="terms-and-definitions"></a><a name="TermsAndDefs"></a> Términos y definiciones  
@@ -76,7 +76,7 @@ ms.locfileid: "97642673"
  Para más información, consulte: [Failover Clustering Overview - Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))(Introducción a los clústeres de conmutación por error - Windows Server).  
   
 ##  <a name="sql-server-always-on-technologies-and-wsfc"></a><a name="AlwaysOnWsfcTech"></a> Tecnologías de SQL Server AlwaysOn y WSFC  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* es una solución de alta disponibilidad y recuperación ante desastres que aprovecha las ventajas de WSFC. Las características de Always On proporcionan soluciones integradas y flexibles que aumentan la disponibilidad de las aplicaciones, proporcionan mejores réditos en inversiones de hardware y simplifican la implementación y administración de alta disponibilidad.  
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] *AlwaysOn* es una solución de alta disponibilidad y recuperación ante desastres que aprovecha las ventajas de WSFC. Las características de Always On proporcionan soluciones integradas y flexibles que aumentan la disponibilidad de las aplicaciones, proporcionan mejores réditos en inversiones de hardware y simplifican la implementación y administración de alta disponibilidad.  
   
  Tanto las instancias de clúster de conmutación por error [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] como AlwaysOn usan WSFC como tecnología de plataforma, registrando los componentes como recursos de clúster de WSFC.  Los recursos relacionados se combinan en un *rol* que puede hacerse dependiente de otros recursos de clúster de WSFC. El WSFC puede detectar y designar la necesidad de reiniciar la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o realizar automáticamente la conmutación por error a otro nodo del servidor del WSFC.  
   

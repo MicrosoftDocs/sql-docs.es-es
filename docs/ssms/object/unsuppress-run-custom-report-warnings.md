@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c6fd8adef633e50591088c8859fd8071c96da992
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf87ce7e04e50ea64a6f98db0b29dfc7e90f813d
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88317051"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250494"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Anular la supresión de las advertencias de Ejecutar informe personalizado
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Para los informes personalizados existen dos cuadros de diálogo de advertencia. En este tema se describe cómo anular la supresión de la presentación de estos cuadros en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+Para los informes personalizados existen dos cuadros de diálogo de advertencia. En este tema se describe cómo anular la supresión de la presentación de estos cuadros en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 De forma predeterminada, el cuadro de diálogo **Ejecutar informe personalizado** aparece antes de la ejecución de un informe personalizado. Si activa la casilla **No volver a mostrar esta advertencia** , el cuadro de diálogo ya no aparecerá más. De forma predeterminada, el cuadro de diálogo **Ejecutar informe personalizado** también aparece cuando se abre un informe personalizado y, a continuación, se hace clic en un vínculo para abrir otro informe personalizado. Este cuadro de diálogo muestra la ruta completa al archivo de informe detallado personalizado. Si activa la casilla **No volver a mostrar esta advertencia** , el cuadro de diálogo ya no aparecerá más.  
   
@@ -32,7 +32,7 @@ De forma predeterminada, el cuadro de diálogo **Ejecutar informe personalizado*
   
 1.  Conéctese a \<*Server*>\\<*Recurso compartido*>|\<*Drive*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml.  
   
-2.  Haga clic con el botón derecho en **reports.xml**y, luego, haga clic en **Editar**.  
+2.  Haga clic con el botón derecho en **reports.xml** y, luego, haga clic en **Editar**.  
   
 3.  Cambie **<SuppressWarning>true\<\/SuppressWarning> a <SuppressWarning>false\<\/SuppressWarning>** .  
   
@@ -42,7 +42,7 @@ De forma predeterminada, el cuadro de diálogo **Ejecutar informe personalizado*
   
 1.  Conéctese a \<*Server*>\\<*Recurso compartido*>|\<*Drive*>\Documents and Settings\\<UserProfile>\Application Data\Microsoft\Microsoft SQL Server\130\Tools\Shell\reports.xml.  
   
-2.  Haga clic con el botón derecho en **reports.xml**y, luego, haga clic en **Editar**.  
+2.  Haga clic con el botón derecho en **reports.xml** y, luego, haga clic en **Editar**.  
   
 3.  Cambie **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning>a <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>** .  
   

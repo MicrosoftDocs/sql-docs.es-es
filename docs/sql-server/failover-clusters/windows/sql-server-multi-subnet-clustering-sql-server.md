@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4c230a793b81960b29e66813ba392eeb6395d5ee
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 40c1f3b925612611d1fe925f87bd2d4dd9d926c4
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642766"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251248"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Agrupación en clústeres de varias subredes de SQL Server (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "97642766"
   
    
 ##  <a name="sql-server-multi-subnet-failover-cluster-two-nodes-two-subnets"></a><a name="VisualElement"></a> Clúster de conmutación por error de múltiples subredes de SQL Server (dos nodos, dos subredes)  
- La ilustración siguiente representa una instancia de clúster de conmutación por error (FCI) con dos nodos y dos subredes en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ La ilustración siguiente representa una instancia de clúster de conmutación por error (FCI) con dos nodos y dos subredes en [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
  ![Arquitectura de múltiples subredes con MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Arquitectura de múltiples subredes con MultiSubnetFailover")  
   
@@ -67,7 +67,7 @@ ms.locfileid: "97642766"
 ##  <a name="client-recovery-latency-during-failover"></a><a name="DNS"></a> Latencia de recuperación de cliente durante conmutaciones por error  
  Una instancia de clúster de conmutación por error de múltiples subredes habilita de forma predeterminada el recurso de clúster RegisterAllProvidersIP para el nombre de red. En una configuración de múltiples subredes, las direcciones IP en línea y sin conexión del nombre red se registra en el servidor DNS. La aplicación cliente recupera a continuación todas las direcciones IP registradas del servidor DNS e intenta la conexión con las direcciones en orden o en paralelo. Esto significa que el tiempo de recuperación de cliente en clústeres de conmutación por error de múltiples subredes deja de depender de las latencias de actualización de DNS. De forma predeterminada, el cliente intenta las direcciones IP en orden. Cuando el cliente usa el nuevo parámetro opcional **MultiSubnetFailover=True** en la cadena de conexión, intentará en su lugar las direcciones IP simultáneamente y las conexiones al primer servidor que responda. Esto puede ayudar a reducir al mínimo la latencia de recuperación de cliente cuando se produzcan conmutaciones por error. Para más información, consulte [Conectividad de cliente de AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) y [Crear o configurar un agente de escucha de grupo de disponibilidad (SQL Server)](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- Con las bibliotecas de cliente heredadas o con proveedores de datos de terceros, no puede utilizar el parámetro **MultiSubnetFailover** en la cadena de conexión. Para asegurarse de que la aplicación cliente funcione de manera óptima con instancias de conmutación por error de múltiples subredes en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], intente ajustar el tiempo de espera de conexión en la cadena de conexión de cliente en 21 segundos para cada dirección IP adicional. Esto garantiza que el intento de reconexión del cliente no supere el tiempo de espera antes de poder recorrer todas las direcciones IP en la instancia de conmutación por error de múltiples subredes.  
+ Con las bibliotecas de cliente heredadas o con proveedores de datos de terceros, no puede utilizar el parámetro **MultiSubnetFailover** en la cadena de conexión. Para asegurarse de que la aplicación cliente funcione de manera óptima con instancias de conmutación por error de múltiples subredes en [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], intente ajustar el tiempo de espera de conexión en la cadena de conexión de cliente en 21 segundos para cada dirección IP adicional. Esto garantiza que el intento de reconexión del cliente no supere el tiempo de espera antes de poder recorrer todas las direcciones IP en la instancia de conmutación por error de múltiples subredes.  
   
  El período de tiempo de espera predeterminado de la conexión de cliente para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio y **sqlcmd** es de 15 segundos.  
  

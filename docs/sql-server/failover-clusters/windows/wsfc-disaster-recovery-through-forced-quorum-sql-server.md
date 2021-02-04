@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fcdd0f1d34ed4107cbe3c90708abe286efbf0837
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6aa2a07da107a5283a4dacc8323dc5d6a928702a
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642665"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251200"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Recuperación ante desastres del clúster WSFC mediante quórum forzado (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "97642665"
 1.  **Determinar el ámbito del error.** Identifique los grupos de disponibilidad o las instancias de SQL Server que no responden, los nodos de clúster que están en línea y disponibles para uso después de los desastres, y examine los registros de eventos de Windows y los registros del sistema de SQL Server.  En la práctica, debe mantener los datos de incidentes y los registros del sistema para su análisis posterior.  
   
     > [!TIP]  
-    >  En una instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]que responde, puede obtener información sobre el estado de los grupos de disponibilidad que poseen una réplica de disponibilidad en la instancia del servidor local consultando la vista de administración dinámica (DMV) [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) .  
+    >  En una instancia de [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]que responde, puede obtener información sobre el estado de los grupos de disponibilidad que poseen una réplica de disponibilidad en la instancia del servidor local consultando la vista de administración dinámica (DMV) [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) .  
   
 2.  **Iniciar el clúster WSFC mediante quórum forzado en un único nodo.** Identifique un nodo con un número mínimo de errores de componentes, que sean distintos de cerrar el servicio del clúster WSFC.  Compruebe que este nodo puede comunicarse con una mayoría de los demás nodos.  
   
