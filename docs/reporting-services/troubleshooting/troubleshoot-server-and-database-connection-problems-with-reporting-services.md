@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 968de0f9cf8c95b13a67f3fb2b0f36e3d8c09ced
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 74bf6f0da0daa0df248243ffbce505c75c55db5e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986118"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076327"
 ---
 # <a name="troubleshoot-server--database-connection-problems-with-reporting-services"></a>Solución de problemas de conexión de base de datos y servidor con Reporting Services
 Utilice este tema para solucionar los problemas que surjan durante la conexión a un servidor de informes. Este tema también proporciona información sobre los mensajes de "Error inesperado". Para más información sobre la configuración del origen de datos y cómo configurar la información de conexión del servidor de informes, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) y [Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración del servidor de informes)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -35,7 +35,7 @@ La causa del problema en la conexión a SQL Server puede deberse a que SQL Serve
 * Compruebe que la dirección URL del servidor de informes y la cadena de conexión para la base de datos del servidor de informes son correctas. Si Reporting Services o el motor de base de datos se han instalado como una instancia con nombre, la cadena de conexión predeterminada que se cree durante la instalación incluirá el nombre de la instancia. Por ejemplo, si instala una instancia predeterminada de SQL Server Express con Advanced Services en un servidor denominado DEVSRV01, la dirección URL del portal web es DEVSRV01\Reports$SQLEXPRESS. Además, el nombre del servidor de bases de datos en la cadena de conexión se parecerá a DEVSRV01\SQLEXPRESS. Para obtener más información sobre las direcciones URL y cadenas de conexión de origen de datos para SQL Server Express, consulte [Reporting Services en SQL Server Express con Advanced Services](/previous-versions/sql/sql-server-2008-r2/ms365166(v=sql.105)). Si desea comprobar la cadena de conexión para la base de datos del servidor de informes, inicie la herramienta de configuración de Reporting Services y vea la página Instalación de base de datos.  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>No se puede establecer una conexión. Asegúrese de que el servidor se está ejecutando.  
-Se trata de un error devuelto por el proveedor de ADOMD.NET. Existen varias razones por las que puede producirse este error. Si ha especificado el servidor como "localhost", pruebe a especificar el nombre de servidor en su lugar. Este error también puede producirse si no puede asignarse memoria a la nueva conexión. Para obtener más información, consulte [Knowledge Base Article 912017 - Error message when you connect to an instance of SQL Server 2005 Analysis Services:](https://support.microsoft.com/kb/912017)(Artículo 912017 de Knowledge Base: Mensaje de error al conectar una instancia de SQL Server 2005 Analysis Services).  
+Se trata de un error devuelto por el proveedor de ADOMD.NET. Existen varias razones por las que puede producirse este error. Si ha especificado el servidor como "localhost", pruebe a especificar el nombre de servidor en su lugar. Este error también puede producirse si no puede asignarse memoria a la nueva conexión. Para obtener más información, consulte [Knowledge Base Article 912017 - Error message when you connect to an instance of SQL Server 2005 Analysis Services:](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/912017)(Artículo 912017 de Knowledge Base: Mensaje de error al conectar una instancia de SQL Server 2005 Analysis Services).  
   
 Si el error también incluye "Host desconocido", indica que el servidor de Analysis Services no está disponible o está rechazando la conexión. Si el servidor de Analysis Services está instalado como una instancia con nombre en un equipo remoto, es probable que tenga que ejecutar el servicio Explorador de SQL Server para obtener el número de puerto utilizado por dicha instancia.  
   
@@ -49,7 +49,7 @@ Para solucionar este error, puede modificar la cadena de conexión para que util
 1. Inicie el Administrador de configuración de SQL Server.  
 2. Expanda la opción **Configuración de red de SQL Server**.  
 3. Seleccione **Protocolos de MSSQLSERVER**.  
-4. Haga clic con el botón derecho en **TCP/IP**y seleccione **Habilitar**.  
+4. Haga clic con el botón derecho en **TCP/IP** y seleccione **Habilitar**.  
 5. Seleccione **Servicios de SQL Server**.  
 6. Haga clic con el botón derecho en **SQL Server (MSSQLSERVER)** y seleccione **Reiniciar**.  
   

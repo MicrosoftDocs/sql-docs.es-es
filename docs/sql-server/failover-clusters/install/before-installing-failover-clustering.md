@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a2ed61eb89deb29b22f82f39de4091f65be43cea
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 87294a8d20bf1c297c1629509a85cde7493b6ef5
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98595325"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076613"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar los clústeres de conmutación por error
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "98595325"
   
 -   Instale el software previo requerido. Antes de ejecutar el programa de instalación para instalar o actualizar a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], instale el software previo siguiente para reducir el tiempo de instalación. Puede instalar el software previo en cada nodo de clúster de conmutación por error y, a continuación, reiniciar los nodos una vez antes de ejecutar el programa de instalación.  
   
-    -   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala Windows PowerShell. Windows PowerShell es un requisito previo para instalar los componentes de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] y [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Si Windows PowerShell no está presente en su equipo, puede habilitarlo siguiendo las instrucciones de la página [Marco de administración de Windows](https://go.microsoft.com/fwlink/?LinkId=186214) .  
+    -   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala Windows PowerShell. Windows PowerShell es un requisito previo para instalar los componentes de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] y [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Si Windows PowerShell no está presente en su equipo, puede habilitarlo siguiendo las instrucciones de la página [Marco de administración de Windows](/powershell/scripting/windows-powershell/wmf/overview) .  
   
     -   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala .NET Framework 3.5 SP1 pero quizá se necesite al instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en los sistemas operativos Windows anteriores. Para más información, consulte las [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Notas de la versión](/previous-versions/sql/sql-server-15/dn169381(v=sql.15)).  
   
@@ -145,7 +145,7 @@ ms.locfileid: "98595325"
   
 -   Revise el contenido de [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
--   Para habilitar la autenticación Kerberos con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea el artículo [Cómo utilizar la autenticación Kerberos en SQL Server](https://support.microsoft.com/kb/319723) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base.  
+-   Para habilitar la autenticación Kerberos con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea el artículo [Cómo utilizar la autenticación Kerberos en SQL Server](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/319723) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Knowledge Base.  
 
 -   Instancia de clúster de conmutación por error de SQL Server (FCI) requiere que los nodos de clúster estén unidos a un dominio. **No se admiten** las configuraciones siguientes: 
     *   FCI de SQL en clústeres de grupo de trabajo. 
