@@ -1,17 +1,17 @@
 ### YamlMime:Hub
 title: Documentación de Microsoft SQL
-summary: 'Obtenga información sobre cómo usar SQL Server y Azure SQL para administrar sus necesidades relacionadas con bases de datos, tanto en un entorno local como en la nube. (vínculo rápido: https://aka.ms/sqldocs)'
+summary: Obtenga información sobre cómo usar SQL Server y Azure SQL para administrar sus necesidades relacionadas con bases de datos, tanto en un entorno local como en la nube.
 brand: sql
 metadata:
   title: Documentación de Microsoft SQL | Microsoft Docs
-  description: 'Obtenga información sobre cómo usar SQL Server y Azure SQL para administrar sus necesidades relacionadas con bases de datos, tanto en un entorno local como en la nube. (vínculo rápido: https://aka.ms/sqldocs)'
+  description: Obtenga información sobre cómo usar SQL Server y Azure SQL para administrar sus necesidades relacionadas con bases de datos, tanto en un entorno local como en la nube.
   ms.topic: hub-page
-  ms.openlocfilehash: 9e5ac2f53987c94f7a4fa84a55df23409861712e
-  ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+  ms.openlocfilehash: 68ee871d0a5d758a2fcb205373e8f61d02656cb1
+  ms.sourcegitcommit: e4b6357756a9c691b0441208a0058f7b8f3bea51
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/20/2021
-  ms.locfileid: "98594373"
+  ms.lasthandoff: 02/03/2021
+  ms.locfileid: "99510336"
 highlightedContent:
   items:
   - title: Pruebe SQL Server 2019
