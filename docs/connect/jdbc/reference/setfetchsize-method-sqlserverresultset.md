@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.setFetchSize
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 233bf4f8-4758-42d0-a80b-33e34fa78027
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d984004b4d306462e2c1345344ebc8072f775a82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 830949a046b70e11930e58d12882814c208c41ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431867"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99173433"
 ---
 # <a name="setfetchsize-method-sqlserverresultset"></a>Método setFetchSize (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void setFetchSize(int rows)
 #### <a name="parameters"></a>Parámetros  
  *rows*  
   
- Un valor**int** que indica el número de filas que se van a capturar.  
+ Un valor **int** que indica el número de filas que se van a capturar.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

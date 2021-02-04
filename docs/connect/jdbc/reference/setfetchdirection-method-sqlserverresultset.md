@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.setFetchDirection
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4ee82290-508d-4bff-a5c5-8a56338deef8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1056136ec3f7cef61e22c237d250fd6709c23e22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b6b7a2ab02e084a0dabdba76cb1f32182d84f1de
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431897"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99173479"
 ---
 # <a name="setfetchdirection-method-sqlserverresultset"></a>Método setFetchDirection (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,19 +15,19 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0415e6ed7e7749f91f8654027865cfca8ab8c3f2
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 3a30947176efb820a7105f005e3d372f090d4190
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862151"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172168"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  La interfaz **ISSCommandWithParameters** expone la compatibilidad con los tipos XML y definidos por el usuario (UDT) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se trata de una interfaz opcional que hereda de la interfaz OLE DB **ICommandWithParameters** básica. Además de los tres métodos heredados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**y **SetParameterInfo**; **ISSCommandWithParameters** proporciona dos nuevos métodos que se utilizan para administrar tipos de datos específicos de servidor.  
+  La interfaz **ISSCommandWithParameters** expone la compatibilidad con los tipos XML y definidos por el usuario (UDT) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se trata de una interfaz opcional que hereda de la interfaz OLE DB **ICommandWithParameters** básica. Además de los tres métodos heredados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames** y **SetParameterInfo**; **ISSCommandWithParameters** proporciona dos nuevos métodos que se utilizan para administrar tipos de datos específicos de servidor.  
   
 > [!NOTE]  
 >  La interfaz **ISSCommandWithParameters** se puede utilizar cuando se usan componentes de servicio, pero los componentes de servicio no utilizarán esta interfaz.  
