@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - API Reference, sqlsrv_num_rows
 - sqlsrv_num_rows
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52366287eb25cb9932e8e80c97abc1c97ddbbcae
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: fe5599045702f2fec458df608d5fb25124732cff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435138"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99153590"
 ---
 # <a name="sqlsrv_num_rows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ sqlsrv_num_rows( resource $stmt )
 *$stmt*: el conjunto de resultados en el que se van a contar las filas.  
   
 ## <a name="return-value"></a>Valor devuelto  
-Se devolverá**False** si se produce un error al calcular el número de filas. De lo contrario, se devolverá el número de filas del conjunto de resultados.  
+Se devolverá **False** si se produce un error al calcular el número de filas. De lo contrario, se devolverá el número de filas del conjunto de resultados.  
   
 ## <a name="remarks"></a>Observaciones  
 sqlsrv_num_rows requiere un cursor de cliente, estático o de conjunto de claves, y devolverá **False** si utiliza un cursor de avance o un cursor dinámico. (El valor predeterminado es un cursor de avance). Para obtener más información sobre los cursores, vea [sqlsrv_query](../../connect/php/sqlsrv-query.md) y [Cursor Types &#40;SQLSRV Driver&#41; (Tipos de cursor &#40;Controlador SQLSRV&#41;)](../../connect/php/cursor-types-sqlsrv-driver.md).  

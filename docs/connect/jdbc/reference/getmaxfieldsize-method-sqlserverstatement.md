@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerStatement.getMaxFieldSize
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: ed7bbcb8-660b-4e9b-8241-e216c42826f9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0930c5ab4b3c2e907a6de9caeef96f78d57e2737
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b1cbb5bb3cb35b4286a0b822168c9991c228576
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88435567"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99162806"
 ---
 # <a name="getmaxfieldsize-method-sqlserverstatement"></a>Método getMaxFieldSize (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
