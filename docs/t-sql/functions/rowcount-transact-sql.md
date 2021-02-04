@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - '@@ROWCOUNT_TSQL'
 - '@@ROWCOUNT'
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5cbcc0c744c195db159788cb4476a92963323f66
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 6eca1ac99c93c8faa062b46b09fe3715663a5c87
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037120"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159721"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "92037120"
   
 -   Restablecer @@ROWCOUNT en 0 y no devolver el valor al cliente.  
   
- Las instrucciones que realizan una asignación simple siempre establecen el valor @@ROWCOUNT en 1. No se envían filas al cliente. Estos son algunos ejemplos de estas instrucciones: SET @*local_variable*, RETURN, READTEXT y seleccione instrucciones sin consulta como SELECT GETDATE() o SELECT **'***Texto genérico***'** .  
+ Las instrucciones que realizan una asignación simple siempre establecen el valor @@ROWCOUNT en 1. No se envían filas al cliente. Estos son algunos ejemplos de estas instrucciones: SET @*local_variable*, RETURN, READTEXT, y seleccione instrucciones sin consulta como SELECT GETDATE() o SELECT **'** _Texto genérico_*_'_*.  
   
  Las instrucciones que realizan una asignación en una consulta o usan RETURN en una consulta establecen el valor @@ROWCOUNT en el número de filas afectadas o leídas por la consulta, por ejemplo: SELECT @*local_variable* = c1 FROM t1.  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.date: 06/10/2020
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: eab3c943f1191c2d52f6d476c1e0a83b74b6f0df
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 57ddcd78bd05cda262c9e4d041562dc5c2dfc4b7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97638241"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236545"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Clasificación y detección de datos de SQL
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,13 +24,13 @@ ms.locfileid: "97638241"
 La clasificación y detección de datos cuenta con una nueva herramienta integrada en [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) para **detectar**, **clasificar**, **etiquetar** y **notificar** los datos confidenciales de las bases de datos.
 La detección y clasificación de la información más confidencial (empresarial, financiera, sanitaria, etc.) pueden desempeñar un papel fundamental en el estado de protección de la información de la organización. Puede servir como infraestructura para lo siguiente:
 * Ayudar a cumplir los estándares de privacidad de datos.
-* Controlar el acceso a bases de datos o columnas que contienen datos altamente confidenciales y aumentar su seguridad.
+* Supervisar el acceso a bases de datos o columnas que contengan datos altamente confidenciales.
 
 > [!NOTE]
 > La clasificación y detección de datos se **admite para SQL Server 2012 y versiones posteriores, y se puede usar con [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) o versiones posteriores**. Para Azure SQL Database, vea [Clasificación y detección de datos de Azure SQL Database](/azure/sql-database/sql-database-data-discovery-and-classification/).
 
 ## <a name="overview"></a><a id="subheading-1"></a>Información general
-La clasificación y detección de datos incluye un conjunto de servicios avanzados que forman un nuevo paradigma de Information Protection de SQL destinado a proteger los datos, no solo la base de datos:
+La característica Clasificación y detección de datos presenta un conjunto de servicios que forman un nuevo paradigma de SQL Information Protection pensado para proteger los datos, no solo la base de datos:
 
 * **Detección y recomendaciones**: el motor de clasificación examina la base de datos e identifica las columnas que contienen datos potencialmente confidenciales. Después, proporciona una manera sencilla de revisar y aplicar las recomendaciones de clasificación apropiadas, así como de clasificar las columnas de forma manual.
 * **Etiquetado**: las etiquetas de clasificación de confidencialidad se pueden etiquetar de forma persistente en columnas.

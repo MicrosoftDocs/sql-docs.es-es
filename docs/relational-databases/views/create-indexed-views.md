@@ -19,12 +19,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 872d40262da465bac6e336472e8beca402482b5f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0cc0d86dbdce6e3618957551a1059c0178a23d61
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484377"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236295"
 ---
 # <a name="create-indexed-views"></a>Crear vistas indizadas
 
@@ -39,8 +39,9 @@ Para crear una vista indizada, es necesario seguir los pasos descritos a continu
 1. Compruebe que las opciones SET sean correctas para todas las tablas existentes a las que se hará referencia en la vista.
 2. Compruebe que las opciones SET de la sesión estén establecidas correctamente antes de crear cualquier tabla y la vista.
 3. Compruebe que la definición de vista sea determinista.
-4. Cree la vista con la opción `WITH SCHEMABINDING`.
-5. Cree el índice clúster único en la vista.
+4. Verifique que la tabla base y la vista tengan el mismo propietario.
+5. Cree la vista con la opción `WITH SCHEMABINDING`.
+6. Cree el índice clúster único en la vista.
 
 > [!IMPORTANT]
 > Al ejecutar DML<sup>1</sup> en una tabla a la que hace referencia un gran número de vistas indexadas, o bien menos vistas indexadas pero muy complejas, dichas vistas indexadas a las que se hace referencia deberán actualizarse igualmente. Como resultado, el rendimiento de la consulta DML se puede degradar notablemente o, en algunos casos, puede que tampoco se genere un plan de consulta.
@@ -156,7 +157,10 @@ Los índices de las tablas y las vistas se pueden deshabilitar. Cuando se deshab
 
 #### <a name="permissions"></a><a name="Permissions"></a> Permisos
 
-Se necesita el permiso **CREATE VIEW** en la base de datos y el permiso **ALTER** en el esquema en que se crea la vista.
+Se necesita el permiso **CREATE VIEW** en la base de datos y el permiso **ALTER** en el esquema en que se crea la vista. Si la tabla base reside en otro esquema, por lo menos se requiere el permiso **REFERENCES** relativo a la tabla.
+
+    > [!NOTE]  
+    > For the creation of the index on top of the view, the base table must have the same owner as the view. This is also called ownership-chain. This is usually the case when table and view reside within the same schema, but it is possible that individual objects have different owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL
 

@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - OVER_TSQL
 - OVER
@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dd2c6c6f33f9a115196d9a2afc3ca700b3a4631
-ms.sourcegitcommit: a81823f20262227454c0b5ce9c8ac607aaf537e2
+ms.openlocfilehash: f1caba28e45e1eea3217f41e0dc37789f4e3054e
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97684201"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250774"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT: cláusula OVER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -174,7 +174,7 @@ ORDER BY *order_by_expression* [COLLATE *collation_name*] [ASC|DESC]
 
  Define el orden lógico de las filas dentro de cada partición del conjunto de resultados. Es decir, especifica el orden lógico en el que se realiza el cálculo de la función de ventana. 
  - Si no se especifica, el orden predeterminado es `ASC` y la función de ventana usará todas las filas de la partición.
- - Si se especifica y, en ROWS/RANGE no está especificado, el valor predeterminado `RANGE UNBOUNDED PRECEDING AND CURRENT ROW` lo utilizan como valor predeterminado para el marco de ventana las funciones que pueden aceptar la especificación ROWS/RANGE opcional (por ejemplo, `min` o `max`). 
+ - Si se especifica, pero ROWS/RANGE no, las funciones que pueden aceptar la especificación opcional de ROWS/RANGE (por ejemplo, `min` o `max`) usan el valor `RANGE UNBOUNDED PRECEDING AND CURRENT ROW` como predeterminado. 
  
 ```sql
 select 

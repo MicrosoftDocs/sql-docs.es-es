@@ -12,12 +12,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ba8729558f6e3e1736db9c380a268cd606444f1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c39e0d3bc84bd469d599ada0ecd5884e37193a08
+ms.sourcegitcommit: 5f9d682924624fe1e1a091995cd3a673605a4e31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482348"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860928"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Limitaciones y consideraciones de las tablas temporales
 
@@ -53,7 +53,7 @@ Tenga en cuenta lo siguiente al trabajar con tablas temporales:
 - El uso de tecnologías de replicación está limitado:
 
   - **Always On:** totalmente compatible
-  - **Captura de datos modificados y seguimiento de cambios:** solo se admite en la tabla actual
+  - **Captura de datos modificados y seguimiento de cambios**: solo se admite en la tabla actual
   - **Replicación transaccional y de instantáneas**: solo se admite para un publicador único sin la función de temporalidad habilitada, y un suscriptor que tenga esa función habilitada. En este caso, el publicador se usa para una carga de trabajo OLTP, mientras que el suscriptor sirve para la descarga de informes (incluidas las consultas "AS OF"). Cuando se inicia el agente de distribución, este abre una transacción que se mantiene abierta hasta que se detiene el agente de distribución. Debido a este comportamiento, SysStartTime y SysEndTime se rellenan en la hora de inicio de la primera transacción en la que se inicia el agente de distribución. Así pues, si rellenar SysStartTime y SysEndTime con una hora cercana a la hora actual del sistema es importante en su aplicación u organización, puede que lo mejor sea ejecutar el agente de distribución según una programación en lugar de seguir el comportamiento predeterminado, esto es, ejecutarlo constantemente. No se admite el uso de varios suscriptores, puesto que puede provocar que los datos temporales sean incoherentes porque cada uno de ellos dependería del reloj del sistema local.
   - **Replicación de mezcla:** no es compatible con las tablas temporales
 

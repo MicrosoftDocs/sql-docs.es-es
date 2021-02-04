@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75f999052eecd750d548cb6d383eafe5375ed130
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: af2caf850d3f7facb61a7484c5af44e4ba785fa3
+ms.sourcegitcommit: 5f9d682924624fe1e1a091995cd3a673605a4e31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440150"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860918"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>Diagnóstico y resolución de la contención de bloqueos temporales en SQL Server
 
@@ -58,7 +58,7 @@ Los bloqueos temporales se adquieren de uno de cinco modos diferentes relaciona
 
 * **KP**: bloqueo temporal de mantenimiento, que garantiza que la estructura a la que se hace referencia no se pueda destruir. Se usa cuando un subproceso quiere examinar una estructura de búfer. Dado que el bloqueo temporal de KP es compatible con todos los bloqueos temporales salvo el de destrucción (DT), se considera "ligero", lo que significa que el impacto sobre el rendimiento cuando se usa es mínimo. Puesto que el bloqueo temporal de KP no es compatible con el de DT, evita que cualquier otro subproceso destruya la estructura a la que se hace referencia. Por ejemplo, un bloqueo temporal de KP evita que el proceso de escritura diferida destruya la estructura a la que se hace referencia. Para obtener más información sobre cómo se usa el proceso de escritura diferida con la administración de páginas de búfer de SQL Server, vea [Escribir páginas](./writing-pages.md).
 
-* **SH**: bloqueo temporal compartido, que es necesario para leer una estructura de página. 
+* **SH**: bloqueo temporal compartido, necesario para leer la estructura a la que se hace referencia (por ejemplo, leer una página de datos). Varios subprocesos pueden acceder de forma simultánea a un recurso para leerlo bajo un bloqueo temporal compartido.
 * **UP**: bloqueo temporal de actualización, que es compatible con SH (bloqueo temporal compartido) y KP, pero no con otros y, por lo tanto, no permite que un bloqueo temporal de EX escriba en la estructura a la que se hace referencia. 
 * **EX**: bloqueo temporal exclusivo, que evita que otros subprocesos escriban o lean en la estructura a la que se hace referencia. Un ejemplo de uso sería la modificación del contenido de una página para la protección contra página rasgada. 
 * **DT**: bloqueo temporal de destrucción, que debe adquirirse antes de destruir contenido de la estructura a la que se hace referencia. Por ejemplo, el proceso de escritura diferida debe adquirir un bloqueo temporal de DT para liberar una página limpia antes de agregarla a la lista de búferes disponibles para su uso por parte de otros subprocesos.
@@ -70,10 +70,10 @@ En la tabla siguiente se muestra la compatibilidad de los modos de bloqueo tempo
 |Modo de bloqueo temporal |**KP**  |**SH** |**UP**  |**EX**  |**DT**|
 |--------|--------|-------|--------|--------|--------|
 |**KP**  |Y       |Y      |Y       |Y       |N|
-|**SH**  |Y       |Y      |Y       |No       |N|
-|**UP**  |Y       |Y      |No       |No       |N|
-|**EX**  |Y       |No      |No       |No       |N|
-|**DT**  |N       |No      |No       |No       |N|
+|**SH**  |Y       |Y      |Y       |N       |N|
+|**UP**  |Y       |Y      |No       |N       |N|
+|**EX**  |Y       |No      |No       |N       |N|
+|**DT**  |No       |No      |No       |N       |N|
 
 ## <a name="sql-server-superlatches-and-sublatches"></a>SuperLatches y sub-bloqueos temporales de SQL Server
 

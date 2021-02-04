@@ -1,27 +1,26 @@
 ---
 description: 'Instrucciones RESTORE: argumentos (Transact-SQL)'
-title: Argumentos de RESTORE (Transact-SQL) | Microsoft Docs
+title: RESTORE (argumentos, Transact-SQL)
 ms.custom: ''
 ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
-ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 19c71e5beb3b192615f57e620870dec66b2d645f
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: c07e6ba84a511d81e1fb17718552a0ca2738271a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688824"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236237"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instrucciones RESTORE: argumentos (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -255,7 +254,7 @@ CREDENTIAL
  Se usa solo al restaurar una copia de seguridad desde el servicio Microsoft Azure Blob Storage.  
   
 > [!NOTE]  
->  Con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y hasta [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], las restauraciones solo se pueden realizar desde un único dispositivo al restaurar desde una dirección URL. Para restaurar desde varios dispositivos cuando se restaure desde una dirección URL, hay que usar desde [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] a [versión actual](../../sql-server/what-s-new-in-sql-server-2016.md)) y, asimismo, usar tokens de Firma de acceso compartido (SAS). Para más información, vea [Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).  
+>  Con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y hasta [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], las restauraciones solo se pueden realizar desde un único dispositivo al restaurar desde una dirección URL. Para realizar una restauración a partir de varios dispositivos, al hacerlo de una URL, debe usar [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], o una versión posterior, y tokens de firma de acceso compartido (SAS). Para más información, vea [Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).  
   
  REPLACE  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  

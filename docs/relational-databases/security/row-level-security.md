@@ -1,5 +1,5 @@
 ---
-title: Seguridad de nivel de fila | Microsoft Docs
+title: Seguridad de nivel de fila
 description: Obtenga información sobre cómo la característica Seguridad de nivel de fila utiliza la pertenencia a un grupo o el contexto de ejecución para controlar el acceso a las filas de una tabla de base de datos en SQL Server.
 ms.custom: ''
 ms.date: 09/01/2020
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - security [SQL Server], predicate based access control
 - row level security described
 - predicate based security
-ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6eb3fe21d1b5ea41e1f7c70818a7b998f0d3ca42
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 828218dcebe5f2e5ab6c0759083f497876dae6b2
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172717"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813530"
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
 
@@ -39,7 +38,7 @@ La lógica de la restricción de acceso está ubicada en el nivel de base de dat
   
 Implemente RLS mediante la instrucción [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] y los predicados creados como [funciones con valores de tabla insertadas](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] hasta la [versión actual](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenerlo](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([aquí](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)) y [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
 > Azure Synapse solo admite los predicados de filtro. En la actualidad, los predicados de bloqueo no se admiten en Azure Synapse.

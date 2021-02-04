@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 116d2f34bef990cca174117238981bb7e87917b4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ee107ed1d1e9fe7ec7aa8b40c87c71750b5cdf99
+ms.sourcegitcommit: 3e2421ae45a8e9fa57fb590a5d1a5566721ea74a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97481346"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98921393"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos para eventos extendidos en SQL Server
 

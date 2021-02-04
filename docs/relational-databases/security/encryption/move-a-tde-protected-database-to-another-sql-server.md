@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: e15751fb064d2843770d72f26db94b29de28f199
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 1f9b85e3d2f14eb534956c218d38f98b634dc89c
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867593"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813285"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover una base de datos protegida por TDE a otra instancia de SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91867593"
   
 ##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a> Para crear una base de datos protegida por el cifrado de datos transparente  
 
-En los siguientes procedimientos se muestra cómo debe crear una base de datos protegida por TDE mediante SQL Server Management Studio y Transact-SQL.
+En los siguientes procedimientos se muestra cómo crear una base de datos protegida por TDE mediante SQL Server Management Studio y Transact-SQL.
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> Uso de SQL Server Management Studio  
   
@@ -58,7 +58,7 @@ En los siguientes procedimientos se muestra cómo debe crear una base de datos p
   
 6.  En el Explorador de objetos, haga clic en el signo más para expandir la carpeta **Bases de datos** .  
   
-7.  Haga clic con el botón derecho en la base de datos que creó, seleccione **Tareas**y **Administrar cifrado de base de datos**.  
+7.  Haga clic con el botón derecho en la base de datos que creó, seleccione **Tareas** y **Administrar cifrado de base de datos**.  
   
      En el cuadro de diálogo **Administrar cifrado de base de datos** están disponibles las siguientes opciones.  
   
@@ -138,7 +138,7 @@ En los siguientes procedimientos se muestra cómo debe crear una base de datos p
   
 ##  <a name="to-move-a-database-protected-by-transparent-data-encryption"></a><a name="TsqlProcedure"></a> Para mover una base de datos protegida por el cifrado de datos transparente 
 
-En los siguientes procedimientos se muestra cómo debe mover una base de datos protegida por TDE mediante SQL Server Management Studio y Transact-SQL.
+En los siguientes procedimientos se muestra cómo mover una base de datos protegida por TDE mediante SQL Server Management Studio y Transact-SQL.
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> Uso de SQL Server Management Studio  
   

@@ -9,12 +9,12 @@ ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b929bd76f77f021fbc1821811beb7e86be8edd2e
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 20953eb151912f6eddf1e3ea0e13d34f3835e7d6
+ms.sourcegitcommit: 3e2421ae45a8e9fa57fb590a5d1a5566721ea74a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235679"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98921401"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configuración de una instancia de clúster de conmutación por error: iSCSI: SQL Server en Linux
 
@@ -58,7 +58,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
 
     Observe el ejemplo siguiente:
 
-    ![Captura de pantalla del archivo con los archivos rellenados por completo.][2]
+    ![Captura de pantalla del archivo con los valores rellenados al completo.][2]
 
 3.  Busque el destino iSCSI.
 

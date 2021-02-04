@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: e89a3638dc304bdda8bc11c55897975fb006e3ca
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94384736"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076843"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Errores conocidos y resoluciones con captura de datos modificados para Oracle de Attunity
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ La **versión 2.0.0.92** contiene estas correcciones:
 - Algunos cambios se han perdido y no se replican en la base de datos de SQL Server. Esta incidencia se produce cuando una tabla contiene más de un objeto binario grande de caracteres (CLOB) y uno de los CLOB tiene un valor grande. 
     - Se ha corregido en la _Actualización acumulativa 1 para SQL Server 2014 SP1_ y la _Actualización acumulativa 8 para SQL Server 2014 RTM_, tal como se describe en KB [3029096](https://support.microsoft.com/kb/3029096). 
 - La captura de datos modificados para Oracle de Attunity deja de funcionar cuando las tablas de Oracle tienen una columna con el tipo de datos Long.
-    - Se ha corregido en la _Actualización acumulativa 5 para SQL Server 2014 SP1_ y la _Actualización acumulativa 12 para SQL Server 2014 RTM_, tal como se describe en KB [3145983](https://support.microsoft.com/kb/3145983).
+    - Se ha corregido en la _Actualización acumulativa 5 para SQL Server 2014 SP1_ y la _Actualización acumulativa 12 para SQL Server 2014 RTM_, como se describe en [KB4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d).
 
 ### <a name="sql-server-2012"></a>SQL Server 2012
 
@@ -89,7 +89,7 @@ La **versión 1.1.0.102** contiene estas correcciones:
 - Error en la validación de metadatos de la tabla de Oracle cdc.table_name. El índice de la columna column_name está fuera del rango. Se ha corregido en la _Actualización acumulativa 7 para SQL Server 2012 SP1_, tal como se describe en KB [2883524](https://support.microsoft.com/kb/2883524).
 - El servicio CDC de Oracle muestra el estado anulado al usar CDC para Oracle de Attunity en SQL Server 2012. Se ha corregido en la _Actualización acumulativa 8 para SQL Server 2012 SP1_, tal como se describe en KB [2923839](https://support.microsoft.com/kb/2923839).  
 - Algunos cambios se han perdido y no se replican en las bases de datos de SQL Server. Esta incidencia se produce cuando una tabla contiene más de un objeto binario grande de caracteres (CLOB) y uno de los CLOB tiene un valor grande. Se ha corregido en la _Actualización acumulativa 8 para SQL Server 2012 SP1_, tal como se describe en KB [2923839](https://support.microsoft.com/kb/2923839).   
-- La captura de datos modificados para Oracle de Attunity deja de funcionar cuando las tablas de Oracle tienen una columna con el tipo de datos Long. Se ha corregido en la _Actualización acumulativa 2 para SQL Server 2012 SP3_ y la _Actualización acumulativa 11 para SQL Server 2012 SP2_, tal como se describe en KB [3145983](https://support.microsoft.com/kb/3145983). 
+- La captura de datos modificados para Oracle de Attunity deja de funcionar cuando las tablas de Oracle tienen una columna con el tipo de datos Long. Se ha corregido en la _Actualización acumulativa 2 para SQL Server 2012 SP3_ y la _Actualización acumulativa 11 para SQL Server 2012 SP2_, como se describe en [KB4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d). 
 
 ## <a name="collect-detailed-logs"></a>Recopilación de registros detallados 
 
