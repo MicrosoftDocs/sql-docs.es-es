@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: afd34354290134d0973c1105a902b96c4bbdd706
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0537e602d5c6773c4978c7fff0f5bf0f927985c6
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470006"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536346"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutorial: Desarrollo de SQL para científicos de datos de R
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -25,7 +25,7 @@ Usará una combinación de código R, datos de [!INCLUDE[ssNoVersion](../../inc
 
 Este ejemplo se puede ampliar a todos los tipos de problemas de la vida real, como predecir las respuestas de los clientes en las campañas de ventas o predecir los gastos o la asistencia a eventos. Dado que el modelo se puede invocar desde un procedimiento almacenado, puede insertarlo con facilidad en una aplicación.
 
-Como el tutorial está diseñado para presentar [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] a los desarrolladores de R, se usará R siempre que sea posible, si bien esto no significa que R sea necesariamente la mejor herramienta para cada tarea. En muchos casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría proporcionar un mejor rendimiento, especialmente en tareas como la agregación de datos e ingeniería de características.  Esas tareas pueden beneficiarse de las nuevas características de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], como los índices de almacén de columnas con optimización para memoria. En el camino le indicaremos posibles optimizaciones.
+Como el tutorial está diseñado para presentar [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] a los desarrolladores de R, se usará R siempre que sea posible, si bien esto no significa que R sea necesariamente la mejor herramienta para cada tarea. En muchos casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría proporcionar un mejor rendimiento, especialmente en tareas como la agregación de datos e ingeniería de características.  Esas tareas pueden beneficiarse de las nuevas características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como los índices de almacén de columnas con optimización para memoria. En el camino le indicaremos posibles optimizaciones.
 
 ## <a name="prerequisites"></a>Prerrequisitos
 

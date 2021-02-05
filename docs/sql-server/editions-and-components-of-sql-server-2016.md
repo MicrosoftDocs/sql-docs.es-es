@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 80b93a4a55b6d12ee5177230b78447c21fc0cae8
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 49d32254b0faaf9dea2ae4c31f7e3548179e75a7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172537"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236611"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Ediciones y características admitidas de SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -142,7 +142,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
   
 <sup>1</sup> La licencia basada en Enterprise Edition con licencia de servidor y acceso de cliente (CAL) (no disponible para nuevos contratos) está limitada a un máximo de 20 núcleos por instancia de SQL Server. No hay ningún límite en el modelo de licencias de servidor basado en núcleos. Para obtener más información, consulte [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
-<sup>2</sup> se aplica a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 como parte de la creación de un área expuesta de programación común (CPSA) entre ediciones. 
+<sup>2</sup> se aplica a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 como parte de la creación de un área expuesta de programación común (CPSA) entre ediciones. 
 
 ##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> RDBMS High Availability  
   
@@ -195,7 +195,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 
 <sup>1</sup> El tamaño de los datos de OLTP en memoria y la memoria caché del segmento del almacén de columnas se limitan a la cantidad de memoria especificada por edición en la sección Límites de escala. Los grados de paralelismo máximos están limitados. Los grados de paralelismo (DOP) para la compilación de un índice se limitan a 2 DOP para Standard Edition y 1 DOP para las ediciones Web y Express. Se refiere a los índices de almacén de columnas que se crean en tablas basadas en disco y en tablas optimizadas para memoria.
 
-<sup>2</sup> Se aplica a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 como parte de la creación de un área expuesta de programación común (CPSA) entre ediciones. Aplicación de agregados, Aplicación del predicado de la cadena y Optimizaciones de SIMD son mejoras de escalabilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition. Para más detalles, consulte [Novedades de los índices de almacén de columnas](../relational-databases/indexes/columnstore-indexes-what-s-new.md). 
+<sup>2</sup> Se aplica a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 como parte de la creación de un área expuesta de programación común (CPSA) entre ediciones. Aplicación de agregados, Aplicación del predicado de la cadena y Optimizaciones de SIMD son mejoras de escalabilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition. Para más detalles, consulte [Novedades de los índices de almacén de columnas](../relational-databases/indexes/columnstore-indexes-what-s-new.md). 
 
 <sup>3</sup> Esta característica no está incluida en la opción de instalación LocalDB.
 
@@ -215,7 +215,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Bases de datos independientes|Sí|Sí|Sí|Sí|Sí| 
 |Cifrado para copias de seguridad|Sí|Sí|No|No|No|  
 
-<sup>1</sup> se aplica a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 como parte de la creación de un área expuesta de programación común (CPSA) entre ediciones.      
+<sup>1</sup> se aplica a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 como parte de la creación de un área expuesta de programación común (CPSA) entre ediciones.      
 
 ##  <a name="replication"></a><a name="Replication"></a> Replicación  
   
@@ -276,7 +276,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
   
  <sup>1</sup> Para más información, vea [Consideraciones acerca de la instalación de SQL Server con SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
  
-<sup>2</sup> se aplica a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 como parte de la creación de un área expuesta de programación común (CPSA) entre ediciones.      
+<sup>2</sup> se aplica a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 como parte de la creación de un área expuesta de programación común (CPSA) entre ediciones.      
   
 ##  <a name="development-tools"></a><a name="DevTools"></a> Development Tools  
   
@@ -314,7 +314,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 
 <sup>1</sup> El escalado horizontal con varios nodos de cálculo exige un nodo principal.
 
-<sup>2</sup> se aplica a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 como parte de la creación de un área expuesta de programación común (CPSA) entre ediciones.     
+<sup>2</sup> se aplica a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 como parte de la creación de un área expuesta de programación común (CPSA) entre ediciones.     
   
 ## <a name="integration-services"></a><a name="IS"></a> Integration Services
 
@@ -336,7 +336,7 @@ Para obtener información sobre las características de Integration Services (SS
 |Procesamiento de consultas en paralelo en las tablas e índices con particiones|Sí|No|No|No|No|   
 |Agregación global de lotes|Sí|No|No|No|No| 
 
-<sup>1</sup> se aplica a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 como parte de la creación de un área expuesta de programación común (CPSA) entre ediciones.     
+<sup>1</sup> se aplica a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 como parte de la creación de un área expuesta de programación común (CPSA) entre ediciones.     
 
 ##  <a name="analysis-services"></a><a name="SSAS"></a> Analysis Services  
   

@@ -11,19 +11,19 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90e585e887e9415a8cf1f9d0104595547f2d1c87
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 5239174f08c9922a31204b4f476f923a7e931567
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171987"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236225"
 ---
 # <a name="subscription-settings-and-a-file-share-account-report-server-configuration-manager"></a>Configuración de la suscripción y una cuenta de recurso compartido de archivos (Administrador de configuración del servidor de informes)
   En la página **Configuración de suscripción** del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , configure una cuenta de recurso compartido de archivos para servidores de informes en modo nativo y suscripciones de recurso compartido de archivos. La cuenta de recurso compartido de archivos permite usar un único conjunto de credenciales en varias suscripciones que entregan informes a un recurso compartido de archivos. Cuando sea el momento de cambiar las credenciales, solamente deberá configurar el cambio en la cuenta de recurso compartido de archivos, con lo que no será necesario actualizar cada una de las suscripciones.  
   
  Con las suscripciones de recurso compartido de archivos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] existen dos flujos de trabajo:  
   
--   Como novedad de la versión [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] , el administrador de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] puede configurar una única cuenta de recurso compartido de archivos, que se usa para una o para varias suscripciones. Configure **Specify a file share account**(Especificar una cuenta de recurso compartido de archivos) y, las páginas de configuración de las suscripciones, seleccione **Use file share account**(Usar la cuenta de recurso compartido de archivos).  
+-   Como novedad de la versión [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] , el administrador de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] puede configurar una única cuenta de recurso compartido de archivos, que se usa para una o para varias suscripciones. Configure **Specify a file share account**(Especificar una cuenta de recurso compartido de archivos) y, las páginas de configuración de las suscripciones, seleccione **Use file share account**(Usar la cuenta de recurso compartido de archivos).  
   
 -   Configure las suscripciones individuales con credenciales específicas para el recurso compartido de archivos de destino.  
   

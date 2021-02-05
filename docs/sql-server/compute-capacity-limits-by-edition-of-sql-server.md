@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f169f8a88c13cc6b12b060405285c963dd9524e3
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: fd76f7fb9da663c5768ec9d60679a14b797655fc
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988075"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250385"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Límites de la capacidad de cálculo de cada edición de SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-  En este artículo se describen los límites de la capacidad de cálculo para las ediciones de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] y sus diferencias en entornos físicos y virtualizados con los procesadores con hyperthreading.  
+  En este artículo se describen los límites de la capacidad de cálculo para las ediciones de [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] y sus diferencias en entornos físicos y virtualizados con los procesadores con hyperthreading.  
   
  ![Asignaciones para calcular los límites de capacidad](../sql-server/media/compute-capacity-limits.gif "Asignaciones para calcular los límites de capacidad")  
   
@@ -76,7 +76,7 @@ Cada edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene do
   
 Estos límites se aplican a una sola instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Representan la capacidad máxima de cálculo que una sola instancia usará. No restringen el servidor en el que se puede implementar la instancia. De hecho, implementar varias instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el mismo servidor físico es una manera eficaz de usar la capacidad de procesamiento de un servidor físico con más sockets o núcleos que los límites de capacidad siguientes.  
   
-En la siguiente tabla se especifican los límites de la capacidad de cálculo para una sola instancia de cada edición de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
+En la siguiente tabla se especifican los límites de la capacidad de cálculo para una sola instancia de cada edición de [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]:  
   
 |Edición de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Capacidad máxima de cálculo para una sola instancia ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacidad máxima de cálculo para una sola instancia (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  

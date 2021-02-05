@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9fcfeed749aea4fa18ac74ba4e78cc9dfa368828
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 508240f27248cb4cc618441948c40b72c9311398
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99196297"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552615"
 ---
 # <a name="sysdm_cryptographic_provider_keys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,10 @@ ms.locfileid: "99196297"
   Devuelve información acerca de las claves proporcionadas por un proveedor de Administración extensible de claves (EKM).  
 
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+
+> [!IMPORTANT]
+> Esta vista de administración dinámica no es compatible actualmente con el conector de SQL Server EKM. El SQL Server equipo del producto es consciente de este problema y lo solucionará en el futuro.
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
@@ -46,7 +49,7 @@ dm_cryptographic_provider_keys ( provider_id )
   
 ## <a name="tables-returned"></a>Tablas devueltas  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**key_id**|**int**|Número de identificación de la clave del proveedor.|  
 |**key_name**|**nvarchar(512)**|Nombre de la clave del proveedor.|  

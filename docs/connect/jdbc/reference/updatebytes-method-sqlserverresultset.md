@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.updateBytes
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3050c836-fbb3-4475-99e5-05637a48a932
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 344df7440a9ab2b07ffa0686dab23e41a5d93842
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28414c4d58a5a1b2ef0cada57457de960722e8d1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458053"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99188300"
 ---
 # <a name="updatebytes-method-sqlserverresultset"></a>Método updateBytes (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

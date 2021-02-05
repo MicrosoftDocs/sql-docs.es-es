@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.updateBoolean
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 524ecc30-1587-47e1-812d-ddbc75163266
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c349d96067d70fb8b635116331557e5cfdcb7158
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7dc6b15e2c424af23af0809d1fe493a226b2036
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462264"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99188345"
 ---
 # <a name="updateboolean-method-sqlserverresultset"></a>Método updateBoolean (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

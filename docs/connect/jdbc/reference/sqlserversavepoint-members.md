@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c80da4d3b87c379bda298880ae1ac09c300f76e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 16e57b92b6e1515eb260440ab0ccf5e67eac9218
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462617"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180021"
 ---
 # <a name="sqlserversavepoint-members"></a>Miembros de SQLServerSavepoint
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

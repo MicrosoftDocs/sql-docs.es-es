@@ -17,18 +17,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: 9188b822e7bf0e0024e6c6fcdbe81db7ea05002f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 2066f5a90f27b892827c1a36034a3f9e57f4f0ea
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037548"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250481"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Quitar un grupo de servidores (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-En este tema se describe cómo quitar un grupo de servidores de Servidores registrados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los grupos de servidores se pueden eliminar en cualquier momento. Si no están vacíos, se eliminarán también los servidores o grupos de servidores que incluyan. Antes de eliminar un grupo de servidores, traslade los servidores o grupos de servidores que desee conservar a un nuevo grupo de servidores.  
+En este tema se describe cómo quitar un grupo de servidores de Servidores registrados en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los grupos de servidores se pueden eliminar en cualquier momento. Si no están vacíos, se eliminarán también los servidores o grupos de servidores que incluyan. Antes de eliminar un grupo de servidores, traslade los servidores o grupos de servidores que desee conservar a un nuevo grupo de servidores.  
   
 ##  <a name="SSMSProcedure"></a>  
   

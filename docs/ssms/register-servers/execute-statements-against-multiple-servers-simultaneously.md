@@ -15,18 +15,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/18/2016
-ms.openlocfilehash: 91a18087a9bf3f844988dec16e84a1cdbbfb1948
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 1c5de69d2a4167d03dcc5ea5c34ed6f0262c4678
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037584"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250446"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously"></a>Ejecutar instrucciones en varios servidores simultáneamente
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-En este tema se describe cómo consultar al mismo tiempo varios servidores en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]creando un grupo de servidores locales o un Servidor de administración central y uno o varios grupos de servidores, y uno o varios servidores registrados dentro de los grupos, y consultando a continuación el grupo completo. 
+En este tema se describe cómo consultar al mismo tiempo varios servidores en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]creando un grupo de servidores locales o un Servidor de administración central y uno o varios grupos de servidores, y uno o varios servidores registrados dentro de los grupos, y consultando a continuación el grupo completo. 
 
 Los resultados que devuelve la consulta se pueden combinar en un único panel de resultados o en paneles de resultados independientes. El conjunto de resultados puede incluir columnas adicionales para el nombre de servidor y el inicio de sesión que usa la consulta en cada servidor. Los Servidores de administración central y los servidores secundarios se pueden registrar únicamente utilizando la autenticación de Windows. Los servidores de los grupos de servidores locales se pueden registrar con la autenticación de Windows o con la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -40,7 +40,7 @@ Los resultados que devuelve la consulta se pueden combinar en un único panel de
 
 1.  En SQL Server Management Studio, en el menú **Vista** , haga clic en **Servidores registrados**.  
   
-2.  Expanda un Servidor de administración central, haga clic con el botón derecho en un grupo de servidores, seleccione **Conectar**y haga clic en **Nueva consulta**.  
+2.  Expanda un Servidor de administración central, haga clic con el botón derecho en un grupo de servidores, seleccione **Conectar** y haga clic en **Nueva consulta**.  
   
 3.  En el Editor de consultas, escriba y ejecute una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] , como la siguiente:  
   
@@ -57,7 +57,7 @@ Los resultados que devuelve la consulta se pueden combinar en un único panel de
   
 1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], en el menú **Herramientas** , haga clic en **Opciones**.  
   
-2.  Expanda **Resultados de la consulta**, expanda **SQL Server**y, a continuación, haga clic en **Resultados multiservidor**.  
+2.  Expanda **Resultados de la consulta**, expanda **SQL Server** y, a continuación, haga clic en **Resultados multiservidor**.  
   
 3.  En la página **Resultados multiservidor** , especifique la configuración de las opciones que desee y, a continuación, haga clic en **Aceptar**.  
   

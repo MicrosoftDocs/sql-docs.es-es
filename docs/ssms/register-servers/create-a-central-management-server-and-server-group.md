@@ -13,18 +13,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a66f57b77b5d92bf39795533a29faacacdf01b95
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 2db15f338336e015a7e73267113e43354256452f
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037621"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250960"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Crear un servidor de administración central y un grupo de servidores
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-En este tema se describe cómo designar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como servidor de administración central de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los servidores de administración central almacenan una lista de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se organizan en uno o varios grupos de este tipo de servidores. Las acciones que se llevan a cabo mediante un servidor de administración central actúan en todos los servidores del grupo. Esto incluye la conexión a los servidores mediante el Explorador de objetos y la ejecución de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] y de directivas de administración basada en directivas en varios servidores al mismo tiempo.  
+En este tema se describe cómo designar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como servidor de administración central de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los servidores de administración central almacenan una lista de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se organizan en uno o varios grupos de este tipo de servidores. Las acciones que se llevan a cabo mediante un servidor de administración central actúan en todos los servidores del grupo. Esto incluye la conexión a los servidores mediante el Explorador de objetos y la ejecución de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] y de directivas de administración basada en directivas en varios servidores al mismo tiempo.  
   
 > [!NOTE]  
 >  Las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] no se pueden designar como servidores de administración central.  
@@ -59,7 +59,7 @@ En este tema se describe cómo designar una instancia de [!INCLUDE[ssNoVersion](
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el menú **Ver** , haga clic en **Servidores registrados**.  
   
-2.  En Servidores registrados, expanda **Motor de base de datos**, haga clic con el botón derecho en **Servidores de administración central**y, después, haga clic en **Registrar servidor de administración central**.  
+2.  En Servidores registrados, expanda **Motor de base de datos**, haga clic con el botón derecho en **Servidores de administración central** y, después, haga clic en **Registrar servidor de administración central**.  
   
 3.  En el cuadro de diálogo **Nuevo registro de servidor** , seleccione la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que quiera que se convierta en el servidor de administración central en la lista desplegable de servidores. Utilice la autenticación de Windows para el servidor de administración central.  
   
@@ -67,7 +67,7 @@ En este tema se describe cómo designar una instancia de [!INCLUDE[ssNoVersion](
   
 5.  En la pestaña **Propiedades de conexión**, revise o modifique las propiedades de conexión y red. Para obtener más información, vea [Conectar al servidor &#40;página Propiedades de conexión del motor de base de datos&#41;](../f1-help/connect-to-server-connection-properties-page-database-engine.md)  
   
-6.  Haga clic en **Probar**para probar la conexión.  
+6.  Haga clic en **Probar** para probar la conexión.  
   
 7.  Haga clic en **Guardar**. La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparecerá en la carpeta de **Servidores de administración central** .  
   

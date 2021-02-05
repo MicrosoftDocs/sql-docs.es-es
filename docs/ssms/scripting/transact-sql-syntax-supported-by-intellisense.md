@@ -16,19 +16,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbc08b695d0909ed0656a8bb2dd416f17a2c79e2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 05e99b82272241221ba43e65a881bf0bdc4a29bf
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480606"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250479"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxis de Transact-SQL compatible con IntelliSense
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  En este tema se describen las instrucciones y los elementos de sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] que IntelliSense admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  En este tema se describen las instrucciones y los elementos de sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] que IntelliSense admite en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="statements-supported-by-intellisense"></a>Instrucciones admitidas por IntelliSense  
- En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], IntelliSense solamente admite las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de uso más frecuente. Algunas condiciones generales del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pueden impedir el funcionamiento de IntelliSense. Para obtener más información, vea [Solución de problemas IntelliSense &#40;SQL Server Management Studio&#41;](./troubleshooting-intellisense.md).  
+ En [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], IntelliSense solamente admite las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de uso más frecuente. Algunas condiciones generales del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pueden impedir el funcionamiento de IntelliSense. Para obtener más información, vea [Solución de problemas IntelliSense &#40;SQL Server Management Studio&#41;](./troubleshooting-intellisense.md).  
   
 > [!NOTE]  
 >  IntelliSense no está disponible para objetos de base de datos cifrados, como funciones definidas por el usuario o procedimientos almacenados cifrados. La ayuda sobre parámetros y la información rápida no están disponibles para los parámetros de los procedimientos almacenados extendidos y los tipos definidos por el usuario de la integración con CLR.  

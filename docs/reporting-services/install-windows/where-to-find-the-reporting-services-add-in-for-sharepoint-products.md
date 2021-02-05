@@ -12,12 +12,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016'
-ms.openlocfilehash: c088a6cf0779c5c37c92d7ecd2ff93b2cda4ae46
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 6f0795c8a0404aa5096e357478209fbb259d8e13
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172157"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236196"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Dónde encontrar el complemento Reporting Services para Productos de SharePoint
 
@@ -26,12 +26,12 @@ El complemento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[
 > [!IMPORTANT]  
 >  Para obtener una lista de las combinaciones admitidas del complemento de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el servidor de informes y SharePoint, vea [Combinaciones admitidas del servidor y el complemento de SharePoint y Reporting Services &#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
-##  <a name="sssql15-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql16"></a> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]Complemento de Reporting Services para productos de SharePoint  
+##  <a name="sssql16-md-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql16"></a> [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]Complemento de Reporting Services para productos de SharePoint  
  Para descargar e instalar el complemento, vea el Centro de descarga de [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
   
 -   [Complemento Microsoft® SQL Server® 2016 Reporting Services para Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=52682)  
   
- La versión de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] de este complemento se encuentra también disponible en el Asistente para la instalación de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] :  
+ La versión de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] de este complemento se encuentra también disponible en el Asistente para la instalación de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] :  
   
 -   En la página **Selección de características** del asistente para la instalación, seleccione **Complemento de Reporting Services para productos de SharePoint**.  
   
@@ -64,6 +64,6 @@ En la versión SQL Server 2016, el complemento se puede instalar como parte del 
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Instalar o desinstalar el complemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[No puede examinar las páginas de SharePoint en la zona no predeterminada después de desinstalar el complemento Reporting Services](https://support.microsoft.com/kb/2009212)  
+[No puede examinar las páginas de SharePoint en la zona no predeterminada después de desinstalar el complemento Reporting Services](https://web.archive.org/web/20131006010947/http://support.microsoft.com:80/kb/2009212)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

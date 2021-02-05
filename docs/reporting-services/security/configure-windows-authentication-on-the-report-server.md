@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 53e005fcd5c4a11270a5bc2f7c307f521311c548
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 22a9134ed3caf220dbe895d7e4de8b9d52290e08
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596647"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536336"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar la autenticación de Windows en el servidor de informes
   De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si la implementación incluye aplicaciones cliente y exploradores que utilizan estos proveedores de seguridad, puede utilizar los valores predeterminados sin necesidad de ninguna configuración adicional. Si desea utilizar un proveedor de seguridad diferente para la seguridad integrada de Windows (por ejemplo, si desea utilizar directamente Kerberos) o si modificó los valores predeterminados y prefiere restaurar los originales, puede utilizar la información de este tema para especificar los valores de autenticación en el servidor de informes.  
@@ -197,7 +197,7 @@ ms.locfileid: "98596647"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Para obtener información adicional con respecto a Kerberos y los servidores de informes, vea [Implementar una solución de Business Intelligence con SharePoint, Reporting Services y servidor de supervisión de PerformancePoint con Kerberos.](https://go.microsoft.com/fwlink/?LinkID=177751)  
+-   Para obtener información adicional con respecto a Kerberos y los servidores de informes, vea [Implementar una solución de Business Intelligence con SharePoint, Reporting Services y servidor de supervisión de PerformancePoint con Kerberos.](https://www.kasperonbi.com/deploying-a-business-intelligence-solution-using-sharepoint-reporting-services-and-performancepoint-monitoring-server-with-kerberos/)  
   
 ## <a name="see-also"></a>Consulte también  
  [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)   

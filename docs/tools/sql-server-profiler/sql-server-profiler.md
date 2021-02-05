@@ -4,24 +4,23 @@ titleSuffix: SQL Server Profiler
 description: Explore las características de SQL Server Profiler. Obtenga ayuda para solucionar problemas mediante esta herramienta para crear seguimientos y analizar y reproducir los resultados de seguimiento.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 3169f8fbbc86fc95a62631c0cc93d77b6a46b0a4
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 3066ac1b16a1a294955825dc35b40f422bd79df3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643428"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203540"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 
- [!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] es una interfaz para crear y administrar seguimientos y analizar y reproducir resultados de seguimiento. Los eventos se guardan en un archivo de seguimiento que posteriormente se puede analizar o utilizar para reproducir una serie de pasos específicos cuando se diagnostica un problema.
 
@@ -46,7 +45,7 @@ Puede iniciar Profiler de diferentes maneras desde [!INCLUDE[ssManStudioFull](..
 
 ## <a name="capture-and-replay-trace-data"></a>Captura y reproducción de datos de seguimiento
 
-En la siguiente tabla se muestran las características que se recomienda usar en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para capturar y reproducir los datos de seguimiento.
+En la siguiente tabla se muestran las características que se recomienda usar en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] para capturar y reproducir los datos de seguimiento.
 
 ||||
 |-|-|-|

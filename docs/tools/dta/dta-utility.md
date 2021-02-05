@@ -21,12 +21,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/09/2017
-ms.openlocfilehash: a80c3fc49962ad4a67430163f81d00b37c05329b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 68efd346dad72b36e98f5ce0f0c659eed81c5966
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169223"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236723"
 ---
 # <a name="dta-utility"></a>dta, utilidad
 
@@ -184,7 +184,7 @@ dta -d AdventureWorks2012 ...
 [Recomendaciones de índice de almacén de columnas en el Asistente para la optimización de motor de base de datos (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores.|  
+|**Válido para** : [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores.|  
 
   
  **-fk** _keep_existing_option_  
@@ -222,7 +222,7 @@ dta -d AdventureWorks2012 ...
  Especifica que el Almacén de consultas se usará como carga de trabajo. Se analizan los primeros 1000 eventos del Almacén de consultas para las bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la opción **- n**.  Para obtener más información, vea [Almacén de consultas](../../relational-databases/performance/how-query-store-collects-data.md) y [Optimización de la base de datos mediante carga de trabajo del Almacén de consultas](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
-|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores.|  
+|**Válido para** : [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores.|  
      
  **-if** _workload_file_  
  Especifica el nombre y la ruta del archivo de carga de trabajo que se desea usar como entrada para la optimización. El archivo debe estar en uno de estos formatos: .trc (archivo de seguimiento de SQL Server Profiler). .sql (archivo de SQL) o .log (archivo de seguimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Debe especificarse un archivo de carga de trabajo o una tabla de carga de trabajo.  
@@ -281,7 +281,7 @@ dta -iq -I 48
 En este caso, DTA usará el Almacén de consultas como el origen de la carga de trabajo y solo tenga en cuenta las consultas que se han ejecutado con las últimas 48 horas.  
   ||  
 |-|  
-|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores.|  
+|**Válido para** : [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores.|  
 
 
   
