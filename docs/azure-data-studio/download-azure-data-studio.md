@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 1/22/2020
-ms.openlocfilehash: 1a8de5f990d9f3a8a974705d090dad8dccc1bae6
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.date: 1/22/2021
+ms.openlocfilehash: 5e7759c3dbf450f944504ea0ac67bb24cda7b263
+ms.sourcegitcommit: e4b6357756a9c691b0441208a0058f7b8f3bea51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99235725"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99510346"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Descarga e instalación de Azure Data Studio
 
@@ -26,9 +26,9 @@ Azure Data Studio ofrece una experiencia de editor moderna con IntelliSense, fra
 
 | Plataforma | Descargar | Fecha de la versión | Versión |
 |----------|----------|--------------|---------|
-| Windows | [Instalador de usuario (recomendado)](https://go.microsoft.com/fwlink/?linkid=2150927)<br>[Instalador del sistema](https://go.microsoft.com/fwlink/?linkid=2150928)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2151312) | 22 de enero de 2020 | 1.25.2 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2151311) | 22 de enero de 2020 | 1.25.2 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2151506)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2151407)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2151508) | 22 de enero de 2020 | 1.25.2 |
+| Windows | [Instalador de usuario (recomendado)](https://go.microsoft.com/fwlink/?linkid=2150927)<br>[Instalador del sistema](https://go.microsoft.com/fwlink/?linkid=2150928)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2151312) | 22 de enero de 2021 | 1.25.2 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2151311) | 22 de enero de 2021 | 1.25.2 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2151506)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2151407)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2151508) | 22 de enero de 2021 | 1.25.2 |
 
 **Para obtener información sobre la última versión, consulta las [notas de la versión](./release-notes-azure-data-studio.md).**
 
