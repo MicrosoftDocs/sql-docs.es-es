@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.setURL
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: bea70100-ac98-4625-8748-ef7cc0b111ea
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3e27df8b938cee4503a2078d597b12eb880f52c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c2af37087028c520d3cfbb7c8b8918009c53d11
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467127"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178434"
 ---
 # <a name="seturl-method-sqlserverdatasource"></a>Método setURL (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

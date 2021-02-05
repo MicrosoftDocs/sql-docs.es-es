@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dce7958853170b8a72e86cdc0cae1b61e32ef666
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32be6d833ab256e30d07e8c8e8be08085d8641ca
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88433507"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177334"
 ---
 # <a name="isqlserverdatasource-interface"></a>Interfaz ISQLServerDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
