@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 8d4de2aea0a9020a7f971f36dd011c435a3cec3d
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 2c82514c12ec3ba496e288454d87750e0c91a5f8
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489501"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835680"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificación de la SKU de Azure SQL Database/Instancia administrada adecuada para la base de datos local
 
@@ -38,7 +38,7 @@ La característica de recomendaciones de SKU le permite identificar el mínimo r
 
 Las siguientes son instrucciones para ayudarle a determinar las recomendaciones de la SKU y aprovisionar las bases de datos únicas correspondientes o las instancias administradas de Azure mediante DMA.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 - Descargue e instale la versión más reciente de [DMA](https://aka.ms/get-dma). Si ya tiene una versión anterior de la herramienta, ábrala y se le pedirá que actualice el DMA.
 - Asegúrese de que el equipo tiene la [versión 5,1](https://www.microsoft.com/download/details.aspx?id=54616) o posterior de PowerShell, que es necesaria para ejecutar todos los scripts. Para obtener información sobre cómo averiguar qué versión de PowerShell está instalada en el equipo, consulte el artículo [Descargar e instalar Windows PowerShell 5,1](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
@@ -207,8 +207,12 @@ Para introducir información de aprovisionamiento y realizar cambios en las reco
     - **Grupo de recursos** : el grupo de recursos en el que desea implementar las bases de datos. Especifique un grupo de recursos que exista.
     - **Región** : la región en la que se aprovisionan las bases de datos. Asegúrese de que la suscripción admite la región seleccionada.
     - **Nombre del servidor** : el servidor de Azure SQL Database en el que desea implementar las bases de datos. Si escribe un nombre de servidor que no existe, se creará.
-    - **Nombre de usuario de administrador** : nombre de usuario del administrador del servidor.
-    - **Contraseña de administrador** : la contraseña de administrador del servidor. La contraseña debe tener al menos ocho caracteres y no más de 128 caracteres de longitud. La contraseña debe contener caracteres de tres de las siguientes categorías: letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #, %, etc.). La contraseña no puede contener ninguna o una parte (3 + letras consecutivas) del nombre de usuario.
+    - **Nombre de usuario de administrador** : nombre de usuario del administrador del servidor. Asegúrese de que el nombre de inicio de sesión cumple los requisitos siguientes: su nombre de inicio de sesión no debe contener un identificador de SQL o un nombre de sistema típico (por ejemplo, admin, Administrator, SA, root, dbmanager, LoginManager, etc.) o un usuario o rol de base de datos integrado (por ejemplo, DBO, Guest, Public, etc.). El nombre de inicio de sesión no debe incluir caracteres no alfanuméricos (incluidos espacios en blanco, caracteres Unicode). el nombre de inicio de sesión no debe empezar por números ni símbolos
+
+    - **Contraseña de administrador** : la contraseña de administrador del servidor. La contraseña debe tener una longitud de 8 caracteres como mínimo.
+La contraseña no debe tener más de 128 caracteres de longitud.
+La contraseña debe contener caracteres de tres de las siguientes categorías: letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #, %, etc.).
+La contraseña no puede contener todo o parte del nombre de inicio de sesión. (Parte de un nombre de inicio de sesión se define como tres caracteres alfanuméricos consecutivos).
 
 2. Revise las recomendaciones para cada base de datos y modifique el plan de tarifa, el nivel de proceso y el tamaño máximo de los datos según sea necesario. Asegúrese de anular la selección de las bases de datos que no quiera aprovisionar actualmente.
 
@@ -225,8 +229,13 @@ Para introducir información de aprovisionamiento y realizar cambios en las reco
     - **Grupo de recursos** : el grupo de recursos en el que desea implementar las bases de datos. Especifique un grupo de recursos que exista.
     - **Región** : la región en la que se aprovisionan las bases de datos. Asegúrese de que la suscripción admite la región seleccionada.
     - **Nombre de instancia** : la instancia de Azure SQL instancia administrada a la que desea migrar las bases de datos. El nombre de instancia solo puede contener letras minúsculas, números y '-', pero no puede comenzar ni terminar con '-' ni tener más de 63 caracteres.
-    - **Nombre de usuario de administrador de instancia** : nombre de usuario de administrador de instancia. Asegúrese de que el nombre de inicio de sesión cumple los requisitos siguientes: es un identificador de SQL y no un nombre de sistema típico (por ejemplo, administrador, administrador, SA, raíz, dbmanager, LoginManager, etc.) o un usuario o rol de base de datos integrado (por ejemplo, DBO, invitado, público, etc.). Asegúrese de que su nombre no contenga espacios en blanco, caracteres Unicode o caracteres no alfabéticos, y que no empiece por números o símbolos. 
-    - **Contraseña de administrador de instancia** : la contraseña de administrador de la instancia. La contraseña debe tener al menos 16 caracteres y no más de 128 caracteres de longitud. La contraseña debe contener caracteres de tres de las siguientes categorías: letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #, %, etc.). La contraseña no puede contener ninguna o una parte (3 + letras consecutivas) del nombre de usuario.
+    - **Nombre de usuario de administrador de instancia** : nombre de usuario de administrador de instancia. Asegúrese de que el nombre de inicio de sesión cumple los requisitos siguientes: su nombre de inicio de sesión no debe contener un identificador de SQL o un nombre de sistema típico (por ejemplo, admin, Administrator, SA, root, dbmanager, LoginManager, etc.) o un usuario o rol de base de datos integrado (por ejemplo, DBO, Guest, Public, etc.). El nombre de inicio de sesión no debe incluir caracteres no alfanuméricos (incluidos espacios en blanco, caracteres Unicode). el nombre de inicio de sesión no debe empezar por números ni símbolos
+
+    - **Contraseña de administrador de instancia** : la contraseña de administrador de la instancia. La contraseña debe tener una longitud de 16 caracteres como mínimo.
+La contraseña no debe tener más de 128 caracteres de longitud.
+La contraseña debe contener caracteres de tres de las siguientes categorías: letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #, %, etc.).
+La contraseña no puede contener todo o parte del nombre de inicio de sesión. (Parte de un nombre de inicio de sesión se define como tres caracteres alfanuméricos consecutivos).
+
     - **Nombre de la red virtual** : el nombre de la red virtual con la que se debe aprovisionar la instancia administrada. Escriba un nombre de red virtual existente.
     - **Nombre de subred** : el nombre de subred en el que se debe aprovisionar la instancia administrada. Escriba un nombre de subred existente.
 
