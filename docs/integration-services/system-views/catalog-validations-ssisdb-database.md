@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4bfa8f9b0ba11574059e3dc05ef7b731d259999
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92a6fa341d231a4337b4377aab429b5d97eed5d4
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421979"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835169"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (base de datos de SSISDB)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra los detalles de todas las validaciones de paquete y proyecto en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
