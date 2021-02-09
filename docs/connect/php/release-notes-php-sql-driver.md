@@ -2,7 +2,7 @@
 title: Notas de la versión de los controladores de Microsoft para PHP
 description: En esta página se describe lo que ha cambiado en cada versión de los controladores de Microsoft para PHP para SQL Server.
 ms.custom: ''
-ms.date: 09/11/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be2317f95adc1a94ee85805aecfaed37d05e875a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 2d62068af3e6ec4a8f2711a5c11ab1f01388be8e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005723"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076307"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Notas de la versión de los controladores de Microsoft para PHP para SQL Server
 
@@ -39,6 +39,36 @@ TO  :  'release-notes-php-sql-driver.md'
 For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
+
+## <a name="59"></a>5.9
+
+![Descargar](../../ssms/media/download-icon.png) [Descarga del paquete de Windows](https://go.microsoft.com/fwlink/?linkid=?????)
+[Etiqueta de versión de GitHub (los paquetes de Linux y macOS están disponibles aquí)](https://github.com/Microsoft/msphpsql/releases/tag/v5.9.0)
+
+### <a name="version-information"></a>Información de la versión
+
+- Número de versión: 5.9.0<sup>1</sup>
+- Fecha de publicación: 29 de enero de 2021
+
+### <a name="whats-new-in-59"></a>Novedades de la versión 5.9
+
+| Nuevo elemento | Detalles |
+| :------- | :------ |
+| Se ha agregado compatibilidad con PHP 8.0. | &nbsp; |
+| Se ha quitado la compatibilidad con PHP 7.2. | &nbsp; |
+| Se ha agregado compatibilidad con Microsoft ODBC Driver 17.7 en todas las plataformas. | &nbsp; |
+| Se ha agregado compatibilidad con macOS Big Sur, Ubuntu 20.04, Ubuntu 20.10 y Alpine 3.12. | Algunos sistemas operativos requieren el controlador ODBC 17.5 o una versión posterior. |
+| Se ha quitado la compatibilidad con macOS High Sierra, Debian 8 y Ubuntu 19.10. | &nbsp; |
+| Compatibilidad con la configuración regional GB18030. | &nbsp; |
+| Se ha ampliado la compatibilidad con PDO::errorInfo para incluir mensajes de ODBC adicionales, si están disponibles. | &nbsp; |
+| Compatibilidad con la clasificación de datos con información de rango. | Requiere SQL Server 2019 y el controlador ODBC 17.4.2 o posterior. |
+| Se ha agregado compatibilidad con la autenticación de la entidad de servicio de Azure Active Directory. | Requiere el controlador ODBC 17.7 o una versión posterior. |
+| Se ha mejorado el rendimiento al usar números decimales como entradas o salidas y se han quitado las conversiones innecesarias de los valores numéricos. | &nbsp; |
+| Se ha mejorado el rendimiento al capturar números mediante búferes de cliente. | &nbsp; |
+| Establecimiento del tiempo de espera de la consulta sin usar el tiempo de expiración de bloqueo, lo que ahorra un viaje adicional al servidor. | &nbsp; |
+| &nbsp; | &nbsp; |
+
+<sup>1</sup> Esta versión requiere el controlador ODBC 17.4.2 o una versión posterior. De lo contrario, aparecerá una advertencia por no definir un atributo. Esta advertencia se puede suprimir si se usa un controlador ODBC anterior. Si usa SQLSRV, consulte [Procedimientos: Configuración del control de errores y advertencias con el controlador SQLSRV](https://docs.microsoft.com/sql/connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver). Si usa PDO_SQLSRV, las advertencias se suprimen de forma predeterminada, pero se pueden registrar. Consulte el articulo [Actividad de registro](https://docs.microsoft.com/sql/connect/php/logging-activity) para obtener más información.
 
 ## <a name="581"></a>5.8.1
 

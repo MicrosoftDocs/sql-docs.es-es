@@ -2,7 +2,7 @@
 description: Descripción de la compatibilidad con Java EE
 title: Descripción de la compatibilidad con Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 08/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 91972cab6a1471bada3815d85d6f699bbef82ba3
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 6cdc82e200609706981894ea22194de6baa7f51b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042358"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187604"
 ---
 # <a name="understanding-java-ee-support"></a>Descripción de la compatibilidad con Java EE
 
@@ -43,6 +43,8 @@ Para el controlador JDBC Driver 7.4, el controlador se encuentra en **mssql-jdbc
 Para JDBC Driver 8.2, el controlador se encuentra en **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** o **mssql-jdbc-8.2.2.jre13.jar**.
 
 Para JDBC Driver 8.4, el controlador se encuentra en **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar** o **mssql-jdbc-8.4.1.jre14.jar**.
+
+Para JDBC 9.2, el controlador se encuentra en **mssql-jdbc-9.2.0.jre8.jar**, **mssql-jdbc-9.2.0.jre11.jar** o **mssql-jdbc-9.2.0.jre15.jar**.
 
 El nombre de clase se usa siempre que carga el controlador con la clase DriverManager de JDBC y siempre que especifica el nombre de clase del controlador en cualquier configuración de controlador. Por ejemplo, configurar un origen de datos dentro de un servidor de aplicaciones de Java EE podría requerir que se escribiera el nombre de clase del controlador.  
   

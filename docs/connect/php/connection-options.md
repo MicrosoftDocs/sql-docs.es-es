@@ -2,7 +2,7 @@
 title: Opciones de conexión
 description: En este tema se enumeran las opciones que se permiten en la matriz asociativa de sqlsrv_connect en el controlador SQLSRV o las palabras clave permitidas en el nombre del origen de datos (DSN) en el controlador PDO_SQLSRV.
 ms.custom: ''
-ms.date: 12/12/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98f6899c1bfc7652c4a2facee95cf5fd62e4e521
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a8718cc04972e74ffc39b1528ed73eb00664eda8
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632965"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076257"
 ---
 # <a name="connection-options"></a>Opciones de conexión
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,10 +31,10 @@ En este tema se enumeran las opciones que se permiten en la matriz asociativa (a
 |APP|String|Especifica el nombre de aplicación que se utiliza en el seguimiento.|Sin establecer.|  
 |Intención de aplicaciones|String|Declara el tipo de carga de trabajo de la aplicación al conectarse a un servidor. Los valores posibles son **ReadOnly** y **ReadWrite**.<br /><br />Para más información sobre la compatibilidad con [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] para [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consulte [Compatibilidad con alta disponibilidad y recuperación ante desastres](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|
 |AttachDBFileName|String|Especifica qué archivo de base de datos debe asociar el servidor.|Sin establecer.|
-|Authentication|Una de las cadenas siguientes:<br /><br />**SqlPassword**<br /><br />**ActiveDirectoryPassword**<br /><br />**ActiveDirectoryMsi**|Especifica el modo de autenticación.<br /><br />Para más información, consulte [Conexión mediante autenticación de Azure Active Directory](azure-active-directory.md).|Sin establecer.|
+|Authentication|Una de las cadenas siguientes:<br /><br />**SqlPassword**<br /><br />**ActiveDirectoryPassword**<br /><br />**ActiveDirectoryMsi**<br /><br />**ActiveDirectoryServicePrincipal**|Especifica el modo de autenticación.<br /><br />Para más información, consulte [Conexión mediante autenticación de Azure Active Directory](azure-active-directory.md).|Sin establecer.|
 |CharacterSet<br /><br />(no compatible con el controlador PDO_SQLSRV)|String|Especifica el juego de caracteres que se utiliza para enviar datos al servidor.<br /><br />Los valores posibles son SQLSRV_ENC_CHAR y UTF-8. Para más información, vea: [Cómo: Envío y recuperación de datos UTF-8 gracias a la compatibilidad integrada con UTF-8](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|Una de las cadenas siguientes:<br /><br />**Enabled**<br /><br />**Deshabilitada**<br /><br />Cadena que identifica el protocolo de atestación y la dirección URL para la atestación del enclave.|Especifica si la característica Always Encrypted está habilitada o no. Si se especifica un protocolo de atestación y una dirección URL, Always Encrypted con enclaves seguros está habilitado, siempre que se cumplan los otros requisitos tal como se describe [aquí](always-encrypted-secure-enclaves.md).|Disabled|  
-|ConnectionPooling|1 o **True** para activar la agrupación de conexiones.<br /><br />0 o **False** para desactivar la agrupación de conexiones.|Especifica si la conexión se asigna desde una agrupación de conexiones (1 o **true**) o no (**0 o**false<sup>) 1</sup>.|**true** (1)|  
+|ConnectionPooling|1 o **True** para activar la agrupación de conexiones.<br /><br />0 o **False** para desactivar la agrupación de conexiones.|Especifica si la conexión se asigna desde una agrupación de conexiones (1 o **true**) o no (**0 o** false <sup>) 1</sup>.|**true** (1)|  
 |ConnectRetryCount|Un entero comprendido entre 0 y 255, ambos incluidos|El número máximo de intentos de restablecer una conexión interrumpida antes de abandonar. De forma predeterminada, se realiza un solo intento de restablecer una conexión cuando se interrumpe. Un valor de 0 significa que no se intentará ninguna reconexión.|1|  
 |ConnectRetryInterval|Un entero comprendido entre 1 y 60, ambos incluidos|El tiempo, en segundos, entre los intentos de restablecer una conexión. La aplicación intentará volver a conectarse inmediatamente al detectar una conexión interrumpida y, a continuación, esperará `ConnectRetryInterval` segundos antes de volver a intentarlo. Esta palabra clave se omite si `ConnectRetryCount` es igual a 0.|1|  
 |Base de datos|String|Especifica el nombre de la base de datos que se está utilizando para la conexión que se va a establecer<sup>2</sup>.|La base de datos predeterminada del inicio de sesión que se va a utilizar.|  

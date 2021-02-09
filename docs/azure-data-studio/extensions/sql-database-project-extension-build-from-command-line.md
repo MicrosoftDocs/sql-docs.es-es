@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 08/07/2020
-ms.openlocfilehash: 060039496d5877951e5255fce5e6cac2321731c6
-ms.sourcegitcommit: 31f3405be08441471f441395f1d0f0017ebc0ad5
+ms.openlocfilehash: 1233b8319c4fbd893159ba88fbcd1c3401f05ce0
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94617933"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495723"
 ---
 # <a name="build-a-database-project-from-command-line"></a>Creación de un proyecto de base de datos desde la línea de comandos
 
-Aunque la extensión SQL Database Projects para Azure Data Studio proporciona una interfaz de usuario gráfica para [crear un proyecto de base de datos](sql-database-project-extension-build.md), también hay disponible una experiencia de creación de línea de comandos para entornos Windows, macOS y Linux. En este artículo se describen los requisitos previos y la sintaxis necesarios para crear un proyecto SQL en dacpac desde la línea de comandos.
+Aunque la extensión SQL Database Projects (en versión preliminar) para Azure Data Studio proporciona una interfaz de usuario gráfica para [crear un proyecto de base de datos](sql-database-project-extension-build.md), también hay disponible una experiencia de creación de línea de comandos para entornos Windows, macOS y Linux. En este artículo se describen los requisitos previos y la sintaxis necesarios para crear un proyecto SQL en dacpac desde la línea de comandos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

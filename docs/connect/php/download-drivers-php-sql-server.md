@@ -2,7 +2,7 @@
 title: Descargar los controladores de Microsoft para PHP para SQL Server
 description: Descargue controladores de Microsoft para PHP para SQL Server para desarrollar aplicaciones PHP que se conectan a SQL Server y Azure SQL Database.
 ms.custom: ''
-ms.date: 08/10/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,30 +10,30 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 24dfef1b33b2a61c0d82c07ce6306e0b0449b8f3
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: bc1cc9339fa0f5a53f8781bc0afecc0fd614e0dd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680770"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198341"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Descargar los controladores de Microsoft para PHP para SQL Server
 
-Los controladores de Microsoft para PHP para SQL Server permiten la integración con SQL Server para aplicaciones PHP. Los controladores son extensiones de PHP que permiten leer y escribir datos de SQL Server desde scripts PHP. Los controladores proporcionan interfaces para acceder a datos en Azure SQL Database y en todas las ediciones de SQL Server 2005 y versiones posteriores (incluidas las ediciones Express). Los controladores hacen uso de las características de PHP, incluidas las secuencias de PHP, para leer y escribir objetos grandes.
+Los controladores de Microsoft para PHP para SQL Server permiten la integración con SQL Server para aplicaciones PHP. Los controladores son extensiones de PHP que permiten leer y escribir datos de SQL Server desde scripts PHP. Los controladores proporcionan interfaces para el acceso a datos en Azure SQL Database y en todas las ediciones de SQL Server 2012 y versiones posteriores (incluidas las ediciones Express). Los controladores hacen uso de las características de PHP, incluidas las secuencias de PHP, para leer y escribir objetos grandes.
 
 En Linux y macOS, los controladores para PHP se descargan e instalan fácilmente con PECL. Consulte el [tutorial de instalación en Linux y macOS](installation-tutorial-linux-mac.md) para más detalles. Si necesita descargar e instalar manualmente los controladores para PHP en Linux y macOS, los paquetes de esas plataformas se pueden encontrar en las etiquetas de la versión de GitHub.
 
 ## <a name="download"></a>Descargar
 
-Los controladores de Microsoft 5.8 para PHP para SQL Server son la versión de disponibilidad general (GA) más reciente.
+Los controladores de Microsoft 5.9 para PHP para SQL Server son la versión de disponibilidad general (GA) más reciente.
 
-**[![Descargar](../../ssms/media/download-icon.png) Descargar los controladores de Microsoft para PHP para SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2120362)**  
-[Etiqueta de versión de GitHub v 5.8.0 (los paquetes de Linux y macOS están disponibles aquí)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
+**[![Descargar](../../ssms/media/download-icon.png) Descargar los controladores de Microsoft para PHP para SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2152937)**  
+[Etiqueta de versión de GitHub 5.9.0 (los paquetes de Linux y macOS están disponibles aquí)](https://github.com/Microsoft/msphpsql/releases/tag/v5.9.0)
 
 ### <a name="version-information"></a>Información de la versión
 
-- Número de versión: 5.8.0
-- Fecha de publicación: 31 de enero de 2019
+- Número de versión: 5.9.0
+- Fecha de publicación: 29 de enero de 2021
 
 Si tiene algún comentario, la mejor manera de ponerse en contacto con el equipo de los controladores de Microsoft para PHP para SQL Server es presentar un problema en el [repositorio de GitHub](https://github.com/Microsoft/msphpsql/issues).
 

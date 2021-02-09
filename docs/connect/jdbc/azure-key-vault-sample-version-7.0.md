@@ -1,8 +1,8 @@
 ---
-description: Ejemplo de Azure Key Vault
-title: Ejemplo de Azure Key Vault | Microsoft Docs
+description: Ejemplo de Azure Key Vault (7.0 y 8.0)
+title: Ejemplo de Azure Key Vault (7.0 y 8.0) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,20 +10,20 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9c3eefb724be4c92abed09b4fee6ff94968d6a36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b29bbc9423fc4f88f2acf907229d3a7e93ae6b80
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438437"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166076"
 ---
-# <a name="azure-key-vault-sample"></a>Ejemplo de Azure Key Vault
+# <a name="azure-key-vault-sample-70-80"></a>Ejemplo de Azure Key Vault (7.0 y 8.0)
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 ## <a name="sample-application-using-azure-key-vault-feature"></a>Aplicación de ejemplo que usa la característica de Azure Key Vault
 
-Esta aplicación se puede ejecutar mediante el controlador JDBC 7.0 y versiones posteriores y Azure-Keyvault (versión 1.0.0), Adal4j (versión 1.6.0) y sus dependencias.  Las dependencias subyacentes se pueden resolver agregando estas bibliotecas al archivo POM del proyecto como se describe [aquí](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+Esta aplicación se puede ejecutar mediante el controlador JDBC 7.0 y 8.0, Azure-Keyvault (versión 1.0.0), Adal4j (versión 1.6.0) y sus dependencias. Las dependencias subyacentes se pueden resolver agregando estas bibliotecas al archivo de modelo de objetos de proyectos (POM) del proyecto. Para obtener más información sobre las dependencias de características, consulte [Dependencias de características de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ```java
 import java.net.URISyntaxException;
@@ -244,7 +244,8 @@ public class AKV {
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
+[Ejemplo de Azure Key Vault para la versión 9.2](../../connect/jdbc/azure-key-vault-sample-version-9.2.md)  
 [Versión de ejemplo de Azure Key Vault 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
 [Versión de ejemplo de Azure Key Vault 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)  

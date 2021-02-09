@@ -2,7 +2,7 @@
 title: Requisitos del sistema (controlador ODBC para SQL Server)
 description: Aquí se enumeran los requisitos del sistema para el controlador ODBC para SQL Server en los sistemas operativos Linux y macOS.
 ms.custom: ''
-ms.date: 08/06/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 74b7bf1680dd956dfca85917939ad24a3559d7de
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f78fdfcb8fe19856483403c4675f973c4f5c97b3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934464"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198381"
 ---
 # <a name="system-requirements-linux-and-macos"></a>Requisitos del sistema (Linux y macOS)
 
@@ -36,28 +36,32 @@ La compatibilidad con la versión de SQL de los controladores de Linux y macOS e
 
 Las versiones 17, 13.1 y 13 de los controladores de Linux y macOS se admiten en la arquitectura x64 de los sistemas operativos siguientes:
 
-|Versión del controlador&nbsp;&#8594;<br />&#8595; Sistema operativo     |17.6|17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
-|-------------------------------|----|----|----|----|----|----|----|----|---|
-|Apple OS X 10.11 (El Capitan)  |    |    |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
-|Apple macOS 10.12 (Sierra)     |    |    |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
-|Apple macOS 10.13 (High Sierra)|Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
-|Apple macOS 10.14 (Mojave)     |Sí |Sí |Sí |Sí |    |    |    |    |   |
-|Apple macOS 10.15 (Catalina)   |Sí |Sí |    |    |    |    |    |    |   |
-|Alpine Linux 3.11              |Sí |Sí |    |    |    |    |    |    |   |
-|Debian Linux 8                 |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
-|Debian Linux 9                 |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
-|Debian Linux 10                |Sí |Sí |Sí |    |    |    |    |    |   |
-|Oracle Linux 8                 |Sí |Sí |    |    |    |    |    |    |   |
-|RedHat Enterprise Linux 6      |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
-|RedHat Enterprise Linux 7      |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
-|RedHat Enterprise Linux 8      |Sí |Sí |Sí |    |    |    |    |    |   |
-|SUSE Linux Enterprise Server 11<sup>1</sup>|Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
-|SUSE Linux Enterprise Server 12|Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
-|SUSE Linux Enterprise Server 15|Sí |Sí |Sí |Sí |    |    |    |    |   |
-|Ubuntu Linux 14.04             |    |    |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
-|Ubuntu Linux 16.04             |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
-|Ubuntu Linux 18.04             |Sí |Sí |Sí |Sí |Sí |    |    |    |   |
-|Ubuntu Linux 20.04             |Sí |    |    |    |    |    |    |    |   |
+|Versión del controlador&nbsp;&#8594;<br />&#8595; Sistema operativo     |17,7|17.6|17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
+|-------------------------------|----|----|----|----|----|----|----|----|----|---|
+|Apple OS X 10.11 (El Capitan)  |    |    |    |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
+|Apple macOS 10.12 (Sierra)     |    |    |    |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
+|Apple macOS 10.13 (High Sierra)|    |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
+|Apple macOS 10.14 (Mojave)     |Sí |Sí |Sí |Sí |Sí |    |    |    |    |   |
+|Apple macOS 10.15 (Catalina)   |Sí |Sí |Sí |    |    |    |    |    |    |   |
+|Apple macOS 11.0 (Big Sur)     |Sí |    |    |    |    |    |    |    |    |   |
+|Alpine Linux 3.11              |Sí |Sí |Sí |    |    |    |    |    |    |   |
+|Alpine Linux 3.12              |Sí |    |    |    |    |    |    |    |    |   |
+|Debian Linux 8                 |    |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
+|Debian Linux 9                 |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
+|Debian Linux 10                |Sí |Sí |Sí |Sí |    |    |    |    |    |   |
+|Oracle Linux 7                 |Sí |    |    |    |    |    |    |    |    |   |
+|Oracle Linux 8                 |Sí |Sí |Sí |    |    |    |    |    |    |   |
+|RedHat Enterprise Linux 6      |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
+|RedHat Enterprise Linux 7      |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
+|RedHat Enterprise Linux 8      |Sí |Sí |Sí |Sí |    |    |    |    |    |   |
+|SUSE Linux Enterprise Server 11<sup>1</sup>|Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
+|SUSE Linux Enterprise Server 12|Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
+|SUSE Linux Enterprise Server 15|Sí |Sí |Sí |Sí |Sí |    |    |    |    |   |
+|Ubuntu Linux 14.04             |    |    |    |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
+|Ubuntu Linux 16.04             |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí |Sí|
+|Ubuntu Linux 18.04             |Sí |Sí |Sí |Sí |Sí |Sí |    |    |    |   |
+|Ubuntu Linux 20.04             |Sí |Sí |    |    |    |    |    |    |    |   |
+|Ubuntu Linux 20.10             |Sí |    |    |    |    |    |    |    |    |   |
 
 <sup>1</sup> La versión 17 del controlador ODBC solo es compatible con SUSE Linux Enterprise Server 11 SP4
 

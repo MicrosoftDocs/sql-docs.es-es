@@ -2,7 +2,7 @@
 title: Usar Always Encrypted con el controlador JDBC
 description: Obtenga información sobre cómo usar Always Encrypted en la aplicación Java con JDBC Driver para SQL Server para cifrar datos confidenciales en el servidor.
 ms.custom: ''
-ms.date: 08/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52fc716acb62ea82a6a29c1cceaa73a30cc93c44
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a89deba9ed124587899bc915fa86ef74074ed761
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727511"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195278"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Usar Always Encrypted con el controlador JDBC
 
@@ -126,9 +126,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 >  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java)
 >
-> Para ver un ejemplo de cómo incluir estas dependencias en un proyecto de Maven, consulte el artículo sobre cómo [descargar las dependencias de ADAL4J y AKV con Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven).
+> Para ver un ejemplo de cómo incluir estas dependencias en un proyecto de Maven, consulte el artículo sobre cómo [descargar las dependencias de MSAL4J y AKV con Apache Maven](https://github.com/microsoft/mssql-jdbc/wiki/Download-MSAL4J-And-AKV-Dependencies-with-Apache-Maven).
 
 ### <a name="using-azure-key-vault-authentication-with-managed-identities"></a>Uso de la autenticación de Azure Key Vault con identidades administradas
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_prepare
 apitype: NA
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 41fc8b3ae6185183b3d81988874b23ea926077e2
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 566b5804a042e96bb18c37c5b4405178bd8899f0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081274"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201092"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,11 +62,11 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |Elemento|Descripción|  
     |-----------|---------------|  
     |*&$value*|Un valor literal o una referencia a una variable PHP.|  
-    |*$direction*[OPCIONAL]|Una de las siguientes constantes **SQLSRV_PARAM_\*** usadas para indicar la dirección del parámetro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. El valor predeterminado es **SQLSRV_PARAM_IN**.<br /><br />Para obtener más información sobre las constantes de PHP, vea [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[OPCIONAL]|Constante **SQLSRV_PHPTYPE_\*** que especifica el tipo de datos PHP del valor devuelto.|  
-    |*$sqlType*[OPCIONAL]|Constante **SQLSRV_SQLTYPE_\*** que especifica el tipo de datos de SQL Server del valor de entrada.|  
+    |*$direction*[OPCIONAL]|Una de las siguientes constantes **SQLSRV_PARAM_\* *_ usadas para indicar la dirección del parámetro: _* SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. El valor predeterminado es **SQLSRV_PARAM_IN**.<br /><br />Para obtener más información sobre las constantes de PHP, vea [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$phpType*[OPCIONAL]|Constante **SQLSRV_PHPTYPE_\** _ que especifica el tipo de datos PHP del valor devuelto.|  
+    |_$sqlType* [OPCIONAL]|Constante **SQLSRV_SQLTYPE_\** _ que especifica el tipo de datos de SQL Server del valor de entrada.|  
   
-*$options* [OPCIONAL]: matriz asociativa que establece <a name="properties">propiedades de consultas</a>. En la siguiente tabla se indican las claves admitidas y los valores correspondientes:
+_$options* [OPCIONAL]: matriz asociativa que establece <a name="properties">propiedades de consultas</a>. En la siguiente tabla se indican las claves admitidas y los valores correspondientes:
 
 |Clave|Valores admitidos|Descripción|  
 |-------|--------------------|---------------|  

@@ -2,7 +2,7 @@
 title: Cuadro de diálogo Inicio de sesión de SQL Server (ODBC)
 description: El cuadro de diálogo de inicio de sesión de SQL Server puede aparecer cuando una aplicación realiza una conexión ODBC sin especificar suficiente información para conectarse a la base de datos.
 ms.custom: ''
-ms.date: 03/21/2018
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: 7c0a2be5961e4fab07941d999da1a2b2fe5f9dbe
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 9a2ba6a75457b2c4742603368d153f5636d3b541
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87898806"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158222"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Cuadro de diálogo Inicio de sesión de SQL Server (ODBC)
 
@@ -41,6 +41,7 @@ Seleccione uno de los modos de autenticación siguientes:
 - **Autenticación integrada de Active Directory** la autenticación que utiliza la cuenta de usuario que ha iniciado sesión actualmente
 - Autenticación **interactiva de Active Directory** con identificador de inicio de sesión
 - Autenticación de **Managed Service Identity** con Managed Identity
+- Autenticación mediante una **entidad de servicio de Azure Active Directory**
 
 Consulte [Pantalla del Asistente para orígenes de datos 2](../../../connect/odbc/windows/dsn-wizard-2.md) para más información sobre los modos de autenticación.
 
@@ -50,7 +51,7 @@ Si utiliza una conexión de confianza, puede especificar un nombre principal de 
 
 ### <a name="login-id"></a>Id. de inicio de sesión
 
-Especifica el identificador de inicio de sesión de SQL Server o Azure Active Directory que se va a usar para la conexión si el **modo de autenticación** está establecido en **SQL Server** o **Autenticación de contraseña de Active Directory**, **Autenticación interactiva de Active Directory** o **Managed Service Identity**. De lo contrario, el cuadro **ID. de inicio de sesión** se deshabilita.
+Especifica el identificador de inicio de sesión de SQL Server o Azure Active Directory que se va a usar para la conexión si el **modo de autenticación** está establecido en **SQL Server**, la **autenticación de contraseña de Active Directory**, la **autenticación interactiva de Active Directory**, la autenticación mediante **identidades administradas para recursos de Azure** (anteriormente Managed Service Identity) o la **autenticación de la entidad de servicio de Active Directory**. De lo contrario, el cuadro **ID. de inicio de sesión** se deshabilita.
 
 ### <a name="password"></a>Contraseña
 

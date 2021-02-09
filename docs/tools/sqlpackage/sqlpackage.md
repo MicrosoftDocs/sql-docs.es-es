@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: 8555a183dc1f888e6ae80b78999b5fc234b431cf
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: ef49071f97d255d98f8086b9ff329c77d7b4afad
+ms.sourcegitcommit: 5ceafd29b8f22edb800cec150f0ccddea43313e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594416"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98983668"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -23,13 +23,13 @@ ms.locfileid: "98594416"
   
 - [Versión](#version): devuelve el número de compilación de la aplicación SqlPackage.  Se agregó en la versión 18.6.
 
-- [Extract](sqlpackage-extract.md): crea un archivo de instantáneas de base de datos (.dacpac) a partir de una base de datos activa de SQL Server o Azure SQL Database.  
+- [Extract](sqlpackage-extract.md): crea un archivo de aplicación de capa de datos (.dacpac) que contiene el esquema o el esquema y los datos de usuario de una base de datos SQL conectada.  
   
 - [Publicar](sqlpackage-publish.md): actualiza de forma incremental un esquema de la base de datos para coincidir con el esquema de un archivo .dacpac de origen. Si no existe la base de datos en el servidor, la operación de publicación la crea. De lo contrario, se actualiza una base de datos existente.  
   
-- [Export](sqlpackage-export.md): exporta una base de datos activa, incluidos los datos de usuario y el esquema de base de datos, desde SQL Server o Azure SQL Database a un paquete BACPAC (archivo.bacpac).  
+- [Export](sqlpackage-export.md): exporta una base de datos SQL conectada, incluidos el esquema de la base de datos y los datos de usuario, a un archivo BACPAC (.bacpac).  
   
-- [Import](sqlpackage-import.md): importa los datos de esquema y tabla de un paquete BACPAC en una nueva base de datos de usuario en una instancia de SQL Server o Azure SQL Database.  
+- [Import](sqlpackage-import.md): importa el esquema y los datos de tabla de un archivo BACPAC en una nueva base de datos de usuario.  
   
 - [DeployReport](sqlpackage-deploy-drift-report.md): crea un informe XML de los cambios que realizaría una acción de publicación.  
   

@@ -2,12 +2,12 @@
 description: sqlsrv_field_metadata
 title: sqlsrv_field_metadata | Microsoft Docs
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_field_metadata
 apitype: NA
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6f2e0f7eefdfe78d1058d839c3e5a4fa9404e77
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 5cbcb5cf689d544730661fd9dd700537309d8a23
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92080574"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99154242"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,9 +46,9 @@ Una **matriz** de matrices o el valor **False**. La matriz consta de una matriz 
 |-------|---------------|  
 |NOMBRE|Nombre de la columna a la que corresponde el campo.|  
 |Tipo|Valor numérico que corresponde a un tipo SQL.|  
-|Tamaño|Número de caracteres de los campos de tipo de carácter: char(n), varchar(n), nchar(n), nvarchar(n) y XML. Número de bytes de los campos de tipo binario: binary(n), varbinary(n) y UDT. En otros tipos de datos de SQL Server, se devuelve**NULL** .|  
-|Precisión|La precisión de los tipos de precisión de variables: real, numeric, decimal, datetime2, datetimeoffset y time. En otros tipos de datos de SQL Server, se devuelve**NULL** .|  
-|Escala|La escala de los tipos de escala de variables: numeric, decimal, datetime2, datetimeoffset y time. En otros tipos de datos de SQL Server, se devuelve**NULL** .|  
+|Tamaño|Número de caracteres de los campos de tipo de carácter: char(n), varchar(n), nchar(n), nvarchar(n) y XML. Número de bytes de los campos de tipo binario: binary(n), varbinary(n) y UDT. En otros tipos de datos de SQL Server, se devuelve **NULL** .|  
+|Precisión|La precisión de los tipos de precisión de variables: real, numeric, decimal, datetime2, datetimeoffset y time. En otros tipos de datos de SQL Server, se devuelve **NULL** .|  
+|Escala|La escala de los tipos de escala de variables: numeric, decimal, datetime2, datetimeoffset y time. En otros tipos de datos de SQL Server, se devuelve **NULL** .|  
 |Nullable|Un valor enumerado que indica si la columna acepta valores Null (**SQLSRV_NULLABLE_YES**), no los acepta (**SQLSRV_NULLABLE_NO**) o no se sabe si los acepta (**SQLSRV_NULLABLE_UNKNOWN**).|  
   
 En la tabla siguiente se proporciona más información sobre las claves de cada submatriz (consulte la documentación de SQL Server para obtener más información sobre estos tipos):  
@@ -236,6 +236,76 @@ Como puede ver en la representación JSON siguiente, se muestran los metadatos d
 {"Name":"FirstName","Type":-9,"Size":50,"Precision":null,"Scale":null,"Nullable":1,"Data Classification":[]}
 {"Name":"LastName","Type":-9,"Size":50,"Precision":null,"Scale":null,"Nullable":1,"Data Classification":[]}
 {"Name":"BirthDate","Type":91,"Size":null,"Precision":10,"Scale":0,"Nullable":1,"Data Classification":[{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""}}]}
+```
+
+## <a name="sensitivity-rank-using-a-predefined-set-of-values"></a>Rango de confidencialidad con un conjunto predefinido de valores
+
+A partir de la versión 5.9.0, los controladores de PHP incluyen la recuperación de rangos de clasificación al usar el controlador ODBC 17.4.2 o versiones posteriores. El usuario puede definir un rango al usar la instrucción [ADD SENSITIVITY CLASSIFICATION](/sql/t-sql/statements/add-sensitivity-classification-transact-sql) para clasificar cualquier columna de datos. 
+
+Por ejemplo, si el usuario asigna `NONE` y `LOW` a BirthDate y SSN respectivamente, la representación JSON se muestra de la siguiente manera:
+
+```
+{"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":0},"rank":0}
+{"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
+```
+
+Tal y como se muestra en [la clasificación de confidencialidad](/sql/relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql), los valores numéricos de los rangos son:
+
+```
+0 for NONE
+10 for LOW
+20 for MEDIUM
+30 for HIGH
+40 for CRITICAL
+```
+
+Por lo tanto, si en lugar de `RANK=NONE`, el usuario define `RANK=CRITICAL` al clasificar la columna BirthDate, los metadatos de clasificación serán los siguientes:
+
+```
+  array(7) {
+    ["Name"]=>
+    string(9) "BirthDate"
+    ["Type"]=>
+    int(91)
+    ["Size"]=>
+    NULL
+    ["Precision"]=>
+    int(10)
+    ["Scale"]=>
+    int(0)
+    ["Nullable"]=>
+    int(1)
+    ["Data Classification"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["Label"]=>
+        array(2) {
+          ["name"]=>
+          string(26) "Confidential Personal Data"
+          ["id"]=>
+          string(0) ""
+        }
+        ["Information Type"]=>
+        array(2) {
+          ["name"]=>
+          string(9) "Birthdays"
+          ["id"]=>
+          string(0) ""
+        }
+        ["rank"]=>
+        int(40)
+      }
+      ["rank"]=>
+      int(40)
+    }
+  }
+```
+
+A continuación se muestra la representación JSON actualizada:
+
+```
+{"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":40},"rank":40}
 ```
 
 ## <a name="see-also"></a>Consulte también  

@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 9f6449c11c4033324b8f294449942b67425a737c
-ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
+ms.openlocfilehash: aaa1357686217a37ca68acb61d4cff36c47d7da6
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96900898"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495773"
 ---
 # <a name="create-a-jupyter-book-extension"></a>Creación de una extensión de libro de Jupyter
 
@@ -50,7 +50,7 @@ Azure Data Studio se basa en el mismo marco que Visual Studio Code, por lo que 
 
 - [Node.js](https://nodejs.org) instalado y disponible en su `$PATH`. Node.js incluye [npm](https://www.npmjs.com/), el administrador de paquetes de Node.js, que se usa para instalar el generador de extensiones.
 - [Visual Studio Code](https://code.visualstudio.com) para realizar cambios en la extensión y depurarla.
-- Asegúrese de que `azuredatastudio` está en su ruta de acceso. En el caso de Windows, asegúrese de elegir la opción **Agregar a PATH** de setup.exe. En Mac o Linux, ejecute la opción de **instalación del comando "azuredatastudio" de PATH**.
+- Asegúrese de que `azuredatastudio` está en su ruta de acceso. En el caso de Windows, asegúrese de elegir la opción **Agregar a PATH** de setup.exe. En Mac o Linux, ejecute la opción **Install 'azuredatastudio' command in PATH** (Instalar el comando "azuredatastudio" en PATH) desde la paleta de comandos de Azure Data Studio.
 
 ## <a name="install-the-extension-generator"></a>Instalación del generador de extensiones
 

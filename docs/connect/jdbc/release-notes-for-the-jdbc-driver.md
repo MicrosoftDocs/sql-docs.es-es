@@ -2,7 +2,7 @@
 title: Notas de la versión para JDBC Driver
 description: En este artículo se enumeran las versiones de Microsoft JDBC Driver para SQL Server. Se nombran y describen los cambios en cada una de las versiones.
 ms.custom: ''
-ms.date: 08/27/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,16 +11,71 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bcbaee78dc7dcb0de053756aacfe2e1711679fe
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 0ffc7d8e4090673f3fc8feb96aa3650d35361281
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005665"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99234856"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Notas de la versión de Microsoft JDBC Driver para SQL Server
 
 En este artículo se enumeran las versiones del _controlador JDBC Driver de Microsoft para SQL Server_. Se nombran y describen los cambios en cada una de las versiones.
+
+## <a name="92"></a><a id="92"></a>9.2
+
+**[![Descargar](../../ssms/media/download-icon.png) Descarga de Microsoft JDBC Driver 9.2 para SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2153622)**  
+**[![Descargar](../../ssms/media/download-icon.png) Descarga de Microsoft JDBC Driver 9.2 para SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2153521)**  
+
+Número de versión: 9.2.0 Fecha de publicación: 29 de enero de 2021
+
+Si tiene que descargar el controlador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para obtener el controlador en un archivo ZIP: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40a)  
+Para obtener el controlador en un archivo tar.gz: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40a)  
+
+### <a name="compliance"></a>Cumplimiento normativo
+
+| Cambio respecto del cumplimiento | Detalles |
+| :---------------- | :------ |
+| Descargue las actualizaciones más recientes para el controlador JDBC 9.2. | &bull; &nbsp; [GitHub 9.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Totalmente compatible con la especificación 4.2 de la API de JDBC. | Los archivos JAR del paquete 9.2 reciben su nombre según la compatibilidad de la versión de Java.<br/><br/>Por ejemplo, el archivo mssql-jdbc-9.2.0.jre15.jar del paquete 9.2 se debe usar con Java 15. |
+| Compatible con Java Development Kit (JDK) versión 15.0, 11.0 y 1.8. | Microsoft JDBC Driver 9.2 para SQL Server ahora es compatible con Java Development Kit (JDK), versión 15.0, además de con JDK 11.0 y 1.8. |
+| &nbsp; | &nbsp; |
+
+### <a name="releases"></a>Versiones
+
+Número de versión: 9.2.0 Fecha de publicación: 29 de enero de 2021
+
+### <a name="support-for-jdk-15"></a>Compatibilidad con JDK 15
+
+Microsoft JDBC Driver 9.2 para SQL Server ahora es compatible con Java Development Kit (JDK), versión 15.0, además de con JDK 11.0 y 1.8.
+
+### <a name="added-support-for-azure-active-directory-interactive-authentication"></a>Compatibilidad agregada con la autenticación interactiva de Azure Active Directory
+| Incorporación del tipo de autenticación | Detalles |
+| :---------- | :------ |
+| Microsoft JDBC Driver 9.2 para SQL Server ahora admite la autenticación en Azure Key Vault mediante la autenticación interactiva. | Consulte [Conexión mediante autenticación de Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="added-support-for-azure-active-directory-service-principal-authentication"></a>Compatibilidad agregada con la autenticación de la entidad de servicio de Azure Active Directory
+| Incorporación del tipo de autenticación | Detalles |
+| :---------- | :------ |
+| Microsoft JDBC Driver 9.2 para SQL Server ahora admite la autenticación en Azure Key Vault mediante el identificador de cliente y el secreto de una identidad de entidad de servicio. | Consulte [Conexión mediante autenticación de Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="updated-azure-key-vault-library-to-use-modern-azure-key-vault-library"></a>Actualización de la biblioteca de Azure Key Vault para poder usar la biblioteca moderna de Azure Key Vault
+| Cambios en la biblioteca de Azure Key Vault | Detalles |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 9.2 se ha migrado de la biblioteca de Azure Key Vault y las bibliotecas de autenticación de Active Directory (ADAL) de generación anterior a las bibliotecas más modernas de Azure Key Vault y de identidades de Azure. | **CAMBIO DE DEPENDENCIAS**. Asegúrese de actualizar las dependencias de la aplicación si usa la autenticación de Azure Active Directory o Azure Key Vault. Consulte los requisitos de dependencias al [trabajar con el proveedor de Azure Key Vault](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-the-azure-key-vault-provider) o con [autenticación de Azure Active Directory](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-azure-active-directory-authentication) |
+| &nbsp; | &nbsp; |
+
+### <a name="enabled-usebulkcopyforbatchinsert-for-non-azure-synapse-analytics-servers"></a>Habilitación de useBulkCopyForBatchInsert para servidores que no son de Azure Synapse Analytics
+| Cambios en useBulkCopyForBatchInsert para servidores que no son de Azure Synapse Analytics | Detalles |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 9.2 ahora permite el uso de la API de copia masiva para la operación de inserción por lotes en servidores que no son de Azure Synapse Analytics. | Consulte [Uso de la API de copia masiva para la operación de inserción por lotes](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md). |
+| &nbsp; | &nbsp; |
+
+
+## <a name="previous-releases"></a>Versiones anteriores
 
 ## <a name="84"></a><a id="84"></a> 8.4
 
@@ -93,8 +148,6 @@ Microsoft JDBC Driver 8.4 para SQL Server ahora es compatible con Java Develo
 | Autenticación de certificados de clientes | Detalles |
 | :------------------- | :------ |
 | Microsoft JDBC Driver 8.4 para SQL Server incorporó un nuevo método de autenticación llamado autenticación de certificados de clientes para escenarios de bucles invertidos. | Consulte [Autenticación de certificados de cliente para escenarios de bucles invertidos](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md). |
-
-## <a name="previous-releases"></a>Versiones anteriores
 
 ## <a name="82"></a><a id="82"></a> 8.2
 

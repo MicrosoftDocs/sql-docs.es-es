@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 06/25/2020
-ms.openlocfilehash: 4320873affdab74a31d1e666a84bc744b1c00385
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 06021fc598165982156093c12c26434f06cbc422
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123511"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495713"
 ---
 # <a name="build-and-publish-a-project"></a>Compilación y publicación de un proyecto
 
-El proceso de compilación en la extensión Proyectos de base de datos de SQL para Azure Data Studio permite la creación de *dacpac* en entornos Windows, macOS y Linux. El proyecto se puede implementar en un entorno local o en la nube con el proceso de publicación.
+El proceso de compilación en la extensión SQL Database Projects (en versión preliminar) para Azure Data Studio permite la creación de archivos *DACPAC* en entornos Windows, macOS y Linux. El proyecto se puede implementar en un entorno local o en la nube con el proceso de publicación.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

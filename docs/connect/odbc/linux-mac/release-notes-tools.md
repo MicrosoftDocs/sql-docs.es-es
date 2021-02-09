@@ -2,27 +2,36 @@
 title: Notas de la versión de mssql-tools en Linux y macOS
 description: Conozca las novedades y los cambios en las versiones publicadas de Microsoft SQL Server Tools.
 ms.custom: ''
-ms.date: 07/13/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-zhangw
 ms.author: v-zhangw
 manager: kenvh
-ms.openlocfilehash: 85f7115dbf138055df83a7bb07e5a78f505b5794
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 75f1144e84792b3c9361dcab74dcdbcb7b072268
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87812364"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075927"
 ---
 # <a name="release-notes-for-the-microsoft-sql-server-tools-on-linux-and-macos"></a>Notas de la versión de Microsoft SQL Server Tools en Linux y macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 En este artículo se enumeran y describen las novedades en los lanzamientos de versiones de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] SQL Server Tools en Linux y macOS.
+
+## <a name="17711-january-2021"></a>17.7.1.1, enero de 2021
+
+| Característica agregada | Detalles |
+| :------------ | :------ |
+| Corrección de errores de sqlcmd | Se ha corregido el error de redireccionamiento de entrada y las líneas vacías que causaban una ejecución repetida. |
+| Corrección de errores de sqlcmd | Se han corregido los informes de errores erróneos para las opciones -r, -p, -X y -k con ciertos formatos. |
+| Opción -z/-Z "contraseña" de sqlcmd | Ahora se admite. |
+| &nbsp; | &nbsp; |
 
 ## <a name="17611-july-2020"></a>17.6.1.1 (julio de 2020)
 

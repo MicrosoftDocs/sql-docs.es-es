@@ -1,8 +1,8 @@
 ---
 title: API de copia masiva para la inserción por lotes en JDBC
-description: Microsoft JDBC Driver para SQL Server admite el uso de la copia masiva para las operaciones de inserción por lotes en Azure Data Warehouse para cargar más rápido datos en la base de datos.
+description: Microsoft JDBC Driver para SQL Server admite el uso de la copia masiva para las operaciones de inserción por lotes para cargar más rápido datos en la base de datos.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,26 +11,25 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 14074b0136baf800b038e4b113325e81d65dc3e7
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: 4a769d73f799b8ca0b4b806a3e656517377e23ad
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442596"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161569"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Uso de la API de copia masiva para la operación de inserción por lotes
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver 7.0 para SQL Server admite el uso de la API de copia masiva para las operaciones de inserción por lotes para Azure Data Warehouse. Esta característica permite a los usuarios habilitar el controlador para realizar la siguiente operación de copia masiva al ejecutar las operaciones de inserción por lotes. El objetivo del controlador es lograr que mejore el rendimiento mientras se insertan los mismos datos que tendría el controlador con la operación de inserción por lotes normal. El controlador analiza la consulta SQL del usuario, aprovechando la API de copia masiva en lugar de la operación de inserción por lotes normal. A continuación se muestran varias formas de habilitar la API de copia masiva para la característica de inserción por lotes, así como la lista de sus limitaciones. En esta página también se incluye un pequeño código de ejemplo que muestra un uso, además del aumento del rendimiento.
+Microsoft JDBC Driver 9.2 (y versiones posteriores) para SQL Server admite el uso de la API de copia masiva para las operaciones de inserción por lotes. Esta característica permite a los usuarios habilitar el controlador para realizar las siguientes operaciones de copia masiva al ejecutar operaciones de inserción por lotes. El objetivo del controlador es lograr que mejore el rendimiento mientras se insertan los mismos datos que tendría el controlador con la operación de inserción por lotes normal. El controlador analiza la consulta SQL del usuario mediante la API de copia masiva en lugar de la operación de inserción por lotes normal. A continuación se muestran varias formas de habilitar la API de copia masiva para la característica de inserción por lotes y se enumeran sus limitaciones. En esta página también se incluye un pequeño código de ejemplo que muestra un uso, además del aumento del rendimiento.
 
 Esta característica solo es aplicable a las API `executeBatch()` & `executeLargeBatch()` de PreparedStatement y CallableStatement.
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
-Hay dos requisitos previos para habilitar la API de copia masiva para la inserción por lotes.
+Requisito previo para habilitar la API de copia masiva para la inserción por lotes:
 
-* El servidor debe ser Azure Data Warehouse.
 * La consulta debe ser una consulta insert (la consulta puede contener comentarios, pero debe empezar por la palabra clave INSERT para que esta característica surta efecto).
 
 ## <a name="enabling-bulk-copy-api-for-batch-insert"></a>Habilitación de la API de copia masiva para la inserción por lotes
@@ -51,7 +50,7 @@ La llamada a **SQLServerConnection.setUseBulkCopyForBatchInsert(true)** habilita
 
 **SQLServerConnection.getUseBulkCopyForBatchInsert()** recupera el valor actual para la propiedad de conexión **useBulkCopyForBatchInsert**.
 
-El valor de **useBulkCopyForBatchInsert** sigue siendo constante para cada PreparedStatement en el momento de su inicialización. Ninguna llamada subsiguiente a **SQLServerConnection.setUseBulkCopyForBatchInsert()** afectará a la instrucción PreparedStatement ya creada con respecto a su valor.
+El valor de **useBulkCopyForBatchInsert** sigue siendo constante para cada PreparedStatement en el momento de su inicialización. Ninguna llamada subsiguiente a **SQLServerConnection.setUseBulkCopyForBatchInsert()** afectará al valor de la instrucción PreparedStatement ya creada.
 
 ### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3. Habilitación con el método setUseBulkCopyForBatchInsert() del objeto SQLServerDataSource
 
@@ -61,7 +60,7 @@ Similar al anterior, pero se usa SQLServerDataSource para crear un objeto SQLSer
 
 Actualmente existen estas limitaciones que se aplican a esta característica.
 
-* Las consultas insert con valores sin parámetros (por ejemplo, `INSERT INTO TABLE VALUES (?, 2`), no se admiten. Los caracteres comodín (?) son los únicos caracteres admitidos para esta función.
+* Las consultas insert con valores sin parámetros (por ejemplo, `INSERT INTO TABLE VALUES (?, 2`) no se admiten. Los caracteres comodín (?) son los únicos caracteres admitidos para esta función.
 * Las consultas insert con expresiones INSERT-SELECT (por ejemplo, `INSERT INTO TABLE SELECT * FROM TABLE2`) no se admiten.
 * Las consultas insert con varias expresiones VALUE (por ejemplo, `INSERT INTO TABLE VALUES (1, 2) (3, 4)`) no se admiten.
 * Las consultas insert a las que sigue la cláusula OPTION, unidas con varias tablas o seguidas de otra consulta, no se admiten.
@@ -71,7 +70,7 @@ Si se produce un error en la consulta por errores no relacionados con "SQL Serve
 
 ## <a name="example"></a>Ejemplo
 
-A continuación aparece un código de ejemplo que muestra el caso de uso para una operación de inserción por lotes en Azure Synapse Analytics de mil filas, para ambos escenarios (normal frente a API de copia masiva).
+Este es un ejemplo que muestra el caso de uso para una operación de inserción por lotes de mil filas, tanto para escenarios normales como de la API de copia masiva.
 
 ```java
     public static void main(String[] args) throws Exception
@@ -79,9 +78,9 @@ A continuación aparece un código de ejemplo que muestra el caso de uso para un
         String tableName = "batchTest";
         String tableNameBulkCopyAPI = "batchTestBulk";
 
-        String azureDWconnectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
 
-        try (Connection con = DriverManager.getConnection(azureDWconnectionUrl); // connects to an Azure Data Warehouse.
+        try (Connection con = DriverManager.getConnection(connectionUrl);
                 Statement stmt = con.createStatement();
                 PreparedStatement pstmt = con.prepareStatement("insert into " + tableName + " values (?, ?)");) {
 
@@ -105,7 +104,7 @@ A continuación aparece un código de ejemplo que muestra el caso de uso para un
             System.out.println("Finished. Time taken : " + (end - start) + " milliseconds.");
         }
 
-        try (Connection con = DriverManager.getConnection(azureDWconnectionUrl + ";useBulkCopyForBatchInsert=true"); // connects to an Azure Data Warehouse, with useBulkCopyForBatchInsert connection property set to true.
+        try (Connection con = DriverManager.getConnection(connectionUrl + ";useBulkCopyForBatchInsert=true");
                 Statement stmt = con.createStatement();
                 PreparedStatement pstmt = con.prepareStatement("insert into " + tableNameBulkCopyAPI + " values (?, ?)");) {
 
