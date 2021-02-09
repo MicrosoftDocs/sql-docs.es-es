@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 2c82514c12ec3ba496e288454d87750e0c91a5f8
-ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
+ms.openlocfilehash: 5b59930023da1279e2db18d9e9fce4186c677f8d
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99835680"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978587"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificación de la SKU de Azure SQL Database/Instancia administrada adecuada para la base de datos local
 
@@ -207,12 +207,15 @@ Para introducir información de aprovisionamiento y realizar cambios en las reco
     - **Grupo de recursos** : el grupo de recursos en el que desea implementar las bases de datos. Especifique un grupo de recursos que exista.
     - **Región** : la región en la que se aprovisionan las bases de datos. Asegúrese de que la suscripción admite la región seleccionada.
     - **Nombre del servidor** : el servidor de Azure SQL Database en el que desea implementar las bases de datos. Si escribe un nombre de servidor que no existe, se creará.
-    - **Nombre de usuario de administrador** : nombre de usuario del administrador del servidor. Asegúrese de que el nombre de inicio de sesión cumple los requisitos siguientes: su nombre de inicio de sesión no debe contener un identificador de SQL o un nombre de sistema típico (por ejemplo, admin, Administrator, SA, root, dbmanager, LoginManager, etc.) o un usuario o rol de base de datos integrado (por ejemplo, DBO, Guest, Public, etc.). El nombre de inicio de sesión no debe incluir caracteres no alfanuméricos (incluidos espacios en blanco, caracteres Unicode). el nombre de inicio de sesión no debe empezar por números ni símbolos
+    - **Nombre de usuario de administrador** : nombre de usuario del administrador del servidor. Asegúrese de que el nombre de inicio de sesión cumple los requisitos siguientes:
+      - El nombre de inicio de sesión no debe contener un identificador de SQL ni un nombre de sistema típico (por ejemplo, admin, Administrator, SA, root, dbmanager, LoginManager, etc.) o un rol o usuario de base de datos integrado (por ejemplo, DBO, Guest, Public, etc.).
+      - El nombre de inicio de sesión no debe incluir caracteres no alfanuméricos (incluidos espacios en blanco, caracteres Unicode).
+      - El nombre de inicio de sesión no debe empezar por números ni símbolos.
 
-    - **Contraseña de administrador** : la contraseña de administrador del servidor. La contraseña debe tener una longitud de 8 caracteres como mínimo.
-La contraseña no debe tener más de 128 caracteres de longitud.
-La contraseña debe contener caracteres de tres de las siguientes categorías: letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #, %, etc.).
-La contraseña no puede contener todo o parte del nombre de inicio de sesión. (Parte de un nombre de inicio de sesión se define como tres caracteres alfanuméricos consecutivos).
+    - **Contraseña de administrador** : la contraseña de administrador del servidor. 
+      - La contraseña debe tener al menos 8 caracteres y no más de 128 caracteres de longitud.
+      - La contraseña debe contener caracteres de tres de las siguientes categorías: letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #, %, etc.).
+      - La contraseña no puede contener todo o parte del nombre de inicio de sesión. (Parte de un nombre de inicio de sesión se define como tres caracteres alfanuméricos consecutivos).
 
 2. Revise las recomendaciones para cada base de datos y modifique el plan de tarifa, el nivel de proceso y el tamaño máximo de los datos según sea necesario. Asegúrese de anular la selección de las bases de datos que no quiera aprovisionar actualmente.
 
@@ -229,12 +232,15 @@ La contraseña no puede contener todo o parte del nombre de inicio de sesión. (
     - **Grupo de recursos** : el grupo de recursos en el que desea implementar las bases de datos. Especifique un grupo de recursos que exista.
     - **Región** : la región en la que se aprovisionan las bases de datos. Asegúrese de que la suscripción admite la región seleccionada.
     - **Nombre de instancia** : la instancia de Azure SQL instancia administrada a la que desea migrar las bases de datos. El nombre de instancia solo puede contener letras minúsculas, números y '-', pero no puede comenzar ni terminar con '-' ni tener más de 63 caracteres.
-    - **Nombre de usuario de administrador de instancia** : nombre de usuario de administrador de instancia. Asegúrese de que el nombre de inicio de sesión cumple los requisitos siguientes: su nombre de inicio de sesión no debe contener un identificador de SQL o un nombre de sistema típico (por ejemplo, admin, Administrator, SA, root, dbmanager, LoginManager, etc.) o un usuario o rol de base de datos integrado (por ejemplo, DBO, Guest, Public, etc.). El nombre de inicio de sesión no debe incluir caracteres no alfanuméricos (incluidos espacios en blanco, caracteres Unicode). el nombre de inicio de sesión no debe empezar por números ni símbolos
+    - **Nombre de usuario de administrador de instancia** : nombre de usuario de administrador de instancia. Asegúrese de que el nombre de inicio de sesión cumple los requisitos siguientes:
+      - El nombre de inicio de sesión no debe contener un identificador de SQL ni un nombre de sistema típico (por ejemplo, admin, Administrator, SA, root, dbmanager, LoginManager, etc.) o un rol o usuario de base de datos integrado (por ejemplo, DBO, Guest, Public, etc.).
+      - El nombre de inicio de sesión no debe incluir caracteres no alfanuméricos (incluidos espacios en blanco, caracteres Unicode).
+      - El nombre de inicio de sesión no debe empezar por números ni símbolos.
 
-    - **Contraseña de administrador de instancia** : la contraseña de administrador de la instancia. La contraseña debe tener una longitud de 16 caracteres como mínimo.
-La contraseña no debe tener más de 128 caracteres de longitud.
-La contraseña debe contener caracteres de tres de las siguientes categorías: letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #, %, etc.).
-La contraseña no puede contener todo o parte del nombre de inicio de sesión. (Parte de un nombre de inicio de sesión se define como tres caracteres alfanuméricos consecutivos).
+    - **Contraseña de administrador de instancia** : la contraseña de administrador de la instancia. 
+      - La contraseña debe tener una longitud de 16 caracteres como mínimo y no tener más de 128 caracteres de longitud.
+      - La contraseña debe contener caracteres de tres de las siguientes categorías: letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #, %, etc.).
+      - La contraseña no puede contener todo o parte del nombre de inicio de sesión. (Parte de un nombre de inicio de sesión se define como tres caracteres alfanuméricos consecutivos).
 
     - **Nombre de la red virtual** : el nombre de la red virtual con la que se debe aprovisionar la instancia administrada. Escriba un nombre de red virtual existente.
     - **Nombre de subred** : el nombre de subred en el que se debe aprovisionar la instancia administrada. Escriba un nombre de subred existente.
