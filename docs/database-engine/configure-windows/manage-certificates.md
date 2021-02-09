@@ -15,20 +15,21 @@ helpviewer_keywords:
 - requesting encrypted connections
 - installing certificates
 - security [SQL Server], encryption
-ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/12/2021
-ms.openlocfilehash: e4f0c17e7502a0c1fa75c6459fae77683d0c3cbd
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: d4ad86b8ce46e39f0143f72badca4926bc0d50b2
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170927"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978687"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>Administración de certificados (Administrador de configuración de SQL Server)
+
+[!INCLUDE [sql-windows-only](../../includes/applies-to-version/sql-windows-only.md)]
 
 En este tema se explica cómo implementar y administrar certificados en la topología de clúster de conmutación por error o grupo de disponibilidad de SQL Server Always On.
 

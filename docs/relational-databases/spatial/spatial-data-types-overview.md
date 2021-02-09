@@ -16,12 +16,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 668d1fda7e4b979e52377c03daaddb0cb2286cdd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 87ed2882d8276b3a92add3349b73bf38fe821dc9
+ms.sourcegitcommit: 10ae200635b9e8554e6bc6f658125e1a80d4d5ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462966"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99589317"
 ---
 # <a name="spatial-data-types-overview"></a>Información general de los tipos de datos espaciales
 
@@ -84,7 +84,7 @@ En un sistema elipsoidal, un polígono sin una orientación no tiene ningún sig
 
 El interior del polígono de un sistema elipsoidal se define a partir de la "regla del lado izquierdo": si recorriéramos el anillo de un polígono de tipo geography siguiendo los puntos en el orden en que aparecen, el área de la izquierda se considera el interior del polígono y el área de la derecha, el exterior.
 
-Cuando el nivel de compatibilidad es 100 o menor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , el tipo de datos **geography** tiene las siguientes restricciones:
+Cuando el nivel de compatibilidad es 100 o menor en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , el tipo de datos **geography** tiene las siguientes restricciones:
 
 - Cada instancia de **geography** debe ajustarse en un hemisferio único. No se puede almacenar ningún objeto espacial mayor que un hemisferio.
 
@@ -92,7 +92,7 @@ Cuando el nivel de compatibilidad es 100 o menor en [!INCLUDE[ssCurrent](../../i
 
 - Los métodos del tipo de datos **geography** que requieren la entrada de dos instancias de **geography** , como STIntersection(), STUnion(), STDifference() y STSymDifference(), devolverán NULL si los resultados de los métodos no se ajustan en un hemisferio único. STBuffer() también devolverá NULL si la salida supera un único hemisferio.  
 
-En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** es un tipo especial de Polygon que abarca el mundo entero. Tiene un área, pero no tiene bordes ni vértices.  
+En [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], **FullGlobe** es un tipo especial de Polygon que abarca el mundo entero. Tiene un área, pero no tiene bordes ni vértices.  
 
 ### <a name="outer-and-inner-rings-in-geography-data-type"></a>Anillos externos e internos en el tipo de datos `geography`
 

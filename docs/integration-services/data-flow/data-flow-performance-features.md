@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1956aeb1fc5895eea47ef46eb093a1eea435078b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 600ab1bce27f4fa53c2e25ae7562a870f2ccf6a6
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196446"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536362"
 ---
 # <a name="data-flow-performance-features"></a>Características de rendimiento del flujo de datos
 
@@ -134,7 +134,7 @@ ms.locfileid: "92196446"
  Utilice las sugerencias de esta sección para mejorar el rendimiento de las transformaciones Agregado, Búsqueda aproximada, Agrupación aproximada, Búsqueda, Combinación de mezcla y Dimensión de variación lenta.  
   
 #### <a name="aggregate-transformation"></a>Transformación Agregado  
- La transformación Agregado incluye las propiedades **Keys**, **KeysScale**, **CountDistinctKeys**y **CountDistinctScale** . Estas propiedades mejoran el rendimiento habilitando la transformación para asignar previamente la cantidad de memoria que necesita la transformación para los datos que almacena en caché. Si conoce el número exacto o aproximado de grupos que se esperan como resultado de una operación **Agrupar por** , debe establecer las propiedades **Keys** y **KeysScale** , respectivamente. Si conoce el número exacto o aproximado de valores distintos que se esperan como resultado de una operación **Recuento distinto** , debe establecer las propiedades **CountDistinctKeys** y **CountDistinctScale** , respectivamente.  
+ La transformación Agregado incluye las propiedades **Keys**, **KeysScale**, **CountDistinctKeys** y **CountDistinctScale** . Estas propiedades mejoran el rendimiento habilitando la transformación para asignar previamente la cantidad de memoria que necesita la transformación para los datos que almacena en caché. Si conoce el número exacto o aproximado de grupos que se esperan como resultado de una operación **Agrupar por** , debe establecer las propiedades **Keys** y **KeysScale** , respectivamente. Si conoce el número exacto o aproximado de valores distintos que se esperan como resultado de una operación **Recuento distinto** , debe establecer las propiedades **CountDistinctKeys** y **CountDistinctScale** , respectivamente.  
   
  Si tiene que crear varias agregaciones en un flujo de datos, considere la posibilidad de crear varias agregaciones que utilicen una sola transformación Agregado, en lugar de crear varias transformaciones. Esto mejora el rendimiento cuando una agregación es un subconjunto de otra agregación, ya que la transformación puede optimizar el almacenamiento interno y examinar los datos entrantes una sola vez. Por ejemplo, si una agregación utiliza una cláusula GROUP BY y una agregación AVG, puede mejorar el rendimiento combinándolas en una transformación. No obstante, al realizar varias agregaciones dentro de una transformación Agregado se serializan las operaciones de agregación y, por consiguiente, el rendimiento podría no mejorar cuando haya que calcular varias agregaciones por separado.  
   
@@ -185,9 +185,9 @@ ms.locfileid: "92196446"
   
 -   Artículo técnico, [We Loaded 1TB in 30 Minutes with SSIS, and So Can You](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100)), en msdn.microsoft.com.  
   
--   Artículo técnico, [Top 10 SQL Server Integration Services Best Practices](https://go.microsoft.com/fwlink/?LinkId=220818), en sqlcat.com.  
+-   Artículo técnico, [Top 10 SQL Server Integration Services Best Practices](https://techcommunity.microsoft.com/t5/datacat/top-10-sql-server-integration-services-best-practices/ba-p/305163), en sqlcat.com.  
   
--   Artículo técnico y ejemplo, [The "Balanced Data Distributor" for SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), en sqlcat.com.  
+-   Artículo técnico y ejemplo, [The "Balanced Data Distributor" for SSIS](https://www.sqlshack.com/ssis-balanced-data-distributor-overview/), en sqlcat.com.  
   
 -   Publicación de blog acerca sobre [la solución de problemas de rendimiento de los paquetes SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553), en blogs.msdn.com  
   
@@ -201,7 +201,7 @@ ms.locfileid: "92196446"
   
 -   Vídeo sobre [los patrones de diseño de rendimiento de Microsoft SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), en channel9.msdn.com.  
   
--   Presentación acerca de [cómo Microsoft TI aprovecha las mejoras en el motor de flujo de datos de SQL Server 2008 SSIS](https://go.microsoft.com/fwlink/?LinkId=217660), en sqlcat.com.  
+-   Presentación acerca de [cómo Microsoft TI aprovecha las mejoras en el motor de flujo de datos de SQL Server 2008 SSIS](https://channel9.msdn.com/Shows/TechNet+Radio/TechNet-Radio-How-Microsoft-IT-Leverages-SQL-Server-2008-SSIS-Dataflow-Engine-Enhancements), en sqlcat.com.  
   
 -   Vídeo, [Balanced Data Distributor](/previous-versions/dn912438(v=msdn.10)), en technet.microsoft.com.  
   

@@ -8,12 +8,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: ab9af4d073cbec00736bab6a24817502d353ffd8
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+ms.openlocfilehash: b7d5336bd6f4ad37fba6cf44865d49721b3cbb80
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175935"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978814"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Uso de SID de servicio para conceder permisos a servicios en SQL Server
 
@@ -105,7 +105,7 @@ GO
   > [!NOTE]
   > Si se quitan los inicios de sesión de SID de servicio o se quitan del rol de servidor sysadmin, pueden producirse problemas en varios componentes de SQL Server que se conectan al Motor de base de datos SQL Server. Entre los problemas se incluyen los siguientes:
   > - El Agente SQL Server no puede iniciarse o conectarse a un servicio SQL Server.
-  > - Los programas de instalación de SQL Server encuentran el problema que se menciona en el siguiente artículo de Microsoft Knowledge Base: https://support.microsoft.com/help/955813/you-may-be-unable-to-restart-the-sql-server-agent-service-after-you-re.
+  > - Los programas de instalación de SQL Server encuentran el problema que se menciona en el siguiente artículo de Microsoft Knowledge Base: https://mskb.pkisolutions.com/kb/955813.
   >
   > En el caso de una instancia predeterminada de SQL Server, puede corregir esta situación agregando el SID del servicio mediante los siguientes comandos de Transact-SQL:
   >

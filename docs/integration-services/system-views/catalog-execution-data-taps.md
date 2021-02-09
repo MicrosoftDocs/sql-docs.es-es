@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d73abfb0ee03e645bcc8d69c3415b7c4d737f055
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d7588600a44be49fb0d6e83759cc6b2af688111
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495210"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835114"
 ---
 # <a name="catalogexecution_data_taps"></a>catalog.execution_data_taps 
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra información de cada derivación de datos definida en una ejecución.  
   

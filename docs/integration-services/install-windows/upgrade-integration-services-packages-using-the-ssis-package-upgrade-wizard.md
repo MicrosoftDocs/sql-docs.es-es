@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0a9e27d3d7379ad4e0c16d47bcdb97abab38741e
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 8f893df24e74e0367ab98545a9003de6d93f47f0
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88346401"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835806"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Puede actualizar los paquetes que se crearon en versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al formato de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utiliza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona el Asistente para actualización del paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] para ayudar en este proceso. Como puede configurar el asistente para realizar una copia de seguridad de los paquetes originales, puede continuar utilizando los paquetes originales si experimenta dificultades en la actualización.  
+  Puede actualizar los paquetes que se crearon en versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al formato de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] utiliza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona el Asistente para actualización del paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] para ayudar en este proceso. Como puede configurar el asistente para realizar una copia de seguridad de los paquetes originales, puede continuar utilizando los paquetes originales si experimenta dificultades en la actualización.  
   
  El Asistente para actualización del paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] se instala cuando se instala [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   

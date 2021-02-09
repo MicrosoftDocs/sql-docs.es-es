@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e307babfd703b83758a6d1d3c7de3e6f62b00119
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d449dae68ce74abcf8509eb9f6b2e22ef46c51bb
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495245"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835316"
 ---
 # <a name="catalogexecution_component_phases"></a>catalog.execution_component_phases 
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra el tiempo dedicado por un componente de flujo de datos a cada fase de ejecución.  
   

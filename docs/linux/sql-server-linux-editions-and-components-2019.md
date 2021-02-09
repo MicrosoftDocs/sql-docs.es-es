@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: f208b424272644f3d66146014401a1343f00e576
-ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
+ms.openlocfilehash: 398d8d1aaf626fdc65674ee1d5eb959951dcd5e2
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674211"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552624"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Ediciones y características admitidas de SQL Server 2019 en Linux
 
@@ -97,7 +97,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |-------------|----------------|--------------|---------|------------------------|  
 |Trasvase de registros|Sí|Sí|Sí|No|  
 |Compresión de copia de seguridad|Sí|Sí|No|No| 
-|Instantáneas de base de datos|Sí|No|No|No|
+|Instantáneas de base de datos|Sí|Sí|No|No|
 |Instancia de clúster de conmutación por error AlwaysOn<sup>1</sup>|Sí|Sí|No|No| 
 |Grupos de disponibilidad AlwaysOn<sup>2</sup>|Sí|No|No|No|
 |Grupos de disponibilidad básica<sup>3</sup>|No|Sí|No|No|

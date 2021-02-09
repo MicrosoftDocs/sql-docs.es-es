@@ -13,19 +13,16 @@ helpviewer_keywords:
 ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4dfe305d34435dd1b09dc825021995e1a9cb75d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4e067dc38f6bd511237ab05491feda4307106c4
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421959"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835996"
 ---
 # <a name="views-integration-services-catalog"></a>Vistas (catálogo de Integration Services)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En esta sección se describen las vistas [!INCLUDE[tsql](../../includes/tsql-md.md)] que están disponibles para administrar proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implementados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

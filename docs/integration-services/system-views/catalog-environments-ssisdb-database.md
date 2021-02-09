@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 426199180acf6aafc609250638d00d1deb9231ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3c2915d6bb01059b514649a21a391c2561579ae
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495295"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835296"
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments (base de datos de SSISDB)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra los detalles de todos los entornos del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Los entornos contienen variables a las que pueden hacer referencia los proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   

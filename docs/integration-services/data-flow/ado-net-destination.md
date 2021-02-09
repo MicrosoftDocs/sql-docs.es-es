@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 146a75e907131d5faae03da46419b3b4137c01ca
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 4ae905d868554c20948af3eb0191937382eff56f
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194880"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536383"
 ---
 # <a name="ado-net-destination"></a>Destino ADO NET
 
@@ -111,7 +111,7 @@ ms.locfileid: "92194880"
 >  Para obtener más información, vea [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) y [IDENTITY &#40;propiedad de Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
 ## <a name="external-resources"></a>Recursos externos  
- Artículo técnico sobre cómo [cargar datos en Azure SQL Database de la forma más rápida](https://go.microsoft.com/fwlink/?LinkId=244333), en sqlcat.com  
+ Artículo técnico sobre cómo [cargar datos en Azure SQL Database de la forma más rápida](https://techcommunity.microsoft.com/t5/datacat/loading-data-to-sql-azure-the-fast-way/ba-p/305066), en sqlcat.com  
   
 ## <a name="ado-net-destination-editor-mappings-page"></a>Editor de destinos de ADO NET (página Asignaciones)
   Use la página **Asignaciones** del cuadro de diálogo **Editor de destinos de ADO NET** para asignar columnas de entrada a columnas de destino.  

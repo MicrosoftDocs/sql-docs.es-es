@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3176e2d97a4a38172dc540a57b87006f599e29c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae083f7e594025449da685ce5f18ed777f88a8a1
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449882"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835126"
 ---
 # <a name="integration-services-programming-overview"></a>Información general sobre la programación de Integration Services
 
@@ -63,7 +63,7 @@ ms.locfileid: "88449882"
 >  Las interfaces de programación de aplicaciones de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] son incompatibles con lenguajes de scripting basados en COM como VBScript.  
   
 ## <a name="locating-assemblies"></a>Buscar ensamblados  
- En [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], los ensamblados de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se actualizaron a .NET 4.0. Hay una caché global de ensamblados diferente para .NET 4, que se encuentra en *\<drive>* :\Windows\Microsoft.NET\assembly. Puede buscar todos los ensamblados de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bajo esta ruta de acceso, normalmente en la carpeta GAC_MSIL.  
+ En [!INCLUDE[ssSQL19](../includes/sssql19-md.md)], los ensamblados de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se actualizaron a .NET 4.0. Hay una caché global de ensamblados diferente para .NET 4, que se encuentra en *\<drive>* :\Windows\Microsoft.NET\assembly. Puede buscar todos los ensamblados de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bajo esta ruta de acceso, normalmente en la carpeta GAC_MSIL.  
   
  Como ocurre en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], los archivos básicos de extensibilidad .dll de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] también se encuentran en *\<drive>* :\Archivos de programa\Microsoft SQL Server\100\SDK\Assemblies.  
   

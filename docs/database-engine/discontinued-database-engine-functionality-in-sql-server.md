@@ -36,19 +36,19 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016'
-ms.openlocfilehash: 2d265fa2ed17f10485bb3d9009eef25375fb2de4
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 093e20773376cddeea566e202d9f18605f1a1c13
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170877"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552594"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Funcionalidad del motor de base de datos no incluida en SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-  En este tema se describen las características del [!INCLUDE[ssDE](../includes/ssde-md.md)] que ya no están disponibles en [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)].  
+  En este tema se describen las características del [!INCLUDE[ssDE](../includes/ssde-md.md)] que ya no están disponibles en [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)].  
 
-## <a name="discontinued-features-in-sssqlv15"></a>Características no incluidas en [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
+## <a name="discontinued-features-in-sssql19"></a>Características no incluidas en [!INCLUDE[sssql19](../includes/sssql19-md.md)]  
 
 - Las siguientes opciones de configuración con ámbito de base de datos no se incluyen:
 
@@ -59,11 +59,11 @@ ms.locfileid: "98170877"
 Para obtener las opciones de configuración actuales, vea [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 >[!NOTE]
->Ninguna característica se ha dejado de incluir en [!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)].
+>Ninguna característica se ha dejado de incluir en [!INCLUDE[sssql14](../includes/sssql17-md.md)].
 
-## <a name="discontinued-features-in-sssql15"></a>Características no incluidas en [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]
+## <a name="discontinued-features-in-sssql15-md"></a>Características no incluidas en [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]
 
-- [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] es una aplicación de 64 bits. La instalación de 32 bits está descontinuada, a pesar de que algunos de los elementos se ejecutan como componentes de 32 bits.  
+- [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] es una aplicación de 64 bits. La instalación de 32 bits está descontinuada, a pesar de que algunos de los elementos se ejecutan como componentes de 32 bits.  
 
 - El nivel de compatibilidad 90 se ha dejado de usar. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 

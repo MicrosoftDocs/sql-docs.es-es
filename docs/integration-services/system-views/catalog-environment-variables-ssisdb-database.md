@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b76045d5f901fa1444fd016d1c7673f46170332d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1a6894bc1dee54ec5fa66014ed363409ebb150b6
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495342"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835286"
 ---
 # <a name="catalogenvironment_variables-ssisdb-database"></a>catalog.environment_variables (base de datos de SSISDB)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra los detalles de las variables de entorno para todos los entornos del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
