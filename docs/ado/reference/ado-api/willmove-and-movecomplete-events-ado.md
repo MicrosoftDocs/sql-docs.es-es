@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46c28cd74fcf7a580d6695e21cd1e5e2750f0519
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a2476447e5da8baa89a2df326eba3d41225c698e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166253"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056060"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>Eventos WillMove y MoveComplete (ADO)
 Se llama al evento **WillMove** antes de que una operación pendiente cambie la posición actual en el [conjunto de registros](./recordset-object-ado.md). Se llama al evento **MoveComplete** después de que cambie la posición actual en el **conjunto de registros** .  

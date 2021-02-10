@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 199aaab9215165e06598ca0c1be783b0a123a1c5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b23a6bc4354f4c67c07bcdc1f4b4d463fff072f2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166394"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056510"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 Especifica el formato al recuperar un [conjunto de registros](./recordset-object-ado.md) como una cadena.  

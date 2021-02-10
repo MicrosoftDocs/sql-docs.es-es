@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac7cb237f0b3c3adb2621e8e7ad15912b907a4d7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: feb964fbc6cdd59be000e82c4a58b359cfc23d57
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170078"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056440"
 ---
 # <a name="type-property-ado"></a>Tipo (propiedad, ADO)
 Indica el tipo operativo o el tipo de datos de un [parámetro](./parameter-object.md), [campo](./field-object.md)o objeto de [propiedad](./property-object-ado.md) .  

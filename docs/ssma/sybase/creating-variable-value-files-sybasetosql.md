@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2f2d3a53cb12a0d7762137a44cc12ec6f06a5d81
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 3ce72fdb5c93ac6a78dcd9a8ed14f42682d72182
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036704"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056650"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>Creación de archivos de valor variable (SybaseToSQL)
 El archivo de valores de variable es un archivo XML que comprende los valores de parámetro de comandos como, el nombre de servidor de origen o de destino que cambian con frecuencia de una migración de servidor a otra. Cuando se produce un gran número de migraciones de base de datos, se crearán varios archivos de variables para almacenar el valor de cada servidor de origen y se hará referencia a ellos en un archivo de script maestro con el modificador **-v** en la línea de comandos. Esto ayuda a mantener valores estáticos en algunos archivos de script con los valores de variable en varios archivos de variables.  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8bc846e849df5980efca8f5e28982c964276f8bb
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4e754d71d3b616ebd8b44af399c6386e940c8ada
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166322"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056230"
 ---
 # <a name="updatebatch-method"></a>Método UpdateBatch
 Escribe todas las actualizaciones de Batch pendientes en el disco.  

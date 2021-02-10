@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26de39ffdd918a8281998b32d89c68fd1babf75e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 474d2d1f076188b22224e62f0e487872440c6eb5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170087"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056470"
 ---
 # <a name="supports-method"></a>Método Supports
 Determina si un objeto de [conjunto de registros](./recordset-object-ado.md) especificado admite un tipo determinado de funcionalidad.  

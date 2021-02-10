@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 279d0e82bff4d71a2c3b18bbdc7ff88f0b9581a9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 17959e475214a23998ac7242f90e29da9de5ecfe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172430"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056320"
 ---
 # <a name="update-method"></a>Update (método)
 Guarda los cambios realizados en la fila actual de un objeto de [conjunto de registros](./recordset-object-ado.md) o la colección de [campos](./fields-collection-ado.md) de un objeto de [registro](./record-object-ado.md) .  

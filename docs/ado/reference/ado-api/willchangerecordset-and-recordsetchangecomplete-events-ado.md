@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6246eaa8dbdd92236a891fa56189e104b594b64c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 27ee83f558c13be2c8db2ede2b93cfa3a9d90111
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172362"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056120"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>Eventos WillChangeRecordset y RecordsetChangeComplete (ADO)
 Se llama al evento **WillChangeRecordset** antes de que una operación pendiente cambie el [conjunto de registros](./recordset-object-ado.md). El evento **RecordsetChangeComplete** se llama después de que el **conjunto de registros** haya cambiado.  

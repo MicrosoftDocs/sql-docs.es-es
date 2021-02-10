@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3f433434833ee07e4ebbf999e2ef2ca122f44fc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 41ef9c6809302e39d63e5cca53bc3c0f29963683
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170072"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056420"
 ---
 # <a name="type-property-example-field-vc"></a>Ejemplo de la propiedad de tipo (campo) (VC ++)
-En este ejemplo se muestra la propiedad [Type](./type-property-ado.md) al mostrar el nombre de la constante que corresponde al valor de la propiedad **Type** de todos los objetos [Field](./field-object.md) de la tabla **_Employees_* _. La función FieldType es necesaria para que se ejecute este procedimiento.  
+En este ejemplo se muestra la propiedad [Type](./type-property-ado.md) al mostrar el nombre de la constante que corresponde al valor de la propiedad **Type** de todos los objetos [Field](./field-object.md) de la tabla **_Employees_** . La función FieldType es necesaria para que se ejecute este procedimiento.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -154,7 +154,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- _ *Campos en la tabla Employee:**  
+ **Campos de la tabla Employee:**  
  **Nombre: emp_id**  
  **Tipo: adChar**  
  **Nombre: fname**  

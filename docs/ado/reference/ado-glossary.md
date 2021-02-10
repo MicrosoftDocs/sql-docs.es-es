@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36ca4b14058b2728e60856f3c848452ad922107d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1c4d4b0a07042fd06a4fc2300c03f43d0e131f5e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166240"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056020"
 ---
 # <a name="ado-glossary"></a>Glosario de términos de ADO
 En este tema se definen los términos relevantes para ADO.  

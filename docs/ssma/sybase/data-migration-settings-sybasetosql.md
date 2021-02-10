@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6fcca84f52f5a6b9b8c033c00980374a0c17d7be
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 6b3598ebd679a85b8965babccfee4fc3658a08b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036689"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056610"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>Configuración de la migración de datos (SybaseToSQL)
   
@@ -40,7 +40,7 @@ La **configuración de migración de datos** permite al usuario escribir consult
     -   Si este cuadro de texto está desactivado, los datos migrados se agregarán a los datos existentes en la base de datos de destino.  
   
 2.  **Usar selección personalizada:**  
-     Esta opción permite al usuario modificar la instrucción **Select** (la instrucción**Select** permite a los usuarios seleccionar los datos que se van a mostrar en la base de datos de destino).  
+     Esta opción permite al usuario modificar la instrucción **Select** (la instrucción **Select** permite a los usuarios seleccionar los datos que se van a mostrar en la base de datos de destino).  
   
     1.  De forma predeterminada, este cuadro de texto está desactivado.  
   

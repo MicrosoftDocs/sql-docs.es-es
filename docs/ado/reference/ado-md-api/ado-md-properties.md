@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed3add4b0920c493e7f83ccad14032a1ff227166
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: bed4948faafc02def05964eca19653d5373560dd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170009"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100055850"
 ---
 # <a name="ado-md-properties"></a>Propiedades de ADO MD
 
 |Propiedad|Descripción|  
 |-|-|  
 |[ActiveConnection](./activeconnection-property-ado-md.md)|Indica a qué objeto de **conexión** ADO pertenece actualmente el objeto Cellset o el catálogo actual.|  
-|[Título](./caption-property-ado-md.md)|Indica el título de texto que se va a usar al mostrar un **nivel** o un objeto de **miembro** .|  
+|[Caption](./caption-property-ado-md.md)|Indica el título de texto que se va a usar al mostrar un **nivel** o un objeto de **miembro** .|  
 |[ChildCount](./childcount-property-ado-md.md)|Indica el número de miembros para los que el objeto **miembro** actual es el elemento primario de una jerarquía.|  
 |[Children](./children-property-ado-md.md)|Devuelve una colección de **miembros** para los que el **miembro** actual es el elemento primario de la jerarquía.|  
 |[Recuento](../ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
@@ -47,7 +47,7 @@ ms.locfileid: "99170009"
 |[ParentSameAsPrev](./parentsameasprev-property-ado-md.md)|Indica si el elemento primario de este miembro de posición es igual que el elemento primario del miembro inmediatamente anterior.|  
 |[Origen](./source-property-ado-md.md)|Indica el origen de los datos del Cellset.|  
 |[Estado](./state-property-ado-md.md)|Indica el estado actual del Cellset.|  
-|[Type](./type-property-ado-md.md)|Indica el tipo del miembro actual.|  
+|[Tipo](./type-property-ado-md.md)|Indica el tipo del miembro actual.|  
 |[UniqueName](./uniquename-property-ado-md.md)|Indica un nombre no ambiguo para el objeto actual.|  
 |[Valor](./value-property-ado-md.md)|Indica el valor de la celda actual.|  
   

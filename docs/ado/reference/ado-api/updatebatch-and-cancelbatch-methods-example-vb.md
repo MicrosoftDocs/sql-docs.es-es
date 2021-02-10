@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41625f6f-e12d-4d8d-9f60-0729ce64c31e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9438335db21ee4ec36b6f815384102edd7869d5b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 573b8153e8c3dbe319b0dc9157fe97d912a3aa82
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166332"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056290"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vb"></a>Ejemplo de los métodos UpdateBatch y CancelBatch (VB)
 En este ejemplo se muestra el método [UpdateBatch](./updatebatch-method.md) junto con el método [CancelBatch](./cancelbatch-method-ado.md) .  

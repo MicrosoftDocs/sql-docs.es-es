@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca5aa421eff2048ebce6af5c8db4c6791a67259c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4aef5291d7e4c539200eb0cfd34edf3174c44c0b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172382"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056140"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>Eventos WillChangeField y FieldChangeComplete (ADO)
 Se llama al evento **WillChangeField** antes de que una operación pendiente cambie el valor de uno o más objetos de [campo](./field-object.md) en el [conjunto de registros](./recordset-object-ado.md). Se llama al evento **FieldChangeComplete** una vez cambiado el valor de uno o más objetos **Field** .  

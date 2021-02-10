@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e01df93f4f7f5db2b534c0c3458482ccd06c2b1f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7a8bfcb0b441805f87231de796eb1abf062b9c65
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166357"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056400"
 ---
 # <a name="type-property-example-property-vb"></a>Ejemplo de la propiedad de tipo (propiedad) (VB)
 En este ejemplo se muestra la propiedad [Type](./type-property-ado.md) . Es un modelo de una utilidad para mostrar los nombres y los tipos de una colección, como [las propiedades](./properties-collection-ado.md), [los campos](./fields-collection-ado.md), etc.  
