@@ -11,17 +11,17 @@ ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 789d2cbb22e03053ab8f03e0bdd50b6383ea788e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3b8a5871ae12f9408700153afa4f429a4865514
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320401"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067942"
 ---
 # <a name="global-settings-tester-oracletosql"></a>Configuración global (evaluador) (OracleToSQL)
 Use la página evaluador del cuadro de diálogo **configuración global** para especificar la configuración de SSMA Tester.  
   
-Para obtener acceso a la configuración del evaluador, en el menú **herramientas** , seleccione **configuración global**y haga clic en **evaluador** en la parte inferior del panel izquierdo.  
+Para obtener acceso a la configuración del evaluador, en el menú **herramientas** , seleccione **configuración global** y haga clic en **evaluador** en la parte inferior del panel izquierdo.  
   
 ## <a name="options"></a>Opciones  
 **Análisis de objetos comprobables**  
@@ -64,6 +64,6 @@ Las siguientes opciones están disponibles para esta configuración:
   
 2.  No  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Finalizando la preparación del caso de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cd6dcfc6613b1290fb0798a29a5302b7ede34b43
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 61298bb7e2c65e85959b52ab3750dc49a5105504
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936208"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069021"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Conversión de bases de datos de MySQL (MySQLToSQL)
 Después de conectarse a MySQL, conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure y establecer las opciones de asignación de datos y de proyecto, puede convertir objetos de base de datos MySQL en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos o Azure SQL Database.  
@@ -39,14 +39,14 @@ En la tabla siguiente se muestra qué objetos de MySQL se convierten y los objet
 |Conversión de base de datos|Las bases de datos como objetos MySQL no se convierten directamente en SSMA para MySQL. Las bases de datos MySQL se tratan más como los nombres de esquema y todos los parámetros físicos se pierden durante la conversión. SSMA para MySQL usa la asignación de bases de datos de [MySQL a esquemas de SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) para asignar objetos de la base de datos MySQL a un par de base de datos o esquema de SQL Server adecuado.|  
 |Conversión de desencadenador|**SSMA crea desencadenadores basados en las siguientes reglas:**<br /><br />ANTES de que los desencadenadores se conviertan en desencadenadores INSTEAD OF T-SQL<br /><br />Los desencadenadores AFTER se convierten en después de los desencadenadores T-SQL con o sin iteraciones por filas.|  
 |Ver conversión|SSMA crea vistas con objetos dependientes|  
-|Conversión de instrucciones|-Cada objeto de instrucción SQL puede contener una sola instrucción de MySQL (como DDL, DML y otros tipos de instrucciones) o BEGIN... Bloque final.<br />-   **Conversión de múltiples instrucciones: Begin... END Block Conversion**la instrucción SQL también puede contener una instrucción BEGIN... END block como uno en el procedimiento, la función o la definición del desencadenador. Esos bloques deben convertirse de la misma manera que se convierten para los objetos de instrucción de MySQL únicos.|  
+|Conversión de instrucciones|-Cada objeto de instrucción SQL puede contener una sola instrucción de MySQL (como DDL, DML y otros tipos de instrucciones) o BEGIN... Bloque final.<br />-   **Conversión de múltiples instrucciones: Begin... END Block Conversion** la instrucción SQL también puede contener una instrucción BEGIN... END block como uno en el procedimiento, la función o la definición del desencadenador. Esos bloques deben convertirse de la misma manera que se convierten para los objetos de instrucción de MySQL únicos.|  
   
 ## <a name="converting-mysql-database-objects"></a>Conversión de objetos de base de datos MySQL  
 Para convertir objetos de base de datos MySQL, primero debe seleccionar los objetos que desea convertir y, a continuación, usar SSMA para realizar la conversión. Para ver los mensajes de salida durante la conversión, en el menú **Ver** , seleccione **salida**.  
   
 **Para convertir objetos de MySQL en SQL Server o SQL Azure sintaxis**  
   
-1.  En el explorador de metadatos de MySQL, expanda el servidor MySQL y, a continuación, expanda **bases**de datos.  
+1.  En el explorador de metadatos de MySQL, expanda el servidor MySQL y, a continuación, expanda **bases** de datos.  
   
 2.  Seleccionar los objetos que se van a convertir:  
   
@@ -67,7 +67,7 @@ Es posible que algunos objetos de MySQL no se conviertan. Puede determinar las t
   
 **Para ver un informe de Resumen**  
   
-1.  En el explorador de metadatos de MySQL, seleccione **bases**de datos.  
+1.  En el explorador de metadatos de MySQL, seleccione **bases** de datos.  
   
 2.  En el panel derecho, seleccione la pestaña **Informe** .  
   
@@ -81,7 +81,7 @@ En el caso de los objetos que no se pudieron convertir, puede ver la sintaxis qu
   
 **Para ver los problemas de conversión individuales**  
   
-1.  En el explorador de metadatos de MySQL, expanda **bases**de datos.  
+1.  En el explorador de metadatos de MySQL, expanda **bases** de datos.  
   
 2.  Expanda la base de datos que muestra un icono de error rojo.  
   

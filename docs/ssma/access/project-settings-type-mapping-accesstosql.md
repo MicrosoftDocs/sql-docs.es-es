@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8c39bc03cb6a1da09c7be6aac41c18b9d3bbd871
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 2fc9bbd8092c98d21263d3972ab04d90888fcbae
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987531"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066415"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Configuración del proyecto (asignación de tipo) (AccessToSQL)
 La configuración del proyecto de asignación de tipos permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA. También puede especificar asignaciones de tipos para objetos de base de datos individuales. Para obtener más información, vea [asignar tipos de datos de origen y de destino](mapping-source-and-target-data-types-accesstosql.md).  
   
 La asignación de tipos está disponible en los cuadros de diálogo Configuración del **proyecto** y **configuración predeterminada del proyecto** :  
   
--   Utilice el cuadro de diálogo **configuración del proyecto** para establecer las opciones de configuración del proyecto actual. Para obtener acceso a la configuración de asignación de tipos, en el menú **herramientas** , seleccione **configuración del proyecto**y, a continuación, haga clic en **tipo de asignación** en el panel izquierdo.  
+-   Utilice el cuadro de diálogo **configuración del proyecto** para establecer las opciones de configuración del proyecto actual. Para obtener acceso a la configuración de asignación de tipos, en el menú **herramientas** , seleccione **configuración del proyecto** y, a continuación, haga clic en **tipo de asignación** en el panel izquierdo.  
   
 -   Utilice el cuadro de diálogo **configuración predeterminada del proyecto** para establecer las opciones de configuración de todos los proyectos. Para obtener acceso a la configuración de asignación de tipos, en el menú **herramientas** , seleccione **configuración predeterminada del proyecto**, seleccione tipo de proyecto de migración para el que se deben ver los valores de/Changed en la lista desplegable de la **versión de destino** de la migración y, a continuación, haga clic en **tipo de asignación** en el panel izquierdo.  
   
@@ -64,10 +64,10 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
 **Add (Agregar)**  
 Haga clic para agregar un tipo de datos a la lista de asignaciones.  
   
-**Edición**  
+**Editar**  
 Haga clic para editar un tipo de datos en la lista asignación.  
   
-**Remove**  
+**Quitar**  
 Haga clic en esta opción para quitar la asignación de tipos de datos seleccionada de la lista de asignaciones.  
   
 **Valores predeterminados**  

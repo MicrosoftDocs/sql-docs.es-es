@@ -11,12 +11,12 @@ ms.assetid: fcd6b988-633b-4b2b-9f36-6368b5e86b60
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 02a6df1dd535b6f2549b71680735b070d4f86645
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ee27caa615f26b20a953478095b252e127bcf9c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463251"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067901"
 ---
 # <a name="project-settings-migration-oracletosql"></a>Configuración del proyecto (migración) (OracleToSQL)
 La página migración del cuadro de diálogo **configuración del proyecto** contiene opciones que personalizan el modo en que SSMA migra los datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -48,7 +48,7 @@ El panel Migración está disponible en los cuadros de diálogo Configuración d
 |**Mantener valores de identidad**|Especifica si SSMA conserva los valores NULL en los datos de origen cuando agrega datos a SQL Server, independientemente de los valores predeterminados que se especifiquen en SQL Server.<br /><br />**Modo predeterminado**: true<br /><br />**Modo optimista**: true<br /><br />**Modo completo**: false|  
 |**Mantener valores NULL**|Especifica si SSMA conserva los valores NULL en los datos de origen cuando agrega datos a SQL Server, independientemente de los valores predeterminados que se especifiquen en SQL Server.<br /><br />**Modo predeterminado**: true<br /><br />**Modo optimista**: true<br /><br />**Modo completo**: true|  
 |**Marcar operación de recorte de cadena con error**|Si el tamaño de la columna de destino es menor que la longitud de la cadena de origen, el valor se recortará y se marcará como un error.<br /><br />**Modo predeterminado**: sí<br /><br />**Modo optimista**: sí<br /><br />**Modo completo**: sí|  
-|**En error**|Detiene la migración de datos cuando se produce un error. Tiene tres opciones:<br /><br />**Detener migración:** Detiene la operación de migración de datos<br /><br />**Continuar con la siguiente tabla:** Detiene la migración de datos a la tabla actual y continúa con el siguiente.<br /><br />**Continuar con el siguiente lote:** Detiene la migración de datos al lote actual y continúa con el siguiente.<br /><br />**Modo predeterminado**: continuar con el siguiente lote<br /><br />**Modo optimista**: continuar con el siguiente lote<br /><br />**Modo completo**: continuar con el siguiente lote|  
+|**Al producirse un error**|Detiene la migración de datos cuando se produce un error. Tiene tres opciones:<br /><br />**Detener migración:** Detiene la operación de migración de datos<br /><br />**Continuar con la siguiente tabla:** Detiene la migración de datos a la tabla actual y continúa con el siguiente.<br /><br />**Continuar con el siguiente lote:** Detiene la migración de datos al lote actual y continúa con el siguiente.<br /><br />**Modo predeterminado**: continuar con el siguiente lote<br /><br />**Modo optimista**: continuar con el siguiente lote<br /><br />**Modo completo**: continuar con el siguiente lote|  
 |**Reemplazar fechas no admitidas**|Especifica si SSMA debe corregir las fechas anteriores a la fecha de fecha [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **y hora** más antigua (01 de enero 1753).<br /><br />Para mantener los valores de fecha actuales, seleccione **no hacer nada**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no aceptará fechas anteriores al 01 de enero de 1753 en una columna de fecha y hora. Si utiliza fechas anteriores, debe convertir los valores DATETIME en valores de caracteres.<br /><br />Para convertir las fechas anteriores al 01 de enero de 1753 a NULL, seleccione **reemplazar con NULL**.<br /><br />Para reemplazar las fechas anteriores al 01 de enero de 1753 con una fecha admitida, seleccione **reemplazar con la fecha más cercana admitida**.<br /><br />**Modo predeterminado**: no hacer nada<br /><br />**Modo optimista**: no hacer nada<br /><br />**Modo completo**: reemplazar con la fecha más cercana admitida|  
 |**Bloqueo de tabla**|Especifica si SSMA bloquea las tablas cuando agrega datos a las tablas durante la migración de datos. Obtiene un bloqueo de actualización masiva mientras dure la operación de copia masiva. Si el valor es false, se establece un bloqueo en el nivel de fila.<br /><br />**Modo predeterminado**: true<br /><br />**Modo optimista**: true<br /><br />**Modo completo**: true|  
   

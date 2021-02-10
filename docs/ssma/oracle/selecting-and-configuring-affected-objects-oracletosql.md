@@ -14,12 +14,12 @@ ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 5cd9ca7c8789133fdbccc3367f3bda121d2499ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8256909a2ebc460da2dd2db826e809dd6dfb50c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418351"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067630"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Selección y configuración de objetos afectados (OracleToSQL)
 En esta página puede seleccionar las tablas y las claves externas, los cambios en los que debe compararse cuando SSMA comprueba los resultados de la ejecución de los objetos elegidos en el paso anterior. Además, puede personalizar los parámetros de comprobación.  
@@ -42,7 +42,7 @@ La pestaña tabla contiene la vista de cuadrícula de la tabla seleccionada. La 
   
 -   Regla  
   
--   Default  
+-   Valor predeterminado  
   
 -   Identidad  
   
@@ -69,14 +69,14 @@ Determine si esta columna participará en la comprobación de los resultados de 
   
 -   Si elige **true**, SSMA comparará el contenido de esta columna después de ejecutar la prueba en Oracle con el contenido de la columna en SQL Server. 
   
--   Si elige**false**, la columna se excluirá de la comprobación de los resultados.  
+-   Si elige **false**, la columna se excluirá de la comprobación de los resultados.  
   
 ### <a name="use-custom-scale"></a>Usar escalado personalizado  
 En el caso de las columnas de tipo de datos numérico, puede establecer una escala personalizada para la comparación.  
   
 -   Si elige **true**, los valores numéricos se redondearán según el valor de **escala de comparación** antes de compararlos.  
   
--   Si elige**false**, la comparación numérica será exacta.  
+-   Si elige **false**, la comparación numérica será exacta.  
   
 ### <a name="comparing-scale"></a>Comparar escala  
   

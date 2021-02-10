@@ -22,12 +22,12 @@ ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 038ffa60562a443c916d0143fa432d3e5da87bc4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7c52b13a2a71afc005f19d1733e8dff435d2a582
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937988"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066590"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Preparar las bases de datos de Access para la migración (AccessToSQL)
 Antes de migrar las bases de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe determinar qué bases de datos se van a migrar y asegurarse de que dichas bases de datos están listas para la migración.  
@@ -38,7 +38,7 @@ El motor de base de datos Jet, que se utiliza como motor de base de datos para e
 Después de migrar las bases de datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede seguir usando el acceso mediante el uso de tablas vinculadas, o puede migrar manualmente las aplicaciones a [!INCLUDE[msCoName](../../includes/msconame_md.md)] código basado en .NET Framework que interactúe directamente con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="determining-which-databases-to-migrate"></a>Determinar las bases de datos que se van a migrar  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) para Access puede ubicar las bases de datos de Access. Después, puede exportar los metadatos de esas bases de datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre cómo exportar y consultar metadatos, consulte [exportación de un inventario de acceso](exporting-an-access-inventory-accesstosql.md).  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para Access puede ubicar las bases de datos de Access. Después, puede exportar los metadatos de esas bases de datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre cómo exportar y consultar metadatos, consulte [exportación de un inventario de acceso](exporting-an-access-inventory-accesstosql.md).  
 
    > [!NOTE]
    > No se admiten todas las características y configuraciones de acceso de, o se pueden convertir fácilmente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Antes de empezar a migrar las bases de datos, consulte [características de acceso incompatibles](incompatible-access-features-accesstosql.md).
@@ -56,25 +56,25 @@ SSMA no puede migrar las bases de datos que usan la protección de grupo de trab
   
 2.  Abra la base de datos copiada.  
   
-3.  En el menú **herramientas** , seleccione **seguridad**y, a continuación, seleccione **permisos de usuario y de grupo**.  
+3.  En el menú **herramientas** , seleccione **seguridad** y, a continuación, seleccione **permisos de usuario y de grupo**.  
   
 4.  Seleccione la opción **usuarios** , seleccione el usuario **Administrador** y asegúrese de que está seleccionado el permiso **administrar** .  
   
 5.  Seleccione la opción **grupos** , seleccione el grupo **usuarios** y asegúrese de que está seleccionado el permiso **administrar** .  
   
-6.  Haga clic en **Aceptar**y, a continuación, en el menú **archivo** , haga clic en **salir**.  
+6.  Haga clic en **Aceptar** y, a continuación, en el menú **archivo** , haga clic en **salir**.  
   
 Ahora puede usar SSMA para migrar la base de datos copiada. Después de cargar el esquema en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede proteger manualmente la base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="backing-up-databases"></a>Copias de seguridad de bases de datos  
 Antes de migrar las bases de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe realizar una copia de seguridad de las bases de datos de Access que va a migrar, así como de las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de datos en las que va a migrar los datos y objetos de Access.  
   
-Para realizar una copia de seguridad de una base de datos de Access, en el menú **herramientas** , seleccione **utilidades de base de datos**y, a continuación, **copia de seguridad de base de datos**.  
+Para realizar una copia de seguridad de una base de datos de Access, en el menú **herramientas** , seleccione **utilidades de base de datos** y, a continuación, **copia de seguridad de base de datos**.  
   
 Para obtener información acerca de cómo realizar copias de seguridad de bases de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea "realizar copias de seguridad y restaurar bases de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla de.  
   
 ### <a name="documenting-databases"></a>Documentar bases de datos  
-También es posible que desee documentar las propiedades, como las listas de objetos de base de datos, los tamaños de archivo y los permisos, de las bases de datos de Access. Para generar esta documentación en Access, en el menú **herramientas** , seleccione **analizar**y, a continuación, haga clic en **documentado**.  
+También es posible que desee documentar las propiedades, como las listas de objetos de base de datos, los tamaños de archivo y los permisos, de las bases de datos de Access. Para generar esta documentación en Access, en el menú **herramientas** , seleccione **analizar** y, a continuación, haga clic en **documentado**.  
   
 ## <a name="see-also"></a>Consulte también  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

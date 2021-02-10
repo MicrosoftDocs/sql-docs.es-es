@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9355fb1b-5cd4-49a2-839c-4b06057ea6c4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7776ed791dc0ee1cf40525e3fefa68e9717abe55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f71fec9e62497260d5c9aa0a5b4a08f542b56de5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463363"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068000"
 ---
 # <a name="global-settings-output-window-mysqltosql"></a>Configuración global (Ventana de salida) (MySQLToSQL)
 Utilice el cuadro de diálogo **configuración global** para especificar la configuración de SSMA.  

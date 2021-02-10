@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1652913173dcd7427515db8c74d15afc75077820
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 42f7d0f36f0e0adfcf067ad0bbe55c5e2c169e9e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988641"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068869"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Configuración de conversión (MySQLToSQL)
 La pestaña **"configuración"** permite al usuario establecer la configuración de nivel de nodo. La pestaña estará disponible en los siguientes nodos de la metabase:  
@@ -30,7 +30,7 @@ La pestaña **"configuración"** permite al usuario establecer la configuración
   
 -   Nodo de tabla  
   
-## <a name="specifications"></a>Las  
+## <a name="specifications"></a>Especificaciones:  
 La pestaña **configuración** tiene dos configuraciones de usuario, es decir,:  
   
 1.  Conversión de funciones  

@@ -11,12 +11,12 @@ ms.assetid: 160d4784-d108-4705-932d-763558912804
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 2d234e907cc8839219b942cc841aed02f45e3fbe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 80c19bb82c53d4346a86465c9aaffbe307fb257b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418421"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068890"
 ---
 # <a name="user-interface-reference-oracletosql"></a>Referencia de la interfaz de usuario (OracleToSQL)
 En esta sección se incluyen temas de ayuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para Oracle.  

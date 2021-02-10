@@ -11,12 +11,12 @@ ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 0facd2ecca0ff6cc0a4bc28fe709a7adfc0c5acf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbb47d74535af0dea97842bdf46680a4376c2ba7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320451"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067760"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Configuración del proyecto (asignación de tipo) (OracleToSQL)
 La página asignación de tipos del cuadro de diálogo **configuración del proyecto** contiene opciones que personalizan el modo en que SSMA convierte los tipos de datos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.  
@@ -25,7 +25,7 @@ La página asignación de tipos está disponible en los cuadros de diálogo **co
   
 -   Para especificar la configuración de todos los proyectos de SSMA futuros, en el menú **herramientas** , haga clic en **configuración de proyecto predeterminada**, seleccione tipo de proyecto de migración para el que es necesario ver o cambiar la configuración en la lista desplegable de la **versión de destino** de la migración y, a continuación, haga clic en **asignación de tipo** en la parte inferior del panel izquierdo.  
   
--   Para especificar la configuración del proyecto actual, en el menú **herramientas** , haga clic en **configuración del proyecto**y, a continuación, haga clic en asignación de **tipos** en la parte inferior del panel izquierdo.  
+-   Para especificar la configuración del proyecto actual, en el menú **herramientas** , haga clic en **configuración del proyecto** y, a continuación, haga clic en asignación de **tipos** en la parte inferior del panel izquierdo.  
   
 Para especificar la configuración para el objeto o la clase actual de objetos, utilice la pestaña **asignación de tipos** de la ventana de SSMA primaria.  
   
@@ -43,10 +43,10 @@ Vea las tablas de la sección siguiente para obtener las asignaciones predetermi
 **Add (Agregar)**  
 Haga clic para agregar un tipo de datos a la lista de asignaciones.  
   
-**Edición**  
+**Editar**  
 Haga clic en esta opción para modificar el tipo de datos seleccionado en la lista asignación.  
   
-**Remove**  
+**Quitar**  
 Haga clic en esta opción para quitar la asignación de tipos de datos seleccionada de la lista de asignaciones.  
   
 **Valores predeterminados**  
@@ -89,7 +89,7 @@ La tabla siguiente contiene la asignación de tipo de datos predeterminada para 
 |variable de carácter nacional<sup>*</sup>|nvarchar(max)|  
 |NCHAR|nvarchar(max)|  
 |NClob|nvarchar(max)|  
-|number|Float [53]|  
+|número|Float [53]|  
 |NUMERIC|Float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|int|  
@@ -156,7 +156,7 @@ La tabla siguiente contiene la asignación de tipos predeterminada para las colu
 |NCHAR|NCHAR|  
 |nchar [*]|nchar [*]|  
 |NClob|nvarchar(max)|  
-|number|Float [53]|  
+|número|Float [53]|  
 |número [*.. \* ]|Numeric [*]|  
 |número [*.. \* ] [\*..\*]|Numeric [*] [ \* ]|  
 |NUMERIC|NUMERIC|  
@@ -238,7 +238,7 @@ La tabla siguiente contiene la asignación de tipos predeterminada para las vari
 |Number|Float [53]|  
 |número [*.. \* ]|Numeric [*]|  
 |número [*.. \* ] [\*..\*]|Numeric [*] [ \* ]|  
-|Numérica|Numeric [38] [0]|  
+|Numeric|Numeric [38] [0]|  
 |Numeric [*.. \* ]|Numeric [*]|  
 |Numeric [*.. \* ] [\*..\*]|Numeric [*] [ \* ]|  
 |nvarchar2[*.. 4000]|nvarchar [*]|  

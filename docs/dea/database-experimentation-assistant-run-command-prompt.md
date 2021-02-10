@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: c7443ed363a4968415b651e460bbc4f69cb7415b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0e52cf31a94f2fd63f92305b80f7f7ae049c2809
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951110"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066450"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Ejecutar Asistente para experimentación con bases de datos en un símbolo del sistema
 
@@ -28,7 +28,7 @@ En este artículo se describe cómo capturar un seguimiento en Asistente para ex
    >
    > `Deacmd.exe -o <operation> --help`
    >
-   > Se requiere un nombre de operación; las operaciones válidas son **Analysis**, **StartCapture**y **StopCapture**.
+   > Se requiere un nombre de operación; las operaciones válidas son **Analysis**, **StartCapture** y **StopCapture**.
 
 ## <a name="start-a-new-workload-capture-by-using-the-dea-command"></a>Inicio de una nueva captura de la carga de trabajo mediante el comando de DEA
 

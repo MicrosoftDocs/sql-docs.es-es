@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 774c1260d3ffcd6797c1e0a1a6d3a88103ae3f5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0b27d3ffcab6f13f41bcf354cf966302425906e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480366"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067480"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Comandos de menú y otras teclas de acceso directo (SybaseToSQL)
 En las secciones siguientes se describen los métodos abreviados de teclado para tener acceso a los comandos de menú y otras teclas de método abreviado usadas en varios cuadros de diálogo de la aplicación SSMA for Sybase.  
@@ -197,6 +197,6 @@ Para tener acceso al menú contextual del objeto seleccionado en el explorador d
 |Iniciar información rápida.|CTRL + MAYÚS + BARRA ESPACIADORA|  
 |Vaya a la declaración.|F12|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Teclas de método abreviado&#40;Sybase a SQL&#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
   

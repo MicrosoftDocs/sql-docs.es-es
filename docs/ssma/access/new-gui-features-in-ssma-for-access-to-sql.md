@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: efeebd6774a3f264d590c3f8d08da7f281c64464
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75bddda078465537e7d68047d6c9c690beafaea4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320811"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066580"
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>Nuevas características de la interfaz gráfica de usuario de SSMA para el acceso a SQL
 En este capítulo se describen las nuevas características de la interfaz de usuario de SSMA  

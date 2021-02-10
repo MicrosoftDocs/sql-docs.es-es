@@ -14,12 +14,12 @@ ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: a403f515c057349c9717422f99b6de15aede566f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd87502c1eda3dc8d4caf4c654804b164f24f36f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463271"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068060"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Introducción a la consola de SSMA para Oracle (OracleToSQL)
 En esta sección se describe el procedimiento para iniciar y comenzar a usar la aplicación de consola de Oracle. Además, aquí se enumeran las convenciones que se usan en una ventana de salida de la consola de SSMA típica.  
@@ -29,7 +29,7 @@ Siga estos pasos para iniciar la aplicación de consola SSMA:
   
 1.  Vaya a **Inicio** y seleccione **todos los programas**.  
   
-2.  Haga clic en el acceso directo del ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] símbolo del sistema de Migration Assistant para Oracle** .  
+2.  Haga clic en el acceso directo del **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] símbolo del sistema de Migration Assistant para Oracle** .  
   
     Muestra el menú de uso de la consola de SSMA y `(/? Help)` , para ayudarle a empezar a trabajar con la aplicación de consola.  
   

@@ -11,12 +11,12 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 9d44b04aba4d1ea1fa437bbd3b957178b361a4db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc811575dd845be43aef7a9398d8b4fb3458db1b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418441"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067720"
 ---
 # <a name="running-test-cases-oracletosql"></a>Ejecución de casos de prueba (OracleToSQL)
 Cuando SSMA Tester ejecuta un caso de prueba, ejecuta los objetos seleccionados para las pruebas y crea un informe sobre los resultados de la comprobación. Si los resultados son idénticos en ambas plataformas, la prueba se realizó correctamente. La correspondencia de objetos entre Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se determina según la configuración de asignación de esquemas del proyecto SSMA actual.  
@@ -34,7 +34,7 @@ Una vez finalizada la prueba, se crea el informe de casos de prueba. Haga clic e
   
 ## <a name="test-case-execution-steps"></a>Pasos de ejecución del caso de prueba  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerrequisitos  
 SSMA Tester comprueba si se cumplen todos los requisitos previos para la ejecución de pruebas antes de iniciar la prueba. Si no se cumplen algunas condiciones, aparece un mensaje de error.  
   
 ### <a name="initialization"></a>Inicialización  
@@ -47,10 +47,10 @@ Supongamos que la tabla comprobada se denomina USER_TABLE. Para este tipo de tab
 |USER_TABLE $ Trg|desencadenador|Desencadenador de auditoría de los cambios en la tabla comprobada.|  
 |USER_TABLE $ AUD|table|Tabla donde se guardan las filas eliminadas y sobrescritas.|  
 |USER_TABLE $ AUDID|table|Tabla donde se guardan las filas nuevas y modificadas.|  
-|USER_TABLE|vista|Representación simplificada de las modificaciones de la tabla.|  
-|USER_TABLE $ NEW|vista|Representación simplificada de filas insertadas y sobrescritas.|  
-|USER_TABLE $ NEW_ID|vista|Identificación de las filas insertadas y modificadas.|  
-|USER_TABLE $ OLD|vista|Representación simplificada de filas eliminadas y reemplazadas.|  
+|USER_TABLE|ver|Representación simplificada de las modificaciones de la tabla.|  
+|USER_TABLE $ NEW|ver|Representación simplificada de filas insertadas y sobrescritas.|  
+|USER_TABLE $ NEW_ID|ver|Identificación de las filas insertadas y modificadas.|  
+|USER_TABLE $ OLD|ver|Representación simplificada de filas eliminadas y reemplazadas.|  
   
 El siguiente objeto se crea en el esquema de la tabla comprobado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -64,10 +64,10 @@ Y los siguientes objetos se crean en [!INCLUDE[ssNoVersion](../../includes/ssnov
 |-|-|-|  
 |USER_TABLE $ AUD|table|Tabla donde se guardan las filas eliminadas y sobrescritas.|  
 |USER_TABLE $ AudID|table|Tabla donde se guardan las filas nuevas y modificadas.|  
-|USER_TABLE|vista|Representación simplificada de las modificaciones de la tabla.|  
-|USER_TABLE $ New|vista|Representación simplificada de filas insertadas y sobrescritas.|  
-|USER_TABLE $ new_id|vista|Identificación de las filas insertadas y modificadas.|  
-|USER_TABLE $ Old|vista|Representación simplificada de filas eliminadas y reemplazadas.|  
+|USER_TABLE|ver|Representación simplificada de las modificaciones de la tabla.|  
+|USER_TABLE $ New|ver|Representación simplificada de filas insertadas y sobrescritas.|  
+|USER_TABLE $ new_id|ver|Identificación de las filas insertadas y modificadas.|  
+|USER_TABLE $ Old|ver|Representación simplificada de filas eliminadas y reemplazadas.|  
   
 ### <a name="test-object-calls"></a>Llamadas a objetos de prueba  
 En este paso, SSMA Tester invoca cada objeto seleccionado para las pruebas, compara los resultados y muestra el informe.  

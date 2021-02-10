@@ -11,12 +11,12 @@ ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: fbc74e9129c642ea1b6655deb4e01ee04d92d0ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6b19ddbe9ab7e1bf1e8f88f5c0c4262fa326c56
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480517"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068018"
 ---
 # <a name="global-settings-logging-oracletosql"></a>Configuración global (registro) (OracleToSQL)
 Utilice el cuadro de diálogo **configuración global** para especificar la configuración de registro para SSMA. Normalmente, esta configuración solo se puede cambiar cuando se trabaja con soporte técnico del producto.  
@@ -48,9 +48,9 @@ Para cada opción en **nivel de mensajes**, configure uno de los siguientes nive
 |-|-|  
 |**Error irrecuperable**|Escriba solo mensajes de error irrecuperables en el registro.|  
 |**Error**|Escriba mensajes de error y de error grave en el registro.|  
-|**Warning (ADVERTENCIA)**|Escriba mensajes de advertencia, error y error grave en el registro.|  
+|**Advertencia**|Escriba mensajes de advertencia, error y error grave en el registro.|  
 |**Información**|Escriba mensajes informativos, de advertencia, de error y de error grave en el registro.|  
-|**Depuración**|Escriba todos los mensajes, incluidos los mensajes de depuración, en el registro.|  
+|**Depurar**|Escriba todos los mensajes, incluidos los mensajes de depuración, en el registro.|  
   
 **Ruta de acceso al archivo de registro**  
 La ruta de acceso del archivo y el nombre de los archivos de registro de SSMA. Para especificar otro nombre, haga clic en la ruta de acceso actual y, a continuación, haga clic en el botón Examinar (**...**).  

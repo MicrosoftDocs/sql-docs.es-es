@@ -13,12 +13,12 @@ ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: deb482c041dd290db3d2a7c911fb7d3663aa819a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2cf0aab82f56740dfe73476af89899fd9fd135f6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418341"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067617"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Selección y configuración de objetos de prueba (OracleToSQL)
 En este paso se seleccionan los objetos que se van a probar y se configuran los valores para comparar los procedimientos y los parámetros de salida de las funciones, así como los valores devueltos de las funciones.  
@@ -38,14 +38,14 @@ Habilita el uso del parámetro seleccionado en la comparación de resultados de 
   
 -   Si elige **true**, SSMA comparará el valor de salida de este parámetro después de ejecutar el procedimiento en Oracle con el valor correspondiente en SQL Server.
   
--   Si elige**false**, el parámetro se excluirá de la comprobación de los resultados.  
+-   Si elige **false**, el parámetro se excluirá de la comprobación de los resultados.  
   
 ### <a name="use-custom-scale"></a>Usar escalado personalizado  
 En el caso de los parámetros de tipo de datos numéricos, puede establecer una escala personalizada para la comparación.  
   
 -   Si elige **true**, los valores numéricos se redondearán según el valor de **escala de comparación** antes de compararlos.  
   
--   Si elige**false**, la comparación numérica será exacta.  
+-   Si elige **false**, la comparación numérica será exacta.  
   
 ### <a name="comparing-scale"></a>Comparar escala  
 Solo está disponible si la opción **usar escalado personalizado** está establecida en **true**. Esta es la precisión de la comparación numérica.  

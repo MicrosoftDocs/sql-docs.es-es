@@ -14,12 +14,12 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 6f46d7714c9da54fde1105671c5be7b3ea090a48
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: cb932aeb30be643b260e3b1e0ce10fea22ffeb1a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987931"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067241"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Referencia de la interfaz de usuario (AccessToSQL)
 En esta sección se incluyen temas de ayuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para el acceso.  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c8f03fa27bf8c49cfeef06246c47996860c932ba
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 2f5f97b55b4d357c2caa2314c993806c61f51e07
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988655"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066680"
 ---
 # <a name="migration-wizard-accesstosql"></a>Asistente para migración (AccessToSQL)
 El Asistente para migración le guía a través de la migración de una o varias bases de datos de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Mediante el asistente, se crea un proyecto, se agregan bases de datos al proyecto, se seleccionan los objetos que se van a migrar y se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. También convertirá, cargará y migrará los esquemas y los datos de Access. Opcionalmente, puede vincular tablas de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tablas de o SQL Azure.  
@@ -44,7 +44,7 @@ De forma predeterminada, SSMA iniciará el Asistente para migración al iniciar 
 La página crear nuevo proyecto es donde se escribe el nombre de archivo del proyecto, la ubicación y el tipo de proyecto de migración (la versión de destino SQL Server usar para la migración). Para obtener más información, vea [nuevo proyecto (SSMA)](./new-project-ssma-accesstosql.md) .  
   
 ## <a name="add-access-databases-page"></a>Página agregar bases de datos de Access  
-En la página Agregar bases de datos de Access se agregan una o varias bases de datos de Access al proyecto. Para agregar bases de datos individuales, haga clic en **Agregar bases de datos**y, a continuación, seleccione las bases de datos en la ventana **abrir** . O bien, puede buscar las bases de datos mediante el botón **Buscar bases de datos** . Para obtener más información, vea los temas siguientes:  
+En la página Agregar bases de datos de Access se agregan una o varias bases de datos de Access al proyecto. Para agregar bases de datos individuales, haga clic en **Agregar bases de datos** y, a continuación, seleccione las bases de datos en la ventana **abrir** . O bien, puede buscar las bases de datos mediante el botón **Buscar bases de datos** . Para obtener más información, vea los temas siguientes:  
   
 -   [Agregar y quitar archivos de base de datos de Access](adding-and-removing-access-database-files-accesstosql.md)  
   
@@ -59,7 +59,7 @@ En la página seleccionar objetos que se van a migrar, se seleccionan los objeto
   
 **Para seleccionar objetos**  
   
-1.  Expanda **Access-metabase**y, a continuación, expanda **bases de datos**.  
+1.  Expanda **Access-metabase** y, a continuación, expanda **bases de datos**.  
   
 2.  Realice uno o varios de los procedimientos siguientes:  
   
@@ -69,7 +69,7 @@ En la página seleccionar objetos que se van a migrar, se seleccionan los objeto
   
     -   Para convertir u omitir consultas, expanda la base de datos y, a continuación, Active o desactive la casilla **consultas** .  
   
-    -   Para convertir u omitir tablas individuales, expanda la base de datos, expanda **tablas**y, a continuación, Active o desactive la casilla situada junto a la tabla.  
+    -   Para convertir u omitir tablas individuales, expanda la base de datos, expanda **tablas** y, a continuación, Active o desactive la casilla situada junto a la tabla.  
   
 Si tiene muchos objetos, es posible que desee usar las opciones **avanzadas de selección de objetos** en el panel derecho para filtrar los objetos de base de datos de Access. Por ejemplo, si selecciona **tablas** en el panel izquierdo, puede filtrar la lista de tablas escribiendo cadenas en el cuadro de **filtro** . A continuación, puede activar o desactivar las tablas filtradas para la migración con los botones situados en la parte superior del panel.  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cc1cdb31969eb94c29a6c58f974aef92c5cdfc62
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: a86ae9cff414e052865cf0efd1ec5c7889877d0f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988661"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066780"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-database-accesstosql"></a>Migración de datos de Access en SQL Server-Azure SQL Database (AccessToSQL)
 Después de haber creado correctamente los objetos de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos en, puede migrar los datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
@@ -45,7 +45,7 @@ Para ver los mensajes de migración, asegúrese de que el panel de resultados es
   
     -   Para migrar datos de una base de datos completa, active la casilla situada junto al nombre de la base de datos.  
   
-    -   Para migrar datos de tablas individuales, expanda la base de datos, expanda **tablas**y, a continuación, active la casilla situada junto a la tabla. Para omitir los datos de tablas individuales, desactive la casilla.  
+    -   Para migrar datos de tablas individuales, expanda la base de datos, expanda **tablas** y, a continuación, active la casilla situada junto a la tabla. Para omitir los datos de tablas individuales, desactive la casilla.  
   
 3.  Haga clic con el botón derecho en **bases** de **datos y seleccione migrar datos**.  
   
