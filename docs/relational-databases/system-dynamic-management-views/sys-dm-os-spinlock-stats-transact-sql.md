@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: wiassaf
 manager: amitban
-ms.openlocfilehash: fad0a1121d9d7d9e8cc37970022f1c5bbf028e10
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 636a16d8656572e6fe2505f58bafc9eca9f6ce18
+ms.sourcegitcommit: 78b3096c2be89bcda92244f78663d8b38811bec5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184773"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100009293"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
@@ -131,7 +131,7 @@ GO
 |DIGEST_CACHE|Solo para uso interno.|
 |DINPBUF|Solo para uso interno.|
 |DIRECTLOGCONSUMER|Solo para uso interno.|
-|DP_LIST|Controla el acceso a la lista de páginas desfasadas para una base de datos que tiene activado el punto de comprobación indirecto. Consulte [este artículo](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510) para más información.|
+|DP_LIST|Controla el acceso a la lista de páginas desfasadas para una base de datos que tiene activado el punto de comprobación indirecto. Aplique las correcciones del [artículo 4497928](https://support.microsoft.com/kb/4497928), [artículo 4040276](https://support.microsoft.com/kb/4040276) o use la [marca de seguimiento 3468](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Consulte [este artículo](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510) para más información.|
 |DROP|Solo para uso interno.|
 |DROP_TEMPO|Solo para uso interno.|
 |DROPPED_ALLOC_UNIT|Solo para uso interno.|

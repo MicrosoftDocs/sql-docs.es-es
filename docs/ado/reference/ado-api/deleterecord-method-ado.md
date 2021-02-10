@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2986edf2ad2b987146f479c1bd6a1c4bbbc6736c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: cb6439e59a34beb9b4e8b505f4244c48c173b552
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171269"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025487"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord (método, ADO)
 Elimina una entidad representada por un [registro](../../../ado/reference/ado-api/record-object-ado.md).  

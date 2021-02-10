@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a8d8dab4944cfa2d43bc571442e294699154f12
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7cb446e14f0ac6887ef81234343c330f5caf4788
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159263"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031642"
 ---
 # <a name="activecommand-property-ado"></a>Propiedad ActiveCommand (ADO)
 Indica el objeto de [comando](./command-object-ado.md) que creó el objeto de [conjunto de registros](./recordset-object-ado.md) asociado.  

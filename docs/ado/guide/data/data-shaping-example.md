@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6d6310e27db65576aac3ed79e699200dfa31c18
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0199dfc2165d5ae54b4b59a45ec740a9c399f114
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991446"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033285"
 ---
 # <a name="data-shaping-example"></a>Ejemplo de la forma de datos
 El siguiente comando de forma de datos muestra cómo generar un conjunto de **registros** jerárquico a partir de las tablas **Customers** y **Orders** de la base de datos Northwind.  
@@ -29,7 +29,7 @@ APPEND ({SELECT OrderID, OrderDate, CustomerID FROM Orders} AS chapOrders
 RELATE customerID TO customerID)   
 ```  
   
- Cuando este comando se usa para abrir un objeto de **conjunto de registros** (como se muestra en [Visual Basic ejemplo de forma de datos](./visual-basic-example-of-data-shaping.md)), crea un capítulo (**chapOrders**) para cada registro devuelto de la tabla **Customers** . Este capítulo consta de un subconjunto del **conjunto de registros** devuelto de la tabla **Orders** . El capítulo **chapOrders** contiene toda la información solicitada sobre los pedidos realizados por el cliente determinado. En este ejemplo, el capítulo consta de tres columnas: **OrderID**, **OrderDate**y **CustomerID**.  
+ Cuando este comando se usa para abrir un objeto de **conjunto de registros** (como se muestra en [Visual Basic ejemplo de forma de datos](./visual-basic-example-of-data-shaping.md)), crea un capítulo (**chapOrders**) para cada registro devuelto de la tabla **Customers** . Este capítulo consta de un subconjunto del **conjunto de registros** devuelto de la tabla **Orders** . El capítulo **chapOrders** contiene toda la información solicitada sobre los pedidos realizados por el cliente determinado. En este ejemplo, el capítulo consta de tres columnas: **OrderID**, **OrderDate** y **CustomerID**.  
   
  Las dos primeras entradas del **conjunto de registros** con forma resultante son las siguientes:  
   
@@ -40,11 +40,11 @@ RELATE customerID TO customerID)
   
  En un comando SHAPE, APPEND se usa para crear un **conjunto de registros** secundario relacionado con el **conjunto de registros** primario (tal y como se devuelve desde el comando específico del proveedor inmediatamente después de la palabra clave Shape que se explicó anteriormente) por la cláusula Relate. Los elementos primarios y secundarios suelen tener al menos una columna en común: el valor de la columna en una fila del elemento primario es el mismo que el valor de la columna en todas las filas del elemento secundario.  
   
- Hay una segunda manera de usar comandos de forma: es decir, para generar un **conjunto de registros** primario a partir de un **conjunto de registros**secundario. Los registros del conjunto de **registros** secundario se agrupan, normalmente mediante la cláusula by, y se agrega una fila al conjunto de **registros** primario para cada grupo resultante en el elemento secundario. Si se omite la cláusula BY, el **conjunto de registros** secundario formará un solo grupo y el **conjunto de registros** primario contendrá exactamente una fila. Esto resulta útil para calcular agregados "totales generales" en todo el **conjunto de registros**secundario.  
+ Hay una segunda manera de usar comandos de forma: es decir, para generar un **conjunto de registros** primario a partir de un **conjunto de registros** secundario. Los registros del conjunto de **registros** secundario se agrupan, normalmente mediante la cláusula by, y se agrega una fila al conjunto de **registros** primario para cada grupo resultante en el elemento secundario. Si se omite la cláusula BY, el **conjunto de registros** secundario formará un solo grupo y el **conjunto de registros** primario contendrá exactamente una fila. Esto resulta útil para calcular agregados "totales generales" en todo el **conjunto de registros** secundario.  
   
- La construcción de comandos SHAPE también permite crear un **conjunto de registros**con forma mediante programación. A continuación, puede tener acceso a los componentes del **conjunto de registros** mediante programación o a través de un control visual adecuado. Un comando de forma se emite como cualquier otro texto de comando de ADO. Para obtener más información, vea [comandos Shape en general](./shape-commands-in-general.md).  
+ La construcción de comandos SHAPE también permite crear un **conjunto de registros** con forma mediante programación. A continuación, puede tener acceso a los componentes del **conjunto de registros** mediante programación o a través de un control visual adecuado. Un comando de forma se emite como cualquier otro texto de comando de ADO. Para obtener más información, vea [comandos Shape en general](./shape-commands-in-general.md).  
   
- Independientemente de la forma en que se forme el **conjunto de registros** principal, contendrá una columna de capítulo que se utiliza para relacionarla con un **conjunto de registros**secundario. Si lo desea, el **conjunto de registros** primario también puede tener columnas que contengan agregados (SUM, min, Max, etc.) en las filas secundarias. Tanto el **conjunto de registros** primario como el secundario pueden tener columnas que contengan una expresión en la fila del **conjunto de registros**, así como columnas nuevas e inicialmente vacías.  
+ Independientemente de la forma en que se forme el **conjunto de registros** principal, contendrá una columna de capítulo que se utiliza para relacionarla con un **conjunto de registros** secundario. Si lo desea, el **conjunto de registros** primario también puede tener columnas que contengan agregados (SUM, min, Max, etc.) en las filas secundarias. Tanto el **conjunto de registros** primario como el secundario pueden tener columnas que contengan una expresión en la fila del **conjunto de registros**, así como columnas nuevas e inicialmente vacías.  
   
  Esta sección continúa con el siguiente tema.  
   

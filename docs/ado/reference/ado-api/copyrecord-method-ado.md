@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2f6cd1b8bb40b4c62ad2c75fef63fd641201e9a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4f5a6e6f7d607bbc2f50bfad701056aca93fb822
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171406"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026043"
 ---
 # <a name="copyrecord-method-ado"></a>Método CopyRecord (ADO)
 Copia una entidad representada por un [registro](./record-object-ado.md) en otra ubicación.  

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24941f8fbf2aedb5fb61cea176ef26d3172012cc
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 836c1e0091166485f68c04226c632e9999038469
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991286"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033134"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Fabricación de conjuntos de registros jerárquicos
-En el ejemplo siguiente se muestra cómo fabricar un conjunto de registros jerárquico sin un origen de datos subyacente mediante la gramática de forma de datos para definir columnas para los **conjuntos de registros**primarios, secundarios y terciarios.  
+En el ejemplo siguiente se muestra cómo fabricar un conjunto de registros jerárquico sin un origen de datos subyacente mediante la gramática de forma de datos para definir columnas para los **conjuntos de registros** primarios, secundarios y terciarios.  
   
- Para fabricar un **conjunto de registros**jerárquico, debe especificar el [servicio de forma de datos de Microsoft para OLE DB (proveedor de servicios ADO)](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) y puede especificar un valor de proveedor de datos de None en el parámetro de cadena de conexión del método [Open](../../reference/ado-api/open-method-ado-connection.md) del objeto [Connection](../../reference/ado-api/connection-object-ado.md) . Para obtener más información, vea [proveedores necesarios para la forma de datos](./required-providers-for-data-shaping.md).  
+ Para fabricar un **conjunto de registros** jerárquico, debe especificar el [servicio de forma de datos de Microsoft para OLE DB (proveedor de servicios ADO)](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) y puede especificar un valor de proveedor de datos de None en el parámetro de cadena de conexión del método [Open](../../reference/ado-api/open-method-ado-connection.md) del objeto [Connection](../../reference/ado-api/connection-object-ado.md) . Para obtener más información, vea [proveedores necesarios para la forma de datos](./required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7546889953e748d730a3b47ebc4cee5fcae3e10
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8e30e9f8157be0ab7644eedb51a2956b232baa56
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170145"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020394"
 ---
 # <a name="stayinsync-property"></a>Propiedad StayInSync
 Indica, en un objeto de [conjunto de registros](./recordset-object-ado.md) jerárquico, si la referencia a los registros secundarios subyacentes (es decir, el *capítulo*) cambia cuando cambia la posición de la fila primaria.  

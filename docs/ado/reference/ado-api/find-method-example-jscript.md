@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff3dc581bffd20bd5192306dd50b0afce6369c66
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3136609c4b5300808c4561b7bc71d076ee6d6849
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171031"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024591"
 ---
 # <a name="find-method-example-jscript"></a>Ejemplo del método Find (JScript)
 En este ejemplo se usa el método [Find](./find-method-ado.md) del objeto de [conjunto de registros](./recordset-object-ado.md) para buscar y mostrar las compañías en la base de datos ***Northwind** _ cuyo nombre comienza con la letra G. corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como _ * FindJS. asp * *.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22ba3bda3e98b488db95955f793e9b8177eeb474
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e6e504948e2aaf76c52d424945f76373bb38697a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167642"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034545"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 Especifica la ubicación del servicio de cursor.  

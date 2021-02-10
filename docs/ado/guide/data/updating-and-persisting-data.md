@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05ca0196ef59df1f67d5f65f3abc52133b81869a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 90ea623d429a17db86040675b1b0112cda4237e6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979176"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032327"
 ---
 # <a name="updating-and-persisting-data"></a>Actualizar y conservar datos
 En los capítulos anteriores se ha explicado cómo usar ADO para obtener datos de un origen de datos, Cómo desplazarse por los datos e incluso cómo editar los datos. Por supuesto, si el objetivo de la aplicación es permitir que los usuarios realicen cambios en los datos, deberá saber cómo guardar los cambios. Puede conservar los cambios del **conjunto de registros** en un archivo mediante el método **Save** o puede devolver los cambios al origen de datos para su almacenamiento mediante los métodos **Update** o **UpdateBatch** .  
   
  En los capítulos anteriores, ha cambiado los datos en varias filas del **conjunto de registros**. ADO admite dos nociones básicas relacionadas con la adición, eliminación y modificación de filas de datos.  
   
- La primera noción es que los cambios no se realizan inmediatamente en el **conjunto de registros**; en su lugar, se realizan en un *búfer de copia*interno. Si decide que no desea que se realicen los cambios, se descartan las modificaciones en el búfer de copia. Si decide conservar los cambios, los cambios en el búfer de copia se aplican al **conjunto de registros**.  
+ La primera noción es que los cambios no se realizan inmediatamente en el **conjunto de registros**; en su lugar, se realizan en un *búfer de copia* interno. Si decide que no desea que se realicen los cambios, se descartan las modificaciones en el búfer de copia. Si decide conservar los cambios, los cambios en el búfer de copia se aplican al **conjunto de registros**.  
   
  La segunda noción es que los cambios se propagan al origen de datos en cuanto se declare el trabajo en una fila completa (es decir, modo *inmediato* ) o se recopilen todos los cambios en un conjunto de filas hasta que se declare el trabajo del conjunto completo (es decir, el modo *por lotes* ). La propiedad **LockType** determina cuándo se realizan los cambios en el origen de datos subyacente. **adLockOptimistic** o **adLockPessimistic** especifican el modo inmediato, mientras que **adLockBatchOptimistic** especifica el modo por lotes. La propiedad **CursorLocation** puede afectar a la configuración de **LockType** que está disponible. Por ejemplo, el valor **adLockPessimistic** no se admite si la propiedad **CursorLocation** está establecida en **adUseClient**.  
   
@@ -35,6 +35,6 @@ En los capítulos anteriores se ha explicado cómo usar ADO para obtener datos d
   
  Esta sección contiene los temas siguientes.  
   
--   [Actualizar datos](../../../ado/guide/data/updating-data.md)  
+-   [Actualización de datos](../../../ado/guide/data/updating-data.md)  
   
 -   [Conservar los datos](../../../ado/guide/data/persisting-data.md)

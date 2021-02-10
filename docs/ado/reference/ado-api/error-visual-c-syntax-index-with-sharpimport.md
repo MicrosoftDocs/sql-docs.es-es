@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e322ca4da2f4f93278c1fb8337ea2677731ca99
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9c47ee5cdcdfd881bde802ba9b96e74be6757016
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167456"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034205"
 ---
 # <a name="error-visual-c-syntax-index-with-import"></a>Error (índice de sintaxis de Visual C++ con #import)
 ## <a name="properties"></a>Propiedades  
@@ -50,4 +50,4 @@ __declspec(property(get=GetSQLState)) _bstr_t SQLState;
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto de error](../../../ado/reference/ado-api/error-object.md)
+ [Error (objeto)](../../../ado/reference/ado-api/error-object.md)

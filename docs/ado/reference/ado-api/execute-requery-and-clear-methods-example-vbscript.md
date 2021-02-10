@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d592835b148c6307e49583fac3e4a9cbffbfbf23
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c0708e50451d58dc6732ed9ffa2714716fb0c55e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171138"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034135"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>Ejemplo de métodos Execute, Requery y Clear (VBScript)
 En este ejemplo se muestra el método **Execute** cuando se ejecuta desde un objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) y un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) . También usa el método [Requery](../../../ado/reference/ado-api/requery-method.md) para recuperar los datos actuales en un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)y el método [Clear](../../../ado/reference/ado-api/clear-method-ado.md) para borrar el contenido de la colección de [errores](../../../ado/reference/ado-api/errors-collection-ado.md) . Los procedimientos ExecuteCommand y PrintOutput son necesarios para que este procedimiento se ejecute.  

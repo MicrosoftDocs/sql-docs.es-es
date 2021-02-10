@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b833bc78a75d09c8f58ae12532f446ec94a097e0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b39a0920d9816837b6d737df00e6bb4560358356
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991756"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033405"
 ---
 # <a name="adding-records-to-a-recordset"></a>Agregar registros a un conjunto de registros
-Use el método **AddNew** para crear e inicializar un nuevo registro en un **conjunto de registros**existente. Puede usar el método **Supports** con un valor **CursorOptionEnum** de **adAddNew** para comprobar si puede agregar registros al objeto de **conjunto de registros** actual.
+Use el método **AddNew** para crear e inicializar un nuevo registro en un **conjunto de registros** existente. Puede usar el método **Supports** con un valor **CursorOptionEnum** de **adAddNew** para comprobar si puede agregar registros al objeto de **conjunto de registros** actual.
 
  Después de llamar al método **AddNew** , el nuevo registro se convierte en el registro actual y permanece actual después de llamar al método **Update** . Si el objeto de **conjunto de registros** no admite marcadores, es posible que no pueda obtener acceso al nuevo registro una vez que se haya movido a otro registro. Por lo tanto, dependiendo del tipo de cursor, puede que tenga que llamar al método **Requery** para que el nuevo registro sea accesible.
 

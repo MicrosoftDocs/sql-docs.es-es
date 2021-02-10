@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acb2572accc19937f7f4ad278fc01aa0e5760a8a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6555f71d210524622e936026c8945168635de140
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979526"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032437"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>Paso 3: Relleno del cuadro de lista de campos
 Para rellenar el cuadro de lista campos, inserte el siguiente código en el controlador de eventos Click de `lstMain` :  

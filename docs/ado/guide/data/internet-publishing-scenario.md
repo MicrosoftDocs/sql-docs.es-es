@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40a74a489a39d0bbb4c11c27e16225aec8779606
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2e31ee8fb294dc66b52630d79a585961b1f360d7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980456"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032757"
 ---
 # <a name="internet-publishing-scenario"></a>Escenario de publicación en Internet
-En este ejemplo de código se muestra cómo usar ADO con el proveedor de Microsoft OLE DB para la publicación en Internet. En este escenario, creará una aplicación Visual Basic que utiliza objetos de **conjunto de registros**, **registros**y **secuencias** para mostrar el contenido de los recursos publicados con el proveedor de publicación en Internet.  
+En este ejemplo de código se muestra cómo usar ADO con el proveedor de Microsoft OLE DB para la publicación en Internet. En este escenario, creará una aplicación Visual Basic que utiliza objetos de **conjunto de registros**, **registros** y **secuencias** para mostrar el contenido de los recursos publicados con el proveedor de publicación en Internet.  
   
  Los pasos siguientes son necesarios para crear este escenario:  
   

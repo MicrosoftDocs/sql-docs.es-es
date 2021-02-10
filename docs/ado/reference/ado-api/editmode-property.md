@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5854dce12ddb2303077111f3129274861a340ebd
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5cec956ced454f0220b8d545e8e05c8fbcf8a760
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171233"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025416"
 ---
 # <a name="editmode-property"></a>Propiedad EditMode
 Indica el estado de edición del registro actual.  

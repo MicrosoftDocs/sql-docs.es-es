@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd226901137e3ad19df84d17467ad2f283430c14
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9da4e5cefa1c33a2a1b4b5002dc9030550265ca3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979276"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032347"
 ---
 # <a name="types-of-events"></a>Tipos de eventos
 Hay dos tipos básicos de eventos. "Eventos hechos", a los que se llama antes de que se inicie una operación, normalmente incluyen "va" en sus nombres, por ejemplo, **WillChangeRecordset** o **WillConnect**. Los eventos a los que se llama después de que se haya completado un evento suelen incluir "Complete" en sus nombres (por ejemplo, **RecordChangeComplete** o **ConnectComplete**). Existen excepciones, como **InfoMessage** , pero se producen una vez completada la operación asociada.  
@@ -36,7 +36,7 @@ Hay dos tipos básicos de eventos. "Eventos hechos", a los que se llama antes de
  Los eventos rellenados y completos se suelen usar en parejas.  
   
 ## <a name="other-events"></a>Otros eventos  
- Los otros controladores de eventos, es decir, los eventos cuyos nombres no tienen el formato <strong>serán*evento* </strong> o <strong> *evento*completado</strong> : solo se llaman después de que se complete una operación. Estos eventos son **Disconnect**, **EndOfRecordset**e **InfoMessage**.  
+ Los otros controladores de eventos, es decir, los eventos cuyos nombres no tienen el formato <strong>serán *evento*</strong> o <strong> *evento* completado</strong> : solo se llaman después de que se complete una operación. Estos eventos son **Disconnect**, **EndOfRecordset** e **InfoMessage**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Resumen del controlador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   

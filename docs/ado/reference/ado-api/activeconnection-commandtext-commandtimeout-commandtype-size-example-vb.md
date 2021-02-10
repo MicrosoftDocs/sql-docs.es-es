@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dade4531-0bcc-4a52-8f86-b110ba2a3f9d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f2eeb7358a850fa22e1a4da7316ef663138de23
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5cfecb0d5fdb5232aefa7e56917da421c9bb8259
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159938"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031557"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vb"></a>Ejemplo de las propiedades ActiveConnection, CommandText, CommandTimeout, CommandType, size y Direction (VB)
 En este ejemplo se usan las propiedades [ActiveConnection](./activeconnection-property-ado.md), [CommandText](./commandtext-property-ado.md), [CommandTimeout](./commandtimeout-property-ado.md), [CommandType](./commandtype-property-ado.md), [size](./size-property-ado-parameter.md)y [Direction](./direction-property.md) para ejecutar un procedimiento almacenado.  

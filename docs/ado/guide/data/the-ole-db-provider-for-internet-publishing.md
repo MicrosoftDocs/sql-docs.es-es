@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7556d3857142a4762fd411f5175a38c2e4d58cf3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9282bdc81d71ecd938f3d115678769915f8e3367
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979366"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032407"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>El proveedor OLE DB para la publicación en Internet
-Los objetos de [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) y [registro](../../../ado/reference/ado-api/record-object-ado.md) de ADO se pueden usar con el proveedor de Microsoft OLE DB para la publicación en Internet (proveedor de publicación en Internet) para obtener acceso y manipular recursos, como carpetas web o archivos servidos por Microsoft FrontPage. Con ADO, puede especificar que el origen de un **registro**, **secuencia**o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) sea una dirección URL. Después, puede cargar, descargar, trasladar, copiar y eliminar recursos, o manipular directamente las propiedades de los recursos.  
+Los objetos de [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) y [registro](../../../ado/reference/ado-api/record-object-ado.md) de ADO se pueden usar con el proveedor de Microsoft OLE DB para la publicación en Internet (proveedor de publicación en Internet) para obtener acceso y manipular recursos, como carpetas web o archivos servidos por Microsoft FrontPage. Con ADO, puede especificar que el origen de un **registro**, **secuencia** o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) sea una dirección URL. Después, puede cargar, descargar, trasladar, copiar y eliminar recursos, o manipular directamente las propiedades de los recursos.  
   
  Para obtener un ejemplo de código que usa **registros** y **secuencias** con el proveedor de publicación en Internet, vea el [escenario de publicación en Internet](../../../ado/guide/data/internet-publishing-scenario.md).  
   

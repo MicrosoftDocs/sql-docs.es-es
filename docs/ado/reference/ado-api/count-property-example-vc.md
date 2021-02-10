@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87baeed3f1927990a18354d458828876cead1427
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ad7658420c17c5f36ed35038f551b2886359e79e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167657"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034595"
 ---
 # <a name="count-property-example-vc"></a>Ejemplo de la propiedad Count (VC ++)
 En este ejemplo se muestra la propiedad [Count](./count-property-ado.md) con dos colecciones en la base de datos ***Employee*** . La propiedad obtiene el número de objetos de cada colección y establece el límite superior de los bucles que enumeran estas colecciones.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efbf7d9c27b7ba9c4be39e81bf0c7ea3296c0bf4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 22f29c0cccecb21cdab5463b76357a61a6729a7d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171452"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026475"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Connection
 ## <a name="propertiescollections"></a>Propiedades/colecciones  
@@ -53,7 +53,7 @@ ms.locfileid: "99171452"
   
  [CANCEL (método)](./cancel-method-ado.md)  
   
- [Close (método)](./close-method-ado.md)  
+ [Close (Método)](./close-method-ado.md)  
   
  [Execute (método) (conexión de ADO)](./execute-method-ado-connection.md)  
   

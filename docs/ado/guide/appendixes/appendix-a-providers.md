@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d50f77959b21031b03ae9591181c61a3419577fd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a49518c1fcc1618884751d503def46a29dd9c048
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991176"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029489"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Apéndice A: proveedores de datos y servicios
 En esta sección se tratan tres tipos de proveedores: proveedores de datos, proveedores de servicios y componentes de servicio. Los proveedores se dividen en dos categorías: aquellas que proporcionan datos y que proporcionan servicios. Un *proveedor de datos* posee sus propios datos y los expone en formato tabular a la aplicación. Un *proveedor de servicios* encapsula un servicio mediante la generación y el consumo de datos, lo que aumenta las características de las aplicaciones de ADO. También se puede definir un proveedor de servicios como *componente de servicio*, que debe funcionar junto con otros proveedores de servicios o componentes.
@@ -46,12 +46,12 @@ En esta sección se tratan tres tipos de proveedores: proveedores de datos, prov
 |Servicio de Index Server de Microsoft|[Proveedor Microsoft OLE DB para el Servicio de Microsoft Index Server](./microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
 |Active Directory Service|[Proveedor de Microsoft OLE DB para el servicio Microsoft Active Directory](./microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
 |Bases de datos de Microsoft Jet|[Proveedor de OLE DB para Microsoft Jet](./microsoft-ole-db-provider-for-microsoft-jet.md)|
-|Microsoft SQL Server|[Proveedor OLE DB de Microsoft para SQL Server](./microsoft-ole-db-provider-for-sql-server.md)|
+|Microsoft SQL Server|[Proveedor OLE DB de Microsoft para SQL Server](./microsoft-ole-db-provider-for-sql-server.md)|
 |bases de datos Oracle|[proveedor Microsoft OLE DB para Oracle](./microsoft-ole-db-provider-for-oracle.md)|
 |Publicación en Internet|[Proveedor de Microsoft OLE DB para la publicación en Internet](./microsoft-ole-db-provider-for-internet-publishing.md)|
 |Orígenes de datos simples|[Proveedor simple de Microsoft OLE DB](./microsoft-ole-db-simple-provider.md)|
 
-## <a name="provider-specific-dynamic-properties"></a>Propiedades dinámicas específicas del proveedor
+## <a name="provider-specific-dynamic-properties"></a>Provider-Specific propiedades dinámicas
  Las colecciones de [propiedades](../../reference/ado-api/properties-collection-ado.md) de los objetos [Connection](../../reference/ado-api/connection-object-ado.md), [Command](../../reference/ado-api/command-object-ado.md)y [Recordset](../../reference/ado-api/recordset-object-ado.md) incluyen propiedades dinámicas específicas del proveedor. Estas propiedades proporcionan información sobre la funcionalidad específica del proveedor más allá de las propiedades integradas que admite ADO.
 
  Después de establecer la conexión y crear estos objetos, utilice el método [Refresh](../../reference/ado-api/refresh-method-ado.md) en la colección **Properties** del objeto para obtener las propiedades específicas del proveedor. Consulte la documentación del proveedor y la [Guía del programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)) para obtener información detallada acerca de estas propiedades dinámicas.

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 45d54b6e-db2c-4553-9fd0-528147d6da2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c8aafe9069f1ea6718713ddb2239e4e9699ee48
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ca5d99d46b0af7461b123892e8e9223914239ec9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167511"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034245"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 Especifica el estado de edición de un registro.  

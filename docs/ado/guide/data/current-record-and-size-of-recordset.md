@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f7001bb1c53f126498cd94878e02ae8b539ef68
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 791ca36a7f5a61a0ad0208753386fba826d6d06e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991496"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033345"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Registro actual y el tamaño del conjunto de registros
 En esta sección se describe cómo buscar la posición actual del cursor en el **conjunto de registros** de ejemplo en el [ejemplo de código JScript para devolver un conjunto de registros](./jscript-code-example-to-return-a-recordset.md).  
   
 ## <a name="current-record"></a>Registro actual  
- El registro actual del conjunto de registros corresponde a que apunta a la posición del cursor del objeto de **conjunto de registros** . Cuando se devuelve un objeto de **conjunto de registros** desde el origen de datos como resultado de la llamada a **Recordset. Open**, **Command.Exe**a la variable, o **Connection.Exe** de la misma (incluidos **Connection. NamedCommand** y **Connection. StoredProcedure**), el cursor se establece para apuntar al primer registro. En el conjunto de registros de ejemplo, el registro actual inicial es el elemento "de la" tripas orgánicas orgánicos ".  
+ El registro actual del conjunto de registros corresponde a que apunta a la posición del cursor del objeto de **conjunto de registros** . Cuando se devuelve un objeto de **conjunto de registros** desde el origen de datos como resultado de la llamada a **Recordset. Open**, **Command.Exe** a la variable, o **Connection.Exe** de la misma (incluidos **Connection. NamedCommand** y **Connection. StoredProcedure**), el cursor se establece para apuntar al primer registro. En el conjunto de registros de ejemplo, el registro actual inicial es el elemento "de la" tripas orgánicas orgánicos ".  
   
 ## <a name="size-of-recordset"></a>Tamaño del conjunto de registros  
- Para averiguar el tamaño de un objeto de **conjunto de registros** , obtenga el valor de la propiedad **Recordset. RecordCount** . Este valor es un entero largo que indica el número de registros del **conjunto**de registros. Si el proveedor OLEDB devuelve el DataSet para Microsoft SQL Server, este valor proporciona el número de filas devueltas. La lectura de la propiedad **RecordCount** en un **conjunto de registros** cerrado produce un error.  
+ Para averiguar el tamaño de un objeto de **conjunto de registros** , obtenga el valor de la propiedad **Recordset. RecordCount** . Este valor es un entero largo que indica el número de registros del **conjunto** de registros. Si el proveedor OLEDB devuelve el DataSet para Microsoft SQL Server, este valor proporciona el número de filas devueltas. La lectura de la propiedad **RecordCount** en un **conjunto de registros** cerrado produce un error.  
   
  Si no se puede determinar el número de registros, el valor de la propiedad es-1.  
   

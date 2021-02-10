@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5769c9f01fdf7ed79a442cd6edacbecc5547089
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 69773a836dbbf039ed5521f862f2e49e62b13456
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164630"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034795"
 ---
 # <a name="compareenum"></a>CompareEnum
 Especifica la posición relativa de dos registros representados por sus marcadores.  

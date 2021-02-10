@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45bad5289a33b5b1f76807f1f7a9da62044dafc2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7dee12a0cdb274f58bb3dc79fddeb057e4913e81
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979386"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032417"
 ---
 # <a name="the-fields-collection"></a>Fields (colección)
 La colección **Fields** es una de las colecciones intrínsecas de ADO. Una colección es un conjunto ordenado de elementos a los que se puede hacer referencia como una unidad. Para obtener más información acerca de las colecciones de ADO, vea [el modelo de objetos ADO](../../../ado/guide/data/ado-objects-and-collections.md).  
   
- La colección **Fields** contiene un objeto **Field** para cada campo (columna) del **conjunto de registros**. Al igual que todas las colecciones de ADO, tiene las propiedades **recuento** y **elemento** , así como los métodos **Append** y **Refresh** . También tiene métodos **CancelUpdate**, **Delete**, **Resync**y **Update** , que no están disponibles para otras colecciones de ADO.  
+ La colección **Fields** contiene un objeto **Field** para cada campo (columna) del **conjunto de registros**. Al igual que todas las colecciones de ADO, tiene las propiedades **recuento** y **elemento** , así como los métodos **Append** y **Refresh** . También tiene métodos **CancelUpdate**, **Delete**, **Resync** y **Update** , que no están disponibles para otras colecciones de ADO.  
   
 ## <a name="examining-the-fields-collection"></a>Examinar la colección Fields  
  Considere la colección **Fields** del **conjunto de registros** de ejemplo que se presentó en esta sección. El **conjunto de registros** de ejemplo se deriva de la instrucción SQL  
@@ -58,7 +58,7 @@ SELECT ProductID, ProductName, UnitPrice FROM Products WHERE CategoryID = 7
  Si la propiedad **Count** es cero, no hay ningún objeto en la colección.  
   
 ## <a name="getting-to-the-field"></a>Obtener el campo  
- Como con cualquier colección de ADO, la propiedad **Item** es la propiedad predeterminada de la colección. Devuelve el objeto de **campo** individual especificado por el nombre o el índice que se le ha pasado. Por lo tanto, las instrucciones siguientes son equivalentes para el **conjunto de registros**de ejemplo:  
+ Como con cualquier colección de ADO, la propiedad **Item** es la propiedad predeterminada de la colección. Devuelve el objeto de **campo** individual especificado por el nombre o el índice que se le ha pasado. Por lo tanto, las instrucciones siguientes son equivalentes para el **conjunto de registros** de ejemplo:  
   
 ```  
 objField = objRecordset.Fields.Item("ProductID")  
@@ -75,7 +75,7 @@ objField = objRecordset.Fields(0)
 ## <a name="adding-fields-to-a-recordset"></a>Agregar campos a un conjunto de registros  
  El método **Append** se utiliza para agregar campos a un **conjunto de registros**.  
   
- Puede utilizar el método **Append** para fabricar un conjunto de **registros** mediante programación sin abrir una conexión a un origen de datos. Se producirá un error en tiempo de ejecución si se llama al método **Append** en la colección **Fields** de un **conjunto de registros** abierto o en un **conjunto de registros** donde se ha establecido la propiedad **ActiveConnection** . Solo puede anexar campos a un **conjunto de registros** que no esté abierto y que todavía no se haya conectado a un origen de datos. Sin embargo, para especificar valores para los **campos**que se acaban de anexar, primero se debe abrir el **conjunto de registros** .  
+ Puede utilizar el método **Append** para fabricar un conjunto de **registros** mediante programación sin abrir una conexión a un origen de datos. Se producirá un error en tiempo de ejecución si se llama al método **Append** en la colección **Fields** de un **conjunto de registros** abierto o en un **conjunto de registros** donde se ha establecido la propiedad **ActiveConnection** . Solo puede anexar campos a un **conjunto de registros** que no esté abierto y que todavía no se haya conectado a un origen de datos. Sin embargo, para especificar valores para los **campos** que se acaban de anexar, primero se debe abrir el **conjunto de registros** .  
   
  A menudo, los desarrolladores necesitan un lugar para almacenar temporalmente algunos datos o quieren que algunos datos actúen como si provinieran de un servidor para que puedan participar en el enlace de datos en una interfaz de usuario. ADO (junto con el [servicio de cursores de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)) permite al desarrollador crear un objeto de **conjunto de registros** vacío especificando la información de columna y llamando a **Open**. En el ejemplo siguiente, se anexan tres nuevos campos a un nuevo objeto de **conjunto de registros** . A continuación, se abre el **conjunto de registros** , se agregan dos nuevos registros y el **conjunto de registros** se conserva en un archivo. (Para obtener más información acerca de la persistencia del **conjunto de registros** , vea [actualizar y conservar datos](../../../ado/guide/data/updating-and-persisting-data.md)).  
   

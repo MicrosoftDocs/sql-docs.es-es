@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31512fd9843ae5ff15fc2f7c6981fccdc926dbb5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6f29f624fe9f55287dcd8944fd04da0426d9552c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980066"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032627"
 ---
 # <a name="persisting-records-in-xml-format"></a>Almacenar registros en formato XML
-Al igual que el formato ADTG, la persistencia del **conjunto de registros** en formato XML se implementa con el proveedor de persistencia de Microsoft OLE DB. Este proveedor genera un conjunto de filas de solo avance y de solo lectura desde un archivo o secuencia XML guardado que contiene la información de esquema generada por ADO. Del mismo modo, puede tomar un **conjunto de registros**ADO, generar XML y guardarlo en un archivo o en cualquier objeto que implemente la interfaz **IStream** com. (De hecho, un archivo es simplemente otro ejemplo de un objeto que admite **IStream**). En las versiones 2,5 y posteriores, ADO se basa en el analizador de Microsoft XML (MSXML) para cargar el XML en el **conjunto de registros**; por consiguiente msxml.dll es necesario.  
+Al igual que el formato ADTG, la persistencia del **conjunto de registros** en formato XML se implementa con el proveedor de persistencia de Microsoft OLE DB. Este proveedor genera un conjunto de filas de solo avance y de solo lectura desde un archivo o secuencia XML guardado que contiene la información de esquema generada por ADO. Del mismo modo, puede tomar un **conjunto de registros** ADO, generar XML y guardarlo en un archivo o en cualquier objeto que implemente la interfaz **IStream** com. (De hecho, un archivo es simplemente otro ejemplo de un objeto que admite **IStream**). En las versiones 2,5 y posteriores, ADO se basa en el analizador de Microsoft XML (MSXML) para cargar el XML en el **conjunto de registros**; por consiguiente msxml.dll es necesario.  
   
 > [!NOTE]
->  Se aplican algunas limitaciones al guardar **conjuntos de registros** jerárquicos (formas de datos) en formato XML. No se puede guardar en XML si el **conjunto de registros** jerárquico contiene actualizaciones pendientes y no se puede guardar un conjunto de **registros**jerárquico con parámetros. Para obtener más información, vea [Guardar conjuntos de registros jerárquicos y filtrados](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
+>  Se aplican algunas limitaciones al guardar **conjuntos de registros** jerárquicos (formas de datos) en formato XML. No se puede guardar en XML si el **conjunto de registros** jerárquico contiene actualizaciones pendientes y no se puede guardar un conjunto de **registros** jerárquico con parámetros. Para obtener más información, vea [Guardar conjuntos de registros jerárquicos y filtrados](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
   
  La forma más fácil de conservar los datos en XML y volver a cargarlos a través de ADO es con los métodos **Save** y **Open** , respectivamente. En el siguiente ejemplo de código ADO se muestra cómo guardar los datos de la tabla **titles** en un archivo denominado titles. sav.  
   

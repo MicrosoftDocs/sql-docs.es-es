@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91fe315304cc2be0ccfb8c638665ce699c75e248
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 55eaf3798ee8d14a776da14010b4b6617d0e2723
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980176"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032657"
 ---
 # <a name="operation-of-parameterized-commands"></a>Funcionamiento de los comandos con parámetros
-Si está trabajando con un **conjunto de registros**secundario grande, especialmente en comparación con el tamaño del **conjunto de registros**primario, pero solo necesita tener acceso a algunos capítulos secundarios, es posible que le resulte más eficaz usar un comando con parámetros.  
+Si está trabajando con un **conjunto de registros** secundario grande, especialmente en comparación con el tamaño del **conjunto de registros** primario, pero solo necesita tener acceso a algunos capítulos secundarios, es posible que le resulte más eficaz usar un comando con parámetros.  
   
- Un *comando sin parámetros* recupera los **conjuntos de registros**primarios y secundarios completos, anexa una columna Chapter al elemento primario y, a continuación, asigna una referencia al capítulo secundario relacionado para cada fila primaria.  
+ Un *comando sin parámetros* recupera los **conjuntos de registros** primarios y secundarios completos, anexa una columna Chapter al elemento primario y, a continuación, asigna una referencia al capítulo secundario relacionado para cada fila primaria.  
   
- Un *comando con parámetros* recupera el **conjunto de registros**primario completo, pero solo recupera el capítulo **conjunto de registros** cuando se tiene acceso a la columna de capítulo. Esta diferencia en la estrategia de recuperación puede producir ventajas de rendimiento significativas.  
+ Un *comando con parámetros* recupera el **conjunto de registros** primario completo, pero solo recupera el capítulo **conjunto de registros** cuando se tiene acceso a la columna de capítulo. Esta diferencia en la estrategia de recuperación puede producir ventajas de rendimiento significativas.  
   
  Por ejemplo, puede especificar lo siguiente:  
   
@@ -45,13 +45,13 @@ SHAPE {SELECT * FROM customer}
   
 1.  El *comando primario* se ejecuta y devuelve un conjunto de **registros** primario de la tabla customers.  
   
-2.  Una columna de capítulo se anexa al conjunto de **registros**primario.  
+2.  Una columna de capítulo se anexa al conjunto de **registros** primario.  
   
-3.  Cuando se tiene acceso a la columna Chapter de una fila primaria, el *comando secundario* se ejecuta utilizando el valor de customer. cust_id como valor del parámetro.  
+3.  Cuando se tiene acceso a la columna Chapter de una fila primaria, el *comando secundario* se ejecuta utilizando el valor de la Customer.cust_id como valor del parámetro.  
   
-4.  Todas las filas del conjunto de filas del proveedor de datos creadas en el paso 3 se utilizan para rellenar el **conjunto de registros**secundario. En este ejemplo, todas las filas de la tabla Orders en las que el cust_id es igual al valor de Customer. cust_id. De forma predeterminada, los **conjuntos de registros**secundarios se almacenarán en la memoria caché del cliente hasta que se liberen todas las referencias al **conjunto de registros** primario. Para cambiar este comportamiento, establezca las **filas secundarias** de la caché de [propiedades dinámicas](../../reference/ado-api/ado-dynamic-property-index.md) de **conjunto de registros** en **false**.  
+4.  Todas las filas del conjunto de filas del proveedor de datos creadas en el paso 3 se utilizan para rellenar el **conjunto de registros** secundario. En este ejemplo, todas las filas de la tabla Orders en las que el cust_id es igual al valor de customer.cust_id. De forma predeterminada, los **conjuntos de registros** secundarios se almacenarán en la memoria caché del cliente hasta que se liberen todas las referencias al **conjunto de registros** primario. Para cambiar este comportamiento, establezca las **filas secundarias** de la caché de [propiedades dinámicas](../../reference/ado-api/ado-dynamic-property-index.md) de **conjunto de registros** en **false**.  
   
-5.  Una referencia a las filas secundarias recuperadas (es decir, el capítulo del **conjunto de registros**secundario) se coloca en la columna Chapter de la fila actual del **conjunto de registros**primario.  
+5.  Una referencia a las filas secundarias recuperadas (es decir, el capítulo del **conjunto de registros** secundario) se coloca en la columna Chapter de la fila actual del **conjunto de registros** primario.  
   
 6.  Los pasos 3-5 se repiten cuando se tiene acceso a la columna Chapter de otra fila.  
   

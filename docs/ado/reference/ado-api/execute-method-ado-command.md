@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bc27de85c9c8e1e47ec3fb89ec8fadce07713c3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 74e86bfb03ca77d103594009b7ddbbddb6b5b894
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171160"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034165"
 ---
 # <a name="execute-method-ado-command"></a>Método Execute (Command ADO)
 Ejecuta la consulta, la instrucción SQL o el procedimiento almacenado especificado en la propiedad [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) o [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) del [objeto de comando](../../../ado/reference/ado-api/command-object-ado.md).  

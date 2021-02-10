@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8322aba6e78b88846bdce7e53dc8886ae31c197a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 67abe2bd8d2af4e43b1f6d14aed6588b9ddd7a2e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991476"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033315"
 ---
 # <a name="data-providers"></a>Proveedores de datos
 Los proveedores de datos representan diversos orígenes de datos, como bases de datos SQL, archivos secuenciales indexados, hojas de cálculo, almacenes de documentos y archivos de correo. Los proveedores exponen datos uniformemente mediante una abstracción común denominada conjunto de filas.  

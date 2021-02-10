@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 606f2b92-3821-4d11-a207-4c22f6f35619
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b25b78bdafe6689c20f7f80c635d505d9d24067
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5c62617534c05a0d5338e2c83db7cf7e8e96e320
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167448"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034195"
 ---
 # <a name="errors-collection-properties-methods-and-events"></a>Eventos, métodos y propiedades de la colección de errores
 ## <a name="properties"></a>Propiedades  

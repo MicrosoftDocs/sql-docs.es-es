@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60e006733fd8ef5bd958328420ab43c1cbabc50e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1b554afa949acea4f816ce66e92e897477c2fe00
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979426"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032427"
 ---
 # <a name="streams-and-persistence"></a>Secuencias y persistencia
-El método [Save](../../../ado/reference/ado-api/save-method.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) almacena o *conserva*un **conjunto de registros** en un archivo y el método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) restaura el **conjunto de registros** a partir de ese archivo.  
+El método [Save](../../../ado/reference/ado-api/save-method.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) almacena o *conserva* un **conjunto de registros** en un archivo y el método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) restaura el **conjunto de registros** a partir de ese archivo.  
   
  Con ADO 2,7 o posterior, los métodos **Save** y **Open** pueden conservar también un **conjunto de registros** en un objeto [Stream](../../../ado/reference/ado-api/stream-object-ado.md) . Esta característica es especialmente útil cuando se trabaja con el servicio de datos remotos (RDS) y páginas de Active Server (ASP).  
   
@@ -101,7 +101,7 @@ Set rs = nothing
 ```  
   
 ## <a name="scenario-4"></a>Escenario 4  
- En este escenario, el código ASP escribe el contenido del **conjunto de registros** en formato ADTG en el cliente. El [servicio de cursores de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) puede usar estos datos para crear un **conjunto de registros**desconectado.  
+ En este escenario, el código ASP escribe el contenido del **conjunto de registros** en formato ADTG en el cliente. El [servicio de cursores de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) puede usar estos datos para crear un **conjunto de registros** desconectado.  
   
  Una nueva propiedad en el [control](../../../ado/reference/rds-api/datacontrol-object-rds.md)de objetos de RDS, [URL](../../../ado/reference/rds-api/url-property-rds.md), apunta a la página. asp que genera el **conjunto de registros**. Esto significa que se puede obtener un objeto de **conjunto de registros** sin RDS mediante el objeto [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) del servidor o el usuario que escribe un objeto comercial. Esto simplifica significativamente el modelo de programación de RDS.  
   

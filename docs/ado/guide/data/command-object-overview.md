@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0f1616fa83f1fed5a22de6fc1a1ee443bdddd82
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c23ce0b24fcd5fb82f306c1746f7a277bed293ed
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991566"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033314"
 ---
 # <a name="command-object-overview"></a>Información general sobre objetos de comando
 Con un objeto de **comando** , puede hacer lo siguiente:  
