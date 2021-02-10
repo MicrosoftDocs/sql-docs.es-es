@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b2da711df951fc79db5034eeb447a71ade21fee
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 75473101028de4ab22d9faad8b5f1269aab33f12
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166860"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041055"
 ---
 # <a name="position-property-ado"></a>Propiedad Position (ADO)
 Indica la posición actual dentro de un objeto de [flujo](./stream-object-ado.md) .  

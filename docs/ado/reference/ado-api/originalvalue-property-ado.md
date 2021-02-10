@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd53935335a4f5df694a5a5175f2bd7d3505a108
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e0948b7d5dd6fef29336fbb9af49e2578b2bb4ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170647"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041245"
 ---
 # <a name="originalvalue-property-ado"></a>Propiedad OriginalValue (ADO)
 Indica el valor de un [campo](./field-object.md) que existía en el registro antes de que se realizaran cambios.  

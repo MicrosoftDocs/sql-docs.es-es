@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a3bca1379c776f6fad1f4ab2aa7368b424ff9e7f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ada69c67cbd6d76973391ba1076129e5ee6baa24
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170708"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041435"
 ---
 # <a name="open-method-ado-connection"></a>Open (método) (conexión de ADO)
 Abre una conexión a un origen de datos.  

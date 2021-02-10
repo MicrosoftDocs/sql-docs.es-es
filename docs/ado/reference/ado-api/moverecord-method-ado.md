@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d55a2a2aacc281271789d2c456ea5bdc8de44499
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a92b7bc00b2deed4047dca5ed8bcf67fcd14ced9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167082"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041645"
 ---
 # <a name="moverecord-method-ado"></a>Método MoveRecord (ADO)
 Mueve la entidad representada por un [registro](./record-object-ado.md) a otra ubicación.  

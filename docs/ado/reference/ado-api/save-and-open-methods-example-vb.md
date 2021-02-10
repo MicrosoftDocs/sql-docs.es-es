@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c76d26032d9986cba52442d62bb7ef8c10db5419
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0eafd067cdad9c107c591d09b5b5f50fdc6bc501
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166609"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040696"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Ejemplo de los métodos Save y Open (VB)
 En estos tres ejemplos se muestra cómo se pueden usar los métodos [Save](./save-method.md) y [Open](./open-method-ado-recordset.md) juntos.  
   
  Supongamos que está trabajando en un viaje de negocios y desea tomar una tabla de una base de datos. Antes de comenzar, debe tener acceso a los datos como un [conjunto de registros](./recordset-object-ado.md) y guardarlos en un formulario transportable. Cuando llegue a su destino, tendrá acceso al **conjunto** de registros como un **conjunto de registros** local y desconectado. Realice cambios en el **conjunto de registros** y, a continuación, guárdelo de nuevo. Por último, cuando vuelva a la Página principal, vuelva a conectarse a la base de datos y actualícelo con los cambios que haya realizado en la carretera.  
   
- En primer lugar, acceda a la tabla **_authors_* _ y guárdela.  
+ En primer lugar, acceda a la tabla ***authors*** y guárdela.  
   
 ```  
 'BeginSaveVB  
@@ -85,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- Llegados a este punto, ha llegado a su destino. Tendrá acceso a la tabla _*_authors_*_ como un conjunto de registros local, desconectado _ * * *. Debe tener el proveedor **MSPersist** en el equipo que está usando para obtener acceso al archivo guardado, a:\Pubs.xml.  
+ Llegados a este punto, ha llegado a su destino. Tendrá acceso a la tabla ***authors** _ como un conjunto de registros local, desconectado _ * * *. Debe tener el proveedor **MSPersist** en el equipo que está usando para obtener acceso al archivo guardado, a:\Pubs.xml.  
   
 ```  
 Attribute VB_Name = "Save"  

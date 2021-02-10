@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8ac6ec9cb5b32a7c0494a1955b4115d72f959d0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 185a0df6347748d71ec621940250e682e4c0eca6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170690"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041355"
 ---
 # <a name="openschema-method-example-vb"></a>Ejemplo del método OpenSchema (VB)
-En este ejemplo se usa el método [OpenSchema](./openschema-method.md) para mostrar el nombre y el tipo de cada tabla en la base de datos ***pubs** _.  
+En este ejemplo se usa el método [OpenSchema](./openschema-method.md) para mostrar el nombre y el tipo de cada tabla en la base de datos ***pubs*** .  
   
 ```  
 'BeginOpenSchemaVB  
@@ -79,7 +79,7 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- En este ejemplo se especifica una TABLE_TYPE restricción de consulta en el argumento de _*_criterios_* de método de *OpenSchema**_ . Como resultado, solo se devuelven la información de esquema de las vistas especificadas en la base de datos _ *_pubs_**. A continuación, en el ejemplo se muestran los nombres y los tipos de cada tabla (s).  
+ En este ejemplo se especifica una TABLE_TYPE restricción de consulta en el argumento de criterios del método **OpenSchema** ***_. Como resultado, solo se devuelven la información de esquema de las vistas especificadas en la base de datos _*_pubs_** . A continuación, en el ejemplo se muestran los nombres y los tipos de cada tabla (s).  
   
 ```  
 Attribute VB_Name = "OpenSchema"  

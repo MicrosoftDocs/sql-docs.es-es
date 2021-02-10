@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e22ff3ccf2f8e4e46def5e6d15c532cbcf4fc59
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0a478cce407c10a57340ec29f7218b1d50b10641
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166962"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041275"
 ---
 # <a name="optimize-property-example-vc"></a>Ejemplo de la propiedad Optimize (VC ++)
 En este ejemplo se muestra la propiedad **optimizar** dinámica del objeto de [campo](./field-object.md) . El campo **zip** de la tabla **authors** en la base de datos **pubs** no está indizado. Al establecer la propiedad [Optimize](./optimize-property-dynamic-ado.md) en **true** en el campo **zip** , se autoriza a ADO a generar un índice que mejora el rendimiento del método [Find](./find-method-ado.md) .  

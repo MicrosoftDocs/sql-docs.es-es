@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b0ae4ed8f72dca085edd0c82220296d65795d6ac
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d8ec88ad85b4f0432ce4740e8f54647640f2e7bd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166470"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040615"
 ---
 # <a name="status-property-ado-field"></a>Propiedad Status (Field ADO)
 Indica el estado de un objeto de [campo](./field-object.md) .  

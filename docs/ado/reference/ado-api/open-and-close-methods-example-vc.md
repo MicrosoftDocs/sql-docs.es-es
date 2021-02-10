@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8c76615971b00bdd492d20178933cea15a638da
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f81d72eb6c6d6da6bb57208b65727ab63d580f36
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167000"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041445"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Ejemplo de los métodos Open y Close (VC ++)
 En este ejemplo se usan los métodos **Open** y [Close](./close-method-ado.md) en los objetos [Recordset](./recordset-object-ado.md) y [Connection](./connection-object-ado.md) que se han abierto.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0adf12bc63745f739aaf8b71a92c660c1c1ad2fd
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 030627c58eb33d064b50c4e9347a06330f01cf9a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170491"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040795"
 ---
 # <a name="read-method"></a>Método Read
 Lee un número especificado de bytes de un objeto de [flujo](./stream-object-ado.md) binario.  

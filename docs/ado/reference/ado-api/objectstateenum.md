@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 85af405ef821fdcdc1b468b2c038e6de2a385946
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4d8c2b95aced31a7c5945a846cb9631da5f202b6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170728"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041475"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 Especifica si un objeto está abierto o cerrado, se está conectando a un origen de datos, ejecutando un comando o recuperando datos.  

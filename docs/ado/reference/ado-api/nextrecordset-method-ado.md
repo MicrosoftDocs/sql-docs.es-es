@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acf9105b6d28e34de0351002063251d49196829a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3388a5f37fa8d82aa951f1cc82eb9f43556d9d37
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170772"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041585"
 ---
 # <a name="nextrecordset-method-ado"></a>Método NextRecordset (ADO)
 Borra el objeto de [conjunto de registros](./recordset-object-ado.md) actual y devuelve el siguiente **conjunto de registros** avanzando por una serie de comandos.  

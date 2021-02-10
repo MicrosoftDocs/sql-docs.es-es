@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36d1da9d1b95480eeaf3018b49018df7541c510f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: eefb2271372a6746c2df9c3f052760bb35d7f8ea
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170264"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040595"
 ---
 # <a name="size-property-ado-stream"></a>Propiedad Size (Stream de ADO)
 Indica el tamaño de la secuencia en número de bytes.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54bd88ab8b439752870bb2ac87d1f4de6528c13d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 157124ac59400a208b108f4a6fa61491f77bd948
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166917"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041185"
 ---
 # <a name="parameter-ado-for-visual-c-syntax"></a>Parámetro (ADO para la sintaxis Visual C++)
 ## <a name="methods"></a>Métodos  

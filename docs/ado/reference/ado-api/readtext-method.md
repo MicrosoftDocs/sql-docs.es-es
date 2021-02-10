@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0d88fba7389c40442fccf006afc03020004d928
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b9d82bf7985afebbcbd0a07baeae76cb80af6027
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166754"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040775"
 ---
 # <a name="readtext-method"></a>Método ReadText
 Lee el número especificado de caracteres de un objeto de [flujo](./stream-object-ado.md) de texto.  

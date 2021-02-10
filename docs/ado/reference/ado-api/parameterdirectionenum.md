@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 960164c8f881c3094493f3bbc828ef7982e75280
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7b352c5504571d50e8840e0d05e0d906a07d4b36
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166885"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041125"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Especifica si el [parámetro](./parameter-object.md) representa un parámetro de entrada, un parámetro de salida, una entrada y un parámetro de salida, o el valor devuelto de un procedimiento almacenado.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d15933fec72109c58206c43dfc4b57db1ac29288
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: cc3a77c9a4381a5493ea7219715ebad2aedc56f7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166438"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040385"
 ---
 # <a name="stayinsync-property-example-vc"></a>Ejemplo de la propiedad StayInSync (VC ++)
 En este ejemplo se muestra cómo la propiedad [StayInSync](./stayinsync-property.md) facilita el acceso a las filas de un [conjunto de registros](./recordset-object-ado.md)jerárquico.  

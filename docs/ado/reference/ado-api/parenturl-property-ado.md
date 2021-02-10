@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 89b3caf606d47c2be1add80a20830570be3f7fd2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fe54516f1721cdc24da9fbdeaf72688a6c0960a2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166863"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041045"
 ---
 # <a name="parenturl-property-ado"></a>Propiedad ParentURL (ADO)
 Indica una cadena de dirección URL absoluta que apunta al [registro](./record-object-ado.md) primario del objeto de **registro** actual.  

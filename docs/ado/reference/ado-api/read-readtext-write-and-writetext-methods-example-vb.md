@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7889a43427c8752ba30a4ccae1b6fc5db77db549
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6be85fef5e69e879034536c8785eccfd72c9f331
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166768"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040765"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Ejemplo de métodos Read, READTEXT, Write y WriteText (VB)
 En este ejemplo se muestra cómo leer el contenido de un cuadro de texto en una [secuencia](./stream-object-ado.md) de texto y en una **secuencia** binaria. Otras propiedades y métodos que se muestran incluyen [Position](./position-property-ado.md), [size](./size-property-ado-parameter.md), [CharSet](./charset-property-ado.md)y [seteos](./seteos-method.md).  

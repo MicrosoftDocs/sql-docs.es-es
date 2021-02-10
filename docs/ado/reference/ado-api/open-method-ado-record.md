@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cdac33c235e50abf35fbed670d872ca631403b5d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 63872db8007b6f3b51a840eb6d079f8b4df0c042
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166985"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041415"
 ---
 # <a name="open-method-ado-record"></a>Open (método) (registro de ADO)
 Abre un objeto [Record](./record-object-ado.md) existente o crea un nuevo elemento representado por el **registro**, como un archivo o un directorio.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4bb438c114c80f5cd062c1be810dd85988611dbb
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: dd523383e69d27b3a9c57b4ce99e4be3bc6a1d13
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170157"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040395"
 ---
 # <a name="stayinsync-property-example-vb"></a>Ejemplo de la propiedad StayInSync (VB)
 En este ejemplo se muestra cómo la propiedad [StayInSync](./stayinsync-property.md) facilita el acceso a las filas de un [conjunto de registros](./recordset-object-ado.md)jerárquico.  

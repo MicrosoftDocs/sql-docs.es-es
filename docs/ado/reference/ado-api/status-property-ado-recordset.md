@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e09b3d093f58890efd893ceb0ac204ab6ed12a46
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: cf0bb7ad2a9fa07f0c04a60e685ac0349afd26f0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170191"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040455"
 ---
 # <a name="status-property-ado-recordset"></a>Propiedad Status (conjunto de registros ADO)
 Indica el estado del registro actual con respecto a las actualizaciones por lotes o a otras operaciones masivas.  

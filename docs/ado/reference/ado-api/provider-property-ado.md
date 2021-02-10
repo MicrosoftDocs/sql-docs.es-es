@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f30bd886941909dd072e0eb5d5fafc9cff3b26dc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3e022db374dc818529ed241f9d2ed5b525c8f374
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170497"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040835"
 ---
 # <a name="provider-property-ado"></a>Propiedad de proveedor (ADO)
 Indica el nombre del proveedor de un objeto de [conexión](./connection-object-ado.md) .  
