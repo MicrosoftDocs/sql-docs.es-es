@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 34e0a493140a31099dc4b9ed9f6234743bf0c8c1
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 19fca27ba0606a8e56c1594df852edbc439e7a92
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235372"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064970"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Introducción con la consola de SSMA para Sybase (SybaseToSQL)
 En esta sección se describe el procedimiento para iniciar y comenzar a usar la aplicación de consola SSMA para Sybase. También se enumeran las convenciones que se usan en una ventana de salida de la consola de SSMA típica.  

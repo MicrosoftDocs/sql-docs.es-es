@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2798fb492dc7cc91649e6790d133037d4f476882
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5d42208cc891b5c9ddada4ddfceb9a9bb21434e1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492528"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066230"
 ---
 # <a name="troubleshooting-accesstosql"></a>Solución de problemas (AccessToSQL)
 No es raro que se ejecute en problemas de migración que ejecutan los comandos o scripts de la consola.  

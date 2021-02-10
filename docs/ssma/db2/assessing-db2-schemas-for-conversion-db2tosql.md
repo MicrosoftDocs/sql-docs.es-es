@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7516b8abce9e5a3d147796ec0acb101a92fc18f0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4fd80f6dda35ffbdbb28bbe783047bd787bc81ac
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480534"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065980"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Evaluación de los esquemas de DB2 para la conversión (DB2ToSQL)
 Antes de cargar objetos y migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe determinar la complejidad de la migración y el tiempo que tardará la migración. SSMA puede crear un informe de evaluación que muestre el porcentaje de objetos que se convertirán correctamente. SSMA también le permite ver los problemas específicos que causan errores de conversión.  
@@ -29,7 +29,7 @@ Cuando crea este informe de evaluación, SSMA convierte los objetos de base de d
   
 2.  Para omitir los objetos individuales, desactive las casillas situadas junto a ellos.  
   
-3.  Haga clic con el botón derecho en **esquemas**y seleccione **crear informe**.  
+3.  Haga clic con el botón derecho en **esquemas** y seleccione **crear informe**.  
   
     También puede analizar objetos individuales haciendo clic con el botón secundario en un objeto y, a continuación, seleccionando **crear informe**.  
   
@@ -54,7 +54,7 @@ La ventana Informe de evaluación contiene tres paneles:
   
     -   El área de destino muestra el código convertido. El texto rojo muestra código problemático y mensajes de error.  
   
--   En el panel inferior se muestran los mensajes de conversión, agrupados por número de mensaje. Puede hacer clic en **errores**, **advertencias**o **información** para ver las categorías de mensajes y, a continuación, expandir un grupo de mensajes. Haga clic en un mensaje individual para seleccionar el objeto en el panel izquierdo y mostrar los detalles en el panel derecho.  
+-   En el panel inferior se muestran los mensajes de conversión, agrupados por número de mensaje. Puede hacer clic en **errores**, **advertencias** o **información** para ver las categorías de mensajes y, a continuación, expandir un grupo de mensajes. Haga clic en un mensaje individual para seleccionar el objeto en el panel izquierdo y mostrar los detalles en el panel derecho.  
   
 ## <a name="analyzing-conversion-problems-by-using-the-assessment-report"></a>Analizar problemas de conversión mediante el informe de evaluación  
 En el panel de estadísticas de conversión se muestran las estadísticas de conversión. Si el porcentaje de cualquier categoría es inferior al 100 por ciento, debe determinar por qué la conversión no fue correcta.  

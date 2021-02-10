@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cc9a5328095f2ef839eb0c9617798299e46371fd
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 154eaa42bf08f622f3e08359f025284752134bc5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987688"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066325"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Configuración de las opciones de conversión y migración (AccessToSQL)
 Para cada proyecto de SSMA, puede establecer opciones de nivel de proyecto. Estas opciones especifican cómo se convierten los objetos, cómo se migran los datos y cómo se asignan los tipos de datos de origen a los tipos de datos de destino. Antes de convertir objetos a o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure o migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, compruebe que las opciones de configuración son adecuadas para el proyecto.  
@@ -56,7 +56,7 @@ En SSMA, puede configurar los valores predeterminados para todos los proyectos. 
         > [!NOTE]  
         > SQL Azure opción solo está disponible en la pestaña **General** si el tipo de proyecto creado es SQL Azure.  
   
-    -   Para seleccionar un modo predefinido, seleccione **predeterminado**, **optimista**o **completo** en el cuadro desplegable **modo** .  
+    -   Para seleccionar un modo predefinido, seleccione **predeterminado**, **optimista** o **completo** en el cuadro desplegable **modo** .  
   
     -   Para especificar un modo personalizado, seleccione **personalizado** en el cuadro **modo** , seleccione una opción en el panel izquierdo, haga clic en la configuración o el valor en el panel derecho y, a continuación, seleccione o especifique el nuevo valor o valor.  
   
@@ -70,7 +70,7 @@ También puede personalizar la configuración del proyecto actual. Esta configur
   
 2.  En el cuadro de diálogo **configuración del proyecto** , realice una de las acciones siguientes:  
   
-    -   Para seleccionar un modo predefinido, seleccione **predeterminado**, **optimista**o **completo** en el cuadro desplegable **modo** .  
+    -   Para seleccionar un modo predefinido, seleccione **predeterminado**, **optimista** o **completo** en el cuadro desplegable **modo** .  
   
     -   Para especificar un modo personalizado, seleccione **personalizado** en el cuadro **modo** , seleccione una opción en el panel izquierdo, haga clic en la configuración o el valor en el panel derecho y, a continuación, seleccione o especifique el nuevo valor o valor.  
   

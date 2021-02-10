@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a1a73e1dbc1c494080427ae5dfd686dd3c18abc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0276efc988eca1674410c31a2f83379ee1e875b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497639"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064997"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>Proyectos de SSMA (SybaseToSQL)
 Para migrar bases de datos de Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, primero debe crear un proyecto de SSMA. El proyecto es un archivo que contiene metadatos sobre las bases de datos de ASE a las que desea migrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, metadatos sobre la instancia de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure que recibirán los objetos y los datos migrados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure información de conexión y configuración del proyecto.  
@@ -108,7 +108,7 @@ Al abrir un proyecto, se desconecta de ASE y de [!INCLUDE[ssNoVersion](../../inc
   
 1.  Realice uno de los siguientes procedimientos:  
   
-    -   En el menú **archivo** , seleccione **proyectos recientes**y, a continuación, seleccione el proyecto que desea abrir.  
+    -   En el menú **archivo** , seleccione **proyectos recientes** y, a continuación, seleccione el proyecto que desea abrir.  
   
     -   En el menú **archivo** , seleccione **Abrir proyecto**, busque el archivo de proyecto. s2ssproj, seleccione el archivo y, a continuación, haga clic en **abrir**.  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 69753bb7f8b873ebdd74a8c18262034557844c55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0139d7583a06f9e197504cf15b5b59974a92d90d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463495"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065910"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>Crear archivos de valor variable (DB2ToSQL)
 El archivo de valores de variable es un archivo XML que comprende los valores de parámetro de comandos como, el nombre de servidor de origen o de destino que cambian con frecuencia de una migración de servidor a otra. Cuando se produce un gran número de migraciones de base de datos, se crearán varios archivos de variables para almacenar el valor de cada servidor de origen y se hará referencia a ellos en un archivo de script maestro con el modificador **-v** en la línea de comandos. Esto ayuda a mantener valores estáticos en algunos archivos de script con los valores de variable en varios archivos de variables.  
@@ -87,6 +87,6 @@ El archivo de valores de variable es un archivo XML que comprende los valores de
 ## <a name="next-step"></a>siguiente paso  
 El siguiente paso en el funcionamiento de la consola es [la creación de los archivos de conexión del servidor &#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Creación de archivos de conexión del servidor](../oracle/creating-the-server-connection-files-oracletosql.md)  
   
