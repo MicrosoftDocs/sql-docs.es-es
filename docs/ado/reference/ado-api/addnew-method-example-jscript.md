@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d485b2306b654c4f98911e0a994c246a474f424
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: bbc055034c6a73248a9032b5412652c5fae6574d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161727"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035845"
 ---
 # <a name="addnew-method-example-jscript"></a>Ejemplo del método AddNew (JScript)
 En este ejemplo se usa el método [AddNew](./addnew-method-ado.md) para crear un nuevo registro con el nombre especificado. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **AddNewJS. asp**.  

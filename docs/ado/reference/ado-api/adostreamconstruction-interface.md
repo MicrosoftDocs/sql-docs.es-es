@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1138d00d291ffdabf415177a948bf87b1c6502a8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a13cf110fe4b7bd13ad5ce69da23794f5e6d76f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171585"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035645"
 ---
 # <a name="adostreamconstruction-interface"></a>Interfaz ADOStreamConstruction
 La interfaz **ADOStreamConstruction** se utiliza para construir un objeto de **secuencia** de ADO a partir de un OLE DB objeto **IStream** en una aplicación de C/C++.  

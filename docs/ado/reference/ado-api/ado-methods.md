@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd98478cad7c13b2f4e6950586c1317c1d5d37dd
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1dd1fa22a1d767bd869807233013979c0be4401a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164906"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035735"
 ---
 # <a name="ado-methods"></a>Métodos de ADO
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc5e30aef0162ecc2ffe9016e14fdfa36644aca5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 76f3311a622abbd249aa942e1ebdbda33ad06966
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724886"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036425"
 ---
 # <a name="registering-a-custom-business-object"></a>Registro de un objeto de negocios personalizado
 Para iniciar correctamente un objeto comercial personalizado (. dll o. exe) a través del servidor Web, el identificador de programa (ProgID) del objeto comercial debe especificarse en el registro tal y como se explica en este procedimiento. Esta característica de RDS protege la seguridad del servidor Web mediante la ejecución de solo ejecutables autorizados.  
@@ -37,7 +37,7 @@ Para iniciar correctamente un objeto comercial personalizado (. dll o. exe) a tr
   
 2.  Escriba **regedit** y haga clic en **Aceptar**.  
   
-3.  En el editor del registro, navegue hasta la clave del registro **HKEY_LOCAL_MACHINE \system\currentcontrolset\services\w3svc\parameters\adclaunch** .  
+3.  En el editor del registro, navegue hasta la clave del registro **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch** .  
   
 4.  Seleccione la clave **ADCLaunch** y, a continuación, en el menú **edición**, seleccione **nuevo** y haga clic en **clave**.  
   

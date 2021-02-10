@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b394ab30d4ee8d73e879abe2687e1208ba3188ad
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c688816872dfe8fbb061173b5aa645f7035ef99f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161018"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035965"
 ---
 # <a name="absoluteposition-property-ado"></a>Propiedad AbsolutePosition (ADO)
 Indica la posición ordinal del registro actual de un objeto de [conjunto de registros](./recordset-object-ado.md) .  

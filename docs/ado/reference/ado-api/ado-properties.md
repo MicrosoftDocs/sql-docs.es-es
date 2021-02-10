@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bdacd558161c09d1d43f590f9f355e14da262b14
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f29b56b54c2800a77ac76134f0c946f09e34a621
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164885"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035725"
 ---
 # <a name="ado-properties"></a>Propiedades de ADO
 
@@ -79,7 +79,7 @@ ms.locfileid: "99164885"
 |[Proveedor](./provider-property-ado.md)|Indica el nombre del proveedor de un objeto de **conexión** .|  
 |[RecordCount](./recordcount-property-ado.md)|Indica el número de registros de un objeto de **conjunto de registros** .|  
 |[RecordType](./recordtype-property-ado.md)|Indica el tipo de objeto de **registro** .|  
-|[Row](./row-property-ado.md)|Obtiene o establece un objeto de **fila** OLE DB de/en un objeto **ADORecordConstruction** .|  
+|[Fila](./row-property-ado.md)|Obtiene o establece un objeto de **fila** OLE DB de/en un objeto **ADORecordConstruction** .|  
 |[RowPosition](./rowposition-property-ado.md)|Obtiene o establece un objeto **RowPosition** OLE DB de/en un objeto **ADORecordsetConstruction** .|  
 |[Conjunto de filas](./rowset-property-ado.md)|Obtiene o establece un objeto de **conjunto de filas** OLE DB de/en un objeto **ADORecordsetConstruction** .|  
 |[Origen (error de ADO)](./source-property-ado-error.md)|Indica el nombre del objeto o la aplicación que originalmente generó un error.|  
@@ -91,7 +91,7 @@ ms.locfileid: "99164885"
 |[Status (conjunto de registros ADO)](./status-property-ado-recordset.md)|Indica el estado del registro actual en relación con las actualizaciones por lotes u otras operaciones masivas.|  
 |[StayInSync](./stayinsync-property.md)|Indica, en un objeto de **conjunto de registros** jerárquico, si la referencia a los registros secundarios subyacentes (es decir, el *capítulo*) cambia cuando cambia la posición de la fila primaria.|  
 |[Propiedad de la secuencia](./stream-property.md)|Obtiene o establece un objeto de **flujo** de OLE DB de/en un objeto **ADOStreamConstruction** .|  
-|[Type](./type-property-ado.md)|Indica el tipo operativo o el tipo de datos de un **parámetro**, **campo** o objeto de **propiedad** .|  
+|[Tipo](./type-property-ado.md)|Indica el tipo operativo o el tipo de datos de un **parámetro**, **campo** o objeto de **propiedad** .|  
 |[Type (secuencia de ADO)](./type-property-ado-stream.md)|Indica el tipo de datos contenidos en la **secuencia** (binario o de texto).|  
 |[UnderlyingValue](./underlyingvalue-property.md)|Indica el valor actual de la base de datos para un objeto de **campo** .|  
 |[Valor](./value-property-ado.md)|Indica el valor asignado a un **campo**, un **parámetro** o un objeto de **propiedad** .|  

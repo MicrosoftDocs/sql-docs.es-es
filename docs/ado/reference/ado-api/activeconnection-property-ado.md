@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efcb376c9ad27dff5a0c85d73f70ae4000385e3d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 318bb7478bdbc6f3b4007f788045438cdb91dfe3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159233"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035925"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection (propiedad, ADO)
 Indica a qué objeto de [conexión](./connection-object-ado.md) pertenece actualmente el objeto de [comando](./command-object-ado.md), [conjunto de registros](./recordset-object-ado.md)o [registro](./record-object-ado.md) especificado.  
@@ -34,14 +34,14 @@ Indica a qué objeto de [conexión](./connection-object-ado.md) pertenece actual
 ## <a name="remarks"></a>Observaciones  
  Use la propiedad **ActiveConnection** para determinar el objeto de **conexión** en el que se ejecutará el objeto de **comando** especificado o se abrirá el **conjunto de registros** especificado.  
   
-## <a name="command"></a>Comando  
+## <a name="command"></a>Get-Help  
  En el caso de los objetos de **comando** , la propiedad **ActiveConnection** es de lectura y escritura.  
   
  Si intenta llamar al método [Execute](./execute-method-ado-command.md) en un objeto **Command** antes de establecer esta propiedad en un objeto de **conexión** abierto o en una cadena de conexión válida, se produce un error.  
   
  Si se asigna un objeto de **conexión** a la propiedad **ActiveConnection** , se debe abrir el objeto. Al asignar un objeto de conexión cerrado, se produce un error.  
   
-### <a name="note"></a>Nota  
+### <a name="note"></a>Nota:  
  **Microsoft Visual Basic** Si se establece la propiedad **ActiveConnection** en *Nothing* , se Desasocia el objeto de **comando** de la **conexión** actual y hace que el proveedor libere los recursos asociados en el origen de datos. A continuación, puede asociar el objeto de **comando** con el mismo u otro objeto de **conexión** . Algunos proveedores permiten cambiar la configuración de la propiedad de una **conexión** a otra, sin tener que establecer primero la propiedad en *nada*.  
   
  Si la colección de [parámetros](./parameters-collection-ado.md) del objeto de **comando** contiene parámetros proporcionados por el proveedor, la colección se borra si se establece la propiedad **ActiveConnection** en *Nothing* o en otro objeto de **conexión** . Si crea manualmente objetos de [parámetro](./parameter-object.md) y los usa para rellenar la colección de **parámetros** del objeto de **comando** , al establecer la propiedad **ActiveConnection** en *Nothing* o en otro objeto de **conexión** , la colección de **parámetros** queda intacta.  

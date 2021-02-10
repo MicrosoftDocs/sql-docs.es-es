@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26d8a458b9bc1b477dd74ade09ad742c15ac73e8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c0be8adfc9fdcf85df12768571567ce832c2f69a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721436"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036475"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimización del uso de espacio de archivo de registro
 Un archivo de registro puede llenarse rápidamente (con lo que se detiene el servidor) si hay un gran volumen de actividad en una base de datos de SQL Server. Puede establecer el archivo de registro en **truncar en el punto de comprobación** para ampliar significativamente la duración del archivo de registro de una base de datos.  
@@ -34,7 +34,7 @@ Un archivo de registro puede llenarse rápidamente (con lo que se detiene el ser
   
 3.  En la pestaña **base de datos** , seleccione **truncar**.  
   
-4.  En la pestaña **Opciones** , seleccione **truncar registro en punto de comprobación**y, a continuación, haga clic en **Aceptar**.  
+4.  En la pestaña **Opciones** , seleccione **truncar registro en punto de comprobación** y, a continuación, haga clic en **Aceptar**.  
   
 ### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-70"></a>Para habilitar TRUNCATE on Checkpoint en Microsoft SQL Server 7,0  
   
@@ -42,7 +42,7 @@ Un archivo de registro puede llenarse rápidamente (con lo que se detiene el ser
   
 2.  Haga clic con el botón secundario en el nombre de la base de datos en la que se habilitará esta característica y elija **propiedades**.  
   
-3.  En la pestaña **Opciones** , seleccione **truncar registro en punto de comprobación**y, a continuación, haga clic en **Aceptar**.  
+3.  En la pestaña **Opciones** , seleccione **truncar registro en punto de comprobación** y, a continuación, haga clic en **Aceptar**.  
   
  Para obtener más información acerca de la característica **truncar en punto de comprobación** , consulte la documentación de Microsoft SQL Server.  
   

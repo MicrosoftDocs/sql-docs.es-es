@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d3d765cbeba49a5c34bbc5529d833cefc5bb1ab
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0a074ca1e5f50e9d9b634fd67cfceeae353c436e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167912"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035757"
 ---
 # <a name="ado-dynamic-property-index"></a>Índice de propiedades dinámicas de ADO
 Los proveedores de datos, los proveedores de servicios y los componentes de servicio pueden agregar propiedades dinámicas a las colecciones de **propiedades** de los objetos [Connection](./connection-object-ado.md) y [Recordset](./recordset-object-ado.md) no abiertos. Un proveedor determinado también puede insertar propiedades adicionales cuando se abren estos objetos. Algunas de estas propiedades se muestran en la sección [propiedades dinámicas de ADO](./ado-dynamic-properties.md) . Encontrará más información en los proveedores específicos de la sección [Apéndice A: proveedores](../../guide/appendixes/appendix-a-providers.md) .  
@@ -57,7 +57,7 @@ Los proveedores de datos, los proveedores de servicios y los componentes de serv
 |Tamaño máximo de fila|DBPROP_MAXROWSIZE|  
 |El tamaño máximo de fila incluye BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |Número máximo de tablas en SELECT|DBPROP_MAXTABLESINSELECT|  
-|Mode|DBPROP_INIT_MODE|  
+|Modo|DBPROP_INIT_MODE|  
 |Varios conjuntos de parámetros|DBPROP_MULTIPLEPARAMSETS|  
 |Varios resultados|DBPROP_MULTIPLERESULTS|  
 |Varios objetos de almacenamiento|DBPROP_MULTIPLESTORAGEOBJECTS|  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71424db7a06dc8b1d5d47a3505e90ffaf175cc3b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8dd77c7bd3e7c92ec5eb970d0134db4e6e39258f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167829"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035495"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF (propiedades) (ADO)
 -   **BOF** Indica que la posición del registro actual es anterior al primer registro de un objeto de [conjunto de registros](./recordset-object-ado.md) .  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0550e12f67538e9872797031146a34c83a0ec87f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8e36c60e0c3e56ab0c159c362e98c2280e6c5426
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721366"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036402"
 ---
 # <a name="running-the-address-book-sql-script"></a>Ejecución del script de SQL de la libreta de direcciones
 > [!IMPORTANT]
@@ -41,7 +41,7 @@ ms.locfileid: "91721366"
   
 #### <a name="to-run-the-sampleempsql-script-in-microsoft-sql-server-65"></a>Para ejecutar el script Sampleemp. SQL en Microsoft SQL Server 6,5  
   
-1.  Haga clic en **Inicio**, elija **programas**y, a continuación, seleccione **Microsoft SQL Server 6,5**. Haga clic en **Administrador corporativo de SQL**.  
+1.  Haga clic en **Inicio**, elija **programas** y, a continuación, seleccione **Microsoft SQL Server 6,5**. Haga clic en **Administrador corporativo de SQL**.  
   
 2.  En el menú **herramientas** , haga clic en **herramienta de consulta SQL**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "91721366"
   
 #### <a name="to-run-the-sampleempsql-script-in-microsoft-sql-server-70"></a>Para ejecutar el script Sampleemp. SQL en Microsoft SQL Server 7,0  
   
-1.  Haga clic en **Inicio**, elija **programas**y, a continuación, seleccione **Microsoft SQL Server 7,0**. Haga clic en **Administrador corporativo**.  
+1.  Haga clic en **Inicio**, elija **programas** y, a continuación, seleccione **Microsoft SQL Server 7,0**. Haga clic en **Administrador corporativo**.  
   
 2.  Asegúrese de que la SQL Server que desea usar está seleccionada en la lista de servidores registrados en el Administrador corporativo.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "91721366"
   
 6.  Haga clic en el botón **Ejecutar consulta** (la flecha verde en la barra de herramientas) o **F5**.  
   
-7.  Una vez ejecutada, cierre las ventanas **consulta**, **analizador de consultas**y **Administrador corporativo** .  
+7.  Una vez ejecutada, cierre las ventanas **consulta**, **analizador de consultas** y **Administrador corporativo** .  
   
 ## <a name="see-also"></a>Consulte también  
  [Ejecución de la aplicación de ejemplo de la libreta de direcciones](./running-the-address-book-sample-application.md)

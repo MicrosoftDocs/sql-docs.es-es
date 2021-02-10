@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: edbafa81c787bb4dafed6688f43907a87504c3c7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4784dbd1de8cf29476b4873ce79b704925e06dfd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164735"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035505"
 ---
 # <a name="cancelbatch-method-ado"></a>Método CancelBatch (ADO)
 Cancela una actualización por lotes pendiente.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70f91e85010abb784291c3c9eca52b9a74ed6286
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b2b9294b3024a3d4a7dbfd51baadb2474b7715ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721396"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036415"
 ---
 # <a name="rds-tutorial"></a>Tutorial de RDS
 En este tutorial se muestra el uso del modelo de programación RDS para consultar y actualizar un origen de datos. En primer lugar, se describen los pasos necesarios para realizar esta tarea. A continuación, el tutorial se repite en Microsoft® Visual Basic Scripting Edition (que incluye ADO para Windows Foundation Classes (ADO/WFC)).  
