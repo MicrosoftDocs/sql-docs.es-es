@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2d0130d00c86830614242363914105605031ef4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: bf3a704b26e35c77d9ba7ba059978091002cc424
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979436"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036945"
 ---
 # <a name="the-field-object"></a>El objeto de campo
 Cada objeto de **campo** suele corresponder a una columna de una tabla de base de datos. Sin embargo, un **campo** también puede representar un puntero a otro **conjunto de registros**, denominado capítulo. Las excepciones, como las columnas de capítulo, se tratarán más adelante en esta guía.  
@@ -31,7 +31,7 @@ Cada objeto de **campo** suele corresponder a una columna de una tabla de base d
   
 -   Ver o cambiar los datos del campo con la propiedad **valor** . **Value** es la propiedad predeterminada del objeto **Field** .  
   
--   Devuelve las características básicas de un campo mediante las propiedades **Type**, **Precision**y **NumericScale** .  
+-   Devuelve las características básicas de un campo mediante las propiedades **Type**, **Precision** y **NumericScale** .  
   
 -   Devuelve el tamaño declarado de un campo mediante la propiedad **DefinedSize** .  
   
@@ -44,7 +44,7 @@ Cada objeto de **campo** suele corresponder a una columna de una tabla de base d
  Resuelva las discrepancias en los valores de campo durante la actualización por lotes mediante las propiedades **OriginalValue** y **UnderlyingValue** , si el proveedor admite las actualizaciones por lotes.  
   
 ## <a name="describing-a-field"></a>Descripción de un campo  
- En los temas siguientes se explican las propiedades del objeto de [campo](../../../ado/reference/ado-api/field-object.md) que representan información que describe el propio objeto de **campo** , es decir, metadatos sobre el campo. Esta información se puede usar para determinar mucho sobre el esquema del **conjunto de registros**. Entre estas propiedades se incluyen **Type**, **DefinedSize** y **ActualSize**, **Name**y **NumericScale** y **Precision**.  
+ En los temas siguientes se explican las propiedades del objeto de [campo](../../../ado/reference/ado-api/field-object.md) que representan información que describe el propio objeto de **campo** , es decir, metadatos sobre el campo. Esta información se puede usar para determinar mucho sobre el esquema del **conjunto de registros**. Entre estas propiedades se incluyen **Type**, **DefinedSize** y **ActualSize**, **Name** y **NumericScale** y **Precision**.  
   
 ### <a name="discovering-the-data-type"></a>Detección del tipo de datos  
  La propiedad **Type** indica el tipo de datos del campo. Las constantes enumeradas de tipo de datos que admite ADO se describen en [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) en la *Referencia del programador de ADO*.  
@@ -64,7 +64,7 @@ Cada objeto de **campo** suele corresponder a una columna de una tabla de base d
  Para cambiar los datos de un campo, establezca la propiedad **Value** en un nuevo valor del tipo correcto. El tipo de cursor debe admitir las actualizaciones para cambiar el contenido de un campo. La validación de la base de datos no se realiza aquí en modo por lotes, por lo que tendrá que comprobar si hay errores al llamar a **UpdateBatch** en ese caso. Algunos proveedores también admiten las propiedades **UnderlyingValue** y **OriginalValue** del objeto de **campo** de ADO para ayudarle a resolver conflictos al intentar realizar actualizaciones por lotes. Para obtener más información sobre cómo resolver estos conflictos, vea [Editar datos](../../../ado/guide/data/editing-data.md).  
   
 > [!NOTE]
->  No se pueden establecer los valores de los **campos del conjunto de registros** al anexar nuevos **campos** a un **conjunto de registros**. En su lugar, se pueden anexar nuevos **campos** a un **conjunto de registros**cerrado. A continuación, se debe abrir el **conjunto de registros** y solo se pueden asignar valores a estos **campos**.  
+>  No se pueden establecer los valores de los **campos del conjunto de registros** al anexar nuevos **campos** a un **conjunto de registros**. En su lugar, se pueden anexar nuevos **campos** a un **conjunto de registros** cerrado. A continuación, se debe abrir el **conjunto de registros** y solo se pueden asignar valores a estos **campos**.  
   
 ### <a name="getting-more-field-information"></a>Obtener más información de campo  
  Los objetos ADO tienen dos tipos de propiedades: integrado y dinámico. Hasta este momento, solo se han analizado las propiedades integradas del objeto de **campo** .  

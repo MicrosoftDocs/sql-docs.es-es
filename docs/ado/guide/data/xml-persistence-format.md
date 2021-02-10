@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2da0090b9e06a9df7692a27242a08303174f51aa
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3a1a1b832f9e34cbf99e5fd01c424bf54c50c3bc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978836"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036725"
 ---
 # <a name="xml-persistence-format"></a>Formato de persistencia de XML
 ADO utiliza la codificación UTF-8 para la secuencia XML que persiste.  
@@ -67,7 +67,7 @@ xmlns:z="#RowsetSchema">
   
  El esquema muestra las declaraciones de espacios de nombres, la sección de esquema y la sección de datos. La sección Schema contiene las definiciones de Row, ShipperID, CompanyName y Phone.  
   
- Las definiciones de esquema se ajustan a la [especificación de datos XML del consorcio W3C](http://www.w3.org/TR/1998/NOTE-XML-data/) y se pueden validar completamente (aunque no se producirá la validación en Internet Explorer 5). XML-Data es actualmente el único formato de esquema admitido para la persistencia del conjunto de registros.  
+ Las definiciones de esquema se ajustan a la [especificación del XML-Data del W3C](http://www.w3.org/TR/1998/NOTE-XML-data/) y se pueden validar completamente (aunque no se producirá la validación en Internet Explorer 5). XML-Data es actualmente el único formato de esquema admitido para la persistencia del conjunto de registros.  
   
  La sección de datos tiene tres filas que contienen información acerca de los distribuidores. Para un conjunto de filas vacío, la sección de datos puede estar vacía, pero las \<rs:data> etiquetas deben estar presentes. Sin datos, puede escribir la abreviatura de la etiqueta como simplemente \<rs:data/> . Cualquier etiqueta con el prefijo "RS" indica que se encuentra en el espacio de nombres definido por urn: schemas-microsoft-com: RowSet.  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 636e4822be1ecce136302b7f36289857546eab2f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: aae6cbd7d843771fbf88d6d257706ce66e424745
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978976"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036765"
 ---
 # <a name="using-pages"></a>Usando las páginas
 Use la propiedad **PageCount** para determinar el número de páginas de datos que se encuentran en el objeto de **conjunto de registros** . *Las páginas* son grupos de registros cuyo tamaño es igual al valor de la propiedad **pageSize** . Incluso si la última página está incompleta porque hay menos registros que el valor de **pageSize** , cuenta como página adicional en el valor de **PageCount** . Si el objeto de **conjunto de registros** no admite esta propiedad, **PageCount** será-1 para indicar que **PageCount** es Indeterminista.  

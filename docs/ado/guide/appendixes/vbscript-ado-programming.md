@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b89d247f5bc91ca0b3494c15d3781116b8c9614
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 31e6c98d12c6c6f472053634d8b3aea314ccbab2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990926"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037875"
 ---
 # <a name="vbscript-ado-programming"></a>Programación ADO en VBScript
 ## <a name="creating-an-ado-project"></a>Crear un proyecto de ADO  
@@ -51,8 +51,8 @@ Set Rs1 = Server.CreateObject( "ADODB.Recordset" )
  El código siguiente es un ejemplo genérico de programación del lado servidor de VBScript en un archivo de Active Server página (ASP):  
   
 ```vb
-<%  @LANGUAGE="VBSCRIPT" %>  
-<%  Option Explicit %>  
+<%  @LANGUAGE="VBSCRIPT" %>  
+<%  Option Explicit %>  
 <!--#include File="adovbs.inc"-->  
 <HTML>  
     <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
@@ -84,4 +84,4 @@ Response.Write("Success!")
   
 -   No se puede usar **on error \<label> goto** en VBScript.  
   
--   VBScript admite algunas de las funciones de Visual Basic integradas como **MsgBox**, **Date**y **IsNumeric**. Sin embargo, dado que VBScript es un subconjunto de Visual Basic, no se admiten todas las funciones integradas. Por ejemplo, VBScript no admite la función de **formato** y las funciones de e/s de archivo.
+-   VBScript admite algunas de las funciones de Visual Basic integradas como **MsgBox**, **Date** y **IsNumeric**. Sin embargo, dado que VBScript es un subconjunto de Visual Basic, no se admiten todas las funciones integradas. Por ejemplo, VBScript no admite la función de **formato** y las funciones de e/s de archivo.

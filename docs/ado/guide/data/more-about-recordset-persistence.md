@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1dca646b07c441a4fccd617723aba98536f1a7e1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ce3b22ecd5913db0045f82e72aa20b0833a5109b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980336"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037265"
 ---
 # <a name="more-about-recordset-persistence"></a>Más información acerca de la persistencia de conjunto de registros
 El objeto ADO Recordset permite almacenar el contenido de un objeto de **conjunto de registros** en un archivo mediante el método [Save](../../reference/ado-api/save-method.md) . El archivo almacenado de forma persistente puede existir en una unidad local, en un servidor o como una dirección URL en un sitio Web. Más adelante, el archivo se puede restaurar con el método [Open](../../reference/ado-api/open-method-ado-recordset.md) del objeto **Recordset** o el método [Execute](../../reference/ado-api/execute-method-ado-connection.md) del objeto [Connection](../../reference/ado-api/connection-object-ado.md) .  
@@ -30,7 +30,7 @@ El objeto ADO Recordset permite almacenar el contenido de un objeto de **conjunt
   
  Para conservar un **conjunto de registros**, empiece convirtiéndolo en un formulario que pueda almacenarse en un archivo. Los objetos de **conjunto de registros** se pueden almacenar en el formato de TableGram de datos avanzados (ADTG) propietario o en el formato Open lenguaje de marcado extensible (XML). Los ejemplos de ADTG se muestran en la sección siguiente. Para obtener más información sobre la persistencia de XML, vea [guardar registros en formato XML](./persisting-records-in-xml-format.md).  
   
- Guarde los cambios pendientes en el archivo guardado. Esto permite emitir una consulta que devuelve un objeto de **conjunto de registros** , edita el **conjunto de registros**, lo guarda y los cambios pendientes, restaura posteriormente el conjunto de **registros**y, a continuación, actualiza el origen de datos con los cambios pendientes guardados.  
+ Guarde los cambios pendientes en el archivo guardado. Esto permite emitir una consulta que devuelve un objeto de **conjunto de registros** , edita el **conjunto de registros**, lo guarda y los cambios pendientes, restaura posteriormente el conjunto de **registros** y, a continuación, actualiza el origen de datos con los cambios pendientes guardados.  
   
  Para obtener información sobre el almacenamiento persistente de objetos de **flujo** , vea [secuencias y persistencia](./streams-and-persistence.md).  
   

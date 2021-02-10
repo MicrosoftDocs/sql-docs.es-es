@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37e1c5d081ccbcacaf50aa385a87afa9555ad2ca
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: dd6950ec37ddf974470e29ae554603723b299ef5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980526"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037355"
 ---
 # <a name="how-event-handlers-work-together"></a>Cómo funcionan conjuntamente los controladores de eventos
 A menos que esté programando en Visual Basic, se deben implementar todos los controladores de eventos para los eventos **Connection** y **Recordset** , independientemente de si realmente procesa todos los eventos. La cantidad de trabajo de implementación que tiene que hacer depende del lenguaje de programación. Para obtener más información, vea [creación de instancias de eventos de ADO por lenguaje](./ado-event-instantiation-by-language.md).  

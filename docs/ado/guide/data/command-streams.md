@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ae54835836fecdfbf3b026fe9e6a701a5602d3d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1c0872f20754d093020ece2830d389de32f09032
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991546"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037745"
 ---
 # <a name="command-streams"></a>Secuencias de comandos
 ADO siempre admite la entrada de comandos en el formato de cadena especificado por la propiedad **CommandText** . Como alternativa, con ADO 2,7 o posterior, también puede usar un flujo de información para la entrada de comandos mediante la asignación de la secuencia a la propiedad **CommandStream** . Puede asignar un objeto de **secuencia** de ADO o cualquier objeto que admita la interfaz **IStream** de com.  
@@ -64,7 +64,7 @@ Set adoCmd  = Server.CreateObject("ADODB.Command"")
 adoCmd.CommandStream = adoStreamQuery  
 ```  
   
- Especifique el **dialecto**del lenguaje de comandos, que indica cómo el SQL Server proveedor de OLE DB debe interpretar la secuencia de comandos. El dialecto especificado por un GUID específico del proveedor:  
+ Especifique el **dialecto** del lenguaje de comandos, que indica cómo el SQL Server proveedor de OLE DB debe interpretar la secuencia de comandos. El dialecto especificado por un GUID específico del proveedor:  
   
 ```  
 adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65ca384d89c4afbeeb24120debfd2ead5c2716ed
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a6b6ef12f2da2416e5f2c3c6e2e6c0c94e2c5327
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979556"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036985"
 ---
 # <a name="static-cursors"></a>Cursores estáticos
 El cursor estático siempre muestra el conjunto de resultados tal como estaba al abrir el cursor por primera vez. En función de la implementación, los cursores estáticos son de solo lectura o de lectura/escritura y proporcionan un desplazamiento hacia delante y hacia atrás. Normalmente, el cursor estático no detecta los cambios realizados en la pertenencia, el orden o los valores del conjunto de resultados una vez abierto el cursor. Los cursores estáticos pueden detectar sus propias operaciones de inserción, actualización y eliminación, aunque no está obligados a hacerlo.  

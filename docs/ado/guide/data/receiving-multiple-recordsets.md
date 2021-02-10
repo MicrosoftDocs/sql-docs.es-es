@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abac183f348553f30bf0cf5ed91725ef421afb3e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d0b4213b70498ea021b2267748c0f6fe3c6adf5a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979976"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037125"
 ---
 # <a name="receiving-multiple-recordsets"></a>Recibir varios conjuntos de registros
-El [proveedor de Microsoft OLE DB para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) admite la devolución de varios objetos de **conjunto de registros** para un único comando que contiene varias instrucciones SQL, un **conjunto de registros** por cada instrucción SQL. El orden en el que se devuelven los **conjuntos de registros**sigue el orden en el que se colocan las instrucciones SQL en el texto del comando.  
+El [proveedor de Microsoft OLE DB para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) admite la devolución de varios objetos de **conjunto de registros** para un único comando que contiene varias instrucciones SQL, un **conjunto de registros** por cada instrucción SQL. El orden en el que se devuelven los **conjuntos de registros** sigue el orden en el que se colocan las instrucciones SQL en el texto del comando.  
   
  El proveedor de OLE DB de Microsoft para SQL Server también devuelve varios conjuntos de comandos a ADO cuando el comando contiene una cláusula COMPUTE. Por ejemplo, un comando que contenga la siguiente instrucción SQL devolverá los resultados en dos objetos de **conjunto de registros** : uno para el conjunto de filas de (*ProductID*, *ProductName*, *UnitPrice*) y el otro para el precio medio de todos los productos de la tabla.  
   

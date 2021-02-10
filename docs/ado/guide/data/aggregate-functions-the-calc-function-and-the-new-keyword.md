@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b62e392325306bc358283874f4638077d8a4178
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 458a0f051e9bbf21c04b0c84125a1c438693f00d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991636"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037841"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Las funciones de agregado, la función CALC y la palabra clave NEW
 La forma de datos admite las siguientes funciones. El nombre asignado al capítulo que contiene la columna en la que se va a operar es el *alias de capítulo*.  
@@ -30,13 +30,13 @@ La forma de datos admite las siguientes funciones. El nombre asignado al capítu
   
 |Funciones de agregado|Descripción|  
 |-------------------------|-----------------|  
-|SUM (*Chapter-alias*.* nombre de columna*)|Calcula la suma de todos los valores de la columna especificada.|  
-|AVG (*Chapter-alias*.* nombre de columna*)|Calcula el promedio de todos los valores de la columna especificada.|  
-|MAX (*Chapter-alias*.* nombre de columna*)|Calcula el valor máximo de la columna especificada.|  
-|MIN (*Chapter-alias*.* nombre de columna*)|Calcula el valor mínimo de la columna especificada.|  
-|COUNT (*Chapter-alias*[.* nombre de columna*])|Cuenta el número de filas del alias especificado. Si se especifica una columna, solo se incluyen en el recuento las filas cuya columna no sea NULL.|  
-|STDEV (*Chapter-alias*.* nombre de columna*)|Calcula la desviación estándar de la columna especificada.|  
-|ANY (*alias de capítulo*.* nombre de columna*)|Valor de la columna especificada. ANY tiene un valor de predicción solo cuando el valor de la columna es el mismo para todas las filas del capítulo.<br /><br /> **Nota:** Si la columna no contiene el mismo valor para todas las filas del capítulo, el comando SHAPE devuelve arbitrariamente uno de los valores para que sea el valor de la función ANY.|  
+|SUM (*Chapter-alias*.*nombre de columna*)|Calcula la suma de todos los valores de la columna especificada.|  
+|AVG (*Chapter-alias*.*nombre de columna*)|Calcula el promedio de todos los valores de la columna especificada.|  
+|MAX (*Chapter-alias*.*nombre de columna*)|Calcula el valor máximo de la columna especificada.|  
+|MIN (*Chapter-alias*.*nombre de columna*)|Calcula el valor mínimo de la columna especificada.|  
+|COUNT (*Chapter-alias*[.*nombre de columna*])|Cuenta el número de filas del alias especificado. Si se especifica una columna, solo se incluyen en el recuento las filas cuya columna no sea NULL.|  
+|STDEV (*Chapter-alias*.*nombre de columna*)|Calcula la desviación estándar de la columna especificada.|  
+|ANY (*alias de capítulo*.*nombre de columna*)|Valor de la columna especificada. ANY tiene un valor de predicción solo cuando el valor de la columna es el mismo para todas las filas del capítulo.<br /><br /> **Nota:** Si la columna no contiene el mismo valor para todas las filas del capítulo, el comando SHAPE devuelve arbitrariamente uno de los valores para que sea el valor de la función ANY.|  
   
 |Expresión calculada|Descripción|  
 |---------------------------|-----------------|  

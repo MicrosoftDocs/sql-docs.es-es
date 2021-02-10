@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 11d2c02d24753460f90452ddd6cc6b1e1589b80b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7c6d62d410e6709c93ad6e3d04db627f14f091a1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979626"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036995"
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND Shape
-La cláusula APPEND del comando Shape anexa una o varias columnas a un **conjunto de registros**. Con frecuencia, estas columnas son columnas de capítulo, que hacen referencia a un **conjunto de registros**secundario.  
+La cláusula APPEND del comando Shape anexa una o varias columnas a un **conjunto de registros**. Con frecuencia, estas columnas son columnas de capítulo, que hacen referencia a un **conjunto de registros** secundario.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,7 +44,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
 -   La palabra clave TABLE, seguida del nombre de una tabla en el proveedor de datos.  
   
  *alias primario*  
- Alias opcional que hace referencia al conjunto de **registros**primario.  
+ Alias opcional que hace referencia al conjunto de **registros** primario.  
   
  *lista de columnas*  
  Uno o varios de los siguientes:  
@@ -71,12 +71,12 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   Otro comando de forma se inserta entre paréntesis.  
   
--   Nombre de un **conjunto de registros**con forma existente.  
+-   Nombre de un **conjunto de registros** con forma existente.  
   
 -   La palabra clave TABLE, seguida del nombre de una tabla en el proveedor de datos.  
   
  *alias secundario*  
- Un alias que hace referencia al **conjunto de registros**secundario.  
+ Un alias que hace referencia al **conjunto de registros** secundario.  
   
  *columna primaria*  
  Columna del conjunto de **registros** devuelta por el *comando primario.*  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 960e0f8cf42a2ef1f0b2b30f73a784d208777dae
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1c7b1b8493e6e8dd066ad2208e35d374cc0fadff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978936"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036745"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic para las funciones de aplicaciones
 Las siguientes funciones de Visual Basic para Aplicaciones se pueden usar en las expresiones de cálculo de la forma de datos:  
@@ -71,7 +71,7 @@ Las siguientes funciones de Visual Basic para Aplicaciones se pueden usar en las
     :::column-end:::
     :::column:::
         Hex$  
-        Hour  
+        Hora  
         IIF  
         InStr  
         Int  
@@ -99,7 +99,7 @@ Las siguientes funciones de Visual Basic para Aplicaciones se pueden usar en las
         Mid$  
         Minute  
         MIRR  
-        Month  
+        Month (Mes)  
         Ahora  
         NPer  
         NPV  
@@ -122,7 +122,7 @@ Las siguientes funciones de Visual Basic para Aplicaciones se pueden usar en las
         RTrim $  
         Segundo  
         Sgn  
-        Seno  
+        Sin  
         SLN  
         Space  
         Space$  
@@ -137,9 +137,9 @@ Las siguientes funciones de Visual Basic para Aplicaciones se pueden usar en las
         String$  
         SYD  
         Tan  
-        Hora  
+        Time  
         Time$  
-        Temporizador  
+        Timer  
         TimeSerial  
         TimeValue  
         Trim  
@@ -150,7 +150,7 @@ Las siguientes funciones de Visual Basic para Aplicaciones se pueden usar en las
         Val  
         VarType  
         Día de la semana  
-        Año  
+        Year  
     :::column-end:::
 :::row-end:::
 

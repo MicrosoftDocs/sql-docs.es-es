@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cbc2b4821ac5c57c2302892caff1afa742e829b9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 45842fd5035a8b52c68911d29a23a3414a776e02
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978696"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036695"
 ---
 # <a name="provider-support-for-adox-ado"></a>Compatibilidad del proveedor con ADOX (ADO)
 Ciertas características de ADOX no se admiten, en función del proveedor de datos de OLE DB. ADOX es totalmente compatible con el [proveedor de OLE DB para Microsoft Jet](../appendixes/microsoft-ole-db-provider-for-microsoft-jet.md). En las tablas siguientes se enumeran las características no admitidas con el [proveedor de microsoft OLE DB para SQL Server](../appendixes/microsoft-ole-db-provider-for-sql-server.md), el [proveedor de Microsoft OLE DB para ODBC](../appendixes/microsoft-ole-db-provider-for-odbc.md)o el [proveedor OLE DB de Microsoft para Oracle](../appendixes/microsoft-ole-db-provider-for-oracle.md) . ADOX no es compatible con ningún otro proveedor de Microsoft OLE DB.  

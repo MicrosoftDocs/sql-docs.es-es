@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 986c82ca73e202ea2f07ab20822c73dbfe6e7832
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f93c158a5572286e61ceacdaf95c5a0cd2153242
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980276"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037255"
 ---
 # <a name="named-commands"></a>Comandos con nombre
 [La creación y ejecución de un comando simple](./creating-and-executing-a-simple-command.md) muestra una manera de ejecutar un comando. Hay otra manera: puede convertirla en un comando con nombre y, a continuación, llamar a este comando con nombre directamente en el objeto de **conexión** (asignado a la propiedad **ActiveConnection** del objeto **Command** ). El nombre de un comando significa asignar un nombre a la propiedad **Name** de un objeto **Command** . Por ejemplo,  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 988eef3a3eb706480e50f0feb6d2fe363b4faabd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4234cf0e54ae3f3427264835e9f88a715052c2fa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991526"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037705"
 ---
 # <a name="connecting-to-data-sources"></a>Conectarse a orígenes de datos
 Un objeto de **conexión** ADO representa una sesión única con un origen de datos, incluido un DBMS, un almacén de archivos o un archivo de texto delimitado por comas. En el caso de un sistema de base de datos cliente/servidor, la conexión ADO puede ser una conexión de red real con el servidor.  

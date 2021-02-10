@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d64d6b417f6430cb834c48b8caf93e041a2084e8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 245a0cd91b9d6c7675df146d9d5808b42bb8c618
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978876"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036735"
 ---
 # <a name="what-is-a-lock"></a>¿Qué es un bloqueo?
 El bloqueo es el proceso por el que un DBMS restringe el acceso a una fila en un entorno de varios usuarios. Cuando una fila o columna está bloqueada de forma exclusiva, no se permite a otros usuarios obtener acceso a los datos bloqueados hasta que se libera el bloqueo. Esto garantiza que dos usuarios no puedan actualizar simultáneamente la misma columna de una fila.  

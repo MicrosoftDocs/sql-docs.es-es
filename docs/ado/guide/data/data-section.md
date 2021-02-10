@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac4febc789aca18401380ee8ada7b2ab7f9d30a3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 09b79b0001ff448ecd333a4ec601c4ff42febf6d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991456"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037665"
 ---
 # <a name="data-section"></a>Sección de datos
 La sección de datos define los datos del conjunto de filas junto con las actualizaciones, inserciones o eliminaciones pendientes. La sección de datos puede contener cero o más filas. Solo puede contener datos de un conjunto de filas donde la fila esté definida por el esquema. Además, como se indicó antes, se pueden omitir las columnas sin datos. Si se utiliza un atributo o subelemento en la sección de datos y esa construcción no se ha definido en la sección de esquema, se pasa por alto de forma silenciosa.  
@@ -36,11 +36,11 @@ La sección de datos define los datos del conjunto de filas junto con las actual
  Los datos binarios son bin. hex codificado (es decir, un byte se asigna a dos caracteres, un carácter por recorte).  
   
 ## <a name="datetime"></a>DateTime  
- El formato de la variante VT_DATE no es compatible directamente con los tipos de datos de datos XML. El formato correcto para las fechas con un componente de datos y de hora es aaaa-mm-ddThh: mm: SS.  
+ El formato de la variante VT_DATE no es compatible directamente con los tipos de datos de XML-Data. El formato correcto para las fechas con un componente de datos y de hora es aaaa-mm-ddThh: mm: SS.  
   
- Para obtener más información sobre los formatos de fecha especificados por XML, vea la [especificación de datos XML del consorcio W3C](https://go.microsoft.com/fwlink/?LinkId=5692).  
+ Para obtener más información acerca de los formatos de fecha especificados por XML, vea la [especificación del W3C XML-Data](https://go.microsoft.com/fwlink/?LinkId=5692).  
   
- Cuando la especificación de datos XML define dos tipos de datos equivalentes (por ejemplo, I4 = = int), ADO escribirá el nombre descriptivo, pero leerá en ambos.  
+ Cuando la especificación de XML-Data define dos tipos de datos equivalentes (por ejemplo, I4 = = int), ADO escribirá el nombre descriptivo, pero leerá en ambos.  
   
 ## <a name="managing-pending-changes"></a>Administrar cambios pendientes  
  Un conjunto de registros se puede abrir en modo de actualización inmediata o por lotes. Cuando se abren en modo de actualización por lotes con cursores de cliente, todos los cambios realizados en el conjunto de registros están en estado pendiente hasta que se llama al método UpdateBatch. Los cambios pendientes también se conservan cuando se guarda el conjunto de registros. En XML, se representan mediante el uso de los elementos "Update" definidos en urn: schemas-microsoft-com: RowSet. Además, si se puede actualizar un conjunto de filas, la propiedad actualizable debe establecerse en true en la definición de la fila. Por ejemplo, para definir que la tabla Shippers contiene cambios pendientes, la definición de la fila tendría un aspecto similar al siguiente.  

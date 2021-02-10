@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c84bf798dcdb543dd0ae407474aa68cfb06a9ba
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4071772212226b2b09886476c6577cac73cd3f79
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980346"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037275"
 ---
 # <a name="keyset-cursors"></a>Cursores KEYSET
 El cursor de conjunto de claves proporciona funcionalidad entre un cursor estático y dinámico en su capacidad para detectar cambios. Al igual que un cursor estático, no siempre detecta los cambios realizados en la pertenencia y el orden del conjunto de resultados. Como un cursor dinámico, detecta cambios en los valores de las filas del conjunto de resultados.  

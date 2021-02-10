@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3223d2291ba15ab0a2c14b1fac2aaea911bde395
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9f53092d1677afd0c6eec25c2bdcde6f75b47657
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980776"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037425"
 ---
 # <a name="getting-data"></a>Obtener datos
 En concreto, los [conceptos básicos de ADO](./ado-fundamentals.md)y el ejemplo de [HelloData](./hellodata-a-simple-ado-application.md) incorporaron las cuatro operaciones principales que intervienen en la creación de una aplicación ADO: obtención de datos, examen de datos, edición de datos y actualización de datos. En esta sección se explica cómo obtener datos con más detalle.  

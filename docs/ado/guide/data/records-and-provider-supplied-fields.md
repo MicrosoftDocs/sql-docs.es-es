@@ -1,6 +1,6 @@
 ---
 description: Registros y campos proporcionados por el proveedor
-title: Registros y campos proporcionados por el proveedor | Microsoft Docs
+title: Registros y Provider-Supplied campos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7cc7b8c4fb0116f96a2470a7161f9fbd30c7efb9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a64168a8a1fec81d47c337978ea75664fec0a10c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979956"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037115"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Registros y campos proporcionados por el proveedor
 Cuando se abre un objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) , su origen puede ser la fila actual de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)abierto, una dirección URL absoluta o una dirección URL relativa junto con un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) abierto.  
@@ -34,7 +34,7 @@ Cuando se abre un objeto de [registro](../../../ado/reference/ado-api/record-obj
   
  Un campo mantenido en común por el **registro** y el **conjunto de registros** se puede modificar en cualquier objeto. Sin embargo, el campo no se puede eliminar en el objeto de **registro** , aunque el proveedor subyacente puede admitir el establecimiento del campo en NULL.  
   
- Una vez abierto el **registro** , puede agregar campos mediante programación. También puede eliminar los campos que ha agregado, pero no puede eliminar los campos del conjunto de **registros**original.  
+ Una vez abierto el **registro** , puede agregar campos mediante programación. También puede eliminar los campos que ha agregado, pero no puede eliminar los campos del conjunto de **registros** original.  
   
  También puede abrir el objeto de **registro** directamente desde una dirección URL. En este caso, los campos agregados al **registro** dependen del proveedor subyacente. Actualmente, la mayoría de los proveedores agregan un conjunto de campos que describen la entidad representada por el **registro**. Si la entidad está compuesta de un flujo de bytes, como un archivo simple, un objeto de [flujo](../../../ado/reference/ado-api/stream-object-ado.md) normalmente se puede abrir desde el **registro**.  
   
@@ -56,26 +56,26 @@ Cuando se abre un objeto de [registro](../../../ado/reference/ado-api/record-obj
 ## <a name="resource-recordset-columns"></a>Columnas de conjunto de registros de recursos  
  Un *conjunto de registros de recursos* consta de las siguientes columnas.  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
-|RESOURCE_PARSENAME|AdVarWChar|Sólo lectura. Indica la dirección URL del recurso.|  
-|RESOURCE_PARENTNAME|AdVarWChar|Sólo lectura. Indica la dirección URL absoluta del Registro primario.|  
-|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|Sólo lectura. Indica la dirección URL absoluta del recurso, que es la concatenación de PARENTNAME y PARSENAME.|  
+|RESOURCE_PARSENAME|AdVarWChar|Solo lectura. Indica la dirección URL del recurso.|  
+|RESOURCE_PARENTNAME|AdVarWChar|Solo lectura. Indica la dirección URL absoluta del Registro primario.|  
+|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|Solo lectura. Indica la dirección URL absoluta del recurso, que es la concatenación de PARENTNAME y PARSENAME.|  
 |RESOURCE_ISHIDDEN|AdBoolean|True si el recurso está oculto. No se devolverá ninguna fila a menos que el comando que crea el conjunto de filas seleccione explícitamente las filas en las que RESOURCE_ISHIDDEN sea true.|  
 |RESOURCE_ISREADONLY|AdBoolean|True si el recurso es de solo lectura. Intenta abrir este recurso con DBBINDFLAG_WRITE y producirá un error con DB_E_READONLY. Esta propiedad se puede editar incluso cuando el recurso solo se ha abierto para lectura.|  
 |RESOURCE_CONTENTTYPE|AdVarWChar|Indica el uso probable del documento (por ejemplo, la breve de un abogado). Esto puede corresponder a la plantilla de Office que se usó para crear el documento.|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|Indica el tipo MIME del documento, que indica el formato, por ejemplo, " `text/html` ".|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indica el idioma en el que se almacena el contenido.|  
-|RESOURCE_CREATIONTIME|adFileTime|Sólo lectura. Indica una estructura FILETIME que contiene la hora a la que se creó el recurso. La hora se registra en formato de hora universal coordinada (UTC).|  
-|RESOURCE_LASTACCESSTIME|AdFileTime|Sólo lectura. Indica una estructura FILETIME que contiene la hora a la que se produjo el último acceso al recurso. La hora está en formato UTC. Los miembros FILETIME son cero si el proveedor no admite este miembro de hora.|  
-|RESOURCE_LASTWRITETIME|AdFileTime|Sólo lectura. Indica una estructura FILETIME que contiene la hora en que se escribió por última vez en el recurso. La hora está en formato UTC. Los miembros FILETIME son cero si el proveedor no admite este miembro de hora.|  
-|RESOURCE_STREAMSIZE|asUnsignedBigInt|Sólo lectura. Indica el tamaño de la secuencia predeterminada del recurso, en bytes.|  
-|RESOURCE_ISCOLLECTION|AdBoolean|Sólo lectura. True si el recurso es una colección, como un directorio. False si el recurso es un archivo simple.|  
+|RESOURCE_CREATIONTIME|adFileTime|Solo lectura. Indica una estructura FILETIME que contiene la hora a la que se creó el recurso. La hora se registra en formato de hora universal coordinada (UTC).|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|Solo lectura. Indica una estructura FILETIME que contiene la hora a la que se produjo el último acceso al recurso. La hora está en formato UTC. Los miembros FILETIME son cero si el proveedor no admite este miembro de hora.|  
+|RESOURCE_LASTWRITETIME|AdFileTime|Solo lectura. Indica una estructura FILETIME que contiene la hora en que se escribió por última vez en el recurso. La hora está en formato UTC. Los miembros FILETIME son cero si el proveedor no admite este miembro de hora.|  
+|RESOURCE_STREAMSIZE|asUnsignedBigInt|Solo lectura. Indica el tamaño de la secuencia predeterminada del recurso, en bytes.|  
+|RESOURCE_ISCOLLECTION|AdBoolean|Solo lectura. True si el recurso es una colección, como un directorio. False si el recurso es un archivo simple.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|True si el recurso es un documento estructurado. False si el recurso no es un documento estructurado. Podría ser una colección o un archivo simple.|  
-|DEFAULT_DOCUMENT|AdVarWChar|Sólo lectura. Indica que este recurso contiene una dirección URL para el documento simple predeterminado de una carpeta o un documento estructurado. Se usa cuando se solicita la secuencia predeterminada de un recurso. Esta propiedad está en blanco para un archivo simple.|  
-|CHAPTERED_CHILDREN|AdChapter|Sólo lectura. Opcional. Indica el capítulo del conjunto de filas que contiene los elementos secundarios del recurso. (El *proveedor de OLE DB para la publicación en Internet* no usa esta columna).|  
-|RESOURCE_DISPLAYNAME|AdVarWChar|Sólo lectura. Indica el nombre para mostrar del recurso.|  
-|RESOURCE_ISROOT|AdBoolean|Sólo lectura. True si el recurso es la raíz de una colección o un documento estructurado.|  
+|DEFAULT_DOCUMENT|AdVarWChar|Solo lectura. Indica que este recurso contiene una dirección URL para el documento simple predeterminado de una carpeta o un documento estructurado. Se usa cuando se solicita la secuencia predeterminada de un recurso. Esta propiedad está en blanco para un archivo simple.|  
+|CHAPTERED_CHILDREN|AdChapter|Solo lectura. Opcional. Indica el capítulo del conjunto de filas que contiene los elementos secundarios del recurso. (El *proveedor de OLE DB para la publicación en Internet* no usa esta columna).|  
+|RESOURCE_DISPLAYNAME|AdVarWChar|Solo lectura. Indica el nombre para mostrar del recurso.|  
+|RESOURCE_ISROOT|AdBoolean|Solo lectura. True si el recurso es la raíz de una colección o un documento estructurado.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   

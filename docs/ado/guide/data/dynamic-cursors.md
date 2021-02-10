@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8ce85233cec96af3d804652225b4d14698287db
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d78686da853ad62ba4a3c70b36831798542efa36
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991356"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037525"
 ---
 # <a name="dynamic-cursors"></a>Cursores dinámicos
 Los cursores dinámicos detectan todos los cambios realizados en las filas del conjunto de resultados, independientemente de si los cambios se producen dentro del cursor o por otros usuarios fuera del cursor. Todas las instrucciones INSERT, Update y DELETE realizadas por todos los usuarios son visibles a través del cursor. El cursor dinámico puede detectar los cambios realizados en las filas, el orden y los valores del conjunto de resultados después de abrir el cursor. Las actualizaciones realizadas fuera del cursor no son visibles hasta que se confirman (a menos que el nivel de aislamiento de transacción del cursor se establezca en "uncommited").  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86789dbce8ab86035f815f36f8eff369b55401a3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f9a2ad809efbc847a2dfaf2292a15c1c7376e9b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980106"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037215"
 ---
 # <a name="persisting-data"></a>Conservar los datos
 La informática portátil (por ejemplo, el uso de equipos portátiles) ha generado la necesidad de aplicaciones que se pueden ejecutar en un estado conectado y desconectado. ADO ha agregado compatibilidad con esto al ofrecer al desarrollador la capacidad de guardar un conjunto de **registros** de cursor de cliente en el disco y volver a cargarlo más adelante.  
@@ -30,7 +30,7 @@ La informática portátil (por ejemplo, el uso de equipos portátiles) ha genera
   
 -   **Viajes:** Al poner en marcha la aplicación, es fundamental proporcionar la capacidad de realizar cambios y agregar nuevos registros que, a continuación, se pueden volver a conectar a la base de datos posteriormente y confirmarse.  
   
--   **Búsquedas con poca frecuencia:** A menudo, en una aplicación, las tablas se usan como búsquedas, por ejemplo, las tablas de impuestos estatales. Se actualizan con poca frecuencia y son de solo lectura. En lugar de volver a leer estos datos del servidor cada vez que se inicia la aplicación, la aplicación puede simplemente cargar los datos de un **conjunto de registros**guardado localmente.  
+-   **Búsquedas con poca frecuencia:** A menudo, en una aplicación, las tablas se usan como búsquedas, por ejemplo, las tablas de impuestos estatales. Se actualizan con poca frecuencia y son de solo lectura. En lugar de volver a leer estos datos del servidor cada vez que se inicia la aplicación, la aplicación puede simplemente cargar los datos de un **conjunto de registros** guardado localmente.  
   
  En ADO, para guardar y cargar **conjuntos de registros**, use los métodos **Recordset. Save** y **Recordset. Open (,,,, AdCmdFile)** en el objeto **Recordset** de ADO.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 41652f73868380d4902c7c6815a7ee53868c0969
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 36344c8b8c03677ac3b0ae25db097917d8d10d2a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724866"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036805"
 ---
 # <a name="using-a-connection-object"></a>Uso de un objeto de conexión
 Antes de abrir un objeto de **conexión** , debe definir cierta información sobre el origen de datos y el tipo de conexión. La mayor parte de esta información se mantiene mediante el parámetro *ConnectionString* del [método Open](../../../ado/reference/ado-api/open-method-ado-connection.md) en el objeto **Connection** , o mediante la [propiedad ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) en el objeto **Connection** . Una cadena de conexión consta de una lista de pares de argumentos y valores separados por punto y coma, con los valores entre comillas simples. Por ejemplo:  

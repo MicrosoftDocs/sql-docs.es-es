@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a28fa775c834725504075907f09dc00e95bce1ee
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4c92b847b95aacd5cf642c9646f4618dc5986abf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991396"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037635"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Detectar y resolver conflictos
 Si trabaja con el conjunto de registros en modo inmediato, hay mucha menos posibilidad de que se produzcan problemas de simultaneidad. Por otro lado, si la aplicación usa la actualización del modo por lotes, puede haber una buena posibilidad de que un usuario cambie un registro antes de que se guarden los cambios realizados por otro usuario que edite el mismo registro. En tal caso, querrá que la aplicación controle correctamente el conflicto. Es posible que desee que la última persona envíe una actualización al servidor "gana". O bien, puede que desee permitir que el usuario más reciente decida qué actualización debe tener prioridad proporcionándole una opción entre los dos valores en conflicto.  

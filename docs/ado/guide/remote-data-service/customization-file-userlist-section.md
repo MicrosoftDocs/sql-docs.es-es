@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b09e5f9356ad196e03c970623369d4918a6f5506
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4ca0d2e0a2bff2e5f9a3ea057220ac8cda14c9af
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724756"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036515"
 ---
 # <a name="customization-file-userlist-section"></a>Sección UserList del archivo de personalización
 La sección **userList** pertenece a la sección **Connect** con el mismo parámetro de *identificador* de sección.  

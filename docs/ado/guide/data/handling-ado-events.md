@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff36542abb462ffc63e8704a5c6c3cdd6670d280
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e3bcc0d4d436afcc10b4d079938adf2bad237d88
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980706"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037415"
 ---
 # <a name="handling-ado-events"></a>Control de eventos de ADO
 El modelo de eventos de ADO admite ciertas operaciones de ADO sincrónicas y asincrónicas que emiten *eventos*, o notificaciones, antes de que se inicie la operación o después de que se complete. Un evento es realmente una llamada a una rutina del controlador de eventos que se define en la aplicación.  
