@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 63b71709bd3c6f07c1dad3d7f3c471ecd267b202
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 13963a0902ba0b1602b270f373a9e1f2d0e0a4cf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171295"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025595"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Método Delete (colección de parámetros de ADO)
 Elimina un objeto de la colección de [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) .  

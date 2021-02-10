@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08d945b101ac91300793920e3e01ea0a9619b372
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2174610e0747f984babae59c4b00d1245d763db2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991056"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029279"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Proveedor de Microsoft OLE DB para el servicio Microsoft Active Directory
 El proveedor de interfaces de servicio Active Directory (ADSI) permite a ADO conectarse a servicios de directorio heterogéneos a través de ADSI. Esto proporciona a las aplicaciones ADO acceso de solo lectura a los servicios de directorio Microsoft Windows NT 4,0 y Microsoft Windows 2000, además de cualquier servicio de directorio compatible con LDAP y servicios de directorio de Novell. ADSI se basa en un modelo de proveedor, de modo que si hay un nuevo proveedor que concede acceso a otro directorio, la aplicación ADO podrá tener acceso a él sin problemas. El proveedor ADSI es de subprocesamiento libre y está habilitado para Unicode.  
@@ -60,7 +60,7 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*Raíces*|Indica el objeto **ADsPath** desde el que se va a iniciar la búsqueda (es decir, la raíz de la búsqueda).|  
 |*Filter*|Indica el filtro de búsqueda en el formato RFC 1960.|  
@@ -110,7 +110,7 @@ objectClass='user' AND objectCategory='Person'"
 |[PageSize](../../reference/ado-api/pagesize-property-ado.md)|lectura/escritura|  
 |[RecordCount](../../reference/ado-api/recordcount-property-ado.md)|solo lectura|  
 |[Origen](../../reference/ado-api/source-property-ado-recordset.md)|lectura/escritura|  
-|[State](../../reference/ado-api/state-property-ado.md)|solo lectura|  
+|[Estado](../../reference/ado-api/state-property-ado.md)|solo lectura|  
 |[Estado](../../reference/ado-api/status-property-ado-recordset.md)|solo lectura|  
   
  **Disponibilidad de métodos de conjunto de registros de ADO estándar:**  

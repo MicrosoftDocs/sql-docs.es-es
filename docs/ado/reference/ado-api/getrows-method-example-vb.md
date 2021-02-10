@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19192cdf3d85e2b25297f59d91e64be4653441ac
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 00000e6e053cc7782f234f1e59005c831402dc46
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170991"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020859"
 ---
 # <a name="getrows-method-example-vb"></a>Ejemplo del método GetRows (VB)
 En este ejemplo se usa el método [GetRows](./getrows-method-ado.md) para recuperar un número especificado de filas de un [conjunto de registros](./recordset-object-ado.md) y para rellenar una matriz con los datos resultantes. El método **GetRows** devolverá menos que el número deseado de filas en dos casos: si se ha alcanzado [EOF](./bof-eof-properties-ado.md) o si **GetRows** ha intentado recuperar un registro eliminado por otro usuario. La función devuelve **false** solo si se produce el segundo caso. La función GetRowsOK es necesaria para que este procedimiento se ejecute.  

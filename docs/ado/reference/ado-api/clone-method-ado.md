@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fbce7f960e4339bce3a8b3afa53e215987d2909
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 57bf5f2a4e9134ffdd497133c44741af8a84f2ac
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167781"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027113"
 ---
 # <a name="clone-method-ado"></a>Clone (método) (ADO)
 Crea un objeto de [conjunto de registros](./recordset-object-ado.md) duplicado a partir de un objeto de conjunto de **registros** existente. Opcionalmente, especifica que el clon es de solo lectura.  

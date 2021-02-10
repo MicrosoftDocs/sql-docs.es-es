@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c694a5051729a6ce9b925014ae93b5dbde11f5d9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 64dc0e750a999fa1a333a3ec94576583850e511e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164895"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027958"
 ---
 # <a name="ado-objects-and-interfaces"></a>Interfaces y objetos ADO
 Las relaciones entre estos objetos se representan en el [modelo de objetos ADO](./ado-object-model.md).  

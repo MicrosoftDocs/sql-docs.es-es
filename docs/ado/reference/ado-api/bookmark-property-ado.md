@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd484230ba2801abcb553fa8f9013dce53799b09
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 218303ca86738ce4fab8b944dec6d1bfe114cf30
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171557"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027555"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark (propiedad) (ADO)
 Indica un marcador que identifica de forma única el registro actual en un objeto de [conjunto de registros](./recordset-object-ado.md) o establece el registro actual de un objeto de **conjunto de registros** en el registro identificado por un marcador válido.  

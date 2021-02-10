@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d18917bdcc0a08c5fbddcc1ff908c5aed8ca1f9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b9baaa7e57ca10f1dc0e32d7fc5f477ee4f08100
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170170"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020374"
 ---
 # <a name="stream-object-ado"></a>Objeto de secuencia (ADO)
 Representa un flujo de datos binarios o de texto.  

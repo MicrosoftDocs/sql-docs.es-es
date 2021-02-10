@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d1626dd9ff1c97426a0597b010015adada4c17c7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b1cfaa8b75f7e8d1dfb5fc0cecf7e5d99634960a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167245"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020838"
 ---
 # <a name="getstring-method-ado"></a>GetString (método) (ADO)
 Devuelve el [conjunto de registros](./recordset-object-ado.md) como una cadena.  

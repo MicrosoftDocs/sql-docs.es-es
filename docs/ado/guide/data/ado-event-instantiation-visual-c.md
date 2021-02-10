@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68ccc1f5cc173f4ebd80ed093e88968c137c954f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fd479847766b8682025b2e4c6f047a5f4549d077
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991656"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028058"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>Creación de instancias de eventos de ADO: Visual C++
 Esta es una descripción esquemática de cómo crear instancias de eventos de ADO en Microsoft® Visual C++®. Vea el [ejemplo de modelo de eventos ADO (VC + +)](../../reference/ado-api/ado-events-model-example-vc.md) para obtener una descripción completa.  
@@ -66,7 +66,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- Las clases de eventos heredan de **IUnknown**, por lo que también debe implementar los métodos **QueryInterface**, **AddRef**y **Release** . Implemente también constructores y destructores de clase. Elija las herramientas de Visual C++ con las que se siente más cómodo para simplificar esta parte de la tarea.  
+ Las clases de eventos heredan de **IUnknown**, por lo que también debe implementar los métodos **QueryInterface**, **AddRef** y **Release** . Implemente también constructores y destructores de clase. Elija las herramientas de Visual C++ con las que se siente más cómodo para simplificar esta parte de la tarea.  
   
  Haga que sepa que los controladores de eventos están disponibles emitiendo **QueryInterface** en el conjunto de [registros](../../reference/ado-api/recordset-object-ado.md) y los objetos de [conexión](../../reference/ado-api/connection-object-ado.md) para las interfaces **IConnectionPointContainer** e **IConnectionPoint** . Después, emita **IConnectionPoint:: Advise** para cada clase.  
   

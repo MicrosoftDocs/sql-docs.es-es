@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4c2c4c093fec21723584538dfb5585a74e15c8fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cdbc6ac65fa24f8130bc92c03b62145370bedea
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492438"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017425"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Configuración del proyecto (conversión) (MySQLToSQL)
 La página conversión del cuadro de diálogo **configuración del proyecto** contiene opciones que personalizan cómo SSMA convierte la sintaxis de MySQL en SQL Server o SQL Azure sintaxis.  
@@ -111,6 +111,6 @@ El panel conversión está disponible en los cuadros de diálogo Configuración 
 |**Literales numéricos con una precisión superior a 38**|Especifica cómo convertir literales numéricos con una precisión superior a 38.<br /><br />**Modo predeterminado**: Round si es posible<br /><br />**Modo optimista**: Round si es posible<br /><br />**Modo completo**: Round si es posible|  
 |**Fecha cero en columnas NOT NULL**|Especifica cómo controlar la asignación a columnas NOT NULL de valores de fecha y hora de cero, cero o no válidos.<br /><br />**Modo predeterminado**: getDate ()<br /><br />**Modo optimista**: getDate ()<br /><br />**Modo completo**: getDate ()|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Referencia de la interfaz de usuario &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

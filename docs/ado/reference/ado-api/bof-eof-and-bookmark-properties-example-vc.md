@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7cfc7d8ffa447beccf4597beb63f54d5ba958f29
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ae45fb2eea6c971fe72d152d0ee6058dbfc81db5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164773"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027565"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>Ejemplo de las propiedades BOF, EOF y Bookmark (VC + +)
 La primera función de este ejemplo usa las propiedades [BOF](./bof-eof-properties-ado.md) y [EOF](./bof-eof-properties-ado.md) para mostrar un mensaje si un usuario intenta moverse más allá del primer o último registro de un [conjunto de registros](./recordset-object-ado.md). Usa la propiedad [Bookmark](./bookmark-property-ado.md) para permitir que el usuario Marque un registro en un **conjunto de registros** y vuelva a él más adelante.  

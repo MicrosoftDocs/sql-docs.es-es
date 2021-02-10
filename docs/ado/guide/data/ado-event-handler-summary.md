@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ddec7c573c7d208d80fe05dc8f15ba2d0d02c428
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a447c149769d892149096c980b35e77e49de05da
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991726"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028367"
 ---
 # <a name="ado-connection-and-recordset-events"></a>Eventos Connection y Recordset de ADO
 Dos objetos ADO pueden generar eventos: el objeto de [conexión](../../reference/ado-api/connection-object-ado.md) y el objeto de [conjunto de registros](../../reference/ado-api/recordset-object-ado.md) . La familia **ConnectionEvent** pertenece a las operaciones en el objeto de **conexión** y la familia **RecordsetEvent** pertenece a las operaciones en el objeto de conjunto de **registros** .
 
 -   **Eventos de conexión**: los eventos se emiten cuando se inicia una transacción en una conexión, se confirma o se revierte. Cuando se ejecuta un [comando](../../reference/ado-api/command-object-ado.md) ; Cuando se produce una advertencia durante una operación de **evento de conexión** ; o cuando se inicia o finaliza una **conexión** .
 
--   **Eventos de conjunto de registros**: los eventos se emiten en torno a las operaciones de captura asincrónicas y al navegar por las filas de un objeto de **conjunto de registros** , cambiar un campo de una fila de un **conjunto**de registros, cambiar una fila de un **conjunto de registros**, abrir un conjunto de **registros** con un cursor de servidor, cerrar un **conjunto de registros**o realizar cualquier cambio en el **conjunto**
+-   **Eventos de conjunto de registros**: los eventos se emiten en torno a las operaciones de captura asincrónicas y al navegar por las filas de un objeto de **conjunto de registros** , cambiar un campo de una fila de un **conjunto** de registros, cambiar una fila de un **conjunto de registros**, abrir un conjunto de **registros** con un cursor de servidor, cerrar un **conjunto de registros** o realizar cualquier cambio en el **conjunto**
 
  En las tablas siguientes se resumen los eventos y sus descripciones.
 

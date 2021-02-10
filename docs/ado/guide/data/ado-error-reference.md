@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83f3d5e9408180c4ff513f1457a2972a676fa726
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cfb6a2ede665c939aa5824810c692bdbe02df6c1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991746"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028377"
 ---
 # <a name="ado-errors"></a>Errores de tiempo de ejecución de ADO
 La constante **ErrorValueEnum** describe los valores de error de ADO. Para obtener una lista completa de estas constantes enumeradas, incluidos los valores, vea el [Apéndice B: errores de ADO](../appendixes/appendix-b-ado-errors.md). En esta sección se examinan algunos de los errores más interesantes y se explican algunas situaciones específicas que pueden generarlos, o soluciones para solucionar el problema. Se enumeran la constante **ErrorValueEnum** y el número decimal positivo corto.
@@ -42,7 +42,7 @@ La constante **ErrorValueEnum** describe los valores de error de ADO. Para obten
 |**3420**|**adErrObjectNotSet**|El objeto ya no es válido.|
 |**3421**|**adErrDataConversion**|La aplicación usa un valor de tipo incorrecto para la operación actual. Es posible que haya proporcionado una cadena a una operación que espera una secuencia, por ejemplo.|
 |**3704**|**adErrObjectClosed**|No se permite la operación cuando el objeto está cerrado. Se ha cerrado la **conexión** o el **conjunto de registros** . Por ejemplo, otra rutina podría haber cerrado un objeto global. Puede evitar este error comprobando la propiedad **State** antes de intentar una operación.|
-|**3705**|**adErrObjectOpen**|La operación no se permite cuando el objeto está abierto. No se puede abrir un objeto abierto. Los campos no se pueden anexar a un **conjunto de registros**abierto.|
+|**3705**|**adErrObjectOpen**|La operación no se permite cuando el objeto está abierto. No se puede abrir un objeto abierto. Los campos no se pueden anexar a un **conjunto de registros** abierto.|
 |**3706**|**adErrProviderNotFound**|No se encuentra el proveedor. Puede que no esté instalado correctamente.<br /><br /> Es posible que el nombre del proveedor esté especificado incorrectamente, que el proveedor especificado no esté instalado en el equipo en el que se ejecuta el código o que la instalación se haya dañado.|
 |**3707**|**adErrBoundToCommand**|No se puede cambiar la propiedad **ActiveConnection** de un objeto de **conjunto de registros** , que tiene un objeto de **comando** como origen. La aplicación intentó asignar un nuevo objeto de **conexión** a un **conjunto de registros** que tiene un objeto de **comando** como su origen.|
 |**3708**|**adErrInvalidParamInfo**|El objeto de **parámetro** no está definido correctamente. Se proporcionó información incoherente o incompleta.|
@@ -54,8 +54,8 @@ La constante **ErrorValueEnum** describe los valores de error de ADO. Para obten
 |**3714**|**adErrInvalidTransaction**|La coordinación de la transacción no es válida o no se ha iniciado.|
 |**3715**|**adErrNotExecuting**|No se puede realizar la operación mientras no se ejecuta.|
 |**3716**|**adErrUnsafeOperation**|La configuración de seguridad de este equipo prohíbe el acceso a un origen de datos en otro dominio.|
-|**3717**|**adWrnSecurityDialog**|Sólo para uso interno. No use. (La entrada se incluyó por razones de integridad. Este error no debería aparecer en el código).|
-|**3718**|**adWrnSecurityDialogHeader**|Sólo para uso interno. No use. (Entrada que se incluye en aras de la integridad. Este error no debería aparecer en el código).|
+|**3717**|**adWrnSecurityDialog**|Solo para uso interno. No use. (La entrada se incluyó por razones de integridad. Este error no debería aparecer en el código).|
+|**3718**|**adWrnSecurityDialogHeader**|Solo para uso interno. No use. (Entrada que se incluye en aras de la integridad. Este error no debería aparecer en el código).|
 |**3719**|**adErrIntegrityViolation**|El valor de los datos entra en conflicto con las restricciones de integridad del campo. Un nuevo valor para un **campo** produciría una clave duplicada. Un valor que constituye un lado de una relación entre dos registros podría no ser actualizable.|
 |**3720**|**adErrPermissionDenied**|Los permisos insuficientes evitan escribir en el campo. El usuario con el nombre en la cadena de conexión no tiene los permisos adecuados para escribir en un **campo**.|
 |**3721**|**adErrDataOverflow**|El valor de los datos es demasiado grande para representarlo en el tipo de datos del campo. Se asignó un valor numérico demasiado grande para el campo previsto. Por ejemplo, un valor entero largo se asignó a un campo entero corto.|
@@ -76,7 +76,7 @@ La constante **ErrorValueEnum** describe los valores de error de ADO. Para obten
 |**3736**|**adErrUnavailable**|No se pudo completar la operación y el estado no está disponible. El campo puede no estar disponible o no se intentó realizar la operación. Es posible que otro usuario haya cambiado o eliminado el campo al que está intentando obtener acceso.|
 |**3737**|**adErrURLNamedRowDoesNotExist**|El registro nombrado por esta dirección URL no existe. Al intentar abrir un archivo con un objeto de **registro** , el nombre de archivo o la ruta de acceso al archivo no se ha escrito correctamente.|
 |**3738**|**adErrDelResOutOfScope**|La dirección URL del objeto que se va a eliminar está fuera del ámbito del registro actual.|
-|**3747**|**adErrCatalogNotSet**|La operación requiere un **ParentCatalog**válido.|
+|**3747**|**adErrCatalogNotSet**|La operación requiere un **ParentCatalog** válido.|
 |**3748**|**adErrCantChangeConnection**|Se denegó la conexión. La nueva conexión que ha solicitado tiene características diferentes de la que ya está en uso.|
 |**3749**|**adErrFieldsUpdateFailed**|Error al actualizar los campos. Para obtener más información, examine la propiedad **status** de los objetos de campo individuales. Este error puede producirse en dos situaciones: al cambiar el valor de un objeto de **campo** en el proceso de cambiar o agregar un registro a la base de datos; y al cambiar las propiedades del propio objeto de **campo** .<br /><br /> No se pudo actualizar el **registro** o el **conjunto de registros** debido a un problema con uno de los campos del registro actual. Enumere la colección **Fields** y Compruebe la propiedad **status** de cada campo para determinar la causa del problema.|
 |**3750**|**adErrDenyNotSupported**|El proveedor no admite restricciones de uso compartido. Se intentó restringir el uso compartido de archivos y el proveedor no admite el concepto.|

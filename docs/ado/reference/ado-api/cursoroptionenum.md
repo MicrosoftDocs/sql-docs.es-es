@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00b50d99fa31e260118a93ce357c1afc4871e4ce
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 53916dc6392bc2889b694233c80dae809e254240
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171357"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025981"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 Especifica qué funcionalidad debe probar el método [Supports](./supports-method.md) .  

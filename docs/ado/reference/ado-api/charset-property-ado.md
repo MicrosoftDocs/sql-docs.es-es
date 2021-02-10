@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fa8b9b5d657208784cd6e9f78e033ebc84f51b6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e796c9a079bda856aaf6c1e25e19e1fe6d4d21b3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167788"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027123"
 ---
 # <a name="charset-property-ado"></a>Propiedad de conjunto de caracteres (ADO)
 Indica el juego de caracteres en el que se debe traducir el contenido de una [secuencia](./stream-object-ado.md) de texto para el almacenamiento en el búfer interno del objeto de **secuencia** .  

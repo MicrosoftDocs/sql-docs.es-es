@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07e5747e11cf3393e51c66a24c4c6fd5e6ade887
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a83d37c301d34c273514e4d6eb0551bc86429bd4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991086"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029379"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Introducción al servicio de forma de datos de Microsoft para OLE DB
 > [!IMPORTANT]
@@ -39,7 +39,7 @@ ms.locfileid: "88991086"
 
 |Nombre de propiedad dinámica|Descripción|
 |---------------------------|-----------------|
-|**Nombres de reformación únicos**|Indica si se permiten objetos de **conjunto de registros** con valores duplicados para sus propiedades de nombre de **cambio de forma** . Si esta propiedad dinámica es **true** y se crea un nuevo **conjunto de registros** con el mismo nombre de cambio de forma especificado por el usuario que un **conjunto de registros**existente, el nuevo nombre de cambio de forma del objeto de conjunto de **registros** se modifica para que sea único. Si esta propiedad es **false** y se crea un nuevo **conjunto de registros** con el mismo nombre de cambio de forma especificado por el usuario que el **conjunto de registros**existente, ambos objetos de conjunto de **registros** tendrán el mismo nombre de cambio de forma. Por lo tanto, no se puede cambiar la forma de ningún **conjunto de registros** siempre que existan ambos conjuntos de registros.<br /><br /> El valor predeterminado de la propiedad es **false**.|
+|**Nombres de reformación únicos**|Indica si se permiten objetos de **conjunto de registros** con valores duplicados para sus propiedades de nombre de **cambio de forma** . Si esta propiedad dinámica es **true** y se crea un nuevo **conjunto de registros** con el mismo nombre de cambio de forma especificado por el usuario que un **conjunto de registros** existente, el nuevo nombre de cambio de forma del objeto de conjunto de **registros** se modifica para que sea único. Si esta propiedad es **false** y se crea un nuevo **conjunto de registros** con el mismo nombre de cambio de forma especificado por el usuario que el **conjunto de registros** existente, ambos objetos de conjunto de **registros** tendrán el mismo nombre de cambio de forma. Por lo tanto, no se puede cambiar la forma de ningún **conjunto de registros** siempre que existan ambos conjuntos de registros.<br /><br /> El valor predeterminado de la propiedad es **false**.|
 |**Proveedor de datos**|Indica el nombre del proveedor que proporcionará las filas a las que se va a dar forma. Este valor puede ser NONE si no se va a usar un proveedor para proporcionar filas.|
 
  También puede establecer propiedades dinámicas que se pueden escribir especificando sus nombres como palabras clave en la cadena de conexión. Por ejemplo, en Microsoft Visual Basic, establezca la propiedad dinámica del **proveedor de datos** en "MSDASQL" especificando:

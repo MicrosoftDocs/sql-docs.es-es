@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f68af2ae2176ed4860f92a829544c7ff463254e9
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 3415515af0c29e0d1cca1ddbfab89859d26c83fa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987421"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014596"
 ---
 # <a name="managing-passwords-db2tosql"></a>Administrar contraseñas (DB2ToSQL)
 Esta sección trata sobre la protección de contraseñas de base de datos y el procedimiento para importarlas o exportarlas entre servidores:  
@@ -108,13 +108,13 @@ La _funcionalidad de importación_ lee el ID. de servidor y la información de c
 
 2. Escriba la contraseña para proteger el archivo exportado.
 
-3. Ejecute &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"`.
+3. Ejecutar: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"`
 
 4. Escriba la contraseña para proteger el archivo exportado: xxxxxxxx
 
 5. Confirme la contraseña: xxxxxxxx
 
-6. Ejecute &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"`.
+6. Ejecutar: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"`
 
 7. Escriba la contraseña para proteger el archivo exportado: xxxxxxxx
 
@@ -126,13 +126,13 @@ La _funcionalidad de importación_ lee el ID. de servidor y la información de c
 
 2. Escriba la contraseña para proteger el archivo importado.
 
-3. Ejecute &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"`.
+3. Ejecutar: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"`
 
 4. Escriba la contraseña para importar los servidores del archivo cifrado: xxxxxxxx
 
 5. Confirme la contraseña: xxxxxxxx
 
-6. Ejecute &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"`.
+6. Ejecutar: &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"`
 
 7. Escriba la contraseña para importar los servidores del archivo cifrado: xxxxxxxx
 

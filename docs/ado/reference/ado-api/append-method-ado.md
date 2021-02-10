@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03e454407c1b01b34ea918f81a404d579f8a3809
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 099cce7da61fbfa9f3a70904a6c8593b9be4d304
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167888"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027861"
 ---
 # <a name="append-method-ado"></a>Append (método) (ADO)
 Anexa un objeto a una colección. Si la colección es [Fields](./fields-collection-ado.md), se puede crear un nuevo objeto [Field](./field-object.md) antes de que se anexe a la colección.  
@@ -35,7 +35,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *collection*  
+ *Collection*  
  Objeto de colección.  
   
  *fields*  
@@ -47,7 +47,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *Nombre*  
  Valor de **cadena** que contiene el nombre del nuevo objeto de **campo** y no debe tener el mismo nombre que ningún otro objeto de *los campos*.  
   
- *Type*  
+ *Tipo*  
  Un valor [DataTypeEnum](./datatypeenum.md) , cuyo valor predeterminado es **adEmpty**, que especifica el tipo de datos del nuevo campo. ADO no admite los siguientes tipos de datos y no se deben usar al anexar nuevos campos a un objeto de [conjunto de registros (ADO)](./recordset-object-ado.md): **adIDispatch**, **adIUnknown**, **adVariant**.  
   
  *DefinedSize*  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9369b22c012773627c17da55a336aac116dc4e06
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9f917dbcf9f89edd22a06a8b95726333ffb342b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171224"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025139"
 ---
 # <a name="endofrecordset-event-ado"></a>Evento EndOfRecordset (ADO)
 Se llama al evento **EndOfRecordset** cuando se intenta moverse a una fila más allá del final del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

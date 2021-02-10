@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 756fe40bf7916dfa3e56a3e559be2874b5e8cd85
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 08019584f43891bb8e918b5e5f491c038a4b9afc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171312"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025605"
 ---
 # <a name="definedsize-property"></a>Propiedad DefinedSize
 Indica la capacidad de los datos de un objeto de [campo](../../../ado/reference/ado-api/field-object.md) .  

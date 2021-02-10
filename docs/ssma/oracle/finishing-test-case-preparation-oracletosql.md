@@ -11,12 +11,12 @@ ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 4707c68c0b744e092844d57bd6f235a69dbec9ce
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: f1d0f99987a58a8d942c9d7601124c3cfc39b09d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038048"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014626"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>Finalización de la preparación del caso de prueba (OracleToSQL)
 La página final del asistente muestra la descripción del caso de prueba e información sobre los objetos implicados en la prueba. Además, en esta página puede establecer las opciones de ejecución de pruebas.  
@@ -49,11 +49,11 @@ Define el modo de guardado de las tablas auxiliares creadas durante la ejecució
   
 -   Si selecciona **Guardar siempre**, los datos de la tabla auxiliar siempre se almacenarán para su uso posterior.  
   
--   Si selecciona **Guardar si se**produce un error en la comparación de tablas, los datos de la tabla auxiliar se almacenarán solo si se produce un error.  
+-   Si selecciona **Guardar si se** produce un error en la comparación de tablas, los datos de la tabla auxiliar se almacenarán solo si se produce un error.  
   
 -   Si selecciona **eliminar siempre**, las tablas auxiliares siempre se eliminarán después de la ejecución de la prueba.  
   
--   Si selecciona **preguntar al usuario si se**produce un error en la comparación de tablas, el usuario puede seleccionar la acción necesaria si se produce un error.  
+-   Si selecciona **preguntar al usuario si se** produce un error en la comparación de tablas, el usuario puede seleccionar la acción necesaria si se produce un error.  
   
 Haga clic en el botón **Finalizar** para guardar el caso de prueba preparado en [mediante repositorios de prueba (OracleToSQL)](./using-test-repositories-oracletosql.md).  
   
