@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ee6cf3bea905b169503851efe375fd614c4589e9
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: ba2e567c5675e602cc80382d42adfcbb89bce90a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988201"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100045093"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Crear y administrar proyectos (AccessToSQL)
 Para migrar bases de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, primero debe crear un proyecto de SSMA. El proyecto es un archivo que contiene metadatos sobre las bases de datos de Access a las que desea migrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, metadatos sobre la instancia de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure que recibirán los objetos y los datos migrados, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] información de conexión y la configuración del proyecto.  
@@ -43,7 +43,7 @@ SSMA contiene varias opciones para convertir y sincronizar objetos de base de da
   
 5.  Cambie las opciones según sea necesario.  
   
-6.  Repita los pasos anteriores para las páginas **migración**, **GUI**y **asignación de tipos** .  
+6.  Repita los pasos anteriores para las páginas **migración**, **GUI** y **asignación de tipos** .  
   
     -   Para obtener información sobre las opciones de migración, vea [configuración del proyecto (migración)](./project-settings-migration-accesstosql.md).  
   
@@ -101,7 +101,7 @@ Al abrir un proyecto, se desconecta de [!INCLUDE[ssNoVersion](../../includes/ssn
   
 1.  Realice uno de los siguientes procedimientos:  
   
-    -   En el menú **archivo** , seleccione **proyectos recientes**y, a continuación, seleccione el proyecto que desea abrir.  
+    -   En el menú **archivo** , seleccione **proyectos recientes** y, a continuación, seleccione el proyecto que desea abrir.  
   
     -   En el menú **archivo** , seleccione **Abrir proyecto**, busque el archivo de proyecto. a2ssproj, seleccione el archivo y, a continuación, haga clic en **abrir**.  
   

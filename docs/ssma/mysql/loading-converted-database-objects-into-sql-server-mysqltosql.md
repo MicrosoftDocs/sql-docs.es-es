@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 87960d05db8a12ebd7a8751f46c90a256ce73313
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c3945a348a40c9770334f00d119aa7e9564f8525
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463400"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042061"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>Carga de objetos de base de datos convertidos en SQL Server (MySQLToSQL)
 Después de convertir las bases de datos de MySQL en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, puede cargar los objetos de base de datos resultantes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Puede hacer que SSMA cree los objetos, o bien puede crear un script de los objetos y ejecutar los scripts usted mismo. Además, SSMA le permite actualizar los metadatos de destino con el contenido real de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database.  
@@ -33,7 +33,7 @@ Para usar SSMA para crear SQL Server o Azure SQL Database objetos, seleccione lo
   
 ##### <a name="to-synchronize-objects-with-sql-server-or-sql-azure"></a>Para sincronizar objetos con SQL Server o SQL Azure  
   
-1.  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure explorador de metadatos, expanda el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nodo superior o SQL Azure y, a continuación, expanda **bases**de datos.  
+1.  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure explorador de metadatos, expanda el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nodo superior o SQL Azure y, a continuación, expanda **bases** de datos.  
   
 2.  Seleccionar los objetos que se van a procesar:  
   
@@ -41,7 +41,7 @@ Para usar SSMA para crear SQL Server o Azure SQL Database objetos, seleccione lo
   
     -   Para sincronizar u omitir objetos o categorías de objetos individuales, Active o desactive la casilla situada junto al objeto o la carpeta.  
   
-3.  Una vez que haya seleccionado los objetos que desea procesar en SQL Server o SQL Azure el explorador de metadatos, haga clic con el botón secundario en **bases**de datos y, a continuación, haga clic en **sincronizar con base**de datos.  
+3.  Una vez que haya seleccionado los objetos que desea procesar en SQL Server o SQL Azure el explorador de metadatos, haga clic con el botón secundario en **bases** de datos y, a continuación, haga clic en **sincronizar con base** de datos.  
   
     También puede sincronizar objetos individuales o categorías de objetos; para ello, haga clic con el botón secundario en el objeto o en su carpeta primaria y, a continuación, haga clic en **sincronizar con base de datos**.  
   
@@ -62,7 +62,7 @@ Para guardar [!INCLUDE[tsql](../../includes/tsql-md.md)] definiciones de los obj
   
 **Para guardar objetos como scripts**  
   
-1.  Una vez que haya seleccionado los objetos que desea guardar en un script, haga clic con el botón secundario en **bases de datos**y, a continuación, haga clic en **Guardar como script**.  
+1.  Una vez que haya seleccionado los objetos que desea guardar en un script, haga clic con el botón secundario en **bases de datos** y, a continuación, haga clic en **Guardar como script**.  
   
     También puede incluir en el script objetos individuales o categorías de objetos; para ello, haga clic con el botón secundario en el objeto o en su carpeta principal y, a continuación, haga clic en **Guardar como script**.  
   
@@ -73,7 +73,7 @@ Una vez guardadas las definiciones de objetos de SQL Server o SQL Azure como un 
   
 **Para modificar un script**  
   
-1.  En el menú Management Studio **archivo** , seleccione **abrir**y, a continuación, haga clic en **archivo**.  
+1.  En el menú Management Studio **archivo** , seleccione **abrir** y, a continuación, haga clic en **archivo**.  
   
 2.  En el cuadro de diálogo abrir, busque y seleccione el archivo de script y, a continuación, haga clic en **Aceptar**.  
   

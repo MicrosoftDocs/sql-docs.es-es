@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 112452e9e6c31810dbf26d9aa1e7b36959c192d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10bff5f86bec26994c143195fcbb97aa30ba709e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488338"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044775"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportación de un inventario de acceso (AccessToSQL)
 Si tiene varias bases de datos de Access y no está seguro de cuáles se van a migrar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede exportar un inventario de todas las bases de datos de Access de un proyecto. Después, puede revisar y consultar los metadatos de inventario para determinar qué bases de datos y objetos de las bases de datos se van a migrar. Este inventario le permite encontrar rápidamente respuestas a preguntas, como las siguientes:  
@@ -113,7 +113,7 @@ Para obtener más información sobre cómo agregar bases de datos a proyectos, v
   
 4.  Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurada para aceptar conexiones en un puerto no predeterminado, escriba el número de puerto que se utiliza para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las conexiones en el cuadro **Puerto del servidor** . Para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el número de puerto predeterminado es 1433. En el caso de las instancias con nombre, SSMA intenta obtener el número de puerto del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio browser.  
   
-5.  En el menú desplegable **autenticación** , seleccione el tipo de autenticación que se utilizará para la conexión. Para usar la cuenta de Windows actual, seleccione **autenticación de Windows**. Para usar un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión, seleccione **SQL Server autenticación**y proporcione un nombre de usuario y una contraseña.  
+5.  En el menú desplegable **autenticación** , seleccione el tipo de autenticación que se utilizará para la conexión. Para usar la cuenta de Windows actual, seleccione **autenticación de Windows**. Para usar un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión, seleccione **SQL Server autenticación** y proporcione un nombre de usuario y una contraseña.  
   
 Para obtener más información sobre cómo conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [conectarse a SQL Server &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
   
@@ -136,7 +136,7 @@ Después de exportar los metadatos acerca de las bases de datos de Access, puede
   
 **Para consultar metadatos**  
   
-1.  En el menú **Inicio** , seleccione **todos los programas**, **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005** o Microsoft ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008** o **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012**y, a continuación, haga clic en **SQL Server Management Studio**.  
+1.  En el menú **Inicio** , seleccione **todos los programas**, **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005** o Microsoft **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008** o **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012** y, a continuación, haga clic en **SQL Server Management Studio**.  
   
 2.  En el cuadro de diálogo **conectar al servidor** , Compruebe la configuración y, a continuación, haga clic en **conectar**.  
   
@@ -227,6 +227,6 @@ WHERE ColumnName LIKE '%salary%';
 ```  
 Si no conoce el nombre de la columna, puede escribir una consulta para que devuelva todas las columnas. Para ello, quite la cláusula WHERE de la consulta anterior.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Preparar las bases de datos de Access para la migración](preparing-access-databases-for-migration-accesstosql.md)  
   

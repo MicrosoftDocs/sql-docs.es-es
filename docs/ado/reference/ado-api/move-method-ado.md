@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f870db346e384f4c131ec24bf6c15a5d15a009c1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 848074390559e3c40e0cf1a4e8242344c70f6334
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167117"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041765"
 ---
 # <a name="move-method-ado"></a>Move (método) (ADO)
 Mueve la posición del registro actual en un objeto de [conjunto de registros](./recordset-object-ado.md) .  

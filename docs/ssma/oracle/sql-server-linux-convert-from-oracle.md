@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 1d28458896d4ae4806db1b0f705c5e33badddfb7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fb21fdc7da82d6dae2390ddcf0884ea1e8ac8a58
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932756"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044395"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Migre un esquema de Oracle a SQL Server 2017 en Linux con el SQL Server Migration Assistant
 
@@ -28,7 +28,7 @@ En este tutorial se usa SQL Server Migration Assistant (SSMA) para Oracle en Win
 > * Conversión del esquema HR de ejemplo
 > * Migración de los datos
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Una instancia de Oracle 12C (12.2.0.1.0) con el esquema **HR** instalado
 - Instancia de trabajo de SQL Server en Linux
@@ -57,7 +57,7 @@ SSMA para Oracle no utiliza los esquemas de ejemplo de Oracle de forma predeterm
 
 1. En SSMA, seleccione el menú **herramientas** .
 
-1. Seleccione **configuración predeterminada del proyecto**y, a continuación, elija **cargando objetos del sistema**.
+1. Seleccione **configuración predeterminada del proyecto** y, a continuación, elija **cargando objetos del sistema**.
 
 1. Asegúrese de que **HR** está activado y elija **Aceptar**.
 
@@ -79,7 +79,7 @@ Siga estos pasos para generar un informe de migración.
 
 1. En el **Explorador de metadatos de Oracle**, expanda el nodo del servidor.
 
-1. Expanda **esquemas**, haga clic con el botón secundario en **HR**y seleccione **crear informe**.
+1. Expanda **esquemas**, haga clic con el botón secundario en **HR** y seleccione **crear informe**.
 
    ![Crear informe en el explorador de metadatos de Oracle](./media/sql-server-linux-convert-from-oracle/CreateReport.png)
 
@@ -98,7 +98,7 @@ A continuación, elija **conectar a SQL Server** y escriba la información de co
 
 ## <a name="convert-schema"></a>Convertir esquema
 
-Haga clic con el botón derecho en **HR** en el **Explorador de metadatos de Oracle**y elija convertir esquema.
+Haga clic con el botón derecho en **HR** en el **Explorador de metadatos de Oracle** y elija convertir esquema.
 
 ![Convertir esquema](./media/sql-server-linux-convert-from-oracle/ConvertSchema.png)
 
@@ -108,7 +108,7 @@ A continuación, sincronice la base de datos.
 
 1. Una vez finalizada la conversión, use el **SQL Server explorador de metadatos** para ir a la base de datos que creó en el paso anterior.
 
-1. Haga clic con el botón derecho en la base de datos, seleccione **sincronizar con base de datos**y, a continuación, haga clic en Aceptar.
+1. Haga clic con el botón derecho en la base de datos, seleccione **sincronizar con base de datos** y, a continuación, haga clic en Aceptar.
 
    ![Sincronizar con base de datos](./media/sql-server-linux-convert-from-oracle/SynchronizeWithDatabase.png)
 
@@ -116,7 +116,7 @@ A continuación, sincronice la base de datos.
 
 El paso final es migrar los datos.
 
-1. En el **Explorador de metadatos de Oracle**, haga clic con el botón derecho en **HR**y seleccione **migrar datos**.
+1. En el **Explorador de metadatos de Oracle**, haga clic con el botón derecho en **HR** y seleccione **migrar datos**.
 
 1. El paso de migración de datos requiere que vuelva a escribir sus credenciales de Oracle y SQL Server.
 

@@ -12,12 +12,12 @@ author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7a50504923a825a437ea4456a1bb9394cd0635db
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 931e013a84cd808d75a50edafdcf73d105f51827
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951330"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100045115"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Crear informes de análisis en Asistente para experimentación con bases de datos (SQL Server)
 
@@ -88,7 +88,7 @@ Si se produce un error mientras se crea el informe, la página progreso muestra 
 |---|---|  
 |RInterop encontró un error al iniciarse. Compruebe los registros de RInterop e inténtelo de nuevo.|DEA requiere acceso a Internet para descargar paquetes de R dependientes. Compruebe los registros de RInterop en% Temp% \\ RInterop y los registros de DEA en% Temp% \\ DEA. Si RInterop se inicializó incorrectamente o si se inicializó sin los paquetes de R correctos, es posible que vea la excepción "no se pudo generar el nuevo informe de análisis" después del paso InitializeRInterop en los registros de DEA.<br><br>Los registros de RInterop también pueden mostrar un error similar a "no hay ningún paquete de jsonlite disponible". Si el equipo no tiene acceso a Internet, puede descargar manualmente el paquete de jsonlite R necesario:<br><br><li>Vaya a la carpeta% userprofile% \\ DEARPackages en el sistema de archivos de la máquina. Esta carpeta se compone de los paquetes usados por R para DEA.</li><br><li>Si falta la carpeta jsonlite en la lista de paquetes instalados, necesita una máquina con acceso a Internet para descargar la versión de lanzamiento de jsonlite \_1.4.zip de [https://cran.r-project.org/web/packages/jsonlite/index.html](https://cran.r-project.org/web/packages/jsonlite/index.html) .</li><br><li>Copie el archivo. zip en la máquina en la que está ejecutando DEA.  Extraiga la carpeta jsonlite y cópiela en% userprofile% \\ DEARPackages. Este paso instala automáticamente el paquete jsonlite en R. La carpeta debe denominarse **jsonlite** y el contenido debe estar directamente dentro de la carpeta, no un nivel por debajo.</li><br><li>Cierre DEA, vuelva a abrir y vuelva a intentar el análisis.</li><br>También puede usar RGUI. Vaya a **paquetes**  >  **instalar desde zip**. Vaya al paquete que descargó anteriormente e instálelo.<br><br>Si RInterop se ha inicializado y configurado correctamente, debería ver "instalación del paquete de R dependiente jsonlite" en los registros de RInterop.|  
 |No se puede conectar con la instancia de SQL Server, asegúrese de que el nombre del servidor es correcto y compruebe el acceso necesario para el usuario que ha iniciado sesión.|Es posible que no tenga derechos de acceso o de usuario en el servidor o que el nombre del servidor no sea correcto.|
-|Se agotó el tiempo de espera del proceso RInterop. Compruebe los registros de DEA y RInterop, detenga el proceso de RInterop en el administrador de tareas e inténtelo de nuevo.<br><br>o<br><br>RInterop tiene un estado de error. Detenga el proceso RInterop en el administrador de tareas e inténtelo de nuevo.|Compruebe los registros en% Temp% \\ RInterop para confirmar el error. Quite el proceso RInterop del administrador de tareas antes de intentarlo de nuevo. Si el problema persiste, póngase en contacto con el equipo del producto.|
+|Se agotó el tiempo de espera del proceso RInterop. Compruebe los registros de DEA y RInterop, detenga el proceso de RInterop en el administrador de tareas e inténtelo de nuevo.<br><br>or<br><br>RInterop tiene un estado de error. Detenga el proceso RInterop en el administrador de tareas e inténtelo de nuevo.|Compruebe los registros en% Temp% \\ RInterop para confirmar el error. Quite el proceso RInterop del administrador de tareas antes de intentarlo de nuevo. Si el problema persiste, póngase en contacto con el equipo del producto.|
 
 **P: el informe se genera, pero parece que faltan datos**
 

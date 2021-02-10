@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 12c51ce9a3b4bdd83a1d1c4c7295f2ff438bc707
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d8443eaceb150bd0cf2c936e44cb29fc2292f89c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987721"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042055"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Agregar y quitar archivos de base de datos de Access (AccessToSQL)
 Para migrar datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, debe agregar una o varias bases de datos de Access al proyecto SSMA. Estas bases de datos deben ser Access 97 o versiones posteriores. Si tiene bases de datos de una versión anterior de Access, debe convertir las bases de datos en una versión más reciente. Para ello, abra y guarde las bases de datos en Access 97 o una versión posterior antes de agregarlas a SSMA.  
@@ -85,7 +85,7 @@ Si desea agregar varias bases de datos de Access de distintas carpetas a un proy
   
     Puede usar los botones **seleccionar todo** y **Borrar todo** de la parte superior de la lista para seleccionar o borrar todas las bases de datos. Puede mantener presionada la tecla CTRL para seleccionar varias bases de datos o mantener presionada la tecla Mayús para seleccionar un intervalo de bases de datos.  
   
-7.  Haga clic en **Next**.  
+7.  Haga clic en **Siguiente**.  
   
 8.  En la página comprobar, haga clic en **Finalizar**.  
   
@@ -94,7 +94,7 @@ Después de agregar una base de datos de Access a un proyecto, los metadatos del
   
 **Para examinar los metadatos**  
   
-1.  En el explorador de metadatos de Access, expanda **Access-metabase**y, a continuación, expanda **bases**de datos.  
+1.  En el explorador de metadatos de Access, expanda **Access-metabase** y, a continuación, expanda **bases** de datos.  
   
 2.  Expanda la base de datos que desea revisar y, a continuación, expanda **consultas**.  
   
@@ -102,13 +102,13 @@ Después de agregar una base de datos de Access a un proyecto, los metadatos del
   
 3.  Expanda **tablas** y, a continuación, seleccione una tabla.  
   
-    Observe que aparecen cuatro pestañas: **tabla**, **asignación de tipos**, **propiedades**y **datos**.  
+    Observe que aparecen cuatro pestañas: **tabla**, **asignación de tipos**, **propiedades** y **datos**.  
   
-4.  Expanda una tabla, expanda **claves**y, a continuación, seleccione una clave.  
+4.  Expanda una tabla, expanda **claves** y, a continuación, seleccione una clave.  
   
     Las propiedades clave aparecen en el panel derecho.  
   
-5.  Expanda **índices**y, a continuación, seleccione un índice.  
+5.  Expanda **índices** y, a continuación, seleccione un índice.  
   
     Las propiedades del índice aparecen en el panel derecho.  
   
@@ -117,14 +117,14 @@ Si una base de datos de Access cambia después de agregar su archivo, puede actu
   
 **Para actualizar los metadatos de Access**  
   
--   En el explorador de metadatos de Access, haga clic con el botón derecho en la base de datos y seleccione **actualizar desde base de**datos.  
+-   En el explorador de metadatos de Access, haga clic con el botón derecho en la base de datos y seleccione **actualizar desde base de** datos.  
   
 ## <a name="removing-databases"></a>Quitar bases de datos  
 Puede quitar una base de datos de Access de un proyecto siguiendo estos pasos.  
   
 **Para quitar una base de datos de un proyecto**  
   
-1.  En el explorador de metadatos de Access, expanda **Access-metabase**y, a continuación, expanda **bases**de datos.  
+1.  En el explorador de metadatos de Access, expanda **Access-metabase** y, a continuación, expanda **bases** de datos.  
   
 2.  Haga clic con el botón secundario en la base de datos y seleccione **quitar base de datos**.  
   

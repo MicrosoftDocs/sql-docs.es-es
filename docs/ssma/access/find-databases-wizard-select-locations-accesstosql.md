@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1babfbf6364371cbd1f96b310f29416b84f2b031
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9ab968b72ccffacb776985c8aa43b4210e98324a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984951"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044596"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Asistente buscar bases de datos (ubicaciones seleccionadas) (AccessToSQL)
 En la página seleccionar ubicaciones del asistente buscar bases de datos, especifique los parámetros de búsqueda para buscar las bases de datos de Access.  
@@ -40,7 +40,7 @@ Agrega la ubicación en el cuadro de texto Ruta de acceso a la lista de ubicacio
 **Sustituya**  
 Si se selecciona un elemento de la lista de ubicaciones, el elemento del cuadro de texto Ruta de acceso reemplaza el elemento seleccionado.  
   
-**Remove**  
+**Quitar**  
 Quita el elemento seleccionado de la lista de ubicaciones que se van a buscar.  
   
 **Todo o parte del nombre de archivo**  
@@ -56,7 +56,7 @@ Para buscar las bases de datos que se actualizaron por última vez en un interva
 Para buscar las bases de datos que coinciden con un criterio de tamaño, seleccione un carácter de comparación en el primer cuadro, escriba un número para el tamaño y, a continuación, seleccione bytes, kilobytes o megabytes en el tercer cuadro.  
   
 **Propietario**  
-Escriba el nombre de usuario completo de Windows del propietario. Esto podría tener el formato *domain* \\ *usuario*de dominio.  
+Escriba el nombre de usuario completo de Windows del propietario. Esto podría tener el formato  \\ *usuario* de dominio.  
   
 ## <a name="see-also"></a>Consulte también  
 [Agregar y quitar archivos de base de datos de Access](adding-and-removing-access-database-files-accesstosql.md)  

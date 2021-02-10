@@ -14,18 +14,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4d1bcf2cdc9997ea33be87184c38447b7cd62973
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c2804bbc185a3aa17d7f50d85b9ef6c2cc84d002
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091611"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044652"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluación de una empresa y consolidación de informes de evaluación con DMA.
 
 Las siguientes instrucciones paso a paso le ayudarán a usar la Data Migration Assistant para realizar una evaluación de escalado correcta para actualizar SQL Server locales o SQL Server que se ejecutan en máquinas virtuales de Azure o para migrar a Azure SQL Database.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Designe un equipo de herramientas en la red desde el que se iniciará DMA. Asegúrese de que este equipo tiene conectividad con los destinos de SQL Server.
 - Descargue e instale:
@@ -274,7 +274,7 @@ Esta sección es la parte principal del informe, que muestra la preparación de 
 
 - InstanceDatabase
 - ChangeCategory
-- Título
+- Title
 - ObjectType
 - ImpactedObjectName
 

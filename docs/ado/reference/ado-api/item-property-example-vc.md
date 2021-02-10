@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80215c133895804264ad7be586faeaf7cfcc4180
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fdbecc77e8a86f2135c6b12fd9fbf6a4727c31cd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170910"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041865"
 ---
 # <a name="item-property-example-vc"></a>Ejemplo de la propiedad de elemento (VC ++)
-En este ejemplo se muestra cómo la propiedad del [elemento](./item-property-ado.md) obtiene acceso a los miembros de una colección. En el ejemplo se abre la tabla ***authors** _ de la base de datos _*_pubs_*_ con un comando con parámetros.  
+En este ejemplo se muestra cómo la propiedad del [elemento](./item-property-ado.md) obtiene acceso a los miembros de una colección. En el ejemplo se abre la tabla ***authors** _ de la base de datos _ *_pubs_** con un comando con parámetros.  
   
  Se tiene acceso al parámetro del comando emitido en la base de datos desde la colección de [parámetros](./parameters-collection-ado.md) del objeto de [comando](./command-object-ado.md) por índice y nombre. A continuación, se obtiene acceso a los campos del [conjunto de registros](./recordset-object-ado.md) devuelto desde la colección de [campos](./fields-collection-ado.md) de ese objeto por índice y nombre.  
   
@@ -82,7 +82,7 @@ void ItemX() {
       Column[7] = "zip";  
       Column[8] = "contract";  
   
-      _bstr_t strText("SELECT _ FROM authors WHERE state = ?");  
+      _bstr_t strText("SELECT * FROM authors WHERE state = ?");  
       pCmd->CommandText = strText;  
   
       pPrm = pCmd->CreateParameter("ItemXparm", adChar, adParamInput, 2, "CA");  
