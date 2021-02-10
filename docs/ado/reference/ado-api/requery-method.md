@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21056d0e8f8e488bc5b80541ea4c397b3340c453
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 060c1c7f792a0cf74e9ca8192167c41fcb7b9399
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166660"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051626"
 ---
 # <a name="requery-method"></a>Requery (método)
 Actualiza los datos de un objeto de [conjunto de registros](./recordset-object-ado.md) volviendo a ejecutar la consulta en la que se basa el objeto.  

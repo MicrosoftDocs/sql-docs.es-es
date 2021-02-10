@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b2c42c01eb19ae2ffabf709b7f33cd1cfaa8554
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 77abffb64178bfdffcd6f9b9e74834f856b98907
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164392"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050806"
 ---
 # <a name="ado-programmer39s-reference"></a>Referencia del programador de ADO&#39;s
 Esta sección contiene los temas siguientes.  

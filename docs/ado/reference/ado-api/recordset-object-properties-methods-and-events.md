@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea728d3e0242dfdb302b8682e30954fc07d667dc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0446f74eafda87235223e5906fd7e665a201ab0a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170425"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051776"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto de conjunto de registros
 ## <a name="propertiescollections"></a>Propiedades/colecciones  
@@ -87,7 +87,7 @@ ms.locfileid: "99170425"
   
  [Método Clone](./clone-method-ado.md)  
   
- [Close (método)](./close-method-ado.md)  
+ [Close (Método)](./close-method-ado.md)  
   
  [CompareBookmarks (método)](./comparebookmarks-method-ado.md)  
   

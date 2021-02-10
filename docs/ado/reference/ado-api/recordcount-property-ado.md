@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 76f3911ccc240a29829efcd5aa301ff5dfb8cbd5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a4fb478b2320ac2f216ae0d0f1a175a94d346813
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170457"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051866"
 ---
 # <a name="recordcount-property-ado"></a>Propiedad RecordCount (ADO)
 

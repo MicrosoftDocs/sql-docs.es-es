@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcbeb1a0a7a0ad70997f2451f19de2d383f8df96
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0ca001398e34b6c9453b7225f18cddb27963ec0c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170225"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051366"
 ---
 # <a name="source-property-example-vb"></a>Ejemplo de la propiedad Source (VB)
 En este ejemplo se muestra la propiedad de [origen](./source-property-ado-recordset.md) abriendo tres objetos de [conjunto de registros](./recordset-object-ado.md) basados en orígenes de datos diferentes.  

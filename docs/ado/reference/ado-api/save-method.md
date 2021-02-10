@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54e75b3ed86a1522c7334f6948b2a5a105971c9f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a15cb79b3dc6a00e8096cec5289a5c8ce5304938
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166600"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051522"
 ---
 # <a name="save-method"></a>Save (método)
 Guarda el [conjunto de registros](./recordset-object-ado.md) en un archivo o en un objeto de [secuencia](./stream-object-ado.md) .  

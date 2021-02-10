@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1c4156c56a3c6722fb856511ccb3be1b14c7f5e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b9d31d01510e80e9ad402e775bb182246a3c7956
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170361"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051566"
 ---
 # <a name="resync-method"></a>Método Resync
 Actualiza los datos del objeto de conjunto de [registros](./recordset-object-ado.md) actual, o la colección de [campos](./fields-collection-ado.md) de un objeto de [registro](./record-object-ado.md) , de la base de datos subyacente.  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e987d2cab7f20930bbdefbd4bcf959717a28ba7e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 79cacc9b336164a80bee36a4afa5ece0f3b60d72
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169801"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051136"
 ---
 # <a name="leveldepth-property-ado-md"></a>Propiedad LevelDepth (ADO MD)
 Indica el número de niveles entre la raíz de la jerarquía y un [miembro](./member-object-ado-md.md).  
