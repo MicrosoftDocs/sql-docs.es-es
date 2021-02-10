@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6042032018ea75eb7b2b13bb677ad48dca56290b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 04e7faf5525c676ecc9c20bb312414742e17fc4e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167376"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034095"
 ---
 # <a name="field-object"></a>Objeto Field
 Representa una columna de datos con un tipo de datos común.  

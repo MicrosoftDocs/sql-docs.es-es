@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3030af273aa317677bec5c975bbfe27d7bc248f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 31ada97d604afd176e0ac8dc7596d1550762e7b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167306"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033935"
 ---
 # <a name="find-method-example-vb"></a>Ejemplo del método Find (VB)
 En este ejemplo se usa el método [Find](./find-method-ado.md) del objeto de [conjunto de registros](./recordset-object-ado.md) para buscar y contar el número de títulos de negocio en la base de datos ***pubs*** . En el ejemplo se da por supuesto que el proveedor subyacente no es compatible con una funcionalidad similar.  

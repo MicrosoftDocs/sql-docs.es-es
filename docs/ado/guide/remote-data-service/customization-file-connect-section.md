@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4350cb9aad6e2ef1d9381cffb6e05b13d09c43c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 0b3508479d6d52799f286421c1bb2c67683088f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724786"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032017"
 ---
 # <a name="customization-file-connect-section"></a>Sección de conexión del archivo de personalización
 El comportamiento predeterminado del controlador es denegar todas las conexiones. La sección **Connect** especifica excepciones a ese comportamiento. Por ejemplo, si todas las secciones de **conexión** faltan o están vacías, de forma predeterminada no se pueden realizar conexiones.  

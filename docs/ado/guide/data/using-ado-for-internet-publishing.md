@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 774ff9b0728d362822c72047b573ab9def944d18
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f7affce9c8596b9155f691ccf2ef61f9f0eca35d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979045"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032277"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Utilizar ADO para publicación en Internet
 [El proveedor de OLE DB para la publicación en Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) muestra un ejemplo específico del acceso a datos heterogéneos con ADO. Aunque los ejemplos de esta sección son específicos del uso del proveedor de publicación en Internet, los principios que se demuestran deben ser similares al usar ADO con otros proveedores para datos heterogéneos, como un proveedor para un almacén de correo electrónico.  
   
-## <a name="urls"></a>Direcciones URL  
+## <a name="urls"></a>URLs  
  Los localizadores de recursos uniformes (URL) se pueden usar como alternativa a las cadenas de conexión y el texto del comando para especificar los orígenes de datos y la ubicación de los archivos y directorios. Puede usar direcciones URL con los objetos [Connection](../../../ado/reference/ado-api/connection-object-ado.md) y **Recordset** existentes y con los objetos **Record** y **Stream** .  
   
  Para obtener más información sobre cómo usar las direcciones URL, consulte [direcciones URL absolutas y relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="record-fields"></a>Campos de registro  
- La diferencia entre los datos heterogéneos y los datos homogéneos es que para el primero, cada fila de datos o **registro**puede tener un conjunto diferente de columnas o **campos**. En el caso de los datos homogéneos, cada fila tiene el mismo conjunto de columnas. Para obtener más información sobre los campos específicos del proveedor de publicación en Internet, consulte [registros y campos adicionales proporcionados](../../../ado/guide/data/records-and-provider-supplied-fields.md)por el proveedor.  
+ La diferencia entre los datos heterogéneos y los datos homogéneos es que para el primero, cada fila de datos o **registro** puede tener un conjunto diferente de columnas o **campos**. En el caso de los datos homogéneos, cada fila tiene el mismo conjunto de columnas. Para obtener más información sobre los campos específicos del proveedor de publicación en Internet, vea [registros y Provider-Supplied campos adicionales](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
   
 ### <a name="appending-new-fields"></a>Anexar nuevos campos  
  Se han mejorado varios objetos ADO para que funcionen con objetos de **registro** y de **secuencia** .  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2b307c89d5e4a25d6963ef100083015ffe6ce74
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8421340798a308204a0961340e06216f3b0cb24a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724926"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031897"
 ---
 # <a name="rds-programming-model-in-detail"></a>Modelo detallado de programación de RDS
 Los siguientes son elementos clave del modelo de programación de RDS:  
@@ -61,12 +61,12 @@ Los siguientes son elementos clave del modelo de programación de RDS:
   
  **Objeto RDS. DataControl** tiene dos aspectos. Un aspecto pertenece al origen de datos. Si establece la información de conexión y comando mediante las propiedades **Connect** y **SQL** de **RDS. DataControl**, usará automáticamente **RDS. DataSpace** para crear una referencia al objeto **RDSServer. DataFactory** predeterminado. A continuación, **RDSServer. DataFactory** usará el valor de la propiedad **Connect** para conectarse al origen de datos, usar el valor de la propiedad **SQL** para obtener un **conjunto de registros** del origen de datos y devolver el objeto de conjunto de **registros** a **RDS. DataControl**.  
   
- El segundo aspecto pertenece a la presentación de la información de **conjunto de registros** devuelta en un control visual. Puede asociar un control visual a **RDS. DataControl** (en un proceso llamado enlace) y obtener acceso a la información del objeto de **conjunto de registros** asociado, mostrando los resultados de la consulta en una página Web de Microsoft® Internet Explorer. Cada **RDS. ** El objeto DataControl enlaza un objeto de **conjunto de registros** , que representa los resultados de una sola consulta, a uno o más controles visuales (por ejemplo, un cuadro de texto, un cuadro combinado, un control de cuadrícula, etc.). Puede haber más de un **RDS. Objeto DataControl** en cada página. Cada **RDS. ** El objeto DataControl puede estar conectado a un origen de datos diferente y contener los resultados de una consulta independiente.  
+ El segundo aspecto pertenece a la presentación de la información de **conjunto de registros** devuelta en un control visual. Puede asociar un control visual a **RDS. DataControl** (en un proceso llamado enlace) y obtener acceso a la información del objeto de **conjunto de registros** asociado, mostrando los resultados de la consulta en una página Web de Microsoft® Internet Explorer. Cada **RDS.** El objeto DataControl enlaza un objeto de **conjunto de registros** , que representa los resultados de una sola consulta, a uno o más controles visuales (por ejemplo, un cuadro de texto, un cuadro combinado, un control de cuadrícula, etc.). Puede haber más de un **RDS. Objeto DataControl** en cada página. Cada **RDS.** El objeto DataControl puede estar conectado a un origen de datos diferente y contener los resultados de una consulta independiente.  
   
- **Objeto RDS. **El objeto DataControl también tiene sus propios métodos para navegar, ordenar y filtrar las filas del objeto de conjunto de **registros** asociado. Estos métodos son similares, pero no son los mismos que los métodos del objeto de **conjunto de registros** de ADO.  
+ **Objeto RDS.** El objeto DataControl también tiene sus propios métodos para navegar, ordenar y filtrar las filas del objeto de conjunto de **registros** asociado. Estos métodos son similares, pero no son los mismos que los métodos del objeto de **conjunto de registros** de ADO.  
   
 ## <a name="events"></a>Events  
- RDS admite dos de sus propios eventos, que son independientes del modelo de eventos de ADO. Se llama al evento [onreadystatechange](../../reference/rds-api/onreadystatechange-event-rds.md) siempre que el **objeto RDS. **Los cambios en la propiedad [ReadyState](../../reference/rds-api/readystate-property-rds.md) de DataControl, lo que le notifica cuando una operación asincrónica ha finalizado correctamente, finalizado o se ha producido un error. Se llama al evento [OnError](../../reference/rds-api/onerror-event-rds.md) siempre que se produce un error, incluso si se produce un error durante una operación asincrónica.  
+ RDS admite dos de sus propios eventos, que son independientes del modelo de eventos de ADO. Se llama al evento [onreadystatechange](../../reference/rds-api/onreadystatechange-event-rds.md) siempre que el **objeto RDS.** Los cambios en la propiedad [ReadyState](../../reference/rds-api/readystate-property-rds.md) de DataControl, lo que le notifica cuando una operación asincrónica ha finalizado correctamente, finalizado o se ha producido un error. Se llama al evento [OnError](../../reference/rds-api/onerror-event-rds.md) siempre que se produce un error, incluso si se produce un error durante una operación asincrónica.  
   
 > [!NOTE]
 >  Microsoft Internet Explorer proporciona dos eventos adicionales a RDS: **onDataSetChanged**, que indica que el **conjunto de registros** es funcional pero sigue recuperando filas, y **onDataSetComplete**, que indica que el **conjunto de registros** ha terminado de recuperar filas.  

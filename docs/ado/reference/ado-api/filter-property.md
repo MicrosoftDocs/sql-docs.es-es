@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7366ba67d36049f1c5df701bc633d76f56bb9af5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7ee0d5e133edbd9c5d8471176e07bce02d19c930
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167327"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033964"
 ---
 # <a name="filter-property"></a>Propiedad Filter
 Indica un filtro para los datos de un [conjunto de registros](./recordset-object-ado.md).  
@@ -94,8 +94,8 @@ En la tabla siguiente se resumen los efectos de **adFilterPendingRecords** en di
 |Posibles|No claves|Clave única|Varias claves|
 |-|--------------|----------------|-------------------|
 |**No claves**|+|+|+|
-|**Clave única**|+|-|No aplicable|
-|**Varias claves**|+|No aplicable|+|
+|**Clave única**|+|-|N/D|
+|**Varias claves**|+|N/D|+|
 |||||
   
 ## <a name="applies-to"></a>Se aplica a

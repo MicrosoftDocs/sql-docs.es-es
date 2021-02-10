@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 431ff25d49c4a45055d796aba98f229564872a4e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2dcd54dfb8ba5797588c615f987830dcb8aa5736
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978646"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032187"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Información general de esquemas y datos multidimensionales
 ## <a name="understanding-multidimensional-schemas"></a>Descripción de los esquemas multidimensionales  
@@ -82,7 +82,7 @@ Hamburg, Munich, Stuttgart}
   
  Los miembros se pueden consolidar en una o más jerarquías por dimensión. Considere una dimensión de tiempo en la que hay dos maneras de acumular el nivel de año en el nivel de días:  
   
- En este ejemplo también se muestra otra característica: algunos miembros del nivel semana de la jerarquía del año de la semana no aparecen en ningún nivel de la jerarquía del año. Por lo tanto, una jerarquía no necesita incluir todos los miembros de una dimensión.  
+ En este ejemplo también se muestra otra característica: algunos miembros del nivel semana de la jerarquía Year-Week no aparecen en ningún nivel de la jerarquía Year-Quarter. Por lo tanto, una jerarquía no necesita incluir todos los miembros de una dimensión.  
   
 ## <a name="see-also"></a>Consulte también  
  [Modelo de objetos de ADO MD](../../reference/ado-md-api/ado-md-object-model.md)   

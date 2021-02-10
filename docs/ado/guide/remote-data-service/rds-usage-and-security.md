@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 657250e54c9ea3564e826f2113a94625027fc4a1
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1664f953533b46a356f2bab7a601c82662807abe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724896"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031867"
 ---
 # <a name="rds-usage-and-security"></a>Seguridad y uso de RDS
 Utilice la información de esta sección para configurar el servidor y usar RDS rápidamente. En esta sección se incluyen los pasos de configuración específicos que podría tener que realizar al implementar RDS, se describen algunas de las relaciones clave entre RDS y otras tecnologías, y se ayuda a identificar soluciones a problemas que pueden surgir al configurar una solución de RDS.  

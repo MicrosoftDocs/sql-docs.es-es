@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13aeddcf9a826cff5caa33172f785f2e42747a3f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f625a4f96aa5ec083057af4118315d9df494530e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979756"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032547"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Recuperar conjuntos de resultados en secuencias
 En lugar de recibir resultados en el objeto de **conjunto de registros** tradicional, ADO puede recuperar los resultados de la consulta en un flujo. El objeto de **secuencia** de ADO (u otros objetos que admiten la interfaz **IStream** com, como los objetos de **solicitud** y **respuesta** de ASP) se pueden usar para contener estos resultados. Un uso de esta característica consiste en recuperar los resultados en formato XML. Con SQL Server, por ejemplo, los resultados XML se pueden devolver de varias maneras, como usar la cláusula FOR XML con una consulta SELECT de SQL o mediante una consulta XPath.  
   
- Para recibir los resultados de la consulta en formato de secuencia en lugar de hacerlo en un **conjunto de registros**, debe especificar la constante **adExecuteStream** desde **ExecuteOptionEnum** como parámetro del método **Execute** de un objeto **Command** . Si el proveedor es compatible con esta característica, los resultados se devolverán en una secuencia en el momento de la ejecución. Es posible que sea necesario especificar propiedades adicionales específicas del proveedor antes de que se ejecute el código. Por ejemplo, con el proveedor de OLE DB de Microsoft para SQL Server, se deben especificar propiedades como el **flujo de salida** en la colección **Properties** del objeto **Command** . Para obtener más información acerca de las propiedades dinámicas específicas de SQL Server relacionadas con esta característica, vea propiedades relacionadas con XML en el Libros en pantalla de SQL Server.  
+ Para recibir los resultados de la consulta en formato de secuencia en lugar de hacerlo en un **conjunto de registros**, debe especificar la constante **adExecuteStream** desde **ExecuteOptionEnum** como parámetro del método **Execute** de un objeto **Command** . Si el proveedor es compatible con esta característica, los resultados se devolverán en una secuencia en el momento de la ejecución. Es posible que sea necesario especificar propiedades adicionales específicas del proveedor antes de que se ejecute el código. Por ejemplo, con el proveedor de OLE DB de Microsoft para SQL Server, se deben especificar propiedades como el **flujo de salida** en la colección **Properties** del objeto **Command** . Para obtener más información acerca de las propiedades dinámicas específicas de SQL Server relacionadas con esta característica, vea XML-Related Properties en el Libros en pantalla de SQL Server.  
   
 ## <a name="for-xml-query-example"></a>Ejemplo de consulta FOR XML  
  El siguiente ejemplo está escrito en VBScript en la base de datos Northwind:  
@@ -157,7 +157,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
- El comando se puede especificar en una cadena como se mostró anteriormente, se asigna a **CommandText**o en forma de una consulta de plantilla XML asignada a **CommandStream**. Para obtener más información sobre las consultas de plantilla XML, vea [secuencias de comandos](../../../ado/guide/data/command-streams.md) en ADO o usar secuencias para la entrada de comandos en el libros en pantalla de SQL Server.  
+ El comando se puede especificar en una cadena como se mostró anteriormente, se asigna a **CommandText** o en forma de una consulta de plantilla XML asignada a **CommandStream**. Para obtener más información sobre las consultas de plantilla XML, vea [secuencias de comandos](../../../ado/guide/data/command-streams.md) en ADO o usar secuencias para la entrada de comandos en el libros en pantalla de SQL Server.  
   
  Como consulta de plantilla XML, la consulta FOR XML aparece de la siguiente manera:  
   

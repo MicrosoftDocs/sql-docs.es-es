@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9929177baaf1efd486cb9f628034158b370badc7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d6a769a22a86e145727079af6fc067b1552f2bbf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722866"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031717"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Paso 6: Envío de los cambios al servidor (Tutorial de RDS)
 Si se edita el objeto de **conjunto de registros** , los cambios (es decir, las filas que se agregan, se modifican o se eliminan) pueden enviarse de vuelta al servidor.  
   
 > [!NOTE]
->  El comportamiento predeterminado de RDS se puede invocar implícitamente con objetos ADO y el proveedor de servicios remotos de Microsoft OLE DB. Las consultas pueden devolver **conjuntos de registros**y los conjuntos de **registros**editados pueden actualizar el origen de datos. En este tutorial no se invoca RDS con objetos ADO, pero este es el aspecto que tendría si lo hiciera:  
+>  El comportamiento predeterminado de RDS se puede invocar implícitamente con objetos ADO y el proveedor de servicios remotos de Microsoft OLE DB. Las consultas pueden devolver **conjuntos de registros** y los conjuntos de **registros** editados pueden actualizar el origen de datos. En este tutorial no se invoca RDS con objetos ADO, pero este es el aspecto que tendría si lo hiciera:  
   
 ```vb
 Dim rs as New ADODB.Recordset  

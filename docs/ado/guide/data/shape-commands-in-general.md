@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c20132fe933d232d38ee843a706e9ad923d0d376
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 021d47eb011a4c0628b6f356772e82c591747103
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724936"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032467"
 ---
 # <a name="shape-commands-in-general"></a>Comandos Shape en General
-La forma de datos define las columnas de un **conjunto de registros**con forma, las relaciones entre las entidades representadas por las columnas y la manera en que el **conjunto de registros** se rellena con datos.  
+La forma de datos define las columnas de un **conjunto de registros** con forma, las relaciones entre las entidades representadas por las columnas y la manera en que el **conjunto de registros** se rellena con datos.  
   
  Un **conjunto de registros** con forma puede constar de los siguientes tipos de columnas.  
   
 |Tipo de columna|Descripción|  
 |-----------------|-----------------|  
-|datos|Campos de un **conjunto de registros** devueltos por un comando de consulta a un proveedor de datos, una tabla o un **conjunto de registros**con forma anterior.|  
+|datos|Campos de un **conjunto de registros** devueltos por un comando de consulta a un proveedor de datos, una tabla o un **conjunto de registros** con forma anterior.|  
 |Capítulo|Referencia a otro **conjunto de registros**, denominado *capítulo*. Las columnas Chapter permiten definir una relación *de elementos primarios y secundarios* en la que el *elemento primario* es el **conjunto de registros** que contiene la columna Chapter y el *elemento secundario* es el **conjunto de registros** representado por el capítulo.|  
-|aggregate|El valor de la columna se deriva mediante la ejecución de una *función de agregado* en todas las filas o en una columna de todas las filas de un conjunto de **registros**secundario. (Vea funciones de agregado en el tema siguiente, [funciones de agregado, la función Calc y la palabra clave New](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)).|  
+|aggregate|El valor de la columna se deriva mediante la ejecución de una *función de agregado* en todas las filas o en una columna de todas las filas de un conjunto de **registros** secundario. (Vea funciones de agregado en el tema siguiente, [funciones de agregado, la función Calc y la palabra clave New](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)).|  
 |expresión calculada|El valor de la columna se deriva calculando una expresión Visual Basic para Aplicaciones en las columnas de la misma fila del **conjunto de registros**. La expresión es el argumento de la función CALC. (Vea expresión calculada en el tema siguiente, [funciones de agregado, la función Calc y la palabra clave New](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) y en [funciones Visual Basic para aplicaciones](../../../ado/guide/data/visual-basic-for-applications-functions.md)).|  
 |nuevo|Campos de fabricación vacíos, que se pueden rellenar con datos en otro momento. La columna se define con la palabra clave NEW. (Vea la nueva palabra clave en el tema siguiente, [funciones de agregado, la función Calc y la palabra clave New](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)).|  
   
@@ -48,7 +48,7 @@ La forma de datos define las columnas de un **conjunto de registros**con forma, 
   
  Microsoft proporciona una herramienta visual que genera comandos de forma (vea el [Diseñador de entorno de datos](/previous-versions/visualstudio/aa445793(v=vs.60)) en la documentación de Visual Basic 6) y otro que muestra los cursores jerárquicos (vea "usar el control Hierarchical FlexGrid de Microsoft" en la documentación de Visual Basic 6).  
   
- Para obtener información sobre cómo navegar por un **conjunto de registros**jerárquico, vea [obtener acceso a las filas de un conjunto de registros jerárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Para obtener información sobre cómo navegar por un **conjunto de registros** jerárquico, vea [obtener acceso a las filas de un conjunto de registros jerárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
  Para obtener información precisa sobre los comandos Shape sintácticamente correctos, vea [gramática formal](../../../ado/guide/data/formal-shape-grammar.md)de las formas.  
   

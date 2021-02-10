@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17d4094959c72389bf1cef71e6547394e676f78f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d6844590043e0f806381f35c3f74123c24a6dc30
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978586"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032167"
 ---
 # <a name="using-ado-with-ado-md"></a>Uso de ADO con ADO MD
 ADO y ADO MD están relacionados pero modelos de objetos independientes. ADO proporciona objetos para conectarse a orígenes de datos, ejecutar comandos, recuperar datos tabulares y metadatos de esquema en un formato tabular, y ver la información de error del proveedor. ADO MD proporciona objetos para recuperar datos multidimensionales y ver metadatos de esquema multidimensionales.  
   
  Cuando trabaja con un MDP, puede elegir usar ADO, ADO MD o ambos con su aplicación. Al hacer referencia a ambas bibliotecas dentro del proyecto, tendrá acceso completo a la funcionalidad proporcionada por el MDP.  
   
- A menudo, resulta útil para los consumidores obtener una vista plana y tabular de un conjunto de información multidimensional. Puede hacerlo mediante el objeto de conjunto de [registros](../../reference/ado-api/recordset-object-ado.md) de ADO. Especifique el origen del conjunto de [celdas](../../reference/ado-md-api/cellset-object-ado-md.md) como parámetro de ***origen*** para el método [Open](../../reference/ado-api/open-method-ado-recordset.md) de un conjunto de registros, en lugar de como el origen de un **conjunto**de **celdas**ADO MD.  
+ A menudo, resulta útil para los consumidores obtener una vista plana y tabular de un conjunto de información multidimensional. Puede hacerlo mediante el objeto de conjunto de [registros](../../reference/ado-api/recordset-object-ado.md) de ADO. Especifique el origen del conjunto de [celdas](../../reference/ado-md-api/cellset-object-ado-md.md) como el parámetro ***source** _ para el método [Open](../../reference/ado-api/open-method-ado-recordset.md) de un conjunto de registros * *, en lugar de como el origen de un conjunto de **celdas** ADO MD.  
   
- También puede ser útil ver los metadatos del esquema en una vista tabular en lugar de como una jerarquía de objetos. El método [OpenSchema](../../reference/ado-api/openschema-method.md) de ADO en el objeto de [conexión](../../reference/ado-api/connection-object-ado.md) permite al usuario abrir un **conjunto de registros** que contiene información del esquema. El parámetro ***QueryType*** del método **OpenSchema** tiene varios valores [SchemaEnum](../../reference/ado-api/schemaenum.md) que se relacionan específicamente con MDPS. Estos valores son los siguientes:  
+ También puede ser útil ver los metadatos del esquema en una vista tabular en lugar de como una jerarquía de objetos. El método [OpenSchema](../../reference/ado-api/openschema-method.md) de ADO en el objeto de [conexión](../../reference/ado-api/connection-object-ado.md) permite al usuario abrir un **conjunto de registros** que contiene información del esquema. El **parámetro _QueryType_*_ del método _* OpenSchema** tiene varios valores [SchemaEnum](../../reference/ado-api/schemaenum.md) que se relacionan específicamente con MDPS. Estos valores son los siguientes:  
   
 -   **adSchemaCubes**  
   

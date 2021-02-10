@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a262ef7b71b6618bdfc4ae50cec2eec3fca4a41
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 596e11a51a093be30fab7d9d3b273d6605b48b75
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978486"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032077"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Hacer referencia a las bibliotecas de ADO en una aplicación de Visual C++
 Para usar la versión más reciente de ADO en una aplicación Visual C++, utilice la siguiente `#import` Directiva:  
@@ -32,7 +32,7 @@ Para usar la versión más reciente de ADO en una aplicación Visual C++, utilic
     no_namespace rename("EOF", "EndOfFile")  
 ```  
   
- Para usar ADO MD o ADOX, debe importar *msadomd.dll* o *msadox.dll*mediante la sintaxis anterior.  
+ Para usar ADO MD o ADOX, debe importar *msadomd.dll* o *msadox.dll* mediante la sintaxis anterior.  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
  Para usar cualquier versión anterior de ADO, reemplace *msado15.dll* anterior por una de las siguientes bibliotecas de tipos.  

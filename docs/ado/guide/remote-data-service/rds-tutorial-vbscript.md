@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ad7fcb2bb63d77bd50c89f11e9b818439b0d1d0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 693f5858a80d5bc986dc16f993aa5c5a78c54d7c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721406"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031877"
 ---
 # <a name="rds-tutorial-vbscript"></a>Tutorial de RDS (VBScript)
 Este es el tutorial de RDS, escrito en Microsoft Visual Basic Scripting Edition. Para obtener una descripción del propósito de este tutorial, vea el [tutorial de RDS](./rds-tutorial.md).  
@@ -28,7 +28,7 @@ Este es el tutorial de RDS, escrito en Microsoft Visual Basic Scripting Edition.
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](/dotnet/framework/wcf/).  
   
- En este tutorial, [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md) y [RDS. El espacio](../../reference/rds-api/dataspace-object-rds.md) de bits se crea en tiempo de diseño; es decir, se definen con etiquetas de objeto, como se indica a continuación: `<OBJECT>...</OBJECT>` . Como alternativa, se podrían crear en tiempo de ejecución con el método [CreateObject (RDS)](../../reference/rds-api/createobject-method-rds.md) . Por ejemplo, **RDS. ** El objeto DataControl podría crearse de la siguiente manera:  
+ En este tutorial, [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md) y [RDS. El espacio](../../reference/rds-api/dataspace-object-rds.md) de bits se crea en tiempo de diseño; es decir, se definen con etiquetas de objeto, como se indica a continuación: `<OBJECT>...</OBJECT>` . Como alternativa, se podrían crear en tiempo de ejecución con el método [CreateObject (RDS)](../../reference/rds-api/createobject-method-rds.md) . Por ejemplo, **RDS.** El objeto DataControl podría crearse de la siguiente manera:  
   
 ```vb
 Set DC = Server.CreateObject("RDS.DataControl")  
@@ -59,7 +59,7 @@ Set DC = Server.CreateObject("RDS.DataControl")
  Sin embargo, para este tutorial, use el servidor imaginario, "yourServer".  
   
 > [!NOTE]
->  Preste atención al tipo de datos de los argumentos **ByRef** . VBScript no permite especificar el tipo de variable, por lo que siempre debe pasar una **variante**. Cuando se usa HTTP, RDS permitirá pasar una variante a un método que espera un valor no variante si se invoca con el **objeto RDS. ** El método [CreateObject](../../reference/rds-api/createobject-method-rds.md) del objeto DataSpace. Al utilizar DCOM o un servidor en proceso, debe coincidir con los tipos de parámetro en los lados cliente y servidor, o bien se producirá un error de coincidencia de tipos.  
+>  Preste atención al tipo de datos de los argumentos **ByRef** . VBScript no permite especificar el tipo de variable, por lo que siempre debe pasar una **variante**. Cuando se usa HTTP, RDS permitirá pasar una variante a un método que espera un valor no variante si se invoca con el **objeto RDS.** El método [CreateObject](../../reference/rds-api/createobject-method-rds.md) del objeto DataSpace. Al utilizar DCOM o un servidor en proceso, debe coincidir con los tipos de parámetro en los lados cliente y servidor, o bien se producirá un error de coincidencia de tipos.  
   
 ```vb
 Set DF1 = DS1.CreateObject("RDSServer.DataFactory", "https://yourServer")  

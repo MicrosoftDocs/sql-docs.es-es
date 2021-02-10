@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97f6dba7bf01b3236d6b8b00e6338185cf6a8d41
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 31c9b1dd1ccc3ef61b120bf3d075b81fc34c0eb6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979006"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032287"
 ---
 # <a name="using-cachesize"></a>Utilizar CacheSize
 Utilice la propiedad **CacheSize** para controlar el número de registros que se van a recuperar de una vez en la memoria local desde el proveedor. Por ejemplo, si el **CacheSize** es 10, después de abrir primero el objeto de **conjunto de registros** , el proveedor recupera los primeros 10 registros en la memoria local. A medida que se desplaza por el objeto de **conjunto de registros** , el proveedor devuelve los datos del búfer de memoria local. En cuanto se desplaza por encima del último registro de la memoria caché, el proveedor recupera los 10 registros siguientes del origen de datos en la memoria caché.  

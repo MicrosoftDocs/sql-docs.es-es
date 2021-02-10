@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d761b781e7de4225f51fb3600ac467015a0c274
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f2c62c8b12435ec70166b66416f343fa835f6158
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722726"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032617"
 ---
 # <a name="writing-your-own-customized-handler"></a>Escritura de un controlador personalizado
 Es posible que desee escribir su propio controlador si es un administrador del servidor IIS que desea la compatibilidad predeterminada de RDS, pero más control sobre las solicitudes de usuario y los derechos de acceso.  
@@ -44,17 +44,17 @@ Es posible que desee escribir su propio controlador si es un administrador del s
   
  ***consulta***  de  Texto del comando para realizar una consulta.  
   
- ***ppRS***  Puntero en el que se debe devolver el **conjunto de registros** .  
+ ***ppRS** _ el puntero en el que se debe devolver _ *Recordset**.  
   
 ## <a name="reconnect-method"></a>Reconnect (método)  
- Este método actualiza el origen de datos. Crea un nuevo objeto de [conexión](../../reference/ado-api/connection-object-ado.md) y adjunta el conjunto de **registros**especificado.  
+ Este método actualiza el origen de datos. Crea un nuevo objeto de [conexión](../../reference/ado-api/connection-object-ado.md) y adjunta el conjunto de **registros** especificado.  
   
 ### <a name="arguments"></a>Argumentos  
  ***Conn***  Cadena de conexión.  
   
  ***argumentos***  Argumentos para el controlador.  
   
- ***PR***  Objeto de **conjunto de registros** .  
+ ***pRS** _ un objeto _ *Recordset**.  
   
 ## <a name="msdfhdlidl"></a>msdfhdl. idl  
  Se trata de la definición de interfaz para **IDataFactoryHandler** que aparece en el archivo **msdfhdl. idl** .  

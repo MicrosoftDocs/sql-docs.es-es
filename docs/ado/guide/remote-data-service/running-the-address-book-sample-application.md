@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 85d9dbf43107af7504241af825b5b21c38139e3b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b4e77339de5ec7ebddbdb1314228abf6eef8c15d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723058"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031817"
 ---
 # <a name="running-the-address-book-sample-application"></a>Ejecución de la aplicación de ejemplo de la libreta de direcciones
 > [!IMPORTANT]
@@ -32,7 +32,7 @@ ms.locfileid: "91723058"
   
 ### <a name="to-run-this-application"></a>Para ejecutar esta aplicación  
   
-1.  Asegúrese de que Microsoft SQL Server se está ejecutando. Haga clic en **Inicio**, seleccione **programas**, **Microsoft SQL Server 7,0**y, a continuación, haga clic en **Service Manager**. Si hay una flecha verde en el círculo blanco, SQL Server se está ejecutando. Si no lo es (habrá un cuadrado rojo en el círculo blanco), haga clic en **iniciar o continuar**.  
+1.  Asegúrese de que Microsoft SQL Server se está ejecutando. Haga clic en **Inicio**, seleccione **programas**, **Microsoft SQL Server 7,0** y, a continuación, haga clic en **Service Manager**. Si hay una flecha verde en el círculo blanco, SQL Server se está ejecutando. Si no lo es (habrá un cuadrado rojo en el círculo blanco), haga clic en **iniciar o continuar**.  
   
 2.  En Microsoft Internet Explorer 4,0 o posterior, escriba la siguiente dirección:  
   

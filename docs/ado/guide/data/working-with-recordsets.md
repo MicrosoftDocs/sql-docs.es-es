@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a8ffeab33125b3b13ca5725125654bd3ed1f822
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4e64608adc461534a30630a6b8b8d29d0478544a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978846"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032257"
 ---
 # <a name="working-with-recordsets"></a>Trabajar con conjuntos de registros
 El objeto de **conjunto de registros** tiene características integradas que permiten reorganizar el orden de los datos en el conjunto de resultados, buscar un registro específico en función de los criterios proporcionados e incluso optimizar esas operaciones de búsqueda mediante índices. El uso de estas características depende del proveedor y, en algunos casos, como el de la propiedad de [Índice](../../../ado/reference/ado-api/index-property.md) , la estructura del propio origen de datos.  
@@ -34,7 +34,7 @@ El objeto de **conjunto de registros** tiene características integradas que per
   
  Si establece la propiedad **Sort** en una cadena vacía, se restablecerán las filas a su orden original y se eliminarán los índices temporales. Los índices existentes no se eliminarán.  
   
- Supongamos que un **conjunto de registros** contiene tres campos denominados *FirstName*, *middleInitial*y *LastName*. Establezca la propiedad **Sort** en la cadena " `lastName DESC, firstName ASC` ", que ordenará el **conjunto de registros** por apellido en orden descendente y luego por nombre en orden ascendente. Se omite la inicial del segundo nombre.  
+ Supongamos que un **conjunto de registros** contiene tres campos denominados *FirstName*, *middleInitial* y *LastName*. Establezca la propiedad **Sort** en la cadena " `lastName DESC, firstName ASC` ", que ordenará el **conjunto de registros** por apellido en orden descendente y luego por nombre en orden ascendente. Se omite la inicial del segundo nombre.  
   
  Ningún campo al que se haga referencia en una cadena de criterios de ordenación puede denominarse "ASC" o "DESC", ya que esos nombres entran en conflicto con las palabras clave **ASC** y **DESC**. Asigne un alias a un campo que tenga un nombre en conflicto mediante la palabra clave **as** en la consulta que devuelve el **conjunto de registros**.  
   
@@ -63,18 +63,18 @@ El objeto de **conjunto de registros** tiene características integradas que per
  Los asteriscos solo se pueden usar al final de una cadena de criterios o juntos al principio y al final de una cadena de criterios, como se mostró anteriormente. No se puede usar el asterisco como carácter comodín inicial (' * str ') o carácter comodín incrustado ( \* r '). Esto producirá un error.  
   
 ### <a name="seek-and-index"></a>Búsqueda e índice  
- Use el método de **búsqueda** junto con la propiedad de **Índice** si el proveedor subyacente admite índices en el objeto de **conjunto de registros** . Use el método [Supports](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** para determinar si el proveedor subyacente admite **Seek**y el método **Supports (adIndex)** para determinar si el proveedor admite índices. (Por ejemplo, el [proveedor de OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) admite **Seek** e **index**).  
+ Use el método de **búsqueda** junto con la propiedad de **Índice** si el proveedor subyacente admite índices en el objeto de **conjunto de registros** . Use el método [Supports](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** para determinar si el proveedor subyacente admite **Seek** y el método **Supports (adIndex)** para determinar si el proveedor admite índices. (Por ejemplo, el [proveedor de OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) admite **Seek** e **index**).  
   
  Si **Seek** no encuentra la fila deseada, no se produce ningún error y la fila se coloca al final del conjunto de **registros**. Establezca la propiedad **index** en el índice deseado antes de ejecutar este método.  
   
  Este método solo se admite con los cursores del lado servidor. No se admite Seek cuando el valor de la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) del objeto de **conjunto de registros** es **adUseClient**.  
   
- Este método solo se puede usar cuando se ha abierto el objeto de **conjunto de registros** con el valor **adCmdTableDirect**de [commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md) .  
+ Este método solo se puede usar cuando se ha abierto el objeto de **conjunto de registros** con el valor **adCmdTableDirect** de [commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md) .  
   
 ## <a name="filtering-the-results"></a>Filtrar los resultados  
  El método **Find** limita la búsqueda al contenido de un campo. El método **Seek** requiere que tenga un índice y también tenga otras limitaciones. Si tiene que buscar en varios campos que no son la base de un índice o si el proveedor no admite índices, puede limitar los resultados mediante la propiedad **Filter** del objeto de **conjunto de registros** .  
   
- Utilice la propiedad **Filter** para filtrar de forma selectiva los registros de un objeto de **conjunto de registros** . El conjunto de **registros** filtrado se convierte en el cursor actual, lo que significa que los registros que no cumplen los criterios de **filtro** no están disponibles en el **conjunto de registros** hasta que se quita el **filtro** . Otras propiedades que devuelven valores basados en el cursor actual se ven afectadas, como **AbsolutePosition**, **AbsolutePage**, **RecordCount**y **PageCount**. Esto se debe a que si se establece la propiedad **Filter** en un valor concreto, se moverá el registro actual al primer registro que cumpla el nuevo valor.  
+ Utilice la propiedad **Filter** para filtrar de forma selectiva los registros de un objeto de **conjunto de registros** . El conjunto de **registros** filtrado se convierte en el cursor actual, lo que significa que los registros que no cumplen los criterios de **filtro** no están disponibles en el **conjunto de registros** hasta que se quita el **filtro** . Otras propiedades que devuelven valores basados en el cursor actual se ven afectadas, como **AbsolutePosition**, **AbsolutePage**, **RecordCount** y **PageCount**. Esto se debe a que si se establece la propiedad **Filter** en un valor concreto, se moverá el registro actual al primer registro que cumpla el nuevo valor.  
   
  La propiedad **Filter** toma un argumento Variant. Este valor representa uno de los tres métodos para usar la propiedad **Filter** : una cadena de criterios, una constante **FilterGroupEnum** o una matriz de marcadores. Para obtener más información, vea filtrar con una cadena de criterios, filtrar con una constante y filtrar con marcadores más adelante en este tema.  
   
@@ -93,7 +93,7 @@ El objeto de **conjunto de registros** tiene características integradas que per
 -   *Value* es el valor con el que se comparan los valores de campo (por ejemplo,, `'Smith'` `#8/24/95#` , `12.345` o `$50.00` ). Use comillas simples (') con las cadenas y los signos de almohadilla ( `#` ) con las fechas. En el caso de los números, puede usar separadores decimales, signos de dólar y notación científica. Si el *operador* es **like**, *Value* puede usar caracteres comodín. Solo el asterisco ( \* ) y el signo de porcentaje (%) se permiten caracteres comodín y deben ser el último carácter de la cadena. El *valor* no puede ser null.  
   
     > [!NOTE]
-    >  Para incluir comillas simples (') en el *valor*de filtro, utilice dos comillas simples para representar una. Por ejemplo, para filtrar por *O'Malley*, la cadena de criterios debe ser `"col1 = 'O''Malley'"` . Para incluir comillas simples al principio y al final del valor de filtro, incluya la cadena entre signos de almohadilla (#). Por ejemplo, para filtrar por *' 1 '*, la cadena de criterios debe ser `"col1 = #'1'#"` .  
+    >  Para incluir comillas simples (') en el *valor* de filtro, utilice dos comillas simples para representar una. Por ejemplo, para filtrar por *O'Malley*, la cadena de criterios debe ser `"col1 = 'O''Malley'"` . Para incluir comillas simples al principio y al final del valor de filtro, incluya la cadena entre signos de almohadilla (#). Por ejemplo, para filtrar por *' 1 '*, la cadena de criterios debe ser `"col1 = #'1'#"` .  
   
  No hay ninguna prioridad entre **and** y **or**. Las cláusulas se pueden agrupar entre paréntesis. Sin embargo, no puede agrupar las cláusulas Unidas por **o** y, a continuación, unir el grupo a otra cláusula con y, como se indica a continuación.  
   
@@ -114,7 +114,7 @@ El objeto de **conjunto de registros** tiene características integradas que per
   
 |Constante|Descripción|  
 |--------------|-----------------|  
-|**adFilterAffectedRecords**|Filtros para ver solo los registros afectados por la llamada de última **eliminación**, **resincronización**, **UpdateBatch**o **CancelBatch** .|  
+|**adFilterAffectedRecords**|Filtros para ver solo los registros afectados por la llamada de última **eliminación**, **resincronización**, **UpdateBatch** o **CancelBatch** .|  
 |**adFilterConflictingRecords**|Filtros para ver los registros que dieron error en la última actualización por lotes.|  
 |**adFilterFetchedRecords**|Filtra para ver los registros en la caché actual; es decir, los resultados de la última llamada para recuperar los registros de la base de datos.|  
 |**adFilterNone**|Quita el filtro actual y restaura todos los registros para su visualización.|  
@@ -125,7 +125,7 @@ El objeto de **conjunto de registros** tiene características integradas que per
  `Attribute VB_Name = "modExaminingData"`  
   
 ### <a name="filtering-with-bookmarks"></a>Filtrar con marcadores  
- Por último, puede pasar una matriz variante de marcadores a la propiedad **Filter** . El cursor resultante contendrá solo los registros cuyo marcador se pasó a la propiedad. En el ejemplo de código siguiente se crea una matriz de marcadores a partir de los registros de un **conjunto de registros** que tienen una "B" en el campo *ProductName* . A continuación, pasa la matriz a la propiedad **Filter** y muestra información sobre el conjunto de **registros**filtrado resultante.  
+ Por último, puede pasar una matriz variante de marcadores a la propiedad **Filter** . El cursor resultante contendrá solo los registros cuyo marcador se pasó a la propiedad. En el ejemplo de código siguiente se crea una matriz de marcadores a partir de los registros de un **conjunto de registros** que tienen una "B" en el campo *ProductName* . A continuación, pasa la matriz a la propiedad **Filter** y muestra información sobre el conjunto de **registros** filtrado resultante.  
   
 ```  
 'BeginFilterBkmk  
@@ -162,7 +162,7 @@ Loop
   
  El registro actual de un clon recién creado se establece originalmente en el primer registro. El puntero de registro actual de un **conjunto de registros** clonado no está sincronizado con el original ni viceversa. Puede navegar de forma independiente en cada **conjunto de registros**.  
   
- Los cambios que realice en un objeto de **conjunto de registros** serán visibles en todos sus clones, independientemente del tipo de cursor. Sin embargo, después de ejecutar [Requery](../../../ado/reference/ado-api/requery-method.md) en el **conjunto de registros**original, los clones ya no se sincronizarán con el original.  
+ Los cambios que realice en un objeto de **conjunto de registros** serán visibles en todos sus clones, independientemente del tipo de cursor. Sin embargo, después de ejecutar [Requery](../../../ado/reference/ado-api/requery-method.md) en el **conjunto de registros** original, los clones ya no se sincronizarán con el original.  
   
  Al cerrar el **conjunto de registros** original no se cierran sus copias, ni al cerrar una copia se cierra el original o cualquiera de las demás copias.  
   
