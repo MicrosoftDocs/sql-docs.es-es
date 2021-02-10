@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ebe7301fe71d90033aeee5ec72b9a23bcaa922be
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 289cee12f65511cf64a68837043eacb37d2f2763
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169234"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054850"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Ejemplo de método Refresh de procedimientos (VB)
 En el código siguiente se muestra cómo actualizar la colección [Procedures](./procedures-collection-adox.md) de un [Catálogo](./catalog-object-adox.md). Esto es necesario antes de que se pueda tener acceso a los objetos de [procedimiento](./procedure-object-adox.md) del **Catálogo** .  

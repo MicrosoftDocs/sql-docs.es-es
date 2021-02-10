@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e5a47bd7bd19be7685308b20225188cc58a4832
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a0e37323dad52723681754e105efa244258fc2f7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172223"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054350"
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>Ejemplo de propiedades Command y CommandText (VC++)
 En el código siguiente se muestra cómo utilizar la propiedad [Command](./command-property-adox.md) para actualizar el texto de un procedimiento.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5049e6d1e60a2a54633c1fa0fe7adacb0685690
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 00b3758db44e89d4c14b3a57bea8a7e7e3bdd158
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172221"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054340"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Ejemplo de propiedad Type de tabla, método connection close (VB)
 Si se establece la propiedad [ActiveConnection](./activeconnection-property-adox.md) en **Nothing** , se debe cerrar la conexión con el catálogo. Las colecciones asociadas estarán vacías. Todos los objetos que se crearon a partir de objetos de esquema en el catálogo se quedarán huérfanos. Todas las propiedades de los objetos que se han almacenado en caché seguirán estando disponibles, pero se producirá un error al intentar leer las propiedades que requieren una llamada al proveedor.  

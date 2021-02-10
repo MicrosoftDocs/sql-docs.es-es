@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0fea6bc28e857b9d61d7aa429206fad6a2bb48c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a1a120af3c438876f97e5458308769c94c07c0ec
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172065"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054190"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>Ejemplo de métodos GetPermissions y SetPermissions (VC++)
 En este ejemplo se muestran los métodos [GetPermissions](./getpermissions-method-adox.md) y [SetPermissions](./setpermissions-method-adox.md) . El código siguiente proporciona acceso completo a la tabla Orders al usuario administrador.  

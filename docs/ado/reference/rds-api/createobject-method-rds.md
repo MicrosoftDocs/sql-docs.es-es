@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fa625a75bbcadffb37064c04adc7ebd57a48994
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1808130ed87bf3448c9aad12b7dac92244bfcd68
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163866"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053276"
 ---
 # <a name="createobject-method-rds"></a>CreateObject (método) (RDS)
 Crea el proxy para el objeto comercial de destino y devuelve un puntero a él. El proxy empaqueta y calcula las referencias de los datos en el código auxiliar del lado del servidor para las comunicaciones con el objeto comercial para enviar solicitudes y datos a través de Internet. En el caso de los objetos de componente en proceso, no se utiliza ningún proxy, solo se proporciona un puntero al objeto.  

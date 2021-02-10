@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cfb44f5e35b1f30e504cfbf83a85c5a61aceb987
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 00e698ed85e739b2ea6a8dccebef7ce36e3be8e0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164296"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054480"
 ---
 # <a name="catalog-object-adox"></a>Objeto Catalog (ADOX)
 Contiene colecciones ([tablas](./tables-collection-adox.md), [vistas](./views-collection-adox.md), [usuarios](./users-collection-adox.md), [grupos](./groups-collection-adox.md)y [procedimientos](./procedures-collection-adox.md)) que describen el catálogo de esquemas de un origen de datos.  

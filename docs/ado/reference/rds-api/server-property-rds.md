@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 373b43f3540d0dcb99349ca34d0a424bc6235f73
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: cc6262e9748a4fd94fd7f4e0a75214c24def0acb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166132"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052936"
 ---
 # <a name="server-property-rds"></a>Propiedad del servidor (RDS)
 Indica el nombre del Internet Information Services (IIS) y el protocolo de comunicación.  

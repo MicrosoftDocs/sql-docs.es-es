@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ccdd34512ba797aa5de8da14ac03011da00bf54e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b7ffdb6c63baf87834258722c869148cba33579b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163922"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053346"
 ---
 # <a name="cancel-method-example-vbscript"></a>Ejemplo del método Cancel (VBScript)
 > [!IMPORTANT]

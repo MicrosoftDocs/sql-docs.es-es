@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a23921220da6cd91d2af8b8f7aac5197301c9175
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8657feb52c09f8d4ef04517985201d9a2aa8f80c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172081"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054210"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner (método, ADOX)
 Devuelve el propietario de un objeto de un [Catálogo](./catalog-object-adox.md).  

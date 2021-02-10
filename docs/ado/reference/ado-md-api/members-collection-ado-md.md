@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fdcaba24180ad333b2c9f556ac9b26fe75f120d2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d628481607e05c2278e5dd1beede08a12b93d740
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164493"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054500"
 ---
 # <a name="members-collection-ado-md"></a>Colección Members (ADO MD)
 Contiene los objetos [miembro](./member-object-ado-md.md) de un nivel o una posición a lo largo de un eje.  

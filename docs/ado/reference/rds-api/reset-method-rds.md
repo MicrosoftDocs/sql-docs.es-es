@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4d1fa7427fd4c55ea8c53702ef4ac6a4a68b9b8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2acfa0ad906070e36aeefb94decd8eec76b25713
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166134"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052946"
 ---
 # <a name="reset-method-rds"></a>Reset (método) (RDS)
 Ejecuta la ordenación o el filtro en un conjunto de **registros** del lado cliente basándose en las propiedades de ordenación y filtro especificadas.  

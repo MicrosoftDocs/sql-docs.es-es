@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b1c3734ad88b72a2f7779b37c97c4b7c4863c12
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fec4b21cf4aa619fba72f5d62fff7f6e34506de5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164100"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053880"
 ---
 # <a name="procedure-object-adox"></a>Objeto Procedure (ADOX)
 Representa un procedimiento almacenado. Cuando se usa junto con el objeto de [comando](../ado-api/command-object-ado.md) de ADO, el objeto de **procedimiento** se puede utilizar para agregar, eliminar o modificar procedimientos almacenados.  
