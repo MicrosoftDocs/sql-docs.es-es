@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56ead8ee314cb5b6bffa31a3292b395c0c990927
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d7f8ccacd9b81205ddd58a1b58290548db8bec92
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172288"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050486"
 ---
 # <a name="append-method-adox-tables"></a>Append (método) (tablas ADOX)
 Agrega un nuevo objeto de [tabla](./table-object-adox.md) a la colección de [tablas](./tables-collection-adox.md) .  
@@ -35,7 +35,7 @@ Tables.Append Table
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Tabla*  
+ *Table*  
  Valor de **tipo Variant** que contiene una referencia a la **tabla** que se va a anexar o el nombre de la tabla que se va a crear y anexar.  
   
 ## <a name="remarks"></a>Observaciones  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7eab888961a49b257d0dd408362545332454554e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 27e3d652a6cecd341fe048ff67182ee7cf89b7a1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163728"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049365"
 ---
 # <a name="internettimeout-property-rds"></a>Propiedad InternetTimeout (RDS)
 Indica el número de milisegundos que hay que esperar antes de que se agote el tiempo de espera de una solicitud.  

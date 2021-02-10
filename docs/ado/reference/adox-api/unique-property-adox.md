@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e38b3f7f6f89a9c139d4b0d4a09a6a12701c5ab1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 39a94c32eba8f42111f3c1e60d62a11706d397cb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169151"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049695"
 ---
 # <a name="unique-property-adox"></a>Unique (propiedad, ADOX)
 Indica si las claves de índice deben ser únicas.  

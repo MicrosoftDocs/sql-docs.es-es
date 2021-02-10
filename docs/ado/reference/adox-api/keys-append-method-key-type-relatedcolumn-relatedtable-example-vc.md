@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce9203411271fc1dc5e69278f92989c1b76ba159
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ade44a896c3fd93f9e6543a501e4ab9693bba187
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164172"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049965"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Ejemplo de propiedades Type, RelatedColumn, RelatedTable y UpdateRule de clave, método Append de claves (VC++)
 En el código siguiente se muestra cómo crear una nueva clave externa. Supone que existen dos tablas (Customers y orders).  

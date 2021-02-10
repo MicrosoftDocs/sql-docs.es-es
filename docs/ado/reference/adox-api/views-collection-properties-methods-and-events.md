@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4e1a2e0ab4b37d86329930b455db09cec70be22
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9e9c4c708b4084873087ee70002114494f9ed780
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169090"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049595"
 ---
 # <a name="views-collection-properties-methods-and-events"></a>Eventos, métodos y propiedades de la colección de vistas
 ## <a name="properties"></a>Propiedades  

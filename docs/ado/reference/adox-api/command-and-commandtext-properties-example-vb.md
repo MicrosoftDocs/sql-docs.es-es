@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56f38d75c5ab05333e1f78e3b77b16b1f4c3be03
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9393c247f3361576516957fbeccb5ca5d09f64d7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169469"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050265"
 ---
 # <a name="command-and-commandtext-properties-example-vb"></a>Ejemplo de propiedades Command y CommandText (VB)
 En el código siguiente se muestra cómo utilizar la propiedad [Command](./command-property-adox.md) para actualizar el texto de un procedimiento.  

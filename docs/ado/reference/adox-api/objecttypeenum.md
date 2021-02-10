@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b8aa3bdaa75994330325f32cf03676d48a00463
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9a5ff3f235a01bb84a05b9c4efdff5c1fd15b7c8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164146"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049895"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 Especifica el tipo de objeto de base de datos para el que se van a establecer permisos o propiedad.  

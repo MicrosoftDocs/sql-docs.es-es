@@ -9,18 +9,18 @@ ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: 2989be74f4c180d07a6270a8ba5f685460780fbd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 18bec3d694985e15b1ae2d813fddf2f378c9d78a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243479"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049111"
 ---
 # <a name="configure-polybase-in-parallel-data-warehouse-to-access-external-data-in-hadoop"></a>Configuración de polybase en el almacenamiento de datos paralelos para acceder a datos externos en Hadoop
 
 En el artículo se explica cómo usar polybase en un dispositivo APS para consultar datos externos en Hadoop.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 PolyBase es compatible con dos proveedores de Hadoop: Hortonworks Data Platform (HDP) y Cloudera Distributed Hadoop (CDH). Hadoop sigue el patrón “Principal.Secundaria.Versión” para sus revisiones nuevas y se admiten todas las versiones dentro de una revisión principal y secundaria compatible. Se admiten los siguientes proveedores de Hadoop:
  - Hortonworks HDP 1.3 en Linux y Windows Server  
@@ -49,7 +49,7 @@ En primer lugar, configure APS para usar su proveedor de Hadoop específico.
 
 2. Reinicie la región APS mediante la página estado del servicio en el [Configuration Manager del dispositivo](launch-the-configuration-manager.md).
   
-## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Habilitar el cálculo de la aplicación  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Habilitar el cálculo de aplicación  
 
 Para mejorar el rendimiento de las consultas, habilite el cálculo de la aplicación para el clúster de Hadoop:  
   
@@ -286,7 +286,7 @@ Las siguientes consultas proporcionan un ejemplo con datos de sensor de vehícul
 
 ### <a name="ad-hoc-queries"></a>Consultas ad hoc  
 
-La siguiente consulta ad hoc combina relacional con datos de Hadoop. Selecciona los clientes que tienen más de 35 mph y combinan datos de clientes estructurados almacenados en APS con datos de sensor de automóviles almacenados en Hadoop.  
+La siguiente consulta ad hoc combina datos relacionales con datos de Hadoop. Selecciona los clientes que tienen más de 35 mph y combinan datos de clientes estructurados almacenados en APS con datos de sensor de automóviles almacenados en Hadoop.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9536ad522be7a323113e23466de5abb82cbb5824
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2dfc8f93b2c185b530a142dde8206c77799818c3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172267"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050386"
 ---
 # <a name="attributes-property-example-vb"></a>Ejemplo de propiedad Attributes (VB)
 En este ejemplo se muestra la propiedad [attributes](./attributes-property-adox.md) de una [columna](./column-object-adox.md). Si se establece en **adColNullable** , el usuario puede establecer el valor de un [campo](../ado-api/field-object.md) de [conjunto de registros](../ado-api/recordset-object-ado.md) en una cadena vacía. En esta situación, el usuario puede distinguir entre un registro en el que no se conocen los datos y un registro en el que los datos no se aplican.  

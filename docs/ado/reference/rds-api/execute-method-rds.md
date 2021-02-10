@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e5ad157ffccc07ba0b64064122f7f0e55ccd422
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 862ded514855d6ac0cd3c18bcb014463eecf1e76
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163806"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049485"
 ---
 # <a name="execute-method-rds"></a>Execute (método) (RDS)
 Ejecuta la solicitud y crea un conjunto de registros ADO para su uso en ADO 2,5 y versiones posteriores.  

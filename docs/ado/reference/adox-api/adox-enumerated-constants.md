@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f9734a802ca1b653a912a0fe829b24e14e6953f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 227e66568fcc140c5a14a23af7a6471a710c23c4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164347"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050636"
 ---
 # <a name="adox-enumerated-constants"></a>Constantes enumeradas de ADOX
 Para ayudar a la depuración, las constantes enumeradas de ADOX muestran un valor para cada constante. Sin embargo, este valor es meramente consultivo y puede cambiar de una versión de ADOX a otra. El código solo debe depender del nombre, no del valor real, de las constantes enumeradas.  

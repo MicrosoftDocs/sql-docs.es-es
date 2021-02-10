@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f948febd-c885-4621-823b-421e116fec4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35f4ddd60d4056cebbf0383aa0afb240c3ecb722
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fd2104a3b334da02e9bceee3ef191baac1d66cab
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169671"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050796"
 ---
 # <a name="actionenum"></a>ActionEnum
 Especifica el tipo de acción que se debe realizar cuando se llama a [SetPermissions](./setpermissions-method-adox.md) .  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e321d3cf41e8edcd5a5bd29452050542257a908b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6df2a76aa32ceec8e77bf27424345fc6bae52233
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169571"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050476"
 ---
 # <a name="append-method-adox-users"></a>Append (método) (usuarios ADOX)
 Agrega un nuevo objeto de [usuario](./user-object-adox.md) a la colección de [usuarios](./users-collection-adox.md) .  

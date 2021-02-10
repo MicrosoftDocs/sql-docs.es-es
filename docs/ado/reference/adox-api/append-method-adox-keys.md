@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4690fba27f42da95eb354b5074f9eb9954902a6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 573bfb24f68896f647f4c0d9ff5867ee1d38e5fb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172293"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050516"
 ---
 # <a name="append-method-adox-keys"></a>Append (método) (claves ADOX)
 Agrega un nuevo objeto [clave](./key-object-adox.md) a la colección de [claves](./keys-collection-adox.md) .  
@@ -35,7 +35,7 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Clave*  
+ *Key*  
  Objeto de **clave** que se va a anexar o el nombre de la clave que se va a crear y anexar.  
   
  *KeyType*  

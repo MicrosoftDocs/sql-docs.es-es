@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c4d96176e4bdad70cbd5c09a59adcade6f99f81
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6a90b95cb6ca9d020ce841524caa498743b8b1d6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169384"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050085"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions (método, ADOX)
 Devuelve los permisos de un [Grupo](./group-object-adox.md) o [usuario](./user-object-adox.md) en un contenedor de objetos o objetos.  

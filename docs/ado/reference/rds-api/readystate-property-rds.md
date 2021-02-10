@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce3cc80262b44ed824b61ddcd56631d15c5cfc65
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a70a2f7fc26e83b21cdb85edb3ddf4a664785d30
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168822"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049215"
 ---
 # <a name="readystate-property-rds"></a>Propiedad ReadyState (RDS)
 Indica el progreso de un objeto [DataControl](./datacontrol-object-rds.md) a medida que recupera los datos en su objeto de [conjunto de registros](../ado-api/recordset-object-ado.md) .  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fb68ca4eb7cd8c1591ef52b399649dac7614b308
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fc0838e16533d5c9c75d9dfbec7bfb934efeb5f2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169407"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050105"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>Ejemplo de métodos GetObjectOwner y SetObjectOwner (VC++)
 En este ejemplo se muestran los métodos [GetObjectOwner](./getobjectowner-method-adox.md) y [SetObjectOwner](./setobjectowner-method.md) . Este código supone la existencia de la cuenta de grupo (vea el ejemplo de los [métodos Append y ChangePassword de grupos y usuarios (VC + +)](./groups-and-users-append-changepassword-methods-example-vc.md) para ver cómo agregar este grupo al sistema). El propietario de la tabla Categories está establecido en Accounting.  

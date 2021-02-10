@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff34689eac4f9aff1729b316c4aff25b02191c83
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2234203a70bfbc4fd031b85e4f1f66327d58d62b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169633"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050606"
 ---
 # <a name="adox-objects"></a>Objetos ADOX
 ## <a name="adox-object-summary"></a>Resumen de objetos ADOX  
@@ -30,9 +30,9 @@ ms.locfileid: "99169633"
 |[Columna](./column-object-adox.md)|Representa una columna de una tabla, un índice o una clave.|  
 |[Grupo](./group-object-adox.md)|Representa una cuenta de grupo que tiene permisos de acceso en una base de datos protegida.|  
 |[Index](./index-object-adox.md)|Representa un índice de una tabla de base de datos.|  
-|[Clave](./key-object-adox.md)|Representa un campo de clave principal, externa o única de una tabla de base de datos.|  
-|[Pasos](./procedure-object-adox.md)|Representa un procedimiento almacenado.|  
-|[Tabla](./table-object-adox.md)|Representa una tabla de base de datos, que incluye columnas, índices y claves.|  
+|[Key](./key-object-adox.md)|Representa un campo de clave principal, externa o única de una tabla de base de datos.|  
+|[Procedimiento](./procedure-object-adox.md)|Representa un procedimiento almacenado.|  
+|[Table](./table-object-adox.md)|Representa una tabla de base de datos, que incluye columnas, índices y claves.|  
 |[User](./user-object-adox.md)|Representa una cuenta de usuario que tiene permisos de acceso en una base de datos protegida.|  
 |[Ver](./view-object-adox.md)|Representa un conjunto filtrado de registros o una tabla virtual.|  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5b9581ec6ba39b2006ab12f393060c72eaed60a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 11f47f476b15f028b74900afc2f7ecc9964b61a3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172200"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050195"
 ---
 # <a name="create-method-example-vb"></a>Ejemplo de método Create (VB)
 En el código siguiente se muestra cómo crear una nueva base de datos de Microsoft Jet con el método [Create](./create-method-adox.md) .  
