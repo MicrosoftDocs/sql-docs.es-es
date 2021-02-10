@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1c987294c92dfcd5a7577f96ad5d77c9e27f975b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 409f5bcfaa779177ca7b7f7c85f4911d3b889d93
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468787"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063140"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>Opciones de la línea de comandos en la consola SSMA (SybaseToSQL)
 Microsoft proporciona un conjunto sólido de opciones de línea de comandos para ejecutar y controlar las actividades de SSMA. Las secciones siguientes detallan el mismo.  

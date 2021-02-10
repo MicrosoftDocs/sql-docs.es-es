@@ -11,12 +11,12 @@ ms.assetid: d63aa7e2-62c6-4c84-b3da-dcf2d89ee134
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 6a8db3e4025ddbb434c07448d576ec18828a403e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cee9e42386aa76616e049261a4d1f5b6d965fe26
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468895"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058690"
 ---
 # <a name="data-migration-report--oracletosql"></a>Informe de migración de datos (OracleToSQL)
 El cuadro de diálogo **Informe de migración de datos** aparece después de migrar los datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -37,7 +37,7 @@ El número de filas de datos de la tabla de origen.
 **Número de filas migradas correctamente**  
 El número de filas de datos que se migraron correctamente a la tabla de destino.  
   
-**Relación**  
+**Proporción**  
 Porcentaje de filas migradas correctamente.  
   
 **Detalles**  

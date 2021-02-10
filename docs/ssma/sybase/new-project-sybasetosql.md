@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fcd83cd6-a876-4b5f-996d-84b7c8706305
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4122e4d9deb354dded9e015f4ca4a8987cd6ff6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 857f5be28651b86c474ccb7b0a1a692823da9df7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497688"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064268"
 ---
 # <a name="new-project-sybasetosql"></a>Nuevo proyecto (SybaseToSQL)
 Utilice el cuadro de diálogo **nuevo proyecto** para crear un nuevo proyecto de SSMA. Para tener acceso al cuadro de diálogo **nuevo proyecto** , en el menú **archivo** , haga clic en **nuevo proyecto**.  

@@ -11,12 +11,12 @@ ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1d97fd4a9aa4c92fe1e6376b4b472519b89e4bc7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db938314a0c0700c72ac23580d36a5fc0f0c6633
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492424"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059360"
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>Conectarse a SQL Server (OracleToSQL)
 Utilice el cuadro de diálogo **conectar con SQL Server** para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que desea migrar. Para tener acceso al cuadro de diálogo **conectar con SQL Server** , en el menú **archivo** , haga clic en **conectar a SQL Server**.  
@@ -31,7 +31,7 @@ Escriba o seleccione la instancia de SQL Server a la que se va a conectar. De fo
   
 -   Si se va a conectar a una instancia con nombre en otro equipo, escriba el nombre del equipo, una barra diagonal inversa y el nombre de la instancia, *por ejemplo,* mi \\ *instancia*.  
   
-**Puerto de servidor**  
+**Puerto del servidor**  
 Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está configurada para aceptar conexiones en el puerto predeterminado (1433), escriba el número de puerto. De lo contrario, deje este valor en blanco.  
   
 **Base de datos**  

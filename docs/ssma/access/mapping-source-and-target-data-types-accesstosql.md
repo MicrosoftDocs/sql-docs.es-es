@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 92ce9298b6d3752a4b60e98918404c2116423973
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f5a725d0e2c6d9651884c399caabe2a8833826f3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988701"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059058"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Asignación de tipos de datos de origen y de destino (AccessToSQL)
 Los tipos de base de datos de Access se diferencian de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos Al convertir objetos de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos de Access en objetos de, debe especificar cómo se asignan los tipos de datos de a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en los procedimientos siguientes.  
@@ -48,7 +48,7 @@ En el procedimiento siguiente se muestra cómo asignar tipos de datos en el nive
   
     O bien, para personalizar la asignación de tipos de datos en el nivel de base de datos o de tabla, seleccione la base de datos o tabla en el panel Explorador de metadatos de acceso:  
   
-    1.  En el panel Explorador de metadatos de Access, expanda **Access-metabase**y, a continuación, expanda **bases**de datos.  
+    1.  En el panel Explorador de metadatos de Access, expanda **Access-metabase** y, a continuación, expanda **bases** de datos.  
   
     2.  Seleccione la base de datos o la tabla para la que desea personalizar la asignación de tipos de datos.  
   

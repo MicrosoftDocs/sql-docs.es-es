@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56b1a2e50f26da8ce5ef581f8eda7c6a96afd741
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea801de44e1fce175ac549402e17b9fcc2e9f020
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449117"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061130"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Compatibilidad con las reglas, desencadenadores, valores predeterminados y los procedimientos almacenados (controlador ODBC de Visual FoxPro)
 No se pueden crear reglas, desencadenadores, valores predeterminados o procedimientos almacenados de Visual FoxPro mediante el controlador ODBC de Visual FoxPro. Sin embargo, la aplicación podría interactuar con las reglas, los desencadenadores, los valores predeterminados o los procedimientos almacenados existentes a medida que inserta, actualiza o elimina los datos de Visual FoxPro almacenados en una base de datos.  
@@ -199,8 +199,8 @@ No se pueden crear reglas, desencadenadores, valores predeterminados o procedimi
     :::column-end:::
     :::column:::
         DO (comando)  
-        CASO... Comando ENDCASE  
-        DO WHILE... Comando ENDDO  
+        CASO... Comando ENDCASE  
+        DO WHILE... Comando ENDDO  
         DOW () (función)  
         DTOC () (función)  
         DTOR () (función)  
@@ -243,7 +243,7 @@ No se pueden crear reglas, desencadenadores, valores predeterminados o procedimi
         Función FLOOR ()  
         VACIAr comando  
         Función FOR ()  
-        PARA... Comando ENDFOR  
+        PARA... Comando ENDFOR  
         FOUND () (función)  
     :::column-end:::
     :::column:::
@@ -290,7 +290,7 @@ No se pueden crear reglas, desencadenadores, valores predeterminados o procedimi
 :::row:::
     :::column:::
         IDXCOLLATE () (función)  
-        IF... ENDIF (comando)  
+        IF... ENDIF (comando)  
         IIF () (función)  
         INDBC () (función)  
         Comando de índice  
@@ -473,7 +473,7 @@ No se pueden crear reglas, desencadenadores, valores predeterminados o procedimi
 
 :::row:::
     :::column:::
-        EXAMINAR... Comando ENDSCAN  
+        EXAMINAR... Comando ENDSCAN  
         DISPERSIÓN (comando)  
         SEC () (función)  
         SECONDs () (función)  

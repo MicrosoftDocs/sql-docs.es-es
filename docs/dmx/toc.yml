@@ -48,7 +48,7 @@
               href: ../dmx/select-from-model-dmx.md
             - name: SELECT FROM <structure>.CASES
               href: ../dmx/select-from-structure-cases.md
-            - name: Delete
+            - name: SUPRIMIR
               href: ../dmx/delete-dmx.md
             - name: INSERT INTO
               href: ../dmx/insert-into-dmx.md

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67c14205590ccdf9d20a30f44c13aa2da5abbe8d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9bb65299be2778897b72303cccb99043a3b01406
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99212570"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061110"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Apéndice B: Tablas de transición de estado de ODBC
 En las tablas de este apéndice se muestra cómo las funciones ODBC causan transiciones del entorno, la conexión, la instrucción y los Estados del descriptor. Normalmente, el estado del entorno, la conexión, la instrucción o el descriptor determina cuándo se puede llamar a las funciones que utilizan el tipo de identificador (entorno, conexión, instrucción o descriptor) correspondiente. Los Estados del entorno, la conexión, la instrucción y el descriptor se superponen aproximadamente, tal y como se muestra en las ilustraciones siguientes. Por ejemplo, la superposición exacta de los Estados de conexión C5 y C6 y los Estados de instrucción S1 a través de S12 es dependiente del origen de datos, ya que las transacciones se inician en distintos momentos en orígenes de datos diferentes, y el estado de descriptor D1i (descriptor asignado implícitamente) depende del estado de la instrucción a la que está asociado el descriptor, Para obtener una descripción de cada Estado, vea [transiciones de entorno](../../../odbc/reference/appendixes/environment-transitions.md), [transiciones de conexión](../../../odbc/reference/appendixes/connection-transitions.md), [transiciones de instrucciones](../../../odbc/reference/appendixes/statement-transitions.md)y [transiciones de descriptor](../../../odbc/reference/appendixes/descriptor-transitions.md), más adelante en este apéndice.  

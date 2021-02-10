@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 ms.author: alexiva
-ms.openlocfilehash: 72c6797bfc8d673069cab41002a4a93596d7e5d9
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 8d43e6a48746fbb1587327b430b67c6959731013
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779417"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064100"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Conectarse a Sybase (SybaseToSQL)
 
@@ -34,7 +34,7 @@ Seleccione el modo de conexión estándar o avanzado. En el modo estándar, escr
 **Nombre del servidor**  
 Escriba o seleccione el nombre o la dirección IP del servidor adaptable. El nombre del servidor predeterminado es el mismo que el nombre del equipo. Se trata de una opción de modo estándar.
 
-**Puerto de servidor**  
+**Puerto del servidor**  
 Si usa un puerto no predeterminado para las conexiones con ASE, escriba el número de puerto. El número de puerto predeterminado es 5000. Se trata de una opción de modo estándar.
   
 **Nombre de usuario**  
@@ -56,7 +56,7 @@ Las cadenas de conexión constan de pares de nombre y valor de parámetro. Los n
    |-----------|-------------------------|-----------------------|
    |Nombre de servidor|Nombre del servidor|Server|
    |Port|Dirección del puerto del servidor|Port|
-   |Nombre de usuario|Id. de usuario|Id. de usuario|
+   |Nombre de usuario|Identificador de usuario|Identificador de usuario|
    |Contraseña|Contraseña|Contraseña|
    |Proveedor|Proveedor|Proveedor|
 

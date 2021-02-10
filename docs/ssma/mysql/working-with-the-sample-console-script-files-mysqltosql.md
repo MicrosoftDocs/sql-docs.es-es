@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6c60c48b2c22dfb414710e305986b16d3ee31e17
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ea2e364dd5c09a288b94ed60a7bff93ac16c6bd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463294"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064150"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Trabajar con los archivos de script de la consola de ejemplo (MySQLToSQL)
 Se han proporcionado algunos archivos de ejemplo junto con el producto para la referencia de usuario y el uso. En esta sección se describe la manera de personalizar fácilmente estos scripts para ajustarse a las necesidades del usuario final.  

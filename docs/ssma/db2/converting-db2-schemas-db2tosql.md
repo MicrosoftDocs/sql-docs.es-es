@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b506f7ae063964bc1667b4425028cd35fbc9c91e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: af91274d4e48ce99894316c730a58d68fd633242
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985131"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062910"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Conversión de esquemas DB2 (DB2ToSQL)
 Después de conectarse a DB2, conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y establecer las opciones de asignación de datos y de proyecto, puede convertir los objetos de base de datos DB2 en objetos de base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -44,7 +44,7 @@ En la tabla siguiente se muestra qué objetos DB2 se convierten y los objetos re
 |Instrucción SELECT|**SSMA Maps SELECT con las siguientes excepciones:**<br /><br />Cláusula Data-Change-Table-Reference-asignación parcial, pero no se admiten las tablas finales<br /><br />Cláusula de referencia de tabla: parcialmente asignado, pero solo-Table-Reference, Outer-Table-Reference, analyze_table-Expression, Collection-derived-Table, XMLTABLE-Expression no se asignan a la semántica de SQL Server<br /><br />Cláusula period-Specification-no asignada.<br /><br />Continue: cláusula handler: no asignada.<br /><br />Cláusula de correlación con tipo: no asignada.<br /><br />Cláusula de resolución de acceso simultánea: no asignada.|  
 |VALUEs (instrucción)|Está asignado.|  
 |Instrucción INSERT|Está asignado.|  
-|Instrucción UPDATE|S**SMA asigna Update con las siguientes excepciones:**<br /><br />Cláusula de referencia de tabla: solo la referencia de tabla no está asignada a la semántica de SQL Server<br /><br />Cláusula Period: no está asignada.|  
+|Instrucción UPDATE|S **SMA asigna Update con las siguientes excepciones:**<br /><br />Cláusula de referencia de tabla: solo la referencia de tabla no está asignada a la semántica de SQL Server<br /><br />Cláusula Period: no está asignada.|  
 |Instrucción MERGE|**SSMA asigna MERGE con las siguientes excepciones:**<br /><br />Una sola vez y varias repeticiones de cada cláusula: está asignada a la semántica de SQL Server para las repeticiones limitadas de cada cláusula<br /><br />Cláusula SIGNAL: no se asigna a SQL Server semántica<br /><br />Cláusulas UPDATE y DELETE mixtas: no se asigna a SQL Server semántica<br /><br />Cláusula period-no se asigna a SQL Server semántica|  
 |Instrucción DELETE|**SSMA asigna DELETE con las siguientes excepciones:**<br /><br />Cláusula de referencia de tabla: solo la referencia de tabla no está asignada a la semántica de SQL Server<br /><br />Cláusula Period: no se asigna a SQL Server semántica|  
 |Nivel de aislamiento y tipo de bloqueo|Está asignado.|  
@@ -67,7 +67,7 @@ En la tabla siguiente se muestra qué objetos DB2 se convierten y los objetos re
 |WHILE (instrucción)|Está asignado.|  
 |OBTENER la instrucción de diagnóstico|**Las asignaciones de SSMA obtienen DIAGNÓSTICOs con las siguientes excepciones:**<br /><br />ROW_COUNT: está asignado.<br /><br />DB2_RETURN_STATUS: está asignado.<br /><br />MESSAGE_TEXT: está asignado.<br /><br />DB2_SQL_NESTING_LEVEL: no se asigna a la semántica de SQL Server<br /><br />DB2_TOKEN_STRING: no se asigna a la semántica de SQL Server|  
 |Cursores|**SSMA asigna CURSOres con las siguientes excepciones:**<br /><br />Instrucción allocate CURSOR: no se asigna a SQL Server semántica<br /><br />Instrucción associator LOCAtions: no se asigna a SQL Server semántica<br /><br />La cláusula DECLARE CURSOR instrucción-RETURNING no está asignada a la semántica de SQL Server<br /><br />Instrucción FETCH: asignación parcial. Solo se admiten variables como destino. El descriptor de SQLDA no está asignado a la semántica de SQL Server|  
-|Variables|Están asignadas.|  
+|variables|Están asignadas.|  
 |Excepciones, controladores y condiciones|**SSMA asigna "control de excepciones" con las excepciones siguientes:**<br /><br />Los controladores de salida se asignan.<br /><br />Los controladores para deshacer: están asignados.<br /><br />Los controladores de continuación no están asignados.<br /><br />Condiciones: no se asigna a la semántica de SQL Server.|  
 |SQL dinámico|No asignado.|  
 |Alias|Están asignadas.|  

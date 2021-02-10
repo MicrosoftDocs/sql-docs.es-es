@@ -13,12 +13,12 @@ ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 907c04d8acd0859b71d1b31d2839c23d5e4b85e8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8e2ee101ec916a920d4b72d924456a52850e8bc7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935072"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058760"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Conversión de esquemas de Oracle (OracleToSQL)
 Después de conectarse a Oracle, conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y establecer las opciones de asignación de datos y de proyecto, puede convertir objetos de base de datos de Oracle en objetos de base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -36,7 +36,7 @@ En la tabla siguiente se muestran los objetos de Oracle convertidos y los objeto
   
 |Objetos de Oracle|Objetos SQL Server resultantes|  
 |-|-|  
-|Funciones|Si la función se puede convertir directamente en [!INCLUDE[tsql](../../includes/tsql-md.md)] , SSMA crea una función.<br /><br />En algunos casos, la función se debe convertir en un procedimiento almacenado. En este caso, SSMA crea un procedimiento almacenado y una función que llama al procedimiento almacenado.|  
+|Functions|Si la función se puede convertir directamente en [!INCLUDE[tsql](../../includes/tsql-md.md)] , SSMA crea una función.<br /><br />En algunos casos, la función se debe convertir en un procedimiento almacenado. En este caso, SSMA crea un procedimiento almacenado y una función que llama al procedimiento almacenado.|  
 |Procedimientos|Si el procedimiento se puede convertir directamente en [!INCLUDE[tsql](../../includes/tsql-md.md)] , SSMA crea un procedimiento almacenado.<br /><br />En algunos casos, se debe llamar a un procedimiento almacenado en una transacción autónoma. En este caso, SSMA crea dos procedimientos almacenados: uno que implementa el procedimiento y otro que se utiliza para llamar al procedimiento almacenado de implementación.|  
 |Paquetes|SSMA crea un conjunto de procedimientos almacenados y funciones que se unifican mediante nombres de objeto similares.|  
 |Secuencias|SSMA crea objetos de secuencia (SQL Server 2012 o SQL Server 2014) o emula secuencias de Oracle.|  

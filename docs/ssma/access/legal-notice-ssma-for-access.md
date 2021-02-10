@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e03216bca40411181135d42c6228591f99758346
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dfa745f0a079c0d379c2d80df207ee7b356307b8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372891"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059010"
 ---
 # <a name="legal-notice-ssma-for-access"></a>Aviso legal (SSMA para el acceso)
 Tanto esta documentación como las aplicaciones de ejemplo que contiene, se proporcionan únicamente con fines informativos y sin ninguna garantía, ya sea expresa o implícita. La información que se proporciona en esta documentación, incluidas las direcciones URL y otras referencias a sitios web de Internet, está sujeta a modificaciones sin previo aviso. El usuario asume todos los riesgos derivados del uso de esta documentación.  

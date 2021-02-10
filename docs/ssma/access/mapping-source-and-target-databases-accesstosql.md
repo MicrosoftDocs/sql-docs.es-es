@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9e07c42e272728943f30198c8800c86aaa9443e3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 966ec1472737f0e4d67615d4e7eb65df01a52cf4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938184"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059060"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Asignación de bases de datos de origen y de destino (AccessToSQL)
 Al conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, debe especificar una base de datos de destino para la migración. Si tiene varias bases de datos de Access, puede asignarlas a varias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de datos (o esquemas) o a varios esquemas en el Azure SQL Database conectado.  
   
 ## <a name="sql-server-or-azure-sql-database-schemas"></a>Esquemas de SQL Server o Azure SQL Database  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]las bases de datos usan el concepto de esquemas para separar los objetos de una base de datos en grupos lógicos. Por ejemplo, una base de datos de biblioteca podría usar tres esquemas denominados **libros**, **audio**y **vídeo** para separar los objetos de libro, audio y vídeo entre sí. De forma predeterminada, la base de datos de Access se asigna a la base de datos **maestra** y al esquema **DBO** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a la base de datos conectada y al esquema **DBO** en SQL Azure.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las bases de datos usan el concepto de esquemas para separar los objetos de una base de datos en grupos lógicos. Por ejemplo, una base de datos de biblioteca podría usar tres esquemas denominados **libros**, **audio** y **vídeo** para separar los objetos de libro, audio y vídeo entre sí. De forma predeterminada, la base de datos de Access se asigna a la base de datos **maestra** y al esquema **DBO** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a la base de datos conectada y al esquema **DBO** en SQL Azure.  
   
 A menos que personalice la asignación entre cada base de datos de Access y la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el esquema, SSMA migrará todos los esquemas y datos asociados a la base de datos de Access a la base de datos predeterminada asignada.  
   

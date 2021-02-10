@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: 35465a761258fb5a7865e711e2809d740b9b9fee
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: 8688fa61a1ccaede3bd370e1d19ccd66531f5739
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496816"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060940"
 ---
 # <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>DMACMD: evaluar la preparación de una SQL Server la migración de datos a Azure SQL 
 
@@ -35,12 +35,12 @@ Para obtener más información, consulte el siguiente vídeo de Channel9:
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-to-Assess-Readiness-of-SQL-Server-Data-Estate-Migrating-to-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
 
-## <a name="prerequisites"></a>Requisitos previos 
+## <a name="prerequisites"></a>Prerrequisitos 
 
 Para usar DMACMD para realizar una evaluación y cargar los resultados en Azure Migrate Hub, necesita lo siguiente: 
 
 - La [versión más reciente de Data Migration Assistant (DMA)](https://www.microsoft.com/en-us/download/details.aspx?id=53595).
-- [Proyecto Azure Migrate](dma-assess-sql-data-estate-to-sqldb.md#create-a-project-and-add-a-tool). 
+- Un [proyecto de Azure Migrate](dma-assess-sql-data-estate-to-sqldb.md#create-a-project-and-add-a-tool). 
 - Rol de colaborador: acceso al recurso de proyecto de Azure Migrate.
 
 ## <a name="use-dmacmd"></a>Usar DMACMD
@@ -89,7 +89,7 @@ El contenido del ejemplo `Assess-for-AzureSQLMI.xml` define los elementos para e
 Los elementos XML que se pasan a DMACMD se definen en la tabla siguiente: 
 
 
-|**Elemento XML** |**Definición**  |
+|**Elemento XML** |**Definition**  |
 |---------|---------|
 |`AssessmentName`|El nombre de la evaluación.|
 |`AssessmentSourcePlatform`|Plataforma de SQL Server de origen. El valor predeterminado es `SqlOnPrem`.|
@@ -139,7 +139,7 @@ Tenga en cuenta las siguientes prácticas recomendadas al usar DMACMD:
 - El tiempo de ejecución de una evaluación depende del número de objetos de base de datos. Si es posible, evite ejecutar evaluaciones en el sistema de producción y descargarlas en un servidor de ensayo o máquina virtual en su lugar, especialmente en el caso de las bases de datos con un gran número de objetos. 
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant: opciones de configuración](../dma/dma-configurationsettings.md)

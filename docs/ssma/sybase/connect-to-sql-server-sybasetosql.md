@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 30179b25-409b-4e23-bc73-2f226657098f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 115b5ca1eadac2e8042abcc6fae7add920889155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b2b9c2d3f776ba41263e23d593ee3a4ef0f739df
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372491"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064290"
 ---
 # <a name="connect-to-sql-server-sybasetosql"></a>Conectarse a SQL Server (SybaseToSQL)
 Utilice el cuadro de diálogo **conectar con SQL Server** para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que desea migrar. Para tener acceso al cuadro de diálogo **conectar con SQL Server** , en el menú **archivo** , haga clic en **conectar a SQL Server**.  
@@ -30,7 +30,7 @@ Escriba o seleccione la instancia de SQL Server a la que se va a conectar. De fo
   
 -   Si se va a conectar a una instancia con nombre en otro equipo, escriba el nombre del equipo, una barra diagonal inversa y el nombre de la instancia, *por ejemplo,* mi \\ *instancia*.  
   
-**Puerto de servidor**  
+**Puerto del servidor**  
 Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está configurada para aceptar conexiones en el puerto predeterminado (1433), escriba el número de puerto. De lo contrario, deje este valor en blanco.  
   
 **Base de datos**  

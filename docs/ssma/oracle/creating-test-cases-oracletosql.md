@@ -13,12 +13,12 @@ ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 4f7183089fd67f413515034a557e4b73388f950f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0465aeb3d014213891796c33c4cacc2ec0e4256
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418391"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058540"
 ---
 # <a name="creating-test-cases-oracletosql"></a>Creación de casos de prueba (OracleToSQL)
 Use el Asistente para casos de prueba para crear una prueba. Este asistente le permite crear casos de prueba eligiendo objetos comprobados y comprobados y especificando los parámetros de prueba.  

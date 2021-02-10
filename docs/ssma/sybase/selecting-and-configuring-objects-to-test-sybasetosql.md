@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c6bcddffdbb524e10a0686e6e9a82f4abcd30db8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a43c4d8b1448949725820d69c6489aff26770d98
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492149"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060585"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Selección y configuración de objetos de prueba (SybaseToSQL)
 En este paso se seleccionan los objetos que se van a probar y se configuran los valores para comparar los procedimientos y los parámetros de salida de las funciones, así como los valores devueltos de las funciones.  
@@ -38,14 +38,14 @@ Habilita el uso del parámetro seleccionado en la comparación de resultados de 
   
 -   Si elige **true**, SSMA comparará el valor de salida de este parámetro después de ejecutar el procedimiento en Sybase con el valor correspondiente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Si elige**false**, el parámetro se excluirá de la comprobación de los resultados.  
+-   Si elige **false**, el parámetro se excluirá de la comprobación de los resultados.  
   
 ### <a name="use-custom-scale"></a>Usar escalado personalizado  
 Para los parámetros de tipo de datos numéricos aproximados y de longitud fija, puede establecer una escala personalizada para la comparación.  
   
 -   Si elige **true**, los valores numéricos se redondearán según el valor de **escala de comparación** antes de compararlos.  
   
--   Si elige**false**, la comparación numérica será exacta.  
+-   Si elige **false**, la comparación numérica será exacta.  
   
 ### <a name="comparing-scale"></a>Comparar escala  
 Solo está disponible si la opción **usar escalado personalizado** está establecida en **true**. Esta es la precisión de la comparación numérica.  

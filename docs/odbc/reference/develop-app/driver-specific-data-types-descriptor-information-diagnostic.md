@@ -1,6 +1,6 @@
 ---
 description: Tipos de datos específicos del controlador, Descriptor tipos, tipos de información, tipos de diagnóstico y atributos
-title: 'Tipos específicos del controlador: datos, descriptores, información, diagnóstico | Microsoft Docs'
+title: 'Tipos de Driver-Specific: datos, descriptores, información, diagnóstico | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a0ac3fd67e07f23f14420ee46ccda5cd409f87a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03cd6b0ed9a424a161f88f4bd525941895d3d201
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483013"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062570"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Tipos de datos específicos del controlador, Descriptor tipos, tipos de información, tipos de diagnóstico y atributos
 Los controladores pueden asignar valores específicos del controlador para lo siguiente:  
   
--   **Indicadores de tipo de datos SQL** Se usan en *ParameterType* en **SQLBindParameter** y en *DataType* en **SQLGetTypeInfo** y se devuelven mediante **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**, **SQLDescribeParam**, **SQLProcedureColumns**y **SQLSpecialColumns**.  
+-   **Indicadores de tipo de datos SQL** Se usan en *ParameterType* en **SQLBindParameter** y en *DataType* en **SQLGetTypeInfo** y se devuelven mediante **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**, **SQLDescribeParam**, **SQLProcedureColumns** y **SQLSpecialColumns**.  
   
--   **Campos de descriptor** Se usan en *FieldIdentifier* en **SQLColAttribute**, **SQLGetDescField**y **SQLSetDescField**.  
+-   **Campos de descriptor** Se usan en *FieldIdentifier* en **SQLColAttribute**, **SQLGetDescField** y **SQLSetDescField**.  
   
 -   **Campos de diagnóstico** Se usan en *DiagIdentifier* en **SQLGetDiagField** y **SQLGetDiagRec**.  
   
 -   **Tipos de información** Se usan en *InfoType* en **SQLGetInfo**.  
   
--   **Atributos de la conexión y de la instrucción** Se usan en el *atributo* en **SQLGetConnectAttr**, **SQLGetStmtAttr**, **SQLSetConnectAttr**y **SQLSetStmtAttr**.  
+-   **Atributos de la conexión y de la instrucción** Se usan en el *atributo* en **SQLGetConnectAttr**, **SQLGetStmtAttr**, **SQLSetConnectAttr** y **SQLSetStmtAttr**.  
   
  Para cada uno de estos elementos, hay dos conjuntos de valores: los valores reservados para su uso por ODBC y los valores reservados para que los usen los controladores. Antes de implementar valores específicos del controlador, un escritor de controladores debe solicitar un valor para cada tipo, campo o atributo específico del controlador del grupo abierto. Para el nuevo desarrollo de controladores, use el intervalo descrito en la tabla siguiente. El administrador de controladores ODBC 3,8 no generará un error si se utiliza un valor desconocido que no está en el intervalo que se describe a continuación. Sin embargo, las versiones posteriores del administrador de controladores pueden generar un error si se reciben valores desconocidos que no están en el intervalo.  
   

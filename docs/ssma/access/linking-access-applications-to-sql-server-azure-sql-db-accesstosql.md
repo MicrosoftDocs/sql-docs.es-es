@@ -24,12 +24,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d19ed1ddfa2c64b653c02d887b9605ea132ae1bc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 53fbbd5a865594f46eacb75c9799b9c956efb2da
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938482"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059052"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>Vinculación de aplicaciones de Access a SQL Server-Azure SQL Database (AccessToSQL)
 Si desea usar las aplicaciones de Access existentes con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede vincular las tablas de Access originales a las tablas migradas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. La vinculación modifica la base de datos de Access de forma que las consultas, los formularios, los informes y las páginas de acceso a datos usan los datos de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database o en lugar de los datos de la base de datos de Access.  
@@ -47,9 +47,9 @@ Al vincular una tabla de Access a una [!INCLUDE[ssNoVersion](../../includes/ssno
   
 1.  En el explorador de metadatos de Access, seleccione las tablas que desea vincular.  
   
-2.  Haga clic con el botón derecho en **tablas**y seleccione **vínculo**.  
+2.  Haga clic con el botón derecho en **tablas** y seleccione **vínculo**.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) para Access realiza una copia de seguridad de la tabla de acceso original y crea una tabla vinculada.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para Access realiza una copia de seguridad de la tabla de acceso original y crea una tabla vinculada.  
   
 Después de vincular las tablas, las tablas de SSMA aparecen con un icono de vínculo pequeño. En el acceso, las tablas aparecen con un icono "vinculado", que es un globo terráqueo con una flecha que apunta a ella.  
   
@@ -66,7 +66,7 @@ Al desvincular una tabla de Access de una [!INCLUDE[ssNoVersion](../../includes/
   
 1.  En el explorador de metadatos de Access, seleccione las tablas que desea desvincular.  
   
-2.  Haga clic con el botón derecho en **tablas**y seleccione **desvincular**.  
+2.  Haga clic con el botón derecho en **tablas** y seleccione **desvincular**.  
   
 ## <a name="linking-tables-to-a-different-server"></a>Vinculación de tablas a un servidor diferente  
 Si ha vinculado las tablas de Access a una instancia de SQL Server y posteriormente desea cambiar los vínculos a otra instancia, debe volver a vincular las tablas.  
@@ -83,7 +83,7 @@ Si ha vinculado las tablas de Access a una instancia de SQL Server y posteriorme
   
 5.  En el explorador de metadatos de Access, seleccione las tablas que desea vincular.  
   
-6.  Haga clic con el botón derecho en **tablas**y seleccione **vínculo**.  
+6.  Haga clic con el botón derecho en **tablas** y seleccione **vínculo**.  
   
 ## <a name="updating-linked-tables"></a>Actualizar tablas vinculadas  
 Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se modifican las definiciones de tabla o SQL Azure, puede desvincular y, a continuación, volver a vincular las tablas en SSMA mediante los procedimientos mostrados anteriormente en este tema. También puede actualizar las tablas mediante el acceso.  
@@ -147,7 +147,7 @@ Recordset.LastModified
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>La funcionalidad de hipervínculo se pierde después de migrar los datos  
 **Causa:** Después de migrar los datos, los hipervínculos de las columnas pierden su funcionalidad y se convierten en columnas **nvarchar (Max)** simples.  
   
-**Resolución:** ninguna.  
+**Resolución:** Ninguno.  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>Access no admite algunos tipos de datos SQL Server  
 **Causa:** Si actualiza posteriormente las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tablas o SQL Azure para que contengan tipos de datos que no son compatibles con el acceso, no puede abrir la tabla en Access.  

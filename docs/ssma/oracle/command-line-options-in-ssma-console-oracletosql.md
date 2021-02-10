@@ -16,12 +16,12 @@ ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1a950ff2e2870519ae7063bfc0df615fd971187b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c904c78b42e97f9a85e4951daaa320c98fa91400
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468844"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058654"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>Opciones de la línea de comandos en la consola SSMA (OracleToSQL)
 Microsoft proporciona un sólido conjunto de opciones de línea de comandos para ejecutar y controlar las actividades de SSMA. Las secciones siguientes detallan el mismo.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Refreshing Oracle Metadata
 ms.assetid: e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6
 ms.author: alexiva
-ms.openlocfilehash: d6fc63d62e9761f167eb70165c6f9324f56253a8
-ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
+ms.openlocfilehash: 4354a4e2726151177c48c27ce37a74e5b4ac335e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454538"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058803"
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Conexión a Oracle Database (OracleToSQL)
 
@@ -97,7 +97,7 @@ Cuando se conecta a una base de datos, SSMA Lee los metadatos de la base de dato
   
 2. En el cuadro **proveedor** , seleccione **proveedor de cliente Oracle** o **proveedor de OLE DB**, dependiendo del proveedor que esté instalado. El valor predeterminado es cliente Oracle.
 
-3. En el cuadro **modo** , seleccione el modo **estándar**, el **modo TNSNAME**o el **modo de cadena de conexión**.  
+3. En el cuadro **modo** , seleccione el modo **estándar**, el **modo TNSNAME** o el **modo de cadena de conexión**.  
    Utilice el modo estándar para especificar el nombre del servidor y el puerto. Use el modo de nombre de servicio para especificar manualmente el nombre del servicio de Oracle. Use el modo de cadena de conexión para proporcionar una cadena de conexión completa.
 
 4. Si selecciona el **modo estándar**, proporcione los valores siguientes:
@@ -137,7 +137,7 @@ Los metadatos de la base de datos de Oracle no se actualizan automáticamente. L
 
 2. En el explorador de metadatos de Oracle, active la casilla que hay al lado de cada esquema u objeto de base de datos que desee actualizar.
 
-3. Haga clic con el botón secundario en **esquemas**o en el objeto de esquema o base de datos individual y, a continuación, seleccione **actualizar desde base de datos**.  
+3. Haga clic con el botón secundario en **esquemas** o en el objeto de esquema o base de datos individual y, a continuación, seleccione **actualizar desde base de datos**.  
    Si no tiene una conexión activa, SSMA mostrará el cuadro de diálogo **conectar a Oracle** para que pueda conectarse.
 
 4. En el cuadro de diálogo actualizar desde base de datos, especifique los objetos que se van a actualizar.
