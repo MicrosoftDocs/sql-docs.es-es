@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a4e4fcec5217a9a9475f11d3a386c7436892ea6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c73122e5fe1b06fb44ad69219145972ef4009202
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724876"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029249"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Introducción al proveedor de comunicación remota de Microsoft OLE DB
 El proveedor de servicios remotos de Microsoft OLE DB permite a un usuario local en un equipo cliente invocar proveedores de datos en un equipo remoto. Especifique los parámetros del proveedor de datos para la máquina remota como si fuera un usuario local en el equipo remoto. A continuación, especifique los parámetros que usa el proveedor de comunicación remota para tener acceso al equipo remoto. Después, puede tener acceso a la máquina remota como si fuera un usuario local.
@@ -47,7 +47,7 @@ El proveedor de servicios remotos de Microsoft OLE DB permite a un usuario local
 
 |Nombre de propiedad dinámica|Descripción|
 |---------------------------|-----------------|
-|**DFMode**|Indica el modo DataFactory. Cadena que especifica la versión deseada del objeto [DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) en el servidor. Establezca esta propiedad antes de abrir una conexión para solicitar una versión determinada de la **factoría**de datos. Si la versión solicitada no está disponible, se intentará usar la versión anterior. Si no hay ninguna versión anterior, se producirá un error. Si **DFMode** es menor que la versión disponible, se producirá un error. Esta propiedad es de solo lectura después de realizar una conexión.<br /><br /> Puede ser uno de los siguientes valores de cadena válidos:<br /><br /> -"25"-versión 2,5 (valor predeterminado)<br />-"21"-versión 2,1<br />-"20"-versión 2,0<br />-"15"-versión 1,5|
+|**DFMode**|Indica el modo DataFactory. Cadena que especifica la versión deseada del objeto [DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) en el servidor. Establezca esta propiedad antes de abrir una conexión para solicitar una versión determinada de la **factoría** de datos. Si la versión solicitada no está disponible, se intentará usar la versión anterior. Si no hay ninguna versión anterior, se producirá un error. Si **DFMode** es menor que la versión disponible, se producirá un error. Esta propiedad es de solo lectura después de realizar una conexión.<br /><br /> Puede ser uno de los siguientes valores de cadena válidos:<br /><br /> -"25"-versión 2,5 (valor predeterminado)<br />-"21"-versión 2,1<br />-"20"-versión 2,0<br />-"15"-versión 1,5|
 |**Propiedades del comando**|Indica los valores que se agregarán a la cadena de propiedades de comando (conjunto de filas) que el proveedor de MS Remote envía al servidor. El valor predeterminado de esta cadena es vt_empty.|
 |**DFMode actual**|Indica el número de versión real de la **factoría** de datos en el servidor. Active esta propiedad para ver si se respeta la versión solicitada en la propiedad **DFMode** .<br /><br /> Puede ser uno de los siguientes valores enteros largos válidos:<br /><br /> -25-versión 2,5 (valor predeterminado)<br />-21-versión 2,1<br />-20-versión 2,0<br />-15-versión 1,5<br /><br /> Agregar "DFMode = 20;" a la cadena de conexión cuando se usa el proveedor de **MSRemote** puede mejorar el rendimiento del servidor al actualizar los datos. Con esta configuración, el objeto **RDSServer. DataFactory** en el servidor utiliza un modo con menos recursos. Sin embargo, las siguientes características no están disponibles en esta configuración:<br /><br /> -Uso de consultas con parámetros.<br />-Obtención de información de parámetros o columnas antes de llamar al método **Execute** .<br />-Establecer **Transact updates** en **true**.<br />-Obteniendo el estado de fila.<br />-Llamando al método **Resync** .<br />-Actualización (explícita o automáticamente) a través de la propiedad **resincronización** de la actualización.<br />-Estableciendo propiedades de **comando** o **conjunto de registros** .<br />-Usar **adCmdTableDirect**.|
 |**Controlador**|Indica el nombre de un programa de personalización de servidor (o controlador) que extiende la funcionalidad de [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)y cualquier parámetro utilizado por el controlador, todo separado por comas (","). Un valor **String**.|
@@ -73,7 +73,7 @@ cn.Properties("Internet Timeout") = 5000
 ## <a name="remarks"></a>Observaciones
  En ADO 2,0, el proveedor de comunicación remota de OLE DB solo se puede especificar en el parámetro *ActiveConnection* del método **Open** del objeto de [conjunto de registros](../../reference/ado-api/recordset-object-ado.md) . A partir de ADO 2,1, el proveedor también se puede especificar en el parámetro *ConnectionString* del método **Open** del objeto [Connection](../../reference/ado-api/connection-object-ado.md) .
 
- Equivalente del **objeto RDS. ** La propiedad [SQL](../../reference/rds-api/sql-property.md) del objeto DataControl no está disponible. En su lugar, se usa el argumento de *origen* del método **Open** del objeto de [conjunto de registros](../../reference/ado-api/recordset-object-ado.md) .
+ Equivalente del **objeto RDS.** La propiedad [SQL](../../reference/rds-api/sql-property.md) del objeto DataControl no está disponible. En su lugar, se usa el argumento de *origen* del método **Open** del objeto de [conjunto de registros](../../reference/ado-api/recordset-object-ado.md) .
 
  **Nota:** Especificar "...; Proveedor remoto = MS Remote;... " crearía un escenario de cuatro niveles. Los escenarios de más de tres niveles no se han probado y no deben ser necesarios.
 
@@ -83,11 +83,11 @@ cn.Properties("Internet Timeout") = 5000
 ```vb
 Dim rs as New ADODB.Recordset
 Dim cn as New ADODB.Connection
-cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
+cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
          "Remote Server=https://YourServer"
 rs.Open "SELECT * FROM authors", cn
-...                'Edit the recordset
-rs.UpdateBatch     'Equivalent of RDS SubmitChanges
+...                'Edit the recordset
+rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 

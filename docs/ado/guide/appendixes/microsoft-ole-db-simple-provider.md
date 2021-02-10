@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4eb4635aafa67d2b6c96f88580811c204ff73423
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a07224d352f059b8aad3709c6d4f9605c16696b5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990986"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029239"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Introducción al proveedor simple de Microsoft OLE DB
 El proveedor simple de Microsoft OLE DB (OSP) permite a ADO acceder a los datos para los que se ha escrito un proveedor mediante el [Kit de herramientas de proveedor simple OLE DB (OSP)](/previous-versions/windows/desktop/ms715822(v=vs.85)). Los proveedores simples están diseñados para tener acceso a orígenes de datos que solo requieren una compatibilidad con OLE DB fundamental, como matrices en memoria o documentos XML.
@@ -66,7 +66,7 @@ Portfolio
          WebSite
 ```
 
- El DSO XML utiliza heurísticas integradas para convertir los nodos de un árbol XML en capítulos de un **conjunto de registros**jerárquico.
+ El DSO XML utiliza heurísticas integradas para convertir los nodos de un árbol XML en capítulos de un **conjunto de registros** jerárquico.
 
  Con estas heurísticas integradas, el árbol XML se convierte en un **conjunto de registros** jerárquico de dos niveles de la forma siguiente:
 
@@ -77,7 +77,7 @@ Shares, Symbol, Price, $Text
       Company Name, WebSite, $Text
 ```
 
- Tenga en cuenta que las etiquetas portfolio y info no se representan en el **conjunto de registros**jerárquico. Para obtener una explicación de cómo el DSO XML convierte árboles XML en conjuntos de **registros**jerárquicos, vea las siguientes reglas. La columna $Text se describe en la sección siguiente.
+ Tenga en cuenta que las etiquetas portfolio y info no se representan en el **conjunto de registros** jerárquico. Para obtener una explicación de cómo el DSO XML convierte árboles XML en conjuntos de **registros** jerárquicos, vea las siguientes reglas. La columna $Text se describe en la sección siguiente.
 
 ## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>Reglas para asignar elementos y atributos XML a columnas y filas
  El DSO XML sigue un procedimiento para asignar elementos y atributos a columnas y filas en aplicaciones enlazadas a datos. XML se modela como un árbol con una etiqueta que contiene toda la jerarquía. Por ejemplo, una descripción XML de un libro podría contener etiquetas de capítulo, etiquetas de figura y etiquetas de sección. En el nivel más alto, sería la etiqueta de libro que contiene los subelementos Chapter, Figure y Section. Cuando el DSO XML asigna elementos XML a filas y columnas, los subelementos, no el elemento de nivel superior, se convierten.
@@ -88,7 +88,7 @@ Shares, Symbol, Price, $Text
 
 -   El nombre de la columna es el mismo que el nombre del subelemento o atributo, a menos que el elemento primario tenga un atributo y un subelemento con el mismo nombre, en cuyo caso se antepone un "!" al nombre de la columna del subelemento.
 
--   Cada columna es una columna *simple* que contiene valores escalares (normalmente cadenas) o una columna de **conjunto de registros** que contiene **conjuntos de registros**secundarios.
+-   Cada columna es una columna *simple* que contiene valores escalares (normalmente cadenas) o una columna de **conjunto de registros** que contiene **conjuntos de registros** secundarios.
 
 -   Las columnas correspondientes a los atributos son siempre simples.
 
@@ -140,9 +140,9 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
  Para obtener más información sobre el proveedor de OLE DB simple, vea [compilar un proveedor simple](/previous-versions/windows/desktop/ms721067(v=vs.85)).
 
 ## <a name="code-example"></a>Ejemplo de código
- En el siguiente código de Visual Basic se muestra cómo abrir un archivo XML arbitrario, construir un **conjunto de registros**jerárquico y escribir de forma recursiva cada registro de cada conjunto de **registros** en la ventana de depuración.
+ En el siguiente código de Visual Basic se muestra cómo abrir un archivo XML arbitrario, construir un **conjunto de registros** jerárquico y escribir de forma recursiva cada registro de cada conjunto de **registros** en la ventana de depuración.
 
- Este es un archivo XML simple que contiene cotizaciones bursátiles. En el código siguiente se usa este archivo para construir un **conjunto de registros**jerárquico de dos niveles.
+ Este es un archivo XML simple que contiene cotizaciones bursátiles. En el código siguiente se usa este archivo para construir un **conjunto de registros** jerárquico de dos niveles.
 
 ```xml
 <portfolio>

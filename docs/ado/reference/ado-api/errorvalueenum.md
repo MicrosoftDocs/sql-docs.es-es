@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 238c8bf3d0c21625b9317690f70adbe16bd5075f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 519b505c0fcb985e6f0ca9cfd04f890114b3fdb2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171163"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025072"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Especifica el tipo de error en tiempo de ejecución de ADO.  
@@ -32,14 +32,14 @@ Especifica el tipo de error en tiempo de ejecución de ADO.
   
 -   Decimal negativo: traducción decimal del número de error completo.  
   
--   Hexadecimal-The representación hexadecimal del número de error completo. El código de la instalación de Windows está en el cuarto dígito. El código de instalación de los números de *error de ADO es.* Por ejemplo: 0x800 ***A** _0E7B.  
+-   Hexadecimal-The representación hexadecimal del número de error completo. El código de la instalación de Windows está en el cuarto dígito. El código de instalación de los números de *error de ADO es.* Por ejemplo: 0x800 ***A*** 0E7B.  
   
 > [!NOTE]
->  Se pueden pasar OLE DB errores a la aplicación ADO. Normalmente, se pueden identificar mediante un código de servicio de Windows de _4 *. Por ejemplo, 0x800 * * * 4* *_.  
+>  Se pueden pasar OLE DB errores a la aplicación ADO. Normalmente, se pueden identificar mediante un código de servicio de Windows de *4*. Por ejemplo, 0x800 ***4***.  
   
 |Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
-|_ *adErrBoundToCommand**|3707-2146824581 0x800A0E7B|No se puede cambiar la propiedad **ActiveConnection** de un objeto de **conjunto de registros** que tiene un objeto **Command** como su origen.|  
+|**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|No se puede cambiar la propiedad **ActiveConnection** de un objeto de **conjunto de registros** que tiene un objeto **Command** como su origen.|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|El servidor no puede completar la operación.|  
 |**adErrCantChangeConnection**|3748-2146824540 0x800A0EA4|Se denegó la conexión. La nueva conexión que solicitó tiene características diferentes de la que ya se está usando.|  
 |**adErrCantChangeProvider**|3220-2146825068 0X800A0C94|El proveedor proporcionado difiere del que ya se está usando.|  

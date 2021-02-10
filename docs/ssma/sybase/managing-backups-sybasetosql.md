@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 916c0493f477175d9bb92c5fc0db860ea7b375c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c29cec3ec38dc56636df0c3f063f4a758e6e87e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372061"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017305"
 ---
 # <a name="managing-backups-sybasetosql"></a>Administración de copias de seguridad (SybaseToSQL)
 La administración de copia de seguridad de Sybase permite realizar copias de seguridad y restaurar los datos de las tablas antes o después de ejecutar una prueba. También puede administrar el cuadro de diálogo contenido de copia de seguridad con administrar contenido de copia de seguridad.  

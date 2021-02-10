@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 868731f7f7c88a2f6a26b5fab1670de8de96b1b3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1f1919f3524f05035a4376f30cf2e36ae731bdea
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990956"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028860"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Usar ADO con lenguajes de Scripting
 En un entorno de scripting, ADO permite exponer datos por medio de scripting del lado servidor. En este escenario, ADO, el proveedor de OLE DB subyacente que utiliza y cualquier otro componente necesario para hacer referencia a un almacén de datos determinado se instalan en un servidor que ejecuta Internet Information Services (IIS). Con Active Server páginas (ASP), ADO es un componente al que se hace referencia en un script que puede generar HTML, por ejemplo. Este contenido HTML se puede pasar a través de HTTP a un explorador Web del cliente. Mediante el uso de scripting, la página web puede enviar acciones de vuelta al script del lado servidor, lo que le permite actualizar, recorrer o ver datos específicos.  
@@ -47,7 +47,7 @@ En un entorno de scripting, ADO permite exponer datos por medio de scripting del
 |--------------|-------------------------|  
 |Forma|Sí|  
 |Persist|Sí|  
-|Remote|Sí|  
+|Control remoto|Sí|  
 |Proveedor de OLE DB para SQL Server (SQLOLEDB)|No|  
 |Proveedor de OLE DB para ODBC (MSDASQL)|No|  
   

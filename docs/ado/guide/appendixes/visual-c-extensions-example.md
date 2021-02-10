@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bb85616a1d953e6a613419f5320fd483cbbe787
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2c87889a1d5812bb9ede48d7cf19e6479cc018cc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991826"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028651"
 ---
 # <a name="visual-c-extensions-example"></a>Ejemplo de extensiones de Visual C++
 Este programa muestra cómo se recuperan los valores de los campos y se convierten en variables de C/C++.  
@@ -31,7 +31,7 @@ Este programa muestra cómo se recuperan los valores de los campos y se conviert
  Sin punteros inteligentes, se codificaría lo siguiente:  
   
 ```cpp
-IADORecordBinding   *picRs = NULL;  
+IADORecordBinding   *picRs = NULL;  
 ...  
 TESTHR(pRs->QueryInterface(  
           __uuidof(IADORecordBinding), (LPVOID*)&picRs));  

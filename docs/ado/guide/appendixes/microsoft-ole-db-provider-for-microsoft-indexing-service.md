@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3e479ca023efb704bf496c9ffaeaca2f1b6ba15
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f7d2204a2d91e862616713dbfee6eec3d6d3e8ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991046"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029309"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Introducción al proveedor de Microsoft OLE DB para el servicio de indización de Microsoft
 El proveedor de Microsoft OLE DB para el servicio de indización de Microsoft proporciona acceso de solo lectura mediante programación al sistema de archivos y a los datos Web indexados por el servicio de indización de Microsoft. Las aplicaciones ADO pueden emitir consultas SQL para recuperar contenido e información de propiedades de archivo.
@@ -87,7 +87,7 @@ MSIDXS
 |[PageSize](../../reference/ado-api/pagesize-property-ado.md)|lectura/escritura|
 |[RecordCount](../../reference/ado-api/recordcount-property-ado.md)|solo lectura|
 |[Origen](../../reference/ado-api/source-property-ado-recordset.md)|lectura/escritura|
-|[State](../../reference/ado-api/state-property-ado.md)|solo lectura|
+|[Estado](../../reference/ado-api/state-property-ado.md)|solo lectura|
 |[Estado](../../reference/ado-api/status-property-ado-recordset.md)|solo lectura|
 
  \*Los marcadores deben estar habilitados en el proveedor para que esta característica exista en el **conjunto de registros**.

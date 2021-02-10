@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75a9fd84a20a868a75032acb77ccf66aed48bccd
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 85e949040ebd87ec9186327868166d6893356aa6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171109"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024722"
 ---
 # <a name="field-ado-for-visual-c-syntax"></a>Campo (ADO para la sintaxis Visual C++)
 ## <a name="methods"></a>Métodos  

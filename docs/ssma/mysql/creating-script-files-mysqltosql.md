@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bc77109e51cff1169105f39c1898dfd1fc32588c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 310bcd0f3cd8db8a0c46f278d2b18bdcef2c42a9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472462"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016665"
 ---
 # <a name="creating-script-files-mysqltosql"></a>Creación de archivos de script (MySQLToSQL)
 El primer paso antes de iniciar la aplicación de consola SSMA es crear el archivo de script y, si es necesario, crear el archivo de valores de variable y el archivo de conexión de servidor.  

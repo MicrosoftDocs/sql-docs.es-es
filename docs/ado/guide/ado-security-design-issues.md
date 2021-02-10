@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d485dbb17075033add5e3ee93dbcf9b6bf44e65
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c992b58b6b84f79efa62c63353e3b8f1efcc333d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991226"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030503"
 ---
 # <a name="ado-security-design-features"></a>Características de diseño de seguridad de ADO
 En las secciones siguientes se describen las características de diseño de seguridad de Objetos de datos ActiveX (ADO) 2,8 y versiones posteriores. Estos cambios se realizaron en ADO 2,8 para mejorar la seguridad. ADO 6,0, que se incluye en Windows DAC 6,0 en Windows Vista, es funcionalmente equivalente a ADO 2,8, que se incluyó en MDAC 2,8 en Windows XP y Windows Server 2003. En este tema se proporciona información sobre cómo proteger mejor las aplicaciones en ADO 2,8 o posterior.

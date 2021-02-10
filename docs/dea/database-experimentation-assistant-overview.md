@@ -11,12 +11,12 @@ author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7362bc8069291d2e7d99399180cc147a38217d93
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 09d334d7cfcc313cd36d3b59a6b47c64d441f3ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951250"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017075"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Información general de Asistente para experimentación con bases de datos
 

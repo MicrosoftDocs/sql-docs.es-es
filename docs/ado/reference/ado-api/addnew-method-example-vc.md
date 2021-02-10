@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d6cd3ebc136fabee9a27ce15f22a42956cb25de
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f7203c1524e78f7d703c087d57622e5c9a8a8d48
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161702"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031422"
 ---
 # <a name="addnew-method-example-vc"></a>Ejemplo del método AddNew (VC ++)
 En este ejemplo se usa el método [AddNew](./addnew-method-ado.md) para crear un nuevo registro con el nombre especificado.  

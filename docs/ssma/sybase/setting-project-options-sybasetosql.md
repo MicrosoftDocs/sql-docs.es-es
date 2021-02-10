@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: df912a5a58bdcfb2777177bddef80899f31f38c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa8e45af93faa4ef175d129487a1d655a6d02ead
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468730"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030763"
 ---
 # <a name="setting-project-options-sybasetosql"></a>Configuración de opciones de proyecto (SybaseToSQL)
 Para cada proyecto de SSMA, puede establecer opciones de nivel de proyecto. Estas opciones especifican la conversión de objetos, la carga de objetos, SQL Azure, la interfaz de usuario y la configuración de migración de datos. Antes de convertir objetos a o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure o migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, compruebe que las opciones de configuración son adecuadas para el proyecto.  
@@ -39,13 +39,13 @@ SSMA tiene cinco conjuntos de opciones de configuración del proyecto:
   
 También tiene cuatro modos para configurar estas opciones:  
   
-1.  Default  
+1.  Valor predeterminado  
   
 2.  Optimistic  
   
 3.  Completo  
   
-4.  Personalizado  
+4.  Personalizada  
   
 El modo predeterminado es el recomendado para la mayoría de los usuarios. El modo optimista mantiene más la sintaxis actual de Sybase Adaptive Server Enterprise (ASE) y es más fácil de leer. Sin embargo, mantener la sintaxis actual podría no ser preciso. Si la sintaxis de ASE se debe convertir a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una sintaxis equivalente o SQL Azure, el modo completo realiza una conversión completa, pero es posible que el código resultante sea más difícil de leer. En el modo personalizado, se establecen las opciones.  
   
@@ -74,7 +74,7 @@ En SSMA, puede configurar los valores predeterminados para todos los proyectos. 
   
     -   Seleccione el tipo de proyecto de migración para el que es necesario ver o cambiar la configuración en el menú desplegable de la **versión de destino** de la migración, haga clic en general en la parte inferior del panel izquierdo y, a continuación, seleccione conversión o migración o SQL Azure.  
   
-    -   Para seleccionar un modo predefinido, en el cuadro desplegable **modo** , seleccione **predeterminado**, **optimista**o **completo**.  
+    -   Para seleccionar un modo predefinido, en el cuadro desplegable **modo** , seleccione **predeterminado**, **optimista** o **completo**.  
   
     -   Para especificar la configuración personalizada, simplemente seleccione o escriba los nuevos valores o valores.  
   
@@ -88,7 +88,7 @@ También puede personalizar la configuración del proyecto actual. Esta configur
   
 2.  En el cuadro de diálogo **configuración del proyecto** , use uno de los procedimientos siguientes:  
   
-    -   Para seleccionar un modo predefinido, en el cuadro desplegable **modo** , seleccione **predeterminado**, **optimista**o **completo**.  
+    -   Para seleccionar un modo predefinido, en el cuadro desplegable **modo** , seleccione **predeterminado**, **optimista** o **completo**.  
   
     -   Para especificar un modo personalizado, en el cuadro desplegable **modo** , seleccione **personalizado**, seleccione una opción en el panel izquierdo, haga clic en la configuración o el valor en el panel derecho y, a continuación, seleccione o especifique la nueva configuración o valor.  
   

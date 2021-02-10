@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa5a83c79deb2d9df42e81869476ae856bac322a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 37736aa5c6b2d71d48a2a28aca6f53e6ef021e83
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167432"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024971"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Ejemplo de los métodos Execute, Requery y Clear (VB)
 En este ejemplo se muestra el método **Execute** cuando se ejecuta desde un objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) y un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) . También usa el método [Requery](../../../ado/reference/ado-api/requery-method.md) para recuperar los datos actuales en un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)y el método [Clear](../../../ado/reference/ado-api/clear-method-ado.md) para borrar el contenido de la colección de [errores](../../../ado/reference/ado-api/errors-collection-ado.md) . (Se tiene acceso a la colección de **errores** a través del objeto de **conexión** de la propiedad [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)). Los procedimientos ExecuteCommand y PrintOutput son necesarios para que este procedimiento se ejecute.  

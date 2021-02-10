@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd7b34f35ac0fcc747cb30fb35537a33cc5cd4a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4ac7f25709cf91e03f9ad8b15f9fb0026ee5e98
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471426"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015395"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>No compatible de Visual FoxPro comandos y funciones (controlador ODBC de Visual FoxPro)
 En la tabla siguiente se enumeran los comandos y las funciones de FoxPro que no son compatibles con el controlador ODBC de Visual FoxPro pero que son compatibles con Microsoft® Visual FoxPro®.  
@@ -33,29 +33,29 @@ En la tabla siguiente se enumeran los comandos y las funciones de FoxPro que no 
 
 :::row:::
     :::column:::
-        !Comando (vea ejecutar &#124;!Command  
-        #<a name="defineundef"></a>DEFINIR... #UNDEF  
-        #<a name="ifendifpreprocessordirective"></a>IF... #ENDIF Directiva de preprocesador  
-        #<a name="ifdef124ifndef"></a>IFDEF &#124; #IFNDEF  
-        #<a name="includepreprocessordirective"></a>INCLUIR Directiva de preprocesador  
+        ! Comando (vea ejecutar &#124;! Command  
+        #<a name="define--undef"></a>DEFINIR... #UNDEF  
+        #<a name="if--endif-preprocessor-directive"></a>IF... #ENDIF Directiva de preprocesador  
+        #<a name="ifdef-124-ifndef"></a>IFDEF &#124; #IFNDEF  
+        #<a name="include-preprocessor-directive"></a>INCLUIR Directiva de preprocesador  
         :: Operador de resolución de ámbito  
-        ?¿&#124;??Get-Help  
+        ? ¿&#124;?? Get-Help  
     :::column-end:::
     :::column:::
-        ???Get-Help  
-        @ ... BOX (comando)  
-        @ ... CLASS (comando)  
-        @ ... CLEAR (comando)  
-        @ ... Comando Editar cuadros de edición  
-        @ ... FILL (comando)  
-        @ ... Obtener  
+        ??? Get-Help  
+        @ ... BOX (comando)  
+        @ ... CLASS (comando)  
+        @ ... CLEAR (comando)  
+        @ ... Comando Editar cuadros de edición  
+        @ ... FILL (comando)  
+        @ ... Obtener  
     :::column-end:::
     :::column:::
-        @ ... Comando de menú  
-        @ ... PROMPT (comando)  
-        @ ... Comando SAY  
-        @ ... SCROLL (comando)  
-        @ ... Comando TO  
+        @ ... Comando de menú  
+        @ ... PROMPT (comando)  
+        @ ... Comando SAY  
+        @ ... SCROLL (comando)  
+        @ ... Comando TO  
         \ &#124; \\ \ comando  
     :::column-end:::
 :::row-end:::
@@ -461,7 +461,7 @@ NUMLOCK () (función)
         _PPITCH variable de memoria del sistema  
         _PQUALITY variable de memoria del sistema  
         _PRETEXT variable de memoria del sistema  
-        PRINTJOB... Comando ENDPRINTJOB  
+        PRINTJOB... Comando ENDPRINTJOB  
     :::column-end:::
     :::column:::
         PRINTSTATUS () (función)  
@@ -527,7 +527,7 @@ Comando salir
         _RMARGIN variable de memoria del sistema  
         RMDIR (comando)  
         ROW () (función)  
-        EJECUTE &#124;.Get-Help  
+        EJECUTE &#124;. Get-Help  
         RUNSCRIPT (comando)  
     :::column-end:::
 :::row-end:::
@@ -658,7 +658,7 @@ Comando salir
 :::row:::
     :::column:::
         _TABS variable de memoria del sistema  
-        TEXTO... Comando ENDTEXT  
+        TEXTO... Comando ENDTEXT  
         _THROTTLE variable de memoria del sistema  
     :::column-end:::
     :::column:::
@@ -707,7 +707,7 @@ Comando salir
         WEXIST () (función)  
         WFONT () (función)  
         _WINDOWS variable de memoria del sistema  
-        CON... Comando ENDWITH  
+        CON... Comando ENDWITH  
     :::column-end:::
     :::column:::
         _WIZARD variable de memoria del sistema  

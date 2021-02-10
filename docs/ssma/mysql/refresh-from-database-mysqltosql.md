@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 027aa6557036c54c4b7e143cd94149fa5e8fe4f1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60a23edbcbad344ab3bf42286944f7c72acb8f92
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492364"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015185"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>Actualizar desde la base de datos (MySQLToSQL)
 El cuadro de diálogo **actualizar desde base de datos** permite seleccionar los objetos que se van a actualizar desde la base de datos MySQL. Las filas del cuadro de diálogo están codificadas por colores en función del estado de los metadatos:  
@@ -30,7 +30,7 @@ El cuadro de diálogo **actualizar desde base de datos** permite seleccionar los
   
 Puede especificar la configuración de actualización de objetos predeterminada en el cuadro de diálogo **configuración del proyecto** . Para obtener más información, vea [configuración del proyecto &#40;Synchronization&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
-Para tener acceso al cuadro **de diálogo actualizar desde base** de datos, haga clic con el botón secundario en un objeto en el explorador de metadatos MySQL y haga clic en **actualizar desde base de**datos.  
+Para tener acceso al cuadro **de diálogo actualizar desde base** de datos, haga clic con el botón secundario en un objeto en el explorador de metadatos MySQL y haga clic en **actualizar desde base de** datos.  
   
 ## <a name="options"></a>Opciones  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd781612557faebd4b6eefb710ffad2379928aee
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3a79a16b0fe5f0514b2d90333fcbe99e8e5b5023
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980856"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031057"
 ---
 # <a name="ado-glossary-terms"></a>Términos del glosario de ADO
 En este tema se definen los términos relevantes para ADO.
@@ -93,17 +93,17 @@ En este tema se definen los términos relevantes para ADO.
 ## <a name="d"></a>D
  enlace de datos el proceso de asociar los objetos o controles de una aplicación a un origen de datos. Un control asociado a un origen de datos se denomina *control enlazado a datos*.
 
- El contenido de un control enlazado a datos se asocia a los valores de una base de datos. Por ejemplo, un control de cuadrícula que está enlazado a un objeto de **conjunto de registros** puede actualizarse cuando se actualizan las filas del **conjunto de registros** . Cuando el **conjunto de registros**recupera nuevos valores, se muestran nuevos valores en la cuadrícula.
+ El contenido de un control enlazado a datos se asocia a los valores de una base de datos. Por ejemplo, un control de cuadrícula que está enlazado a un objeto de **conjunto de registros** puede actualizarse cuando se actualizan las filas del **conjunto de registros** . Cuando el **conjunto de registros** recupera nuevos valores, se muestran nuevos valores en la cuadrícula.
 
  Software del proveedor de datos que expone los datos a una aplicación ADO directamente o a través de un proveedor de servicios. Vea también proveedor de servicios.
 
- la forma de datos de una técnica que hace uso de una sintaxis formalizada (denominada **lenguaje de formas**) para definir un objeto de **conjunto de registros** especializado (denominado conjunto de *registros*con forma) que no solo contiene datos, sino también referencias a otros objetos de **conjunto de registros** o valores calculados basados en esos otros objetos de conjunto de **registros** .
+ la forma de datos de una técnica que hace uso de una sintaxis formalizada (denominada **lenguaje de formas**) para definir un objeto de **conjunto de registros** especializado (denominado conjunto de *registros* con forma) que no solo contiene datos, sino también referencias a otros objetos de **conjunto de registros** o valores calculados basados en esos otros objetos de conjunto de **registros** .
 
  nivel de origen de datos capa lógica de un sistema distribuido que representa un equipo que ejecuta un DBMS, como una base de datos de SQL Server. Vea también *nivel de cliente*, *nivel intermedio*, *aplicación distribuida*.
 
  DCOM un protocolo de conexión que permite a los componentes COM comunicarse directamente entre sí a través de una red. Vea también *com*, *componente*.
 
- DDL (lenguaje de definición de datos) las instrucciones de SQL que definen, en lugar de manipular los datos. El esquema de una base de datos se crea o se modifica con DDL. Por ejemplo, **CREATE TABLE**, **Create index**, **Grant**y **REVOKE** son instrucciones DDL de SQL.
+ DDL (lenguaje de definición de datos) las instrucciones de SQL que definen, en lugar de manipular los datos. El esquema de una base de datos se crea o se modifica con DDL. Por ejemplo, **CREATE TABLE**, **Create index**, **Grant** y **REVOKE** son instrucciones DDL de SQL.
 
  secuencia predeterminada: secuencia de texto o binaria (representada por un objeto de **flujo** ) que está asociada a objetos de **registro** o de **conjunto de registros** cuando se usan ciertos proveedores de OLE DB, como el proveedor de Microsoft OLE DB para la publicación en Internet. Normalmente, el flujo predeterminado contiene el contenido de un archivo, como el código HTML de la raíz de un sitio Web.
 
@@ -111,7 +111,7 @@ En este tema se definen los términos relevantes para ADO.
 
  Conjunto de registros desconectado un objeto de **conjunto de registros** en una caché de cliente que ya no tiene una conexión dinámica con el servidor. Si es necesario tener acceso de nuevo al origen de datos original por alguna razón, como actualizar los datos, se debe volver a establecer la conexión. Sin embargo, todavía se puede tener acceso a las colecciones, propiedades y métodos de un **conjunto de registros** desconectado.
 
- DML (lenguaje de manipulación de datos) las instrucciones de SQL que manipulan, en lugar de definir los datos. Los valores de una base de datos se seleccionan y se modifican con DML. Por ejemplo, **Insert**, **Update**, **Delete**y **Select** son instrucciones DML de SQL.
+ DML (lenguaje de manipulación de datos) las instrucciones de SQL que manipulan, en lugar de definir los datos. Los valores de una base de datos se seleccionan y se modifican con DML. Por ejemplo, **Insert**, **Update**, **Delete** y **Select** son instrucciones DML de SQL.
 
  proveedor de origen de documento es una clase especial de proveedores que administran carpetas y documentos. Cuando un documento se representa mediante un objeto de **registro** , o una carpeta de documentos se representa mediante un objeto de **conjunto de registros** , el proveedor de origen del documento rellena esos objetos con un conjunto único de campos que describen las características del documento, en lugar del propio documento. Vea también registro de recursos.
 
@@ -120,7 +120,7 @@ En este tema se definen los términos relevantes para ADO.
  propiedad dinámica: propiedad específica de un proveedor de datos o del servicio de cursor. La colección de **propiedades** de un objeto se rellena automáticamente ("dinámicamente"). Un objeto no tiene ninguna propiedad dinámica hasta que se conecta a un origen de datos a través de un proveedor de datos determinado. Vea también proveedor de datos, cursor.
 
 ## <a name="e"></a>E
- Enumeración una lista de constantes con nombre. Los valores enumerados no deben ser únicos. Sin embargo, el nombre de cada valor debe ser único dentro del ámbito en el que se define la enumeración. En ADO, las enumeraciones se utilizan para los valores devueltos y los parámetros numéricos, para agregar significado al código ADO y para proteger al desarrollador de los valores numéricos (que pueden cambiar de una versión a una versión). Por ejemplo, para abrir un **conjunto de registros**estático, use el valor enumerado **adOpenStatic** : `Recordset.Open ,,adOpenStatic`
+ Enumeración una lista de constantes con nombre. Los valores enumerados no deben ser únicos. Sin embargo, el nombre de cada valor debe ser único dentro del ámbito en el que se define la enumeración. En ADO, las enumeraciones se utilizan para los valores devueltos y los parámetros numéricos, para agregar significado al código ADO y para proteger al desarrollador de los valores numéricos (que pueden cambiar de una versión a una versión). Por ejemplo, para abrir un **conjunto de registros** estático, use el valor enumerado **adOpenStatic** : `Recordset.Open ,,adOpenStatic`
 
  También se conoce como *constante enumerada*. Vea también *constante*.
 

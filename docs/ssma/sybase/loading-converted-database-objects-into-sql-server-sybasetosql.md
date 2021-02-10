@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6b7f9a9a69fd1f5ac685550fb91ab93ad2220f49
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 1b8e266fa67f0f6eb7ef46a9bdd7bd62d09180b9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038268"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017647"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>Carga de objetos de base de datos convertidos en SQL Server (SybaseToSQL)
 Después de haber convertido los objetos de base de datos de Sybase Adaptive Server Enterprise (ASE) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, puede cargar los objetos de base de datos resultantes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Puede hacer que SSMA cree los objetos, o bien puede crear un script de los objetos y ejecutar los scripts usted mismo. Además, SSMA le permite actualizar los metadatos de destino con el contenido real de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database.  
@@ -35,7 +35,7 @@ Para usar SSMA para crear [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
   
 **Para sincronizar objetos con SQL Server o SQL Azure**  
   
-1.  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure explorador de metadatos, expanda el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nodo superior o SQL Azure y, a continuación, expanda **bases**de datos.  
+1.  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure explorador de metadatos, expanda el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nodo superior o SQL Azure y, a continuación, expanda **bases** de datos.  
   
 2.  Seleccionar los objetos que se van a procesar:  
   
@@ -43,7 +43,7 @@ Para usar SSMA para crear [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
   
     -   Para sincronizar u omitir objetos o categorías de objetos individuales, Active o desactive la casilla situada junto al objeto o la carpeta.  
   
-3.  Una vez que haya seleccionado los objetos que desea procesar en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos o SQL Azure, haga clic con el botón secundario en **bases**de datos y, a continuación, haga clic en **sincronizar con base**de datos.  
+3.  Una vez que haya seleccionado los objetos que desea procesar en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos o SQL Azure, haga clic con el botón secundario en **bases** de datos y, a continuación, haga clic en **sincronizar con base** de datos.  
   
     También puede sincronizar objetos individuales o categorías de objetos; para ello, haga clic con el botón secundario en el objeto o en su carpeta primaria y, a continuación, haga clic en  **sincronizar con base de datos**.  
   
@@ -64,7 +64,7 @@ Si desea guardar [!INCLUDE[tsql](../../includes/tsql-md.md)] definiciones de los
   
 **Para guardar objetos como scripts**  
   
-1.  Una vez que haya seleccionado los objetos que desea guardar en un script, haga clic con el botón derecho en **bases de datos**y, a continuación, seleccione **Guardar como script**.  
+1.  Una vez que haya seleccionado los objetos que desea guardar en un script, haga clic con el botón derecho en **bases de datos** y, a continuación, seleccione **Guardar como script**.  
   
     También puede incluir en el script objetos individuales o categorías de objetos; para ello, haga clic con el botón secundario en el objeto o en la carpeta que lo contiene y seleccione **Guardar script**.  
   
@@ -77,7 +77,7 @@ Una vez guardadas las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
 **Para modificar un script**  
   
-1.  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo** , seleccione **Abrir**y haga clic en **Archivo**.  
+1.  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo** , seleccione **Abrir** y haga clic en **Archivo**.  
   
 2.  En el cuadro de diálogo **abrir** , vaya a y seleccione el archivo de script y, a continuación, haga clic en **Aceptar**.  
   
@@ -92,7 +92,7 @@ Puede ejecutar un script, o instrucciones individuales, en [!INCLUDE[ssManStudio
   
 **Para ejecutar un script**  
   
-1.  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo** , seleccione **Abrir**y haga clic en **Archivo**.  
+1.  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo** , seleccione **Abrir** y haga clic en **Archivo**.  
   
 2.  En el cuadro de diálogo **abrir** , vaya a y seleccione el archivo de script y, a continuación, haga clic en **Aceptar**.  
   

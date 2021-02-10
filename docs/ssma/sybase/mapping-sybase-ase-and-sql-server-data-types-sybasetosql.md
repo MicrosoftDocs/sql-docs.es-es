@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5a7e1ba17822d339e5ae40e6e6b5828191ce84ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8b2ba53ef5f3dcb895d217e2acef3acc15e8784
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463177"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017675"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Asignación de tipos de datos de Sybase ASE y de SQL Server (SybaseToSQL)
 Los tipos de base de datos de Sybase Adaptive Server Enterprise (ASE) se diferencian de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de Azure SQL Database. Al convertir objetos de base de datos de ASE en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de o SQL Azure, debe especificar cómo se asignan los tipos de datos de ase a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en las secciones siguientes.  

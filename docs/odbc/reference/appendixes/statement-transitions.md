@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7fb43bb8aa7ad9bd71906036a081dac4ec91c794
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 904b1116be5e0daec2fce61e4a988c9b957322ef
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99202550"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016245"
 ---
 # <a name="statement-transitions"></a>Transiciones de instrucción
 Las instrucciones ODBC tienen los Estados siguientes.  
   
-|Estado|Descripción|  
+|State|Descripción|  
 |-----------|-----------------|  
 |S0|Instrucción sin asignar. (El estado de conexión debe ser C4, C5 o C6. Para obtener más información, vea [transiciones de conexión](../../../odbc/reference/appendixes/connection-transitions.md)).|  
 |S1|Instrucción asignada.|  
@@ -138,7 +138,7 @@ Las instrucciones ODBC tienen los Estados siguientes.
   
 ## <a name="sqlcolattribute-prepared-states"></a>SQLColAttribute (Estados preparados)  
   
-|S2<br /><br /> Sin resultados|S3<br /><br /> Resultados|  
+|S2<br /><br /> Sin resultados|S3<br /><br /> Results|  
 |-----------------------|--------------------|  
 |--[1] 07005 [2]|--[s] S11 x|  
   
@@ -181,7 +181,7 @@ Las instrucciones ODBC tienen los Estados siguientes.
   
 ## <a name="sqlcopydesc-prepared-states"></a>SQLCopyDesc (Estados preparados)  
   
-|S2<br /><br /> Sin resultados|S3<br /><br /> Resultados|  
+|S2<br /><br /> Sin resultados|S3<br /><br /> Results|  
 |-----------------------|--------------------|  
 |24000 [1]|--[s] S11 [x]|  
   
@@ -201,7 +201,7 @@ Las instrucciones ODBC tienen los Estados siguientes.
   
 ## <a name="sqldescribecol-prepared-states"></a>SQLDescribeCol (Estados preparados)  
   
-|S2<br /><br /> Sin resultados|S3<br /><br /> Resultados|  
+|S2<br /><br /> Sin resultados|S3<br /><br /> Results|  
 |-----------------------|--------------------|  
 |07005|--[s] S11 [x]|  
   
@@ -265,7 +265,7 @@ Las instrucciones ODBC tienen los Estados siguientes.
   
 ## <a name="sqlexecute-prepared-states"></a>SQLExecute (Estados preparados)  
   
-|S2<br /><br /> Sin resultados|S3<br /><br /> Resultados|  
+|S2<br /><br /> Sin resultados|S3<br /><br /> Results|  
 |-----------------------|--------------------|  
 |S4 [s] S8 [d] S11 [x]|S5 [s] S8 [d] S11 [x]|  
   
@@ -368,7 +368,7 @@ Las instrucciones ODBC tienen los Estados siguientes.
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec-prepared-states"></a>SQLGetDescField y SQLGetDescRec (Estados preparados)  
   
-|S2<br /><br /> Sin resultados|S3<br /><br /> Resultados|  
+|S2<br /><br /> Sin resultados|S3<br /><br /> Results|  
 |-----------------------|--------------------|  
 |--[1], [2] o [3] S11 [2] y [x]|--[1], [2] o [3] S11 [x]|  
   

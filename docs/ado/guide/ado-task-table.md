@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59cb4cceb81861460fbcf7f079801b08319c76d9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f29f2462f19200e486b3ed7b5635048028f4bbcc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991206"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031047"
 ---
 # <a name="ado-programming-task-table"></a>Tabla de tareas de programación de ADO
 En la tabla siguiente se enumeran las tareas de programación contenidas en la *Guía del programador de ADO* y se proporcionan referencias para cada tarea. Estas referencias pueden ser descripciones de texto o ejemplos de código en los que puede encontrar información sobre la característica de ADO que realiza la tarea.
@@ -36,7 +36,7 @@ En la tabla siguiente se enumeran las tareas de programación contenidas en la *
 |Modificar datos y cambiar valores|[Editar los registros existentes](./data/editing-existing-records.md)|
 |Agregar nuevos datos|[Agregar registros a un conjunto de registros](./data/adding-records.md)|
 |Eliminar o quitar datos|[Eliminar registros mediante el método Delete](./data/deleting-records-using-the-delete-method.md)|
-|Publicar cambios en el origen de datos|[Actualizar datos](./data/updating-data.md)|
+|Publicar cambios en el origen de datos|[Actualización de datos](./data/updating-data.md)|
 |Inicio, confirmación y reversión de transacciones|[Procesamiento de transacciones](./data/transaction-processing.md)|
 |Guardar registros en un archivo (XML o binario)|[Conservar los datos](./data/persisting-data.md)|
 |Control de errores|[Errores de tiempo de ejecución de ADO](./data/ado-errors.md)|

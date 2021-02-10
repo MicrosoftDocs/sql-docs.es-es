@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 59a0075dfcee23c5e005853b0befd4b3eb0f39c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f9fa74533d7887f968d45dde715b191ac00be88
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463456"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015184"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Ejecución de la consola de SSMA (MySQLToSQL)
 Microsoft proporciona un conjunto sólido de comandos de archivo de script para ejecutar y controlar las actividades de SSMA.  
@@ -257,7 +257,7 @@ generar informe de evaluación
   
 5.  `write-summary-report-to:` Especifica la ruta de acceso donde se generará el informe de resumen.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **AssessmentReport &lt; n &gt; . ** Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **AssessmentReport &lt; n &gt; .** Se crea XML. (atributo opcional)  
   
     La creación de informes tiene dos subcategorías más:  
   
@@ -331,7 +331,7 @@ Convert-Schema
   
 5.  `write-summary-report-to:` Especifica la ruta de acceso donde se generará el informe de resumen.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **SchemaConversionReport &lt; n &gt; . ** Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **SchemaConversionReport &lt; n &gt; .** Se crea XML. (atributo opcional)  
   
     La creación de informes de resumen tiene dos subcategorías más:  
   
@@ -389,7 +389,7 @@ migrar datos
   
 3.  `write-summary-report-to:` Especifica la ruta de acceso donde se generará el informe de resumen.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **DataMigrationReport &lt; n &gt; . ** Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **DataMigrationReport &lt; n &gt; .** Se crea XML. (atributo opcional)  
   
     La creación de informes tiene dos subcategorías más:  
   

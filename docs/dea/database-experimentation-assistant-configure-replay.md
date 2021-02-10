@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 7001f188b00e70c2616e8c3592d7fa9e34147321
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 18428e87d1c769d10a4d1acbf0033c739db09d0d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419790"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017065"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configuración de Distributed Replay para Asistente para experimentación con bases de datos
 
@@ -126,6 +126,6 @@ Se deben realizar los pasos siguientes para cada reproducción:
 2. Proporcione permisos para que el usuario de la cuenta de servicio del cliente tenga acceso a las bases de datos en la instancia de SQL Server. Los permisos son necesarios para que las consultas se ejecuten en la instancia de SQL Server.
 3. Inicie la reproducción.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - Para obtener información sobre cómo reproducir un seguimiento capturado en un entorno de prueba actualizado, vea [reproducir un seguimiento en Asistente para experimentación con bases de datos](database-experimentation-assistant-replay-trace.md).

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a6f4bc99caceeb7011c932c86e636304941c459c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2f3e077a93d90afccf05023e41f8e5f2ea6fabc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418491"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017325"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Configuración del proyecto (asignación de tipo) (MySQLToSQL)
 La configuración del proyecto de asignación de tipos permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA.  
@@ -34,7 +34,7 @@ Es el tipo de datos MySQL, que debe asignarse al tipo de datos de la base de dat
 ##### <a name="target-type"></a>Tipo de destino  
 El tipo de datos de la base de datos de destino para el tipo de datos MySQL especificado.  
   
-##### <a name="add"></a>Sumar  
+##### <a name="add"></a>Agregar  
 Haga clic para agregar un tipo de datos a la lista de asignaciones.  
   
 ##### <a name="edit"></a>Editar  
@@ -194,7 +194,7 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
 |año [2.. 2]|SMALLINT|  
 |año [4... 4]|SMALLINT|  
   
-##### <a name="add"></a>Sumar  
+##### <a name="add"></a>Agregar  
 Haga clic para agregar un tipo de datos a la lista de asignaciones.  
   
 ##### <a name="edit"></a>Editar  

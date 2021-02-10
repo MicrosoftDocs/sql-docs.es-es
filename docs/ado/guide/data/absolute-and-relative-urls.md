@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19ade6a2c9501523e97d30f496249a423445d3c0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 50535a71c1062bc04aa009bea1aab08d3cf1faf0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991796"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028700"
 ---
 # <a name="absolute-and-relative-urls"></a>Direcciones URL absolutas y relativas
 Una dirección URL especifica la ubicación de un destino almacenado en un equipo local o en red. El destino puede ser un archivo, un directorio, una página HTML, una imagen, un programa, etc.  
@@ -31,7 +31,7 @@ Una dirección URL especifica la ubicación de un destino almacenado en un equip
   
  Una *dirección URL absoluta* usa el siguiente formato: *Scheme://Server/path/Resource*  
   
- Normalmente, una dirección URL relativa solo consta de la *ruta de acceso*y, opcionalmente, del *recurso*, pero no de ningún *esquema* o *servidor*. En las tablas siguientes se definen las partes individuales del formato de dirección URL completo.  
+ Normalmente, una dirección URL relativa solo consta de la *ruta de acceso* y, opcionalmente, del *recurso*, pero no de ningún *esquema* o *servidor*. En las tablas siguientes se definen las partes individuales del formato de dirección URL completo.  
   
  *scheme*  
  Especifica cómo se debe tener acceso al *recurso* .  
@@ -68,7 +68,7 @@ Una dirección URL especifica la ubicación de un destino almacenado en un equip
  Por ejemplo, en el ejemplo de código siguiente se muestra cómo abrir un **conjunto de registros** en el archivo Readme25.txt del directorio WinNT/system32:  
   
 ```  
-recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
+recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
  La dirección URL absoluta en la cadena de conexión especifica el servidor ( `YourServer` ) y la ruta de acceso ( `Winnt` ). Esta dirección URL también define el contexto.  
@@ -83,8 +83,8 @@ recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmd
 recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
-## <a name="ole-db-provider-supplied-url-schemes"></a>Esquemas de dirección URL proporcionados por el proveedor de OLE DB  
- La parte inicial de una dirección URL completa es el *esquema* que se usa para tener acceso al recurso identificado por el resto de la dirección URL. Algunos ejemplos son HTTP (Protocolo de transferencia de hipertexto) y FTP (File Transfer Protocol).  
+## <a name="ole-db-provider-supplied-url-schemes"></a>OLE DB Provider-Supplied esquemas de dirección URL  
+ La parte inicial de una dirección URL completa es el *esquema* que se usa para tener acceso al recurso identificado por el resto de la dirección URL. Algunos ejemplos son HTTP (Protocolo de transferencia de hipertexto) y FTP (protocolo de transferencia de archivos).  
   
  ADO admite proveedores de OLE DB que reconocen sus propios esquemas de dirección URL. Por ejemplo, el [proveedor de Microsoft OLE DB para la publicación en Internet](../appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* que tiene acceso a los archivos de Windows 2000 "publicados", reconoce el esquema http existente.  
   

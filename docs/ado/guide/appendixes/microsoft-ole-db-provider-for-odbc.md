@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bce53fd000baace86d32542d9b9cc843ee68296
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5a6cfdda6072f8ed51d55569ed68b113a4148642
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991026"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029269"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Introducción al proveedor de Microsoft OLE DB para ODBC
 Para un programador de ADO o RDS, un mundo ideal sería aquél en el que cada origen de datos expone una interfaz OLE DB, de modo que ADO podría llamar directamente al origen de datos. Aunque cada vez más proveedores de bases de datos implementan interfaces OLE DB, algunos orígenes de datos todavía no se exponen de esta manera. Sin embargo, se puede tener acceso a la mayoría de los sistemas DBMS en uso hoy a través de ODBC.
@@ -90,10 +90,10 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Aunque una definición de **DSN** ya especifica una base de datos, puede especificar *un* parámetro de *base de datos* además de un **DSN** para conectarse a una base de datos diferente. Es conveniente incluir siempre *el parámetro de* *base de datos* cuando se usa un **DSN**. Esto garantizará que se conecte a la base de datos correcta si otro usuario cambió el parámetro predeterminado de la base de datos desde que se comprobó por última vez la definición de **DSN** .
 
-## <a name="provider-specific-connection-properties"></a>Propiedades de conexión específicas del proveedor
+## <a name="provider-specific-connection-properties"></a>Propiedades de la conexión Provider-Specific
  El proveedor de OLE DB para ODBC agrega varias propiedades a la colección [Properties](../../reference/ado-api/properties-collection-ado.md) del objeto **Connection** . En la tabla siguiente se enumeran estas propiedades con el nombre de propiedad OLE DB correspondiente entre paréntesis.
 
-|Nombre de propiedad|Descripción|
+|Nombre de la propiedad|Descripción|
 |-------------------|-----------------|
 |Procedimientos accesibles (KAGPROP_ACCESSIBLEPROCEDURES)|Indica si el usuario tiene acceso a los procedimientos almacenados.|
 |Tablas accesibles (KAGPROP_ACCESSIBLETABLES)|Indica si el usuario tiene permiso para ejecutar instrucciones SELECT en las tablas de base de datos.|
@@ -117,14 +117,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Funciones de fecha y hora (KAGPROP_TIMEDATEFUNCTIONS)|Indica qué funciones de fecha y hora admite el controlador ODBC. Para obtener una lista de los nombres de función y los valores asociados usados en esta máscara de. vea el [Apéndice E: funciones escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md), en la documentación de ODBC.|
 |Compatibilidad con la gramática de SQL (KAGPROP_ODBCSQLCONFORMANCE)|Indica la gramática de SQL que admite el controlador ODBC.|
 
-## <a name="provider-specific-recordset-and-command-properties"></a>Propiedades de los conjuntos de registros y comandos específicos del proveedor
+## <a name="provider-specific-recordset-and-command-properties"></a>Provider-Specific conjunto de registros y propiedades de comando
  El proveedor de OLE DB para ODBC agrega varias propiedades a la colección **Properties** del **conjunto de registros** y los objetos de **comando** . En la tabla siguiente se enumeran estas propiedades con el nombre de propiedad OLE DB correspondiente entre paréntesis.
 
-|Nombre de propiedad|Descripción|
+|Nombre de la propiedad|Descripción|
 |-------------------|-----------------|
 |Actualizaciones/eliminaciones/inserciones basadas en consultas (KAGPROP_QUERYBASEDUPDATES)|Indica si las actualizaciones, eliminaciones e inserciones se pueden realizar mediante consultas SQL.|
 |Tipo de simultaneidad de ODBC (KAGPROP_CONCURRENCY)|Indica el método utilizado para reducir los posibles problemas causados por dos usuarios que intentan obtener acceso a los mismos datos del origen de datos simultáneamente.|
-|Accesibilidad de BLOBs en el cursor de solo avance (KAGPROP_BLOBSONFOCURSOR)|Indica si se puede tener acceso a **los campos** BLOB cuando se usa un cursor de solo avance.|
+|Accesibilidad de BLOBs en Forward-Only cursor (KAGPROP_BLOBSONFOCURSOR)|Indica si se puede tener acceso a **los campos** BLOB cuando se usa un cursor de solo avance.|
 |Incluir SQL_FLOAT, SQL_DOUBLE y SQL_REAL en las cláusulas WHERE de QBU (KAGPROP_INCLUDENONEXACT)|Indica si los valores de SQL_FLOAT, SQL_DOUBLE y SQL_REAL se pueden incluir en una cláusula WHERE de QBU.|
 |Posición en la última fila después de la inserción (KAGPROP_POSITIONONNEWROW)|Indica que, una vez insertado un nuevo registro en una tabla, la última fila de la tabla se incluirá en la fila actual.|
 |IRowsetChangeExtInfo (KAGPROP_IROWSETCHANGEEXTINFO)|Indica si la interfaz **IRowsetChange** proporciona compatibilidad con la información extendida.|
@@ -192,7 +192,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[PageSize](../../reference/ado-api/pagesize-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[RecordCount](../../reference/ado-api/recordcount-property-ado.md)|lectura/escritura|no disponible|solo lectura|solo lectura|
 |[Origen](../../reference/ado-api/source-property-ado-recordset.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
-|[State](../../reference/ado-api/state-property-ado.md)|solo lectura|solo lectura|solo lectura|solo lectura|
+|[Estado](../../reference/ado-api/state-property-ado.md)|solo lectura|solo lectura|solo lectura|solo lectura|
 |[Estado](../../reference/ado-api/status-property-ado-recordset.md)|solo lectura|solo lectura|solo lectura|solo lectura|
 
  Las propiedades [AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md) y [AbsolutePage](../../reference/ado-api/absolutepage-property-ado.md) son de solo escritura cuando ADO se usa con la versión 1,0 del proveedor de Microsoft OLE DB para ODBC.
@@ -261,7 +261,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Tamaño máximo de fila|DBPROP_MAXROWSIZE|
 |El tamaño máximo de fila incluye BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Número máximo de tablas en SELECT|DBPROP_MAXTABLESINSELECT|
-|Mode|DBPROP_INIT_MODE|
+|Modo|DBPROP_INIT_MODE|
 |Varios conjuntos de parámetros|DBPROP_MULTIPLEPARAMSETS|
 |Varios resultados|DBPROP_MULTIPLERESULTS|
 |Varios objetos de almacenamiento|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -281,15 +281,15 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Preparar el comportamiento de anulación|DBPROP_PREPAREABORTBEHAVIOR|
 |Preparar el comportamiento de confirmación|DBPROP_PREPARECOMMITBEHAVIOR|
 |Término del procedimiento|DBPROP_PROCEDURETERM|
-|Prompt|DBPROP_INIT_PROMPT|
+|Solicitud|DBPROP_INIT_PROMPT|
 |Nombre descriptivo del proveedor|DBPROP_PROVIDERFRIENDLYNAME|
 |Nombre del proveedor|DBPROP_PROVIDERFILENAME|
 |Versión del proveedor|DBPROP_PROVIDERVER|
-|Origen de datos de solo lectura|DBPROP_DATASOURCEREADONLY|
+|Read-Only origen de datos|DBPROP_DATASOURCEREADONLY|
 |Conversiones del conjunto de filas en el comando|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |Término de esquema|DBPROP_SCHEMATERM|
 |Uso de esquemas|DBPROP_SCHEMAUSAGE|
-|Compatibilidad con SQL|DBPROP_SQLSUPPORT|
+|Soporte técnico de SQL|DBPROP_SQLSUPPORT|
 |Almacenamiento estructurado|DBPROP_STRUCTUREDSTORAGE|
 |Compatibilidad con subconsultas|DBPROP_SUBQUERIES|
 |Término de tabla|DBPROP_TABLETERM|

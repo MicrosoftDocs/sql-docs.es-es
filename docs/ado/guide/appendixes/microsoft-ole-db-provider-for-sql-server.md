@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a307a0de76ce1e74e3e1773a414fce93957572b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1b6a62e8946415cc9c1e869a173de43b98ba14f7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991006"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029259"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Introducción al proveedor de Microsoft OLE DB para SQL Server
 El proveedor de OLE DB de Microsoft para SQL Server, SQLOLEDB, permite a ADO tener acceso a Microsoft SQL Server.
@@ -59,12 +59,12 @@ User ID=MyUserID;Password=MyPassword;"
 > [!NOTE]
 >  Si se va a conectar a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar **Trusted_Connection = Yes** o **Integrated Security = SSPI** en lugar de la información de identificador de usuario y contraseña en la cadena de conexión.
 
-## <a name="provider-specific-connection-parameters"></a>Parámetros de conexión específicos del proveedor
+## <a name="provider-specific-connection-parameters"></a>Provider-Specific de los parámetros de conexión
  El proveedor admite varios parámetros de conexión específicos del proveedor además de los definidos por ADO. Al igual que con las propiedades de conexión ADO, estas propiedades específicas del proveedor se pueden establecer a través de la colección [Properties](../../reference/ado-api/properties-collection-ado.md) de una [conexión](../../reference/ado-api/connection-object-ado.md) o se pueden establecer como parte de **ConnectionString**.
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|Trusted_Connection|Indica el modo de autenticación del usuario. Se puede establecer en **sí** o **no**. El valor predeterminado es **no**. Si esta propiedad se establece en **sí**, SQLOLEDB utiliza el modo de autenticación de Microsoft Windows NT para autorizar el acceso del usuario a la base de datos de SQL Server especificada por los valores de la propiedad **Location** y [DataSource](../../reference/ado-api/datasource-property-ado.md) . Si esta propiedad se establece en **no**, SQLOLEDB utiliza el modo mixto para autorizar el acceso del usuario a la base de datos de SQL Server. El inicio de sesión de SQL Server y la contraseña se especifican en las propiedades ID. de **usuario** y **contraseña** .|
+|Trusted_Connection|Indica el modo de autenticación del usuario. Se puede establecer en **sí** o **no**. El valor predeterminado es **No**. Si esta propiedad se establece en **sí**, SQLOLEDB utiliza el modo de autenticación de Microsoft Windows NT para autorizar el acceso del usuario a la base de datos de SQL Server especificada por los valores de la propiedad **Location** y [DataSource](../../reference/ado-api/datasource-property-ado.md) . Si esta propiedad se establece en **no**, SQLOLEDB utiliza el modo mixto para autorizar el acceso del usuario a la base de datos de SQL Server. El inicio de sesión de SQL Server y la contraseña se especifican en las propiedades ID. de **usuario** y **contraseña** .|
 |Idioma actual|Indica un nombre de lenguaje de SQL Server. Identifica el lenguaje que se usa para la selección y el formato de mensajes del sistema. El idioma debe instalarse en el SQL Server; de lo contrario, se producirá un error al abrir la conexión.|
 |Dirección de red|Indica la dirección de red del SQL Server especificado por la propiedad **Location** .|
 |Biblioteca de red|Indica el nombre de la biblioteca de red (DLL) utilizada para comunicarse con el SQL Server. El nombre no debe incluir la ruta de acceso ni la extensión de nombre de archivo .dll. La configuración del cliente de SQL Server proporciona el valor predeterminado.|
@@ -112,7 +112,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
  Con SQL Server, ADO puede usar XML para la entrada de **comandos** y recuperar los resultados en formato de secuencia XML en lugar de en objetos de **conjunto de registros** . Para obtener más información, vea [usar secuencias para la entrada de comandos](../data/command-streams.md) y [recuperar conjuntos de información en secuencias](../data/retrieving-resultsets-into-streams.md).
 
 ### <a name="accessing-sql_variant-data-using-mdac-27-mdac-28-or-windows-dac-60"></a>Obtener acceso a los datos de sql_variant mediante MDAC 2,7, MDAC 2,8 o Windows DAC 6,0
- Microsoft SQL Server tiene un tipo de datos denominado **sql_variant**. De forma similar a la **DBTYPE_VARIANT**de OLE DB, el tipo de datos **sql_variant** puede almacenar datos de varios tipos diferentes. Sin embargo, hay algunas diferencias clave entre **DBTYPE_VARIANT** y **sql_variant**. ADO también controla los datos almacenados como un valor **sql_variant** de forma distinta a como se trata de otros tipos de datos. En la lista siguiente se describen los problemas que se deben tener en cuenta cuando se tiene acceso a SQL Server datos almacenados en columnas de tipo **sql_variant**.
+ Microsoft SQL Server tiene un tipo de datos denominado **sql_variant**. De forma similar a la **DBTYPE_VARIANT** de OLE DB, el tipo de datos **sql_variant** puede almacenar datos de varios tipos diferentes. Sin embargo, hay algunas diferencias clave entre **DBTYPE_VARIANT** y **sql_variant**. ADO también controla los datos almacenados como un valor **sql_variant** de forma distinta a como se trata de otros tipos de datos. En la lista siguiente se describen los problemas que se deben tener en cuenta cuando se tiene acceso a SQL Server datos almacenados en columnas de tipo **sql_variant**.
 
 -   En MDAC 2,7, MDAC 2,8 y Windows Data Access Components (Windows DAC) 6,0, el proveedor de OLE DB para SQL Server admite el tipo de **sql_variant** . El proveedor de OLE DB para ODBC no lo hace.
 
@@ -122,7 +122,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 -   Si hay varias conversiones de tipos de datos, se producirán tipos que no coinciden. Por ejemplo, la conversión de un **sql_variant** con un subtipo de **GUID** en un **DBTYPE_VARIANT** producirá un subtipo de **SAFEARRAY**(bytes). Si vuelve a convertir este tipo en un **sql_variant** , se producirá un nuevo subtipo de **matriz**(bytes).
 
--   Los campos de **conjunto de registros** que contienen datos de **sql_variant** se pueden reenviar (calcular las referencias) o conservarse solo si el **sql_variant** contiene subtipos específicos. Si se intentan almacenar datos de forma remota con los siguientes subtipos no admitidos, se producirá un error en tiempo de ejecución (conversión no compatible) del proveedor de persistencia de Microsoft (MSPersist): **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR**y **VT_DISPATCH.**
+-   Los campos de **conjunto de registros** que contienen datos de **sql_variant** se pueden reenviar (calcular las referencias) o conservarse solo si el **sql_variant** contiene subtipos específicos. Si se intentan almacenar datos de forma remota con los siguientes subtipos no admitidos, se producirá un error en tiempo de ejecución (conversión no compatible) del proveedor de persistencia de Microsoft (MSPersist): **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR** y **VT_DISPATCH.**
 
 -   El proveedor de OLE DB para SQL Server en MDAC 2,7, MDAC 2,8 y Windows DAC 6,0 tiene una propiedad dinámica denominada **permitir variantes nativas** que, como el nombre implica, permite a los desarrolladores tener acceso a la **sql_variant** en su formato nativo en lugar de a una **DBTYPE_VARIANT**. Si se establece esta propiedad y se abre un **conjunto de registros** con el motor de cursor de cliente (**adUseClient**), se producirá un error en la llamada a **Recordset. Open** . Si se establece esta propiedad y se abre un **conjunto de registros** con cursores de servidor (**adUseServer**), la llamada a **Recordset. Open** se realizará correctamente, pero el acceso a las columnas de tipo **sql_variant** producirá un error.
 
@@ -187,15 +187,15 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Preparar el comportamiento de anulación|DBPROP_PREPAREABORTBEHAVIOR|
 |Preparar el comportamiento de confirmación|DBPROP_PREPARECOMMITBEHAVIOR|
 |Término del procedimiento|DBPROP_PROCEDURETERM|
-|Prompt|DBPROP_INIT_PROMPT|
+|Solicitud|DBPROP_INIT_PROMPT|
 |Nombre descriptivo del proveedor|DBPROP_PROVIDERFRIENDLYNAME|
 |Nombre del proveedor|DBPROP_PROVIDERFILENAME|
 |Versión del proveedor|DBPROP_PROVIDERVER|
-|Origen de datos de solo lectura|DBPROP_DATASOURCEREADONLY|
+|Read-Only origen de datos|DBPROP_DATASOURCEREADONLY|
 |Conversiones del conjunto de filas en el comando|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |Término de esquema|DBPROP_SCHEMATERM|
 |Uso de esquemas|DBPROP_SCHEMAUSAGE|
-|Compatibilidad con SQL|DBPROP_SQLSUPPORT|
+|Soporte técnico de SQL|DBPROP_SQLSUPPORT|
 |Almacenamiento estructurado|DBPROP_STRUCTUREDSTORAGE|
 |Compatibilidad con subconsultas|DBPROP_SUBQUERIES|
 |Término de tabla|DBPROP_TABLETERM|
