@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 33b5663e7693de8c031f2b39c0436a771920be56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 82f5d7eef228326f0dba9b194b87bffce4bb5eff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372371"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078239"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Instalación de componentes de SSMA en SQL Server (SybaseToSQL)
 
@@ -27,7 +27,7 @@ El paquete de extensión SSMA agrega las bases de datos, **sysdb** y **ssmateste
 
 Además, al migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA crea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajos del agente cuando se usa el motor de migración de datos del lado servidor para migrar los datos.
 
-### <a name="prerequisites"></a>Requisitos previos
+### <a name="prerequisites"></a>Prerrequisitos
 
 Antes de instalar los componentes de servidor de SSMA para Sybase en, asegúrese de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el sistema cumple los requisitos siguientes:
 
@@ -49,8 +49,8 @@ Puede instalar el paquete de extensión en cualquier momento antes de migrar los
 
 Para instalar el paquete de extensión:
 
-1. Copie **SSMAforSybaseExtensionPack_*n*. msi**, donde *n* es el número de compilación, en el equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
-2. Haga doble clic en **SSMAforSybaseExtensionPack_*n*. msi**.
+1. Copie **SSMAforSybaseExtensionPack_ *n*. msi**, donde *n* es el número de compilación, en el equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+2. Haga doble clic en **SSMAforSybaseExtensionPack_ *n*. msi**.
 3. En la página **principal**, haga clic en **Siguiente**.
 4. En la página contrato de licencia para el **usuario final** , lea el contrato de licencia. Si está de acuerdo, seleccione la opción acepto **el contrato** y, a continuación, haga clic en **siguiente**.
 5. En la página **elegir tipo de instalación** , haga clic en **típica**.
@@ -75,11 +75,11 @@ Para instalar el paquete de extensión:
 
     Si la opción **instalar base de datos de prueba** está activada, se creará la base de datos **ssmatesterdb_syb** .
 
-12. Una vez completada la instalación, aparecerá un mensaje preguntándole si desea instalar la base de datos de utilidades en otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , seleccione **sí**y, a continuación, haga clic en **siguiente**, o bien para salir del asistente, seleccione **no** y, a continuación, **salir**.
+12. Una vez completada la instalación, aparecerá un mensaje preguntándole si desea instalar la base de datos de utilidades en otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , seleccione **sí** y, a continuación, haga clic en **siguiente**, o bien para salir del asistente, seleccione **no** y, a continuación, **salir**.
 
 ### <a name="sql-server-database-objects"></a>SQL Server objetos de base de datos
 
-Después de instalar el paquete de extensión, verá una tabla **ssma_syb. bcp_migration_packages** en la base de datos **sysdb** . También verá los siguientes procedimientos almacenados:
+Después de instalar el paquete de extensión, verá una tabla de **_migration_packages de ssma_syb. BCP** en la base de datos **sysdb** . También verá los siguientes procedimientos almacenados:
 
 - `bcp_clean_migration_data`
 - `bcp_ensure_message_table`

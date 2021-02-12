@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa3f4741e4b1eec0acc218c3be3a4df73c0ed694
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 2ff03267639a2ea62000c077330b2db547128be7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935061"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074816"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar el elemento web Visor de informes
 
@@ -67,7 +67,7 @@ Puede usar el elemento web Visor de informes para ver informes que se ejecutan e
 |Propiedad|Descripción|  
 |--------------|-----------------|  
 |Informe|Ruta de acceso completa a un informe que esté en el sitio de SharePoint actual o en un sitio dentro de la misma aplicación o conjunto de servidores web. Para obtener los mejores resultados al establecer propiedades adicionales, haga clic en Aplicar después de especificar la dirección URL del informe.|  
-|Destino de hipervínculo|HTML estándar que especifica el marco de destino para mostrar el contenido vinculado en el documento actual. Para informes que incluyen hipervínculos a sitios web externos, puede especificar si un documento de destino reemplaza el informe existente en la ventana actual o si se abre en una nueva ventana del explorador. Los valores válidos son **_Top**, **_Blank**y **_Self**. **_Top** usa la ventana actual, **_Blank** carga el documento en una nueva ventana del explorador y **_Self** abre el documento en el marco actual. Aunque **_Parent** es un valor válido para el atributo de destino en HTML, no se recomienda usarlo para un elemento web del Visor de informes que se incrusta en una página.|  
+|Destino de hipervínculo|HTML estándar que especifica el marco de destino para mostrar el contenido vinculado en el documento actual. Para informes que incluyen hipervínculos a sitios web externos, puede especificar si un documento de destino reemplaza el informe existente en la ventana actual o si se abre en una nueva ventana del explorador. Los valores válidos son **_Top**, **_Blank** y **_Self**. **_Top** usa la ventana actual, **_Blank** carga el documento en una nueva ventana del explorador y **_Self** abre el documento en el marco actual. Aunque **_Parent** es un valor válido para el atributo de destino en HTML, no se recomienda usarlo para un elemento web del Visor de informes que se incrusta en una página.|  
 |Generar automáticamente el título del elemento web|Un título generado que incluye el nombre del elemento web Visor de informes más el nombre del informe, separados por un guion. Si el informe no tiene ningún título, se usa el nombre del archivo de informe. El título es visible cuando se agrega un elemento web a una página. Si esta casilla está activada, el título se generará cada vez que se actualice la página.|  
 |Generar automáticamente el vínculo de detalles del elemento web|Un hipervínculo generado que aparece encima del elemento web. Puede hacer clic en el vínculo para abrir el informe en una nueva página, en modo de página completa.|  
 |Mostrar elemento del menú del generador de informes|Muestra u oculta la opción del menú **Acciones** para abrir el Generador de informes.|  
@@ -81,9 +81,9 @@ Puede usar el elemento web Visor de informes para ver informes que se ejecutan e
 |Mostrar control de zoom|Muestra u oculta el zoom en la barra de herramientas.|  
 |Mostrar botón de fuente ATOM|Muestra u oculta el botón de fuente ATOM en la barra de herramientas.<br /><br /> ![htmlviewer_datafeed](../../reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
 |Ubicación de la barra de herramientas|Determina la ubicación de la barra de herramientas dentro del visor de informes. Los valores válidos son **Top** y **Bottom**.|  
-|Área de mensajes|Los valores válidos son **Displayed**, **Collapsed**y **Hidden**. **Displayed** muestra el área de parámetros para los informes que incluyen valores con parámetros y que requieren una entrada de usuario antes de ejecutarse. Use **Hidden** si se han especificado todos los parámetros del informe y no desea que los usuarios puedan ver el área de parámetros.|  
+|Área de mensajes|Los valores válidos son **Displayed**, **Collapsed** y **Hidden**. **Displayed** muestra el área de parámetros para los informes que incluyen valores con parámetros y que requieren una entrada de usuario antes de ejecutarse. Use **Hidden** si se han especificado todos los parámetros del informe y no desea que los usuarios puedan ver el área de parámetros.|  
 |Ancho del área de parámetros|Puede elegir la medida y el valor. El valor predeterminado es 200 píxeles. El único requisito de esta propiedad es que sea mayor que cero.|  
-|Mapa del documento|Control de navegación en informes definido en el informe y usado para proporcionar acceso mediante un clic a secciones específicas de un informe. Está disponible en informes HTML. El mapa del documento se muestra en un área contraíble situada junto al área de visualización de informes. Los valores válidos son **Displayed**, **Collapsed**y **Hidden**. Si se define un mapa del documento para un informe, el área se expande de manera predeterminada a menos que se marque como oculta o contraída en las propiedades del elemento web. Si el mapa del documento está contraído, puede hacer clic en la flecha para expandirlo.|  
+|Mapa del documento|Control de navegación en informes definido en el informe y usado para proporcionar acceso mediante un clic a secciones específicas de un informe. Está disponible en informes HTML. El mapa del documento se muestra en un área contraíble situada junto al área de visualización de informes. Los valores válidos son **Displayed**, **Collapsed** y **Hidden**. Si se define un mapa del documento para un informe, el área se expande de manera predeterminada a menos que se marque como oculta o contraída en las propiedades del elemento web. Si el mapa del documento está contraído, puede hacer clic en la flecha para expandirlo.|  
 |Ancho del área de mapa del documento|Puede elegir la medida y el valor. El valor predeterminado es 200 píxeles. El único requisito de esta propiedad es que sea mayor que cero.|  
 |Cargar parámetros|Recupere las propiedades de parámetros para el informe. No todos los informes tienen parámetros. Si el informe no tiene parámetros, no se devolverá ningún valor. Si está estableciendo las propiedades de un informe que acaba de cargar, puede aparecer un error en el que se indica que la conexión con el origen de datos se ha eliminado. Si esto ocurre, restablezca la conexión y termine de establecer las propiedades de los parámetros después de especificar la conexión. Para más información sobre cómo establecer la conexión, vea [Crear y administrar orígenes de datos compartidos &#40;Reporting Services en el modo integrado de SharePoint&#41;](/previous-versions/sql/).<br /><br /> Para obtener los mejores resultados, haga clic en **Aplicar** antes de hacer clic en Cargar parámetros.<br /><br /> Después de cargar las propiedades de los parámetros, puede establecerlas igual que lo haría en las páginas de propiedades de los parámetros en el informe. Para más información sobre cómo establecer los parámetros, vea [Establecer parámetros en un informe publicado &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).|  
 

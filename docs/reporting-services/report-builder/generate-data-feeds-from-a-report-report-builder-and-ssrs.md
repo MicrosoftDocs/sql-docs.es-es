@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6eedf7ae96f41a75a8690162de01473d7e2e5664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d61d02d7c5bf3e4de8199ebdc59f1c6f8ed157b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342791"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015655"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Generar fuentes de distribución de datos a partir de un informe (Generador de informes y SSRS)
 
@@ -50,7 +50,7 @@ Puede generar fuentes de distribución de datos compatibles con Atom a partir de
     > [!NOTE]  
     >  De manera predeterminada, el nombre del documento es el del informe.  
   
-7.  Compruebe que el tipo de documento es **Archivo ATOMSVC**y, a continuación, haga clic en **Guardar**.  
+7.  Compruebe que el tipo de documento es **Archivo ATOMSVC** y, a continuación, haga clic en **Guardar**.  
   
 8.  Si lo desea, abra el archivo .atomsvc en un explorador o un editor de texto o XML.  
   
@@ -77,7 +77,7 @@ Puede generar fuentes de distribución de datos compatibles con Atom a partir de
     > [!NOTE]  
     >  De forma predeterminada, el nombre del documento es el del informe. Si el documento de servicio de Atom tiene varias fuentes, de forma predeterminada todas usas el mismo nombre, el del informe. Para diferenciarlas, cambie su nombre por otro descriptivo.  
   
-7.  Compruebe que el tipo de documento es **Archivo ATOM**y, a continuación, haga clic en **Guardar**.  
+7.  Compruebe que el tipo de documento es **Archivo ATOM** y, a continuación, haga clic en **Guardar**.  
   
 8.  Si lo desea, abra el archivo .atom en un explorador o editor de texto o XML.  
 

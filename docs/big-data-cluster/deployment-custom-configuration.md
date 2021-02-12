@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cef348aee2b917b0a6afd61d30b5e4f7fa7da665
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: d983b4d0d7cfb02a587675984fdc42c54bf9f0ec
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257207"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100047205"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configuración de opciones de implementación de recursos y servicios de clúster
 
@@ -312,7 +312,7 @@ También puede cambiar la clase de almacenamiento y las características que se 
 > [!TIP]
 > Para obtener más información sobre la configuración de almacenamiento, vea [Persistencia de datos con clústeres de macrodatos de SQL Server en Kubernetes](concept-data-persistence.md).
 
-En primer lugar, cree un archivo patch.json como se muestra a continuación para ajustar la configuración de *almacenamiento* .
+En primer lugar, cree un archivo patch.json como se muestra a continuación para ajustar la configuración de *almacenamiento*.
 
 ```json
 {
@@ -677,8 +677,8 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 ## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>Activación y desactivación de la recopilación de métricas de pods y nodos
 
-En SQL Server 2019 CU5 se han habilitado dos modificadores de características para controlar la recopilación de métricas de pods y nodos. Si usa soluciones distintas para la supervisión de la infraestructura de Kubernetes, y quiere desactivar la recopilación de métricas integradas para pods y nodos de host, establezca *allowNodeMetricsCollection* y *allowPodMetricsCollection* en *false* en el archivo de configuración de implementación de *control.json* . En el caso de entornos OpenShift, esta configuración se establece en *false* de forma predeterminada en los perfiles de implementación integrados, ya que la recopilación de métricas de pods y nodos requiere capacidades con privilegios.
-Ejecute este comando para actualizar los valores de esta configuración en el archivo de configuración personalizado mediante la CLI de *azdata* :
+En SQL Server 2019 CU5 se han habilitado dos modificadores de características para controlar la recopilación de métricas de pods y nodos. Si usa soluciones distintas para la supervisión de la infraestructura de Kubernetes, y quiere desactivar la recopilación de métricas integradas para pods y nodos de host, establezca *allowNodeMetricsCollection* y *allowPodMetricsCollection* en *false* en el archivo de configuración de implementación de *control.json*. En el caso de entornos OpenShift, esta configuración se establece en *false* de forma predeterminada en los perfiles de implementación integrados, ya que la recopilación de métricas de pods y nodos requiere capacidades con privilegios.
+Ejecute este comando para actualizar los valores de esta configuración en el archivo de configuración personalizado mediante la CLI de *azdata*:
 
 ```bash
  azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"

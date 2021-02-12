@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ce8afd47260ebc402f3d93cd191529eb7640f99d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb8c8994b9fb2804816663801612f5085eeedce4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488279"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075096"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Comandos de menú y otras teclas de método abreviado (AccessToSQL)
 En las secciones siguientes se describen los métodos abreviados de teclado para tener acceso a los comandos de menú y otras teclas de método abreviado usadas en varios cuadros de diálogo de la aplicación SSMA for Access.  
@@ -189,6 +189,6 @@ Para tener acceso al menú contextual del objeto seleccionado en el explorador d
 |Iniciar información rápida.|CTRL + MAYÚS + BARRA ESPACIADORA|  
 |Vaya a la declaración.|F12|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Teclas de método abreviado &#40;AccessToSQL&#41;](../../ssma/access/shortcut-keys-accesstosql.md)  
   

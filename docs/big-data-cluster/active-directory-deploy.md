@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48dde8000274ea74df1c6095714b54669c5becdd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 2a79c82f2c3fd443d7237fc3b0a1f7c51102bceb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257295"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048020"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>Implementación del clúster de macrodatos de SQL Server en el modo de Active Directory
 
@@ -50,7 +50,7 @@ La integración de AD necesita los parámetros siguientes. Agregue estos paráme
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: lista de FQDN del controlador de dominio. El FQDN contiene el nombre de host o de la máquina del controlador de dominio. Si tiene varios controladores de dominio, aquí se puede proporcionar una lista. Ejemplo: `HOSTNAME.CONTOSO.LOCAL`.
 
   > [!IMPORTANT]
-  > Cuando hay varios controladores de dominio que atienden a un dominio, utilice el controlador de dominio principal (PDC) como primera entrada en la lista de `domainControllerFullyQualifiedDns` de la configuración de seguridad. Para obtener el nombre del PDC, escriba `netdom query fsmo` en el símbolo del sistema y luego presione **Entrar** .
+  > Cuando hay varios controladores de dominio que atienden a un dominio, utilice el controlador de dominio principal (PDC) como primera entrada en la lista de `domainControllerFullyQualifiedDns` de la configuración de seguridad. Para obtener el nombre del PDC, escriba `netdom query fsmo` en el símbolo del sistema y luego presione **Entrar**.
 
 - **Parámetro opcional** `security.activeDirectory.realm`: en la mayoría de casos, el dominio es igual al nombre de dominio. En los casos en los que no sean iguales, use este parámetro para definir el nombre del dominio (por ejemplo, `CONTOSO.LOCAL`). El valor proporcionado para este parámetro debe ser completo.
 
@@ -77,7 +77,7 @@ A fin de obtener información detallada sobre cómo actualizar los grupos de AD 
   >Cree estos grupos en AD antes de comenzar la implementación. Si el ámbito de cualquiera de estos grupos de AD es el dominio local, se produce un error en la implementación.
 
   >[!IMPORTANT]
-  >Si los usuarios del dominio cuentan con muchas pertenencias a grupos, debe ajustar los valores de la configuración de puerta de enlace `httpserver.requestHeaderBuffer` (el valor predeterminado es `8192`) y la configuración de HDFS `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (el valor predeterminado es `10`), mediante el archivo de configuración personalizado de implementación *bdc.json* . Se trata de un procedimiento recomendado para evitar los tiempos de espera de conexión a las respuestas de puerta de enlace o HTTP con un código de estado 431 ( *Campos del encabezado de solicitud demasiado grandes* ). Esta es una sección del archivo de configuración que muestra cómo definir los valores de esta configuración y cuáles son los valores recomendados para un número mayor de pertenencias de grupo:
+  >Si los usuarios del dominio cuentan con muchas pertenencias a grupos, debe ajustar los valores de la configuración de puerta de enlace `httpserver.requestHeaderBuffer` (el valor predeterminado es `8192`) y la configuración de HDFS `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (el valor predeterminado es `10`), mediante el archivo de configuración personalizado de implementación *bdc.json*. Se trata de un procedimiento recomendado para evitar los tiempos de espera de conexión a las respuestas de puerta de enlace o HTTP con un código de estado 431 (*Campos del encabezado de solicitud demasiado grandes*). Esta es una sección del archivo de configuración que muestra cómo definir los valores de esta configuración y cuáles son los valores recomendados para un número mayor de pertenencias de grupo:
 
 ```json
 {
@@ -89,7 +89,7 @@ A fin de obtener información detallada sobre cómo actualizar los grupos de AD 
                 "spec": {
                     "replicas": 1,
                     "endpoints": [{...}],
-                    "settings": {
+                    "settings": {
                         "gateway-site.gateway.httpserver.requestHeaderBuffer": "65536"
                     }
                 }
@@ -138,7 +138,7 @@ En la tabla siguiente se muestra el modelo de autorización para la administraci
 
   Vea [Concepto: Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en modo de Active Directory](active-directory-deployment-background.md) para obtener más información sobre la implementación de varios clústeres de macrodatos en el mismo dominio de Active Directory.
 
-- `security.activeDirectory.accountPrefix`: **Parámetro opcional** Este parámetro se incluye en la versión SQL Server 2019 CU5 para admitir la implementación de varios clústeres de macrodatos en el mismo dominio. Esta configuración garantiza la exclusividad de los nombres de cuenta de varios servicios de clúster de macrodatos, que deben ser diferentes entre cualquier par de clústeres. La personalización del nombre del prefijo de la cuenta es opcional; de forma predeterminada, el nombre del subdominio se usa como prefijo de la cuenta. Si el nombre de subdominio es mayor de 12 caracteres, los primeros 12 caracteres del nombre de subdominio se usan como el prefijo de la cuenta.  
+- `security.activeDirectory.accountPrefix`: **Parámetro opcional** Este parámetro se incluye en la versión SQL Server 2019 CU5 para admitir la implementación de varios clústeres de macrodatos en el mismo dominio. Esta configuración garantiza la exclusividad de los nombres de cuenta de varios servicios de clúster de macrodatos, que deben ser diferentes entre cualquier par de clústeres. La personalización del nombre del prefijo de la cuenta es opcional; de forma predeterminada, el nombre del subdominio se usa como prefijo de la cuenta. Si el nombre de subdominio es mayor de 12 caracteres, los primeros 12 caracteres del nombre de subdominio se usan como el prefijo de la cuenta.  
 
   >[!NOTE]
   >Active Directory requiere que los nombres de cuenta se limiten a 20 caracteres. El clúster de macrodatos debe usar 8 de estos caracteres para distinguir entre pods y StatefulSets. Esto nos deja 12 caracteres como límite para el prefijo de la cuenta.

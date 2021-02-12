@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d20a43e6e0ea677737079f3077d7aa47b1dc870b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5c3075180e60737931adfb1f544ace8bb38b9b0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463332"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071869"
 ---
 # <a name="project-settings-azure-sql-database-mysqltosql"></a>Configuración del proyecto (Azure SQL Database) (MySQLToSQL)
 La configuración del proyecto SQL Azure permite configurar el sufijo de Azure SQL Database que se va a agregar en el cuadro de diálogo de conexión y permitir también la implementación del mecanismo de latido en SQL Azure conexión.  

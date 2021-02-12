@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42f53d1b31f2e5b8805c5173bd45fcbd27f2d4a4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: d5b0c6cc93ea6b934be718e88873cf736f31d679
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529577"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061700"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementar una clase Connection para una extensión de procesamiento de datos
   El objeto **Connection** representa una conexión a bases de datos o un recurso similar, y es el punto inicial para los usuarios de una extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Representa las conexiones a los servidores de bases de datos, aunque cualquier entidad con un comportamiento similar se puede exponer como **Connection**.  

@@ -3,15 +3,15 @@ title: La versión de SQL Server PowerShell incluye
 description: Explica que el módulo SQLServer PowerShell es el conjunto de comandos de SQL Server PowerShell actual.
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29fb145b1134404fb977171066d72c34cc712785
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 7d2072705186ad2006ae52adb821359a5c64e39e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005165"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062359"
 ---
 > [!NOTE]
-> Hay dos módulos de SQL Server PowerShell: [SqlServer](https://docs.microsoft.com/powershell/module/sqlserver) y [SQLPS](https://docs.microsoft.com/powershell/module/sqlps).
+> Hay dos módulos de SQL Server PowerShell: [SqlServer](/powershell/module/sqlserver) y [SQLPS](/powershell/module/sqlps).
 >
 > El módulo **SqlServer** es el módulo de PowerShell actual que se va a usar.
 >

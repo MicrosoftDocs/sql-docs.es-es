@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0df267807ff824cebac580fb3454d63de8dfe31b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7024f944030714e7aa2431815e326b1be5be701
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463388"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077217"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Asignación de tipos de datos de MySQL y de SQL Server (MySQLToSQL)
 Los tipos de base de datos MySQL se diferencian de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de Azure SQL Database. Al convertir objetos de base de datos MySQL en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos o SQL Azure, debe especificar cómo se asignan los tipos de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en los procedimientos siguientes.  
@@ -57,7 +57,7 @@ Al ver la pestaña **asignación de tipos** en SSMA, el fondo está codificado p
   
         1.  Algunos tipos requieren una longitud de tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar**.  
   
-        2.  Algunos tipos requieren una **escala**y **precisión** del tipo de datos de destino. Si es necesario, escriba la nueva precisión y la escala en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar**.  
+        2.  Algunos tipos requieren una **escala** y **precisión** del tipo de datos de destino. Si es necesario, escriba la nueva precisión y la escala en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar**.  
   
 -   **Para editar una asignación de tipos, haga lo siguiente:**  
   
@@ -71,7 +71,7 @@ Al ver la pestaña **asignación de tipos** en SSMA, el fondo está codificado p
   
     -  Algunos tipos requieren una longitud de tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar**.  
   
-    -  Algunos tipos requieren una **escala**y **precisión** del tipo de datos de destino. Si es necesario, escriba la nueva precisión y la escala en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar**.  
+    -  Algunos tipos requieren una **escala** y **precisión** del tipo de datos de destino. Si es necesario, escriba la nueva precisión y la escala en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar**.  
   
 -   **Para quitar una asignación de tipo de datos, haga lo siguiente:**  
   

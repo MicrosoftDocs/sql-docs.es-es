@@ -21,12 +21,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 171cada53538f8e5b615e6096a169b0976b57532
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 5cb1966c7b861c60bf9cd7106480ff4b30e4844b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236044"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071639"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.dm_db_log_info ( database_id )
 
 ## <a name="table-returned"></a>Tabla devuelta  
 
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Id. de la base de datos.|
 |file_id|**smallint**|Identificador de archivo del registro de transacciones.|  
@@ -63,7 +63,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_create_lsn|**nvarchar (48)** |[Número de secuencia de registro (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) de la entrada de registro que creó el [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_encryptor_thumbprint|**varbinary(20)**| **Se aplica a:** [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]. <br><br> Muestra la huella digital del sistema de cifrado de VLF si el VLF se cifra mediante [cifrado de datos transparente](../../relational-databases/security/encryption/transparent-data-encryption.md), de lo contrario, es NULL. |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 La `sys.dm_db_log_info` función de administración dinámica sustituye a la `DBCC LOGINFO` instrucción.    
  
 ## <a name="permissions"></a>Permisos  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1f4d616b964a1e9e9eed391e3386b16e9df54e44
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 66d1ce573f464f14e0b738fb4c461be031db64ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195537"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070090"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Configuración del proyecto (conversión) (SybaseToSQL)
 
@@ -40,11 +40,11 @@ Use esta opción para especificar el tipo de mensaje (ADVERTENCIA o error) que S
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Convertir y marcar con ADVERTENCIA|
 |Optimistic|Convertir y marcar con ADVERTENCIA|
-|Full|Marcar con error|
+|Completo|Marcar con error|
 
 ### <a name="conversion-of-like-operator"></a>Conversión de operador LIKE
 
@@ -55,11 +55,11 @@ Especifica si se deben convertir los `LIKE` operandos para que coincidan con el 
   
 Al seleccionar un modo de conversión en el cuadro modo, SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Conversión simple|
 |Optimistic|Conversión simple|
-|Full|Conversión a longitud fija|
+|Completo|Conversión a longitud fija|
 
 ### <a name="convert-or-cast-empty-strings-to-numeric-types"></a>CONVERTIR o convertir cadenas vacías en tipos numéricos
 
@@ -70,11 +70,11 @@ Especifica cómo administrar cadenas en blanco o vacías dentro de `CONVERT` `CA
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Conversión simple|
 |Optimistic|Conversión simple|
-|Full|Cadena vacía como cero numérico|
+|Completo|Cadena vacía como cero numérico|
 
 ### <a name="concatenation-of-null"></a>Concatenación de NULL
 
@@ -85,11 +85,11 @@ Esta configuración especifica cómo convertir la concatenación de cadenas con 
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Mantener la sintaxis actual|
 |Optimistic|Mantener la sintaxis actual|
-|Full|Wrap con la función ISNULL|
+|Completo|Wrap con la función ISNULL|
 
 ### <a name="conversion-of-empty-strings"></a>Conversión de cadenas vacías
 
@@ -102,11 +102,11 @@ Para usar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportam
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Mantener la sintaxis actual|
 |Optimistic|Mantener la sintaxis actual|
-|Full|Reemplazar todas las expresiones de cadena por espacio|
+|Completo|Reemplazar todas las expresiones de cadena por espacio|
 
 ### <a name="convert-and-cast-binary-string-conversion"></a>CONVERTIR y convertir la conversión de cadena binaria
 
@@ -121,11 +121,11 @@ Seleccione **convertir y marcar con ADVERTENCIA** para que SSMA convierta y corr
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Convertir y marcar con ADVERTENCIA|
 |Optimistic|Conversión simple|
-|Full|Convertir y corregir|
+|Completo|Convertir y corregir|
 
 ### <a name="dynamic-sql"></a>SQL dinámico
 
@@ -136,11 +136,11 @@ Use esta opción para especificar el tipo de mensaje (ADVERTENCIA o error) que S
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Convertir y marcar con ADVERTENCIA|
 |Optimistic|Convertir y marcar con ADVERTENCIA|
-|Full|Marcar con error|
+|Completo|Marcar con error|
 
 ### <a name="equality-check-conversion"></a>Conversión de comprobación de igualdad
 
@@ -151,11 +151,11 @@ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /Azure SQL, si la `
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Conversión simple|
 |Optimistic|Conversión simple|
-|Full|Considerar valores NULL|
+|Completo|Considerar valores NULL|
 
 ### <a name="format-strings"></a>Cadenas de formato
 
@@ -246,11 +246,11 @@ Cuando SSMA encuentra un `format_string` argumento, puede crear un literal de ca
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Crear nueva cadena|
 |Optimistic|Crear nueva cadena|
-|Full|Crear nueva variable|
+|Completo|Crear nueva variable|
 
 ### <a name="insert-an-explicit-value-into-a-timestamp-column"></a>Insertar un valor explícito en una columna de marca de tiempo
 
@@ -261,11 +261,11 @@ Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la sig
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Excluir columna|
 |Optimistic|Excluir columna|
-|Full|Marcar con error|
+|Completo|Marcar con error|
 
 ### <a name="store-temporary-objects-defined-in-procedures"></a>Almacenar objetos temporales definidos en procedimientos
 
@@ -274,11 +274,11 @@ Esta configuración especifica si las definiciones de los objetos temporales que
 - Seleccione **sí** para almacenar en los metadatos.
 - Seleccione **no** si no es necesario almacenar los objetos.
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Sí|
 |Optimistic|Sí|
-|Full|No|
+|Completo|No|
 
 ### <a name="proxy-table-conversion"></a>Conversión de tabla de proxy
 
@@ -289,11 +289,11 @@ Especifica si las tablas de proxy de ASE se convierten en [!INCLUDE[ssNoVersion]
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Marcar con error|
 |Optimistic|Marcar con error|
-|Full|Marcar con error|
+|Completo|Marcar con error|
 
 ### <a name="raiserror-base-message-number"></a>Número de mensaje base de RAISERROR
 
@@ -312,11 +312,11 @@ Tenga en cuenta lo siguiente:
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|30001|
 |Optimistic|30001|
-|Full|30001|
+|Completo|30001|
 
 ### <a name="system-objects"></a>Objetos del sistema
 
@@ -327,11 +327,11 @@ Use esta opción para especificar el tipo de mensaje (ADVERTENCIA o error) que S
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Convertir y marcar con ADVERTENCIA|
 |Optimistic|Convertir y marcar con ADVERTENCIA|
-|Full|Marcar con error|
+|Completo|Marcar con error|
 
 ### <a name="unresolved-identifiers"></a>Identificadores sin resolver
 
@@ -342,11 +342,11 @@ Use esta opción para especificar el tipo de mensaje (ADVERTENCIA o error) que S
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Convertir y marcar con ADVERTENCIA|
 |Optimistic|Convertir y marcar con ADVERTENCIA|
-|Full|Marcar con error|
+|Completo|Marcar con error|
 
 ## <a name="system-functions-section"></a>Sección funciones del sistema
 
@@ -359,11 +359,11 @@ En ASE, `CHARINDEX` devuelve `NULL` solo si todas las expresiones de entrada son
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Mantener la sintaxis actual|
 |Optimistic|Mantener la sintaxis actual|
-|Full|Replace (función)|
+|Completo|Replace (función)|
   
 ### <a name="datalength-function"></a>DATALENGTH, función
 
@@ -374,11 +374,11 @@ Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la sig
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Mantener la sintaxis actual|
 |Optimistic|Mantener la sintaxis actual|
-|Full|Replace (función)|
+|Completo|Replace (función)|
 
 ### <a name="index_col-function"></a>INDEX_COL, función
 
@@ -387,11 +387,11 @@ ASE es compatible con un `user_id` argumento opcional de la `INDEX_COL` función
 - Para usar el comportamiento de ASE, seleccione **convertir función**. Si el código contiene el `user_id` argumento, SSMA mostrará un error.
 - Para mostrar un mensaje de error cada vez que `INDEX_COL` se encuentre, seleccione **marcar con error**. SSMA no convertirá las referencias a la función y marcará la instrucción con comentarios de error.
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Marcar con error|
 |Optimistic|Marcar con error|
-|Full|Marcar con error|
+|Completo|Marcar con error|
 
 ### <a name="index_colorder-function"></a>INDEX_COLORDER función)
 
@@ -402,11 +402,11 @@ ASE es compatible con un `user_id` argumento opcional de la `INDEX_COL` función
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Marcar con error|
 |Optimistic|Marcar con error|
-|Full|Marcar con error|
+|Completo|Marcar con error|
 
 ### <a name="left-and-right-functions"></a>Funciones izquierda y derecha
 
@@ -417,11 +417,11 @@ Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la sig
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Mantener la sintaxis actual|
 |Optimistic|Mantener la sintaxis actual|
-|Full|Replace (función)|
+|Completo|Replace (función)|
 
 > [!NOTE]
 > Si el parámetro de longitud es un valor literal y no una expresión compleja, el valor de longitud siempre se reemplaza con `NULL` independientemente de la configuración del proyecto.
@@ -435,11 +435,11 @@ Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la sig
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Marcar con error|
 |Optimistic|Marcar con error|
-|Full|Marcar con error|
+|Completo|Marcar con error|
 
 **Modo predeterminado/optimista/completo:** Marcar con error
 
@@ -452,11 +452,11 @@ Especifica si se va a convertir la `PATINDEX` función para que coincida con el 
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|No debe usarse|
 |Optimistic|No debe usarse|
-|Full|Usar|
+|Completo|Uso|
 
 ### <a name="replicate-function"></a>REPLICATE, función
 
@@ -467,11 +467,11 @@ La `REPLICATE` función repite una cadena el número especificado de veces. En A
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Replace (función)|
 |Optimistic|Replace (función)|
-|Full|Replace (función)|
+|Completo|Replace (función)|
 
 ### <a name="trim-ltrim-rtrim-function"></a>TRIM (LTRIM, RTRIM) (función)
 
@@ -482,11 +482,11 @@ Esta configuración especifica si se deben reemplazar las llamadas a `TRIM` `LTR
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Replace (función)|
 |Optimistic|Replace (función)|
-|Full|Replace (función)|
+|Completo|Replace (función)|
 
 ### <a name="substring-function"></a>SUBSTRING, función
 
@@ -497,11 +497,11 @@ En ASE, la función `SUBSTRING(expression, start, length)` devuelve `NULL` si se
 
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|Mantener la sintaxis actual|
 |Optimistic|Mantener la sintaxis actual|
-|Full|Replace (función)|
+|Completo|Replace (función)|
 
 ## <a name="tables-section"></a>Sección tablas
 
@@ -509,11 +509,11 @@ Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la sig
 
 Crea una nueva clave principal en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla o de Azure SQL si una tabla de SAP ase no tiene una clave principal o un índice único.
 
-|Mode|Value|
+|Modo|Value|
 |-|-|
 |Valor predeterminado|No|
 |Optimistic|No|
-|Full|Sí|
+|Completo|Sí|
 
 > [!NOTE]
 > Cuando se conecta a Azure SQL, es **sí** de forma predeterminada.

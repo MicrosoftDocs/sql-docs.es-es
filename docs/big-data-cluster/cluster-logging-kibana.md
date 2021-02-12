@@ -10,12 +10,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 55dc3056b9f66f7a96b55ab750a5f74fe9bfd394
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 83e9d79f0316646d6ee25233e604e6751167b5f2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091715"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039525"
 ---
 # <a name="check-out-cluster-logs--with-kibana-dashboard"></a>Consulta de los registros de clúster con el panel de Kibana
 

@@ -11,12 +11,12 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 7e0baa3982fd6b123a4cce29aaada1d78478fd46
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5e091085616078a93a65922bfaa2176ae4a6b16b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497809"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076346"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Opciones de la línea de comandos en la consola SSMA (AccessToSQL)
 Microsoft proporciona un sólido conjunto de opciones de línea de comandos para ejecutar y controlar las actividades de SSMA. Las secciones siguientes proporcionan detalles adicionales.  

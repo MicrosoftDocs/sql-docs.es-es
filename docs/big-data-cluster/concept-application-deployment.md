@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ac26973c4d1ff8b2a9e689f3aa372d3888f939d6
-ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
+ms.openlocfilehash: 8c1f6b4895e872289095411cfd8ecdaf1e2eb087
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92914304"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100047665"
 ---
 # <a name="what-is-application-deployment-on-a-sql-server-big-data-cluster"></a>¿Qué es la implementación de la aplicación en un clúster de macrodatos de SQL Server?
 

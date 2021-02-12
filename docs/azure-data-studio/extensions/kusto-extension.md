@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 10/29/2020
-ms.openlocfilehash: 0c77b957f14401aec3130fa5fa4f78f0d34de9b5
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: 15b2dc331a1387039c79cbab164682f00981c591
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067207"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052036"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Extensión Kusto (KQL) para Azure Data Studio (versión preliminar)
 
@@ -68,16 +68,16 @@ Para configurar un clúster de Azure Data Explorer al que conectarse, siga est
 1. Seleccione **Nueva conexión** en el panel **Conexiones**.
 
 2. Rellene la información de **Detalles de conexión**.
-    1. En **Tipo de conexión** , seleccione *Kusto*.
-    2. En **Clúster** , especifique el clúster de Azure Data Explorer.
+    1. En **Tipo de conexión**, seleccione *Kusto*.
+    2. En **Clúster**, especifique el clúster de Azure Data Explorer.
 
         > [!Note]
         > Al escribir el nombre del clúster, no incluya el prefijo `https://` ni una `/` final.
 
-    3. En **Tipo de autenticación** , use la cuenta predeterminada *Azure Active Directory - Universal con MFA*.
-    4. En **Cuenta** , use la información de la cuenta.
-    5. En **Base de datos** , use *Predeterminada*.
-    6. En **Grupo de servidores** , use *Predeterminado*.
+    3. En **Tipo de autenticación**, use la cuenta predeterminada *Azure Active Directory - Universal con MFA*.
+    4. En **Cuenta**, use la información de la cuenta.
+    5. En **Base de datos**, use *Predeterminada*.
+    6. En **Grupo de servidores**, use *Predeterminado*.
         1. Puede usar este campo para organizar los servidores de un grupo concreto.
     7. Deje en blanco el campo **Nombre (opcional)** .
         1. Puede usar este campo para asignar un alias al servidor.
@@ -88,7 +88,7 @@ Para configurar un clúster de Azure Data Explorer al que conectarse, siga est
 
 Ahora que ha configurado una conexión al clúster de Azure Data Explorer, puede realizar consultas a las bases de datos mediante Kusto (KQL).
 
-Para crear una pestaña de nueva consulta, puede seleccionar **Archivo > Nueva consulta** , usar *Ctrl + N* o bien hacer clic con el botón derecho en la base de datos y seleccionar **Nueva consulta**.
+Para crear una pestaña de nueva consulta, puede seleccionar **Archivo > Nueva consulta**, usar *Ctrl + N* o bien hacer clic con el botón derecho en la base de datos y seleccionar **Nueva consulta**.
 
 Una vez abierta la pestaña de nueva consulta, escriba la consulta de Kusto.
 

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e74e08146ea4c92f23ba17816738122147150e7b
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 52a24c1dbe2a239450b440c07de1a7852f9c627a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257125"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046045"
 ---
 # <a name="non-root-big-data-clusters-containers"></a>Contenedores de Clústeres de macrodatos no raíz
 
@@ -31,7 +31,7 @@ Revise [estas notas técnicas del producto](https://aka.ms/sql-bdc-openshift-sec
 > Se recomienda que el clúster se ejecute con la configuración no raíz predeterminada. En caso de que quiera revertir al comportamiento anterior a CU5 y que los contenedores del BDC se ejecuten como usuario `root`, puede usar el nuevo modificador de características `allowRunAsRoot` y desactivar el comportamiento predeterminado. Esto solo se puede establecer en el momento de la implementación. Para establecer esto, especifique el valor en la sección `security` del archivo de configuración de implementación de `control.json`:
 
 ```json
- "security": {
+ "security": {
   …
     "allowRunAsRoot": true,
   …

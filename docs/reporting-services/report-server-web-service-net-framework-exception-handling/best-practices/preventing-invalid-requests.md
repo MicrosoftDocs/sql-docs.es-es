@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c11cfc1213e70bf362185a63883b8e84282696ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b52b2f8285175c082c83b01fc9b59332ec2fb5d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216371"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100023505"
 ---
 # <a name="preventing-invalid-requests"></a>Impedir las solicitudes no válidas
   Puede impedir que se inicien algunos tipos de excepciones analizando el flujo de la aplicación y asegurándose de que las solicitudes que se van a enviar al servidor de informes son válidas. Por ejemplo, en las aplicaciones que permiten a los usuarios agregar o actualizar el nombre de un informe, origen de datos u otro elemento de servidor de informes, debería validar el texto que un usuario podría escribir. Siempre debería comprobar los caracteres reservados antes de enviar la solicitud a un servidor de informes. Use instrucciones **if** condicionales u otras construcciones lógicas en el código para avisar al usuario de que no se han cumplido las condiciones necesarias para enviar solicitudes al servidor de informes.  

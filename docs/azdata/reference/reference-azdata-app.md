@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a9a30029248a82f913fc45834e108712f48d1a36
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: d2278059053366fb89e8ecd5a7cd626980bec637
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358833"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052716"
 ---
 # <a name="azdata-app"></a>aplicación de azdata
 

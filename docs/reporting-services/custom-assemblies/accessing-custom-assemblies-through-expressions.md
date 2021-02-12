@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e77b3df959230b7ecb8bb20874d61e9191074285
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df929de930289f9683608ec42240f03a93983ccb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80217044"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064640"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Acceso a los ensamblados personalizados a través de expresiones
   Cuando haya creado un ensamblado personalizado, lo haya puesto a disposición del Diseñador de informes o del servidor de informes, y haya agregado la directiva de seguridad adecuada y una referencia al ensamblado personalizado en la definición de informe, podrá tener acceso a los miembros de las clases en el ensamblado mediante expresiones de informe. Para incluir en una expresión una referencia a código personalizado, debe llamar al miembro de una clase dentro del ensamblado. La manera de hacerlo depende de si el método es estático o se basa en instancias.  
@@ -42,7 +42,7 @@ ms.locfileid: "80217044"
 ## <a name="calling-instance-members-from-a-report-definition-file"></a>Llamar a miembros de instancia desde un archivo de definición de informe  
  Si un ensamblado personalizado contiene miembros de instancia a los que debe obtener acceso en una definición de informe, debe agregar al informe un nombre de instancia para la clase. Puede agregar un nombre de instancia para una clase utilizando la pestaña **Código** del cuadro de diálogo **Propiedades del informe**. Para obtener más información sobre cómo agregar instancias de clases a un informe, vea [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
- Para llamar a un miembro estático, tiene que hacer referencia a él como expresión con el formato =Code*NombreDeInstancia.Método*.  
+ Para llamar a un miembro estático, tiene que hacer referencia a él como expresión con el formato =Code *NombreDeInstancia.Método*.  
   
 #### <a name="to-call-instance-members"></a>Para llamar a los miembros de instancia  
   

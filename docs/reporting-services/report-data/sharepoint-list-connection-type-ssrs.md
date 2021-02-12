@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 369f8962752bcdc67c407b561400138f3c179abe
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 7bb6380e168c1e4bddefab539354d80bf14805c6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935330"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033485"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo de conexión de lista de SharePoint (SSRS)
 
@@ -36,7 +36,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
   
  En las tablas siguientes se describe el comportamiento de recuperación de credenciales de la extensión de lista de SharePoint cuando se conecta a una lista de SharePoint de una granja local y a una lista remota de SharePoint.  
   
- La**tabla 1** es para los informes implementados en un sitio heredado de Windows SharePoint. Un sitio heredado de Windows solo admite Kerberos, NTLM y Autenticación basada en formularios (FBA). La**tabla 2** es para los informes implementados en un sitio de SharePoint basado en notificaciones.  
+ La **tabla 1** es para los informes implementados en un sitio heredado de Windows SharePoint. Un sitio heredado de Windows solo admite Kerberos, NTLM y Autenticación basada en formularios (FBA). La **tabla 2** es para los informes implementados en un sitio de SharePoint basado en notificaciones.  
   
  **Tabla 1**  
   

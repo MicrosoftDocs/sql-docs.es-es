@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 60a26505af6d53265111bd24b08990e61b992902
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 57135740af1c8b7a4b8637b33adacf280c025e6d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99165422"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071769"
 ---
 # <a name="connection-transitions"></a>Transiciones de conexión
 Las conexiones ODBC tienen los Estados siguientes.  
   
-|Estado|Descripción|  
+|State|Descripción|  
 |-----------|-----------------|  
 |C0|Entorno sin asignar, conexión sin asignar|  
 |C1|Entorno asignado, conexión sin asignar|  

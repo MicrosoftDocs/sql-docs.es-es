@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f8848fb3d8d474083e0ce1a10b7d355a2e4b886e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d91904f4d91941549582d8d7c578dcc4682f23f4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928636"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014741"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Publicar y volver a publicar elementos de informe (Generador de informes y SSRS)
   Se trata de elementos de informe paginado que se han publicado por separado en un servidor de informes y se pueden volver a usar en otros informes paginados. Puede publicar un elemento de informe con la configuración predeterminada en una ubicación predeterminada, o editar los metadatos del elemento de informe , por ejemplo el nombre y la descripción, y guardarlo en otra ubicación de un servidor de informes. También puede guardarlo en un sitio de SharePoint que esté integrado con un servidor de informes si tiene los permisos necesarios.  

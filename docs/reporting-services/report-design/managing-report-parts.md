@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1c8b7ee7baed3008dece84d1a2f7f0f4e28e8f9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1ac27d7f3f83a65f6a9e7b06da511bd9b9baf751
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934275"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062640"
 ---
 # <a name="managing-report-parts"></a>Administrar elementos de informe
   Los elementos de informe se pueden reutilizar en informes paginados, por varios usuarios y en varios informes. Los usuarios pueden buscar elementos de informe en el servidor y agregarlos a un informe.  También pueden informarse de las actualizaciones del elemento de informe en el servidor y volver a publicar versiones nuevas de un elemento de informe. Esas acciones de creación de informes se pueden ver afectadas por los permisos de seguridad de los servicios de informe, que las controlan.  En este tema se revisan las propiedades de los elementos de informe y su comportamiento cuando se encuentran en el servidor.  

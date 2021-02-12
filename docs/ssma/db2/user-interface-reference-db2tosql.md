@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6ae2a0f65d638af965b7dbb933a38c0b3b0e151e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: af6fe3db52820f36e4d719aa1313b392ec743670
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988491"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069488"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Referencia de la interfaz de usuario (DB2ToSQL)
 En esta sección se incluyen temas de ayuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para DB2.  

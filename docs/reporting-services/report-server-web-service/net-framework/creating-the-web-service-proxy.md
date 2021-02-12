@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e666496383b738b11f20cd9b3d7e3a76e8613416
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8f2f9f3986697f83e5b9bb5616f30f4f1086373f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198316"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063760"
 ---
 # <a name="creating-the-web-service-proxy"></a>Creación del proxy del servicio web
   Un cliente y un servicio web pueden comunicarse utilizando mensajes SOAP, que encapsulan los parámetros de entrada y salida como XML. Una clase de proxy asigna los parámetros a los elementos XML y, a continuación, envía los mensajes SOAP a través de una red. De esta manera, la clase de proxy le evita tener que comunicarse con el servicio web en el nivel SOAP y le permite invocar a los métodos de servicio web en cualquier entorno de desarrollo que admita SOAP y proxys de servicio web.  

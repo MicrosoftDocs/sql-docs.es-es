@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d3c799f70e0b3df67096e1e6ca2e3a17bcc11572
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6ca390146b560e8de105661097637a42ff3ddfea
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216940"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061930"
 ---
 # <a name="custom-report-items"></a>Elementos de informe personalizados
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona un abundante conjunto de herramientas para crear y publicar informes de empresa, administrar la seguridad y las suscripciones, y extender la funcionalidad de informes a través de una completa API. Los informes se definen utilizando un lenguaje basado en XML denominado lenguaje RDL (Report Definition Language). RDL proporciona un conjunto de instrucciones que describen el diseño, la información de las consultas y los tipos de elementos de un informe. Se puede extender RDL escribiendo un elemento de informe personalizado. El elemento de informe personalizado consta de un componente de tiempo de ejecución, que se denomina procesador de informes en tiempo de ejecución, y un componente de tiempo de diseño, que permite al elemento de informe personalizado estar disponible en el Diseñador de informes.  

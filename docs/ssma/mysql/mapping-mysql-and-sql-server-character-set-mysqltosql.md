@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7782a8853e1b17ecba0950e647d1335758b998af
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 13b2accd6b4dc2ba2bbd8c9c1e6db312650d2d62
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935284"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077626"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Asignación de juegos de caracteres de MySQL y de SQL Server (MySQLToSQL)
 El juego de caracteres (charset) se puede especificar para tipos de datos de caracteres de MySQL, expresiones y literales.  
@@ -103,7 +103,7 @@ La asignación de juegos de caracteres varía en diferentes niveles de nodo, es 
     |utf8|Unicode UTF-8|NCHAR/NVARCHAR (valor predeterminado)|  
     |ucs2|UCS-2 Unicode|NCHAR/NVARCHAR (valor predeterminado)|  
     |cp866|DOS Ruso|CHAR/VARCHAR (valor predeterminado)|  
-    |keybcs2|DOS Kamenicky Checo-Eslovaco|CHAR/VARCHAR (valor predeterminado)|  
+    |keybcs2|Czech-Slovak de DOS Kamenicky|CHAR/VARCHAR (valor predeterminado)|  
     |macce|Europa central de Mac|CHAR/VARCHAR (valor predeterminado)|  
     |macro|Mac occidental europeo|CHAR/VARCHAR (valor predeterminado)|  
     |cp852|Europa central de DOS|CHAR/VARCHAR (valor predeterminado)|  

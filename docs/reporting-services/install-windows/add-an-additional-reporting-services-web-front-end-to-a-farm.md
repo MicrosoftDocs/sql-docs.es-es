@@ -9,12 +9,12 @@ ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016'
-ms.openlocfilehash: 914e4fb3254458579e20b81d8ef079ad2fed592b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 50bee52344ee56d83e1dc86cf9d4f8208c4c8c68
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472456"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061120"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>Agregar un front-end web adicional de Reporting Services a una granja de servidores
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] El modo de SharePoint incluye los componentes necesarios para los servidores de aplicaciones y los servidores front-end web (WFE). Este tema se centra en instalar los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] necesarios para un servidor de WFE, incluidas las páginas de aplicación utilizadas por las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] como, por ejemplo, suscripciones, alertas de datos y [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. La instalación primaria de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] necesaria para WFE es la del complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para Productos de SharePoint 2016.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 526f80fe202c14773aeafce6b5889116b975e3c2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 19977f4a90ecfb8db81c53aebf7b7ee3e4be68ca
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80217059"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064500"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>Usar ensamblados personalizados con informes
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede escribir código personalizado para los valores de elementos de informe, estilos y formato. Por ejemplo, puede utilizar código personalizado para dar formato a las monedas según la configuración regional, marcar ciertos valores con formato especial o aplicar otras reglas de negocios en vigor en la compañía. Una manera de incluir este código en los informes es crear un ensamblado de código personalizado mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] al que puede hacer referencia desde dentro de los archivos de definición de informe. El servidor llama a las funciones de los ensamblados personalizados cuando se ejecuta un informe. Los ensamblados personalizados se pueden utilizar para recuperar funciones especializadas que piensa utilizar en los informes.  

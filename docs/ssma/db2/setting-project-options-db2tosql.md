@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 307c726811d4071754ff118ebd56d7d43abd05f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 72e4fadcd1422ea0afacc0af5e8766ebff9e6386
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88321021"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071949"
 ---
 # <a name="setting-project-options-db2tosql"></a>Establecer opciones de proyecto (DB2ToSQL)
 Puede establecer opciones de nivel de proyecto para cada proyecto de SSMA. Estas opciones especifican la conversión de objetos, la carga de objetos, la interfaz de usuario y la configuración de migración de datos. Antes de convertir objetos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , compruebe que las opciones de configuración son adecuadas para el proyecto.  
@@ -37,13 +37,13 @@ SSMA tiene cinco conjuntos de opciones de configuración del proyecto:
   
 También tiene cuatro modos para configurar estas opciones:  
   
--   Default  
+-   Valor predeterminado  
   
 -   Optimistic  
   
 -   Completo  
   
--   Personalizado  
+-   Personalizada  
   
 El modo predeterminado es el recomendado para la mayoría de los usuarios. El modo optimista mantiene más la sintaxis de DB2 actual y es más fácil de leer. Sin embargo, mantener la sintaxis actual podría no ser preciso. Si la sintaxis de DB2 se debe convertir a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sintaxis equivalente, el modo completo realiza la conversión más completa, pero es posible que el código resultante sea más difícil de leer. En el modo personalizado, se establecen las opciones.  
   
@@ -70,7 +70,7 @@ En SSMA, puede configurar los valores predeterminados para todos los proyectos. 
   
     -   Seleccione el tipo de proyecto de migración para el que se deben ver o cambiar las opciones de configuración en el menú desplegable de la **versión de destino** de la migración, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, seleccione conversión o migración.  
   
-    -   Para seleccionar un modo predefinido, en el cuadro desplegable **modo** , seleccione **predeterminado**, **optimista**o **completo**.  
+    -   Para seleccionar un modo predefinido, en el cuadro desplegable **modo** , seleccione **predeterminado**, **optimista** o **completo**.  
   
     -   Para especificar la configuración personalizada, seleccione o especifique la nueva configuración o los valores.  
   
@@ -84,9 +84,9 @@ También puede personalizar la configuración del proyecto actual. Esta configur
   
 2.  En el cuadro de diálogo **configuración del proyecto** , use uno de los procedimientos siguientes:  
   
-    -   Para seleccionar un modo predefinido, en el cuadro desplegable **modo** , seleccione **predeterminado**, **optimista**o **completo**.  
+    -   Para seleccionar un modo predefinido, en el cuadro desplegable **modo** , seleccione **predeterminado**, **optimista** o **completo**.  
   
-    -   Para especificar un modo personalizado, en el cuadro **modo** , seleccione **personalizada**y, a continuación, seleccione la configuración de proyecto adecuada.  
+    -   Para especificar un modo personalizado, en el cuadro **modo** , seleccione **personalizada** y, a continuación, seleccione la configuración de proyecto adecuada.  
   
 3.  Haga clic en **Aceptar** para guardar la configuración.  
   

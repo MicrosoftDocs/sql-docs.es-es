@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: b2cdb71a-f301-45b3-878c-382356c93b4b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b380158d79f78601f5f63396e270e9f8be56a96c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c342543cfd2d8c72a5a1dd96c5ccaa61af47889
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426947"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072239"
 ---
 # <a name="project-settings-gui-db2tosql"></a>Configuración del proyecto (GUI) (DB2ToSQL)
 La configuración del proyecto de GUI le permite configurar el modo en que los datos aparecen en la pestaña **datos** y si desea mostrar el informe de evaluación después de la conversión.  
   
 El panel GUI está disponible en los cuadros de diálogo Configuración del **proyecto** y **configuración predeterminada del proyecto** .  
   
--   Utilice el cuadro de diálogo **configuración del proyecto** para establecer las opciones de la interfaz de usuario para el proyecto actual. Para tener acceso a la configuración de la GUI, en el menú **herramientas** , seleccione **configuración del proyecto**y, a continuación, haga clic en **GUI** en la parte inferior del panel izquierdo.  
+-   Utilice el cuadro de diálogo **configuración del proyecto** para establecer las opciones de la interfaz de usuario para el proyecto actual. Para tener acceso a la configuración de la GUI, en el menú **herramientas** , seleccione **configuración del proyecto** y, a continuación, haga clic en **GUI** en la parte inferior del panel izquierdo.  
   
 -   Utilice el cuadro de diálogo **configuración predeterminada del proyecto** para establecer las opciones de la interfaz de usuario para todos los proyectos. Para tener acceso a la configuración de la GUI, en el menú **herramientas** , seleccione **configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para el que se debe ver o cambiar la configuración en la lista desplegable de la **versión de destino** de la migración y, a continuación, haga clic en **GUI** en la parte inferior del panel izquierdo.  
   

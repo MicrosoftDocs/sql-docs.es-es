@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5cbcb5cf689d544730661fd9dd700537309d8a23
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 45b617e91f2f296aa9749f7f8f2f25b640ddf546
+ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99154242"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99623775"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -129,7 +129,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>Metadatos de clasificación de datos confidenciales
 
-En la versión 5.8.0, se incluye una nueva opción `DataClassification` para que los usuarios tengan acceso a los [metadatos de clasificación de datos confidenciales](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql#subheading-4) en Microsoft SQL Server 2019 con `sqlsrv_field_metadata`, que requiere Microsoft ODBC Driver 17.4.2 o versiones posteriores.
+En la versión 5.8.0, se incluye una nueva opción `DataClassification` para que los usuarios tengan acceso a los [metadatos de clasificación de datos confidenciales](../../relational-databases/security/sql-data-discovery-and-classification.md) en Microsoft SQL Server 2019 con `sqlsrv_field_metadata`, que requiere Microsoft ODBC Driver 17.4.2 o versiones posteriores. 
 
 De forma predeterminada, la opción `DataClassification` es `false`, pero cuando se establece en `true`, la matriz devuelta por `sqlsrv_field_metadata` se rellenará con los metadatos de la clasificación de datos confidenciales, si existe. 
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 237d056f8b42570fcab375330a9eb3172eb11758
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 1b5ccf62185045dc8d3efaccfe00e26a01f01a9d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596957"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015665"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Crear un componente de tiempo de diseño de elemento de informe personalizado
   Un componente de tiempo de diseño de elemento de informe personalizado es un control que se puede utilizar en el entorno de Visual Studio Report Designer. El componente de tiempo de diseño de elemento de informe personalizado proporciona una superficie de diseño activada que puede aceptar las operaciones de arrastrar y colocar, la integración con el explorador de propiedades de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], y la capacidad de proporcionar los editores de propiedades personalizados.  

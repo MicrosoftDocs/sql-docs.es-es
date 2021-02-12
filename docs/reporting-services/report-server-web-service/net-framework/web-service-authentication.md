@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 34873835231c122f3d086c3490be2bab7a684925
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3dfb2b1f3806d9e00e309b45ebf90182c83cab5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198538"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100021761"
 ---
 # <a name="web-service-authentication"></a>Autenticación del servicio web
   Puede utilizar la autenticación de Windows o la autenticación básica para autenticar las llamadas realizadas al servicio web del servidor de informes. Cualquier cliente que realice solicitudes SOAP al servidor de informes debe implementar la parte del cliente de uno de los protocolos de autenticación admitidos. Si usa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], puede utilizar las clases HTTP de código administrado para implementar la autenticación. El uso de estas API facilita el envío de información de autenticación junto con las solicitudes SOAP.  

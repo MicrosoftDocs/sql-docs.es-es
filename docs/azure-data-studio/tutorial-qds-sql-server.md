@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 06/01/2020
-ms.openlocfilehash: 8137ca8f37254bab94dfaae6d9c8072c293a81ff
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 6b8632f9ff5c07cb23a296b98a5933639abee4d1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243394"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048145"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Agregar el widget de ejemplo *cinco consultas más lentas* al panel de base de datos
 
@@ -26,11 +26,11 @@ En este tutorial se muestra el proceso de incorporación de uno de los widgets d
 > * Ver detalles sobre las consultas más lentas de la base de datos
 > * Ver planes de ejecución de consulta para las consultas lentas
 
-Azure Data Studio incluye varios widgets de conclusiones listos para usar. En este tutorial se muestra cómo agregar el widget *query-data-store-db-insight* , pero los pasos son básicamente los mismos para agregar cualquier widget.
+Azure Data Studio incluye varios widgets de conclusiones listos para usar. En este tutorial se muestra cómo agregar el widget *query-data-store-db-insight*, pero los pasos son básicamente los mismos para agregar cualquier widget.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azure SQL Database. Para crear la base de datos *TutorialDB* , complete uno de los siguientes inicios rápidos:
+En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azure SQL Database. Para crear la base de datos *TutorialDB*, complete uno de los siguientes inicios rápidos:
 
 * [Conectarse a una instancia de SQL Server y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
@@ -40,9 +40,9 @@ En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azur
 
 El widget de este ejemplo requiere que *Almacén de consultas* esté habilitado.
 
-1. Haga clic con el botón derecho en la base de datos **TutorialDB** (en la barra lateral **SERVIDORES** ) y seleccione **Nueva consulta**.
+1. Haga clic con el botón derecho en la base de datos **TutorialDB** (en la barra lateral **SERVIDORES**) y seleccione **Nueva consulta**.
 
-2. Pegue la siguiente instrucción de Transact-SQL (T-SQL) en el editor de consultas y haga clic en **Ejecutar** :
+2. Pegue la siguiente instrucción de Transact-SQL (T-SQL) en el editor de consultas y haga clic en **Ejecutar**:
 
    ```sql
     ALTER DATABASE TutorialDB SET QUERY_STORE = ON
@@ -58,7 +58,7 @@ Para agregar el *widget de consultas lentas* al panel, edite el valor *dashboard
 
    ![Comando Abrir configuración de usuario](./media/tutorial-qds-sql-server/open-user-settings.png)
 
-3. Escriba *dashboard* en el cuadro de búsqueda de configuración y busque **dashboard.database.widgets** ; después, haga clic en *Editar en settings.json*.
+3. Escriba *dashboard* en el cuadro de búsqueda de configuración y busque **dashboard.database.widgets**; después, haga clic en *Editar en settings.json*.
 
    ![Búsqueda de configuración](./media/tutorial-qds-sql-server/search-settings.png)
 
@@ -100,7 +100,7 @@ Para agregar el *widget de consultas lentas* al panel, edite el valor *dashboard
 
 5. Presione **Ctrl + S** para guardar la **Configuración de usuario** modificada.
 
-6. Abra el *panel de la base de datos* al ir a **TutorialDB** en la barra lateral **SERVIDORES** , hacer clic con el botón derecho y seleccionar **Administrar**.
+6. Abra el *panel de la base de datos* al ir a **TutorialDB** en la barra lateral **SERVIDORES**, hacer clic con el botón derecho y seleccionar **Administrar**.
 
    ![Apertura del panel](./media/tutorial-qds-sql-server/insight-open-dashboard.png)
 
@@ -122,7 +122,7 @@ Para agregar el *widget de consultas lentas* al panel, edite el valor *dashboard
 
 1. Haga clic con el botón derecho en la base de datos **TutorialDB** y seleccione *Administrar*.
 
-2. Desde el *widget de consultas lento* , para ver información adicional de un widget de información, haga clic en los puntos suspensivos ( **...** ) de la esquina superior derecha y seleccione **Ejecutar consulta**.
+2. Desde el *widget de consultas lento*, para ver información adicional de un widget de información, haga clic en los puntos suspensivos ( **...** ) de la esquina superior derecha y seleccione **Ejecutar consulta**.
 
     ![Ejecución de la consulta](media/tutorial-qds-sql-server/run-query.png)
 
@@ -147,7 +147,7 @@ En este tutorial, ha aprendido a:
 > * Ver detalles sobre las consultas más lentas de la base de datos
 > * Ver planes de ejecución de consulta para las consultas lentas
 
-Para obtener información sobre cómo habilitar la información de ejemplo de **uso de espacio de tabla** , complete el tutorial siguiente:
+Para obtener información sobre cómo habilitar la información de ejemplo de **uso de espacio de tabla**, complete el tutorial siguiente:
 
 > [!div class="nextstepaction"]
 > [Habilitar el widget de información de ejemplo de espacio de tabla](tutorial-table-space-sql-server.md)

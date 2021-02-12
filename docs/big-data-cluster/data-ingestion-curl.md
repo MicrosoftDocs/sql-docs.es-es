@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ae893bb1e291b244b5101ccfb2ed66bcf765f049
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 2310ffa3849a9fc4b72cbb21e5f2f881fb447019
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866843"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100038954"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-big-data-clusters-2019"></a>Empleo de curl para cargar datos en HDFS en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 

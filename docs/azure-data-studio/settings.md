@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 06e9efa72ef82d8335db4b7ec6b8941c95501790
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 76f6cedaa26165d14ce96b234b0d6cd8129806e6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364186"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048205"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modificación de la configuración del usuario y el área de trabajo
 

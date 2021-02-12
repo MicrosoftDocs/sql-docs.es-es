@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6b23f80859a572ea8bb3f96a0460d0f5eba0183a
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 6f0e165c04e303a5cb65046b013df8814bfbf515
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410969"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100038375"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Procedimientos: Recuperación de los parámetros de salida con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "87410969"
 En este tema se muestra cómo llamar a un procedimiento almacenado en el que se ha definido un parámetro como parámetro de salida. Cuando se recupera un parámetro de salida o uno de entrada/salida, se deben usar todos los resultados que devuelve el procedimiento almacenado antes de que pueda accederse al valor del parámetro devuelto.  
   
 > [!NOTE]  
->  Las variables que se inicializan o actualizan a **Null**, **DateTime**o tipos de secuencia no se pueden usar como parámetros de salida.  
+>  Las variables que se inicializan o actualizan a **Null**, **DateTime** o tipos de secuencia no se pueden usar como parámetros de salida.  
   
 Puede producirse un truncamiento de datos cuando se utilizan tipos de secuencia, por ejemplo, SQLSRV_SQLTYPE_VARCHAR('max'), como parámetros de salida. No se permiten tipos de secuencia como parámetros de salida. En cuanto a los tipos que no son de secuencia, puede producirse un truncamiento de datos si no se especifica la longitud del parámetro de salida o si la longitud especificada no es suficientemente grande para el parámetro de salida.  
   

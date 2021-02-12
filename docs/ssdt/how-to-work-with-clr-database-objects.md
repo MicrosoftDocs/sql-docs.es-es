@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4427101e26905c21e093eca61a5579026522991b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 02f5aa47948ee5cdbf2cc7f95d749a5f56e47328
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988688"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017955"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Procedimientos: Trabajo con objetos de base de datos CLR
 

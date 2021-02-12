@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1aca4a83bb117624fdfd5a090c9caab2ff4b7efd
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 8eecb8ce351fd067d944daf4fdd7fc9ee811341f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529169"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076659"
 ---
 # <a name="delivery-extensions-overview"></a>Información general de las extensiones de entrega
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permite a los usuarios crear y publicar informes que, una vez creados y publicados, se pueden entregar en varias ubicaciones. Además, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye varias extensiones de entrega y una API de entrega que permite a los programadores crear extensiones de entrega adicionales para extender aún más la funcionalidad de entrega en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6e8bd25b8529f09896cbec2ec31578375a015f2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0926c350d02bf2cdbb5ae7fe4fdefbda3ef6863
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372632"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077226"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Evaluación de objetos de base de datos de SAP ASE para la conversión (SybaseToSQL)
 Antes de cargar objetos y migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a Azure SQL, debe determinar la complejidad de la migración y el tiempo que debe tardar. SSMA puede crear un informe de evaluación que muestre el porcentaje de objetos y procedimientos que se convertirán correctamente en [!INCLUDE[tsql](../../includes/tsql-md.md)] . SSMA también le permite ver los problemas específicos que pueden producir errores de conversión.  
@@ -29,7 +29,7 @@ Al crear este informe de evaluación, SSMA convierte los objetos de base de dato
   
 2.  Para omitir objetos individuales, desactive las casillas situadas junto a los objetos que no desea evaluar.  
   
-3.  Haga clic con el botón derecho en **bases de datos**y, a continuación, seleccione **crear informe**.  
+3.  Haga clic con el botón derecho en **bases de datos** y, a continuación, seleccione **crear informe**.  
   
     También puede analizar objetos individuales haciendo clic con el botón secundario en un objeto y, a continuación, seleccionando **crear informe**.  
   
@@ -52,7 +52,7 @@ La ventana Informe de evaluación contiene tres paneles:
     -   En el área de origen se muestra el código fuente del objeto seleccionado en el panel izquierdo. Las áreas resaltadas muestran código fuente problemático.  
     -   El área de destino muestra el código convertido. El texto rojo muestra código problemático y mensajes de error.  
   
--   En el panel inferior se muestran los mensajes de conversión, agrupados por número de mensaje. Seleccione **errores**, **advertencias**o **información** para ver las categorías de mensajes y, a continuación, expanda un grupo de mensajes. Haga clic en un mensaje individual para seleccionar el objeto en el panel izquierdo y, a continuación, muestre los detalles en el panel derecho.  
+-   En el panel inferior se muestran los mensajes de conversión, agrupados por número de mensaje. Seleccione **errores**, **advertencias** o **información** para ver las categorías de mensajes y, a continuación, expanda un grupo de mensajes. Haga clic en un mensaje individual para seleccionar el objeto en el panel izquierdo y, a continuación, muestre los detalles en el panel derecho.  
   
 ## <a name="analyze-conversion-problems-by-using-the-assessment-report"></a>Analizar problemas de conversión mediante el informe de evaluación  
 Los **paneles de estadísticas de conversión** muestran las estadísticas de conversión. Si el porcentaje de cualquier categoría es inferior al 100 por ciento, debe determinar por qué la conversión no fue correcta.  

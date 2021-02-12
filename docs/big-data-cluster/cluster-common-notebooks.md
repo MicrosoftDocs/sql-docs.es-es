@@ -10,18 +10,18 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 99e62be597e4ce08d38db199116f1bd4d5ab33f6
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 8cbf034873b690262ff6acb395ed8eca5d09ae79
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378484"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039515"
 ---
 # <a name="common-notebooks-for-sql-server-big-data-clusters"></a>Cuadernos comunes para Clústeres de macrodatos de SQL Server
 
 En este artículo se enumeran los cuadernos para Clústeres de macrodatos de SQL Server. Los notebooks ejecutables (. ipynb) están diseñados para SQL Server 2019 como ayuda para mostrar escenarios comunes sobre Clústeres de macrodatos.
 
-Cada cuaderno está diseñado para comprobar sus propias dependencias. Una operación de tipo **Ejecutar todas las celdas** se realiza correctamente o genera una excepción con una *sugerencia* con hipervínculo a otro cuaderno para resolver la dependencia que falta. Siga el hipervínculo de la sugerencia al cuaderno siguiente, presione **Ejecutar todas las celdas** y, cuando el proceso finalice correctamente, vuelva al cuaderno original y presione **Ejecutar todas las celdas** .
+Cada cuaderno está diseñado para comprobar sus propias dependencias. Una operación de tipo **Ejecutar todas las celdas** se realiza correctamente o genera una excepción con una *sugerencia* con hipervínculo a otro cuaderno para resolver la dependencia que falta. Siga el hipervínculo de la sugerencia al cuaderno siguiente, presione **Ejecutar todas las celdas** y, cuando el proceso finalice correctamente, vuelva al cuaderno original y presione **Ejecutar todas las celdas**.
 
 Una vez que se instalan todas las dependencias y que la operación **Ejecutar todas las celdas** produce un error, cada cuaderno analizará los resultados y, siempre que sea posible, generará una sugerencia con hipervínculo a otro cuaderno para ayudarlo a resolver el problema.
 

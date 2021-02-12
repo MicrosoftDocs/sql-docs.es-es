@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 794c7be56eaa0591d120b4fea40a725fdeecaac1
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: a7d142ca6afb77539b1425caaf097aca3959baeb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358113"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048705"
 ---
 # <a name="azdata-sql"></a>sql de azdata
 
@@ -24,7 +24,7 @@ En el siguiente artículo se proporciona una referencia de los comandos **sql** 
 
 ## <a name="commands"></a>Comandos
 
-|Comando|Descripción|
+|Get-Help|Descripción|
 | --- | --- |
 [azdata sql shell](#azdata-sql-shell) | La CLI de SQL permite al usuario interactuar con SQL Server y Azure SQL mediante T-SQL.
 [azdata sql query](#azdata-sql-query) | La CLI de SQL permite al usuario interactuar con SQL Server y Azure SQL mediante T-SQL.

@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 904b07913a63e226e5e45876f2fc520226411223
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: bfcc348595a645eca3b1150ae39e7c777f4e192a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92199587"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046775"
 ---
 # <a name="sql-server-big-data-clusters-hdfs-encryption-zones-usage-guide"></a>Guía de uso de las zonas de cifrado de HDFS de Clústeres de macrodatos de SQL Server
 
@@ -22,7 +22,7 @@ ms.locfileid: "92199587"
 
 En esta guía se muestra cómo usar las funcionalidades de cifrado en reposo de Clústeres de macrodatos de SQL Server para cifrar carpetas de HDFS mediante las zonas de cifrado.
 
-Tenga en cuenta que ya hay una zona de cifrado predeterminada montada en __```/securelake```__ que está lista para usar. Se creó con una clave de 256 bits generada por el sistema denominada __securelakekey__ . Esta clave se puede usar para crear zonas de cifrado adicionales.
+Tenga en cuenta que ya hay una zona de cifrado predeterminada montada en __```/securelake```__ que está lista para usar. Se creó con una clave de 256 bits generada por el sistema denominada __securelakekey__. Esta clave se puede usar para crear zonas de cifrado adicionales.
 
 ## <a name="prerequisites"></a><a id="prereqs"></a> Requisitos previos
 
@@ -45,7 +45,7 @@ Siga las [instrucciones de conexión de Active Directory](active-directory-conn
    hdfs dfs -mkdir -p /user/zone/folder
    ```
 
-1. Emita el comando de creación de zonas de cifrado para cifrar la carpeta mediante la clave __securelakekey__ .
+1. Emita el comando de creación de zonas de cifrado para cifrar la carpeta mediante la clave __securelakekey__.
 
    ```console
    hdfs crypto -createZone -keyName securelakekey -path /user/zone/folder

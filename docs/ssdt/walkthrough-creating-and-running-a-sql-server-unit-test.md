@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 7b5bc161cc66aa904ed63e67bbc5f2ff4695168f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6b0eaf98f4d10c08548e898c261a489ad71f0ff4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987941"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016735"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Tutorial: Crear y ejecutar una prueba unitaria de SQL Server
 
@@ -46,13 +46,13 @@ Para completar este tutorial, debe poder conectarse a un servidor de bases de da
   
 #### <a name="to-create-a-script-from-which-you-can-import-a-schema"></a>Para crear un script desde el que se puede importar un esquema  
   
-1.  En el menú **Archivo** , elija **Nuevo**y haga clic en **Archivo**.  
+1.  En el menú **Archivo** , elija **Nuevo** y haga clic en **Archivo**.  
   
     Aparece el cuadro de diálogo **Nuevo archivo** .  
   
 2.  En la lista **Categorías** , haga clic en **General** si no está ya resaltado.  
   
-3.  En la lista **Plantillas** , haga clic en **Archivo SQL**y en **Abrir**.  
+3.  En la lista **Plantillas** , haga clic en **Archivo SQL** y en **Abrir**.  
   
     Se abre el editor Transact\-SQL.  
   
@@ -226,7 +226,7 @@ Para completar este tutorial, debe poder conectarse a un servidor de bases de da
   
 #### <a name="to-create-a-database-project"></a>Para crear un proyecto de base de datos  
   
-1.  En el menú **Archivo** , elija **Nuevo**y, a continuación, haga clic en **Proyecto**.  
+1.  En el menú **Archivo** , elija **Nuevo** y, a continuación, haga clic en **Proyecto**.  
   
     Aparecerá el cuadro de diálogo **Nuevo proyecto** .  
   
@@ -246,7 +246,7 @@ Para completar este tutorial, debe poder conectarse a un servidor de bases de da
   
 2.  Haga clic en **Siguiente** después de leer la página de bienvenida.  
   
-3.  Haga clic en **Examinar**para ir al directorio donde guardó el archivo .sql.  
+3.  Haga clic en **Examinar** para ir al directorio donde guardó el archivo .sql.  
   
 4.  Haga doble clic en el archivo .sql y haga clic en **Finalizar**.  
   
@@ -274,7 +274,7 @@ De forma predeterminada, al presionar F5 se implementa (o publica) la base de da
   
 2.  Haga clic con el botón derecho en alguno de los procedimientos almacenados y haga clic en **Crear pruebas unitarias** para mostrar el cuadro de diálogo **Crear pruebas unitarias**.  
   
-3.  Active las casillas de los cinco procedimientos almacenados: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**y **Sales.uspShowOrderDetails**.  
+3.  Active las casillas de los cinco procedimientos almacenados: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** y **Sales.uspShowOrderDetails**.  
   
 4.  En la lista desplegable **Proyecto**, seleccione **Crear un nuevo proyecto de prueba de Visual C#** .  
   

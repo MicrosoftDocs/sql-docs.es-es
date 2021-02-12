@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: e93307a7f29f31aa078a7d705a904812e6aa3847
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6e6abaf1e8538b32480c794ce26a98b4ec9220af
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166057"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042445"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Matriz de compatibilidad de características del controlador para Microsoft SQL Server
 

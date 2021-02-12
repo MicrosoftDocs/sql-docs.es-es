@@ -11,18 +11,20 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b836e9a86fe6b323dbcacfb3f408889f87fa6bd
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: de2501c3af1fcc24aed29dc66da455d7e2ff1f2b
+ms.sourcegitcommit: 10ae200635b9e8554e6bc6f658125e1a80d4d5ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641716"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99589313"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido
+
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala una nueva versión (versión 14.0.4999.1038) del separador de palabras y del lematizador para el idioma inglés, reemplazando la versión anterior de estos componentes (versión 12.0.6828.0). Para obtener más información sobre el comportamiento modificado de los nuevos componentes, vea [Cambios de comportamiento en la búsqueda de texto completo](./full-text-search.md). En este tema se describe cómo pasar de la nueva versión de estos componentes a la versión previa o viceversa. Para las instalaciones de clúster, estos cambios deben realizarse en todos los nodos principales y pasivos.  
+
+  A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], el programa de instalación instala una nueva versión del separador de palabras y del lematizador para el idioma inglés, y reemplaza la versión anterior de estos componentes. Para obtener más información sobre el comportamiento modificado de los nuevos componentes, vea [Cambios de comportamiento en la búsqueda de texto completo](./full-text-search.md). En este tema se describe cómo pasar de la nueva versión de estos componentes a la versión previa o viceversa. Para las instalaciones de clúster, estos cambios deben realizarse en todos los nodos principales y pasivos.  
   
- Las versiones previas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizaban separadores de palabras distintos representados por CLSID diferentes para el inglés de Estados Unidos (LCID 1033) y el inglés del Reino Unido (LCID 2057). En esta versión, ambos LCID usan los mismos componentes con los mismos CLSID, como se muestra en la siguiente tabla:  
+ Algunas versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usaban separadores de palabras diferentes representados por CLSID diferentes para el inglés de Estados Unidos (LCID 1033) y el inglés del Reino Unido (LCID 2057). En esta versión, ambos LCID usan los mismos componentes con los mismos CLSID, como se muestra en la siguiente tabla:  
   
 |LCID|Separador de palabras instalado por versiones anteriores<br /><br /> versión 12.0.6828.0|Lematizador instalado por versiones anteriores|Separador de palabras instalado por esta versión<br /><br /> versión 14.0.4999.1038|Lematizador instalado por esta versión|  
 |----------|-------------------------------------------------------------------------|--------------------------------------------|-----------------------------------------------------------------------|---------------------------------------|  

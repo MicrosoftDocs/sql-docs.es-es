@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 06/09/2020
-ms.openlocfilehash: 2b68f15f69d3efb0a773022e87615d298da07706
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6da9918b4ebb3ed571d82d23c123c8e477741c0b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725161"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048545"
 ---
 # <a name="make-predictions-with-machine-learning-extension-for-azure-data-studio-preview"></a>Elaboración de predicciones con la extensión de Machine Learning para Azure Data Studio (versión preliminar)
 
