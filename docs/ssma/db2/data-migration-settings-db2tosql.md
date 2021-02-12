@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0646fc033f73134a4dfcba62e574ba08e378b9cc
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 17121feedda919034ed8c2ee40fec8b06321d131
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984881"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078253"
 ---
 # <a name="data-migration-settings-db2tosql"></a>Configuración de migración de datos (DB2ToSQL)
   
@@ -40,7 +40,7 @@ La **configuración de migración de datos** permite al usuario escribir consult
     -   Si este cuadro de texto está desactivado, los datos migrados se agregarán a los datos existentes en la base de datos de destino.  
   
 2.  **Usar selección personalizada:**  
-     Esta opción permite al usuario modificar la instrucción **Select** (la instrucción**Select** permite a los usuarios seleccionar los datos que se van a mostrar en la base de datos de destino).  
+     Esta opción permite al usuario modificar la instrucción **Select** (la instrucción **Select** permite a los usuarios seleccionar los datos que se van a mostrar en la base de datos de destino).  
   
     1.  De forma predeterminada, este cuadro de texto está desactivado.  
   

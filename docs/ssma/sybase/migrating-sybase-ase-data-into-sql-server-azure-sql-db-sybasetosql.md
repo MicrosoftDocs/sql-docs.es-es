@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2268615b8a8ed25883d7d9dce92d8e775f228a4b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 0406997ade10e6ddfc9b13c76240973662255f78
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034991"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076046"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-database--sybasetosql"></a>Migración de datos de Sybase ASE a SQL Server-Azure SQL Database (SybaseToSQL)
 Una vez que haya cargado correctamente los objetos de base de datos de Sybase Adaptive Server Enterprise (ASE) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database, puede migrar datos de ase a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database.  
@@ -74,7 +74,7 @@ Para ver los mensajes de migración, asegúrese de que el panel de salida esté 
   
     -   Para migrar datos de todos los esquemas, active la casilla situada junto a **esquemas**.  
   
-    -   Para migrar datos u omitir tablas individuales, expanda primero el esquema, expanda **tablas**y, a continuación, Active o desactive la casilla situada junto a la tabla.  
+    -   Para migrar datos u omitir tablas individuales, expanda primero el esquema, expanda **tablas** y, a continuación, Active o desactive la casilla situada junto a la tabla.  
   
 3.  Para migrar datos, surgen dos casos:  
   

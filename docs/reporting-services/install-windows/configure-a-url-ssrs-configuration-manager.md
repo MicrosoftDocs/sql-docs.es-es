@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a58a11e71c471bf02ca68ddaf4a416c3d9c554b
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: bd4d8deaa9be114ffb2ce806f67be3b96babb8b6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99075707"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015285"
 ---
 # <a name="configure-a-url--report-server-configuration-manager"></a>Configuración de una URL (Administrador de configuración del servidor de informes)
   Para poder usar el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o el servicio web del servidor de informes, debe configurar al menos una dirección URL para cada aplicación. Configurar las direcciones URL es obligatorio si ha instalado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de "solo archivos" (es decir, al seleccionar la opción **Install but do not configure the server (Instalar pero no configurar el servidor)** en la página Opciones de instalación del servidor de informes del Asistente para la instalación). Si instaló [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada, las direcciones URL ya están configuradas para cada aplicación.  

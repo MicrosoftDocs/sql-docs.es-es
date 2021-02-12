@@ -9,12 +9,12 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8bd60aa3f1b36ebb6b0edc74a547a681620d6cab
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: f82fe4b7f4412f5cb609c26b1ba782d8c337759f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358404"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048785"
 ---
 # <a name="azdata-bdc-spark"></a>azdata bdc spark
 

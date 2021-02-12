@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 99ab880b69d2c06d462ed42ca0a2529ba6bf7bc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e9086feb8adcb64ba1a24191e91028fc870d488
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372121"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069941"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Configuración del proyecto (asignación de tipo) (SybaseToSQL)
 La página asignación de tipos del cuadro de diálogo **configuración del proyecto** contiene opciones que personalizan el modo en que SSMA convierte los tipos de datos de Sybase Adaptive Server Enterprise (ASE) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.  
@@ -24,7 +24,7 @@ La página asignación de tipos está disponible en los cuadros de diálogo **co
   
 -   Para especificar la configuración de asignación de tipos para todos los proyectos de SSMA futuros, en el menú **herramientas** , seleccione **configuración predeterminada del proyecto**, seleccione tipo de proyecto de migración para el que se deben ver o cambiar los valores de configuración en la lista desplegable de la **versión de destino** de la migración y, a continuación, seleccione **asignación de tipos** en la parte inferior del panel izquierdo.  
   
--   Para especificar la configuración del proyecto actual, en el menú **herramientas** , seleccione **configuración del proyecto**y, a continuación, seleccione **asignación de tipos** en la parte inferior del panel izquierdo.  
+-   Para especificar la configuración del proyecto actual, en el menú **herramientas** , seleccione **configuración del proyecto** y, a continuación, seleccione **asignación de tipos** en la parte inferior del panel izquierdo.  
   
 ## <a name="options"></a>Opciones  
 **Tipo de origen**  
@@ -38,10 +38,10 @@ Vea la tabla de la siguiente sección para obtener la asignación de tipo de SSM
 **Add (Agregar)**  
 Haga clic para agregar un tipo de datos a la lista de asignaciones.  
   
-**Edición**  
+**Editar**  
 Haga clic en esta opción para modificar el tipo de datos seleccionado en la lista asignación.  
   
-**Remove**  
+**Quitar**  
 Haga clic en esta opción para quitar la asignación de tipos de datos seleccionada de la lista de asignaciones.  
   
 **Valores predeterminados**  
@@ -63,7 +63,7 @@ La tabla siguiente contiene la asignación de tipos predeterminada entre ASE y l
 |**char varying [8001... \* ]**|**ntext**|  
 |**Char [ \* .. 8000]**|**Char [ \* ]**|  
 |**Char [8001.. \* ;]**|**ntext**|  
-|**óptico**|**char**|  
+|**carácter**|**char**|  
 |**variar caracteres**|**varchar**|  
 |**variación de caracteres [ \* .. 8000]**|**VARCHAR [ \* ]**|  
 |**variación de caracteres [8001.. \* ]**|**ntext**|  
@@ -77,7 +77,7 @@ La tabla siguiente contiene la asignación de tipos predeterminada entre ASE y l
 |**decimal**|**decimal**|  
 |**decimal [ \* ... \* ]**|**decimal [ \* ]**|  
 |**decimal [ \* ... \* ] [\*..\*]**|**decimal [ \* ] [ \* ]**|  
-|**double precision**|**Float [53]**|  
+|**precisión doble**|**Float [53]**|  
 |**float**|**Float [53]**|  
 |**Float [ \* .. 4,5**|**Float [24]**|  
 |**Float [16.. \* ]**|**Float [53]**|  

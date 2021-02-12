@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1390e53ddbc864f634b581bd2a1b42902c6b6bb9
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: e5f82b3db5f52656e88c54062f203d273d8ab24c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529331"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065270"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Usar los archivos de directivas de seguridad de Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] almacena la información de los componentes de directiva de seguridad en tres archivos de configuración que se copian en el sistema de archivos durante la instalación. Estos archivos de configuración pueden contener una combinación de uso interno y las directivas de seguridad definidas por el usuario para los ensamblados de código en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Los tres archivos de configuración corresponden a tres componentes protegibles de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: el servidor de informes y el servicio de Windows, la aplicación web del Administrador de informes y la ventana de vista previa del Diseñador de Informes.  

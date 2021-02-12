@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8ce35c6c0b3025a328c71de657fd1e89358379be
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 33eb988309b6105818e150010dd44627efaced4b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680690"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046139"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Procedimientos: Recuperación de los parámetros de entrada y salida con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "88680690"
 En este tema se muestra cómo usar el controlador SQLSRV para llamar a un procedimiento almacenado en el que se ha definido un parámetro como parámetro de entrada/salida, y cómo recuperar los resultados. Cuando se recupera un parámetro de salida o uno de entrada/salida, se deben usar todos los resultados que devuelve el procedimiento almacenado antes de que pueda accederse al valor del parámetro devuelto.  
   
 > [!NOTE]  
->  Las variables que se inicializan o actualizan a **Null**, **DateTime**o tipos de secuencia no se pueden usar como parámetros de salida.  
+>  Las variables que se inicializan o actualizan a **Null**, **DateTime** o tipos de secuencia no se pueden usar como parámetros de salida.  
   
 ## <a name="example-1"></a>Ejemplo 1
 En el ejemplo siguiente se llama un procedimiento almacenado que resta las horas de vacaciones utilizadas de las horas de vacaciones disponibles de un empleado determinado. La variable que representa las horas de vacaciones utilizadas, *$vacationHrs*, se transmite al procedimiento almacenado como un parámetro de entrada. Después de actualizar las horas de vacaciones disponibles, el procedimiento almacenado usa el mismo parámetro para devolver el número de horas de vacaciones restantes.  

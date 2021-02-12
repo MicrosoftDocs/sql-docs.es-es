@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a38808c64209edb094c986e63305707a0a834edb
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 48c111ab342d7410031851a5635fa73fe143b96b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823676"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070200"
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Instalación de componentes de SSMA en SQL Server (MySQLToSql)
 
@@ -29,11 +29,11 @@ El paquete de extensión SSMA agrega una base de datos, **sysdb**, a la instanci
 
 Además, al migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA crea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajos del agente, cuando el motor de migración de datos del lado servidor se usa para migrar los datos.
 
-### <a name="prerequisites"></a>Requisitos previos
+### <a name="prerequisites"></a>Prerrequisitos
 
 Antes de instalar los componentes de SSMA para MySQL Server en, asegúrese de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el equipo cumple los requisitos siguientes:
 
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 o una versión posterior.
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3,1 o una versión posterior.
 - La [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versión 4.7.2 o una versión posterior. Puede obtenerlo en el [Centro para desarrolladores de .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).
 - El proveedor de cliente de MySQL y la conectividad a la base de datos MySQL que desea migrar. Puede instalar proveedores en el sitio web de MySQL o en el soporte del producto de MySQL.
 - El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio Browser debe estar en ejecución durante la instalación. Se utiliza para rellenar una lista de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el Asistente para la instalación. Puede deshabilitar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio Browser después de la instalación.  
@@ -50,8 +50,8 @@ Puede instalar el paquete de extensión en cualquier momento antes de migrar los
 
 Para instalar el paquete de extensión:
 
-1. Copie SSMA para **SSMAforMySQLExtensionPack_*n*. msi**, donde *n* es el número de compilación, en el equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
-2. Haga doble clic en **SSMAforMySQLExtensionPack_*n*. msi**.
+1. Copie SSMA para **SSMAforMySQLExtensionPack_ *n*. msi**, donde *n* es el número de compilación, en el equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+2. Haga doble clic en **SSMAforMySQLExtensionPack_ *n*. msi**.
 3. En el cuadro de diálogo de **bienvenida** , haga clic en **siguiente**.
 4. En el cuadro de diálogo contrato de licencia para el **usuario final** , lea el contrato de licencia. Si está de acuerdo, seleccione la opción acepto **el contrato** y, a continuación, haga clic en **siguiente**.
 5. En el cuadro de diálogo **elegir tipo de instalación** , haga clic en **típica**.
@@ -74,9 +74,9 @@ Para instalar el paquete de extensión:
 
     La base de datos **sysdb** se crea con las tablas y los procedimientos almacenados necesarios para la migración de datos (mediante el motor de migración de datos del servidor) se crean en esta base de datos.
 
-12. Para instalar las utilidades en otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , seleccione **sí**y, a continuación, haga clic en **siguiente**. O bien, para salir del asistente, haga clic en **no**.
+12. Para instalar las utilidades en otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , seleccione **sí** y, a continuación, haga clic en **siguiente**. O bien, para salir del asistente, haga clic en **no**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Instalar SSMA para el cliente de MySQL](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)
+- [Instalación de SSMA para el cliente MySQL](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)
 - [Migración de bases de datos de MySQL a SQL Server-Azure SQL Database](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)

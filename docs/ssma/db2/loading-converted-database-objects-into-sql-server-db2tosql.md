@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e89edc66dee92fb74071de952e056d99c91cbf12
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 209b49e3719400b92a5425bdd680d8bed548e285
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985041"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072479"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Carga de objetos de base de datos convertidos en SQL Server (DB2ToSQL)
 Después de convertir los esquemas DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede cargar los objetos de base de datos resultantes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede hacer que SSMA cree los objetos, o bien puede crear un script de los objetos y ejecutar los scripts usted mismo. Además, SSMA le permite actualizar los metadatos de destino con el contenido real de la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -33,7 +33,7 @@ Para usar SSMA para crear [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
   
 **Para sincronizar objetos con SQL Server**  
   
-1.  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el explorador de metadatos, expanda el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nodo superior y, a continuación, expanda **bases**de datos.  
+1.  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el explorador de metadatos, expanda el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nodo superior y, a continuación, expanda **bases** de datos.  
   
 2.  Seleccionar los objetos que se van a procesar:  
   
@@ -41,7 +41,7 @@ Para usar SSMA para crear [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
   
     -   Para sincronizar u omitir objetos o categorías de objetos individuales, Active o desactive la casilla situada junto al objeto o la carpeta.  
   
-3.  Una vez que haya seleccionado los objetos que desea procesar en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos, haga clic con el botón secundario en **bases**de datos y, a continuación, haga clic en **sincronizar con base**de datos.  
+3.  Una vez que haya seleccionado los objetos que desea procesar en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos, haga clic con el botón secundario en **bases** de datos y, a continuación, haga clic en **sincronizar con base** de datos.  
   
     También puede sincronizar objetos individuales o categorías de objetos; para ello, haga clic con el botón secundario en el objeto o en su carpeta primaria y, a continuación, haga clic en  **sincronizar con base de datos**.  
   
@@ -62,7 +62,7 @@ Para guardar [!INCLUDE[tsql](../../includes/tsql-md.md)] definiciones de los obj
   
 **Para guardar objetos como scripts**  
   
-1.  Una vez que haya seleccionado los objetos que desea guardar en un script, haga clic con el botón secundario en **bases de datos**y, a continuación, haga clic en **Guardar como script**.  
+1.  Una vez que haya seleccionado los objetos que desea guardar en un script, haga clic con el botón secundario en **bases de datos** y, a continuación, haga clic en **Guardar como script**.  
   
     También puede incluir en el script objetos individuales o categorías de objetos; para ello, haga clic con el botón secundario en el objeto o en su carpeta principal y, a continuación, haga clic en **Guardar como script**.  
   
@@ -73,7 +73,7 @@ Una vez guardadas las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
 **Para modificar un script**  
   
-1.  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo** , seleccione **Abrir**y haga clic en **Archivo**.  
+1.  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo** , seleccione **Abrir** y haga clic en **Archivo**.  
   
 2.  En el cuadro de diálogo **abrir** , seleccione el archivo de script y, a continuación, haga clic en Aceptar.
   
@@ -81,14 +81,14 @@ Una vez guardadas las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
     Para obtener más información acerca del editor de consultas, vea el tema sobre los comandos y las características de la comodidad del editor en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla de.  
   
-4.  Para guardar el script, haga clic en **Guardar**en el menú archivo.  
+4.  Para guardar el script, haga clic en **Guardar** en el menú archivo.  
   
 ### <a name="running-scripts"></a>Ejecutar scripts  
 Puede ejecutar un script, o instrucciones individuales, en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 **Para ejecutar un script**  
   
-1.  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo** , seleccione **Abrir**y haga clic en **Archivo**.  
+1.  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo** , seleccione **Abrir** y haga clic en **Archivo**.  
   
 2.  En el cuadro de diálogo **abrir** , seleccione el archivo de script y, a continuación, [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

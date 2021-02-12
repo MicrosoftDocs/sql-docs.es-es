@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 06/09/2020
-ms.openlocfilehash: 26570d8b2ca1ac80ce2a6923dc3778154cb345ec
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 3f55f793391e408d96b8c6d07a31c7e790d54853
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137125"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048535"
 ---
 # <a name="import-or-view-models-with-machine-learning-extension-for-azure-data-studio-preview"></a>Importación o visualización de modelos con la extensión de Machine Learning para Azure Data Studio (versión preliminar)
 

@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 55456185a6503ee11465a1e65cb9cd91de3ba6e2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 0ec2ab7fa84dc3f4b4155a093794d5a4e49b56ec
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92199586"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046856"
 ---
 # <a name="sql-server-big-data-clusters-transparent-data-encryption-tde-at-rest-usage-guide"></a>Guía de uso del cifrado de datos transparente (TDE) en reposo de Clústeres de macrodatos de SQL Server
 
@@ -40,7 +40,7 @@ __Características no admitidas:__
 
 1. En Azure Data Studio, conéctese a la instancia maestra de SQL Server del clúster de macrodatos. Para obtener más información, vea [Conectarse a una instancia maestra de SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Haga doble clic en la conexión de la ventana **Servidores** para mostrar el panel del servidor de la instancia maestra de SQL Server. Seleccione **Nueva consulta** .
+1. Haga doble clic en la conexión de la ventana **Servidores** para mostrar el panel del servidor de la instancia maestra de SQL Server. Seleccione **Nueva consulta**.
 
    ![Consultar una instancia maestra de SQL Server](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 

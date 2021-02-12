@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18a131ba868bdac376aa816327fb032fe29f0900
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: bb653797aa0c89b16daeff71974a26781770a9ff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987351"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100019806"
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>Usar Mis suscripciones (servidor de informes en modo nativo)
 El portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una página **Mis suscripciones** que organiza todas las suscripciones en un solo lugar. Puede usar *Mis suscripciones* para ver, modificar, habilitar, deshabilitar y eliminar suscripciones existentes. Sin embargo, no puede utilizar esta página para crear suscripciones.  Mis suscripciones solo muestra las suscripciones que haya creado. No enumera las suscripciones que sean propiedad de otros usuarios, aunque el usuario esté agregado como suscriptor a ellas, ni muestra suscripciones controladas por datos.

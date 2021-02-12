@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 027d3bb67c087f119c3848a2d81ac0875b138db3
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 735c7805d1deba9861a6e51249acf9928d97db7c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934856"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076816"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Conectar con un servidor de informes en Management Studio
 

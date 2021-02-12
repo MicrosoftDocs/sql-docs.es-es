@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 4df5f2e96ff8795ac592c6aa61f7c79e03145c31
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 55f8ca913c058bb90e4abe6b91f997d130af22b3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596300"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070541"
 ---
 # <a name="what-is-java-language-extension"></a>¿Qué es la extensión del lenguaje Java?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]

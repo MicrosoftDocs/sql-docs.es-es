@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3a7932d79c414fb79dfc29074c1b8a5888c85827
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 898b55146317a09b43b1b4df63a22a9a74882ee9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418511"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074646"
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>Eliminación de los componentes de SSMA para MySQL (MySQLToSql)
-Cuando haya terminado de migrar las bases de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es posible que desee desinstalar los componentes de SSMA. Puede desinstalar los componentes de cliente en cualquier momento. Sin embargo, Si desinstala el paquete de extensión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA dejará de admitir la migración de datos de MySQL a la base de datos de destino (SQL Server/SQL Azure) mediante el motor de migración de datos del lado servidor.  
+Cuando haya terminado de migrar las bases de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es posible que desee desinstalar los componentes de SSMA. Puede desinstalar los componentes de cliente en cualquier momento. Sin embargo, Si desinstala el paquete de extensión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA dejará de admitir la migración de datos de MySQL a la base de datos de destino (SQL Server/SQL Azure) mediante el Server-Side motor de migración de datos.  
   
 ## <a name="uninstalling-the-ssma-for-mysql-client"></a>Desinstalación de SSMA para el cliente MySQL  
 Puede desinstalar SSMA mediante **Agregar o quitar programas**.  
@@ -30,7 +30,7 @@ Puede desinstalar SSMA mediante **Agregar o quitar programas**.
   
 1.  En el Panel de control, abra **Agregar o quitar programas**.  
   
-2.  Seleccione **Microsoft SQL Server Migration Assistant para MySQL**y, a continuación, haga clic en **quitar**.  
+2.  Seleccione **Microsoft SQL Server Migration Assistant para MySQL** y, a continuación, haga clic en **quitar**.  
   
 3.  Para confirmar que desea desinstalar SSMA, haga clic en **sí**.  
   
@@ -41,7 +41,7 @@ Puede quitar el paquete de extensión mediante **Agregar o quitar programas**.
   
 1.  En el Panel de control, abra **Agregar o quitar programas**.  
   
-2.  Seleccione **Microsoft SQL Server Migration Assistant para el paquete de extensiones de MySQL**y, a continuación, haga clic en **quitar**.  
+2.  Seleccione **Microsoft SQL Server Migration Assistant para el paquete de extensiones de MySQL** y, a continuación, haga clic en **quitar**.  
   
 3.  Para confirmar que desea desinstalar el paquete de extensión, haga clic en **sí**.  
   
@@ -55,7 +55,7 @@ Puede quitar el paquete de extensión mediante **Agregar o quitar programas**.
   
 7.  En la página finalizar, haga clic en **salir**.  
   
-Una vez completado el proceso de desinstalación, puede confirmar que los objetos del esquema **sysdb. ssma_MySQL** y, posiblemente, toda la base de datos de **sysdb** , se han quitado mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Sin embargo, si utiliza otros productos de SSMA, también usarán la base de datos **sysdb** . Si la base de datos existe y está seguro de que no hay ninguna otra base de datos que haga referencia a los objetos de esta base de datos, puede separar la base de datos.  
+Una vez completado el proceso de desinstalación, puede confirmar que los objetos del esquema de **sysdb.ssma_MySQL** y, posiblemente, toda la base de datos **sysdb** , se han quitado mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Sin embargo, si utiliza otros productos de SSMA, también usarán la base de datos **sysdb** . Si la base de datos existe y está seguro de que no hay ninguna otra base de datos que haga referencia a los objetos de esta base de datos, puede separar la base de datos.  
   
 ## <a name="see-also"></a>Consulte también  
 [Instalación de SSMA para MySQL Client &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  

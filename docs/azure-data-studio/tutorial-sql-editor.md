@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: e2c200bc57bc62a54a9850e85e13b9c9f15c49f0
-ms.sourcegitcommit: 80701484b8f404316d934ad2a85fd773e26ca30c
+ms.openlocfilehash: 1c91b067ff8396968b2d26c57bf5f78d4f5d4181
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93243384"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039935"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>Tutorial: Uso del editor de Transact-SQL para crear objetos de base de datos: Azure Data Studio
 
@@ -30,7 +30,7 @@ En este tutorial, obtendrá información sobre cómo usar [!INCLUDE[name-sos-sho
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azure SQL Database. Para crear la base de datos *TutorialDB* , complete uno de los siguientes inicios rápidos:
+En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azure SQL Database. Para crear la base de datos *TutorialDB*, complete uno de los siguientes inicios rápidos:
 
 - [Conectarse a una instancia de SQL Server y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Conectarse a una instancia de Azure SQL Database y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
@@ -40,9 +40,9 @@ En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azur
 
 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] proporciona un widget de búsqueda para encontrar rápidamente objetos de la base de datos. La lista de resultados proporciona un menú contextual de tareas comunes relevantes para el objeto seleccionado, como *Editar datos* para una tabla.
 
-1. Abra la barra lateral SERVIDORES ( **Ctrl+G** ), expanda **Bases de datos** y seleccione **TutorialDB**. 
+1. Abra la barra lateral SERVIDORES (**Ctrl+G**), expanda **Bases de datos** y seleccione **TutorialDB**. 
 
-1. Para abrir el *panel de TutorialDB* , haga clic con el botón derecho en **TutorialDB** y seleccione **Administrar** en el menú contextual:
+1. Para abrir el *panel de TutorialDB*, haga clic con el botón derecho en **TutorialDB** y seleccione **Administrar** en el menú contextual:
 
    ![menú contextual: administrar](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
@@ -64,11 +64,11 @@ Azure Data Studio proporciona una gran cantidad de fragmentos de código de T-SQ
 
 1. Abra un nuevo editor de consultas al presionar **Ctrl+N**.
 
-2. Escriba **sql** en el editor, desplácese con la flecha abajo hasta **sqlCreateStoredProcedure** y, después, presione la tecla *TAB* (o *Entrar* ) para cargar el fragmento de código del procedimiento almacenado y creado.
+2. Escriba **sql** en el editor, desplácese con la flecha abajo hasta **sqlCreateStoredProcedure** y, después, presione la tecla *TAB* (o *Entrar*) para cargar el fragmento de código del procedimiento almacenado y creado.
 
    ![Captura de pantalla que muestra el Editor de consultas tras escribir SQL en el editor y seleccionar la opción sqlCreateStoredProcedure.](./media/tutorial-sql-editor/snippet-list.png)
 
-3. El fragmento de código para crear un procedimiento almacenado tiene dos campos configurados para su edición rápida ( *StoredProcedureName* y *SchemaName* ). Seleccione *StoredProcedureName* , haga clic con el botón derecho y, después, seleccione **Cambiar todas las repeticiones**. Ahora, escriba *getCustomer* y todas las entradas de *StoredProcedureName* cambiarán a *getCustomer*.
+3. El fragmento de código para crear un procedimiento almacenado tiene dos campos configurados para su edición rápida (*StoredProcedureName* y *SchemaName*). Seleccione *StoredProcedureName*, haga clic con el botón derecho y, después, seleccione **Cambiar todas las repeticiones**. Ahora, escriba *getCustomer* y todas las entradas de *StoredProcedureName* cambiarán a *getCustomer*.
 
    ![Captura de pantalla que muestra el Editor de consultas tras seleccionar la opción Cambiar todas las repeticiones.](./media/tutorial-sql-editor/snippet.png)
 
@@ -108,7 +108,7 @@ Azure Data Studio proporciona una gran cantidad de fragmentos de código de T-SQ
     
 5. Para crear el procedimiento almacenado y realizar una ejecución de prueba, presione **F5**.
 
-Se creará el procedimiento almacenado y, en el panel de **RESULTADOS** , se mostrará el cliente devuelto en formato JSON. Para ver el código JSON con formato, haga clic en el registro devuelto. 
+Se creará el procedimiento almacenado y, en el panel de **RESULTADOS**, se mostrará el cliente devuelto en formato JSON. Para ver el código JSON con formato, haga clic en el registro devuelto. 
 
 
 ## <a name="use-peek-definition"></a>Usar Ver la definición 
@@ -117,7 +117,7 @@ Azure Data Studio permite ver la definición de un objeto con la característica
 
 1. Para abrir un nuevo editor, presione **Ctrl+N**. 
 
-2. Escriba *sql* en el editor, desplácese con la flecha abajo hasta *sqlCreateStoredProcedure* y, después, presione la tecla *TAB* (o *Entrar* ) para cargar el fragmento de código del procedimiento almacenado y creado.
+2. Escriba *sql* en el editor, desplácese con la flecha abajo hasta *sqlCreateStoredProcedure* y, después, presione la tecla *TAB* (o *Entrar*) para cargar el fragmento de código del procedimiento almacenado y creado.
 3. Escriba *setCustomer* para *StoredProcedureName* y *dbo* para *SchemaName*.
 
 3. Reemplace los marcadores de posición de @param por la siguiente definición de parámetros:
@@ -177,13 +177,13 @@ Azure Data Studio permite ver la definición de un objeto con la característica
    GO
    ```
 
-8. Para crear el procedimiento almacenado *setCustomer* , presione **F5**.
+8. Para crear el procedimiento almacenado *setCustomer*, presione **F5**.
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Usar los resultados de una consulta guardada como JSON para probar el procedimiento almacenado setCustomer
 
 El procedimiento almacenado *setCustomer* creado en la sección anterior necesita que se pasen datos JSON al parámetro *\@json_val*. En esta sección, se muestra cómo obtener código JSON con el formato correcto para pasarlo al parámetro con el fin de probar el procedimiento almacenado.
 
-1. En la barra lateral **SERVIDORES** , haga clic con el botón derecho en la tabla *dbo.Customers* y seleccione **SELECT TOP 1000 Rows** (SELECCIONAR PRIMERAS 100 filas).
+1. En la barra lateral **SERVIDORES**, haga clic con el botón derecho en la tabla *dbo.Customers* y seleccione **SELECT TOP 1000 Rows** (SELECCIONAR PRIMERAS 100 filas).
 
 2. Seleccione la primera fila de la vista de resultados, asegúrese de que esté seleccionada toda la fila (haga clic en el número 1 de la columna del extremo izquierdo) y seleccione **Guardar como JSON**.  
 3. Cambie la carpeta a una ubicación que recuerde para que pueda eliminar el archivo más tarde (por ejemplo, el Escritorio) y haga clic en **Guardar**. Se abrirá el archivo con formato JSON.
@@ -225,7 +225,7 @@ En este tutorial, ha aprendido a:
 > * Información sobre detalles de objetos de la base de datos mediante “Ver la definición” e “Ir a la definición”
 
 
-Para obtener información sobre cómo habilitar el widget de las **cinco consultas más lentas** , complete el tutorial siguiente:
+Para obtener información sobre cómo habilitar el widget de las **cinco consultas más lentas**, complete el tutorial siguiente:
 
 > [!div class="nextstepaction"]
 > [Habilitar el widget de conclusiones de ejemplo de consultas lentas](tutorial-qds-sql-server.md)

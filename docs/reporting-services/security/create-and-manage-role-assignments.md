@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b7b88e9342c818645e0a9e1430cc5fe5c9400c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1be919afaea2693329ae6fe957fb6fc5ff3357f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468994"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015205"
 ---
 # <a name="create-and-manage-role-assignments"></a>Crear y administrar asignaciones de roles
 
@@ -30,7 +30,7 @@ El ámbito de las asignaciones de roles es el *nivel de elemento* o el *nivel de
 
 - Una asignación de roles de nivel de elemento se crea para un elemento o rama específicos de la jerarquía de carpetas del servidor de informes. Navegue a una carpeta o un elemento específico para crear una asignación de roles para él.
 
-- Las asignaciones de roles del sistema proporcionan a usuarios seleccionados la capacidad de realizar tareas que afectan en conjunto al sitio del servidor de informes. Estas tareas incluyen:
+- Las asignaciones de roles del sistema proporcionan a usuarios seleccionados la capacidad de realizar tareas que afectan en conjunto al sitio del servidor de informes. Entre las tareas, se incluyen las siguientes:
   - Crear programaciones compartidas
   - Administración de trabajos
   - Procesar informes

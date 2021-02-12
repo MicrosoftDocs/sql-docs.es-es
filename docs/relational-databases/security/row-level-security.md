@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 828218dcebe5f2e5ab6c0759083f497876dae6b2
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: 739501f78f313f8fbff20d71cc63376a8da27343
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813530"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552669"
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
 
@@ -302,7 +302,7 @@ Este breve ejemplo crea tres usuarios y una tabla externa con seis filas. Despu�
 ### <a name="prerequisites"></a>Prerrequisitos
 
 1. Debe tener un grupo de SQL dedicado. Consulte [Creación de un grupo de SQL dedicado](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal).
-1. El servidor que hospeda el grupo de SQL dedicado debe estar registrado con AAD y se debe tener una cuenta de almacenamiento de Azure con permisos de colaborador de blog de Storage. Siga [estos](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps) pasos.
+1. El servidor que hospeda el grupo de SQL dedicado debe estar registrado con AAD y debe tener una cuenta de almacenamiento de Azure con permisos de colaborador de blog de almacenamiento. Siga [estos](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps) pasos.
 1. Cree un sistema de archivos para la cuenta de Azure Storage. Use el Explorador de Storage para ver la cuenta de almacenamiento. Haga clic con el botón derecho en los contenedores y seleccione *Crear sistema de archivos*.  
 
 Después de implementar los requisitos previos, cree tres cuentas de usuario que mostrarán las distintas funciones de acceso.

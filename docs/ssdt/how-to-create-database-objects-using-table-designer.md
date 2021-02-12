@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 410b2674f407018b895ed84781bedf5fa8766feb
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: a055bd1f8de41686e1c3477e3e4810e78d6b5025
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364397"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018315"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>Procedimientos: Creación de objetos de base de datos usando el Diseñador de tablas
 
@@ -29,7 +29,7 @@ Por ejemplo, puede crear una base de datos nueva bajo el nodo **Bases de datos**
   
 ### <a name="to-create-a-new-database"></a>Para crear una nueva base de datos  
   
-1.  En el **Explorador de objetos de SQL Server** , en el nodo **SQL Server** , expanda la instancia de servidor a la que se ha conectado.  
+1.  En el **Explorador de objetos de SQL Server**, en el nodo **SQL Server**, expanda la instancia de servidor a la que se ha conectado.  
   
 2.  Haga clic con el botón derecho en el nodo **Bases de datos** y seleccione **Agregar nueva base de datos**.  
   
@@ -53,9 +53,9 @@ Por ejemplo, puede crear una base de datos nueva bajo el nodo **Bases de datos**
     CREATE TABLE [dbo].[Suppliers]  
     ```  
   
-4.  Haga clic en la fila vacía en la cuadrícula de columnas para agregar una nueva columna a la tabla.  Escriba **CompanyName** en el campo **Nombre** , **nvarchar (128)** en **Tipo de datos** y desactive el campo **Permitir valores NULL**. A medida que cambia entre los campos, observe que el panel de scripts se actualiza inmediatamente.  
+4.  Haga clic en la fila vacía en la cuadrícula de columnas para agregar una nueva columna a la tabla.  Escriba **CompanyName** en el campo **Nombre**, **nvarchar (128)** en **Tipo de datos** y desactive el campo **Permitir valores NULL**. A medida que cambia entre los campos, observe que el panel de scripts se actualiza inmediatamente.  
   
-5.  Agregue otra columna nueva. Escriba **Address** en el campo **Nombre** , **nvarchar (MAX)** en **Tipo de datos** y desactive el campo **Permitir valores NULL**.  
+5.  Agregue otra columna nueva. Escriba **Address** en el campo **Nombre**, **nvarchar (MAX)** en **Tipo de datos** y desactive el campo **Permitir valores NULL**.  
   
     > [!WARNING]  
     > Cuando esté editando objetos de una base de datos conectada, no los guarde en la unidad local. Para guardar los cambios a la base de datos correctamente, siga los pasos indicados en el siguiente procedimiento [Cómo: Actualizar una base de datos conectada con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  

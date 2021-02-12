@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8fe596a34298d9864454a544bfb6d98a6601a46
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 072a2f88ce87c5330614961dc1aed842aae2e058
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529349"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065280"
 ---
 # <a name="understanding-security-policies"></a>Descripción de las directivas de seguridad
   Cualquier código ejecutado por un servidor de informes debe formar parte de una directiva de seguridad de acceso del código concreta. Estas directivas de seguridad constan de grupos de código que asignan evidencias a un conjunto de conjuntos de permisos con nombre. Con frecuencia, los grupos de código están asociados a un conjunto de permisos con nombre que especifica los permisos que puede tener el código de ese grupo. El motor en tiempo de ejecución usa las evidencias proporcionadas por un host de confianza o por el cargador para determinar a qué grupos de código pertenece el código y, por tanto, qué permisos se deben conceder al código. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] cumple esta arquitectura de la directiva de seguridad como lo define Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. En las secciones siguientes se describen los distintos tipos de código de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y las reglas de directivas asociadas a los mismos.  

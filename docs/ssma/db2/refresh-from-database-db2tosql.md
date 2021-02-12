@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 973f3aae444b27be93b675d16c9b9a73d8fac518
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c33ccf20e2b90fd967b5b15b491710d31ea83b0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463482"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071941"
 ---
 # <a name="refresh-from-database-db2tosql"></a>Actualizar desde la base de datos (DB2ToSQL)
 El cuadro de diálogo **actualizar desde base de datos** permite seleccionar los objetos que se van a actualizar desde la base de datos DB2. Las filas del cuadro de diálogo están codificadas por colores en función del estado de los metadatos:  
@@ -30,7 +30,7 @@ El cuadro de diálogo **actualizar desde base de datos** permite seleccionar los
   
 Puede especificar la configuración de actualización de objetos predeterminada en el cuadro de diálogo **configuración del proyecto** . Para obtener más información, vea [configuración del proyecto&#40;Synchronization&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
   
-Para tener acceso al cuadro **de diálogo actualizar desde base** de datos, haga clic con el botón secundario en un objeto en el explorador de metadatos DB2 y haga clic en **actualizar desde base de**datos.  
+Para tener acceso al cuadro **de diálogo actualizar desde base** de datos, haga clic con el botón secundario en un objeto en el explorador de metadatos DB2 y haga clic en **actualizar desde base de** datos.  
   
 ## <a name="options"></a>Opciones  
 **Contraer (-)**  

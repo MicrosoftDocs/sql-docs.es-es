@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0977cc384dac80f28d6b7c5b7a0149ba200f1794
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fbd189a85121d2ef18c69a1d7886f6b3c3294978
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215605"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100045065"
 ---
 # <a name="identifying-execution-state"></a>Identificar el estado de ejecución
   El Protocolo de transferencia de hipertexto (HTTP) es un protocolo sin estado y sin conexión, lo que significa que no indica de manera automática si las diferentes solicitudes provienen del mismo cliente o si una instancia del explorador todavía está viendo una página o un sitio. Las sesiones crean una conexión lógica para mantener el estado entre el servidor y el cliente sobre HTTP. La información específica del usuario pertinente para una sesión determinada se conoce como estado de sesión.  

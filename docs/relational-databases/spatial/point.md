@@ -1,7 +1,7 @@
 ---
 description: Punto
 title: Punto | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 02/02/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e17822f4eb88a1103ab5a214249ec5db7146c74
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bcbdda427a587e06bf1ad678939b8164178112dd
+ms.sourcegitcommit: 05fc736e6b6b3a08f503ab124c3151f615e6faab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475336"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99478580"
 ---
 # <a name="point"></a>Punto
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "97475336"
   
 ## <a name="examples"></a>Ejemplos  
 ### <a name="example-a"></a>Ejemplo A.
-El ejemplo siguiente crea una instancia de `geometry Point`que representa el punto (3, 4) con un SRID de 0.  
+En el ejemplo siguiente se crea una instancia de punto de geometría que representa el punto (3, 4) con un SRID de 0.  
   
 ```sql  
 DECLARE @g geometry;  
@@ -41,7 +41,7 @@ SET @g = geometry::STGeomFromText('POINT (3 4)', 0);
 ```  
   
 ### <a name="example-b"></a>Ejemplo B.
-En el ejemplo siguiente se crea una instancia de `geometry``Point` que representa el punto (3, 4) con un valor Z (elevación) de 7, un valor M (medida) de 2,5 y el SRID predeterminado de 0.  
+En el ejemplo siguiente se crea una instancia de punto de geometría que representa el punto (3, 4) con un valor Z (elevación) de 7, un valor M (medida) de 2,5 y el SRID predeterminado de 0.  
   
 ```  
 DECLARE @g geometry;  
@@ -49,7 +49,7 @@ SET @g = geometry::Parse('POINT(3 4 7 2.5)');
 ```  
   
 ### <a name="example-c"></a>Ejemplo C.
-En el ejemplo siguiente se devuelven los valores X, Y, Z y M para la instancia de `geometry``Point`.  
+En el ejemplo siguiente se devuelven los valores X, Y, Z y M para la instancia de punto de geometría.  
   
 ```  
 SELECT @g.STX;  

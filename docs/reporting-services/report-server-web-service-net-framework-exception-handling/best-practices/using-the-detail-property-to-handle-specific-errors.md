@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4392633d-b46b-41e6-bc12-efb64e166704
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 22628ac610fc8de3febba7e820e79be018f8a8d9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d22bfdf0659b17e7730c25aef7369d4fa323bce6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216381"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100023461"
 ---
 # <a name="using-the-detail-property-to-handle-specific-errors"></a>Usar la propiedad Detail para administrar errores concretos
   Para clasificar más las excepciones, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] devuelve información de error adicional en la propiedad **InnerText** de los elementos secundarios en la propiedad **Detail** de la excepción SOAP. Dado que la propiedad **Detail** es un objeto **XmlNode**, puede tener acceso al texto interno del elemento secundario **Message** utilizando el código siguiente.  

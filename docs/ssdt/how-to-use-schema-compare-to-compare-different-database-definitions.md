@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2347297adfbc9d4df88c7df32fffefa4990010d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 414a6eb4f6e63d2bb0c02e831f60ebcff97dc590
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895823"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018035"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Procedimientos: Uso de Comparación de esquemas para comparar distintas definiciones de base de datos
 
@@ -59,7 +59,7 @@ En el procedimiento siguiente se compara el esquema de un proyecto de base de da
   
 5.  En el cuadro de diálogo **Propiedades de conexión**, escriba el nombre del servidor donde reside la base de datos `TradeDev` y asegúrese de que se proporcionen las credenciales de autenticación correctas. Después, seleccione **TradeDev** en **Conectar con una base de datos** y haga clic en **Aceptar**.  
   
-    También puede hacer clic en el botón **Opciones** de la barra de herramientas de la ventana ** Comparación de esquemas** para especificar los objetos que se van a comparar, qué tipos de diferencias se van a omitir y otras opciones.  
+    También puede hacer clic en el botón **Opciones** de la barra de herramientas de la ventana **Comparación de esquemas** para especificar los objetos que se van a comparar, qué tipos de diferencias se van a omitir y otras opciones.  
   
 6.  Haga clic en el botón **Comparar** de la barra de herramientas de la ventana **Comparación de esquemas** para iniciar el proceso de comparación.  
   

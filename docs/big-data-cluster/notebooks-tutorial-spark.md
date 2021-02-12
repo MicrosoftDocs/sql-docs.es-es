@@ -9,12 +9,12 @@ ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6961dd76f35316dbd3923bb24849011a20f184c0
-ms.sourcegitcommit: ef20f39a17fd4395dd2dd37b8dd91b57328a751c
+ms.openlocfilehash: 6996e2b9b7705511fc13d479e39e9436a5e054f3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92793742"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044118"
 ---
 # <a name="run-a-sample-notebook-using-spark"></a>Ejecución de un cuaderno de ejemplo con Spark
 
@@ -53,11 +53,11 @@ En los pasos siguientes, se muestra cómo abrir el archivo del cuaderno en Azure
 
 1. En Azure Data Studio, conéctese a la instancia maestra del clúster de macrodatos. Para obtener más información, vea [Conexión a un clúster de macrodatos](connect-to-big-data-cluster.md).
 
-1. Haga doble clic en la conexión de la puerta de enlace de HDFS/Spark de la ventana **Servidores** . Después, seleccione **Abrir cuaderno** .
+1. Haga doble clic en la conexión de la puerta de enlace de HDFS/Spark de la ventana **Servidores**. Después, seleccione **Abrir cuaderno**.
 
    ![Abrir el cuaderno](media/notebook-tutorial-spark/azure-data-studio-open-notebook.png)
 
-1. Espere hasta que se rellenen el **Kernel** y el contexto del destino ( **Conectar a** ). Establezca el **Kernel** en **PySpark3** y el valor de **Conectar a** en la dirección IP del punto de conexión del clúster de macrodatos.
+1. Espere hasta que se rellenen el **Kernel** y el contexto del destino (**Conectar a**). Establezca el **Kernel** en **PySpark3** y el valor de **Conectar a** en la dirección IP del punto de conexión del clúster de macrodatos.
 
    ![Establecer el Kernel y Conectar a](media/notebook-tutorial-spark/set-kernel-and-attach-to.png)
 

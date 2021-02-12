@@ -12,12 +12,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 12e392d083b9b47e3330d8a95b6c2d199a146cea
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: d5e02aa025d65fd7f3db6d1f5bd8f43e44566ac9
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809934"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552662"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Habilitar los requisitos previos de FileTables
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -148,7 +148,7 @@ GO
   
 -   Cuando adjunte o restaure una base de datos, se produce un error en la operación si la nueva base de datos tiene un valor para **DIRECTORY_NAME** que ya existe en la instancia de destino. Especifique un valor único para **DIRECTORY_NAME** cuando llame a **CREATE DATABASE FOR ATTACH** o a **RESTORE DATABASE**.  
   
--   Cuando actualice una base de datos existente a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], el valor de **DIRECTORY_NAME** es NULL.  
+-   Cuando actualice una base de datos existente, el valor de **DIRECTORY_NAME** será NULL.  
   
 -   Cuando habilite o deshabilite el acceso no transaccional en el nivel de base de datos, la operación no comprueba si se ha especificado el nombre del directorio o si es único.  
   

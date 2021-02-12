@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fb6a43fba085319b8be4ff374fea7d089e8a529a
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: b8994d24fe6beacfd9dc11417d529575760e7dff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529939"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065250"
 ---
 # <a name="security-considerations-for-extensions"></a>Consideraciones de seguridad para las extensiones
   Cada aplicación que tenga como destino Common Language Runtime (CLR) debe interactuar con el sistema de seguridad de CLR. Cuando se ejecuta dicha aplicación, el CLR la evalúa automáticamente y le concede un conjunto de permisos. Según los permisos que reciba la aplicación, continúa ejecutándose o genera una excepción de seguridad. La configuración de seguridad local y las directivas de los archivos de configuración de la directiva de seguridad para un servidor de informes determinado definen los permisos de código que un ensamblado recibe.  

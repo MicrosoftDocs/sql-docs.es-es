@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc1b9b6cd36d12e39823cb0915e6fe7b5af4d7bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25023eb11f9968f9edc3e7159f32252b0a116291
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461875"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272686"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Crear un atributo de archivo (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "88461875"
 |Columna|Descripción|
 |------------|-----------------|
 |Estado|Estado del atributo.<br /><br /> Al hacer clic en guardar, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que el atributo se está actualizando.<br /><br /> Si hay errores al crear o editar un atributo, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|
-|Nombre|Nombre del atributo.|
+|Name|Nombre del atributo.|
 |Display Name (Nombre para mostrar)|Nombre para mostrar del atributo.|
 |Descripción|Descripción del atributo.|
 |Ancho de píxel de la pantalla|Ancho del atributo.|
@@ -92,6 +92,6 @@ ms.locfileid: "88461875"
 12. Haga clic en **Save**(Guardar).
 
 ## <a name="see-also"></a>Consulte también
- [Los atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md) [cambiar el nombre de un atributo y el tipo de datos &#40;Master Data Services](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)&#41;[crear un atributo basado en dominio &#40;](../master-data-services/create-a-domain-based-attribute-master-data-services.md) Master Data Services&#41;[crear un atributo de texto &#40;](../master-data-services/create-a-text-attribute-master-data-services.md) Master Data Services&#41;
+ [Los atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md) [cambiar el nombre de un atributo y el tipo de datos &#40;Master Data Services](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)&#41;[crear un atributo Domain-Based](../master-data-services/create-a-domain-based-attribute-master-data-services.md) &#40;Master Data Services&#41;[crear un atributo de texto &#40;](../master-data-services/create-a-text-attribute-master-data-services.md) Master Data Services&#41;
 
 

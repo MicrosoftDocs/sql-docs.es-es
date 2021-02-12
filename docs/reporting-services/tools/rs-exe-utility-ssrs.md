@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3e92646e27dcabed21aa387a8cf22caf95770ff6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8ca10d79178887fa4ed2f9f59c6da7e8c75057f7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914983"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077936"
 ---
 # <a name="rsexe-utility-ssrs"></a>Utilidad RS.exe (SSRS)
   La utilidad rs.exe procesa el script que proporcione en un archivo de entrada. Use esta utilidad para automatizar las tareas de implementación y administración del servidor de informes.  

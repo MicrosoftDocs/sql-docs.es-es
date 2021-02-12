@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bc7bec3f7f4ce358ccbb725e039208f574ae7aae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9a4c8ea82558598700f5ae18121335c4a181f6b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472569"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078856"
 ---
 # <a name="global-settings-logging-accesstosql"></a>Configuración global (registro) (AccessToSQL)
 Utilice el cuadro de diálogo **configuración global** para especificar la configuración de registro para SSMA. Normalmente, esta configuración solo se puede cambiar cuando se trabaja con soporte técnico del producto.  
@@ -46,9 +46,9 @@ Para cada opción en **nivel de mensajes**, configure uno de los siguientes nive
 |-|-|  
 |**Error irrecuperable**|Escriba solo mensajes de error irrecuperables en el registro.|  
 |**Error**|Escriba mensajes de error y de error grave en el registro.|  
-|**Warning (ADVERTENCIA)**|Escriba mensajes de advertencia, error y error grave en el registro.|  
+|**Advertencia**|Escriba mensajes de advertencia, error y error grave en el registro.|  
 |**Información**|Escriba mensajes informativos, de advertencia, de error y de error grave en el registro.|  
-|**Depuración**|Escriba todos los mensajes, incluidos los mensajes de depuración, en el registro.|  
+|**Depurar**|Escriba todos los mensajes, incluidos los mensajes de depuración, en el registro.|  
   
 **Ruta del archivo de registro**  
 La ruta de acceso del archivo y el nombre de los archivos de registro de SSMA. Para especificar otro nombre, haga clic en la ruta de acceso actual y, a continuación, haga clic en el botón Examinar (**...**).  

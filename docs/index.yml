@@ -6,12 +6,12 @@ metadata:
   title: Documentación de Microsoft SQL | Microsoft Docs
   description: Obtenga información sobre cómo usar SQL Server y Azure SQL para administrar sus necesidades relacionadas con bases de datos, tanto en un entorno local como en la nube.
   ms.topic: hub-page
-  ms.openlocfilehash: 68ee871d0a5d758a2fcb205373e8f61d02656cb1
-  ms.sourcegitcommit: e4b6357756a9c691b0441208a0058f7b8f3bea51
+  ms.openlocfilehash: 92327e6d448170977d25336a44b118d81497d1dd
+  ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 02/03/2021
-  ms.locfileid: "99510336"
+  ms.lasthandoff: 02/10/2021
+  ms.locfileid: "100074113"
 highlightedContent:
   items:
   - title: Pruebe SQL Server 2019

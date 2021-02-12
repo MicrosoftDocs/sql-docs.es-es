@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 073ff624016cc671883fea551ad4ebd392b54ea6
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: df78278f655d6a11bb560440f86d662c08889059
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529656"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061160"
 ---
 # <a name="deploying-a-data-processing-extension"></a>Implementar una extensión de procesamiento de datos
   Después de escribir y compilar la extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en una biblioteca de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], es necesario hacer que el servidor de informes y el Diseñador de informes la puedan detectar. Esto es tan fácil como copiar la extensión en los directorios adecuados y agregar entradas a los archivos de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] correspondientes.  

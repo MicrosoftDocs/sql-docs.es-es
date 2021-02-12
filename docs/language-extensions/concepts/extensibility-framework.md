@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 344e5f35e35202b6a44a4932db8a27424fdb8753
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f7d4c2e2408bbcc78c0ea74f0d50bd4e0599b826
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471806"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069800"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Arquitectura de extensibilidad en extensiones de lenguaje de SQL Server
 
@@ -38,15 +38,15 @@ Cualquier lenguaje externo admitido se puede ejecutar si se llama a un procedimi
 
 La arquitectura está diseñada de modo que el código externo se ejecuta en un proceso independiente de SQL Server, pero con componentes que administran internamente la cadena de solicitudes de datos y operaciones en SQL Server. 
   
-  ***Arquitectura de los componentes en Windows:** _
+  ***Arquitectura de los componentes en Windows:***
 
   ![Arquitectura de componentes en Windows](../media/generic-architecture-windows.png "Arquitectura de componentes en Windows")
   
-  _*_Arquitectura de los componentes en Linux:_*_
+  ***Arquitectura de los componentes en Linux:***
   
   ![Arquitectura de componentes en Linux](../media/generic-architecture-linux.png "Arquitectura de componentes en Linux")
   
-Los componentes incluyen un servicio _ *Launchpad** que se usa para invocar entornos de ejecución externos (como Java) y lógica específica de la biblioteca para cargar intérpretes y bibliotecas.
+Los componentes incluyen un servicio **Launchpad** que se usa para invocar los entornos de ejecución externos (como Java) y la lógica específica de la biblioteca para cargar intérpretes y bibliotecas.
 
 <a name="launchpad"></a>
 

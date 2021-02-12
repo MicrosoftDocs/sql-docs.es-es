@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 04f6f0adb61a0bb7ccf33e3705a4a32b9ed9d69e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 38385657de137e9e13bf03f7a4209be1303452d3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988231"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076094"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Convertir objetos de base de datos de Access (AccessToSQL)
 Una vez agregadas las bases de datos de Access y conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, SSMA muestra los metadatos para el acceso y los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos Azure SQL Database. Ahora puede seleccionar objetos de base de datos de Access y, a continuación, convertir los esquemas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure esquemas.  
@@ -60,7 +60,7 @@ En la tabla siguiente se muestra qué objetos de acceso se convierten y los [!IN
 |columna|columna|  
 |índice|índice|  
 |clave externa|clave externa|  
-|Query|vista<br /><br />La mayoría de las consultas SELECT se convierten en vistas. Otras consultas, como las consultas de actualización, no se migran.<br /><br />No se convierten las consultas SELECT que toman parámetros y las consultas entre tabulaciones.|  
+|Query|ver<br /><br />La mayoría de las consultas SELECT se convierten en vistas. Otras consultas, como las consultas de actualización, no se migran.<br /><br />No se convierten las consultas SELECT que toman parámetros y las consultas entre tabulaciones.|  
 |informe|no convertido|  
 |form|no convertido|  
 |macro|no convertido|  
@@ -76,7 +76,7 @@ Para convertir los objetos de base de datos de Access, primero debe seleccionar 
   
 **Para seleccionar y convertir objetos de base de datos de Access en SQL Server o SQL Azure sintaxis**  
   
-1.  En el explorador de metadatos de Access, expanda **Access-metabase**y, a continuación, expanda **bases**de datos.  
+1.  En el explorador de metadatos de Access, expanda **Access-metabase** y, a continuación, expanda **bases** de datos.  
   
 2.  Realice uno o varios de los procedimientos siguientes:  
   
@@ -86,7 +86,7 @@ Para convertir los objetos de base de datos de Access, primero debe seleccionar 
   
     -   Para convertir u omitir consultas, expanda la base de datos y, a continuación, Active o desactive la casilla **consultas** .  
   
-    -   Para convertir u omitir tablas individuales, expanda la base de datos, expanda **tablas**y, a continuación, Active o desactive la casilla situada junto a la tabla.  
+    -   Para convertir u omitir tablas individuales, expanda la base de datos, expanda **tablas** y, a continuación, Active o desactive la casilla situada junto a la tabla.  
   
 3.  Realice una de las siguientes acciones:  
   

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d8a02e714f78f830da467cb35cf227d73e3a6277
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 0a9c522bf292147852203fb9ac740e7103195b35
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194583"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99836000"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Tutorial: Publicar un paquete SSIS como una vista SQL
 
@@ -30,18 +30,18 @@ ms.locfileid: "92194583"
 ## <a name="prerequisites"></a>Prerequisites  
  Para realizar este tutorial, debe tener instalado el siguiente software en el equipo:  
   
-1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o posterior con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+1.  [!INCLUDE[ssNoVersion ](../../includes/ssnoversion-md.md)] con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 ## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>Paso 1: Compilar e implementar un proyecto de SSIS en el catálogo de SSIS  
  En este paso, creará un paquete SSIS que extrae datos de un origen de datos compatible con SSIS (en este ejemplo, usaremos una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) y genera datos de salida con un componente de Destino de streaming de datos. Luego, compilará e implementará el proyecto de SSIS en el catálogo de SSIS.  
   
-1.  Inicie **SQL Server Data Tools**. En el menú **Inicio** , elija **Todos los programas**, **Microsoft SQL Server**y, a continuación, haga clic en **SQL Server Data Tools**.  
+1.  Inicie **SQL Server Data Tools**. En el menú **Inicio** , elija **Todos los programas**, **Microsoft SQL Server** y, a continuación, haga clic en **SQL Server Data Tools**.  
   
 2.  Cree un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-    1.  En la barra de menús, haga clic en **Archivo** , elija **Nuevo**y, después, haga clic en **Proyecto**.  
+    1.  En la barra de menús, haga clic en **Archivo** , elija **Nuevo** y, después, haga clic en **Proyecto**.  
   
     2.  Expanda **Business Intelligence** en el panel de la izquierda y haga clic en **Integration Services** en la vista de árbol.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "92194583"
   
     4.  Arrastre el componente **Origen de OLE DB** desde el **cuadro de herramientas de SSIS** hasta el **diseñador de flujos de datos**.  
   
-    5.  Configure el componente para que extraiga datos de la tabla **Employee** de la base de datos **TestDB** . Seleccione **(local).TestDB** en **Administrador de conexiones OLE DB**, **Tabla o vista** en **Modo de acceso a datos**y **[dbo].[Employee]** en **Nombre de la tabla o la vista**.  
+    5.  Configure el componente para que extraiga datos de la tabla **Employee** de la base de datos **TestDB** . Seleccione **(local).TestDB** en **Administrador de conexiones OLE DB**, **Tabla o vista** en **Modo de acceso a datos** y **[dbo].[Employee]** en **Nombre de la tabla o la vista**.  
   
          ![Destino de streaming de datos: Conexión OLE DB](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "Destino de streaming de datos: Conexión OLE DB")  
   
@@ -133,7 +133,7 @@ ms.locfileid: "92194583"
   
         2.  Especifique si los datos se van a cifrar antes de enviarlos a través de la red (campo Cifrar). Consulte el tema [Usar el cifrado sin validación](../../relational-databases/native-client/features/using-encryption-without-validation.md) para ver más detalles sobre esta configuración y la configuración de TrustServerCertificate.  
   
-        3.  Especifique si se puede usar un certificado de servidor autofirmado cuando la opción de cifrado esté habilitada (campo**TrustServerCertificate** ).  
+        3.  Especifique si se puede usar un certificado de servidor autofirmado cuando la opción de cifrado esté habilitada (campo **TrustServerCertificate** ).  
   
         4.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Configuración avanzada** .  
   
@@ -153,7 +153,7 @@ ms.locfileid: "92194583"
   
      Ahora los datos de salida del paquete se pueden consultar ejecutando la siguiente instrucción SQL en la base de datos TestDB: SELECT * FROM [SSISPackageView].  
   
-9. Haga clic en **Guardar informe**para guardar el informe como un archivo XML.  
+9. Haga clic en **Guardar informe** para guardar el informe como un archivo XML.  
   
 10. Revise los resultados del proceso de publicación y haga clic en **Finalizar** para cerrar el asistente.  
   
@@ -174,9 +174,9 @@ ms.locfileid: "92194583"
 ## <a name="step-4-verify-the-ssis-package-execution"></a>Paso 4: Comprobar la ejecución del paquete SSIS  
  En este paso comprobará que el paquete SSIS se ha ejecutado.  
   
-1.  En SQL Server Management Studio, expanda **Catálogos de Integration Services**, **SSISDB**y la **carpeta** en la que está el proyecto de SSIS. Después, expanda **Proyectos**, luego el nodo del proyecto y, por último, **Paquetes**.  
+1.  En SQL Server Management Studio, expanda **Catálogos de Integration Services**, **SSISDB** y la **carpeta** en la que está el proyecto de SSIS. Después, expanda **Proyectos**, luego el nodo del proyecto y, por último, **Paquetes**.  
   
-2.  Haga clic con el botón derecho en el paquete SSIS, seleccione **Informes**e **Informes estándar**y, después, haga clic en **Todas las ejecuciones**.  
+2.  Haga clic con el botón derecho en el paquete SSIS, seleccione **Informes** e **Informes estándar** y, después, haga clic en **Todas las ejecuciones**.  
   
 3.  La ejecución del paquete SSIS debería aparecer reflejada en el informe.  
   
@@ -222,7 +222,7 @@ GO
     ```  
   
     > [!IMPORTANT]  
-    >  Actualice el nombre de carpeta, el nombre del proyecto y el nombre del paquete si procede. Si la función OPENQUERY genera un error, en **SQL Server Management Studio**, expanda **Objetos de servidor**, **Servidores vinculados**y **Proveedores**y, después, haga doble clic en el proveedor **SSISOLEDB** y asegúrese de que la opción **Permitir InProcess** está activada.  
+    >  Actualice el nombre de carpeta, el nombre del proyecto y el nombre del paquete si procede. Si la función OPENQUERY genera un error, en **SQL Server Management Studio**, expanda **Objetos de servidor**, **Servidores vinculados** y **Proveedores** y, después, haga doble clic en el proveedor **SSISOLEDB** y asegúrese de que la opción **Permitir InProcess** está activada.  
   
 2.  Ejecute la siguiente consulta para crear una vista en la base de datos **TestDB** para este tutorial.  
   

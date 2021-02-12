@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cb0f25ce5063a22fb89d0afa8619b90d34a96f16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79f359fa2a45db75fd48a6f9bbcbb774044c942a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426967"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072259"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Configuración del proyecto (cargar objetos del sistema) (DB2ToSQL)
 La página cargando objetos del sistema del cuadro de diálogo **configuración del proyecto** le permite especificar qué objetos del sistema DB2 SSMA convierte y carga en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

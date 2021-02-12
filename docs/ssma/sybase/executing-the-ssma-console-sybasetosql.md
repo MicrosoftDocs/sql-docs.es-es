@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fee973fdcb79105d5fe7c412c10bdda2cd1bbec5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7eed4ea61ada5979dbecdb106e5954620ae9c81
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372241"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100079376"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Ejecución de la consola de SSMA (SybaseToSQL)
 Microsoft proporciona un conjunto sólido de comandos de archivo de script para ejecutar y controlar las actividades de SSMA. Las secciones siguientes detallan el mismo.  
@@ -202,7 +202,7 @@ No se puede conectar con el servidor de base de datos de origen durante la ejecu
   
 -   `write-summary-report-to:` Especifica la ruta de acceso en la que se generará el informe.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **AssessmentReport &lt; n &gt; . ** Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **AssessmentReport &lt; n &gt; .** Se crea XML. (atributo opcional)  
   
     La creación de informes tiene dos subcategorías más:  
   
@@ -268,7 +268,7 @@ Si no se realiza la conexión a la base de datos de origen o de destino antes de
   
 -   `write-summary-report-to:` Especifica la ruta de acceso en la que se generará el informe de resumen.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **SchemaConversionReport &lt; n &gt; . ** Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **SchemaConversionReport &lt; n &gt; .** Se crea XML. (atributo opcional)  
   
     La creación de informes tiene dos subcategorías más:  
   
@@ -321,7 +321,7 @@ Este comando migra los datos de origen al destino.
   
 -   `write-summary-report-to:` Especifica la ruta de acceso en la que se generará el informe.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **DataMigrationReport &lt; n &gt; . ** Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **DataMigrationReport &lt; n &gt; .** Se crea XML. (atributo opcional)  
   
     La creación de informes tiene dos subcategorías más:  
   

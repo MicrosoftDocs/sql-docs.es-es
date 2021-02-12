@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: dnethi
 ms.author: dinethi
-ms.openlocfilehash: 035ea616a92f1760252087bc6a8e27bec3fe2d24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ccfd415c57506b753ab8e0072943814a5289a027
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497273"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063990"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>Directiva de soporte técnico de SQL Server Management Studio (SSMS)
 

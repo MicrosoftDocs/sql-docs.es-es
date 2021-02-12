@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 534d7238316fe2037ea0ce43e2b4aeeb11e6eea2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 523cd4e58ad340dfaa8751868eccb5e593c67a74
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171337"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536386"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -31,14 +31,14 @@ ms.locfileid: "98171337"
   
  Always Encrypted es una característica diseñada para proteger la información confidencial, como números de tarjeta de crédito o números de identificación nacional (por ejemplo, los números de seguridad social de EE. UU.), almacenada en bases de datos [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Always Encrypted permite a los clientes cifrar información confidencial en aplicaciones cliente y nunca revelar las claves de cifrado en [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ([!INCLUDE[ssSDS](../../../includes/sssds-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Como resultado, Always Encrypted proporciona una separación entre aquellos que poseen los datos y pueden verlos, y aquellos que los administran, pero que no deberían tener acceso. Al asegurar que los administradores de base de datos local, los operadores de base de datos en la nube y otros con usuarios con privilegios elevados no autorizados no pueden obtener acceso a los datos cifrados, Always Encrypted permite a los clientes almacenar información confidencial de forma segura fuera de su control directo. Esto permite a las organizaciones almacenar sus datos en Azure, y permitir la delegación de la administración de la base de datos local a terceros, o reducir los requisitos de autorización de seguridad para su propio personal de administración de bases de datos.
 
- Always Encrypted proporciona capacidades de computación confidencial al permitir que [!INCLUDE[ssDE](../../../includes/ssde-md.md)] procese algunas consultas en datos cifrados y, al mismo tiempo, preserva la confidencialidad de los datos y brinda las ventajas de seguridad mencionadas anteriormente. En [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)], [!INCLUDE[sssSQLv14](../../../includes/sssqlv14-md.md)] y [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Always Encrypted admite la comparación de igualdad mediante el cifrado determinista. Vea [Selección del cifrado determinista o aleatorio](#selecting--deterministic-or-randomized-encryption). 
+ Always Encrypted proporciona capacidades de computación confidencial al permitir que [!INCLUDE[ssDE](../../../includes/ssde-md.md)] procese algunas consultas en datos cifrados y, al mismo tiempo, preserva la confidencialidad de los datos y brinda las ventajas de seguridad mencionadas anteriormente. En [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)], [!INCLUDE[sssSQLv14](../../../includes/sssql17-md.md)] y [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], Always Encrypted admite la comparación de igualdad mediante el cifrado determinista. Vea [Selección del cifrado determinista o aleatorio](#selecting--deterministic-or-randomized-encryption). 
 
   > [!NOTE] 
-  > En [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], los enclaves seguros amplían considerablemente las capacidades de computación confidencial de Always Encrypted con coincidencia de patrones, otros operadores de comparación y el cifrado en contexto. Vea [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md).
+  > En [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], los enclaves seguros amplían considerablemente las capacidades de computación confidencial de Always Encrypted con coincidencia de patrones, otros operadores de comparación y el cifrado en contexto. Vea [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md).
 
  Always Encrypted realiza cifrado transparente en las aplicaciones. Un controlador habilitado para Always Encrypted instalado en el equipo cliente consigue esto al cifrar y descifrar automáticamente la información confidencial en la aplicación cliente. El controlador cifra los datos en columnas confidenciales antes de pasar los datos a [!INCLUDE[ssDE](../../../includes/ssde-md.md)]y vuelve a escribir las consultas automáticamente para que se conserve la semántica de la aplicación. De forma similar, el controlador descifra los datos de forma transparente, almacenados en columnas de bases de datos cifradas, incluidas en los resultados de la consulta.  
   
- Always Encrypted está disponible en todas las ediciones de [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], a partir de [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)], y en todos los niveles de servicio de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. (Antes de [!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] SP1, Always Encrypted estaba limitado a Enterprise Edition). Si desea ver una presentación de Channel 9 que incluye Always Encrypted, vea [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Mantener protegida la información confidencial con Always Encrypted).  
+ Always Encrypted está disponible en todas las ediciones de [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)], a partir de [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)], y en todos los niveles de servicio de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. (Antes de [!INCLUDE[ssSQL15_md](../../../includes/sssql16-md.md)] SP1, Always Encrypted estaba limitado a Enterprise Edition). Si desea ver una presentación de Channel 9 que incluye Always Encrypted, vea [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Mantener protegida la información confidencial con Always Encrypted).  
 
   
 ## <a name="typical-scenarios"></a>Escenarios típicos  
@@ -70,9 +70,12 @@ Para obtener información sobre cómo desarrollar aplicaciones mediante Always 
 
 ## <a name="remarks"></a>Observaciones
 
-El cifrado y descifrado se produce a través del controlador de cliente. Esto significa que algunas acciones que se producen solo en el lado servidor no funcionarán cuando se use Always Encrypted. Entre los ejemplos se incluye la copia de datos de una columna a otra a través de una instrucción UPDATE, BULK INSERT (T-SQL), SELECT INTO o INSERT..SELECT. 
+El cifrado y descifrado se produce a través del controlador de cliente. Esto significa que algunas acciones que se producen solo en el lado servidor no funcionarán cuando se use Always Encrypted. Estas acciones incluyen, entre otras: 
+- Copiar datos de una columna a otra mediante una instrucción UPDATE, BULK INSERT (T-SQL), SELECT INTO o INSERT SELECT. 
+- Desencadenadores, tablas temporales, columnas dispersas, texto completo, OLTP en memoria y captura de datos modificados (CDC). 
 
-Aquí tiene un ejemplo de una instrucción UPDATE que intenta mover datos desde una columna cifrada a una columna sin cifrar sin devolver al cliente un conjunto de resultados: 
+
+Este es un ejemplo de una instrucción UPDATE que intenta mover datos de una columna cifrada a una columna sin cifrar sin devolver al cliente un conjunto de resultados: 
 
 ```sql
 update dbo.Patients set testssn = SSN
@@ -115,7 +118,7 @@ Para obtener detalles sobre los algoritmos criptográficos de Always Encrypted,
 |Cifrado de los datos existentes en las columnas seleccionadas de la base de datos|Sí|Sí|No|
 
 > [!NOTE]
-> [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md), introducido en [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], admite el cifrado de datos existentes con Transact-SQL. También elimina la necesidad de sacar los datos de la base de datos para realizar las operaciones criptográficas.
+> [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md), introducido en [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], admite el cifrado de datos existentes con Transact-SQL. También elimina la necesidad de sacar los datos de la base de datos para realizar las operaciones criptográficas.
 
 > [!NOTE]
 > Asegúrese de ejecutar las herramientas de aprovisionamiento de claves o de cifrado de datos en un entorno seguro, en un equipo que no sea el que hospeda la base de datos. De lo contrario, podría filtrarse información confidencial o las claves al entorno de servidor, lo que reduciría las ventajas del empleo de Always Encrypted.  
@@ -148,7 +151,7 @@ Use el [Asistente para Always Encrypted](../../../relational-databases/security/
   
 -   Las consultas en columnas cifradas mediante el cifrado aleatorio no pueden realizar operaciones en ninguna de esas columnas. No se admite la indexación de columnas cifradas mediante el cifrado aleatorio.  
  > [!NOTE] 
- > [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md), introducido en [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], aborda la limitación anterior al habilitar la coincidencia de patrones, los operadores de comparación y la indexación en columnas mediante el cifrado aleatorio.
+ > [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md), introducido en [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], aborda la limitación anterior al habilitar la coincidencia de patrones, los operadores de comparación y la indexación en columnas mediante el cifrado aleatorio.
 
 -   Una clave de cifrado de columna puede tener hasta dos valores cifrados diferentes, cada uno de ellos cifrado con una clave maestra de columna diferente. Esto facilita la rotación de claves maestras de columna.  
   

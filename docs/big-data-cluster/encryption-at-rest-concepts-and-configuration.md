@@ -10,12 +10,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: de0bc20d7551e8d42c5dc1463fada6ffcbb6a0fd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: df878f94c2ed6338ae28cbff156460ffdef87826
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257155"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046665"
 ---
 # <a name="encryption-at-rest-concepts-and-configuration-guide"></a>Conceptos y guía de configuración del cifrado en reposo
 
@@ -28,14 +28,14 @@ La plataforma Clústeres de macrodatos de SQL Server almacena datos en estas do
 
 Hay dos enfoques posibles para poder cifrar datos de manera transparente en Clústeres de macrodatos de SQL Server:
 
-* __Cifrado de volumen__ . Este enfoque es compatible con la plataforma de Kubernetes y se espera como un procedimiento recomendado para las implementaciones de Clústeres de macrodatos. En esta guía no se trata el cifrado de volumen. Consulte la documentación del dispositivo o de la plataforma de Kubernetes para ver guías sobre cómo cifrar correctamente los volúmenes que se usarán para Clústeres de macrodatos de SQL Server.
-* __Cifrado de nivel de aplicación__ . Esta arquitectura hace referencia al cifrado de datos por parte de la aplicación que controla los datos antes de que se escriban en el disco. En caso de que se expongan los volúmenes, un atacante no podrá restaurar los artefactos de datos en ningún otro lugar, a menos que el sistema de destino también se haya configurado con las mismas claves de cifrado. 
+* __Cifrado de volumen__. Este enfoque es compatible con la plataforma de Kubernetes y se espera como un procedimiento recomendado para las implementaciones de Clústeres de macrodatos. En esta guía no se trata el cifrado de volumen. Consulte la documentación del dispositivo o de la plataforma de Kubernetes para ver guías sobre cómo cifrar correctamente los volúmenes que se usarán para Clústeres de macrodatos de SQL Server.
+* __Cifrado de nivel de aplicación__. Esta arquitectura hace referencia al cifrado de datos por parte de la aplicación que controla los datos antes de que se escriban en el disco. En caso de que se expongan los volúmenes, un atacante no podrá restaurar los artefactos de datos en ningún otro lugar, a menos que el sistema de destino también se haya configurado con las mismas claves de cifrado. 
 
 El conjunto de características de cifrado en reposo de Clústeres de macrodatos de SQL Server admite el escenario principal de cifrado de nivel de aplicación para los componentes de HDFS y SQL Server.
 
 Se proporcionan las funcionalidades siguientes:
 
-* __Cifrado de reposo administrado por el sistema__ . Esta funcionalidad está disponible en CU8.
+* __Cifrado de reposo administrado por el sistema__. Esta funcionalidad está disponible en CU8.
 * __Cifrado en reposo administrado por el usuario (BYOK)__ , con integraciones de proveedor de claves externas y administradas por el servicio. Actualmente, solo se admiten las claves creadas por el usuario administradas por el servicio.
 
 ## <a name="key-definitions"></a>Definiciones clave
@@ -49,9 +49,9 @@ Un servicio hospedado de controlador responsable de administrar claves y certifi
 * Administración de certificados de TDE de SQL Server.
 
 En este momento no se admite esta característica:
-* *Compatibilidad con control de versiones de claves* . 
+* *Compatibilidad con control de versiones de claves*. 
 
-Durante el resto de este documento, haremos referencia a este servicio como __KMS de BDC__ . Además, el término __BDC__ se usa para hacer referencia a la plataforma informática __Clústeres de macrodatos de SQL Server__ .
+Durante el resto de este documento, haremos referencia a este servicio como __KMS de BDC__. Además, el término __BDC__ se usa para hacer referencia a la plataforma informática __Clústeres de macrodatos de SQL Server__.
 
 ### <a name="system-managed-keys-and-certificates"></a>Certificados y claves administrados por el sistema
 
@@ -98,7 +98,7 @@ El conjunto de características presenta el __servicio de controlador KMS de BDC
 
 El cifrado en reposo de Clústeres de macrodatos de SQL Server es una característica administrada por el servicio y puede requerir pasos adicionales según la ruta de acceso de implementación.
 
-Durante las __implementaciones nuevas de Clústeres de macrodatos de SQL Server__ , desde CU8 en adelante, el __cifrado en reposo estará habilitado y configurado de manera predeterminada__ . Esto significa lo siguiente:
+Durante las __implementaciones nuevas de Clústeres de macrodatos de SQL Server__, desde CU8 en adelante, el __cifrado en reposo estará habilitado y configurado de manera predeterminada__. Esto significa lo siguiente:
 
 * El componente KMS de BDC se implementará en el controlador y generará un conjunto predeterminado de claves y certificados.
 * SQL Server se implementará con TDE activado y el controlador instalará los certificados.
@@ -106,7 +106,7 @@ Durante las __implementaciones nuevas de Clústeres de macrodatos de SQL Server
 
 Se aplican los requisitos y comportamientos predeterminados descritos en la sección anterior.
 
-Si __actualiza el clúster a CU8__ , __lea atentamente la sección siguiente__ .
+Si __actualiza el clúster a CU8__, __lea atentamente la sección siguiente__.
 
 ### <a name="upgrading-to-cu8"></a>Actualización a CU8
 
@@ -117,14 +117,14 @@ En los clústeres existentes, el proceso de actualización no exigirá el cifrad
 
 * __SQL Server__
 
-    1. __Instancia maestra de SQL Server__ . El proceso de actualización no afectará las bases de datos de instancia maestra ni los certificados de TDE instalados, pero se recomienda hacer una copia de seguridad de las bases de datos y de los certificados TDE instalados manualmente antes del proceso de actualización. También se recomienda almacenar esos artefactos fuera del clúster de BDC de SQL Server.
-    1. __Grupo de proceso y bloque de almacenamiento__ . Esas bases de datos están administradas por el sistema, son volátiles, se volverán a crear y se cifrarán automáticamente en la actualización del clúster.
-    1. __Grupo de datos__ . La actualización no afecta las bases de datos de la parte de las instancias de SQL Server del grupo de datos.
+    1. __Instancia maestra de SQL Server__. El proceso de actualización no afectará las bases de datos de instancia maestra ni los certificados de TDE instalados, pero se recomienda hacer una copia de seguridad de las bases de datos y de los certificados TDE instalados manualmente antes del proceso de actualización. También se recomienda almacenar esos artefactos fuera del clúster de BDC de SQL Server.
+    1. __Grupo de proceso y bloque de almacenamiento__. Esas bases de datos están administradas por el sistema, son volátiles, se volverán a crear y se cifrarán automáticamente en la actualización del clúster.
+    1. __Grupo de datos__. La actualización no afecta las bases de datos de la parte de las instancias de SQL Server del grupo de datos.
 
 * __HDFS__
 
-    1. __HDFS__ . El proceso de actualización no tocará los archivos ni las carpetas de HDFS fuera de las zonas de cifrado.
-    1. __No se configurarán zonas de cifrado__ . El componente KMS de Hadoop no se configurará para usar KMS de BDC. A fin de configurar y habilitar la característica de zonas de cifrado de HDFS después de la actualización, siga la sección siguiente.
+    1. __HDFS__. El proceso de actualización no tocará los archivos ni las carpetas de HDFS fuera de las zonas de cifrado.
+    1. __No se configurarán zonas de cifrado__. El componente KMS de Hadoop no se configurará para usar KMS de BDC. A fin de configurar y habilitar la característica de zonas de cifrado de HDFS después de la actualización, siga la sección siguiente.
 
 ### <a name="enable-hdfs-encryption-zones-after-upgrade"></a>Habilitación de zonas de cifrado de HDFS después de la actualización
 

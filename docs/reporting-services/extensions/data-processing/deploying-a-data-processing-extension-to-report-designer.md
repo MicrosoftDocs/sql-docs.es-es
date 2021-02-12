@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae577ca756b4f575dd1bdf7c8e6c59e379d82098
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: ee0f4c58af897bacf929f0447141256a30682990
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529623"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065405"
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>Implementar una extensión de procesamiento de datos en el Diseñador de informes
   El Diseñador de informes utiliza las extensiones de procesamiento de datos para recuperar y procesar los datos mientras se diseñan los informes. Debería implementar el ensamblado de extensión de procesamiento de datos para el Diseñador de informes como un ensamblado privado. También tiene que realizar una entrada en el archivo de configuración del Diseñador de informes, RSReportDesigner.config.  

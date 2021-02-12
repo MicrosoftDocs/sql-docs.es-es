@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 06/09/2020
-ms.openlocfilehash: b0e5df690fd141a60a81a64c0d0a4ce9a72723ee
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 530478c30885e603d73a5bd35fe3a759b607b836
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935453"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014926"
 ---
 # <a name="configure-the-report-server-service-account-report-server-configuration-manager"></a>Configurar la cuenta de servicio del servidor de informes (Administrador de configuración del servidor de informes)
 

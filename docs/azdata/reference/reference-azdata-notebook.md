@@ -9,18 +9,18 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4a0e171861d01d7a3afe7904905d373aa5e57639
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: ece761617495c2d4b5d002541ac2d3838ec58d6f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678726"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048715"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
 Se aplica a [!INCLUDE [azure-data-cli-azdata](../../includes/azure-data-cli-azdata.md)]
 
-En el siguiente artículo se proporciona una referencia de los comandos **sql** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata** , vea la [Referencia de azdata](reference-azdata.md).
+En el siguiente artículo se proporciona una referencia de los comandos **sql** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandos
 
@@ -112,7 +112,7 @@ Aumente el nivel de detalle de registro. Use --debug para obtener registros de d
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre otros comandos de **azdata** , vea [Referencia de azdata](reference-azdata.md). 
+Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md). 
 
-Para obtener más información sobre cómo instalar la herramienta **azdata** , vea [Instalación de azdata](..\install\deploy-install-azdata.md).
+Para obtener más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata](..\install\deploy-install-azdata.md).
 

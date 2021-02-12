@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f133f6cf53123ed7c05f7a7181d5c829b45a258d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a3f301fa5e9395c86a3a771a959584acd181938
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74796904"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016975"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>Integración de Reporting Services con el acceso URL: aplicación de Windows
   Aunque el acceso URL a un servidor de informes se optimiza para un entorno web, también puede utilizar el acceso URL para incrustar informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una aplicación para [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Sin embargo, el acceso URL que implica formularios Windows Forms todavía requiere que use la tecnología del explorador web. Puede utilizar los escenarios de integración siguientes con el acceso URL y los formularios Windows Forms:  

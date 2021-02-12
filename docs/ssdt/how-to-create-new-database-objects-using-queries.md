@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: df5dc9a0af721e8582ec7f9095efe73d03af2710
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: c7afdd34756511df443c472eb6b80280fea32d96
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518775"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018305"
 ---
 # <a name="how-to-create-new-database-objects-using-queries"></a>Procedimientos: Creación de nuevos objetos de base de datos mediante consultas
 

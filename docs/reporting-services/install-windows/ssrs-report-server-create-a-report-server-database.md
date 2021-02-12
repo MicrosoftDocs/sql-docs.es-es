@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: 430e4fe05afff6f0c024bd8947dad625710913b6
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 70a92bf37285e9af58dcef2e7a69abfb88b37178
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236766"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067112"
 ---
 # <a name="create-a-report-server-database-report-server-configuration-manager"></a>Crear una base de datos del servidor de informes (Administrador de configuración del servidor de informes)  
 

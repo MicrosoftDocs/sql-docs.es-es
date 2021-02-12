@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d2baa90f-1b77-47ce-988d-1910c7c74103
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e7b04682474876f0697df97f772a4c6458582caa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5767d75d6f93b0d6305deb4a161261094c70beaf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372561"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100073339"
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>Selección avanzada de objetos (SybaseToSQL)
 El cuadro de diálogo **sección de objeto avanzado** permite filtrar los objetos de base de datos mediante cadenas y subcadenas en el nombre del objeto y, a continuación, seleccionar o anular la selección de esos objetos. SSMA realiza operaciones de conversión y migración en objetos seleccionados.  
