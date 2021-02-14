@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 58e9bf0ee719e650d8e7a5b8270fbe9f638b559d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e650bd924e893b21cbc6b154887d9cd6e66565b9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257932"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352777"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Cuadro de diálogo Filtrar (Complemento MDS para Excel)
 
@@ -47,9 +47,9 @@ ms.locfileid: "92257932"
 |Operador|Muestra los operadores correspondientes al tipo de atributo que estaba seleccionado. Para obtener más información, consulte [Operadores de filtro &#40;Master Data Services&#41;](../../master-data-services/filter-operators-master-data-services.md).|  
 |Criterios|Los criterios por los que desea filtrar.|  
 |Resumen de actualización|Cuando trabaje con conjuntos de datos grandes, haga clic para actualizar la sección **Resumen** con detalles de la cantidad de datos que se cargarán.|  
-|Sumar|Al hacer clic en un atributo en la sección **Columnas** y, a continuación, hacer clic en **Agregar**, se agrega un atributo a la lista de filtros.|  
+|Agregar|Al hacer clic en un atributo en la sección **Columnas** y, a continuación, hacer clic en **Agregar**, se agrega un atributo a la lista de filtros.|  
 |Quitar todo|Quita todos los filtros de la lista.|  
-|Remove|Quita el filtro seleccionado de la lista.|  
+|Quitar|Quita el filtro seleccionado de la lista.|  
   
 ## <a name="summary"></a>Resumen  
  Use la sección **Resumen** para ver los detalles de la cantidad de datos que se cargarán, antes de cargarlos.  
