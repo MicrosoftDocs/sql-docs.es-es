@@ -30,12 +30,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccb8c1e7f26102aa960ab720283debaceff2dd2c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e9892fe80ff3f29dca2ac46c99249fa603ab5528
+ms.sourcegitcommit: 6f4fb9cfd0cad06127a6328adc745e2ba7c191d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99203622"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99570489"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -132,7 +132,7 @@ RAISERROR ( { msg_str | @local_variable }
  Es una variable de un tipo de datos de caracteres válido que contiene una cadena formateada de la misma forma que *msg_str*. *\@local_variable* debe ser **char** o **varchar**, o bien se debe poder convertir implícitamente a estos tipos de datos.  
   
  *severity*  
- Es el nivel de gravedad definido por el usuario asociado a este mensaje. Cuando se usa *msg_id* para generar un mensaje definido por el usuario creado con sp_addmessage, la gravedad especificada en RAISERROR reemplaza la gravedad especificada en sp_addmessage.  
+ Es el [nivel de gravedad](../../relational-databases/errors-events/database-engine-error-severities.md) definido por el usuario asociado a este mensaje. Cuando se usa *msg_id* para generar un mensaje definido por el usuario creado con sp_addmessage, la gravedad especificada en RAISERROR reemplaza la gravedad especificada en sp_addmessage.  
   
  Todos los usuarios pueden especificar los niveles de gravedad del 0 al 18. Solo los miembros del rol fijo de servidor sysadmin o los usuarios con permisos ALTER TRACE pueden especificar los niveles de gravedad del 19 al 25. Para los niveles de gravedad del 19 al 25, se necesita la opción WITH LOG. Los niveles de gravedad menores que 0 se interpretan como 0. Los niveles de gravedad mayores que 25 se interpretan como 25.  
   

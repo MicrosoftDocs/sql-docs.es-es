@@ -21,12 +21,12 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec5ad1373336d3cc3873e0a0b81c2ad6c27291fa
-ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.openlocfilehash: 00783bffefd33038d079280c50983b9dfe03393f
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99250424"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100340066"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "99250424"
 > [!NOTE]  
 > Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys.dm_pdw_nodes_tran_locks**.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**resource_type**|**nvarchar(60)**|Representa el tipo de recurso. El valor puede ser uno de los siguientes: DATABASE, FILE, OBJECT, PAGE, KEY, EXTENT, RID, APPLICATION, METADATA, HOBT o ALLOCATION_UNIT.|  
 |**resource_subtype**|**nvarchar(60)**|Representa un subtipo de **resource_type**. Adquirir un bloqueo de subtipo sin mantener un bloqueo sin subtipos del tipo primario es técnicamente válido. Los diferentes subtipos no entran en conflicto, ni entre sí, ni con el tipo primario sin subtipos. No todos los tipos de recurso tienen subtipos.|  
@@ -63,9 +63,9 @@ ms.locfileid: "99250424"
   
 ## <a name="permissions"></a>Permisos
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, `Server admin` `Azure Active Directory admin` se requiere la cuenta o. En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
+En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, se requiere la cuenta de [Administrador del servidor](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o la cuenta de [Administrador de Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
  
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Un estado de solicitud Granted indica que se ha concedido el bloqueo sobre un recurso al solicitante. Una solicitud en espera indica que la solicitud aún no se ha concedido. La columna **request_status** devuelve los siguientes tipos de solicitud en espera:  
   
 -   Un estado de solicitud Convert indica que el solicitante ya tiene concedida una solicitud para un recurso y está esperando la concesión de una actualización a la solicitud inicial.  
@@ -100,7 +100,7 @@ Se mantienen bloqueos en recursos de [!INCLUDE[ssNoVersion](../../includes/ssnov
 |-------------------|--------------------------|--------------------------------------|  
 |DATABASE|Representa una base de datos.|No aplicable|  
 |FILE|Representa un archivo de la base de datos. Este archivo puede ser un archivo de datos o de registro.|No aplicable|  
-|OBJECT|Representa un objeto de la base de datos. Este objeto puede ser una tabla de datos, una vista, un procedimiento almacenado, un procedimiento almacenado extendido o cualquier objeto que tenga un Id. de objeto.|Id. de objeto|  
+|OBJECT|Representa un objeto de la base de datos. Este objeto puede ser una tabla de datos, una vista, un procedimiento almacenado, un procedimiento almacenado extendido o cualquier objeto que tenga un Id. de objeto.|Identificador de objeto|  
 |PAGE|Representa una página de un archivo de datos.|Identificador de HoBt. Este valor corresponde a **sys.partitions.hobt_id**. El identificador de HoBt no está siempre disponible para recursos PAGE, ya que es información adicional que puede proporcionar el autor de la llamada y no todos los autores de llamadas pueden proporcionar esta información.|  
 |KEY|Representa una fila en un índice.|Identificador de HoBt. Este valor corresponde a **sys.partitions.hobt_id**.|  
 |EXTENT|Representa la extensión de un archivo de datos. Una extensión es un grupo de ocho páginas contiguas.|No aplicable|  

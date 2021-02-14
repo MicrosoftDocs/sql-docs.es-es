@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 593c36c193b95d1484f3d478018992ea130d5417
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bddb9d2329c20203aca602e7aec37f235c4b6850
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418641"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077696"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Esquemas de inventario de acceso (AccessToSQL)
 En las secciones siguientes se describen las tablas que se crean al exportar esquemas de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -96,9 +96,9 @@ Los metadatos de columna se exportan a la tabla **SSMA_Access_InventoryColumns**
 |**ColumnName**|**nvarchar(4000)**|El nombre de la columna.|  
 |**IsNullable**|**bit**|Especifica si la columna puede contener valores NULL. Si el valor es 1, la columna puede contener valores NULL. Si el valor es 0, la columna no puede contener valores NULL. Tenga en cuenta que la regla de validación también se puede usar para evitar valores NULL.|  
 |**DataType**|**nvarchar(4000)**|El tipo de datos de acceso de la columna, como **texto** o **largo**.|  
-|**Disautoincrement**|**bit**|Especifica si la columna incrementa automáticamente los valores enteros. Si el valor es 1, los enteros se incrementan automáticamente.|  
+|**IsAutoIncrement**|**bit**|Especifica si la columna incrementa automáticamente los valores enteros. Si el valor es 1, los enteros se incrementan automáticamente.|  
 |**Ordinal**|**smallint**|El orden de la columna de la tabla, empezando por cero.|  
-|**DefaultValue**|**nvarchar(4000)**|Valor predeterminado para la columna.|  
+|**DefaultValue**|**nvarchar(4000)**|El valor predeterminado de la columna.|  
 |**(**|**nvarchar(4000)**|La regla que se usa para validar los datos agregados o actualizados en la columna.|  
   
 ## <a name="indexes"></a>Índices  

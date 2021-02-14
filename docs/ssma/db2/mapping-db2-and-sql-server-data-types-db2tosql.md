@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0579a5c477b9933b9937c1f003d3c7bbc056eae6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32cf19b192fe67802ae44eaf9ce6e4ca891d02ae
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497798"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072369"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Asignación de tipos de datos de DB2 y SQL Server (DB2ToSQL)
 Los tipos de base de datos DB2 son distintos de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de base de datos Al convertir objetos de base de datos DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, debe especificar cómo se asignan los tipos de datos de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en las secciones siguientes.  
@@ -88,6 +88,6 @@ En el procedimiento siguiente se muestra cómo asignar tipos de datos en el nive
 ## <a name="next-steps"></a>Pasos siguientes  
 El siguiente paso del proceso de migración es el [Informe de evaluación &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md) o la [conversión de esquemas DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). Si crea un informe de evaluación, los objetos DB2 se convierten automáticamente durante la evaluación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Migrar bases de datos DB2 a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

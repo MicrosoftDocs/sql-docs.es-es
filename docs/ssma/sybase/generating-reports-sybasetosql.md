@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 99516dc132f9c086c96bb3b886424927d68bab1b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 0dbc28cfac7a6d24bdb239964375ac19ab73ab20
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034964"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080696"
 ---
 # <a name="generating-reports-sybasetosql"></a>Generación de informes (SybaseToSQL)
 Los informes de ciertas actividades realizadas con comandos se generan en la consola de SSMA en el nivel de árbol de objetos.  
   
 Use el procedimiento siguiente para generar informes:  
   
-1.  Especifique el parámetro **Write-Summary-Report-to** . El informe relacionado se almacena como el nombre de archivo (si se especifica) o en la carpeta que especifique. El nombre de archivo está predefinido por el sistema, como se mencionó en la tabla siguiente, donde ** &lt; n &gt; ** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
+1.  Especifique el parámetro **Write-Summary-Report-to** . El informe relacionado se almacena como el nombre de archivo (si se especifica) o en la carpeta que especifique. El nombre de archivo está predefinido por el sistema, como se mencionó en la tabla siguiente, donde **&lt; n &gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
   
     Los comandos de los informes Vis-à-vis son los siguientes:  
   
@@ -85,7 +85,7 @@ Use el procedimiento siguiente para generar informes:
 ```  
   
 ### <a name="synchronize-target"></a>sincronizar-destino:  
-El comando **Synchronize-Target** tiene el parámetro **Report-Errors-to** , que especifica la ubicación del informe de errores para la operación de sincronización. A continuación, un archivo por el nombre **TargetSynchronizationReport &lt; n &gt; . XML** se crea en la ubicación especificada, donde ** &lt; n &gt; ** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
+El comando **Synchronize-Target** tiene el parámetro **Report-Errors-to** , que especifica la ubicación del informe de errores para la operación de sincronización. A continuación, un archivo por el nombre **TargetSynchronizationReport &lt; n &gt; . XML** se crea en la ubicación especificada, donde **&lt; n &gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
   
 **Nota:** Si se especifica la ruta de acceso de la carpeta, el parámetro "Report-Errors-to" se convierte en un atributo opcional para el comando "Synchronize-target".  
   
@@ -113,7 +113,7 @@ El comando **Synchronize-Target** tiene el parámetro **Report-Errors-to** , que
 -   error: script  
   
 ### <a name="refresh-from-database"></a>actualizar desde la base de datos:  
-El comando **Refresh-from-Database** tiene el parámetro **Report-Errors-to** , que especifica la ubicación del informe de errores para la operación de actualización. A continuación, un archivo por el nombre **SourceDBRefreshReport &lt; n &gt; . XML** se crea en la ubicación especificada, donde ** &lt; n &gt; ** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
+El comando **Refresh-from-Database** tiene el parámetro **Report-Errors-to** , que especifica la ubicación del informe de errores para la operación de actualización. A continuación, un archivo por el nombre **SourceDBRefreshReport &lt; n &gt; . XML** se crea en la ubicación especificada, donde **&lt; n &gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
   
 **Nota:** Si se especifica la ruta de acceso de la carpeta, el parámetro "Report-Errors-to" se convierte en un atributo opcional para el comando "Synchronize-target".  
   

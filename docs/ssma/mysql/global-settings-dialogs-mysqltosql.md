@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6df20fbb-e92d-475f-a94d-aaf70b06eb9b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e902927b90ff868e8766b3eb1fe9839938dd8ece
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f4211de000b662794498532ba213a7a2439e8a27
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463420"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070224"
 ---
 # <a name="global-settings-dialogs-mysqltosql"></a>Configuración global (cuadros de diálogo) (MySQLToSQL)
 Use la página cuadros de diálogo del cuadro de diálogo **configuración global** para especificar la configuración predeterminada de la acción del usuario y de la advertencia para SSMA.  

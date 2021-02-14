@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 41a1613a879579e809c8fd6a85d5c9b58c7b2b9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4fb81a05cebfaa1a2c59f7e2b90d8289412e140a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472582"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071142"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>Carga de objetos de base de datos convertidos en SQL Server (AccessToSQL)
 Después de haber convertido los objetos de base de datos de Access en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, puede cargar los objetos de base de datos resultantes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Puede hacer que SSMA cree los objetos, o bien puede crear un script de los objetos y ejecutar los scripts usted mismo. Además, SSMA le permite actualizar los metadatos de destino con el contenido real de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database.  
@@ -53,7 +53,7 @@ Para usar SSMA para crear [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
   
 **Para sincronizar objetos con SQL Server o SQL Azure**  
   
-1.  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure explorador de metadatos, expanda el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nodo superior o SQL Azure y, a continuación, expanda **bases**de datos.  
+1.  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure explorador de metadatos, expanda el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nodo superior o SQL Azure y, a continuación, expanda **bases** de datos.  
   
 2.  Seleccionar los objetos que se van a procesar:  
   
@@ -61,7 +61,7 @@ Para usar SSMA para crear [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
   
     -   Para sincronizar u omitir objetos o categorías de objetos individuales, Active o desactive la casilla situada junto al objeto o la carpeta.  
   
-3.  Una vez que haya seleccionado los objetos que desea procesar en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos o SQL Azure, haga clic con el botón secundario en **bases**de datos y, a continuación, haga clic en **sincronizar con base**de datos.  
+3.  Una vez que haya seleccionado los objetos que desea procesar en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos o SQL Azure, haga clic con el botón secundario en **bases** de datos y, a continuación, haga clic en **sincronizar con base** de datos.  
   
     También puede sincronizar objetos individuales o categorías de objetos; para ello, haga clic con el botón secundario en el objeto o en su carpeta primaria y, a continuación, haga clic en **sincronizar con base de datos**.  
   
@@ -82,17 +82,17 @@ Si desea guardar [!INCLUDE[tsql](../../includes/tsql-md.md)] definiciones de los
   
 **Para guardar uno o más objetos en un script**  
   
-1.  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el explorador de metadatos, expanda el nodo superior (el nombre del servidor) y, a continuación, expanda **bases**de datos.  
+1.  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el explorador de metadatos, expanda el nodo superior (el nombre del servidor) y, a continuación, expanda **bases** de datos.  
   
 2.  Realice uno o varios de los procedimientos siguientes:  
   
     -   Para incluir en el script una base de datos completa, active la casilla situada junto al nombre de la base de datos.  
   
-    -   Para generar un script u omitir vistas individuales, expanda la base de datos, expanda **vistas**y, a continuación, Active o desactive la casilla situada junto a la vista.  
+    -   Para generar un script u omitir vistas individuales, expanda la base de datos, expanda **vistas** y, a continuación, Active o desactive la casilla situada junto a la vista.  
   
-    -   Para generar un script u omitir tablas individuales, expanda la base de datos, expanda **tablas**y, a continuación, Active o desactive la casilla situada junto a la tabla.  
+    -   Para generar un script u omitir tablas individuales, expanda la base de datos, expanda **tablas** y, a continuación, Active o desactive la casilla situada junto a la tabla.  
   
-    -   Para generar un script u omitir los índices individuales de una tabla, expanda la tabla, expanda **índices**y, a continuación, Active o desactive el índice.  
+    -   Para generar un script u omitir los índices individuales de una tabla, expanda la tabla, expanda **índices** y, a continuación, Active o desactive el índice.  
   
 3.  Haga clic con el botón derecho en **bases de datos** y seleccione **Guardar como script**.  
   
@@ -107,7 +107,7 @@ Una vez guardadas las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
 **Para modificar un script**  
   
-1.  En el menú [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Archivo** , seleccione **Abrir**y haga clic en **Archivo**.  
+1.  En el menú [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Archivo** , seleccione **Abrir** y haga clic en **Archivo**.  
   
 2.  En el cuadro de diálogo **abrir** , busque y seleccione el archivo de script y, a continuación, haga clic en **Aceptar**.  
   

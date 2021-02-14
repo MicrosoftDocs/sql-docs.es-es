@@ -12,12 +12,12 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: dbbe6d602472a62e6d94c747a8856c507d8b2e06
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: d8cded1c88278ca67426eaf40df7bdd87474312c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480576"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350178"
 ---
 # <a name="deprecated-master-data-services-features"></a>Características en desuso de Master Data Services
 
@@ -34,7 +34,7 @@ ms.locfileid: "89480576"
   
 -   En el Explorador, la página de jerarquía derivada muestra ahora miembros sin asignar (sin usar) para cada nivel de jerarquía. Los nodos sin usar se agrupan por nivel de la jerarquía. Los miembros se pueden mover entre los nodos sin usar y raíz, arrastrando y colocando o cortando y pegando.  
   
-     En Administración del sistema, están visibles en los nodos sin usar el panel **Vista previa** . En Seguridad, los nodos sin usar se muestran en el panel **Permisos de los miembros de la jerarquía** . Se puede asignar un permiso a cualquier miembro, ya sea bajo el nodo **Raíz** o **Sin usar** . También se puede asignar permisos a los seudomiembros **Raíz**, **Sin usar**y **Sin usar** .  
+     En Administración del sistema, están visibles en los nodos sin usar el panel **Vista previa** . En Seguridad, los nodos sin usar se muestran en el panel **Permisos de los miembros de la jerarquía** . Se puede asignar un permiso a cualquier miembro, ya sea bajo el nodo **Raíz** o **Sin usar** . También se puede asignar permisos a los seudomiembros **Raíz**, **Sin usar** y **Sin usar** .  
   
 -   El procedimiento almacenado, mdm.udpConvertCollectionAndConsolidatedMembersToLeaf, convierte jerarquías explícitas en jerarquías derivadas recursivas, y convierte miembros consolidados y de colección en miembros hoja.  
   

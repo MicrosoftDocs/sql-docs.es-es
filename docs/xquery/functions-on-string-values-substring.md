@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a4881fc4710ba56439eb98b5b196af93247c11f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7457341a5489485973869e46c2ba721b86352217
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768154"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345010"
 ---
 # <a name="functions-on-string-values---substring"></a>Funciones usadas en valores de cadena: substring
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

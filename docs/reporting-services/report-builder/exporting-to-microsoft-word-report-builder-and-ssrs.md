@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: afcafeeb554e60c84c3d5e5051db354721371416
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e1a9fd855d1b0bc8defd0e4355f490a2824fead6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86972133"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015265"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
 
@@ -132,7 +132,7 @@ ms.locfileid: "86972133"
   
 -   Una vez exportado el informe, Word lo pagina de nuevo. Esto puede hacer que aparezcan saltos de página adicionales en el informe representado.  
   
--   Word no repite las filas de encabezado en la página dos y siguientes, aunque se establezca en **True**la propiedad RepeatOnNewPage de la fila de encabezado estática de un Tablix (tabla, matriz o lista). Puede definir saltos de página explícitos en su informe para obligar a las filas de encabezado a aparecer en nuevas páginas. Sin embargo, dado que Word aplica su propia paginación al informe representado exportado a Word, los resultados podrían variar y la fila de encabezado podría no repetirse previsiblemente. La fila de encabezado estática es la fila que contiene los encabezados de columna.  
+-   Word no repite las filas de encabezado en la página dos y siguientes, aunque se establezca en **True** la propiedad RepeatOnNewPage de la fila de encabezado estática de un Tablix (tabla, matriz o lista). Puede definir saltos de página explícitos en su informe para obligar a las filas de encabezado a aparecer en nuevas páginas. Sin embargo, dado que Word aplica su propia paginación al informe representado exportado a Word, los resultados podrían variar y la fila de encabezado podría no repetirse previsiblemente. La fila de encabezado estática es la fila que contiene los encabezados de columna.  
   
 -   Los cuadros de texto aumentan de tamaño cuando contienen espacios de no separación.  
   

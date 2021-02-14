@@ -19,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6696c88262753f12651b57b5e227c80c7c61ae83
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: ea657e595c955589d645db5ec4fccb17a0549a62
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237523"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100337001"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "99237523"
 > [!IMPORTANT]
 > Dependiendo de la acción y los estados de nivel superior, la información del estado de la base de datos puede no estar disponible u obsoleta. Además, los valores solo tienen relevancia local. 
    
-|Nombre de columna|Tipo de datos|Descripción (en la réplica principal)|  
+|Nombre de la columna|Tipo de datos|Descripción (en la réplica principal)|  
 |-----------------|---------------|----------------------------------------|  
 |**database_id**|**int**|Identificador de la base de datos.|  
 |**group_id**|**uniqueidentifier**|Identificador del grupo de disponibilidad al que pertenece la base de datos.|  
@@ -72,8 +72,8 @@ ms.locfileid: "99237523"
 |**last_commit_time**|**datetime**|Hora correspondiente al último registro de confirmación.<br /><br /> En la base de datos secundaria, esta hora es igual la misma que para la base de datos principal.<br /><br /> En la réplica principal, cada fila de la base de datos secundaria muestra la hora que la réplica secundaria que hospeda dicha base de datos secundaria ha notificado a la réplica principal. La diferencia en el tiempo entre la fila de base de datos principal y una fila de base de datos secundaria determinada representa aproximadamente el objetivo de punto de recuperación (RPO), suponiendo que el proceso de puesta al día se ha detenido y que la réplica secundaria ha devuelto el progreso a la réplica principal.|  
 |**low_water_mark_for_ghosts**|**bigint**|Un número que aumenta regularmente para la base de datos que indica una marca de límite inferior utilizada por la limpieza de registros fantasma en la base de datos principal. Si este número no aumenta con el tiempo, implica que no puede producirse la limpieza de registros fantasma. Para decidir qué filas fantasma se han de limpiar, la réplica principal utiliza el valor mínimo de esta columna para esta base de datos en todas las réplicas de disponibilidad (incluida la réplica principal).|  
 |**secondary_lag_seconds**|**bigint**|El número de segundos que la réplica secundaria está detrás de la réplica principal durante la sincronización.<br /><br />**Se aplica a:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores.|  
-|**quorum_commit_lsn**|**numeric(25,0)**|Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|
-|**quorum_commit_time**|**datetime**|Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|
+|**quorum_commit_lsn**|**numeric(25,0)**|Solamente se identifica con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|
+|**quorum_commit_time**|**datetime**|Solamente se identifica con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|
 
 
 ## <a name="permissions"></a>Permisos

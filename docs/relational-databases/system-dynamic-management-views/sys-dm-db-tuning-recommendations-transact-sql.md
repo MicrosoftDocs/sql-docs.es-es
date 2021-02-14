@@ -22,12 +22,12 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9037aaefe27cd50deb9b61af423a8074ab86f65
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 332e035a12de891bde8324a55f08a2baf59a9edc
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99204807"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343044"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>recomendaciones para la optimización de sys.dm \_ dB \_ \_ (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -57,12 +57,12 @@ ms.locfileid: "99204807"
 | **score** | **int** | Valor estimado/impacto para esta recomendación en la escala 0-100 (cuanto mayor sea el mejor) |
 | **indicaciones** | **nvarchar(max)** | Documento JSON que contiene más detalles sobre la recomendación. Los campos siguientes están disponibles:<br /><br />`planForceDetails`<br />-    `queryId` - \_ ID. de consulta de la consulta devuelta.<br />-    `regressedPlanId` -plan_id del plan con regresión.<br />-   `regressedPlanExecutionCount` -Número de ejecuciones de la consulta con el plan con regresión antes de que se detecte la regresión.<br />-    `regressedPlanAbortedCount` -Número de errores detectados durante la ejecución del plan de regresión.<br />-    `regressedPlanCpuTimeAverage` -Tiempo medio de CPU (en micro segundos) consumido por la consulta devuelta antes de que se detecte la regresión.<br />-    `regressedPlanCpuTimeStddev` : Desviación estándar del tiempo de CPU consumido por la consulta devuelta antes de que se detecte la regresión.<br />-    `recommendedPlanId` -plan_id del plan que se debe forzar.<br />-   `recommendedPlanExecutionCount`-Número de ejecuciones de la consulta con el plan que se deben forzar antes de que se detecte la regresión.<br />-    `recommendedPlanAbortedCount` -Número de errores detectados durante la ejecución del plan que deben forzarse.<br />-    `recommendedPlanCpuTimeAverage` -Tiempo medio de CPU (en micro segundos) consumido por la consulta ejecutada con el plan que se debe forzar (se calcula antes de que se detecte la regresión).<br />-    `recommendedPlanCpuTimeStddev` Desviación estándar del tiempo de CPU consumido por la consulta devuelta antes de que se detecte la regresión.<br /><br />`implementationDetails`<br />-  `method` : Método que se debe usar para corregir la regresión. El valor es siempre `TSql` .<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script que debe ejecutarse para forzar el plan recomendado. |
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La información devuelta por `sys.dm_db_tuning_recommendations` se actualiza cuando el motor de base de datos identifica una posible regresión de rendimiento de consultas y no se conserva. Las recomendaciones solo se mantienen hasta que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinicia. Los administradores de bases de datos deben realizar periódicamente copias de seguridad de la recomendación de optimización si quieren mantenerlas después del reciclaje del servidor. 
 
  `currentValue` el campo de la `state` columna puede tener los valores siguientes:
  
- | Estado | Descripción |
+ | Status | Descripción |
  |--------|-------------|
  | `Active` | La recomendación está activa y aún no se ha aplicado. El usuario puede tomar el script de recomendación y ejecutarlo manualmente. |
  | `Verifying` | La recomendación se aplica mediante [!INCLUDE[ssde_md](../../includes/ssde_md.md)] y el proceso de comprobación interno compara el rendimiento del plan forzado con el plan con regresión. |
@@ -85,6 +85,8 @@ El documento JSON de la `state` columna contiene el motivo que describe por qué
 | `VerificationForcedQueryRecompile`| La consulta se vuelve a compilar porque no hay una mejora significativa del rendimiento. |
 | `PlanForcedByUser`| El usuario forzó manualmente el plan mediante [sp_query_store_force_plan &#40;procedimiento de&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) . El motor de base de datos no aplicará la recomendación si el usuario decidió forzar explícitamente algún plan. |
 | `PlanUnforcedByUser` | El usuario no aplicó manualmente el plan mediante [sp_query_store_unforce_plan &#40;procedimiento de&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md) . Puesto que el usuario ha revertido explícitamente el plan recomendado, el motor de base de datos seguirá usando el plan actual y generará una nueva recomendación si se produce alguna regresión del plan en el futuro. |
+| `UserForcedDifferentPlan` | El usuario forzó manualmente un plan diferente mediante [sp_query_store_force_plan &#40;procedimiento de&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) . El motor de base de datos no aplicará la recomendación si el usuario decidió forzar explícitamente algún plan. |
+| `TempTableChanged` | Se ha cambiado una tabla temporal que se usó en el plan. |
 
  La estadística de la columna detalles no muestra las estadísticas del plan en tiempo de ejecución (por ejemplo, el tiempo de CPU actual). Los detalles de la recomendación se toman en el momento de la detección de regresión y describen por qué se ha [!INCLUDE[ssde_md](../../includes/ssde_md.md)] identificado la regresión de rendimiento. Use `regressedPlanId` y `recommendedPlanId` para consultar [almacén de consultas vistas de catálogo](../../relational-databases/performance/how-query-store-collects-data.md) para encontrar estadísticas exactas del plan en tiempo de ejecución.
 

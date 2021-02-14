@@ -12,12 +12,12 @@ ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ed34730c85a8d492bb40e3013ea5a9a05fc01d90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 315cfed40b1ccdadf349d9b371d6baac5928d3af
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454385"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081078"
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>Deshabilitación de Stretch Database y devolución de datos remotos
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88454385"
   
 1.  En SQL Server Management Studio, en el Explorador de objetos, seleccione la tabla para la que quiere deshabilitar Stretch Database.  
   
-2.  Haga clic con el botón derecho y seleccione **Stretch**y, luego, seleccione una de las siguientes opciones.  
+2.  Haga clic con el botón derecho y seleccione **Stretch** y, luego, seleccione una de las siguientes opciones.  
   
     -   **Deshabilitar | Devolver datos de Azure**. Copie los datos remotos de la tabla de Azure en SQL Server y luego deshabilite Stretch Database para la tabla. Este comando no se puede cancelar.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "88454385"
   
 1.  En SQL Server Management Studio, en el Explorador de objetos, seleccione la base de datos para la que quiere deshabilitar Stretch Database.  
   
-2.  Haga clic con el botón derecho y seleccione **Tareas**, luego **Stretch**y, por último, **Deshabilitar**.  
+2.  Haga clic con el botón derecho y seleccione **Tareas**, luego **Stretch** y, por último, **Deshabilitar**.  
   
 > [!NOTE]
 > Al deshabilitar Stretch Database para una base de datos no se elimina la base de datos remota. Si quiere eliminar la base de datos remota, debe hacerlo mediante el Portal de administración de Azure. La base de datos remota sigue acumulando costos de Azure hasta que se elimina. Para obtener más información, consulte [Precios SQL Server Stretch Database](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).  

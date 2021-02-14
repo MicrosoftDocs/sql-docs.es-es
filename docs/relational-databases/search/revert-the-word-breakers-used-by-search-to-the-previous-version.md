@@ -12,26 +12,28 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4a2624566444f5cc3b9531d5b6767937dabb2da6
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f99e5892f697b06bcafcfc35f9672d8ee474bc40
+ms.sourcegitcommit: 10ae200635b9e8554e6bc6f658125e1a80d4d5ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644010"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99589307"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>Reversión a la versión anterior de los separadores de palabras usados por Buscar (Búsqueda de SQL Server)
+
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala y habilita una versión de los separadores de palabras y lematizadores para todos los idiomas admitidos por búsqueda de texto completo, a excepción del coreano. En este artículo se describe cómo pasar de esta versión de estos componentes a la versión previa o viceversa.  
+
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] instala y habilita una versión de los separadores de palabras y lematizadores para todos los idiomas admitidos por búsqueda de texto completo, a excepción del coreano. En este artículo se describe cómo pasar de esta versión de estos componentes a la versión previa o viceversa.  
   
  En este artículo no se explican los siguientes idiomas:  
   
--   **Inglés**. Para revertir o restaurar los componentes en inglés, vea [Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+- **Inglés**. Para revertir o restaurar los componentes en inglés, vea [Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
--   **Danés, polaco y turco**. Se han reemplazado los separadores de palabras de terceros para danés, polaco y turco que se incluían en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con componentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+- **Danés, polaco y turco**. Se han reemplazado los separadores de palabras de terceros para danés, polaco y turco que se incluían en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con componentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
--   **Checo y griego**. Existen nuevos separadores de palabras para checo y griego. Las versiones anteriores de búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no incluían compatibilidad con estos dos idiomas.  
+- **Checo y griego**. Existen nuevos separadores de palabras para checo y griego. Las versiones anteriores de búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no incluían compatibilidad con estos dos idiomas.  
   
--   **Coreano**. En esta versión no se actualiza el separador de palabras y el lematizador para el idioma coreano.  
+- **Coreano**. En esta versión no se actualiza el separador de palabras y el lematizador para el idioma coreano.  
   
  Para obtener información general sobre los separadores de palabras y lematizadores, vea [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
@@ -42,7 +44,7 @@ ms.locfileid: "97644010"
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
 |NaturalLanguage6.dll|NaturalLanguage6.dll|34|Obtenga e instale una versión anterior de NaturalLanguage6.dll, sobrescribiendo la versión actual del archivo.|No es necesaria ninguna acción.<br /><br /> Las claves del Registro y los valores no han cambiado en esta versión.|  
 |(Otro nombre de archivo)|NaturalLanguage6.dll|5|Obtenga e instale una versión anterior de NaturalLanguage6.dll, sobrescribiendo la versión actual del archivo.|Cambie un conjunto de entradas del Registro para especificar la versión anterior de los componentes.|  
-|(Otro nombre de archivo)|(Otro nombre de archivo)|6|No es necesaria ninguna acción.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copia la versión actual y las anteriores de los componentes en la carpeta Binn.|Cambie un conjunto de entradas del Registro para especificar la versión anterior de los componentes.|  
+|(Otro nombre de archivo)|(Otro nombre de archivo)|6|No es necesaria ninguna acción.<br /><br /> [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] copia la versión actual y las anteriores de los componentes en la carpeta Binn.|Cambie un conjunto de entradas del Registro para especificar la versión anterior de los componentes.|  
   
 > [!WARNING]  
 >  Si reemplaza la versión actual del archivo NaturalLanguage6.dll con una versión distinta, el comportamiento de todos los idiomas que utilizan este archivo se verá afectado.  
@@ -61,40 +63,40 @@ ms.locfileid: "97644010"
   
 |Idioma|Abreviatura<br />utilizada en el<br />Registro|LCID|  
 |--------------|---------------------------------------|----------|  
-|Bengalí|ben|1093|  
-|Búlgaro|bgr|1026|  
-|Catalán|cat|1027|  
-|Español|esn|3082|  
-|Francés|fra|1036|  
-|Gujarati|guj|1095|  
-|Hebreo|heb|1037|  
-|Hindi|hin|1081|  
-|Croata|hrv|1050|  
-|Indonesio|ind|1057|  
-|Islandés|isl|1039|  
-|Italiano|ita|1040|  
-|Canarés|kan|1099|  
-|Lituano|lth|1063|  
-|Letón|lvi|1062|  
-|Malayalam|mal|1100|  
-|Maratí|mar|1102|  
-|Malayo|msl|1086|  
-|Neutra|Neutra|0000|  
-|Noruego (Bokmal)|nor|1044|  
-|Punjabi|panorámica|1094|  
-|Portugués (Brasil)|ptb|1046|  
-|Portugués|ptg|2070|  
-|Rumano|rom|1048|  
-|Eslovaco|sky|1051|  
-|Esloveno|slv|1060|  
-|Serbio (cirílico)|srb|3098|  
-|Serbio (latino)|srl|2074|  
-|Sueco|sve|1053|  
-|Tamil|tam|1097|  
-|Telugu|tel|1098|  
-|Ucraniano|ukr|1058|  
-|Urdu|urd|1056|  
-|Vietnamita|vit|1066|  
+|Bengalí|`ben`|1093|  
+|Búlgaro|`bgr`|1026|  
+|Catalán|`cat`|1027|  
+|Español|`esn`|3082|  
+|Francés|`fra`|1036|  
+|Gujarati|`guj`|1095|  
+|Hebreo|`heb`|1037|  
+|Hindi|`hin`|1081|  
+|Croata|`hrv`|1050|  
+|Indonesio|`ind`|1057|  
+|Islandés|`isl`|1039|  
+|Italiano|`ita`|1040|  
+|Canarés|`kan`|1099|  
+|Lituano|`lth`|1063|  
+|Letón|`lvi`|1062|  
+|Malayalam|`mal`|1100|  
+|Maratí|`mar`|1102|  
+|Malayo|`msl`|1086|  
+|Neutra|`Neutral`|0000|  
+|Noruego (Bokmal)|`nor`|1044|  
+|Punjabi|`pan`|1094|  
+|Portugués (Brasil)|`ptb`|1046|  
+|Portugués|`ptg`|2070|  
+|Rumano|`rom`|1048|  
+|Eslovaco|`sky`|1051|  
+|Esloveno|`slv`|1060|  
+|Serbio (cirílico)|`srb`|3098|  
+|Serbio (latino)|`srl`|2074|  
+|Sueco|`sve`|1053|  
+|Tamil|`tam`|1097|  
+|Telugu|`tel`|1098|  
+|Ucraniano|`ukr`|1058|  
+|Urdu|`urd`|1056|  
+|Vietnamita|`vit`|1066|  
   
  La tabla anterior está ordenada alfabéticamente según la columna Abreviatura.  
   
@@ -102,9 +104,9 @@ ms.locfileid: "97644010"
   
 1.  Navegue a la carpeta Binn descrita anteriormente.  
   
-2.  Copie la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de NaturalLanguage6.dll en otra ubicación.  
+2.  Copie la versión de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] de NaturalLanguage6.dll en otra ubicación.  
   
-3.  Copie la versión anterior de NaturalLanguage6.dll de la carpeta Binn de una instancia de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] en la carpeta Binn de la instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+3.  Copie la versión anterior de NaturalLanguage6.dll de la carpeta Binn de una instancia de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] en la carpeta Binn de la instancia de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   
     > [!WARNING]  
     >  Este cambio afecta a todos los idiomas que utilizan NaturalLanguage6.dll en la versión actual y en la anterior.  
@@ -113,9 +115,9 @@ ms.locfileid: "97644010"
 
 ###  <a name="to-restore-the-current-components"></a><a name="nl6nl6restore"></a> Para restaurar los componentes actuales  
   
-1.  Navegue a la ubicación en la que realizó la copia de seguridad de la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de NaturalLanguage6.dll.  
+1.  Navegue a la ubicación en la que realizó la copia de seguridad de la versión de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] de NaturalLanguage6.dll.  
   
-2.  Copie la versión actual de NaturalLanguage6.dll de la ubicación de la copia de seguridad de la carpeta Binn de la instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+2.  Copie la versión actual de NaturalLanguage6.dll de la ubicación de la copia de seguridad de la carpeta Binn de la instancia de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   
     > [!WARNING]  
     >  Este cambio afecta a todos los idiomas que utilizan NaturalLanguage6.dll en la versión actual y en la anterior.  
@@ -148,9 +150,9 @@ ms.locfileid: "97644010"
   
 2.  No elimine los archivos de la versión actual de los componentes de la carpeta Binn.  
   
-3.  Copie la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de NaturalLanguage6.dll en otra ubicación.  
+3.  Copie la versión de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] de NaturalLanguage6.dll en otra ubicación.  
   
-4.  Copie la versión anterior de NaturalLanguage6.dll de la carpeta Binn de una instancia de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] en la carpeta Binn de la instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+4.  Copie la versión anterior de NaturalLanguage6.dll de la carpeta Binn de una instancia de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] en la carpeta Binn de la nueva instancia de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
     > [!WARNING]  
     >  Este cambio afecta a todos los idiomas que utilizan NaturalLanguage6.dll en la versión actual y en la anterior.  
@@ -177,9 +179,9 @@ ms.locfileid: "97644010"
   
 ###  <a name="to-restore-the-current-components"></a><a name="newnl6restore"></a> Para restaurar los componentes actuales  
   
-1.  Navegue a la ubicación en la que realizó la copia de seguridad de la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de NaturalLanguage6.dll.  
+1.  Navegue a la ubicación en la que realizó la copia de seguridad de la versión de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] de NaturalLanguage6.dll.  
   
-2.  Copie la versión actual de NaturalLanguage6.dll de la ubicación de la copia de seguridad de la carpeta Binn de la instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+2.  Copie la versión actual de NaturalLanguage6.dll de la ubicación de la copia de seguridad de la carpeta Binn de la instancia de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   
     > [!WARNING]  
     >  Este cambio afecta a todos los idiomas que utilizan NaturalLanguage6.dll en la versión actual y en la anterior.  
@@ -255,7 +257,7 @@ ms.locfileid: "97644010"
 |Nombre de archivo actual|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="languages-for-which-neither-the-previous-nor-the-current-file-name-is-naturallanguage6dll"></a><a name="newnew"></a> Idiomas para los que ni el nombre de archivo anterior ni el actual es NaturalLanguage6.dll  
- Para los idiomas en la tabla siguiente, los nombres de archivo de los separadores de palabras y los lematizadores anteriores son diferentes de los nombres de archivo de las nuevas versiones. Ni el nombre de archivo anterior ni el actual es NaturalLanguage6.dll. No tendrá que reemplazar los archivos, porque la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copia la versión actual y las anteriores de los componentes en la carpeta Binn. Sin embargo, tendrá que cambiar un conjunto de entradas del Registro para especificar la versión anterior o actual de los componentes.  
+ Para los idiomas en la tabla siguiente, los nombres de archivo de los separadores de palabras y los lematizadores anteriores son diferentes de los nombres de archivo de las nuevas versiones. Ni el nombre de archivo anterior ni el actual es NaturalLanguage6.dll. No tendrá que reemplazar los archivos, porque la instalación de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] copia la versión actual y las anteriores de los componentes en la carpeta Binn. Sin embargo, tendrá que cambiar un conjunto de entradas del Registro para especificar la versión anterior o actual de los componentes.  
   
  **Lista de idiomas afectados**  
   

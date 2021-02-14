@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 91abdbbec357c5d5b7b629c5619b221c14bc0d15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c1331d00c0c39cbe3a82f4372aaed38a315dc3c3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500605"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338985"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Eliminar un grupo de atributos (Master Data Services)
 
@@ -46,7 +46,7 @@ ms.locfileid: "88500605"
   
 4.  Haga clic en **Grupos de atributos**.  
   
-5.  En la página **Administrar grupos de atributos** , seleccione el tipo de miembro en la lista desplegable **Member Types** (Tipos de miembros) para expandir **Hoja**, **Consolidado**o **Colección**, según el tipo de grupo que quiera eliminar.  
+5.  En la página **Administrar grupos de atributos** , seleccione el tipo de miembro en la lista desplegable **Member Types** (Tipos de miembros) para expandir **Hoja**, **Consolidado** o **Colección**, según el tipo de grupo que quiera eliminar.  
   
 6.  Haga clic en el grupo de atributos que desea eliminar.  
   

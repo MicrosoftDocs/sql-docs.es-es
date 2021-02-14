@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ded91465a2a9c7b5a0e8ddcdc219b2af5a84395e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 44ac691a0fe9cb4b513a2f9b435457c699c7e3e9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935370"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076096"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Asignación de bases de datos de MySQL a esquemas de SQL Server (MySQLToSQL)
 De forma predeterminada, SSMA para MySQL migra todos los objetos de un esquema de MySQL a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database denominada para el esquema. Sin embargo, puede personalizar la asignación entre los esquemas de MySQL y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database.  
@@ -26,7 +26,7 @@ De forma predeterminada, SSMA para MySQL migra todos los objetos de un esquema d
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>Esquemas de MySQL y SQL Server o SQL Azure  
 El concepto de MySQL de un esquema se asigna al concepto de SQL Server de una base de datos y a uno de sus esquemas. SSMA hace referencia a la combinación de SQL Server de la base de datos y el esquema como un esquema.  
   
-El concepto de MySQL de un esquema se asigna al concepto de SQL Server de una base de datos y a uno de sus esquemas. Por ejemplo, MySQL podría tener un esquema denominado **HR**. Una instancia de SQL Server podría tener una base de datos denominada **HR**y, dentro de esa base de datos, los esquemas. Un esquema es el esquema **DBO** (o el propietario de la base de datos). De forma predeterminada, el **HR** del esquema MySQL se asignará a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos y el esquema **HR. DBO**. SSMA hace referencia a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinación de base de datos y esquema como esquema.  
+El concepto de MySQL de un esquema se asigna al concepto de SQL Server de una base de datos y a uno de sus esquemas. Por ejemplo, MySQL podría tener un esquema denominado **HR**. Una instancia de SQL Server podría tener una base de datos denominada **HR** y, dentro de esa base de datos, los esquemas. Un esquema es el esquema **DBO** (o el propietario de la base de datos). De forma predeterminada, el **HR** del esquema MySQL se asignará a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos y el esquema **HR. DBO**. SSMA hace referencia a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinación de base de datos y esquema como esquema.  
   
 Puede modificar la asignación entre MySQL y los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas de Azure.  
   
@@ -66,7 +66,7 @@ Si personaliza la asignación entre un esquema de MySQL y un esquema de SQL Serv
   
 1.  En la pestaña asignación de esquema, seleccione cualquier fila y haga clic en **Restablecer valores predeterminados** para revertir a la base de datos y el esquema predeterminados.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
 Si desea analizar la conversión de objetos de MySQL en SQL Server o SQL Azure objetos, puede [crear un informe de conversión](assessing-mysql-databases-for-conversion-mysqltosql.md) ; de lo contrario, puede [convertir las definiciones de objetos de base de datos de MySQL](converting-mysql-databases-mysqltosql.md) en esquemas de SQL Server o SQL Azure  
   
 ## <a name="see-also"></a>Consulte también  

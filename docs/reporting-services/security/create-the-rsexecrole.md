@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3735f53eac6101d2cc02568d1ea6fa789df50512
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: fc9beaae557b81ae65e4fd63a22f5696b4f78052
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935392"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015333"
 ---
 # <a name="create-the-rsexecrole"></a>Crear el RSExecRole
 
@@ -60,7 +60,7 @@ ms.locfileid: "91935392"
   
 6.  Abra **Roles**.  
   
-7.  Haga clic con el botón derecho en **Roles de base de datos**y seleccione **Nuevo rol de la base de datos**. Aparece la página **Rol de base de datos - Nuevo**.  
+7.  Haga clic con el botón derecho en **Roles de base de datos** y seleccione **Nuevo rol de la base de datos**. Aparece la página **Rol de base de datos - Nuevo**.  
   
 8.  En **Nombre de rol**, escriba **RSExecRole**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "91935392"
   
     3.  xp_sqlagent_notify  
   
-18. Haga clic en **Aceptar**y, a continuación, vuelva a hacer clic en **Aceptar** .  
+18. Haga clic en **Aceptar** y, a continuación, vuelva a hacer clic en **Aceptar** .  
   
 19. En la fila **Ejecutar**, en la columna **Conceder**, haga clic en la casilla.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "91935392"
   
 4.  Abra **Roles**.  
   
-5.  Haga clic con el botón derecho en **Roles de base de datos**y seleccione **Nuevo rol de la base de datos**. Aparece la página General.  
+5.  Haga clic con el botón derecho en **Roles de base de datos** y seleccione **Nuevo rol de la base de datos**. Aparece la página General.  
   
 6.  En Nombre de rol, escriba **RSExecRole**.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "91935392"
   
     2.  sysjobs  
   
-27. Haga clic en **Aceptar**y, a continuación, vuelva a hacer clic en **Aceptar** .  
+27. Haga clic en **Aceptar** y, a continuación, vuelva a hacer clic en **Aceptar** .  
   
 28. Seleccione la primera tabla: syscategories.  
   

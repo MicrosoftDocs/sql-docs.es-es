@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3959fdd6512afe12270b353393e4c72c651fc57a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fb998c464acaf6296ef4b0b188f33e5798c757a5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939189"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074814"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Buscar elementos de informe y establecer una carpeta predeterminada (Generador de informes y SSRS)
 La manera más fácil de crear un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es agregar elementos de informe existentes, como tablas y gráficos, desde la galería de elementos de informe. Al agregar un elemento de informe al informe, también agrega todo lo que debe tener para que funcione. Por ejemplo, cualquier elemento de informe que muestre los datos depende de un conjunto de datos, es decir, una consulta y una conexión a un origen de datos. Después de agregar el elemento de informe a un informe, puede modificarlo como convenga.  
@@ -27,7 +27,7 @@ La manera más fácil de crear un informe paginado de [!INCLUDE[ssRSnoversion](.
   
 1.  En el menú **Insertar** , haga clic en **Elementos de informe**.  
   
-     Si no está conectado, haga clic en **Conectar con un servidor de informes**y escriba el nombre.  
+     Si no está conectado, haga clic en **Conectar con un servidor de informes** y escriba el nombre.  
   
     > [!NOTE]  
     >  Debe estar conectado a un servidor de informes para buscar elementos de informe.  
@@ -46,14 +46,14 @@ La manera más fácil de crear un informe paginado de [!INCLUDE[ssRSnoversion](.
   
     -   Tipo  
   
-     Por ejemplo, para encontrar una imagen, haga clic en **Agregar criterios**y, a continuación, haga clic en **Tipo**. En la lista desplegable, active la casilla **Imagen** , presione ENTRAR y, a continuación, haga clic en la lupa de Buscar.  
+     Por ejemplo, para encontrar una imagen, haga clic en **Agregar criterios** y, a continuación, haga clic en **Tipo**. En la lista desplegable, active la casilla **Imagen** , presione ENTRAR y, a continuación, haga clic en la lupa de Buscar.  
   
     > [!NOTE]  
     >  Para los valores de **Creado por** y **Última modificación por** , busque el nombre de usuario de la persona como se representa en el servidor de informes.  
   
 ## <a name="to-set-a-default-folder-for-report-parts"></a>Para establecer una carpeta predeterminada para elementos de informe  
   
-1.  Haga clic en **Generador de informes**y, a continuación, en **Opciones**.  
+1.  Haga clic en **Generador de informes** y, a continuación, en **Opciones**.  
   
 2.  En el cuadro de diálogo **Opciones** , en la pestaña **Configuración** , escriba un nombre de carpeta en el cuadro de texto **Publicar elementos de informe en esta carpeta de forma predeterminada** .  
   
