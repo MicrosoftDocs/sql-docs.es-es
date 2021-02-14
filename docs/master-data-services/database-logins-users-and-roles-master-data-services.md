@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0c2f275fe85c7813a64790f864b462aa3bfc6775
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e909388212b30942be2d11d53991f7e8d8756b35
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812406"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339069"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Inicios de sesión, usuarios y roles en bases de datos (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "85812406"
   
 |Usuario|Descripción|  
 |----------|-----------------|  
-|**mds_clr_user**|No se usa. Asigna mds_dlp_login.|  
+|**mds_clr_user**|No se utiliza. Asigna mds_dlp_login.|  
 |**mds_email_user**|Se usa para notificaciones.<br /><br /> -Asigna mds_email_login.<br /><br /> -Es un miembro del rol: DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Usuarios de la base de datos de Master Data Services  
@@ -55,13 +55,13 @@ ms.locfileid: "85812406"
   
 ## <a name="master-data-services-database-role"></a>Rol de la base de datos Master Data Services  
   
-|Role|Descripción|Permisos|  
+|Rol|Descripción|Permisos|  
 |----------|-----------------|-----------------|  
 |**mds_exec**|Este rol contiene la cuenta que se ha designado en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] al crear una aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] y designa una cuenta para el grupo de aplicaciones.|Permiso EXECUTE en todos los esquemas.<br /><br /> <br /><br /> Permiso ALTERT, INSERT y SELECT en estas tablas:<br /><br /> mdm.tblStgMember<br /><br /> mdm.tblStgMemberAttribute<br /><br /> mdm.tbleStgRelationship<br /><br /> <br /><br /> Permiso SELECT en estas tablas:<br /><br /> mdm.tblUser<br /><br /> mdm.tblUserGroup<br /><br /> mdm.tblUserPreference<br /><br /> <br /><br /> Permiso SELECT en estas vistas:<br /><br /> mdm.viw_SYSTEM_SECURITY_NAVIGATION<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL<br /><br /> mdm.viw_SYSTEM_SECURITY_ROLE_ACCCESSCONTROL_MEMBER<br /><br /> mdm.viw_SYSTEM_SECURITY_USER_MODEL|  
   
 ## <a name="schemas"></a>Esquemas  
   
-|Role|Descripción|  
+|Rol|Descripción|  
 |----------|-----------------|  
 |**MDM**|Contiene todos los objetos de Service Broker y bases de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que no sean las funciones contenidas en el esquema mdq.|  
 |**mdq**|Contiene funciones de base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relacionadas con el filtrado de los resultados de miembros basados en expresiones regulares o de similitud, y el formato de los correos electrónicos de notificación.|  

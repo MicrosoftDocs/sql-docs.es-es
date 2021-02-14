@@ -17,10 +17,10 @@ ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c26248551ad949bcf27433d28898ba4ec98dc68b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
+ms.lasthandoff: 02/12/2021
 ms.locfileid: "99211642"
 ---
 # <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
@@ -46,7 +46,7 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  el Agente de distribución ejecuta **sp_replsetoriginator** para registrar el origen de las transacciones aplicadas por la replicación. Esta información se utiliza para invocar la detección de bucles invertidos en suscripciones transaccionales bidireccionales que tienen establecida la propiedad de bucles invertidos.  
   
 ## <a name="permissions"></a>Permisos  

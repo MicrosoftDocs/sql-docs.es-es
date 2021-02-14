@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 369685672921a62f44bb81387db0b987aa2e44dc
-ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
+ms.openlocfilehash: 1cf1b48b3293f3315c11328b5b5c4beb7ab751ad
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99495762"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048565"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Creación de una extensión de distribución de teclado de Azure Data Studio
 

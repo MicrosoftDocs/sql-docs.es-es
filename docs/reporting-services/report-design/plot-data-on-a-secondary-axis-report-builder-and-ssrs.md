@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f5c39b7b9c601e0a796874f45a0eb1512a69943b
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: f9a02dcb3088dd81bf2c2ca6b96c90e5040b1e37
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255601"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014763"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>Trazar datos en un eje secundario (Generador de informes y SSRS)
 
@@ -33,7 +33,7 @@ El gráfico tiene dos tipos de ejes: el principal y el secundario. El eje secund
   
 1.  Haga clic con el botón derecho en la serie del gráfico o en un campo del área **Valores** que quiera mostrar en el eje secundario y, después, haga clic en **Propiedades de la serie**. Aparece el cuadro de diálogo **Propiedades de la serie** .  
   
-2.  Haga clic en **Ejes y área del gráfico**y seleccione los ejes secundarios que desea habilitar, el eje de valores o el eje de categorías.  
+2.  Haga clic en **Ejes y área del gráfico** y seleccione los ejes secundarios que desea habilitar, el eje de valores o el eje de categorías.  
 
 ## <a name="next-steps"></a>Pasos siguientes
 

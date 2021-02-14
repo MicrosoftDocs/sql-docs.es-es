@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current'
-ms.openlocfilehash: e246d516d3c05b9a2c6725f7fd3e3f787066b8aa
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4481a0c96a8f4a7f2f82e8babc5d8dce5ea97e92
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461406"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077818"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catálogo de base de datos WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -47,8 +47,8 @@ WideWorldImportersDW tiene las siguientes tablas de dimensiones. La descripción
 |Tabla|Tablas de origen|
 |-----------------------------|---------------------|
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
-|Cliente|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
-|Fecha|Nueva tabla con información sobre las fechas, incluido el año financiero (según el primer inicio del año financiero).|
+|Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
+|Date|Nueva tabla con información sobre las fechas, incluido el año financiero (según el primer inicio del año financiero).|
 |Empleado|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Supplier|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
@@ -61,9 +61,9 @@ WideWorldImportersDW tiene las siguientes tablas de hechos. La descripción incl
 
 |Tabla|Tablas de origen|Análisis de ejemplo|
 |-----------------------------|---------------------|---------------------|
-|Pedido|`Sales.Orders` y `Sales.OrderLines`|Personal de ventas, productividad del selector/compresor y en el tiempo para seleccionar pedidos. Además, hay situaciones de baja existencias que conducen a los pedidos en espera.|
+|Pedido de|`Sales.Orders` y `Sales.OrderLines`|Personal de ventas, productividad del selector/compresor y en el tiempo para seleccionar pedidos. Además, hay situaciones de baja existencias que conducen a los pedidos en espera.|
 |Sale|`Sales.Invoices` y `Sales.InvoiceLines`|Fechas de ventas, fechas de entrega, rentabilidad con el tiempo, rentabilidad por vendedor.|
-|Purchase|`Purchasing.PurchaseOrderLines`|Tiempos de entrega reales esperados de vs|
+|Compra|`Purchasing.PurchaseOrderLines`|Tiempos de entrega reales esperados de vs|
 |Transacción|`Sales.CustomerTransactions` y `Purchasing.SupplierTransactions`|Medición de fechas de emisión frente a fechas de finalización e importes.|
 |Movimiento|`Warehouse.StockTransactions`|Movimientos a lo largo del tiempo.|
 |Mantenimiento de existencias|`Warehouse.StockItemHoldings`|Valores y niveles de existencias disponibles.|

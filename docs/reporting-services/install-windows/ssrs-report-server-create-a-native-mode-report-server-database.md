@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4cf54be2376dede022b0f6905e21685184a6b122
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: dab7b82e27ba57974a4bdb8e679164f6316ecd4a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934755"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067130"
 ---
 # <a name="create-a-native-mode-report-server-database-report-server-configuration-manager"></a>Crear una base de datos del servidor de informes en modo nativo (Administrador de configuración del servidor de informes)
 
@@ -59,7 +59,7 @@ Para crear una base de datos del servidor de informes o cambiar la cadena de con
   
 1.  Si está utilizando una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] remota, inicie sesión en el servidor de bases de datos para comprobar o habilitar las conexiones TCP/IP.  
   
-2.  Seleccione **Inicio**, **Todos los programas**, **Microsoft SQL Server**y **Herramientas de configuración**, y a continuación haga clic en **Administrador de configuración de SQL Server**.  
+2.  Seleccione **Inicio**, **Todos los programas**, **Microsoft SQL Server** y **Herramientas de configuración**, y a continuación haga clic en **Administrador de configuración de SQL Server**.  
   
 3.  Abra **Configuración de red de SQL Server**.  
   
@@ -77,7 +77,7 @@ Para crear una base de datos del servidor de informes o cambiar la cadena de con
   
 2.  En la página Base de datos, seleccione **Cambiar base de datos**.  
   
-3.  Haga clic en **Crear una nueva base de datos del servidor de informes**y, después, haga clic en **Siguiente**.  
+3.  Haga clic en **Crear una nueva base de datos del servidor de informes** y, después, haga clic en **Siguiente**.  
   
 4.  Conéctese a la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que va a usar para crear y hospedar la base de datos del servidor de informes:  
   

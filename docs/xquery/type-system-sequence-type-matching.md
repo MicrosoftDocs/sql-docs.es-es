@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d2163610d1ea537301ec61e1a34c8b6e727d6e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11c0eb693468b980db88995713dc6af99180c373
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759449"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352820"
 ---
 # <a name="type-system---sequence-type-matching"></a>Sistema de tipo: Equiparación de tipos de secuencia
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

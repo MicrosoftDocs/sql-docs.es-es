@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 41e26cbdeaa794ebae01371207d7ff7847619dc2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f7fb9781583a56a2765f066462e62717c1d32d6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290741"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070555"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Creación de un informe de gráfico rápido sin conexión (Generador de informes)
 
@@ -63,9 +63,9 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
-3.  En el panel derecho, haga clic en **Asistente para gráfico**y, a continuación, haga clic en **Crear**.  
+3.  En el panel derecho, haga clic en **Asistente para gráfico** y, a continuación, haga clic en **Crear**.  
   
-4.  En la página **Elegir un conjunto de datos** , haga clic en **Crear un conjunto de datos**y, a continuación, haga clic en **Siguiente**.  
+4.  En la página **Elegir un conjunto de datos** , haga clic en **Crear un conjunto de datos** y, a continuación, haga clic en **Siguiente**.  
   
 5.  En la página **Elegir una conexión a un origen de datos** , haga clic en **Nueva**.  
   
@@ -77,7 +77,7 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
   
 8.  Haga clic en la pestaña **Credenciales** y seleccione **Usar usuario de Windows actual. Puede que se requiera la delegación Kerberos** y haga clic en **Aceptar**.  
   
-9. En la página **Elegir una conexión a un origen de datos** , haga clic en **miGráficoCircular**y, a continuación, haga clic en **Siguiente**.  
+9. En la página **Elegir una conexión a un origen de datos** , haga clic en **miGráficoCircular** y, a continuación, haga clic en **Siguiente**.  
   
 10. Copie el texto siguiente y péguelo en el cuadro grande en la parte superior de la página **Diseñar una consulta** .  
   
@@ -112,7 +112,7 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
   
 12. Haga clic en **Next**.  
   
-13. En la página **Elegir un tipo de gráfico** , haga clic en **Circular**y, a continuación, haga clic en **Siguiente**.  
+13. En la página **Elegir un tipo de gráfico** , haga clic en **Circular** y, a continuación, haga clic en **Siguiente**.  
   
 14. En la página **Organizar campos del gráfico**, haga doble clic en el campo **Ventas** en el cuadro **Campos disponibles**.  
   
@@ -149,9 +149,9 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
-3.  En el panel derecho, haga clic en **Asistente para gráfico**y, a continuación, haga clic en **Crear**.  
+3.  En el panel derecho, haga clic en **Asistente para gráfico** y, a continuación, haga clic en **Crear**.  
   
-4.  En la página **Elegir un conjunto de datos** , haga clic en **Crear un conjunto de datos**y, a continuación, haga clic en **Siguiente**.  
+4.  En la página **Elegir un conjunto de datos** , haga clic en **Crear un conjunto de datos** y, a continuación, haga clic en **Siguiente**.  
   
 5.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos y, a continuación, haga clic en **Siguiente**. Puede que necesite escribir un nombre de usuario y contraseña.  
   
@@ -174,7 +174,7 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
   
 9. Haga clic en **Next**.  
   
-10. En la página **Elegir un tipo de gráfico** , haga clic en **Circular**y, a continuación, haga clic en **Siguiente**.  
+10. En la página **Elegir un tipo de gráfico** , haga clic en **Circular** y, a continuación, haga clic en **Siguiente**.  
   
 11. En la página **Organizar campos del gráfico**, haga doble clic en el campo **Ventas** en el cuadro **Campos disponibles**.  
   

@@ -21,12 +21,12 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: 10756b0297cdc731468ea8983c5378d5b380fef9
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: df904c938418b6d57bc5aac286e482311de4554a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236015"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071435"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
@@ -58,7 +58,7 @@ Determina el nivel de detalle de la salida de la función. ' LIMITED ' devolver�
 
 ## <a name="table-returned"></a>Tabla devuelta  
 
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |database_id |int |Identificador de base de datos |
 |file_id |int |Id. de archivo |
@@ -114,7 +114,7 @@ Determina el nivel de detalle de la salida de la función. ' LIMITED ' devolver�
 |xdes_id |nvarchar (64) |Última transacción aportada por m_reserved <br> Solo con fines de depuración |
 ||||
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 La `sys.dm_db_page_info` función de administración dinámica devuelve información de página como `page_id` , `file_id` , `index_id` , `object_id` etc. que se encuentra en un encabezado de página. Esta información es útil para la solución de problemas y la depuración de diversos problemas de rendimiento (contención de bloqueos y bloqueos temporales) y daños.
 
 `sys.dm_db_page_info` se puede usar en lugar de la `DBCC PAGE` instrucción en muchos casos, pero solo devuelve la información del encabezado de página, no el cuerpo de la página. `DBCC PAGE` seguirá siendo necesario para los casos de uso en los que se requiera todo el contenido de la página.

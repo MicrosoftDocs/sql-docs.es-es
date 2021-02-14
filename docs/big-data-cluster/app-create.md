@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8e91315b5ec79c136b4d84a7fbc36a707cc3d82f
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 9d475edb720d329d5fb52f7bd75c055fc3a8494a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257316"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100047995"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-clusters"></a>Cómo implementar una aplicación en Clústeres de macrodatos de SQL Server
 
@@ -36,10 +36,10 @@ Las aplicaciones se implementan y administran mediante [!INCLUDE [azure-data-cli
 
 Se admiten los siguientes tipos de aplicaciones:
 
-- **Python** : uno de los lenguajes de programación generales más populares para varios roles, como ingenieros de datos, científicos de datos o ingenieros de DevOps, admite numerosos escenarios, como limpieza y transformación de datos, automatización, creación de prototipos y, en cierta medida, también se usa cada vez más para programar aplicaciones de nivel empresarial junto con plataformas de desarrollo web como Flask y Django para resolver diferentes requisitos empresariales.  
-- **R** : otro lenguaje de programación popular para la ingeniería de datos y los científicos de datos. En comparación con Python, R es un lenguaje de programación con un enfoque más específico sobre la informática estadística y los gráficos.  
+- **Python**: uno de los lenguajes de programación generales más populares para varios roles, como ingenieros de datos, científicos de datos o ingenieros de DevOps, admite numerosos escenarios, como limpieza y transformación de datos, automatización, creación de prototipos y, en cierta medida, también se usa cada vez más para programar aplicaciones de nivel empresarial junto con plataformas de desarrollo web como Flask y Django para resolver diferentes requisitos empresariales.  
+- **R**: otro lenguaje de programación popular para la ingeniería de datos y los científicos de datos. En comparación con Python, R es un lenguaje de programación con un enfoque más específico sobre la informática estadística y los gráficos.  
 - **SQL Server Integration Services (SSIS)** : estas soluciones de integración de datos de alto rendimiento para compilar y depurar paquetes ETL, utilizan el formato de archivo de paquete de servicios de transformación de datos (DTSX), que es un formato de archivo basado en XML que almacena las instrucciones para el procesamiento de la migración de datos entre bases de datos y la integración de orígenes de datos externos.   
-- **MLeap** : es un formato de serialización común y proporciona todo lo necesario para ejecutar y serializar canalizaciones SparkML y otras que se pueden cargar en tiempo de ejecución para procesar las tareas de puntuación de ML casi en tiempo real y próximas a los datos.  
+- **MLeap**: es un formato de serialización común y proporciona todo lo necesario para ejecutar y serializar canalizaciones SparkML y otras que se pueden cargar en tiempo de ejecución para procesar las tareas de puntuación de ML casi en tiempo real y próximas a los datos.  
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
@@ -48,7 +48,7 @@ Se admiten los siguientes tipos de aplicaciones:
 
 ## <a name="capabilities"></a>Capacidades
 
-En SQL Server 2019, puede crear, eliminar, describir, inicializar, enumerar, ejecutar y actualizar la aplicación. En la tabla siguiente se describen los comandos de implementación de aplicaciones que puede usar con **azdata** .
+En SQL Server 2019, puede crear, eliminar, describir, inicializar, enumerar, ejecutar y actualizar la aplicación. En la tabla siguiente se describen los comandos de implementación de aplicaciones que puede usar con **azdata**.
 
 |Get-Help |Descripción |
 |:---|:---|

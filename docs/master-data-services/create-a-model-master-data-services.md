@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 577155b8b7c10ce56f71346d28889e4ae29954e9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f153a6b7bf2f4ceef65b06d02a825620ea7b3fb2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811613"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272626"
 ---
 # <a name="create-a-model-master-data-services"></a>Crear un modelo (Master Data Services)
 

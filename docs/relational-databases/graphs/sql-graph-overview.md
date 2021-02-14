@@ -16,15 +16,15 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 846f37923f8388e15663c56a4f724984a1a2588f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8c7dfeaa67e0ede78b0a891409be3211e1fa8d2e
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480176"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100351420"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Gráfico de procesamiento con SQL Server y Azure SQL Database
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece capacidades de base de datos de gráficos para modelar relaciones varios a varios. Las relaciones de gráficos se integran en [!INCLUDE[tsql-md](../../includes/tsql-md.md)] y reciben las ventajas de usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como sistema de administración de bases de datos base.
 
@@ -43,7 +43,7 @@ Una base de datos relacional puede lograr todo lo que puede hacer una base de da
 -    La aplicación tiene relaciones de varios a varios complejas; a medida que la aplicación evoluciona, se agregan nuevas relaciones.
 -    Necesita analizar las relaciones y los datos interconectados.
 
-## <a name="graph-features-introduced-in-sssqlv14"></a>Características de gráficos introducidas en [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssql17"></a>Características de gráficos introducidas en [!INCLUDE[sssql17](../../includes/sssql17-md.md)] 
 Vamos a empezar a agregar extensiones de grafos a SQL Server para facilitar el almacenamiento y la consulta de datos de gráfico. Las siguientes características se incluyen en la primera versión. 
 
 

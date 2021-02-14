@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86bc7c0352e7bf2447628a143a5c1732b132a412
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: c6b42238a081adbd40f9756fb3d2fb8871e1d7cc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891375"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100023340"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Activar o desactivar las características de Reporting Services
   Puede desactivar características del servidor de informes que no use como parte de una estrategia de bloqueo para reducir la superficie de ataque de un servidor de informes de producción. En la mayoría de los casos, le interesará ejecutar las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] simultáneamente para poder hacer uso de toda la funcionalidad de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Sin embargo, dependiendo del modelo de implementación, puede deshabilitar aquellas características que no necesite. Por ejemplo, si todo el procesamiento de informes está configurado como operaciones programadas, puede habilitar solo el procesamiento en segundo plano. Del mismo modo, puede ejecutar simplemente el servicio web del servidor de informes si solo desea informes a petición e interactivos.  
@@ -56,7 +56,7 @@ ms.locfileid: "91891375"
   
 1.  Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y conéctese a la instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que desea configurar.  
   
-2.  En el Explorador de objetos, haga clic con el botón derecho en el nodo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , seleccione **Directivas**y, después, haga clic en **Facetas**.  
+2.  En el Explorador de objetos, haga clic con el botón derecho en el nodo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , seleccione **Directivas** y, después, haga clic en **Facetas**.  
   
 3.  En la lista **Faceta** , seleccione **Configuración de área expuesta para Reporting Services**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "91891375"
   
 1.  Abra el archivo RsReportServer.config en un editor de texto. Para más información, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
-2.  Para activar el procesamiento y la entrega de informes programados, establezca **IsSchedulingService**, **IsNotificationService**e **IsEventService** en **true**:  
+2.  Para activar el procesamiento y la entrega de informes programados, establezca **IsSchedulingService**, **IsNotificationService** e **IsEventService** en **true**:  
   
     ```  
     <IsSchedulingService>true</IsSchedulingService>  
@@ -82,7 +82,7 @@ ms.locfileid: "91891375"
     <IsEventService>true</IsEventService>  
     ```  
   
-3.  Para desactivar el procesamiento y la entrega de informes programados, establezca **IsSchedulingService**, **IsNotificationService**e **IsEventService** en **false**:  
+3.  Para desactivar el procesamiento y la entrega de informes programados, establezca **IsSchedulingService**, **IsNotificationService** e **IsEventService** en **false**:  
   
     ```  
     <IsSchedulingService>false</IsSchedulingService>  

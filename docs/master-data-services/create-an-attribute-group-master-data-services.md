@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ffe84797d519961ab26e6d43fb48a5c4c2dd3e13
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3d2e129bdd1a995fb5d0092bc15136ca9e1726f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461851"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348097"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Crear un grupo de atributos (Master Data Services)
 
@@ -54,7 +54,7 @@ ms.locfileid: "88461851"
   
      Si el grupo de atributos es para colecciones, seleccione **Colección** en la lista desplegable **Member Types** (Tipos de miembros).  
   
-6.  Haga clic en **Grupos hoja**, **Grupos consolidados**o **Grupos de colecciones** para crear un grupo de atributos para los miembros hoja, los miembros consolidados o las colecciones, respectivamente.  
+6.  Haga clic en **Grupos hoja**, **Grupos consolidados** o **Grupos de colecciones** para crear un grupo de atributos para los miembros hoja, los miembros consolidados o las colecciones, respectivamente.  
   
 7.  En el cuadro **Nombre** , escriba un nombre para el grupo de atributos. Este es el nombre que se muestra en la pestaña del **Explorador**.  
   

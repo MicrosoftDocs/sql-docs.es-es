@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed8aa919129d8ece0d0618fdd14f6309080a812d
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 0e58600c502aa6ebb0a031480ab5bb66f48833ca
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935082"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074856"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>Conectar el elemento web Filtro o Documentos con un elemento web Visor de informes de Reporting Services
 
@@ -28,7 +28,7 @@ Si usa un producto de SharePoint, puede crear un panel o una página de elemento
 
  El elemento web Filtro sirve para enviar valores a uno o varios parámetros de un informe. Para usar un elemento web Filtro, el informe debe tener parámetros definidos que sean compatibles con los valores, el tipo de datos y el formato que haya enviado el elemento web.  
   
- El elemento web Documentos está asociado a la biblioteca de documentos del sitio principal. Para ver, agregar o quitar elementos de la biblioteca de documentos, haga clic en **Ver todo el contenido del sitio**. En Bibliotecas, haga clic en **Documentos**. Puede utilizar los menús **Nuevo**, **Cargar**y **Acciones** para administrar los elementos de la biblioteca de documentos.  
+ El elemento web Documentos está asociado a la biblioteca de documentos del sitio principal. Para ver, agregar o quitar elementos de la biblioteca de documentos, haga clic en **Ver todo el contenido del sitio**. En Bibliotecas, haga clic en **Documentos**. Puede utilizar los menús **Nuevo**, **Cargar** y **Acciones** para administrar los elementos de la biblioteca de documentos.  
   
 ## <a name="connect-a-filter-web-part"></a>Conectar un elemento web Filtro
   

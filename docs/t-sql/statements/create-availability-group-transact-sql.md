@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1ba1a89e21c7eb57c2f3dd603e35472d56ab62d7
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: daff2ddf321fa785dc8a304ee0af590682efc63a
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236290"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552633"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 
@@ -260,7 +260,8 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
 - Se puede hospedar en cualquier edición de SQL Server, incluida Express Edition.
 - Requiere que el punto de conexión de creación de reflejo de la base de datos de la réplica de CONFIGURATION_ONLY sea de tipo `WITNESS`.
 - No se puede modificar.
-- No es válida cuando `CLUSTER_TYPE = WSFC`. 
+- No es válida cuando `CLUSTER_TYPE = WSFC`.
+- Las opciones `failover_mode` y `seeding_mode` no se admiten cuando `availability_mode` está establecido en `configuration_only` para una réplica. [Aquí](../../linux/sql-server-linux-availability-group-configure-ha.md) se muestra un ejemplo.
 
    Para obtener más información, vea los detalles relativos a la [réplica de solo configuración](../../linux/sql-server-linux-availability-group-ha.md).
   

@@ -10,12 +10,12 @@ ms.date: 2/19/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 174ef6dd8131e9b13aab6d701693ab78a988327b
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 81d286ed64da41a3080b51b3b495c9ddb3bdbc1a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807452"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100043835"
 ---
 # <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Referencia del archivo de configuración de implementación para clústeres de macrodatos
 

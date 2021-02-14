@@ -21,12 +21,12 @@ ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cfe105e765fbdafc1c4e61e0c340b3db44ed095
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 59258c52e24e5b9d85f9096d6eb2d24fa3d48df3
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99191362"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489459"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "99191362"
 |physical_name|**nvarchar(260)**|Nombre del archivo del sistema operativo.|  
 |state|**tinyint**|Estado del archivo:<br /><br /> 0 = Con conexión <br /><br /> 1 = En restauración <br /><br /> 2 = En recuperación <br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = Sospechoso <br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = Sin conexión <br /><br /> 7 = Inactivo|  
 |state_desc|**nvarchar(60)**|Descripción del estado del archivo:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING <br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Para más información, vea [Estados de los archivos](../../relational-databases/databases/file-states.md).|  
-|tamaño|**int**|Tamaño actual del archivo, en páginas de 8 KB. En una instantánea de base de datos, size refleja el espacio máximo que la instantánea puede utilizar para el archivo.<br /><br /> Nota: este campo se rellena como cero para los contenedores de FILESTREAM. Consulte la vista de catálogo *Sys.database_files* para ver el tamaño real de los contenedores de FileStream.|  
+|size|**int**|Tamaño actual del archivo, en páginas de 8 KB. En una instantánea de base de datos, size refleja el espacio máximo que la instantánea puede utilizar para el archivo.<br /><br /> Nota: este campo se rellena como cero para los contenedores de FILESTREAM. Consulte la vista de catálogo *Sys.database_files* para ver el tamaño real de los contenedores de FileStream.|  
 |max_size|**int**|Tamaño máximo del archivo, en páginas de 8 KB:<br /><br /> 0 = No se permite el crecimiento.<br /><br /> -1 = El archivo crece hasta que el disco esté lleno.<br /><br /> 268435456 = El archivo de registro aumentará de tamaño hasta un tamaño máximo de 2 TB.<br /><br /> Nota: las bases de datos que se actualizan con un tamaño de archivo de registro ilimitado informarán de-1 para el tamaño máximo del archivo de registro.|  
 |growth|**int**|0 = El archivo tiene un tamaño fijo y no puede crecer.<br /><br /> >0 = el archivo aumentará automáticamente.<br /><br /> Si is_percent_growth = 0, el incremento de tamaño se realiza en unidades de páginas de 8-KB, redondeado a los 64 KB más próximos.<br /><br /> Si is_percent_growth = 1, el aumento de crecimiento se expresa como un porcentaje numérico entero.|  
 |is_media_read_onlyF|**bit**|1 = El archivo está en medios de solo lectura.<br /><br /> 0 = El archivo está en medios de lectura/escritura.|  
@@ -69,6 +69,9 @@ ms.locfileid: "99191362"
   
 > [!NOTE]  
 >  Al quitar o volver a generar índices grandes, o al quitar o truncar tablas grandes, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] difiere las cancelaciones de asignación de páginas, así como sus bloqueos asociados, hasta que se confirma la transacción. Las operaciones de eliminación diferidas no liberan inmediatamente el espacio asignado. Por lo tanto, es posible que los valores devueltos por sys.master_files inmediatamente después de quitar o truncar un objeto grande no reflejen el espacio en disco disponible real.  
+
+> [!NOTE]  
+>  En tempdb, la vista sys.master_files muestra el tamaño inicial de tempdb. Los valores se usan como plantilla para la creación de tempdb en el inicio de SQL Server. Por lo tanto, cuando tempdb crece, no se refleja en la vista. Para obtener el tamaño actual de los archivos de tempdb, consulte `tempdb.sys.database_files` .
   
 ## <a name="permissions"></a>Permisos  
  Los permisos mínimos necesarios para ver la fila correspondiente son CREATE DATABASE, ALTER ANY DATABASE o VIEW ANY DEFINITION.  

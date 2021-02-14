@@ -11,12 +11,12 @@ ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 93ef937ac81df75eebc0845381383c7a2d0a4cdd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e27712b35d78824d02a3af683a2d779329ee5f58
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480477"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100073376"
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>Aviso legal (SSMA para Oracle)
 Tanto esta documentación como las aplicaciones de ejemplo que contiene, se proporcionan únicamente con fines informativos y sin ninguna garantía, ya sea expresa o implícita. La información que se proporciona en esta documentación, incluidas las direcciones URL y otras referencias a sitios web de Internet, está sujeta a modificaciones sin previo aviso. El usuario asume todos los riesgos derivados del uso de esta documentación.  

@@ -20,12 +20,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current || = azure-sqldw-latest
-ms.openlocfilehash: 10f8d0523f81c68317a87f960d7ae3e72bf00c3e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 576e5dd0010b60860d9c37e39c5d28f54ddf4546
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184981"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342874"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
@@ -54,7 +54,7 @@ ms.locfileid: "99184981"
 ## <a name="permissions"></a>Permisos  
  Esta vista solo está disponible en la base de datos **maestra** para el inicio de sesión principal de nivel de servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para usar esta vista, debe estar conectado a la base de datos **maestra** . Use la `sys.dm_operation_status` vista en la base de datos **maestra** del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor para realizar un seguimiento del estado de las siguientes operaciones realizadas en un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Crear base de datos  

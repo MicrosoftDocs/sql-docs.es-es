@@ -8,12 +8,12 @@ ms.technology: report-builder
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a97450563aa62e7b8179b7c5a0d2bead5f156f1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d82c6f45d6cd8e4e35735291433d3e054afe5481
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342927"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024117"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Exportación de informes (Generador de informes y SSRS)
 
@@ -42,7 +42,7 @@ ms.locfileid: "80342927"
 
 1.  Ejecute el informe u obtenga una vista previa.  
   
-2.  Haga clic en **Exportar**en la cinta.  
+2.  Haga clic en **Exportar** en la cinta.  
   
      ![Ayuda de Report Builder](../../reporting-services/report-builder/media/ssrb-export.png "Ayuda de Report Builder")  
   
@@ -76,7 +76,7 @@ ms.locfileid: "80342927"
   
 1.  Obtenga una vista previa del informe.  
   
-2.  En la barra de herramientas, haga clic en **Acciones**, seleccione **Exportar**y, a continuación, seleccione el formato que desea utilizar.  
+2.  En la barra de herramientas, haga clic en **Acciones**, seleccione **Exportar** y, a continuación, seleccione el formato que desea utilizar.  
   
      Se abre el cuadro de diálogo **Descarga de archivos** .  
   

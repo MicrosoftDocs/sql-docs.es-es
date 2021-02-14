@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b878dcc17cf5ea23b1c5eccca58cdab39cfb7524
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27e6cc619206c108e17aa62c907cdea083526b48
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257898"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352962"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Validar datos (complemento MDS para Excel)
 
@@ -40,7 +40,7 @@ ms.locfileid: "92257898"
   
  Para obtener información sobre estados adicionales, consulte [Estados de validación &#40;Master Data Services&#41;](../../master-data-services/validation-statuses-master-data-services.md)  
   
-|Estado|Descripción|  
+|Status|Descripción|  
 |------------|-----------------|  
 |No se pudo validar|Uno o más valores de la fila no pudieron realizar la validación con las reglas de negocios definidas por un administrador MDS.|  
 |Validación correcta|Todos los valores de la fila han pasado la validación según las reglas de negocios.|  
@@ -48,7 +48,7 @@ ms.locfileid: "92257898"
 ## <a name="input-statuses"></a>Estados de entrada  
  En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], son posibles los siguientes estados de entrada.  
   
-|Estado|Descripción|  
+|Status|Descripción|  
 |------------|-----------------|  
 |Error|Uno o más valores de la fila no cumplen los requisitos del sistema como la longitud o el tipo de datos. El valor no se actualiza en el repositorio MDS.|  
 |Nueva fila|Los valores de la fila aún no se han publicado en el repositorio MDS.|  
