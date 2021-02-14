@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c5793f486b43fe4c2d12ec9be004dbb2b3346020
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8767da09f84be9c557238643e16c925756e0bede
+ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99179925"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99623785"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -72,7 +72,7 @@ print $metadata['name'];
   
 ## <a name="sensitivity-data-classification-metadata"></a>Metadatos de clasificación de datos confidenciales
 
-A partir de la versión 5.8.0, hay un nuevo atributo de instrucción `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` disponible para que los usuarios tengan acceso a los [metadatos de clasificación de datos confidenciales](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql#subheading-4) en Microsoft SQL Server 2019 con `PDOStatement::getColumnMeta`, que requiere Microsoft ODBC Driver 17.4.2 o superior.
+A partir de la versión 5.8.0, hay un nuevo atributo de instrucción `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` disponible para que los usuarios tengan acceso a los [metadatos de clasificación de datos confidenciales](../../relational-databases/security/sql-data-discovery-and-classification.md) en Microsoft SQL Server 2019 con `PDOStatement::getColumnMeta`, que requiere Microsoft ODBC Driver 17.4.2 o superior.
 
 Tenga en cuenta que el atributo `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` es `false` de forma predeterminada, pero cuando se establece en `true`, el campo de matriz mencionado, `flags`, se rellenará con los metadatos de clasificación de datos confidenciales, si existen. 
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8b9d2fc6610ad7a0af9518bd91b270d914e9e622
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1956417b11757c690fc1e9357f20a35f2e2b568a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373011"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081644"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>Conexión a SQL Server (DB2ToSQL)
 Utilice el cuadro de diálogo **conectar con SQL Server** para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que desea migrar. Para tener acceso al cuadro de diálogo **conectar con SQL Server** , en el menú **archivo** , haga clic en **conectar a SQL Server**.  
@@ -30,7 +30,7 @@ Escriba o seleccione la instancia de SQL Server a la que se va a conectar. De fo
   
 -   Si se va a conectar a una instancia con nombre en otro equipo, escriba el nombre del equipo, una barra diagonal inversa y el nombre de la instancia, *por ejemplo,* mi \\ *instancia*.  
   
-**Puerto de servidor**  
+**Puerto del servidor**  
 Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está configurada para aceptar conexiones en el puerto predeterminado (1433), escriba el número de puerto. De lo contrario, deje este valor en blanco.  
   
 **Base de datos**  

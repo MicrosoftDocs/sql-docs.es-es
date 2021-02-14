@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0945ffa8845c901662acb29c3ed04826870d0ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef2625be70c2af44f4a45ba00302b3d26afc101d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722598"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339940"
 ---
 # <a name="path-expressions---specifying-predicates"></a>Expresiones de ruta de acceso: Especificación de predicados
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85722598"
   
 -   Una prueba de nodo. Para obtener más información, vea [especificar una prueba de nodo en un paso de expresión de ruta de acceso](../xquery/path-expressions-specifying-node-test.md).  
   
--   Cero o más predicados. Esto es opcional.  
+-   Cero o más predicados. Esta información es opcional.  
   
  El predicado opcional representa la tercera parte del paso de eje en una expresión de ruta de acceso.  
   
@@ -161,7 +161,7 @@ WHERE ProductModelID=7
   
 3.  Si el valor de la expresión de predicado es un valor booleano de tipo simple, el valor real del predicado es igual al valor de la expresión de predicado.  
   
-     Por ejemplo, la siguiente consulta se especifica en una variable de tipo **XML**que contiene una instancia XML, la instancia XML de la encuesta del cliente. La consulta recupera los clientes que tienen elementos secundarios. En esta consulta, sería \<HasChildren> 1 \</HasChildren> .  
+     Por ejemplo, la siguiente consulta se especifica en una variable de tipo **XML** que contiene una instancia XML, la instancia XML de la encuesta del cliente. La consulta recupera los clientes que tienen elementos secundarios. En esta consulta, sería \<HasChildren> 1 \</HasChildren> .  
   
     ```  
     declare @x xml  

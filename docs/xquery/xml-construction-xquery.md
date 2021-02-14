@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16bffa4040e1a5068f83e9f68da981ed4aa0d7f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c171dab70a909edb197f5a498d2207bcb2e555b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730727"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352323"
 ---
 # <a name="xml-construction-xquery"></a>Construcción de XML (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -588,9 +588,9 @@ where ProductModelID=7;
   
 -   elemento  
   
--   Atributo  
+-   atributo  
   
--   text  
+-   texto  
   
  En el caso de los nodos de elemento y atributo, estas palabras clave van seguidas del nombre del nodo y de la expresión, entre llaves, que genera el contenido del nodo. En el ejemplo siguiente, se construye este XML:  
   

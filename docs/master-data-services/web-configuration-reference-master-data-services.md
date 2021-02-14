@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7f4baf9f3ef626f5e2dcdc62092afaf1e586df33
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: f277ecb0d3f0cc3a2e4cc62d3feff954e7c22327
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196099"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348887"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Referencia de la configuración web (Master Data Services)
 
@@ -46,7 +46,7 @@ ms.locfileid: "92196099"
 ## <a name="masterdataservices-element"></a>Elemento masterDataServices  
  El **\<masterDataServices>** elemento es un elemento personalizado que se utiliza para conectar un [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] servicio Web a una [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos.  
   
-### <a name="syntax"></a>Sintaxis  
+### <a name="syntax"></a>Syntax  
   
 ```  
 <masterDataServices>  

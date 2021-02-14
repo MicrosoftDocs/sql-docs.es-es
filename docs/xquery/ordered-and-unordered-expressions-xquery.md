@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a337cc615a8566040a654829c4a2853117efcf9c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e72819f6f2cb74aff2e169233aac8eec9d8ee8a3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643522"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100355128"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>Expresiones ordenadas y no ordenadas (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  De forma predeterminada, se ordena el modo de ordenación para todas las operaciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . **ordered** Por lo tanto, las secuencias de nodo devueltas por las expresiones de ruta de acceso y las expresiones FLWOR, sin la cláusula **order by** , están en el orden del documento.  
+  De forma predeterminada, se ordena el modo de ordenación para todas las operaciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  Por lo tanto, las secuencias de nodo devueltas por las expresiones de ruta de acceso y las expresiones FLWOR, sin la cláusula **order by** , están en el orden del documento.  
   
  No se admite la sintaxis **ordenada** y sin **ordenar** adicional que se describe en la especificación de XQuery.  
   

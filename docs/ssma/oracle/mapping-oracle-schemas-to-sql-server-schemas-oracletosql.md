@@ -11,12 +11,12 @@ ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 8d9511ae5c6d5a937e3686d0db45c578aec151c3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 16c4de0bdf08be3bfdbc8644ae61d300284a0c25
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934734"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080780"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Asignación de esquemas de Oracle a esquemas de SQL Server (OracleToSQL)
 En Oracle, cada base de datos tiene uno o más esquemas. De forma predeterminada, SSMA migra todos los objetos de un esquema de Oracle a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos denominada para el esquema. Sin embargo, puede personalizar la asignación entre las bases de datos y los esquemas de Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -24,7 +24,7 @@ En Oracle, cada base de datos tiene uno o más esquemas. De forma predeterminada
 ## <a name="oracle-and-sql-server-schemas"></a>Esquemas de Oracle y SQL Server  
 Una base de datos de Oracle contiene esquemas. Una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene varias bases de datos, cada una de las cuales puede tener varios esquemas.  
   
-El concepto de Oracle de un esquema se asigna al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concepto de una base de datos y a uno de sus esquemas. Por ejemplo, Oracle podría tener un esquema denominado **HR**. Una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría tener una base de datos denominada **HR**y, dentro de esa base de datos, los esquemas. Un esquema es el esquema **DBO** (o el propietario de la base de datos). De forma predeterminada, el **HR** del esquema de Oracle se asignará a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos y el esquema **HR. DBO**. SSMA hace referencia a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinación de base de datos y esquema como esquema.  
+El concepto de Oracle de un esquema se asigna al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] concepto de una base de datos y a uno de sus esquemas. Por ejemplo, Oracle podría tener un esquema denominado **HR**. Una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría tener una base de datos denominada **HR** y, dentro de esa base de datos, los esquemas. Un esquema es el esquema **DBO** (o el propietario de la base de datos). De forma predeterminada, el **HR** del esquema de Oracle se asignará a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos y el esquema **HR. DBO**. SSMA hace referencia a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] combinación de base de datos y esquema como esquema.  
   
 Puede modificar la asignación entre Oracle y los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas.  
   
@@ -60,7 +60,7 @@ Si personaliza la asignación entre un esquema de Oracle y un [!INCLUDE[ssNoVers
   
 1.  En la pestaña asignación de esquema, seleccione cualquier fila y haga clic en **Restablecer valores predeterminados** para revertir a la base de datos y el esquema predeterminados.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
 Si desea analizar la conversión de objetos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, puede [crear un informe de conversión](assessing-oracle-schemas-for-conversion-oracletosql.md). De lo contrario, puede [convertir las definiciones de objetos de base de datos de Oracle](converting-oracle-schemas-oracletosql.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiciones de objeto.  
   
 ## <a name="see-also"></a>Consulte también  

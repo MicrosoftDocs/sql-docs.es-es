@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7de4ccd0a7bba950767d9d9028e4635a10ee25d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0cd4a68b21ae23b60c2bea5618308c0d13300cab
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759468"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353272"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Reglas de conversión de tipos en XQuery
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85759468"
   
 -   Un tipo primitivo integrado puede convertirse a otro tipo primitivo integrado, en función de las reglas de la tabla.  
   
--   Un tipo primitivo puede convertirse a cualquier tipo derivado de dicho tipo primitivo. Por ejemplo, puede convertir de **xs: decimal** a **xs: Integer**o de **xs: decimal** a **xs: Long**.  
+-   Un tipo primitivo puede convertirse a cualquier tipo derivado de dicho tipo primitivo. Por ejemplo, puede convertir de **xs: decimal** a **xs: Integer** o de **xs: decimal** a **xs: Long**.  
   
 -   Un tipo derivado puede convertirse a cualquier tipo que sea su antecesor en la jerarquía de tipos, hasta llegar al tipo base primitivo integrado. Por ejemplo, puede convertir de **xs: token** a **xs: normalizedString** o a **xs: String**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "85759468"
   
  No se admiten los siguientes tipos de conversión:  
   
--   Conversión a o desde tipos de lista. Esto incluye tipos de lista definidos por el usuario y tipos de lista integrados como **xs: IDREFS**, **xs: Entities**y **xs: NMTOKENS**.  
+-   Conversión a o desde tipos de lista. Esto incluye tipos de lista definidos por el usuario y tipos de lista integrados como **xs: IDREFS**, **xs: Entities** y **xs: NMTOKENS**.  
   
 -   No se admite la conversión a o desde **xs: QName** .  
   

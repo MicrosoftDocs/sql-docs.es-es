@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c092f44618b07cad75d4c6be0d3aa42f22145b6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6370cfdd213c7670b22066395534928f980766c3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99191559"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354200"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -48,7 +48,7 @@ La vista de catálogo sys.external_libraries muestra una fila para cada bibliote
 |scope |int |0 para el ámbito público; 1 para ámbito privado |  
 |scope_desc |VARCHAR (7) |Indica si el paquete es público o privado.|
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [CREAR BIBLIOTECA EXTERNA](../../t-sql/statements/create-external-library-transact-sql.md)  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a0b9cf43331e45d4aa1253fe5ad4b90d0bbea92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6dcaa7bbbd5674c6db3b6d8ec5185cc31e890707
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775462"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352312"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery y el establecimiento de tipos estáticos
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "85775462"
   
  Los subtipos se definen en función de las reglas de subtipo para utilizar la derivación mediante restricción o ampliación del esquema XML. Por ejemplo, un tipo S es un subtipo del tipo T si todos los valores del tipo S también son instancias del tipo T.  
   
- Además, todos los valores enteros también son valores decimales, en función de la jerarquía de tipos de esquema XML. No obstante, no todos los valores decimales son enteros. Por tanto, un entero es un subtipo de un decimal, pero no viceversa. Por ejemplo, la **+** operación solo permite valores de ciertos tipos, como los tipos numéricos **xs: Integer**, **xs: decimal**, **xs: Float**y **xs: Double**. Si se pasan valores de otros tipos, como **xs: String**, la operación genera un error de tipo. Esto se denomina establecimiento estricto de tipos. Los valores de otros tipos, como el tipo atómico utilizado para indicar XML sin tipo, se pueden convertir implícitamente en valores de un tipo aceptado por la operación. Esto se denomina establecimiento flexible de tipos.  
+ Además, todos los valores enteros también son valores decimales, en función de la jerarquía de tipos de esquema XML. No obstante, no todos los valores decimales son enteros. Por tanto, un entero es un subtipo de un decimal, pero no viceversa. Por ejemplo, la **+** operación solo permite valores de ciertos tipos, como los tipos numéricos **xs: Integer**, **xs: decimal**, **xs: Float** y **xs: Double**. Si se pasan valores de otros tipos, como **xs: String**, la operación genera un error de tipo. Esto se denomina establecimiento estricto de tipos. Los valores de otros tipos, como el tipo atómico utilizado para indicar XML sin tipo, se pueden convertir implícitamente en valores de un tipo aceptado por la operación. Esto se denomina establecimiento flexible de tipos.  
   
  Si es necesaria tras una conversión implícita, la comprobación de tipos estáticos garantiza que solo se pasarán a una operación los valores de los tipos permitidos con la cardinalidad correcta. En el caso de "String" + 1, reconoce que el tipo estático de "String" es **xs: String**. Dado que este no es un tipo permitido para la **+** operación, se produce un error de tipo.  
   
