@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fe8e347cb82fa1b89ad03ebb152a8d0257f0985b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f499a26e4884518e002b5d33d9f9cb25b7c1457e
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99205986"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100339388"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -99,7 +99,12 @@ sys.sp_cdc_enable_table
   
 > [!IMPORTANT]  
 >  SWITCH PARTITION es una operación de metadatos, pero produce cambios en los datos. Los cambios en los datos asociados a esta operación no se capturan en las tablas de cambios de capturas de datos modificados. Considere una tabla que tiene tres particiones. Se realizan cambios en esta tabla. El proceso de captura realizará el seguimiento de las operaciones de inserción, actualización y eliminación del usuario que se ejecutan en la tabla. Sin embargo, si se desactiva una partición en otra tabla (por ejemplo, para realizar una eliminación masiva), las filas movidas como parte de esta operación no se capturarán como filas eliminadas en la tabla de cambios. De igual forma, si una partición nueva que tiene las filas rellenas de antemano se agrega a la tabla, estas filas no se reflejarán en la tabla de cambios. Esto puede producir incoherencias en los datos cuando una aplicación utilice los cambios y los aplique en el destino.  
-  
+ 
+> [!NOTE] 
+> Antes de ejecutar una operación de división o combinación en una tabla habilitada para CDC, asegúrese de que la partición no tiene ningún comando replicado pendiente y que no se ejecuta ninguna operación DML durante las operaciones de división o combinación. Las transacciones no procesadas o las operaciones DML pueden dar lugar a un error de procesamiento `Error 608: No catalog entry found for partitionID` con el agente de registro del log o el trabajo de captura CDC. Puede que sea necesario deshabilitar CDC en la tabla para continuar con la operación de división o combinación. 
+
+
+
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   

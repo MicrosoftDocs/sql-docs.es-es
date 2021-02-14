@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 59c98e39bccbb6d4f74ddb5e9494e7fc4bced3eb
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 5e3905a3ded61ac6ef99f9ada4e94ffaab77a36c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985081"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016685"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Tutorial: Ampliación de la compilación del proyecto de base de datos para generar estadísticas de modelo
 
@@ -93,7 +93,7 @@ Para crear un colaborador de compilación, debe realizar las siguientes tareas:
   
 4.  Seleccione la entrada de **System.ComponentModel.Composition** y, a continuación, haga clic en **Aceptar**.  
   
-5.  Agregue las referencias SQL necesarias: haga clic con el botón derecho en el nodo de proyecto y, a continuación, haga clic en **Agregar referencia**. Haga clic en el botón **Examinar** . Navegue a la carpeta **C:\Archivos de programa (x86)\Microsoft SQL Server\110\DAC\Bin**. Elija las entradas **Microsoft.SqlServer.Dac.dll**, **Microsoft.SqlServer.Dac.Extensions.dll**y **Microsoft.Data.Tools.Schema.Sql.dll** y, a continuación, haga clic en **Aceptar**.  
+5.  Agregue las referencias SQL necesarias: haga clic con el botón derecho en el nodo de proyecto y, a continuación, haga clic en **Agregar referencia**. Haga clic en el botón **Examinar** . Navegue a la carpeta **C:\Archivos de programa (x86)\Microsoft SQL Server\110\DAC\Bin**. Elija las entradas **Microsoft.SqlServer.Dac.dll**, **Microsoft.SqlServer.Dac.Extensions.dll** y **Microsoft.Data.Tools.Schema.Sql.dll** y, a continuación, haga clic en **Aceptar**.  
   
     A continuación, empiece a agregar el código a la clase.  
   

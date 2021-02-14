@@ -2,7 +2,7 @@
 description: sys.dm_exec_function_stats (Transact-SQL)
 title: sys.dm_exec_function_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2019
+ms.date: 02/10/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -19,17 +19,17 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 788596936cf6ce9c8d2ca0a618b441fcbd0f7624
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: be2d102b81bf5535354b99cc3405d50a0bf94915
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099796"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100342981"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  Devuelve estadísticas de rendimiento agregadas para las funciones almacenadas en caché. La vista devuelve una fila por cada plan de funciones almacenadas en caché y la duración de la fila es siempre que la función permanezca almacenada en caché. Cuando se quita una función de la memoria caché, la fila correspondiente se elimina de esta vista. En ese momento, se genera un evento de Seguimiento de SQL de Estadísticas de rendimiento similar a **sys.dm_exec_query_stats**. Devuelve información sobre las funciones escalares, incluidas las funciones en memoria y las funciones escalares de CLR. No devuelve información acerca de las funciones con valores de tabla.  
+  Devuelve estadísticas de rendimiento agregadas para las funciones almacenadas en caché. La vista devuelve una fila por cada plan de funciones almacenadas en caché y la duración de la fila es siempre que la función permanezca almacenada en caché. Cuando se quita una función de la memoria caché, la fila correspondiente se elimina de esta vista. En ese momento, se genera un evento de Seguimiento de SQL de Estadísticas de rendimiento similar a **sys.dm_exec_query_stats**. Devuelve información sobre las funciones escalares, incluidas las funciones en memoria y las funciones escalares de CLR. No devuelve información acerca de las funciones con valores de tabla y sobre las funciones escalares que se insertan con la [inclusión de UDF escalar](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
   
  En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, se filtran todas las filas que contienen datos que no pertenecen al inquilino conectado.  
   
@@ -76,12 +76,12 @@ ms.locfileid: "98099796"
 ## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, `Server admin` `Azure Active Directory admin` se requiere la cuenta o. En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
+En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, se requiere la cuenta de [Administrador del servidor](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o la cuenta de [Administrador de Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se devuelve información sobre las diez funciones principales identificadas por el promedio de tiempo transcurrido.  
   
-```  
+```sql  
 SELECT TOP 10 d.object_id, d.database_id, OBJECT_NAME(object_id, database_id) 'function name',   
     d.cached_time, d.last_execution_time, d.total_elapsed_time,  
     d.total_elapsed_time/d.execution_count AS [avg_elapsed_time],  

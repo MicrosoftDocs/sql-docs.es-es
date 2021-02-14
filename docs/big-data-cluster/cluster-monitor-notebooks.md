@@ -10,18 +10,18 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 516b1bb461e5927ff52f0cee79e48d9945e6da21
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: bc370b42f247c4b8e57c5628feaae7385ba1502d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378503"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039378"
 ---
 # <a name="monitoring-cluster-with-notebooks"></a>Supervisión de clústeres con cuadernos
 
 Esta página es un índice de los cuadernos para Clústeres de macrodatos de SQL Server. Estos cuadernos ejecutables (.ipynb) están diseñados para SQL Server 2019 como ayuda para la supervisión de Clústeres de macrodatos.
 
-Cada cuaderno está diseñado para comprobar sus propias dependencias. Una operación de tipo **Ejecutar todas las celdas** se realizará correctamente o generará una excepción con una sugerencia con hipervínculo a otro cuaderno para resolver la dependencia faltante. Siga el hipervínculo de la sugerencia al cuaderno subsiguiente, presione **Ejecutar todas las celdas** y, cuando el proceso finalice correctamente, vuelva al cuaderno original y presione **Ejecutar todas las celdas** .
+Cada cuaderno está diseñado para comprobar sus propias dependencias. Una operación de tipo **Ejecutar todas las celdas** se realizará correctamente o generará una excepción con una sugerencia con hipervínculo a otro cuaderno para resolver la dependencia que falta. Siga el hipervínculo de la sugerencia al cuaderno siguiente, presione **Ejecutar todas las celdas** y, cuando el proceso finalice correctamente, vuelva al cuaderno original y presione **Ejecutar todas las celdas**.
 
 Una vez que se instalan todas las dependencias y que la operación **Ejecutar todas las celdas** produce un error, cada cuaderno analizará los resultados y, siempre que sea posible, generará una sugerencia con hipervínculo a otro cuaderno para ayudarlo a resolver el problema.
 

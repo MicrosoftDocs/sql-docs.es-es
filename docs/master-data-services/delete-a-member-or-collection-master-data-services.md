@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c7245b06b114c62b7fd0dde543f8a7a2859bd842
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8810bb155896b4935163bb1143d535faddb1dad
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500648"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339005"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Eliminar un miembro o una colección (Master Data Services)
 
@@ -60,7 +60,7 @@ ms.locfileid: "88500648"
   
 5.  En la cuadrícula, haga clic en la fila correspondiente al miembro o colección que desea eliminar.  
   
-6.  Haga clic en **Eliminar miembro**, en **Eliminar**o en **Eliminar colección**.  
+6.  Haga clic en **Eliminar miembro**, en **Eliminar** o en **Eliminar colección**.  
   
 7.  Los administradores de la entidad también verán una opción de menú para purgar (eliminación permanente) de todos los miembros eliminados temporalmente en la versión de la entidad.  
   

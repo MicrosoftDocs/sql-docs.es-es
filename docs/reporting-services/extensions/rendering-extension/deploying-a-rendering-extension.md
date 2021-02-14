@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a13d9eb18fae38ef85c182576fe50ed3be6f4d38
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 56c22120fb08b538b845647f1a2300c22e17d017
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529471"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042217"
 ---
 # <a name="deploying-a-rendering-extension"></a>Implementar una extensión de representación
   Después de haber escrito y compilado la extensión de representación de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en una biblioteca de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], es necesario hacer que el servidor de informes y el Diseñador de informes la puedan reconocer. Para ello, copie la extensión en el directorio adecuado y agregue las entradas a los archivos de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adecuados.  

@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 46b1d3bd60a3a2603cb0a317e0d2bbc3a206c3ea
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 63088f95aa36ca183a282615a25e6f9a8b29a0dd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038849"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075073"
 ---
 # <a name="appendix---1-sybasetosql"></a>Apéndice - 1 (SybaseToSQL)
 Vista rápida de las opciones de la línea de comandos de la consola de SSMA:  
   
-|SL. No.|Modificador|¿Necesario?|Argumento de modificador|Valores permitidos|  
+|SL. No.|Switch|¿Necesario?|Argumento de modificador|Valores permitidos|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/script|Sí|scriptfile|Nombre de archivo XML válido.<br /><br />Archivo de definición de script de consola.|  
 |2|-v/variable|No|variablevaluefile|Nombre de archivo XML válido.<br /><br />Si se usan variables en el archivo de script, debe especificarse este archivo.|  

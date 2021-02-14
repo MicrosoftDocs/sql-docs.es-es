@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1313699a3d82e0dbced8469f251a0a105f296246
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 3e34f70a41816dcf9a6009f8b38feb016f409a3a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985251"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078976"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Instalación de SQL Server Migration Assistant para Access (AccessToSQL)
 
@@ -54,12 +54,12 @@ SSMA es una descarga Web. Para descargar la versión más reciente, consulte la 
 
 Para instalar SSMA:
   
-1. Haga doble clic en **SSMAforAccess_*n*. msi**, donde *n* es el número de compilación.
+1. Haga doble clic en **SSMAforAccess_ *n*. msi**, donde *n* es el número de compilación.
 2. En la página de bienvenida, haga clic en **Siguiente**.
 
    Si no tiene instalados los requisitos previos, aparece un mensaje que indica que primero debe instalar los componentes necesarios. Asegúrese de que ha instalado todos los requisitos previos y, a continuación, vuelva a ejecutar el programa de instalación.
 
-3. Lea el contrato de licencia de End-User. Si está de acuerdo, seleccione Acepto **el contrato**y, a continuación, haga clic en **siguiente**.
+3. Lea el contrato de licencia de End-User. Si está de acuerdo, seleccione Acepto **el contrato** y, a continuación, haga clic en **siguiente**.
 4. En la página **elegir tipo de instalación** , haga clic en **típica**.
 5. En la página **listo para instalar** puede habilitar o deshabilitar la telemetría y las comprobaciones de actualizaciones automáticas cada vez que se inicia la herramienta. Haga clic en **Instalar** para iniciar la instalación.
   
@@ -72,7 +72,7 @@ Desinstale SSMA mediante **Agregar o quitar programas** en el panel de control. 
 Para desinstalar SSMA:
 
 1. Haga clic en **Inicio**, haga clic en **Panel de Control** y, a continuación, haga clic en **Agregar o quitar programas**.
-2. Seleccione **Microsoft SQL Server Migration Assistant para el acceso**y, a continuación, haga clic en **quitar**.
+2. Seleccione **Microsoft SQL Server Migration Assistant para el acceso** y, a continuación, haga clic en **quitar**.
 
 ## <a name="upgrading-to-a-later-version"></a>Actualizar a una versión posterior
 

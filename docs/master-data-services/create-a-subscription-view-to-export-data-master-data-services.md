@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 381d089aa124f44161b3fd5f1102f7377719f142
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 4181704586d8a0316567ba4548ccd263d4117d79
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812773"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272606"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Crear una vista de suscripciones para exportar datos (Master Data Services)
 
@@ -50,7 +50,7 @@ ms.locfileid: "85812773"
   
 6.  Seleccione **Include soft-deleted members**(Incluir miembros eliminados temporalmente) para incluir los miembros eliminados temporalmente en la vista.  
   
-7.  Seleccione **Versión** o **Marca de versión** en **Opciones de versión**y luego seleccione el elemento deseado en la lista correspondiente.  
+7.  Seleccione **Versión** o **Marca de versión** en **Opciones de versión** y luego seleccione el elemento deseado en la lista correspondiente.  
   
     > [!TIP]  
     >  Cree una vista de suscripción basada en una marca de versión. Al bloquear una versión, puede reasignar la marca a una versión abierta sin actualizar la vista de suscripción.  
@@ -69,9 +69,9 @@ ms.locfileid: "85812773"
 |Columna|Descripción|  
 |------------|-----------------|  
 |Estado|El estado de la vista.<br /><br /> Al hacer clic en **Guardar**, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que la vista se está actualizando.<br /><br /> Si hay errores al crear o editar una vista, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|  
-|Nombre|El nombre de la vista de suscripciones.|  
+|Name|El nombre de la vista de suscripciones.|  
 |Modelo|Nombre del modelo.|  
-|Version|El nombre de la versión.|  
+|Versión|El nombre de la versión.|  
 |Marca de versión|El nombre de la marca de la versión.|  
 |Jerarquía derivada|El nombre de la jerarquía derivada.|  
 |Entidad|El nombre de la entidad.|  

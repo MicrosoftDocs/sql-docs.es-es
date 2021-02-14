@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6d409886b398aaace940cca8f21ee17682bfe2ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9831a53f56d831dbc52c5d7309a365723ca938ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389541"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341723"
 ---
 # <a name="edit-model-master-data-services"></a>Editar modelo (Master Data Services)
 

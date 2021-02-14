@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d6b2c29038934034c39ea7699328504d418989d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb67b14b6f0023a0b3b112718b09bb94ddbebff1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471929"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340349"
 ---
 # <a name="model-deployment-options-master-data-services"></a>Opciones de la implementación de modelos (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "88471929"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], al implementar un archivo de modelo del paquete, debe decidir si implementar un modelo nuevo o clonado, o actualizar un modelo que se clonó previamente.  
   
-## <a name="workflows"></a>Flujos de trabajo  
+## <a name="workflows"></a>Workflows  
  Al trabajar con paquetes de modelos, hay dos flujos de trabajo principales.  
   
 -   Cree un paquete de un modelo en un entorno de pruebas e implemente un clon del modelo en un entorno de producción. Con el tiempo, implemente las actualizaciones del entorno de prueba en el entorno de producción.  

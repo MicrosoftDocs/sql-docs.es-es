@@ -9,12 +9,12 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8cef37be62e91b608852a4b5867d5917e72e8742
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 18c4d602edea0f414863e3fc54bfa58d1e6ca2cd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492614"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100079796"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Restore Stretch-enabled databases (Restauración de bases de datos habilitadas para Stretch)
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -43,7 +43,7 @@ Haga lo siguiente para restaurar una base de datos de Azure dinámica a un momen
 2. En el lado izquierdo de la pantalla, seleccione **EXAMINAR** y, a continuación, **SQL Database**.
 3. Vaya a la base de datos y selecciónela.
 4. En la parte superior de la hoja de la base de datos, haga clic en **Restaurar**.
-5. Indique un **Nombre de la base de datos**nuevo, seleccione un **Punto de restauración** y, después, haga clic en **Crear**.
+5. Indique un **Nombre de la base de datos** nuevo, seleccione un **Punto de restauración** y, después, haga clic en **Crear**.
 6. Se iniciará el proceso de restauración de la base de datos, que puede supervisar con **NOTIFICACIONES**.
 
 ### <a name="recover-a-deleted-azure-database"></a>Recuperar una base de datos de Azure eliminada

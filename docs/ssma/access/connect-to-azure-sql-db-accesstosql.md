@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 15882852544113881b52f3641e0c85ec684add22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57fadc47d241658b96f2d9a7087bcb174d72dcce
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418571"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076316"
 ---
 # <a name="connect-to-azure-sql-database-accesstosql"></a>Conexión a Azure SQL Database (AccessToSQL)
 Utilice el cuadro de diálogo conectar con SQL Azure para conectarse a la base de datos de Azure SQL Database que desea migrar.  

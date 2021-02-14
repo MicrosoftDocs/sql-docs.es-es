@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ea6b6f0da9dc2660b91cd6432331256854a1d80c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7aa771612709a47f5dce24038af6307dc41d95e7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495088"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272736"
 ---
 # <a name="create-a-changeset-master-data-services"></a>Creación de un conjunto de cambios (Master Data Services)
 
@@ -48,7 +48,7 @@ ms.locfileid: "88495088"
   
 2.  Haga clic en una entidad en el menú **Entidades** .  
   
-3.  Realice cambios en la entidad y haga clic en**Aceptar**.  
+3.  Realice cambios en la entidad y haga clic en **Aceptar**.  
   
 4.  **Choose A changeset** (Elegir un conjunto de cambios).  
   

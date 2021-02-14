@@ -13,12 +13,12 @@ ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1e8b211dc0a73ac6fd84515ce0153faa5ed7ae73
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 32a35ace86beea46d79f8eff1ea9a3ba094903fb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038879"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100073449"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Proyectos de SSMA (OracleToSQL)
 Para migrar bases de datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , primero debe crear un proyecto de SSMA. El proyecto es un archivo que contiene la siguiente información:  
@@ -112,7 +112,7 @@ Al abrir un proyecto, se desconecta de Oracle y de [!INCLUDE[ssNoVersion](../../
   
 1.  Realice uno de los siguientes procedimientos:  
   
-    -   En el menú **archivo** , seleccione **proyectos recientes**y, a continuación, haga clic en el proyecto que desea abrir.  
+    -   En el menú **archivo** , seleccione **proyectos recientes** y, a continuación, haga clic en el proyecto que desea abrir.  
   
     -   En el menú **archivo** , seleccione **Abrir proyecto**, busque el archivo de proyecto. o2ssproj, seleccione el archivo y, a continuación, haga clic en **abrir**.  
   

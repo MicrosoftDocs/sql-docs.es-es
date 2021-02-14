@@ -11,12 +11,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: 6638144576d56a0225f03021f7cf8226643a45ab
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
+ms.openlocfilehash: 0cb62f9c1e32c71e982d74eb5fc868fb64020b76
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771587"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042835"
 ---
 # <a name="example-demonstrating-use-of-azure-key-vault-provider-with-always-encrypted"></a>Ejemplo que muestra el uso del proveedor de Azure Key Vault con Always Encrypted
 
@@ -33,7 +33,7 @@ En este ejemplo se muestra el uso del proveedor de Azure Key Vault proveedor al 
 >
 > - Para usar la característica Always Encrypted en Linux y macOS, se requiere **Microsoft.Data.SqlClient** en la versión 2.1.0 o posterior.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Ejemplo que muestra el uso del proveedor de Azure Key Vault con Always Encrypted habilitado con enclaves seguros](azure-key-vault-enclave-example.md)
 - [Tutorial: Desarrollo de una aplicación de .NET mediante Always Encrypted con enclaves seguros](tutorial-always-encrypted-enclaves-develop-net-apps.md)

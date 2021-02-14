@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f7fbd6decf193fa695066a8133ec37e74d7e959
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 667ded44c653f71902893f160b6231ad8b751789
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810779"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100341450"
 ---
 # <a name="clr-integration---overview"></a>Integración CLR: información general
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "91810779"
  La integración CLR proporciona el potencial para el rendimiento mejorado. Para obtener más información, vea [rendimiento de la integración CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
  
 > [!WARNING]
->  CLR usa la seguridad de acceso del código (CAS) de .NET Framework, que ya no se admite como un límite de seguridad. Un ensamblado CLR creado con la opción `PERMISSION_SET = SAFE` puede tener acceso a los recursos externos del sistema, llamar a código no administrado y adquirir privilegios sysadmin. A partir de [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], se incluye una opción de `sp_configure` denominada `clr strict security` para mejorar la seguridad de los ensamblados CLR. La opción `clr strict security` está habilitada de forma predeterminada y trata los ensamblados `SAFE` y `EXTERNAL_ACCESS` como si estuvieran marcados con `UNSAFE`. La opción `clr strict security` se puede deshabilitar para permitir la compatibilidad con versiones anteriores, pero no se recomienda hacerlo. Microsoft recomienda que todos los ensamblados estén firmados con un certificado o clave asimétrica con el correspondiente inicio de sesión que tenga concedido el permiso `UNSAFE ASSEMBLY` en la base de datos maestra. Para obtener más información, vea [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md). 
+>  CLR usa la seguridad de acceso del código (CAS) de .NET Framework, que ya no se admite como un límite de seguridad. Un ensamblado CLR creado con la opción `PERMISSION_SET = SAFE` puede tener acceso a los recursos externos del sistema, llamar a código no administrado y adquirir privilegios sysadmin. A partir de [!INCLUDE[sssql17](../../includes/sssql17-md.md)], se incluye una opción de `sp_configure` denominada `clr strict security` para mejorar la seguridad de los ensamblados CLR. La opción `clr strict security` está habilitada de forma predeterminada y trata los ensamblados `SAFE` y `EXTERNAL_ACCESS` como si estuvieran marcados con `UNSAFE`. La opción `clr strict security` se puede deshabilitar para permitir la compatibilidad con versiones anteriores, pero no se recomienda hacerlo. Microsoft recomienda que todos los ensamblados estén firmados con un certificado o clave asimétrica con el correspondiente inicio de sesión que tenga concedido el permiso `UNSAFE ASSEMBLY` en la base de datos maestra. Para obtener más información, vea [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md). 
   
 ## <a name="choosing-between-transact-sql-and-managed-code"></a>Elegir entre Transact-SQL y el código administrado  
  Al escribir procedimientos almacenados, desencadenadores y funciones definidas por el usuario, una decisión que debe tomar es si va a utilizar el lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] tradicional o un lenguaje .NET Framework como Visual Basic .NET o Visual C#. Use [!INCLUDE[tsql](../../includes/tsql-md.md)] si el código va a realizar principalmente un acceso a los datos con poca o ninguna lógica de procedimientos. Use el código administrado para las funciones con uso importante de CPU y procedimientos que presentan una lógica compleja o si desea utilizar la BCL de .NET Framework.  

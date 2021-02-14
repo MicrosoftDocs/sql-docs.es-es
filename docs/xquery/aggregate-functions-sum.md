@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f329d4e4684997138d3c54e6b2831d70b961a93
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9d68fba9560ef4b0fe99f1263e8d65c57a7c6a2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765650"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341937"
 ---
 # <a name="aggregate-functions---sum"></a>Funciones de agregado: sum
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

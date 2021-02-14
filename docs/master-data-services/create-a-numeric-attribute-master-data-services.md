@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9b22726ec69e1e06ab51ae0f367f3038089e8b25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 978f2a7ff38e71ef0cf45dd4cf706782bfd6e2d0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461877"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272616"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Crear un atributo numérico (Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "88461877"
 |Columna|Descripción|  
 |------------|-----------------|  
 |Estado|Estado del atributo.<br /><br /> Al hacer clic en guardar, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que el atributo se está actualizando.<br /><br /> Si hay errores al crear o editar un atributo, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|  
-|Nombre|Nombre del atributo.|  
+|Name|Nombre del atributo.|  
 |Display Name (Nombre para mostrar)|Nombre para mostrar del atributo.|  
 |Descripción|Descripción del atributo.|  
 |Ancho de píxel de la pantalla|Ancho del atributo.|  
@@ -101,7 +101,7 @@ ms.locfileid: "88461877"
 ## <a name="see-also"></a>Consulte también  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Cambiar el nombre de un atributo y el tipo de datos &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [Cree un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Cree un atributo de Domain-Based &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [Crear un atributo de archivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

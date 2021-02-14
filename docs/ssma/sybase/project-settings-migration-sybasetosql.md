@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b05bfa4cf77043ae172f23940d1b8f0244a1e30c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 96b5550449e11cd314e736a36e3845ba92f542c7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418291"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069945"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>Configuración del proyecto (migración) (SybaseToSQL)
 La página migración del cuadro de diálogo **configuración del proyecto** contiene opciones que personalizan el modo en que SSMA migra los datos de Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -52,7 +52,7 @@ El panel Migración está disponible en los cuadros de diálogo Configuración d
 |**Activar desencadenadores**|Especifica si SSMA debe activar los desencadenadores de inserción cuando agrega datos a SQL Server tablas.<br /><br />**Modo predeterminado**: false<br /><br />**Modo optimista**: false<br /><br />**Modo completo**: false|  
 |**Mantener valores de identidad**|Especifica si SSMA conserva los valores de identidad de Sybase cuando agrega datos a SQL Server. Un valor false hace que el destino asigne los valores de identidad.<br /><br />**Modo predeterminado**: true<br /><br />**Modo optimista**: true<br /><br />**Modo completo**: true|  
 |**Mantener valores NULL**|Especifica si SSMA conserva los valores NULL en los datos de origen cuando agrega datos a SQL Server, independientemente de los valores predeterminados que se especifiquen en SQL Server.<br /><br />**Modo predeterminado**: true<br /><br />**Modo optimista**: true<br /><br />**Modo completo**: true|  
-|**En error**|Detiene la migración de datos cuando se produce un error. Tiene tres opciones:<br /><br />**Detener migración:** Detiene la operación de migración de datos<br /><br />**Continuar con la siguiente tabla:** Detiene la migración de datos a la tabla actual y continúa con el siguiente.<br /><br />**Continuar con el siguiente lote:** Detiene la migración de datos al lote actual y continúa con el siguiente.<br /><br />**Modo predeterminado**: continuar con el siguiente lote<br /><br />**Modo optimista**: continuar con el siguiente lote<br /><br />**Modo completo**: continuar con el siguiente lote|  
+|**Al producirse un error**|Detiene la migración de datos cuando se produce un error. Tiene tres opciones:<br /><br />**Detener migración:** Detiene la operación de migración de datos<br /><br />**Continuar con la siguiente tabla:** Detiene la migración de datos a la tabla actual y continúa con el siguiente.<br /><br />**Continuar con el siguiente lote:** Detiene la migración de datos al lote actual y continúa con el siguiente.<br /><br />**Modo predeterminado**: continuar con el siguiente lote<br /><br />**Modo optimista**: continuar con el siguiente lote<br /><br />**Modo completo**: continuar con el siguiente lote|  
 |**Redondear parte fraccionaria de números**|Especifica si se deben recortar las partes fraccionarias de datos decimales y numéricos durante la migración a tipos enteros o mostrar un mensaje de error si la parte fraccionaria no es trivial.<br /><br />**Modo predeterminado**: no<br /><br />**Modo optimista**: no<br /><br />**Modo completo**: no|  
 |**Sybase Unicode endian**|Especifica el tipo endian para las cadenas Unicode de Sybase. Se pueden establecer las siguientes opciones para esta configuración determinada:<br /><br />Little-endian<br /><br />Big-Endian<br /><br />**Modo predeterminado**: Little-endian<br /><br />**Modo optimista**: Little-endian<br /><br />**Modo completo**: Little-endian|  
 |**Bloqueo de tabla**|Especifica si SSMA bloquea las tablas cuando agrega datos a las tablas durante la migración de datos. Obtiene un bloqueo de actualización masiva mientras dure la operación de copia masiva. Si el valor es false, se establece un bloqueo en el nivel de fila.<br /><br />**Modo predeterminado**: true<br /><br />**Modo optimista**: true<br /><br />**Modo completo**: true|  
