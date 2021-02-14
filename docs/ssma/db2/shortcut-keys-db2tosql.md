@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cb20a327-e565-49a3-a5d0-4cc79a48c179
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0145b286e7d3f93ec491d7506c944b5e7a8fed3e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db06d93c4086908778d064f71435f7863b78ad58
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320751"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071879"
 ---
 # <a name="shortcut-keys-db2tosql"></a>Teclas de método abreviado (DB2ToSQL)
 Puede usar métodos abreviados de teclado para navegar por la aplicación SSMA. Para obtener más información, vea los siguientes temas.  

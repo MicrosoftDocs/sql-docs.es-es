@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 96240f605762be382065268fa39198baeeaaa53f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2207dcce2787fb6f51668e777b01ce345d1f33ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717173"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344666"
 ---
 # <a name="path-expressions---specifying-axis"></a>Expresiones de ruta de acceso: Especificación de ejes
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -48,10 +48,10 @@ ms.locfileid: "85717173"
 |----------|-----------------|  
 |**Child1**|Devuelve elementos secundarios del nodo de contexto.|  
 |**descendant**|Devuelve todos los descendientes del nodo de contexto.|  
-|**aérea**|Devuelve el elemento primario del nodo de contexto.|  
+|**parent**|Devuelve el elemento primario del nodo de contexto.|  
 |**attribute**|Devuelve atributos del nodo de contexto.|  
 |**mismo**|Devuelve el propio nodo de contexto.|  
-|**descendant-or-self**|Devuelve el nodo de contexto y todos los descendientes del mismo.|  
+|**descendiente o propio**|Devuelve el nodo de contexto y todos los descendientes del mismo.|  
   
  Todos estos ejes, excepto el eje **primario** , son ejes hacia delante. El eje **primario** es un eje inverso, porque busca hacia atrás en la jerarquía del documento. Por ejemplo, la expresión de ruta de acceso relativa `child::ProductDescription/child::Summary` tiene dos pasos, y cada uno especifica un eje `child`. En el primer paso se recuperan los \<ProductDescription> elementos secundarios del nodo de contexto. Para cada \<ProductDescription> nodo de elemento, el segundo paso recupera los \<Summary> elementos secundarios del nodo de elemento.  
   

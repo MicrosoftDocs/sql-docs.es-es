@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e297124130d8b0a6231db1be4e21ffac98b35051
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 8775dacf9457b728b86e205ecac05e7cf4d484a4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813003"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272506"
 ---
 # <a name="immediately-apply-member-permissions-master-data-services"></a>Aplicar inmediatamente los permisos de los miembros (Master Data Services)
 
@@ -49,7 +49,7 @@ ms.locfileid: "85813003"
     GO  
     ```  
   
-4.  Ejecuta la consulta.  
+4.  Ejecutar la consulta.  
   
 ## <a name="see-also"></a>Consulte también  
  [Asignar permisos de miembro de jerarquía &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

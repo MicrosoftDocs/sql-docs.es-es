@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: cbc1286bbbced3a546c1057433dba5bbc4289281
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6b6610293bb78ef34ae5ca8b88f762c9ab4948e9
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99199388"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978867"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -236,14 +236,14 @@ Especifica el patrón de coincidencia de gráficos. Para obtener más informaci�
 >[!NOTE]
 > En Azure Synapse Analytics, el comando MERGE (versión preliminar) tiene las siguientes diferencias en comparación con SQL Server y Azure SQL Database.  
 > - Una actualización MERGE se implementa como un par de eliminación e inserción. El recuento de filas afectado de una actualización MERGE incluye las filas eliminadas e insertadas. 
-> - Durante la versión preliminar, el comando MERGE no funciona con las tablas que tienen restricciones UNIQUE.  Este aspecto se corregirá pronto en una versión posterior.
+> - Durante la versión preliminar, MERGE…WHEN NOT MATCHED INSERT no se admiten en tablas con columnas IDENTITY.  
 > - En esta tabla se describe la compatibilidad de las tablas con distintos tipos de distribución:
 
 >|MERGE CLAUSE en Azure Synapse Analytics|Tabla de distribución TARGET admitida| Tabla de distribución SOURCE admitida|Comentario|  
 >|-----------------|---------------|-----------------|-----------|  
->|**WHEN MATCHED**| HASH, ROUND_ROBIN, REPLICATE |Todos los tipos de distribución||  
+>|**WHEN MATCHED**| Todos los tipos de distribución |Todos los tipos de distribución||  
 >|**NOT MATCHED BY TARGET**|HASH |Todos los tipos de distribución|Use UPDATE/DELETE FROM…JOIN para sincronizar dos tablas. |
->|**NOT MATCHED BY SOURCE**|Todos los tipos de distribución|Todos los tipos de distribución|Use UPDATE/DELETE FROM…JOIN para sincronizar dos tablas.||  
+>|**NOT MATCHED BY SOURCE**|Todos los tipos de distribución|Todos los tipos de distribución|||  
 
 Al menos se debe especificar una de las tres cláusulas MATCHED, pero se pueden especificar en cualquier orden. Una variable no puede actualizarse más de una vez en la misma cláusula MATCHED.  
   

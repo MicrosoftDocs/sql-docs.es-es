@@ -10,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d9dc40928fddda2708a23a7fc927627cf0e9450d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 991f001ea8fd43298cefe1f9ba542472de6935ef
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718572"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354094"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de base de datos WideWorldImporters
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ Estos esquemas se usan para las aplicaciones externas que no tienen permiso de a
 
 |Schema|Descripción|
 |-----------------------------|---------------------|
-|Website|Todo el acceso a la base de datos desde el sitio web de la empresa se realiza a través de este esquema.|
+|Sitio web|Todo el acceso a la base de datos desde el sitio web de la empresa se realiza a través de este esquema.|
 |Informes|Todo el acceso a la base de datos desde Reporting Services informes se realiza a través de este esquema.|
 |PowerBI|Todo el acceso a la base de datos desde los paneles de Power BI a través de la puerta de enlace empresarial se realiza a través de este esquema.|
 
@@ -100,7 +100,7 @@ Detalles de clientes, vendedores y de ventas de productos de acciones.
 |BuyingGroups|Las organizaciones de clientes pueden formar parte de los grupos que ejercen mayor potencia de compra|
 |CustomerTransactions|Todas las transacciones financieras relacionadas con el cliente (facturas, pagos)|
 |SpecialDeals|Precios especiales. Esto puede incluir precios fijos, descuento en dólares o porcentaje de descuento.|
-|Orders|Detalles de los pedidos de clientes|
+|Orders (Pedidos)|Detalles de los pedidos de clientes|
 |OrderLines|Líneas de detalle de los pedidos de cliente|
 |Facturas|Detalles de las facturas de los clientes|
 |InvoiceLines|Líneas de detalle de las facturas de los clientes|

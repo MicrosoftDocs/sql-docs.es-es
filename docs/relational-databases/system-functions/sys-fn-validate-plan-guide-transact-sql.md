@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: a53bebcf7a46c725de5447fe8f1b0b45fc94a61a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 557cbe292f5bfe901acc9561f346611005d391f7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99208087"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338128"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

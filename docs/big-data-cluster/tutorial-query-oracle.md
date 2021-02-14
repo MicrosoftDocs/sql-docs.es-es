@@ -9,12 +9,12 @@ ms.date: 10/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48d7fb0f41446fa54f1376a9a84f7dbff7017960
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 670ab5046c1904fee16f6c0271c49e2a4ecd72fe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196090"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100045649"
 ---
 # <a name="tutorial-query-oracle-from-sql-server-big-data-cluster"></a>Tutorial: Consulta Oracle desde Clústeres de macrodatos de SQL Server
 
@@ -67,7 +67,7 @@ El primer paso es crear un origen de datos externo que pueda acceder al servidor
 
 1. En Azure Data Studio, conéctese a la instancia maestra de SQL Server del clúster de macrodatos. Para obtener más información, vea [Conectarse a una instancia maestra de SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Haga doble clic en la conexión de la ventana **Servidores** para mostrar el panel del servidor de la instancia maestra de SQL Server. Seleccione **Nueva consulta** .
+1. Haga doble clic en la conexión de la ventana **Servidores** para mostrar el panel del servidor de la instancia maestra de SQL Server. Seleccione **Nueva consulta**.
 
    ![Consultar una instancia maestra de SQL Server](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
@@ -98,7 +98,7 @@ Oracle admite la autenticación de proxy para proporcionar un control de acceso 
 
 Un usuario de proxy se puede configurar para tener acceso limitado en comparación con el usuario que se va a suplantar. Por ejemplo, se puede permitir a un usuario de proxy conectarse mediante un rol de base de datos específico del usuario que se va a suplantar. La identidad del usuario que se conecta a la base de datos de Oracle a través del usuario de proxy se conserva en la conexión, incluso si varios usuarios se conectan mediante la autenticación de proxy. Esto permite a Oracle aplicar el control de acceso y auditar las acciones realizadas en nombre del usuario real.
 
-Si su escenario requiere el uso de un usuario de proxy de Oracle, __reemplace los pasos 4 y 5 anteriores por lo siguiente__ .
+Si su escenario requiere el uso de un usuario de proxy de Oracle, __reemplace los pasos 4 y 5 anteriores por lo siguiente__.
 
 4. Cree una credencial con ámbito de la base de datos para conectarse al servidor de Oracle. Proporcione las credenciales de usuario de proxy de Oracle adecuadas para el servidor de Oracle en la instrucción siguiente.
 

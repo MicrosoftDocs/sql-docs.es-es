@@ -14,22 +14,22 @@ ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 7ee753bd032cb8ad69f472888a99cc53cc5760d9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ce9d4908113daddf51707b4b7a80c4085defc228
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934909"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076736"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Introducción a SSMA para Oracle (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) para Oracle le permite convertir rápidamente esquemas de base de datos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas, cargar los esquemas resultantes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y migrar datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para Oracle le permite convertir rápidamente esquemas de base de datos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas, cargar los esquemas resultantes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y migrar datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 En este tema se presenta el proceso de instalación y, a continuación, se le ayuda a familiarizarse con la interfaz de usuario de SSMA.  
   
 ## <a name="installing-ssma"></a>Instalación de SSMA  
 Para usar SSMA, primero debe instalar el programa cliente de SSMA en un equipo que pueda tener acceso a la base de datos de origen de Oracle y a la instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A continuación, debe instalar un paquete de extensión y al menos uno de los proveedores de Oracle (OLE DB o [!INCLUDE[vstecado](../../includes/vstecado_md.md)] ) en el equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Estos componentes admiten la migración de datos y la emulación de las funciones del sistema de Oracle. Para obtener instrucciones de instalación, consulte [instalar SSMA para Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md).  
   
-Para iniciar SSMA, haga clic en **Inicio**, **Seleccione todos los programas**, ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant para Oracle**y, a continuación, haga clic en ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant para Oracle**.  
+Para iniciar SSMA, haga clic en **Inicio**, **Seleccione todos los programas**, **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant para Oracle** y, a continuación, haga clic en **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant para Oracle**.  
   
 ## <a name="ssma-for-oracle-user-interface"></a>SSMA para la interfaz de usuario de Oracle  
 Una vez instalado SSMA, puede usar SSMA para migrar bases de datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ayuda a familiarizarse con la interfaz de usuario de SSMA antes de empezar. En el diagrama siguiente se muestra la interfaz de usuario de SSMA, incluidos los exploradores de metadatos, los metadatos, las barras de herramientas, el panel de resultados y el panel lista de errores:  
@@ -59,14 +59,14 @@ El explorador de metadatos de Oracle muestra información acerca de los esquemas
 -   Seleccione tablas para la migración de datos y, a continuación, migre los datos de esas tablas a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [migrar datos de Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-data-into-sql-server-oracletosql.md).  
   
 #### <a name="sql-server-metadata-explorer"></a>SQL Server explorador de metadatos  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]El explorador de metadatos muestra información sobre una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA recupera los metadatos sobre esa instancia y los almacena en el archivo de proyecto.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El explorador de metadatos muestra información sobre una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA recupera los metadatos sobre esa instancia y los almacena en el archivo de proyecto.  
   
 Puede utilizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el explorador de metadatos para seleccionar objetos de base de datos de Oracle convertidos y, a continuación, sincronizar esos objetos con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Para obtener más información, vea [cargar objetos de base de datos convertidos en SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md).  
   
 ### <a name="metadata"></a>Metadatos  
-A la derecha de cada explorador de metadatos hay pestañas que describen el objeto seleccionado. Por ejemplo, si selecciona una tabla en el explorador de metadatos de Oracle, se mostrarán seis pestañas: **tabla**, **SQL**, **asignación de tipos, Informe**, **propiedades**y **datos**. La pestaña **Informe** contiene información solo después de crear un informe que contenga el objeto seleccionado. Si selecciona una tabla en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos, aparecerán tres pestañas: **tabla**, **SQL**y **datos**.  
+A la derecha de cada explorador de metadatos hay pestañas que describen el objeto seleccionado. Por ejemplo, si selecciona una tabla en el explorador de metadatos de Oracle, se mostrarán seis pestañas: **tabla**, **SQL**, **asignación de tipos, Informe**, **propiedades** y **datos**. La pestaña **Informe** contiene información solo después de crear un informe que contenga el objeto seleccionado. Si selecciona una tabla en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos, aparecerán tres pestañas: **tabla**, **SQL** y **datos**.  
   
 La mayoría de los valores de metadatos son de solo lectura. Sin embargo, puede modificar los metadatos siguientes:  
   

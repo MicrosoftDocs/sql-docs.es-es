@@ -19,25 +19,25 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7cba29b0dda2b0d4533444fd3fa8b83eaaeae7a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4c31d523a9fb50dd45bf8ab56c551d3830b0861
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461417"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100082166"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Asignación de funciones de reemplazo para mantener la compatibilidad de aplicaciones
 Una aplicación ODBC *3. x* que trabaje con el administrador de controladores ODBC *3. x* funcionará con un controlador ODBC *2. x* siempre y cuando no se utilicen nuevas características. Sin embargo, tanto la funcionalidad duplicada como los cambios de comportamiento afectan a la manera en que funciona la aplicación ODBC *3. x* en un controlador ODBC *2. x* . Cuando se trabaja con un controlador ODBC *2. x* , el administrador de controladores asigna las siguientes funciones de ODBC *3. x* , que han reemplazado una o varias funciones ODBC *2. x* , a las funciones ODBC *2. x* correspondientes.  
   
 |ODBC *3. x* (función)|ODBC *2. x* (función)|  
 |-------------------------|-------------------------|  
-|**SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect**o **SQLAllocStmt**|  
+|**SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect** o **SQLAllocStmt**|  
 |**SQLBulkOperations**|**SQLSetPos**|  
 |**SQLColAttribute**|**SQLColAttributes**|  
 |**SQLEndTran**|**SQLTransact**|  
 |**SQLFetch**|**SQLExtendedFetch**|  
 |**SQLFetchScroll**|**SQLExtendedFetch**|  
-|**SQLFreeHandle**|**SQLFreeEnv**, **SQLFreeConnect**o **SQLFreeStmt**|  
+|**SQLFreeHandle**|**SQLFreeEnv**, **SQLFreeConnect** o **SQLFreeStmt**|  
 |**SQLGetConnectAttr**|**SQLGetConnectOption**|  
 |**SQLGetDiagRec**|**SQLError**|  
 |**SQLGetStmtAttr**|**SQLGetStmtOption**[1]|  
@@ -47,7 +47,7 @@ Una aplicación ODBC *3. x* que trabaje con el administrador de controladores OD
  [1] también se pueden realizar otras acciones, dependiendo del atributo que se solicita.  
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
- El administrador de controladores asigna este a **SQLAllocEnv**, **SQLAllocConnect**o **SQLAllocStmt**, según corresponda. La siguiente llamada a **SQLAllocHandle**:  
+ El administrador de controladores asigna este a **SQLAllocEnv**, **SQLAllocConnect** o **SQLAllocStmt**, según corresponda. La siguiente llamada a **SQLAllocHandle**:  
   
 ```  
 SQLAllocHandle(HandleType, InputHandle, OutputHandlePtr);  
@@ -85,7 +85,7 @@ SQLBulkOperations(hstmt, Operation);
   
 4.  Si el argumento de operación es SQL_ADD, la aplicación debe llamar a **SQLBindCol** para enlazar los datos que se van a insertar. No puede llamar a **SQLSetDescField** o **SQLSetDescRec** para enlazar los datos que se van a insertar.  
   
-5.  Si el argumento de operación es SQL_ADD y el número de filas que se van a insertar no es el mismo que el tamaño actual del conjunto de filas, se debe llamar a **SQLSetStmtAttr** para establecer el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE en el número de filas que se van a insertar antes de llamar a **SQLBulkOperations**. Para volver al tamaño del conjunto de filas anterior, la aplicación debe establecer el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE antes de que se llame a **SQLFetch**, **SQLFetchScroll**o **SQLSetPos** .  
+5.  Si el argumento de operación es SQL_ADD y el número de filas que se van a insertar no es el mismo que el tamaño actual del conjunto de filas, se debe llamar a **SQLSetStmtAttr** para establecer el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE en el número de filas que se van a insertar antes de llamar a **SQLBulkOperations**. Para volver al tamaño del conjunto de filas anterior, la aplicación debe establecer el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE antes de que se llame a **SQLFetch**, **SQLFetchScroll** o **SQLSetPos** .  
   
 ## <a name="sqlcolattribute"></a>SQLColAttribute  
  El administrador de controladores lo asigna a **SQLColAttributes**. La siguiente llamada a **SQLColAttribute**:  
@@ -193,7 +193,7 @@ SQLFetchScroll(StatementHandle, FetchOrientation, FetchOffset);
 -   Si *RC* es igual a SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, y si *FetchOrientation* es igual a SQL_FETCH_BOOKMARK y *FetchOffset* no es igual a 0, el administrador de controladores publica una advertencia, SQLSTATE 01S10 (intento de captura por un desplazamiento de marcador, valor de desplazamiento omitido) y devuelve SQL_SUCCESS_WITH_INFO.  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
- El administrador de controladores asigna este a **SQLFreeEnv**, **SQLFreeConnect**o **SQLFreeStmt** , según corresponda. La siguiente llamada a **SQLFreeHandle**:  
+ El administrador de controladores asigna este a **SQLFreeEnv**, **SQLFreeConnect** o **SQLFreeStmt** , según corresponda. La siguiente llamada a **SQLFreeHandle**:  
   
 ```  
 SQLFreeHandle(HandleType, Handle);  
@@ -293,7 +293,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
     SQLGetStmtOption (hstmt, fOption, pvParam);  
     ```  
   
-     donde *hstmt*, *fOption*y *pvParam* se establecerán en los valores de *StatementHandle*, *Attribute*y *ValuePtr*, respectivamente. Se omiten *BufferLength* y *StringLengthPtr* .  
+     donde *hstmt*, *fOption* y *pvParam* se establecerán en los valores de *StatementHandle*, *Attribute* y *ValuePtr*, respectivamente. Se omiten *BufferLength* y *StringLengthPtr* .  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
  El administrador de controladores lo asigna a **SQLSetConnectOption**. La siguiente llamada a **SQLSetConnectAttr**:  
@@ -316,7 +316,7 @@ SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, StringLength);
     SQLSetConnectOption (hdbc, fOption, vParam);  
     ```  
   
-     donde *hdbc*, *fOption*y *vParam* se establecerán en los valores de *ConnectionHandle*, *Attribute*y *ValuePtr*, respectivamente. *StringLengthPtr* se omite.  
+     donde *hdbc*, *fOption* y *vParam* se establecerán en los valores de *ConnectionHandle*, *Attribute* y *ValuePtr*, respectivamente. *StringLengthPtr* se omite.  
   
 > [!NOTE]  
 >  La capacidad de establecer los atributos de instrucción en el nivel de conexión está en desuso. Los atributos de instrucción nunca deben establecerse en el nivel de conexión mediante una aplicación ODBC *3. x* .  
@@ -380,7 +380,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
     SQLSetStmtOption (hstmt, fOption, vParam);  
     ```  
   
-     donde *hstmt*, *fOption*y *vParam* se establecerán en los valores de *StatementHandle*, *Attribute*y *ValuePtr*, respectivamente. Se omite el argumento *StringLength* .  
+     donde *hstmt*, *fOption* y *vParam* se establecerán en los valores de *StatementHandle*, *Attribute* y *ValuePtr*, respectivamente. Se omite el argumento *StringLength* .  
   
      Si un controlador ODBC *2. x* admite las opciones de instrucción de cadena de caracteres específicas del controlador, una aplicación ODBC *3. x* debe llamar a **SQLSetStmtOption** para establecer esas opciones.  
   

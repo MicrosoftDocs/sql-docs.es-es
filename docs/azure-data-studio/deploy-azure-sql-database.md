@@ -9,12 +9,12 @@ ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.custom: ''
 ms.date: 10/16/2020
-ms.openlocfilehash: 5b68bda566bdd28c8dd2e70f036dd8e17643f776
-ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
+ms.openlocfilehash: 8bac1e0d10208283e40843288ab7dbe7d042b8ad
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92155025"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052216"
 ---
 # <a name="create-an-azure-sql-database-using-azure-data-studio"></a>Creación de una base de datos de Azure SQL mediante Azure Data Studio
 

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: a8379e10e8c3e3af64381e9a4536b253e203964e
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1362e6a5ccd6152a1cb2597076d25c2da4149fd0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725129"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048235"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Creación y ejecución de un cuaderno de Kusto (KQL) (versión preliminar)
 
@@ -44,7 +44,7 @@ En los pasos siguientes, se muestra cómo crear un archivo de cuaderno en Azure 
 
 3. Seleccione *Kusto* para el **Kernel**. Confirme que el menú **Adjuntar a** está establecido en el nombre y la base de datos del clúster. En este artículo, usamos el clúster de help.kusto.windows.net con los datos de la base de datos Samples.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Abrir el cuaderno":::
+   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Establecer el Kernel y Conectar a":::
 
 Puede guardar el cuaderno mediante los comandos **Guardar** o **Guardar como...** del menú **Archivo**.
 
@@ -56,14 +56,14 @@ Para cambiar la conexión Kusto de un cuaderno:
 
 1. Seleccione el menú **Adjuntar a** en la barra de herramientas del cuaderno y elija **Cambiar conexión**.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="Abrir el cuaderno":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="cambio de conexiones":::
 
    > [!Note]
    > Asegúrese de que el valor de la base de datos se ha rellenado. Los cuadernos de Kusto requieren que la base de datos esté especificada.
 
 2. Ahora puede seleccionar un servidor de conexión reciente o especificar nuevos detalles de conexión para conectarse.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Abrir el cuaderno":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Selección de un clúster distinto":::
 
    > [!Note]
    > Especifique el nombre del clúster sin `https://`.
@@ -76,7 +76,7 @@ Por ejemplo:
 
 1. Para agregar una nueva celda de código, seleccione el comando **+Código** de la barra de herramientas.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Abrir el cuaderno":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Bloque de código del kernel de Kusto":::
 
 2. Copie y pegue el ejemplo siguiente en la celda y seleccione **Ejecutar celda**. En este ejemplo se consultan los datos de StormEvents de un tipo de evento concreto.
 
@@ -85,7 +85,7 @@ Por ejemplo:
     | where EventType == "Waterspout"
    ```
 
-   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Abrir el cuaderno":::
+   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Ejecución de una celda":::
 
 ## <a name="save-the-result-or-show-chart"></a>Guardado de un resultado o muestra del gráfico
 
@@ -102,7 +102,7 @@ Si ejecuta un script que devuelve un resultado, puede guardarlo en distintos for
     | limit 10
 ```
 
-:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Abrir el cuaderno":::
+:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Guardado de un resultado":::
 
 ## <a name="known-issues"></a>Problemas conocidos
 

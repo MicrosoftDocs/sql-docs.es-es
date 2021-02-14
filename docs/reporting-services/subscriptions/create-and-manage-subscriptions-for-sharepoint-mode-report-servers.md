@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 289483df5c80b4524a281e62b4d63147b6f61bb0
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: bf68742926ef0f26c5a12a5d001ea9b14f9b199c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986871"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080098"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo de SharePoint
   Puede crear suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para entregar informes desde una aplicación web de SharePoint que esté integrada con un servidor de informes en el modo de SharePoint. Las suscripciones pueden entregar informes a una biblioteca de documentos, a una carpeta de archivos o como un correo electrónico. En este tema se resumen los requisitos y los pasos para crear una suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -105,7 +105,7 @@ ms.locfileid: "91986871"
   
 7.  En **Formato de representación**, seleccione el formato de aplicación para el informe.  
   
-8.  En **Modo de escritura**, elija **Ninguno**, **Incremento automático**o **Sobrescribir**. Estas opciones determinan si las entregas posteriores sobrescribirán un archivo. Si desea mantener las entregas previas, puede elegir **Incremento automático**. Se anexará un número a los nuevos archivos para crear un nombre de archivo único. Si elige **Ninguno**, no se producirá ninguna entrega si ya hay un archivo con el mismo nombre en la ubicación de destino.  
+8.  En **Modo de escritura**, elija **Ninguno**, **Incremento automático** o **Sobrescribir**. Estas opciones determinan si las entregas posteriores sobrescribirán un archivo. Si desea mantener las entregas previas, puede elegir **Incremento automático**. Se anexará un número a los nuevos archivos para crear un nombre de archivo único. Si elige **Ninguno**, no se producirá ninguna entrega si ya hay un archivo con el mismo nombre en la ubicación de destino.  
   
 9. En **Extensión de archivo**, elija **True** para agregar una extensión de nombre de archivo correspondiente al formato de archivo de aplicación o False para crear el archivo sin ningún tipo de extensión.  
   

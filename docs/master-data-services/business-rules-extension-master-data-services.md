@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f197ebbd41c32bb8cd8ee7eeae944dddd583f70d
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 0f99b4496f8abaae384c67d2c7849687f7045744
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362495"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341498"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Extensión de reglas de negocios (Master Data Services)
 
@@ -64,7 +64,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
  Las acciones de script se ejecutarán como mds_br_user con los permisos siguientes.  
   
-|Esquema|Permisos|  
+|Schema|Permisos|  
 |-|-|  
 |mdm|SELECT|  
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
