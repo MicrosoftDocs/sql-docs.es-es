@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c522e0756ca846558acbf6ac1b96c7d4abeef57e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f9a09225562cbabe7ced75d80f26e37ee53d3e3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753561"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335841"
 ---
 # <a name="functions-on-sequences---empty"></a>Funciones usadas en secuencias: empty
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: ac8bc675c5a059c211e6ecfbed063d54daf6ee92
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 75235f489b396c2269ae0d1dcf22ed24297ec4e9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99203306"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342745"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -80,7 +80,7 @@ Cada fila representa una instantánea periódica de las estadísticas del grupo 
 
 Esta vista requiere el permiso VIEW SERVER STATE.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Los usuarios pueden tener acceso a esta vista de administración dinámica para supervisar el consumo de recursos casi en tiempo real para el grupo de cargas de trabajo de usuario, así como los grupos internos del sistema de la instancia de Azure SQL Database.
 

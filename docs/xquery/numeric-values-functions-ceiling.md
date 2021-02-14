@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc2a85c48e404fa717b001482bbe5fc8f8356e99
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ea2dbaab164c57acf9e9bc166ee431e80783648
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775488"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341580"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Funciones de valores numéricos: ceiling 
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
  Número al que se aplica la función.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el tipo de *$arg* es uno de los tres tipos base numéricos, **xs: Float**, **xs: Double**o **xs: decimal**, el tipo de valor devuelto es el mismo que el tipo de *$arg* .  
+ Si el tipo de *$arg* es uno de los tres tipos base numéricos, **xs: Float**, **xs: Double** o **xs: decimal**, el tipo de valor devuelto es el mismo que el tipo de *$arg* .  
   
  Si el tipo de *$arg* es un tipo derivado de uno de los tipos numéricos, el tipo de valor devuelto es el tipo numérico base.  
   

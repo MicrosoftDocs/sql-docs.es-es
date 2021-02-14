@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c03a52c837d2f07e5a6027b181a2047a5f53add6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f4584f8b4cb4cd7c8117a33e2894ad3f6382335
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492181"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078736"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Configuración global (evaluador) (SybaseToSQL)
 Use la página evaluador del cuadro de diálogo **configuración global** para especificar la configuración de SSMA Tester.  
   
-Para obtener acceso a la configuración del evaluador, en el menú **herramientas** , seleccione **configuración global**y haga clic en **evaluador** en la parte inferior del panel izquierdo.  
+Para obtener acceso a la configuración del evaluador, en el menú **herramientas** , seleccione **configuración global** y haga clic en **evaluador** en la parte inferior del panel izquierdo.  
   
 ## <a name="options"></a>Opciones  
 **Análisis de objetos comprobables**  
@@ -63,6 +63,6 @@ Las siguientes opciones están disponibles para esta configuración:
   
 2.  No  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Finalizando la preparación del caso de prueba &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   

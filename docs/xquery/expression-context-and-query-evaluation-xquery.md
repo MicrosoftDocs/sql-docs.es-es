@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a870cdbd9a90fefe29088892f278446479665de7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f4fd85737d1a7cdc981576f624a2a403f0eb19ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753631"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341952"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contexto de expresiones y evaluación de consultas (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "85753631"
   
      Todos estos enlaces de espacio de nombres se resuelven durante la inicialización del contexto estático.  
   
--   Si se consulta una columna o una variable **XML** con tipo, los componentes de la colección de esquemas XML asociados a la columna o variable se importan en el contexto estático. Para obtener más información, vea [comparar XML con tipo y XML sin tipo](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+-   Si se consulta una columna o una variable **XML** con tipo, los componentes de la colección de esquemas XML asociados a la columna o variable se importan en el contexto estático. Para obtener más información, vea [Comparar XML con tipo y XML sin tipo](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
 -   Se pone a disposición de cada uno de los tipos atómicos de los esquemas importados una función de conversión en el contexto estático. Esto se muestra en el ejemplo siguiente. En este ejemplo, se especifica una consulta con una variable **XML** con tipo. La colección de esquemas XML asociada a esta variable define un tipo atómico, myType. Que corresponde a este tipo, una función de conversión, **typeof ()**, está disponible durante el análisis estático. La expresión de consulta (`ns:myType(0)`) devuelve un valor de tipo myType.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "85753631"
 ### <a name="implementation-restrictions"></a>Restricciones de implementación  
  A continuación se muestran las limitaciones relativas al contexto dinámico:  
   
--   No se admiten las funciones de contexto de **fecha y hora actuales** , **FN: fecha actual**, **FN: hora actual**y **FN: Current-DateTime**.  
+-   No se admiten las funciones de contexto de **fecha y hora actuales** , **FN: fecha actual**, **FN: hora actual** y **FN: Current-DateTime**.  
   
 -   La **zona horaria implícita** se fija en UTC + 0 y no se puede cambiar.  
   

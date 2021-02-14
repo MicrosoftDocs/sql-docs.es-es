@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c27ed4fad982831288f1e115f6da94bc70114c61
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: c6ae0aedd4971d6345811e6ee0bfff5afa395c15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037438"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344979"
 ---
 # <a name="functions-on-sequences---id"></a>Funciones usadas en secuencias: id
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Uno o varios valores xs:IDREF.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El resultado de la función es una secuencia de elementos de la instancia XML, en el orden del documento, que tiene un valor xs:ID equivalente a uno o varios de los valores xs:IDREF de la lista de posibles valores xs:IDREF.  
   
  Si el valor xs:IDREF no coincide con ningún elemento, la función devolverá la secuencia vacía.  

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a50ed63856e9998066db0b4d0791feb79478726c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fec2edcca6a5a73c8fcdb9bb0629b7b5ed2ff24
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734164"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340465"
 ---
 # <a name="xquery-language-reference-sql-server"></a>Referencia del lenguaje XQuery (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[tsql](../includes/tsql-md.md)]admite un subconjunto del lenguaje XQuery que se utiliza para consultar el tipo de datos **XML** . Esta implementación de XQuery se basa en el borrador de trabajo de XQuery de julio de 2004. El lenguaje está siendo desarrollado por el World Wide Web Consortium (W3C), con la participación de los principales proveedores de bases de datos, incluido Microsoft. Dado que las especificaciones del W3C pueden someterse a futuras revisiones antes de convertirse en recomendaciones del W3C, esta implementación puede ser distinta de la recomendación final. En este tema se define de forma general la semántica y la sintaxis del subconjunto de XQuery admitido en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  [!INCLUDE[tsql](../includes/tsql-md.md)] admite un subconjunto del lenguaje XQuery que se utiliza para consultar el tipo de datos **XML** . Esta implementación de XQuery se basa en el borrador de trabajo de XQuery de julio de 2004. El lenguaje está siendo desarrollado por el World Wide Web Consortium (W3C), con la participación de los principales proveedores de bases de datos, incluido Microsoft. Dado que las especificaciones del W3C pueden someterse a futuras revisiones antes de convertirse en recomendaciones del W3C, esta implementación puede ser distinta de la recomendación final. En este tema se define de forma general la semántica y la sintaxis del subconjunto de XQuery admitido en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Para obtener más información, vea la [especificación del lenguaje de W3C XQuery 1,0](https://go.microsoft.com/fwlink/?LinkId=48846).  
   
@@ -61,7 +61,7 @@ WHERE ProductModelID=7
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Datos XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)|Explica la compatibilidad del tipo de datos **XML**en [!INCLUDE[ssDE](../includes/ssde-md.md)] y los métodos que se pueden usar con este tipo de datos. El tipo de datos **XML** constituye el modelo de datos XQuery de entrada en el que se ejecutan las expresiones XQuery.|  
+|[Datos XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)|Explica la compatibilidad del tipo de datos **XML** en [!INCLUDE[ssDE](../includes/ssde-md.md)] y los métodos que se pueden usar con este tipo de datos. El tipo de datos **XML** constituye el modelo de datos XQuery de entrada en el que se ejecutan las expresiones XQuery.|  
 |[Colecciones de esquemas XML &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)|Describe cómo se puede asignar un tipo a las instancias XML almacenadas en una base de datos. Esto significa que puede asociar una colección de esquemas XML a la columna de tipo **XML** . Todas las instancias almacenadas en la columna se validan y reciben un tipo según el esquema de la colección y proporcionan la información de tipos para XQuery.|  
 |||  
   
@@ -80,7 +80,7 @@ WHERE ProductModelID=7
 |[Ejemplos adicionales de consultas XQuery con el tipo de datos XML](../xquery/additional-sample-xqueries-against-the-xml-data-type.md)|Proporciona más ejemplos de XQuery.|  
   
 ## <a name="see-also"></a>Consulte también  
- [&#40;de datos XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [Datos XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Colecciones de esquemas XML &#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)   
  [Ejemplos de importación y exportación en bloque de documentos XML &#40;SQL Server&#41;](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   

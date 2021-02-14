@@ -11,12 +11,12 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 52fb350d3dcf06cb215a723cb9c98402d44f0d21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4e080aeb3bb52a5b0562e63f4bda1a19fb9fe94
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320901"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078886"
 ---
 # <a name="creating-script-files-accesstosql"></a>Crear archivos de script (AccessToSQL)
 El primer paso antes de iniciar la aplicación de consola SSMA es crear el archivo de script y, si es necesario, crear el archivo de valores de variable y el archivo de conexión de servidor.  

@@ -21,12 +21,12 @@ ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d83a8329f59c1e5b44ab952f8520733d0d14526b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 236a53de756755b16c47b36e316ffc873f4fb2e7
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99203266"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100347643"
 ---
 # <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,9 +70,9 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 ## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, `Server admin` `Azure Active Directory admin` se requiere la cuenta o. En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
+En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, se requiere la cuenta de [Administrador del servidor](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o la cuenta de [Administrador de Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cuando se inicia una transacción de instantáneas, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra todas las transacciones activas en ese momento determinado. **Sys.dm_tran_transactions_snapshot** notifica esta información para todas las transacciones de instantáneas activas.  
   
  Cada transacción se identifica mediante un número de secuencia que se asigna cuando se inicia la transacción. Las transacciones empiezan en el momento en que se ejecuta una instrucción BEGIN TRANSACTION o BEGIN WORK. No obstante, [!INCLUDE[ssDE](../../includes/ssde-md.md)] asigna el número de secuencia de la transacción con la ejecución de la primera instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] que tiene acceso a datos después de la instrucción BEGIN TRANSACTION o BEGIN WORK. Los números de secuencia de la transacción se incrementan de uno en uno.  

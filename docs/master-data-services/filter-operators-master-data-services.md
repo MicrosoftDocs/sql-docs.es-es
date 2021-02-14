@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 15e1e6e068f9bacc00cdb77df5fb2e916fb5dbac
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 10ccda2cf25a98a21f9ab2e3d343c6b0566d279f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92190852"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272546"
 ---
 # <a name="filter-operators-master-data-services"></a>Operadores de filtro (Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "92190852"
   
 |Nombre del control|Descripción|  
 |------------------|-----------------|  
-|**Es igual a**|Devuelve valores de atributo que son exactamente iguales que los criterios especificados. Por ejemplo, para filtrar según **Mountain-100**, debe escribir **Mountain-100**.|  
+|**Es igual que**|Devuelve valores de atributo que son exactamente iguales que los criterios especificados. Por ejemplo, para filtrar según **Mountain-100**, debe escribir **Mountain-100**.|  
 |**No es igual a**|Devuelve valores de atributo que no son exactamente iguales a los criterios especificados. Los criterios de filtro deben ser exactamente iguales que el valor de atributo que desea omitir en los resultados. Por ejemplo, para omitir resultados que coincidan con **Mountain-100**, debe escribir **Mountain-100**.<br /><br /> <br /><br /> Nota: Al aplicar una condición de filtro con una cláusula "No es igual" en un atributo, un miembro para el que el atributo es NULL pasará la condición de filtro y se devolverá si SET ANSI_NULLS está establecido en ON en la configuración de la base de datos. Para detener este comportamiento, establezca SET ANSI_NULLS en OFF en la configuración de la base de datos. Cuando SET ANSI_NULLS se establece en OFF, las comparaciones de todos los datos con un valor NULL se evalúan como TRUE si el valor de los datos es NULL, con el resultado de que el miembro no pasaría la cláusula "No es igual". Para obtener más información, vea [SET ANSI_NULLS &#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md).|  
 |**Es como**|Usa el operador LIKE de Transact-SQL para filtrar los resultados. Para más información, vea [LIKE &#40;Transact-SQL&#41;](../t-sql/language-elements/like-transact-sql.md) en los Libros en pantalla de SQL Server.|  
 |**No es como**|Utiliza al operador NOT de Transact-SQL para filtrar los resultados. Para más información, vea [NOT &#40;Transact-SQL&#41;](../t-sql/language-elements/not-transact-sql.md) en los Libros en pantalla de SQL Server.|  

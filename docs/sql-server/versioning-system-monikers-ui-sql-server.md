@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016
-ms.openlocfilehash: 0ea96bf157c6ab781e8e0fa34dc8146e590c4b2f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 56ef939790de90d02add427f14f8817df885383f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461376"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100079756"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Sistema de control de versiones para la documentación de SQL
 
@@ -112,7 +112,7 @@ En el siguiente escenario poco habitual se explica lo que sucede si se hace clic
 
 El siguiente artículo se ha agregado como novedad para SQL Server 2017. En el artículo se describen las características que se han agregado a la versión 2017 de SQL Server. La mayoría o todas esas características nuevas también forman parte de la versión 2019. Estos son los atributos del artículo.
 
-| Atributo | Value |
+| Atributo | Valor |
 | :-------- | :---- |
 | Título | Novedades de SQL Server 2017 |
 | Intervalo de moniker | `=">= sql-server-2017"` |

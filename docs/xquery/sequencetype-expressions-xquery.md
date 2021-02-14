@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 909d3cb49879a94c466e58f83997e32c468d9df8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0627d892733f84cb4a8d1b5cf80ad65d9c09f824
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643359"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335851"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Expresiones SequenceType (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "85643359"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- Tenga en cuenta que el `instance of` operador, `Occurrence indicator` , especifica la cardinalidad, el número de elementos de la secuencia resultante. Si no se especifica esto, se supone que la cardinalidad es 1. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , solo se admite el indicador de repetición de signo de interrogación (**?)** . El **?** el indicador de repetición indica que `Expression` puede devolver cero o un elemento. Si el **?** se especifica el indicador de repetición, `instance of` devuelve true cuando el `Expression` tipo coincide con el especificado `SequenceType` , independientemente de si `Expression` devuelve un singleton o una secuencia vacía.  
+ Tenga en cuenta que el `instance of` operador, `Occurrence indicator` , especifica la cardinalidad, el número de elementos de la secuencia resultante. Si no se especifica esto, se supone que la cardinalidad es 1. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , solo se admite el indicador de repetición de signo de interrogación (**?)** . El cuantificador **?** el indicador de repetición indica que `Expression` puede devolver cero o un elemento. Si el  se especifica el indicador de repetición, `instance of` devuelve true cuando el `Expression` tipo coincide con el especificado `SequenceType` , independientemente de si `Expression` devuelve un singleton o una secuencia vacía.  
   
- Si el **?** no se especifica el indicador de repetición, `sequence of` solo devuelve true cuando el `Expression` tipo coincide con el `Type` especificado y `Expression` devuelve un singleton.  
+ Si el  no se especifica el indicador de repetición, `sequence of` solo devuelve true cuando el `Expression` tipo coincide con el `Type` especificado y `Expression` devuelve un singleton.  
   
  **Nota:** Los indicadores de signo más ( **+** ) y asterisco (**&#42;**) no se admiten en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- En los siguientes ejemplos se muestra el uso de la**instancia del** operador XQuery.  
+ En los siguientes ejemplos se muestra el uso de la **instancia del** operador XQuery.  
   
 ### <a name="example-a"></a>Ejemplo A  
  En el ejemplo siguiente se crea una variable de tipo **XML** y se especifica una consulta en ella. La expresión de consulta especifica un operador `instance of` para determinar si el tipo dinámico del valor devuelto por el primer operando coincide con el tipo especificado en el segundo operando.  
@@ -110,7 +110,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Para obtener más información, vea [comparar XML con tipo y XML sin tipo](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ Para obtener más información, vea [Comparar XML con tipo y XML sin tipo](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
  La siguiente consulta usetheBoolean `instance of` expresión para determinar si el atributo LocationID es de tipo XS: Integer:  
   
@@ -313,7 +313,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   No se admiten las secuencias completas, como `(1,2) instance of xs:integer*`.  
   
--   Cuando se usa un formulario del tipo de secuencia **Element ()** que especifica un nombre de tipo, como `element(ElementName, TypeName)` , el tipo se debe calificar con un signo de interrogación (?). Por ejemplo, `element(Title, xs:string?)` indica que el elemento puede ser NULL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]no admite la detección en tiempo de ejecución de la propiedad **xsi: nil** mediante el uso de `instance of` .  
+-   Cuando se usa un formulario del tipo de secuencia **Element ()** que especifica un nombre de tipo, como `element(ElementName, TypeName)` , el tipo se debe calificar con un signo de interrogación (?). Por ejemplo, `element(Title, xs:string?)` indica que el elemento puede ser NULL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no admite la detección en tiempo de ejecución de la propiedad **xsi: nil** mediante el uso de `instance of` .  
   
 -   Si el valor de `Expression` procede de un elemento o atributo del tipo unión, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solo podrá identificar el tipo primitivo, no derivado, del que procede el tipo del valor. Por ejemplo, si `e1` se define <> para que tenga un tipo estático de (XS: Integer | XS: String), lo siguiente devolverá FALSE.  
   
@@ -375,13 +375,13 @@ select @x.query('xs:date("2000-01-01Z")')
   
 #### <a name="implementation-limitations"></a>Limitaciones de la implementación  
   
--   No se admiten las expresiones XQuery **typeswitch**, **Castable**y **Treat** .  
+-   No se admiten las expresiones XQuery **typeswitch**, **Castable** y **Treat** .  
   
 -   **Cast as** requiere un signo de interrogación (?) después del tipo atómico.  
   
 -   **xs: QName** no se admite como tipo para la conversión. En su lugar, use **Expanded-QName** .  
   
--   **xs: Date**, **xs: Time**y **xs: DateTime** requieren una zona horaria, que se indica mediante una Z.  
+-   **xs: Date**, **xs: Time** y **xs: DateTime** requieren una zona horaria, que se indica mediante una Z.  
   
      La consulta siguiente provocará un error, pues no se ha especificado ninguna zona horaria.  
   

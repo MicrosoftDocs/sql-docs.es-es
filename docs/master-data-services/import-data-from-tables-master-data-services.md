@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f4b7f610ca23940c676befc107331b406c124cb2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e9faf7de8d3e7517d47c61ba3a9b6e00cd2e2b09
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92197029"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347728"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importar datos de tablas (Master Data Services)
 

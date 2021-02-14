@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9c1f313a5316059a05cb30a5af6ef7a451353a3d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 18f57d57e1a944a1be66a880231533e6cf34493e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724223"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344976"
 ---
 # <a name="functions-on-string-values---contains"></a>Funciones usadas en valores de cadena: contains
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

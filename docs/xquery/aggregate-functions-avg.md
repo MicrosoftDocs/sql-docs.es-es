@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af6e9ba832a267c2f85bbe2f44f087399384179c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ee09ab89e1acb0fc8ddad23d002e2cd0e136bc59
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914673"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340491"
 ---
 # <a name="aggregate-functions---avg"></a>Funciones de agregado: avg
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Secuencia de valores atómicos cuyo promedio se va a calcular.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Todos los tipos de los valores atomizados que se pasan a **AVG ()** deben ser un subtipo de exactamente uno de los tres tipos base numéricos integrados o XDT: untypedAtomic. No se pueden mezclar. Los valores de tipo xdt:untypedAtomic se tratan como xs:double. El resultado de **AVG ()** recibe el tipo base de los tipos pasados, como XS: Double en el caso de XDT: untypedAtomic.  
   
  Si la entrada está vacía estáticamente, el vacío es implícito y se genera un error estático.  

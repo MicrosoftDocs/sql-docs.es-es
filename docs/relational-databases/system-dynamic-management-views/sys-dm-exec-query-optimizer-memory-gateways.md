@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ff3adb52a968957faead5453e266ec733df38f4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 66e5d3e4509b8593a41a53348e466054ee01b4f4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99198528"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342912"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 
@@ -51,7 +51,7 @@ SQL Server requiere el permiso VIEW SERVER STATE en el servidor.
 Azure SQL Database requiere el permiso VIEW DATABASE STATE en la base de datos.
 
 
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 SQL Server usa un enfoque de puerta de enlace en capas para limitar el número de compilaciones simultáneas permitidas.  Se usan tres puertas de enlace, como pequeño, mediano y grande. Las puertas de enlace ayudan a evitar el agotamiento de los recursos de memoria generales por la memoria de compilación más grande, que requiere consumidores.
 
 Espera en una puerta de enlace como resultado de la compilación diferida. Además de los retrasos en la compilación, las solicitudes limitadas tendrán un asociado RESOURCE_SEMAPHORE_QUERY_COMPILE la acumulación del tipo de espera. El tipo de espera de RESOURCE_SEMAPHORE_QUERY_COMPILE puede indicar que las consultas usan una gran cantidad de memoria para la compilación y que se ha agotado la memoria, o que, como alternativa, hay suficiente memoria disponible en general, pero se han agotado las unidades disponibles en una puerta de enlace específica. La salida de **Sys.dm_exec_query_optimizer_memory_gateways** se puede usar para solucionar problemas de escenarios en los que no había memoria suficiente para compilar un plan de ejecución de consulta.  

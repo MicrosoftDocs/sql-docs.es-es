@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 57de001599923d46139883f2f8a691f9d682abf3
-ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
+ms.openlocfilehash: bd97d5b0da5d88974dcd56aa0f32cbc3243532f0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92914317"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052149"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>¿Cuál es la instancia maestra en un clúster de macrodatos de SQL Server?
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dcc18839d2e10a35a35289a5950cab566afea23a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 145a7ad079827ca3392eb0bde0761f9f8f70a9f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215595"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081686"
 ---
 # <a name="batching-methods"></a>Métodos de procesamiento por lotes
   El uso de encabezados SOAP en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] le permite incluir varios métodos de servicio web en una única operación. Los métodos se ejecutan dentro del ámbito de una única transacción de base de datos, en el orden en el que se llaman.  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 875c5944a0b74c7140843388da1e783e9f2ba5b8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4a5c5747dad97cc54859cb9b40b966cec66970fc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726768"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058410"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Compatibilidad con recuperación ante desastres de alta disponibilidad
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

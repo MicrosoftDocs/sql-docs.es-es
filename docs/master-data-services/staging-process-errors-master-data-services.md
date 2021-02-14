@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0a038abb5ac1152a09face7a4838f18a69b65400
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 84a5a66cbb8bacb3e1df896fedfa3a051e2f4dbb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812345"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336264"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Errores del proceso de almacenamiento provisional (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "85812345"
 |Código|Error|Se produce cuando/detalles|Se aplica a la tabla|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|El mismo código de miembro existe varias veces en la tabla de ensayo.|El lote de almacenamiento provisional incluye el mismo código de miembro varias veces. No se crea ni actualiza ningún miembro.|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
-|210003|El atributo values hace referencia a un miembro que no existe o está inactivo.|Cuando almacena provisionalmente atributos basados en dominio, debe usar el código en lugar del nombre. Se aplica a **ImportType0**, **1**y **2**.|Hoja<br /><br /> Consolidado|  
+|210003|El atributo values hace referencia a un miembro que no existe o está inactivo.|Cuando almacena provisionalmente atributos basados en dominio, debe usar el código en lugar del nombre. Se aplica a **ImportType0**, **1** y **2**.|Hoja<br /><br /> Consolidado|  
 |210006|El código de miembro está inactivo.|**ImportType**  =  **1** y especificó un código de miembro que no existe.|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
 |210032|El nombre de jerarquía falta o no es válido.|La jerarquía explícita no se encontró o el valor de **HierarchyName** estaba en blanco.|Consolidado<br /><br /> Relación|  
 |210035|Dado que no existe una regla de negocios de generación de código, se requiere **MemberCode** .|Al crear o actualizar miembros, se requiere siempre **MemberCode** , a menos que esté utilizando la generación de código automática. Para obtener más información, consulte [creación automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).|Hoja<br /><br /> Consolidado|  
