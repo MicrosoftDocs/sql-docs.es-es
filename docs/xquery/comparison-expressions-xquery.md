@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0b96fbd075ed2b2f79ca8b92d09e2d2782d77dc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4824cd52001305a05c00e197e8c4140598267d4f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922329"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349338"
 ---
 # <a name="comparison-expressions-xquery"></a>Expresiones de comparación (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -45,10 +45,10 @@ ms.locfileid: "86922329"
   
  Los operadores generales se definen en la tabla siguiente.  
   
-|Operator|Descripción|  
+|Operador|Descripción|  
 |--------------|-----------------|  
 |=|Igual|  
-|!=|No es igual|  
+|!=|No igual a|  
 |\<|Menor que|  
 |>|Mayor que|  
 |\<=|Menor o igual que|  
@@ -140,10 +140,10 @@ WHERE ContactID=1
   
  Los operadores de comparación de valores se definen en la tabla siguiente.  
   
-|Operator|Descripción|  
+|Operador|Descripción|  
 |--------------|-----------------|  
 |eq|Igual|  
-|ne|No es igual|  
+|ne|No igual a|  
 |lt|Menor que|  
 |gt|Mayor que|  
 |le|Menor o igual que|  
@@ -221,9 +221,9 @@ ProductModelID       Result
   
  A continuación se exponen las comparaciones que se realizan en función del orden en el documento:  
   
--   `<<`: Hace preceder el **operando 1** delante del **operando 2** en el orden del documento.  
+-   `<<` : Hace preceder el **operando 1** delante del **operando 2** en el orden del documento.  
   
--   `>>`: El **operando 1** sigue el **operando 2** en el orden del documento.  
+-   `>>` : El **operando 1** sigue el **operando 2** en el orden del documento.  
   
  La consulta siguiente devuelve true si la descripción del catálogo de productos tiene el \<Warranty> elemento que aparece delante del \<Maintenance> elemento en el orden del documento para un producto determinado.  
   
@@ -241,7 +241,7 @@ where ProductModelID=19
   
  Observe lo siguiente en la consulta anterior:  
   
--   El método **Value ()** del tipo de datos **XML**se usa en la consulta.  
+-   El método **Value ()** del tipo de datos **XML** se usa en la consulta.  
   
 -   El resultado booleano de la consulta se convierte en **nvarchar (10)** y se devuelve.  
   

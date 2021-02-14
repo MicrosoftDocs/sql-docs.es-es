@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 86170829ee1ae3f5116497f8435bf207edb3d5a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cce8c342c17881a4d1c52af468b6e2c4d4f0b7d3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88344461"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350203"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Implementar un paquete de implementación de modelo mediante el asistente
 
@@ -55,7 +55,7 @@ ms.locfileid: "88344461"
   
 7.  Una vez cargado el paquete, haga clic en **Siguiente**.  
   
-8.  Si el modelo ya existe, puede seleccionar **Actualizar el modelo existente**para actualizarlo. Para crear un nuevo modelo, seleccione **Crear un nuevo modelo** y, después de hacer clic en **Siguiente** , puede escribir un nombre para el nuevo modelo.  
+8.  Si el modelo ya existe, puede seleccionar **Actualizar el modelo existente** para actualizarlo. Para crear un nuevo modelo, seleccione **Crear un nuevo modelo** y, después de hacer clic en **Siguiente** , puede escribir un nombre para el nuevo modelo.  
   
 9. Haga clic en **Finalizar** para salir del asistente.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88344461"
      Al actualizar un modelo, si el proceso produce un error durante alguno de los tres primeros pasos, no pasa al siguiente paso; sin embargo, los cambios ya realizados no se revierten.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Los atributos de archivo y los permisos de usuario y de grupo no están incluidos en los paquetes de implementación de modelos. Después de implementar un modelo, debe actualizarlos manualmente. Para más información, consulte:  
+ Los atributos de archivo y los permisos de usuario y de grupo no están incluidos en los paquetes de implementación de modelos. Después de implementar un modelo, debe actualizarlos manualmente. Para obtener más información, vea:  
   
 -   [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

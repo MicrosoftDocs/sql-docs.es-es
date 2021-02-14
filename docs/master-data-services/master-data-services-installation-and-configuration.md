@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ca05529c9b4ce1d9ec603989af81f0d2aeebf76b
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 630ee8396c3f4f64e7eee5335484299f5bebfd42
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236395"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350703"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalación y configuración de Master Data Services
 
@@ -132,7 +132,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
 
     >  [!INCLUDE[sqlv15](../includes/sssql19-md.md)] agrega compatibilidad con Instancia administrada de SQL Server. Establezca el valor de **SQL Server instancia** en el host de la instancia administrada. Por ejemplo, `xxxxxx.xxxxxx.database.windows.net`.
 
-4. Seleccione el **tipo de autenticación** y, a continuación, haga clic en **conexión de prueba** para confirmar que puede conectarse a la base de datos con las credenciales del tipo de autenticación que ha seleccionado. Haga clic en **Next**.
+4. Seleccione el **tipo de autenticación** y, a continuación, haga clic en **conexión de prueba** para confirmar que puede conectarse a la base de datos con las credenciales del tipo de autenticación que ha seleccionado. Haga clic en **Siguiente**.
 
     >Para [!INCLUDE[sqlv15](../includes/sssql19-md.md)] , para conectarse a la instancia administrada, use uno de los siguientes tipos de autenticación:
     >
@@ -146,7 +146,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desmarque la casilla **Intercalación predeterminada de SQL Server** y haga clic en una o varias de las opciones disponibles, como **Distinguir mayúsculas de minúsculas**. Haga clic en **Next**.
+4.  Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desmarque la casilla **Intercalación predeterminada de SQL Server** y haga clic en una o varias de las opciones disponibles, como **Distinguir mayúsculas de minúsculas**. Haga clic en **Siguiente**.
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   

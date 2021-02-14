@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 31347efeda4805d4faffc993c164441cba1697c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 240be4e7d05e4daac27e15bf5f8a99ec6bc27563
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80216927"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061910"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>Procedimientos: Implementación de un elemento de informe personalizado
   Para implementar un elemento de informe personalizado en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe modificar los archivos de configuración del servidor de informes y copiar los ensamblados de componentes en tiempo de diseño y en tiempo de ejecución a las carpetas de aplicación correspondientes para el Diseñador de informes y el servidor de informes.  

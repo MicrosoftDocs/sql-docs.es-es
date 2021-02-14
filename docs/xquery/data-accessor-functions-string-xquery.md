@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4c0dee40eb08aac425f93570c98fc88d32bcc60
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c334f2f78ae79b9a1af3a268728d6fcc5454f05
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730970"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351080"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>Funciones del descriptor de acceso a datos: string (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

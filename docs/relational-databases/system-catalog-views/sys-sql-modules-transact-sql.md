@@ -21,12 +21,12 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58e1f2042f10d1b4f06482fdfb13f07cf5edfa3e
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: d456a51ca01f38968bf04d3144331fc4b1b2f933
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237707"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340734"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "99237707"
   
  Para obtener más información, vea [Funciones escalares definidas por el usuario para OLTP en memoria](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Id. de objeto del objeto contenedor. Es único en una base de datos.|  
 |**definir**|**nvarchar(max)**|Texto SQL que define este módulo. Este valor también se puede obtener mediante la función integrada [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) .<br /><br /> NULL = Cifrado.|  
@@ -51,7 +51,7 @@ ms.locfileid: "99237707"
 |**inline_type**|**bit**|**Válido para** : [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] y versiones posteriores.<br /><br />Indica si la inserción está activada para el módulo actualmente. <br /><br />0 = la inclusión está desactivada<br /><br /> 1 = la inserción está activada.<br /><br /> En el caso de las UDF escalares, el valor será 1 si la inserción está activada (explícita o implícitamente). El valor siempre será 1 para TVF en línea y 0 para otros tipos de módulo.<br />|  
 
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La expresión SQL de una restricción predeterminada, objeto de tipo D, se encuentra en la vista de catálogo [Sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) . La expresión SQL de una restricción CHECK, objeto de tipo C, se encuentra en la vista de catálogo [Sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) .  
   
  Esta información también se describe en [sys.dm_db_uncontained_entities &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  

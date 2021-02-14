@@ -14,12 +14,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 212d6792704ed2b52af91be3ea810a916a486bc8
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: d203442868c4ab9f899dfda5a02a0fea1f1f9874
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038028"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080736"
 ---
 # <a name="managing-passwords-oracletosql"></a>Administración de contraseñas (OracleToSQL)
 Esta sección trata sobre la protección de contraseñas de base de datos y el procedimiento para importarlas o exportarlas entre servidores.

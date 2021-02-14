@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d3de498043b5be0e6ad71a9e32b5abbc6db7ab21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3227ef69915e606f514b5ecf36e5f1656db733e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88343231"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340279"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Superponer permisos de modelo y de miembro (Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "88343231"
   
 -   **Denegar** invalida al resto de permisos.  
   
--   El permiso de**administrador** en el nivel de modelo sobrescribe todos los demás permisos y se cambia por el permiso de acceso Todo (CRUD) en los subniveles.  
+-   El permiso de **administrador** en el nivel de modelo sobrescribe todos los demás permisos y se cambia por el permiso de acceso Todo (CRUD) en los subniveles.  
   
 -   El permiso de acceso efectivo forma intersección con los permisos de los miembros y atributos.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "88343231"
   
  En la pestaña **Miembros de la jerarquía** , el nodo de subcategoría de bicicletas de montaña de una jerarquía derivada tiene asignado el permiso **Actualizar** .  
   
- Como consecuencia, el usuario tiene el permiso **Actualizar**para todos los valores de atributo de todos los miembros del nodo Mountain Bikes en **Explorador** . Se ocultan todos los demás miembros y atributos.  
+ Como consecuencia, el usuario tiene el permiso **Actualizar** para todos los valores de atributo de todos los miembros del nodo Mountain Bikes en **Explorador** . Se ocultan todos los demás miembros y atributos.  
   
  ![mds_conc_overlap_model_example_1](../master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -60,7 +60,7 @@ ms.locfileid: "88343231"
   
  En la pestaña **Miembros de la jerarquía** , al nodo de subcategoría de bicicletas de montaña de una jerarquía derivada se le asigna el permiso de **Lectura** explícitamente.  
   
- En consecuencia, en el **Explorador**el usuario tiene el permiso de **Lectura** para los valores de atributo de subcategoría para los miembros del nodo de bicicletas de montaña. Se ocultan todos los demás miembros y atributos.  
+ En consecuencia, en el **Explorador** el usuario tiene el permiso de **Lectura** para los valores de atributo de subcategoría para los miembros del nodo de bicicletas de montaña. Se ocultan todos los demás miembros y atributos.  
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   

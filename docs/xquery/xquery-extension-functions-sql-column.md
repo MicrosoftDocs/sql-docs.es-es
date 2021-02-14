@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55a38974ec5e85eeec58195c18edd1f6fb8b5cb4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 3d2f550e3516594a269257786e109df9c84a1082
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038073"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341877"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Funciones de extensión de XQuery: sql:column()
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "92038073"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Tenga en cuenta que la referencia a una columna especificada en la función **SQL: column ()** dentro de una expresión XQuery hace referencia a una columna de la fila que se está procesando.  
   
  En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , solo se puede hacer referencia a una instancia **XML** en el contexto de la expresión de origen de una instrucción INSERT de XML-DML; de lo contrario, no se puede hacer referencia a columnas que son de tipo **XML** o un tipo definido por el usuario CLR.  
@@ -60,7 +60,7 @@ sql:column("columnName")
   
  Tenga en cuenta las siguientes observaciones acerca del XML creado:  
   
--   Los valores del atributo **ProductID**, **ProductName**y **ProductPrice** se obtienen de la tabla **Product** .  
+-   Los valores del atributo **ProductID**, **ProductName** y **ProductPrice** se obtienen de la tabla **Product** .  
   
 -   El valor del atributo **ProductModelID** se recupera de la tabla **ProductModel** .  
   

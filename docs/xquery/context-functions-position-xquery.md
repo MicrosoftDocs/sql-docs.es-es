@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83f744f2b9361a81afada82245bf2d4265cea833
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dd2be5cf246bd625e63c31975effa59fb1b919d0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923661"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345028"
 ---
 # <a name="context-functions---position-xquery"></a>Funciones de contexto: position (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "86923661"
 fn:position() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , **FN: Position ()** solo se puede usar en el contexto de un predicado dependiente del contexto. Concretamente, solo se puede utilizar entre corchetes ([ ]). Las comparaciones con esta función no reducen la cardinalidad durante una inferencia de tipo estático.  
   
 ## <a name="examples"></a>Ejemplos  

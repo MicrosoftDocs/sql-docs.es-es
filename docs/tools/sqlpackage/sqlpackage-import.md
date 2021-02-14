@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: 0e9acab737de04b002debf9d8c1b230a5cb01b14
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: cecc6de89a9e8f82a64942acb08af7ddee48c5be
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577917"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081466"
 ---
 # <a name="sqlpackage-import-parameters-and-properties"></a>Parámetros y propiedades de Import de SqlPackage
 La acción Import de SqlPackage.exe importa los datos de esquemas y tablas de un paquete BACPAC (archivo .bacpac) en una base de datos nueva o vacía en SQL Server o Azure SQL Database. En el momento de la operación de importación a una base de datos existente, la base de datos de destino no puede contener ningún objeto de esquema definido por el usuario.  

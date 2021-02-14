@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e92148b5a85ced147599eafe09156cf41c47021
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 82f3eae7098b3ac5e86355aed1e13bdd5c137015
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037018"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352817"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Funciones de XQuery con el tipo de datos xml
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "92037018"
   
  En la tabla siguiente se enumeran las funciones de XQuery que se admiten con el tipo de datos **XML**.  
   
-|Category|Nombre de la función|  
+|Categoría|Nombre de la función|  
 |--------------|-------------------|  
 |[Funciones en valores numéricos]()|[umbral](../xquery/numeric-values-functions-ceiling.md)|  
 ||[floor](../xquery/numeric-values-functions-floor.md)|  
@@ -42,7 +42,7 @@ ms.locfileid: "92037018"
 ||[contains](../xquery/functions-on-string-values-contains.md)|  
 ||[substring](../xquery/functions-on-string-values-substring.md)|  
 ||[Función en minúsculas &#40;XQuery&#41;](../xquery/functions-on-string-values-lower-case.md)|  
-||[string-length](../xquery/functions-on-string-values-string-length.md)|  
+||[longitud de cadena](../xquery/functions-on-string-values-string-length.md)|  
 ||[Función en mayúsculas &#40;XQuery&#41;](../xquery/functions-on-string-values-upper-case.md)|  
 |Funciones en valores booleanos|[not](../xquery/functions-on-boolean-values-not-function.md)|  
 |[Funciones en nodos]()|[número](../xquery/functions-on-nodes-number.md)|  

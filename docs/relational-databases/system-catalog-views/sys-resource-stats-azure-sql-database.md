@@ -20,12 +20,12 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 14785888953906f42b2196dc2cb06ca35cfc3a8b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 54732718d3c31c8dc646c9f61b3afcfa23cb07d2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210023"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343143"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "99210023"
 |start_time|**datetime**|Hora UTC que indica el inicio del intervalo de informes de cinco minutos.|  
 |end_time|**datetime**|Hora UTC que indica el final del intervalo de informes de cinco minutos.|  
 |database_name|**nvarchar(128)**|Nombre de la base de datos del usuario.|  
-|sku|**nvarchar(128)**|Nivel de servicio de la base de datos. Los posibles valores son los siguientes:<br /><br /> Básico<br /><br /> Estándar<br /><br /> Premium<br /><br />De uso general<br /><br />Crítico para la empresa|  
+|sku|**nvarchar(128)**|Nivel de servicio de la base de datos. Los posibles valores son los siguientes:<br /><br /> Básica<br /><br /> Estándar<br /><br /> Premium<br /><br />Uso general<br /><br />Crítico para la empresa|  
 |storage_in_megabytes|**float**|Tamaño de almacenamiento máximo en megabytes para el período de tiempo, incluidos los datos de base de datos, los índices, los procedimientos almacenados y los metadatos.|  
 |avg_cpu_percent|**decimal (5, 2)**|Uso de proceso promedio como porcentaje del límite del nivel de servicio.|  
 |avg_data_io_percent|**decimal (5, 2)**|Uso de E/S promedio como porcentaje según el límite del nivel de servicio. Para las bases de datos de hiperescala, consulte [e/s de datos en estadísticas de uso de recursos](/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
@@ -62,7 +62,7 @@ ms.locfileid: "99210023"
 ## <a name="permissions"></a>Permisos  
  Esta vista está disponible para todos los roles de usuario con permisos para conectarse a la base de datos **maestra** virtual.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los datos devueltos por **Sys.resource_stats** se expresan como un porcentaje de los límites máximos permitidos para el nivel de servicio/nivel de rendimiento que se está ejecutando.  
   
  Cuando una base de datos es miembro de un grupo elástico, las estadísticas de recursos que se presentan como valores porcentuales se expresan como el porcentaje del límite máximo de las bases de datos establecidas en la configuración del grupo elástico.  

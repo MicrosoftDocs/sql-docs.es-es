@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89ebfbb70c7c50729ebbfb5de6a8551e00927bc6
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 521904030d97213770d4a2310b51eaadc37d4e5d
+ms.sourcegitcommit: 05fc736e6b6b3a08f503ab124c3151f615e6faab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99233237"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99478590"
 ---
 # <a name="statistics"></a>Estadísticas
 
@@ -44,12 +44,12 @@ ms.locfileid: "99233237"
  Cada objeto de estadísticas se crea en una lista de una o más columnas de la tabla e incluye un *histograma* que muestra la distribución de valores en la primera columna. Los objetos de estadísticas en varias columnas también almacenan la información estadística relativa a la correlación de valores entre las columnas. Estas estadísticas de la correlación, o *densidades*, derivan del número de filas distintas de valores de columna. 
 
 #### <a name="histogram"></a><a name="histogram"></a> Histograma  
-Un **histograma** mide la frecuencia de aparición de cada valor distinto en un conjunto de datos. El optimizador de consultas calcula un histograma de los valores de la primera columna de clave del objeto de estadísticas; para ello, selecciona los valores de la columna tomando una muestra estadística de las filas o realizando un análisis completo de todas las filas de la tabla o vista. Si el histograma se crea a partir de muestras de un conjunto de filas, los totales almacenados para el número de filas y el número de valores distintos son las estimaciones y no es necesario que sean números enteros.
+Un **histograma** mide la frecuencia de aparición de cada valor distinto en un conjunto de datos. El optimizador de consultas calcula un histograma sobre los valores de la primera columna de clave del objeto de estadísticas; para ello, selecciona los valores de la columna tomando una muestra estadística de las filas o realizando un examen completo de todas las filas de la tabla o vista. Si el histograma se crea a partir de muestras de un conjunto de filas, los totales almacenados para el número de filas y el número de valores distintos son las estimaciones y no es necesario que sean números enteros.
 
 > [!NOTE]
 > <a name="frequency"></a> Los histogramas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo se crean para una única columna: la primera del conjunto de columnas de clave del objeto de estadísticas.
   
-Para crear el histograma, el optimizador de consultas ordena los valores de la columna, calcula el número de valores que coinciden con cada valor distinto de esta y, luego, agrega los valores de la columna en un máximo de 200 pasos contiguos del histograma. Cada paso del histograma incluye un rango de valores de columna seguido de un valor de columna de límite superior. El intervalo incluye todos los valores de columna posibles comprendidos entre los valores límite (sin incluir los propios valores límite). El valor de columna ordenado más pequeño es el valor del límite superior del primer paso del histograma.
+Para crear el histograma, el optimizador de consultas ordena los valores de la columna, calcula el número de valores que coinciden con cada valor distinto de esta y, luego, agrega los valores de la columna en 200 pasos contiguos del histograma como máximo. Cada paso del histograma incluye un rango de valores de columna seguido de un valor de columna de límite superior. El intervalo incluye todos los valores de columna posibles comprendidos entre los valores límite (sin incluir los propios valores límite). El valor de columna ordenado más pequeño es el valor del límite superior del primer paso del histograma.
 
 Más concretamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea el **histograma** del conjunto ordenado de valores de columna en tres pasos:
 
@@ -72,7 +72,7 @@ En cada paso del histograma anterior:
 -   Las líneas de puntos representan los valores de las muestras utilizados para estimar el número total de valores distintos que hay en el rango (*distinct_range_rows*) y el número total de valores que hay en el rango (*range_rows*). El optimizador de consultas utiliza *range_rows* y *distinct_range_rows* para calcular *average_range_rows* y no almacena los valores de las muestras.   
   
 #### <a name="density-vector"></a><a name="density"></a>Vector de densidad  
-**Densidad** es la información sobre el número de duplicados en una determinada columna o combinación de columnas, y se calcula como 1/(número de valores distintos). El optimizador de consultas utiliza las densidades para mejorar las estimaciones de cardinalidad de las consultas que devuelven varias columnas de la misma tabla o vista indizada. A medida que disminuye la densidad, aumenta la selectividad de un valor. Por ejemplo, en una tabla que representa automóviles, muchos automóviles tienen el mismo fabricante, pero cada uno dispone de un único número de identificación de vehículo (NIV). Un índice del NIV es más selectivo que un índice del fabricante, porque NIV tiene una densidad inferior a la del fabricante. 
+**Densidad** es la información sobre el número de duplicados en una determinada columna o combinación de columnas, y se calcula como 1/(número de valores distintos). El optimizador de consultas utiliza las densidades para mejorar las estimaciones de cardinalidad de las consultas que devuelven varias columnas de la misma tabla o vista indexada. A medida que disminuye la densidad, aumenta la selectividad de un valor. Por ejemplo, en una tabla que representa automóviles, muchos automóviles tienen el mismo fabricante, pero cada uno dispone de un único número de identificación de vehículo (NIV). Un índice del NIV es más selectivo que un índice del fabricante, porque NIV tiene una densidad inferior a la del fabricante. 
 
 > [!NOTE]
 > Frecuencia es la información sobre la aparición de cada valor distinto en la primera columna de clave del objeto de estadísticas y se calcula como el recuento de filas * densidad. Puede encontrarse una frecuencia máxima de 1 en las columnas con valores únicos.
@@ -108,22 +108,38 @@ ORDER BY s.name;
 ```  
   
 #### <a name="auto_update_statistics-option"></a>Opción AUTO_UPDATE_STATISTICS  
- Cuando está activada la opción automática de actualización de estadísticas, [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics), el optimizador de consultas determina cuándo las estadísticas pueden quedar obsoletas y las actualiza cuando una consulta las usa. Las estadísticas se vuelven obsoletas después de que operaciones de inserción, actualización, eliminación o combinación cambien la distribución de los datos en la tabla o la vista indizada. El Optimizador de consultas determina cuándo las estadísticas pueden quedar obsoletas contando el número de modificaciones de datos desde la actualización más reciente de las estadísticas, comparando el número de modificaciones con respecto a un umbral. El umbral se basa en el número de filas de la tabla o la vista indizada.  
+ Cuando está activada la opción automática de actualización de estadísticas, [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics), el optimizador de consultas determina cuándo las estadísticas pueden quedar obsoletas y las actualiza cuando una consulta las usa. Esta acción también se conoce como recompilación de estadísticas. Las estadísticas se vuelven obsoletas después de que operaciones de inserción, actualización, eliminación o combinación cambien la distribución de los datos en la tabla o la vista indexada. El optimizador de consultas determina cuándo las estadísticas podrían quedar obsoletas; para ello, se cuenta el número de modificaciones de filas desde la actualización más reciente de las estadísticas y se compara el número de modificaciones de filas con un umbral. El umbral se basa en la cardinalidad de la tabla, que se puede definir como el número de filas de la tabla o la vista indexada.  
   
-* Hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa un umbral basado en el porcentaje de filas modificadas. Esto es así independientemente del número de filas de la tabla. El umbral es el siguiente:
-    * Si la cardinalidad de tabla era de 500 o menos en el momento de la evaluación de las estadísticas, se actualizará cada 500 modificaciones.
-    * Si la cardinalidad de tabla estaba por encima de 500 en el momento de la evaluación de las estadísticas, se actualizará cada 500 modificaciones, más el 20 % pertinente.
+- Hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssde_md](../../includes/ssde_md.md)] usa un umbral de recompilación basado en el número de filas de la tabla o la vista indexada en el momento en que se evaluaron las estadísticas. El umbral es diferente si una tabla es temporal o permanente.
 
-* A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y en el [nivel de compatibilidad de base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa un umbral de actualización de estadísticas dinámico y decreciente que se ajusta según el número de filas de la tabla. Esto se calcula como la raíz cuadrada de 1000 multiplicado por la cardinalidad de tabla actual. Por ejemplo, si la tabla contiene 2 millones de filas, entonces, el cálculo es sqrt (1000 * 2000000) = 44721,359. Con este cambio, las estadísticas en tablas de gran tamaño se actualizarán con más frecuencia. Sin embargo, si una base de datos tiene un nivel de compatibilidad inferior a 130, se aplicará el umbral de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. 
+  |Tipo de tabla.|Cardinalidad de la tabla (*n*)|Umbral de recompilación (n.º de modificaciones)|
+  |-----------|-----------|-----------|
+  |Temporales|*n* < 6|6|
+  |Temporales|6 <= *n* <= 500|500|
+  |Permanente|*n* <= 500|500|
+  |Temporal o permanente|*n* > 500|500 + (0.20 * *n*)|
+  
+  Por ejemplo, si la tabla contiene 20 000 filas, el cálculo es `500 + (0.2 * 20,000) = 4,500` y las estadísticas se actualizarán cada 4500 modificaciones.
+
+- A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y en el [nivel de compatibilidad de base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] también usa un umbral de recompilación de estadísticas dinámico y decreciente que se ajusta según la cardinalidad de la tabla en el momento en que se evaluaron las estadísticas. Con este cambio, las estadísticas en tablas de gran tamaño se actualizarán con más frecuencia. Sin embargo, si una base de datos tiene un nivel de compatibilidad inferior a 130, se aplica el umbral de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].
+
+  |Tipo de tabla.|Cardinalidad de la tabla (*n*)|Umbral de recompilación (n.º de modificaciones)|
+  |-----------|-----------|-----------|
+  |Temporales|*n* < 6|6|
+  |Temporales|6 <= *n* <= 500|500|
+  |Permanente|*n* <= 500|500|
+  |Temporal o permanente|500 <= *n* <= 25 000|500 + (0.20 * *n*)|
+  |Temporal o permanente|*n* > 25 000|SQRT(1000 * *n*)|
+
+  Por ejemplo, si la tabla contiene 2 millones de filas, el cálculo es `SQRT(1,000 * 2,000,000) = 44,721` y las estadísticas se actualizarán cada 44 721 modificaciones.
 
 > [!IMPORTANT]
 > En [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o bien en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores en el [nivel de compatibilidad de la base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 e inferior, habilite la [marca de seguimiento 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use un umbral de actualización de estadísticas descendente y dinámico.
 
-Puede usar las siguientes instrucciones para habilitar la marca de seguimiento 2371 en su entorno anterior a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]:
+Aunque se recomienda en todos los escenarios, la habilitación de la marca de seguimiento es opcional. Sin embargo, puede usar la siguiente guía para habilitar la marca de seguimiento 2371 en su entorno anterior a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]:
 
- - Si no ha observado problemas de rendimiento debido a las estadísticas obsoletas, no es necesario habilitar esta marca de seguimiento.
- - Si está en sistemas SAP, habilite esta marca de seguimiento.  Consulte este [blog](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371) para más información.
- - Si tiene que confiar en el trabajo nocturno para actualizar las estadísticas porque la actualización automática actual no se desencadena con la frecuencia suficiente, considere la posibilidad de habilitar la marca de seguimiento 2371 para reducir el umbral.
+ - Si está en un sistema SAP, habilite esta marca de seguimiento. Consulte este [blog](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371) para más información.
+ - Si tiene que depender del trabajo nocturno para actualizar las estadísticas porque la actualización automática actual no se desencadena con la frecuencia suficiente, considere la posibilidad de habilitar la marca de seguimiento 2371 para ajustar el umbral a la tabla de cardinalidad.
   
 El Optimizador de consultas comprueba que hay estadísticas obsoletas antes de compilar una consulta y antes de ejecutar un plan de consulta almacenado en la memoria caché. Antes de compilar una consulta, el Optimizador de consultas utiliza las columnas, tablas y vistas indexadas en el predicado de consulta para determinar qué estadísticas podrían estar obsoletas. Antes de ejecutar un plan de consulta almacenado en la memoria caché, [!INCLUDE[ssDE](../../includes/ssde-md.md)] comprueba que el plan de consulta hace referencia a las estadísticas actualizadas.  
   
@@ -131,9 +147,6 @@ La opción AUTO_UPDATE_STATISTICS se aplica a los objetos de estadísticas cread
  
 Puede usar [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) para realizar un seguimiento de forma precisa del número de filas cambiadas en una tabla y decidir si desea actualizar las estadísticas manualmente.
 
-
-
-  
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
 La opción de actualización asincrónica de estadísticas [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) determina si el optimizador de consultas usa actualizaciones sincrónicas o asincrónicas de las estadísticas. La opción de actualización asincrónica de las estadísticas está desactivada de forma predeterminada y el optimizador de consultas actualiza las estadísticas sincrónicamente. La opción AUTO_UPDATE_STATISTICS_ASYNC se aplica a los objetos de estadísticas creados para índices y columnas únicas de los predicados de consulta, así como a las estadísticas creadas con la instrucción [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
  
@@ -144,7 +157,7 @@ Las actualizaciones de las estadísticas pueden ser sincrónicas (el valor prede
 
 * Con las actualizaciones sincrónicas de las estadísticas, las consultas siempre se compilan y ejecutan con estadísticas actualizadas. Si las estadísticas no están actualizadas, el optimizador de consultas esperará a que lo estén antes de compilar y ejecutar la consulta. 
 
-* En el caso de las actualizaciones asincrónicas de las estadísticas, las consultas se compilan con estadísticas existentes, incluso aunque estas no estén actualizadas. Si, al compilar la consulta, las estadísticas no están actualizadas, el optimizador de consultas podría elegir un plan de consultas poco óptimo. Las estadísticas suelen actualizarse poco después. Como de costumbre, las consultas que se compilen tras completarse las actualizaciones de las estadísticas se beneficiarán del hecho de poder usar estadísticas actualizadas.   
+* En el caso de las actualizaciones asincrónicas de las estadísticas, las consultas se compilan con estadísticas existentes, incluso aunque estas no estén actualizadas. Si, al compilar la consulta, las estadísticas no están actualizadas, el optimizador de consultas podría elegir un plan de consultas poco óptimo. Las estadísticas suelen actualizarse poco después. Las consultas que se compilen tras completarse las actualizaciones de las estadísticas se beneficiarán del hecho de poder usar estadísticas actualizadas.   
 
 Considere la posibilidad de usar las estadísticas sincrónicas al realizar las operaciones que cambian la distribución de los datos, como truncar una tabla o realizar una actualización masiva de un gran porcentaje de las filas. Si no actualiza manualmente las estadísticas después de finalizar la operación, el uso de estadísticas sincrónicas garantizará que las estadísticas estén actualizadas antes de ejecutar las consultas en los datos modificados.  
   
@@ -157,12 +170,12 @@ Considere el uso de estadísticas asincrónicas para lograr tiempos de respuesta
 > [!NOTE]
 > Las estadísticas de las tablas temporales locales siempre se actualizan de forma sincrónica, independientemente de la opción AUTO_UPDATE_STATISTICS_ASYNC. Las estadísticas de las tablas temporales globales se actualizan de forma sincrónica o asincrónica, según la opción AUTO_UPDATE_STATISTICS_ASYNC establecida para la base de datos de usuario.
 
-La actualización asincrónica de las estadísticas se realiza mediante una solicitud en segundo plano. Cuando la solicitud está lista para escribir estadísticas actualizadas en la base de datos, intenta adquirir un bloqueo de modificación del esquema en el objeto de metadatos de estadísticas. Si una sesión diferente ya mantiene un bloqueo en el mismo objeto, la actualización asincrónica de las estadísticas se bloqueará hasta que se pueda adquirir el bloqueo de modificación del esquema. Del mismo modo, la sesión en segundo plano de actualización asincrónica de las estadísticas, que ya contiene o está esperando a adquirir el bloqueo de modificación del esquema, puede bloquear las sesiones que necesiten adquirir un bloqueo de estabilidad de esquema en el objeto de metadatos de estadísticas para compilar una consulta. Por lo tanto, para las cargas de trabajo con compilaciones de consultas muy frecuentes y las actualizaciones frecuentes de las estadísticas, el uso de estadísticas asincrónicas puede aumentar la probabilidad de que se produzcan incidencias de simultaneidad debido a los bloqueos.
+La actualización asincrónica de las estadísticas se realiza mediante una solicitud en segundo plano. Cuando la solicitud está lista para escribir estadísticas actualizadas en la base de datos, intenta adquirir un bloqueo de modificación del esquema en el objeto de metadatos de estadísticas. Si una sesión diferente ya mantiene un bloqueo en el mismo objeto, la actualización asincrónica de las estadísticas se bloqueará hasta que se pueda adquirir el bloqueo de modificación del esquema. Del mismo modo, las sesiones que deban adquirir un bloqueo de estabilidad de esquema (Sch-S) en el objeto de metadatos de estadísticas para compilar una consulta pueden quedar bloqueadas por la sesión en segundo plano de actualización de estadísticas, que ya contiene el bloqueo de modificación de esquema o está a la espera de adquirirlo. Por lo tanto, para las cargas de trabajo con compilaciones de consultas muy frecuentes y las actualizaciones frecuentes de las estadísticas, el uso de estadísticas asincrónicas puede aumentar la probabilidad de que se produzcan incidencias de simultaneidad debido a los bloqueos.
 
-En Azure SQL Database y Azure SQL Managed Instance, puede evitar posibles incidencias de simultaneidad mediante la actualización asincrónica de las estadísticas. Para ello, habilite la [configuración de ámbito de la base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY. Con esta configuración habilitada, la solicitud en segundo plano esperará a adquirir el bloqueo de modificación del esquema (Sch-M) en una cola independiente de prioridad baja, lo que permitirá que otras solicitudes sigan compilando consultas con estadísticas existentes. Cuando ninguna otra sesión mantenga un bloqueo en el objeto de metadatos de estadísticas, la solicitud en segundo plano adquirirá el bloqueo de modificación del esquema y la actualización de estadísticas. En el caso improbable de que la solicitud en segundo plano no pueda adquirir el bloqueo en un período de tiempo de expiración de varios minutos, se anulará la actualización asincrónica de las estadísticas y estas no se actualizarán hasta que se desencadene otra actualización automática de las estadísticas o se [actualicen manualmente](update-statistics.md).
+En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], puede evitar posibles incidencias de simultaneidad mediante la actualización asincrónica de las estadísticas si habilita la [configuración con ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY. Con esta configuración habilitada, la solicitud en segundo plano esperará a adquirir el bloqueo de modificación de esquema (Sch-M) y conservará las estadísticas actualizadas en una cola independiente de prioridad baja, lo que permitirá que otras solicitudes sigan compilando consultas con las estadísticas existentes. Cuando ninguna otra sesión mantenga un bloqueo en el objeto de metadatos de estadísticas, la solicitud en segundo plano adquirirá el bloqueo de modificación del esquema y la actualización de estadísticas. En el caso improbable de que la solicitud en segundo plano no pueda adquirir el bloqueo en un período de tiempo de expiración de varios minutos, se anulará la actualización asincrónica de las estadísticas y estas no se actualizarán hasta que se desencadene otra actualización automática de las estadísticas o se [actualicen manualmente](update-statistics.md).
 
 > [!Note]
-> La opción de configuración del ámbito de la base de datos ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY ahora está disponible en Azure SQL Database y Azure SQL Managed Instance, y está previsto que también se incluya en SQL Server vNext. 
+> La opción de configuración con ámbito de base de datos ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY está disponible en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)], y está previsto que se incluya en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 #### <a name="incremental"></a>INCREMENTAL  
  Cuando la opción INCREMENTAL de CREATE STATISTICS está establecida en ON, se generan estadísticas por partición. Si se establece en OFF, el árbol de estadísticas se quita y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recalcula las estadísticas. El valor predeterminado es OFF. Este valor invalida la propiedad INCREMENTAL de la base de datos. Para obtener más información sobre cómo crear estadísticas incrementales, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md). Para obtener más información sobre cómo crear estadísticas por partición automáticamente, vea [Propiedades de la base de datos &#40;Página Opciones&#41;](../../relational-databases/databases/database-properties-options-page.md#automatic) y [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) (Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;). 

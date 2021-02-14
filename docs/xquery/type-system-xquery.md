@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb0b853b83fc65d8faddc341f9f0249debc2d2c1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a92b26642f5759044233d5d63b5a432ee5fe426c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915281"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352844"
 ---
 # <a name="type-system-xquery"></a>Sistema de tipos (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "86915281"
   
 -   El valor con tipo y el valor de cadena de un nodo.  
   
--   La [función de datos &#40;&#41;XQuery](../xquery/data-accessor-functions-data-xquery.md) y la [función de cadena &#40;&#41;XQuery ](../xquery/data-accessor-functions-string-xquery.md).  
+-   La [función de datos &#40;&#41;XQuery ](../xquery/data-accessor-functions-data-xquery.md) y la [función de cadena &#40;&#41;XQuery ](../xquery/data-accessor-functions-string-xquery.md).  
   
 -   La equiparación del tipo de secuencia devuelto por una expresión.  
   
@@ -69,7 +69,7 @@ WHERE ProductModelID=7
   
 -   Estos tipos no se pueden utilizar al crear una colección de esquemas XML. Estos tipos se utilizan en el sistema de tipos XQuery y se usan para [XQuery y para tipos estáticos](../xquery/xquery-and-static-typing.md). Puede convertir a los tipos atómicos, por ejemplo, **XDT: untypedAtomic**, en el espacio de nombres **XDT** .  
   
--   Al consultar XML sin tipo, el tipo estático y dinámico de nodos de elemento es **XDT: sin tipo**y el tipo de los valores de atributo es **XDT: untypedAtomic**. El resultado de un método **query ()** genera XML sin tipo. Esto significa que los nodos XML se devuelven como **XDT: untyped** y **XDT: untypedAtomic**, respectivamente.  
+-   Al consultar XML sin tipo, el tipo estático y dinámico de nodos de elemento es **XDT: sin tipo** y el tipo de los valores de atributo es **XDT: untypedAtomic**. El resultado de un método **query ()** genera XML sin tipo. Esto significa que los nodos XML se devuelven como **XDT: untyped** y **XDT: untypedAtomic**, respectivamente.  
   
 -   No se admiten los tipos **XDT: dayTimeDuration** y **XDT: yearMonthDuration** .  
   

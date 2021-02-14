@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c3c2fecc26cf2d8bbf5d53598a7b28ce7db5612
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 8876696412360275fcf443a5543634c9ac537df6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195577"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070340"
 ---
 # <a name="driver-manager-connection-pooling"></a>Agrupación de conexiones de administrador de controladores
 La agrupación de conexiones permite a una aplicación utilizar una conexión de un grupo de conexiones que no es necesario volver a establecer para cada uso. Una vez que una conexión se ha creado y colocado en un grupo, una aplicación puede volver a usar esa conexión sin realizar el proceso de conexión completo.  
@@ -44,7 +44,7 @@ La agrupación de conexiones permite a una aplicación utilizar una conexión de
   
  Un controlador debe implementar esta opción de forma eficaz o afectará al rendimiento de la agrupación de conexiones. En concreto, una llamada a get this Connection Attribute no debe producir un recorrido de ida y vuelta al servidor. En su lugar, un controlador solo debe devolver el último estado conocido de la conexión. La conexión está muerta si se produjo un error en el último recorrido al servidor y no está inactivo si el último recorrido se realizó correctamente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si se ha perdido una conexión (se ha comunicado mediante SQL_ATTR_CONNECTION_DEAD), el administrador de controladores ODBC destruirá la conexión llamando a SQLDisconnect en el controlador. Es posible que las nuevas solicitudes de conexión no encuentren una conexión utilizable en el grupo. Finalmente, el administrador de controladores puede crear una nueva conexión, suponiendo que el grupo está vacío.  
   
  Para usar un grupo de conexiones, una aplicación realiza los siguientes pasos:  

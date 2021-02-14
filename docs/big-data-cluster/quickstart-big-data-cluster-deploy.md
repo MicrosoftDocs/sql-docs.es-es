@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6457c4bfe1579453a68e8d5ea11f45b67980ca8b
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 9c0ccb64a67d547b2027423dbc3571e44b3b21ef
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785100"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046182"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Uso de un script de Python para implementar un clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
@@ -77,7 +77,7 @@ Siga estos pasos para ejecutar el script de implementación en un símbolo del s
    | **Región de Azure** | La región de Azure del nuevo clúster de AKS (**westus** de forma predeterminada). |
    | **Tamaño de la máquina** | [Tamaño de la máquina](/azure/virtual-machines/windows/sizes) que se va a usar para los nodos del clúster de AKS (**Standard_D16s_v3** de forma predeterminada). |
    | **Nodos de trabajo** | El número de nodos de trabajo en el clúster de AKS (valor predeterminado **1**). |
-   | **Nombre del clúster** | El nombre del clúster de AKS y del clúster de macrodatos. El nombre del clúster de macrodatos debe estar formado solo por caracteres alfanuméricos en minúsculas y sin espacios (valor predeterminado**sqlbigdata**). |
+   | **Nombre del clúster** | El nombre del clúster de AKS y del clúster de macrodatos. El nombre del clúster de macrodatos debe estar formado solo por caracteres alfanuméricos en minúsculas y sin espacios (valor predeterminado **sqlbigdata**). |
    | **Contraseña** | Contraseña del controlador, puerta de enlace de HDFS/Spark e instancia maestra (valor predeterminado **MySQLBigData2019**). |
    | **Nombre de usuario** | Nombre de usuario del controlador (valor predeterminado: **admin**). |
 

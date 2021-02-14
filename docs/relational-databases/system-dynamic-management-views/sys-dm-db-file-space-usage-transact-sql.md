@@ -21,12 +21,12 @@ ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5b078e8c93918cc15d547e01d45ab0a3f97adae
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 495e70e426f4a015c1d789526e4ad7292e2503e4
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236853"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343123"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "99236853"
 > [!NOTE]  
 >  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys.dm_pdw_nodes_db_file_space_usage**.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|Id. de la base de datos.|  
 |file_id|**smallint**|Identificador de archivo.<br /><br /> file_id se asigna a file_id de [Sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) y a fileid en [sys.sysarchivos](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md).|  
@@ -52,7 +52,7 @@ ms.locfileid: "99236853"
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
 |distribution_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador numérico único asociado a la distribución.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los recuentos de páginas siempre son en el nivel de extensión. Por tanto, los valores de recuento de páginas siempre serán un múltiplo de ocho. Las extensiones que contienen páginas de asignación del Mapa de asignación global (GAM) y del Mapa de asignación global compartido (SGAM) se asignan a extensiones uniformes. No se incluyen en los recuentos de páginas descritos anteriormente. Para obtener más información acerca de las páginas y las extensiones, vea [Guía de arquitectura de páginas y extensiones](../../relational-databases/pages-and-extents-architecture-guide.md). 
   
  El contenido del almacén de versiones actual está en [Sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md). El seguimiento de las páginas del almacén de la versión se realiza en el nivel de archivo en vez de en el nivel de sesión y tarea porque son recursos globales. Una sesión puede generar versiones, pero las versiones no pueden quitarse cuando finaliza la sesión. Debe tenerse en cuenta una limpieza del almacén de versiones cuando se tengan que ejecutar transacciones prolongadas que necesiten acceso a la versión determinada. La transacción de ejecución más larga relacionada con la limpieza del almacén de versiones se puede detectar viendo la elapsed_time_seconds columna en [Sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md).  
@@ -85,14 +85,14 @@ ms.locfileid: "99236853"
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|From|En|Relación|  
+|De|En|Relación|  
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id, file_id|sys.dm_io_virtual_file_stats.database_id, file_id|Uno a uno|  
   
 ## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, `Server admin` `Azure Active Directory admin` se requiere la cuenta o. En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
+En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, se requiere la cuenta de [Administrador del servidor](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o la cuenta de [Administrador de Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
 
 ## <a name="examples"></a>Ejemplos  
   

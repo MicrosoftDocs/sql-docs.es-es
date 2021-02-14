@@ -15,15 +15,15 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f167741a2064020cfbc7fdc43e881a74609e4ac6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ab08692b1e221e589cc6283e2800a695044f79b7
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480166"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100351410"
 ---
 # <a name="sql-graph-architecture"></a>Arquitectura de SQL Graph  
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
 Obtenga información sobre cómo se diseña SQL Graph. Conocer los aspectos básicos le facilitará la comprensión de otros artículos de SQL Graph.
  
@@ -150,7 +150,7 @@ Obtenga información sobre las [!INCLUDE[tsql-md](../../includes/tsql-md.md)] ex
 |Tarea   |Artículo relacionado  |Notas
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|La inserción en una tabla de nodos no es diferente a la inserción en una tabla relacional. Los valores de la `$node_id` columna se generan automáticamente. Si intenta insertar un valor en `$node_id` la `$edge_id` columna o, se producirá un error. Los usuarios deben proporcionar valores `$from_id` para `$to_id` las columnas y al insertarlos en una tabla irregular. `$from_id` y `$to_id` son los `$node_id` valores de los nodos a los que se conecta un borde determinado.  |
-|DELETE | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Los datos de las tablas perimetrales o de nodo se pueden eliminar de la misma manera que se eliminan de las tablas relacionales. Sin embargo, en esta versión, no hay ninguna restricción para asegurarse de que ningún borde señale a un nodo eliminado y la eliminación en cascada de los bordes, cuando no se admite la eliminación de un nodo. Se recomienda que cada vez que se elimine un nodo, también se eliminen todos los bordes de conexión a ese nodo, para mantener la integridad del gráfico.  |
+|Delete | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Los datos de las tablas perimetrales o de nodo se pueden eliminar de la misma manera que se eliminan de las tablas relacionales. Sin embargo, en esta versión, no hay ninguna restricción para asegurarse de que ningún borde señale a un nodo eliminado y la eliminación en cascada de los bordes, cuando no se admite la eliminación de un nodo. Se recomienda que cada vez que se elimine un nodo, también se eliminen todos los bordes de conexión a ese nodo, para mantener la integridad del gráfico.  |
 |UPDATE |[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |Los valores de las columnas definidas por el usuario se pueden actualizar mediante la instrucción UPDATE. No se permite actualizar las columnas internas del gráfico, `$node_id` , `$edge_id` `$from_id` y `$to_id` .  |
 |MERGE |[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` la instrucción se admite en un nodo o una tabla perimetral.  |
 

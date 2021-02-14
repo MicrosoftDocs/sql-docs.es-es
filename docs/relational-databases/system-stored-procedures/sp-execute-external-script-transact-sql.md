@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: ef90d43021349b0327ff96ebdec85b6a8483e43c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f7c407416b8181864e7cc2fecdc4c95f97ab03cc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99187997"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100355256"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` Una lista de valores para los parámetros de entrada utilizados por el script externo.  
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 > [!IMPORTANT]
 > El árbol de consultas se controla mediante el aprendizaje automático de SQL y los usuarios no pueden realizar operaciones arbitrarias en la consulta.
@@ -322,7 +322,7 @@ Para generar un modelo similar mediante Python, tendría que cambiar el identifi
 
 Para puntuar, también puede usar la función nativa [PREDICT](../../t-sql/queries/predict-transact-sql.md), que es normalmente más rápida porque evita llamar al runtime de Python o R.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 + [Aprendizaje automático de SQL](../../machine-learning/index.yml)
 + [Extensiones de lenguaje de SQL Server](../../language-extensions/language-extensions-overview.md). 

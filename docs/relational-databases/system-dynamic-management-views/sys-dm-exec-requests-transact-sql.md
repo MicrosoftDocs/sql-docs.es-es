@@ -21,12 +21,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79fdfc18a80ebff0e6e737db4efcdc81e5ae265d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b3ff96f67611b41db3e1cf1e827ff2577305a24d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99192982"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100342933"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -39,8 +39,8 @@ Devuelve información sobre cada una de las solicitudes que se ejecutan en [!INC
 |session_id|**smallint**|Identificador de la sesión con la que está relacionada esta solicitud. No admite valores NULL.|  
 |request_id|**int**|Id. de la solicitud. Es único en el contexto de la sesión. No admite valores NULL.|  
 |start_time|**datetime**|Marca de tiempo de la llegada de la solicitud. No admite valores NULL.|  
-|status|**nvarchar(30)**|Estado de la solicitud. Este puede ser uno de los siguientes:<br /><br /> Información previa<br />En ejecución<br />Ejecutable<br />En espera<br />Suspended<br /><br /> No admite valores NULL.|  
-|.|**nvarchar(32)**|Identifica el tipo de comando actual que se está procesando. Los tipos de comandos comunes incluyen lo siguiente:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> El texto de la solicitud se puede recuperar mediante sys.dm_exec_sql_text con el correspondiente sql_handle para la solicitud. Los procesos internos del sistema establecen el comando según el tipo de tarea que realizan. Las tareas pueden incluir las siguientes:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> No admite valores NULL.|  
+|status|**nvarchar(30)**|Estado de la solicitud. Este puede ser uno de los siguientes:<br /><br /> Fondo<br />En ejecución<br />Ejecutable<br />En espera<br />Suspended<br /><br /> No admite valores NULL.|  
+|command|**nvarchar(32)**|Identifica el tipo de comando actual que se está procesando. Los tipos de comandos comunes incluyen lo siguiente:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> El texto de la solicitud se puede recuperar mediante sys.dm_exec_sql_text con el correspondiente sql_handle para la solicitud. Los procesos internos del sistema establecen el comando según el tipo de tarea que realizan. Las tareas pueden incluir las siguientes:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> No admite valores NULL.|  
 |sql_handle|**varbinary (64)**|Es un token que identifica de forma única el lote o el procedimiento almacenado del que forma parte la consulta. Acepta valores NULL.| 
 |statement_start_offset|**int**|Indica, en bytes, empezando por 0, la posición inicial de la instrucción que se está ejecutando actualmente para el lote que se está ejecutando actualmente o el objeto almacenado. Se puede usar junto con `sql_handle` , `statement_end_offset` y la `sys.dm_exec_sql_text` función de administración dinámica para recuperar la instrucción que se está ejecutando actualmente para la solicitud. Acepta valores NULL.|  
 |statement_end_offset|**int**|Indica, en bytes, empezando por 0, la posición final de la instrucción que se está ejecutando actualmente para el lote que se está ejecutando actualmente o el objeto almacenado. Se puede usar junto con `sql_handle` , `statement_start_offset` y la `sys.dm_exec_sql_text` función de administración dinámica para recuperar la instrucción que se está ejecutando actualmente para la solicitud. Acepta valores NULL.|  
@@ -91,15 +91,15 @@ Devuelve información sobre cada una de las solicitudes que se ejecutan en [!INC
 |query_plan_hash|**Binary(8**|Valor hash binario que se calcula en el plan de ejecución de consulta y que se usa para identificar planes de ejecución de consulta similares. Puede usar el hash del plan de consulta para buscar el costo acumulativo de las consultas con planes de ejecución similares.|  
 |statement_sql_handle|**varbinary (64)**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Identificador SQL de la consulta individual.<br /><br />Esta columna es NULL si Almacén de consultas no está habilitada para la base de datos. |  
 |statement_context_id|**bigint**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Clave externa opcional que se va a sys.query_context_settings.<br /><br />Esta columna es NULL si Almacén de consultas no está habilitada para la base de datos. |  
-|dop |**int** |**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores.<br /><br /> Grado de paralelismo de la consulta. |  
-|parallel_worker_count |**int** |**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores.<br /><br /> El número de trabajadores paralelos reservados si se trata de una consulta en paralelo.  |  
-|external_script_request_id |**uniqueidentifier** |**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores.<br /><br /> IDENTIFICADOR de solicitud de script externo asociado a la solicitud actual. |  
-|is_resumable |**bit** |**Válido para** : [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] y versiones posteriores.<br /><br /> Indica si la solicitud es una operación de índice reanudable. |  
-|page_resource |**Binary(8** |**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Representación hexadecimal de 8 bytes del recurso de página si la `wait_resource` columna contiene una página. Para obtener más información, vea [Sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|dop |**int** |**Válido para** : [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores.<br /><br /> Grado de paralelismo de la consulta. |  
+|parallel_worker_count |**int** |**Válido para** : [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores.<br /><br /> El número de trabajadores paralelos reservados si se trata de una consulta en paralelo.  |  
+|external_script_request_id |**uniqueidentifier** |**Válido para** : [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores.<br /><br /> IDENTIFICADOR de solicitud de script externo asociado a la solicitud actual. |  
+|is_resumable |**bit** |**Válido para** : [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] y versiones posteriores.<br /><br /> Indica si la solicitud es una operación de índice reanudable. |  
+|page_resource |**Binary(8** |**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]<br /><br /> Representación hexadecimal de 8 bytes del recurso de página si la `wait_resource` columna contiene una página. Para obtener más información, vea [Sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**Se aplica a**: hiperescala Azure SQL Database<br /><br /> Número de lecturas del servidor de páginas realizadas por esta solicitud. No admite valores NULL.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Observaciones 
+## <a name="remarks"></a>Comentarios 
 Para ejecutar código situado fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, en procedimientos almacenados extendidos y consultas distribuidas), se tiene que ejecutar un subproceso fuera del control del programador no preferente. Para hacerlo, un trabajador se cambia al modo preferente. Los valores de tiempo que devuelve esta vista de administración dinámica no incluyen el tiempo transcurrido en modo preferente.
 
 Al ejecutar solicitudes paralelas en [modo de fila](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un subproceso de trabajo para coordinar los subprocesos de trabajo responsables de completar las tareas asignadas. En esta DMV solo el subproceso de coordinador es visible para la solicitud. Las columnas **Read**, **writes**, **logical_reads** y **ROW_COUNT** **no se actualizan** para el subproceso de coordinador. Las columnas **wait_type**, **wait_time**, **last_wait_type**, **wait_resource** y **granted_query_memory** solo se **actualizan** para el subproceso de coordinador. Para más información, consulte la [guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md).

@@ -14,12 +14,12 @@ ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: c0505913f29e473f4687454b8622becb01389519
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 65efad5247054ec308383074be71e7c75ef4694c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480467"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080746"
 ---
 # <a name="managing-backups-oracletosql"></a>Administración de copias de seguridad (OracleToSQL)
 La administración de copia de seguridad de Oracle permite realizar copias de seguridad y restaurar datos de tablas antes o después de ejecutar una prueba. También puede administrar el cuadro de diálogo contenido de copia de seguridad con administrar contenido de copia de seguridad.  

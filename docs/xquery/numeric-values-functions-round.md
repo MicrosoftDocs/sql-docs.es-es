@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7433ab9f3bd6bcadda324db1a5907f4d83040575
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f245b613c3e5e32fd2d4cc8eb09e969719ab1762
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720008"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347914"
 ---
 # <a name="numeric-values-functions---round"></a>Funciones de valores numéricos: round
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -48,9 +48,9 @@ fn:round ( $arg as numeric?) as numeric?
  Número al que se aplica la función.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el tipo de *$arg* es uno de los tres tipos base numéricos, **xs: Float**, **xs: Double**o **xs: decimal**, el tipo de valor devuelto es el mismo que el tipo de *$arg* . Si el tipo de *$arg* es un tipo derivado de uno de los tipos numéricos, el tipo de valor devuelto es el tipo numérico base.  
+ Si el tipo de *$arg* es uno de los tres tipos base numéricos, **xs: Float**, **xs: Double** o **xs: decimal**, el tipo de valor devuelto es el mismo que el tipo de *$arg* . Si el tipo de *$arg* es un tipo derivado de uno de los tipos numéricos, el tipo de valor devuelto es el tipo numérico base.  
   
- Si la entrada de las funciones **FN: Floor**, **FN: Ceiling**o **FN: Round** es **XDT: untypedAtomic**, datos sin tipo, se convierte implícitamente a **xs: Double**.  
+ Si la entrada de las funciones **FN: Floor**, **FN: Ceiling** o **FN: Round** es **XDT: untypedAtomic**, datos sin tipo, se convierte implícitamente a **xs: Double**.  
   
  Cualquier otro tipo genera un error estático.  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56dd5919565d1cbb7d0b95ae4476aef9140cecd0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0cc1fe3f4f36191a04973c759474f55a8356abda
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773713"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349331"
 ---
 # <a name="constructor-functions-xquery"></a>Funciones de constructor (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  Cualquier tipo XSD integrado.  
   
 ## <a name="remarks"></a>Comentarios  
- Se admiten constructores para tipos XSD atómicos base y derivados. Sin embargo, no se admiten los subtipos de **xs: Duration**, que incluye **XDT: yearMonthDuration y XDT: dayTimeDuration**, y **xs: QName**, **xs: NMTOKEN**y **xs: Notation** . Los tipos atómicos definidos por el usuario que están disponibles en las colecciones de esquemas asociadas también están disponibles, siempre que se deriven directa o indirectamente de los tipos siguientes.  
+ Se admiten constructores para tipos XSD atómicos base y derivados. Sin embargo, no se admiten los subtipos de **xs: Duration**, que incluye **XDT: yearMonthDuration y XDT: dayTimeDuration**, y **xs: QName**, **xs: NMTOKEN** y **xs: Notation** . Los tipos atómicos definidos por el usuario que están disponibles en las colecciones de esquemas asociadas también están disponibles, siempre que se deriven directa o indirectamente de los tipos siguientes.  
   
 #### <a name="supported-base-types"></a>Tipos base compatibles  
  Éstos son los tipos base admitidos:  

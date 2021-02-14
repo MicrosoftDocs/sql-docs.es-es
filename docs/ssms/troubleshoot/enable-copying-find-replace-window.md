@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: seo-lt-2019
 ms.date: 11/03/2020
-ms.openlocfilehash: ea5ae3f9fa941e723d3bdf10de0ec900310cc28d
-ms.sourcegitcommit: 985e2e8e494badeac6d6b652cd35765fd9c12d80
+ms.openlocfilehash: f7a11c952fa20b720ad37abc204c7dbb31f0e96f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93328797"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058610"
 ---
 # <a name="workaround-to-enable-copying-from-find-and-replace-window"></a>Solución alternativa para habilitar la copia desde la ventana para buscar y reemplazar
 
@@ -36,9 +36,9 @@ Al intentar copiar texto de la ventana para buscar y reemplazar en SQL Server M
 
 Para habilitar la copia de texto de la ventana para buscar y reemplazar, siga estos pasos:
 
-1. En el menú **Herramientas** , abra **Opciones**.
+1. En el menú **Herramientas**, abra **Opciones**.
 
-2. En **Entorno**>**Documentos** , desactive la opción "Mostrar archivos varios en el Explorador de soluciones".
+2. En **Entorno**>**Documentos**, desactive la opción "Mostrar archivos varios en el Explorador de soluciones".
 
 3. Cierre y vuelva a abrir SQL Server Management Studio.
 

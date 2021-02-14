@@ -14,12 +14,12 @@ ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 37d75a6454388c19caaa483d83cc5f6a230dab30
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4b315b0b26f771a2e215f03e1abcfeb5f829e86b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934765"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080806"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Carga de objetos de base de datos convertidos en SQL Server (OracleToSQL)
 Después de convertir los esquemas de Oracle en SQL Server, puede cargar los objetos de base de datos resultantes en SQL Server. Puede hacer que SSMA cree los objetos, o bien puede crear un script de los objetos y ejecutar los scripts usted mismo. Además, SSMA le permite actualizar los metadatos de destino con el contenido real de SQL Server base de datos.  
@@ -37,7 +37,7 @@ Para usar SSMA para crear SQL Server objetos de base de datos, seleccione los ob
   
 **Para sincronizar objetos con SQL Server**  
   
-1.  En SQL Server explorador de metadatos, expanda el nodo superior SQL Server y, a continuación, expanda **bases**de datos.  
+1.  En SQL Server explorador de metadatos, expanda el nodo superior SQL Server y, a continuación, expanda **bases** de datos.  
   
 2.  Seleccionar los objetos que se van a procesar:  
   
@@ -45,9 +45,9 @@ Para usar SSMA para crear SQL Server objetos de base de datos, seleccione los ob
   
     -   Para sincronizar u omitir objetos o categorías de objetos individuales, Active o desactive la casilla situada junto al objeto o la carpeta.  
   
-3.  Una vez que haya seleccionado los objetos que desea procesar en SQL Server explorador de metadatos, haga clic con el botón secundario en **bases**de datos y, a continuación, haga clic en **sincronizar con base**de datos.  
+3.  Una vez que haya seleccionado los objetos que desea procesar en SQL Server explorador de metadatos, haga clic con el botón secundario en **bases** de datos y, a continuación, haga clic en **sincronizar con base** de datos.  
   
-    También puede sincronizar objetos individuales o categorías de objetos; para ello, haga clic con el botón secundario en el objeto o en su carpeta primaria y, a continuación, haga clic en **sincronizar con base de datos**.  
+    También puede sincronizar objetos individuales o categorías de objetos; para ello, haga clic con el botón secundario en el objeto o en su carpeta primaria y, a continuación, haga clic en  **sincronizar con base de datos**.  
   
     Después, SSMA mostrará el cuadro de diálogo **sincronizar con base de datos** , donde podrá ver dos grupos de elementos. En el lado izquierdo, SSMA muestra los objetos de base de datos seleccionados representados en un árbol. En el lado derecho, puede ver un árbol que representa los mismos objetos en los metadatos de SSMA. Para expandir el árbol, haga clic en el botón de la derecha o la izquierda ' + '. La dirección de la sincronización se muestra en la columna Acción situada entre los dos árboles.  
   
@@ -66,7 +66,7 @@ Para guardar [!INCLUDE[tsql](../../includes/tsql-md.md)] definiciones de los obj
   
 **Para guardar objetos como scripts**  
   
-1.  Una vez que haya seleccionado los objetos que desea guardar en un script, haga clic con el botón secundario en **bases de datos**y, a continuación, haga clic en **Guardar como script**.  
+1.  Una vez que haya seleccionado los objetos que desea guardar en un script, haga clic con el botón secundario en **bases de datos** y, a continuación, haga clic en **Guardar como script**.  
   
     También puede incluir en el script objetos individuales o categorías de objetos; para ello, haga clic con el botón secundario en el objeto o en su carpeta principal y, a continuación, haga clic en **Guardar como script**.  
   
@@ -77,7 +77,7 @@ Una vez guardadas las definiciones de objetos de SQL Server como uno o varios sc
   
 **Para modificar un script**  
   
-1.  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo** , seleccione **Abrir**y haga clic en **Archivo**.  
+1.  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo** , seleccione **Abrir** y haga clic en **Archivo**.  
   
 2.  En el cuadro de diálogo **abrir** , seleccione el archivo de script y, a continuación, haga clic en Aceptar.
   
@@ -85,14 +85,14 @@ Una vez guardadas las definiciones de objetos de SQL Server como uno o varios sc
   
     Para obtener más información sobre el editor de consultas, vea "comandos y características de la comodidad del editor" en Libros en pantalla de SQL Server.  
   
-4.  Para guardar el script, haga clic en **Guardar**en el menú archivo.  
+4.  Para guardar el script, haga clic en **Guardar** en el menú archivo.  
   
 ### <a name="running-scripts"></a>Ejecutar scripts  
 Puede ejecutar un script, o instrucciones individuales, en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 **Para ejecutar un script**  
   
-1.  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo** , seleccione **Abrir**y haga clic en **Archivo**.  
+1.  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo** , seleccione **Abrir** y haga clic en **Archivo**.  
   
 2.  En el cuadro de diálogo **abrir** , seleccione el archivo de script y, a continuación, haga clic en Aceptar.  
   
