@@ -1,8 +1,8 @@
 ---
 description: sys.dm_db_missing_index_group_stats (Transact-SQL)
-title: sys.dm_db_missing_index_group_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_missing_index_group_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 02/09/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_missing_index_group_stats dynamic management view
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats dynamic management view
-ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cb6680d80df5b54c5ea4d74b07256442ccf3e28
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 52ad665528cf331c2244c7c0fadbfebc3b78c285
+ms.sourcegitcommit: c6cc0b669b175ae290cf5b08952010661ebd03c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99209422"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100530851"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "99209422"
     
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**group_handle**|**int**|Identifica un grupo de índices que faltan. Este identificador es único en todo el servidor.<br /><br /> Las otras columnas proporcionan información sobre todas las consultas para las que se considera que falta el índice del grupo.<br /><br /> Un grupo de índices solo contiene un índice.|  
+|**group_handle**|**int**|Identifica un grupo de índices que faltan. Este identificador es único en todo el servidor.<br /><br /> Las otras columnas proporcionan información sobre todas las consultas para las que se considera que falta el índice del grupo.<br /><br /> Un grupo de índices solo contiene un índice.<BR><BR>Se puede combinar con **index_group_handle** en [Sys.dm_db_missing_index_groups](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md).|  
 |**unique_compiles**|**bigint**|Número de compilaciones y recompilaciones que se beneficiarían de este grupo de índices que faltan. Las compilaciones y recompilaciones de muchas consultas distintas puede contribuir a este valor de columna.|  
 |**user_seeks**|**bigint**|Número de búsquedas iniciadas por consultas de usuario para las que se podría haber utilizado el índice recomendado del grupo.|  
 |**user_scans**|**bigint**|Número de recorridos iniciados por consultas de usuario para los que se podría haber utilizado el índice recomendado del grupo.|  
@@ -58,6 +57,8 @@ ms.locfileid: "99209422"
 
   >[!NOTE]
   >El conjunto de resultados de esta DMV está limitado a 600 filas. Cada fila contiene un índice que falta. Si tiene más de 600 índices que faltan, debe tratar los índices que faltan existentes para que pueda ver los más recientes.
+
+ Un grupo de índices que faltan puede tener varias consultas que requieran el mismo índice. Para obtener más información sobre las consultas individuales que necesitan un índice específico en esta DMV, vea [Sys.dm_db_missing_index_group_stats_query](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md).
   
 ## <a name="permissions"></a>Permisos  
  Para consultar esta vista de administración dinámica, se debe conceder a los usuarios el permiso VIEW SERVER STATE o cualquier permiso que implique el permiso VIEW SERVER STATE.  
@@ -68,7 +69,7 @@ ms.locfileid: "99209422"
 ### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. Buscar los 10 índices que faltan para los que se prevé mayor aumento de rendimiento en las consultas de usuario  
  La siguiente consulta determina cuáles de los 10 índices que faltan producirían el mayor aumento acumulado previsto, en orden descendente, para consultas de usuario.  
   
-```  
+```sql
 SELECT TOP 10 *  
 FROM sys.dm_db_missing_index_group_stats  
 ORDER BY avg_total_user_cost * avg_user_impact * (user_seeks + user_scans)DESC;  
@@ -77,7 +78,7 @@ ORDER BY avg_total_user_cost * avg_user_impact * (user_seeks + user_scans)DESC;
 ### <a name="b-find-the-individual-missing-indexes-and-their-column-details-for-a-particular-missing-index-group"></a>B. Buscar los índices que faltan individuales y sus detalles de columna para un grupo específico de índices que faltan  
  La siguiente consulta determina cuáles de los índices que faltan forman un grupo específico de índices que faltan y muestra sus detalles de columna. Para este ejemplo, el identificador del grupo de índices que faltan es 24.  
   
-```  
+```sql
 SELECT migs.group_handle, mid.*  
 FROM sys.dm_db_missing_index_group_stats AS migs  
 INNER JOIN sys.dm_db_missing_index_groups AS mig  
@@ -93,6 +94,7 @@ WHERE migs.group_handle = 24;
  [sys.dm_db_missing_index_columns &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
  [sys.dm_db_missing_index_details &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sys.dm_db_missing_index_groups &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats_query &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
