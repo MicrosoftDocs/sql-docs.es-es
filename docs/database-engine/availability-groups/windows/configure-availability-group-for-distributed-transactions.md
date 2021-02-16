@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 5587622f0f61b7b7063b246d0599d46cc8c16f0c
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c05da95541e728d981745d43f4da864c2e8b07a8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170787"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343557"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configuración de transacciones distribuidas para un grupo de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] admite todas las transacciones distribuidas, incluidas las bases de datos de un grupo de disponibilidad. En este artículo se explica cómo configurar un grupo de disponibilidad para las transacciones distribuidas.  
+[!INCLUDE[SQL2017](../../../includes/sssql17-md.md)] admite todas las transacciones distribuidas, incluidas las bases de datos de un grupo de disponibilidad. En este artículo se explica cómo configurar un grupo de disponibilidad para las transacciones distribuidas.  
 
 A fin de garantizar que las transacciones distribuidas sucedan, el grupo de disponibilidad debe estar configurado para registrar las bases de datos como administradores de recursos de transacción distribuida.  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] Service Pack 2 y versiones posteriores proporcionan compatibilidad total con las transacciones distribuidas en los grupos de disponibilidad. En las versiones de [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] anteriores al Service Pack 2, las transacciones distribuidas entre bases de datos (es decir, las transacciones que usan bases de datos en la misma instancia de SQL Server) que implican una base de datos en un grupo de disponibilidad no son compatibles. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] no presenta esta limitación. 
+>[!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] Service Pack 2 y versiones posteriores proporcionan compatibilidad total con las transacciones distribuidas en los grupos de disponibilidad. En las versiones de [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)] anteriores al Service Pack 2, las transacciones distribuidas entre bases de datos (es decir, las transacciones que usan bases de datos en la misma instancia de SQL Server) que implican una base de datos en un grupo de disponibilidad no son compatibles. [!INCLUDE[SQL2017](../../../includes/sssql17-md.md)] no presenta esta limitación. 
 >
->En [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)], los pasos de configuración son los mismos que en [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
+>En [!INCLUDE[SQL2016](../../../includes/sssql16-md.md)], los pasos de configuración son los mismos que en [!INCLUDE[SQL2017](../../../includes/sssql17-md.md)].
 
 En una transacción distribuida, las aplicaciones cliente funcionan con Microsoft DTC (Coordinador de transacciones distribuidas) para mantener la coherencia de las transacciones en múltiples orígenes de datos. DTC es un servicio disponible en los sistemas operativos basados en Windows Server compatibles. En una transacción distribuida, DTC es el *coordinador de transacciones*. Una instancia de SQL Server suele ser el *administrador de recursos*. Cuando hay una base de datos en un grupo de disponibilidad, cada base de datos debe ser su propio administrador de recursos. 
 
@@ -81,7 +81,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 ## <a name="alter-an-availability-group-for-distributed-transactions"></a>Modificar un grupo de disponibilidad para que admita transacciones distribuidas
 
-Puede modificar un grupo de disponibilidad para que admita transacciones distribuidas en [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] o una versión posterior. Para modificar un grupo de disponibilidad para que admita transacciones distribuidas, incluya `DTC_SUPPORT = PER_DB` en el script `ALTER AVAILABILITY GROUP`. Con este script de ejemplo se cambia el grupo de disponibilidad de forma que admita transacciones distribuidas. 
+Puede modificar un grupo de disponibilidad para que admita transacciones distribuidas en [!INCLUDE[SQL2017](../../../includes/sssql17-md.md)] o una versión posterior. Para modificar un grupo de disponibilidad para que admita transacciones distribuidas, incluya `DTC_SUPPORT = PER_DB` en el script `ALTER AVAILABILITY GROUP`. Con este script de ejemplo se cambia el grupo de disponibilidad de forma que admita transacciones distribuidas. 
 
 ```sql
 ALTER AVAILABILITY GROUP MyaAG
@@ -106,7 +106,7 @@ ALTER AVAILABILITY GROUP MyaAG
 
 Una transacción distribuida abarca dos o más bases de datos. Como administrador de transacciones, DTC coordina la transacción entre las instancias de SQL Server y otros orígenes de datos. Cada instancia del motor de base de datos de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] puede funcionar como un administrador de recursos. Cuando un grupo de disponibilidad se configura con `DTC_SUPPORT = PER_DB`, las bases de datos pueden actuar como administradores de recursos. Para obtener más información, consulte la documentación de MS DTC.
 
-Una transacción con dos o más bases de datos en una única instancia del motor de base de datos es una transacción distribuida de facto. La instancia administra la transacción distribuida internamente; para el usuario funciona como una transacción local. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] promueve todas las transacciones entre bases de datos a DTC cuando las bases de datos están en un grupo de disponibilidad configurado con `DTC_SUPPORT = PER_DB`, incluso en una sola instancia de SQL Server. 
+Una transacción con dos o más bases de datos en una única instancia del motor de base de datos es una transacción distribuida de facto. La instancia administra la transacción distribuida internamente; para el usuario funciona como una transacción local. [!INCLUDE[SQL2017](../../../includes/sssql17-md.md)] promueve todas las transacciones entre bases de datos a DTC cuando las bases de datos están en un grupo de disponibilidad configurado con `DTC_SUPPORT = PER_DB`, incluso en una sola instancia de SQL Server. 
 
 En la aplicación, una transacción distribuida se administra de forma muy parecida a una transacción local. Al final de la transacción, la aplicación solicita que se confirme o se revierta la transacción. El administrador de transacciones debe administrar una confirmación distribuida de forma diferente para reducir al mínimo el riesgo de que, si se produce un error en la red, algunos administradores de recursos realicen confirmaciones mientras los demás revierten la transacción. Esto se consigue administrando el proceso de confirmación en dos fases (la fase de preparación y la fase de confirmación), lo que se conoce como confirmación en dos fases.
 

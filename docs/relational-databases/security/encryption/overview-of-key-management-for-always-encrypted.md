@@ -12,12 +12,12 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be7a5c94f5de63f343a8c529f8a824e13177923c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 234f6233e2f6b024e6ad74a82f403e3df7db9a05
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97467306"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340180"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Información general de administración de claves de Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "97467306"
 
 Cuando se habla de las claves de Always Encrypted y la administración de claves, es importante comprender la diferencia entre las claves criptográficas reales y los objetos de metadatos que *describen* las claves. Los términos **clave de cifrado de columnas** y **clave maestra de columna** hacen referencia a las claves criptográficas reales, mientras que los términos **metadatos de clave de cifrado de columnas** y **metadatos de clave maestra de columna** hacen referencia a las *descripciones* de las claves de Always Encrypted en la base de datos.
 
-- Las ***claves de cifrado de columnas** _ son las claves de cifrado de contenido que se usan para cifrar datos. Como su nombre indica, las claves de cifrado de columnas se usan para cifrar los datos de las columnas de la base de datos. Puede cifrar una o más columnas con la misma clave de cifrado de columnas, o puede usar varias claves de cifrado de columnas en función de los requisitos de la aplicación. Las claves de cifrado de columnas están a su vez cifradas, y en la base de datos solo se almacenan los valores cifrados de las claves de cifrado de columnas (como parte de los metadatos de clave de cifrado de columnas). Los metadatos de clave de cifrado de columnas se almacenan en las vistas de catálogo [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) y [sys.column_encryption_key_values (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) . Las claves de cifrado de columnas que se usan con el algoritmo AES-256 tienen una longitud de 256 bits.
+- Las ***claves de cifrado de columnas*** son las claves de cifrado de contenido que se usan para cifrar datos. Como su nombre indica, las claves de cifrado de columnas se usan para cifrar los datos de las columnas de la base de datos. Puede cifrar una o más columnas con la misma clave de cifrado de columnas, o puede usar varias claves de cifrado de columnas en función de los requisitos de la aplicación. Las claves de cifrado de columnas están a su vez cifradas, y en la base de datos solo se almacenan los valores cifrados de las claves de cifrado de columnas (como parte de los metadatos de clave de cifrado de columnas). Los metadatos de clave de cifrado de columnas se almacenan en las vistas de catálogo [sys.column_encryption_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) y [sys.column_encryption_key_values (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) . Las claves de cifrado de columnas que se usan con el algoritmo AES-256 tienen una longitud de 256 bits.
 
 
-- Las _*_claves maestras de columna_*_ protegen las claves usadas para cifrar las claves de cifrado de columnas. Las claves maestras de columna deben almacenarse en un almacén de claves de confianza, como el Almacén de certificados de Windows, el Almacén de claves de Azure o un módulo de seguridad de hardware. La base de datos solo contiene metadatos sobre las claves maestras de columna (el tipo de almacén de claves y la ubicación). Los metadatos de clave maestra de columna se almacenan en la vista de catálogo [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) .  
+- Las ***claves maestras de columna*** protegen las claves usadas para cifrar las claves de cifrado de columnas. Las claves maestras de columna deben almacenarse en un almacén de claves de confianza, como el Almacén de certificados de Windows, el Almacén de claves de Azure o un módulo de seguridad de hardware. La base de datos solo contiene metadatos sobre las claves maestras de columna (el tipo de almacén de claves y la ubicación). Los metadatos de clave maestra de columna se almacenan en la vista de catálogo [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) .  
 
 Es importante tener en cuenta que los metadatos de clave del sistema de base de datos no contienen claves maestras de columna de texto no cifrado ni claves de cifrado de columnas de texto no cifrado. La base de datos solo contiene información sobre el tipo y la ubicación de las claves maestras de columna y valores cifrados de las claves de cifrado de columnas. Esto significa que nunca se exponen claves de texto no cifrado al sistema de base de datos, lo que garantiza la seguridad de los datos protegidos mediante Always Encrypted, incluso si el sistema de base de datos está en peligro. Para asegurarse de que el sistema de base de datos no pueda obtener acceso a las claves de texto no cifrado, asegúrese de ejecutar las herramientas de administración de claves en una máquina distinta de la que hospeda la base de datos. Revise a continuación la sección [Consideraciones de seguridad para la administración de claves](#security-considerations-for-key-management) para obtener más información.
 
@@ -42,7 +42,7 @@ Dado que la base de datos solo contiene datos cifrados (en columnas protegidas c
 
 El proceso de administración de claves se puede dividir en las siguientes tareas de alto nivel:
 
-- -*Aprovisionamiento de claves**: creación de las claves físicas en un almacén de claves de confianza (por ejemplo, el Almacén de certificados de Windows, Azure Key Vault o un módulo de seguridad de hardware), cifrado de las claves de cifrado de columnas con claves maestras de columna y creación de metadatos para ambos tipos de claves en la base de datos.
+- **Aprovisionamiento de claves** : creación de las claves físicas en un almacén de claves de confianza (por ejemplo, el Almacén de certificados de Windows, el Almacén de claves de Azure o un módulo de seguridad de hardware), cifrado de las claves de cifrado de columnas con claves maestras de columna y creación de metadatos para ambos tipos de claves en la base de datos.
 
 - **Rotación de claves** : reemplazo periódico de una clave existente por una clave nueva. Puede que necesite rotar una clave si está en peligro, o bien para cumplir las directivas o los reglamentos de la organización que exigen que se roten las claves criptográficas. 
 

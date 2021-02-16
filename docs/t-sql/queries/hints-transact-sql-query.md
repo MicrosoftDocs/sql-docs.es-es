@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - Query_Hint_TSQL
 - Query_TSQL
@@ -56,12 +56,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 8f884c24acbb4499cbab2e7837367ec49e0c7cbb
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: fd24bf1add1746687edfd86679813718050236ba
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172327"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100341597"
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -217,12 +217,12 @@ IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX
 Impide que la consulta use un índice no agrupado de almacén de columnas optimizado para memoria. Si la consulta contiene la sugerencia de consulta para evitar el uso del índice de almacén de columnas y una sugerencia de índice para usar un índice de almacén de columnas, las sugerencias están en conflicto y la consulta devuelve un error.  
   
 MAX_GRANT_PERCENT = <numeric_value>     
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
 El tamaño máximo de concesión de memoria en porcentaje del límite de memoria configurado. Se garantiza que la consulta no superará este límite. El límite real puede ser menor si la configuración de Resource Governor es inferior al valor especificado por esta sugerencia. Los valores válidos están comprendidos entre 0,0 y 100,0.  
   
 MIN_GRANT_PERCENT = <numeric_value>        
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 
 El tamaño mínimo de concesión de memoria en porcentaje del límite de memoria configurado. Se garantiza que la consulta obtendrá `MAX(required memory, min grant)` porque se requiere al menos la memoria necesaria para iniciar una consulta. Los valores válidos están comprendidos entre 0,0 y 100,0.  
  
@@ -244,7 +244,7 @@ Debido a este error, todos los efectos de la instrucción se revierten. Si la in
 Para más información, vea [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).     
   
 NO_PERFORMANCE_SPOOL    
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
   
 Impide que se agregue un operador de cola de impresión a planes de consulta (excepto a los planes en los que se requiere que la cola de impresión garantice una semántica de actualización válida). En algunos escenarios, el operador de cola de impresión puede reducir el rendimiento. Por ejemplo, la cola de impresión usa tempdb, y se puede producir la contención de tempdb si se ejecutan muchas consultas simultáneas con las operaciones de cola de impresión.  
   
@@ -296,7 +296,7 @@ Fuerza al optimizador de consultas a intentar aplicar un plan que funcione para 
 Si no es posible realizar tal plan, el optimizador de consultas devuelve un error en lugar de diferir la detección de errores hasta la ejecución de la consulta. Las filas pueden contener columnas de longitud variable; el [!INCLUDE[ssDE](../../includes/ssde-md.md)] permite definir filas con un tamaño potencial máximo que supere la capacidad del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para procesarlas. Normalmente, a pesar del tamaño potencial máximo, una aplicación almacena filas cuyo tamaño real se encuentra dentro de los límites que puede procesar el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] se encuentra con una fila demasiado larga, devuelve un error de ejecución.  
  
 <a name="use_hint"></a> USE HINT ( **'** _hint\_name_ **'** )    
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
  
 Proporciona una o varias sugerencias adicionales para el procesador de consultas. Las sugerencias adicionales se especifican mediante un nombre de la sugerencia **dentro de comillas simples**.   
 
@@ -314,7 +314,7 @@ Se admiten los siguientes nombres de sugerencia:
    **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 * "DISABLE_DEFERRED_COMPILATION_TV"    
   Deshabilita la compilación diferida de variables de tabla. Para obtener más información, consulte [Compilación diferida de variables de tabla](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).     
-  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  "DISABLE_INTERLEAVED_EXECUTION_TVF"      
    Deshabilita la ejecución intercalada de las funciones con valores de tabla de múltiples instrucciones. Para más información, consulte [Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).     
    **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
@@ -333,13 +333,13 @@ Se admiten los siguientes nombres de sugerencia:
    Indica al optimizador de consultas que utilice el promedio de distribución de datos al compilar una consulta con uno o más parámetros. Esta instrucción hace que el plan de consulta sea independiente en el valor del parámetro que se utilizó en primer lugar cuando se compiló la consulta. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 o a la opción `PARAMETER_SNIFFING = OFF` de [Configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 * "DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK"    
   Deshabilita los comentarios de concesión de memoria del modo de fila. Para más información, consulte [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).      
-  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
+  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 * "DISABLE_TSQL_SCALAR_UDF_INLINING"    
   Deshabilita la inserción de UDF escalar. Para obtener más información, vea [Scalar UDF inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md) (Inserción de UDF escalar).     
-  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).    
+  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]).    
 * "DISALLOW_BATCH_MODE"    
   Deshabilita la ejecución del modo por lotes. Para más información, consulte [Modos de ejecución](../../relational-databases/query-processing-architecture-guide.md#execution-modes).     
-  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
+  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 *  "ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS"      
    Habilita las estadísticas rápidas generadas automáticamente (modificación de histograma) para las columnas de índice iniciales para las que se necesite la estimación de cardinalidad. El histograma usado para calcular la cardinalidad se ajustará en tiempo de compilación de la consulta para tener en cuenta el valor máximo o mínimo real de esta columna. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  "ENABLE_QUERY_OPTIMIZER_HOTFIXES"     
@@ -359,7 +359,7 @@ Se admiten los siguientes nombres de sugerencia:
     
 *  'QUERY_PLAN_PROFILE'      
  Habilita la generación de perfiles ligera para la consulta. Cuando finaliza una consulta que contiene esta nueva sugerencia, se activa un nuevo evento extendido: query_plan_profile. Este evento extendido expone las estadísticas de ejecución y el plan de ejecución real XML similar al evento extendido query_post_execution_showplan, pero solo para las consultas que contiene la nueva sugerencia.    
-   **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU3 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
+   **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU3 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11). 
 
    > [!NOTE]
    > Si habilita la recopilación del evento extendido query_post_execution_showplan, se agregará la infraestructura de generación de perfiles estándar para todas las consultas que se están ejecutando en el servidor, por lo que podría resultar afectado el rendimiento global del servidor.      

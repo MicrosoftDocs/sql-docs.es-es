@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
@@ -47,12 +47,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f04986f085653957bd685ae0db72a14a109e8079
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2ec8737d01b52db828dbe95cd1252d8913128c90
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170757"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339310"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 
@@ -293,7 +293,7 @@ LOB_COMPACTION = OFF
 -   No es necesario usar REORGANIZE para mover grupos de filas delta con el estado CLOSED a los grupos de filas comprimidos. El proceso de motor de tupla (TM) en segundo plano se activa periódicamente para comprimir los grupos de filas delta con el estado CLOSED. Se recomienda usar REORGANIZE cuando el motor de tupla se retrase. REORGANIZE puede comprimir grupos de filas de una forma más agresiva.  
 -   Para comprimir todos los grupos de filas con los estados OPEN y CLOSED, vea la opción `REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS)` en esta sección.  
   
-Para los índices de almacén de columnas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], REORGANIZE realiza estas otras optimizaciones de desfragmentación en línea:  
+Para los índices de almacén de columnas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], REORGANIZE realiza estas otras optimizaciones de desfragmentación en línea:  
   
 -   Quita físicamente las filas de un grupo de filas cuando el 10 % o más de las filas se hayan eliminado lógicamente. Los bytes eliminados se reclaman en los medios físicos. Por ejemplo, si en un grupo de filas comprimido que contiene un millón de filas se eliminan 100 000 filas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quita las filas eliminadas y vuelve a comprimir el grupo de filas con 900 000 filas. Ahorra almacenamiento mediante la eliminación de filas eliminadas.  
   
@@ -304,7 +304,7 @@ Para los índices de almacén de columnas de [!INCLUDE[ssNoVersion](../../includ
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
  Se aplica a los índices de almacén de columnas. 
 
- **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 COMPRESS_ALL_ROW_GROUPS ofrece una manera de forzar a los grupos de filas delta con el estado OPEN o CLOSED hacia el almacén de columnas. Con esta opción, no es necesario regenerar el índice de almacén de columnas para vaciar los grupos de filas delta.  Al combinar esta opción con las otras características de eliminación y combinación de desfragmentación, ya no es necesario regenerar el índice en la mayoría de los casos.    
 
@@ -410,7 +410,7 @@ Cuando se establece en **ON**, se crean estadísticas por cada partición. Cuand
  Para un índice XML o un índice espacial, solo se admite `ONLINE = OFF` y, si ONLINE se establece en ON, se produce un error.  
   
 > [!IMPORTANT]
-> Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Ediciones y características admitidas de SQL Server 2017[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) y [Ediciones y características admitidas de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+> Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Ediciones y características admitidas de SQL Server 2017[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) y [Ediciones y características admitidas de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  ACTIVAR  
  Los bloqueos de tabla de larga duración no se mantienen durante la operación de indización. Durante la fase principal de la operación de índice, solo se mantiene un bloqueo preventivo en la tabla de origen. De esta forma, las consultas o actualizaciones realizadas en la tabla y los índices subyacentes pueden continuar. Al principio de la operación, se mantiene un bloqueo compartido (S) sobre el objeto de origen durante un breve período. Al final de la operación, durante un breve período, se adquiere un bloqueo S sobre el origen si se está creando un índice no clúster; o se adquiere un bloqueo SCH-M (modificación del esquema) cuando se crea o se quita un índice clúster en línea o cuando se regenera un índice clúster o no clúster. ONLINE no se puede establecer en ON cuando se crea un índice en una tabla temporal local.  
@@ -481,7 +481,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
 
  OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica si se deben optimizar la contención de inserción de la última página. El valor predeterminado es OFF. Consulte la sección [Claves secuenciales](./create-index-transact-sql.md#sequential-keys) de la página CREATE INDEX para obtener más información.
 
@@ -512,7 +512,7 @@ Especifica si se deben optimizar la contención de inserción de la última pág
   
 COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }  
 
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])  
+**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])  
   
  Para las tablas basadas en disco, el retraso especifica el número mínimo de minutos que debe permanecer un grupo de filas delta con estado CLOSED en el grupo de filas delta antes de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueda comprimirlo en el grupo de filas comprimido. Puesto que las tablas basadas en disco no realizan el seguimiento de los tiempos de inserción y actualización de filas individuales, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica el retraso a los grupos de filas delta en el estado CLOSED.  
   
@@ -835,7 +835,7 @@ CREATE TABLE cci_target (
 CREATE CLUSTERED COLUMNSTORE INDEX idxcci_cci_target ON cci_target;  
 ```  
   
- Use la opción TABLOCK para insertar filas en paralelo. A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], la operación INSERT INTO se puede ejecutar en paralelo cuando se usa TABLOCK.  
+ Use la opción TABLOCK para insertar filas en paralelo. A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], la operación INSERT INTO se puede ejecutar en paralelo cuando se usa TABLOCK.  
   
 ```sql  
 INSERT INTO cci_target WITH (TABLOCK) 
@@ -875,7 +875,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Comprimir todos los grupos de filas delta con estado OPEN y CLOSED en el almacén de columnas  
- **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+ **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
   
  El comando REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = ON ) comprime cada grupo de filas delta con los estados OPEN y CLOSED en el almacén de columnas como un grupo de filas comprimido. Esto vacía el almacén delta y obliga a todas las filas a comprimirse en el almacén de columnas. Esto es útil sobre todo después de realizar muchas operaciones de inserción, ya que estas operaciones almacenan las filas en uno o varios grupos de filas delta.  
   
@@ -893,10 +893,10 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ### <a name="d-defragment-a-columnstore-index-online"></a>D. Desfragmentar un índice de almacén de columnas en línea  
  No se aplica a: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
- A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], con REORGANIZE se consigue hacer mucho más que comprimir grupos de filas delta en el almacén de columnas: también realiza desfragmentación en línea. Primero reduce el tamaño del almacén de columnas. Para ello, quita físicamente las filas eliminadas cuando se ha eliminado al menos un 10 % o más de las filas de un grupo de filas.  Después, combina grupos de filas para formar grupos de filas de mayor tamaño que tengan hasta un máximo de 1 024 576 filas por grupos de filas.  Todos los grupos de filas que se cambian se vuelven a comprimir.  
+ A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], con REORGANIZE se consigue hacer mucho más que comprimir grupos de filas delta en el almacén de columnas: también realiza desfragmentación en línea. Primero reduce el tamaño del almacén de columnas. Para ello, quita físicamente las filas eliminadas cuando se ha eliminado al menos un 10 % o más de las filas de un grupo de filas.  Después, combina grupos de filas para formar grupos de filas de mayor tamaño que tengan hasta un máximo de 1 024 576 filas por grupos de filas.  Todos los grupos de filas que se cambian se vuelven a comprimir.  
   
 > [!NOTE]
-> A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], ya no será necesario volver a regenerar un índice de almacén de columnas en la mayoría de los casos, ya que REORGANIZE quita físicamente las filas eliminadas y combina los grupos de filas. La opción COMPRESS_ALL_ROW_GROUPS fuerza todos los grupos de filas delta con el estado OPEN y CLOSED hacia el almacén de columnas, lo que antes solo se podía realizar mediante una regeneración. REORGANIZE se ejecuta en línea y en segundo plano, por lo que las consultas pueden seguir haciéndose mientras se realiza la operación.  
+> A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], ya no será necesario volver a regenerar un índice de almacén de columnas en la mayoría de los casos, ya que REORGANIZE quita físicamente las filas eliminadas y combina los grupos de filas. La opción COMPRESS_ALL_ROW_GROUPS fuerza todos los grupos de filas delta con el estado OPEN y CLOSED hacia el almacén de columnas, lo que antes solo se podía realizar mediante una regeneración. REORGANIZE se ejecuta en línea y en segundo plano, por lo que las consultas pueden seguir haciéndose mientras se realiza la operación.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -908,7 +908,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE;
 Se aplica a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])   
   
 > [!TIP]
-> A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], se recomienda usar ALTER INDEX REORGANIZE en lugar de ALTER INDEX REBUILD.  
+> A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], se recomienda usar ALTER INDEX REORGANIZE en lugar de ALTER INDEX REBUILD.  
   
 > [!NOTE]
 > En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], REORGANIZE solo se usa para comprimir los grupos de filas CLOSED en el almacén de columnas. La única manera de realizar operaciones de desfragmentación y forzar todos los grupos de filas delta hacia el almacén de columnas es regenerar el índice.  
@@ -946,7 +946,7 @@ SELECT * FROM sys.column_store_row_groups;
 ### <a name="f-rebuild-a-partition-of-a-clustered-columnstore-index-offline"></a>F. Regenerar una partición de un índice de almacén de columnas agrupado sin conexión  
  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
  
- Para regenerar una partición de un índice de almacén de columnas agrupado de gran tamaño, use ALTER INDEX REBUILD con la opción de partición. En este ejemplo se regenera la partición 12. A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], se recomienda reemplazar REBUILD con REORGANIZE.  
+ Para regenerar una partición de un índice de almacén de columnas agrupado de gran tamaño, use ALTER INDEX REBUILD con la opción de partición. En este ejemplo se regenera la partición 12. A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], se recomienda reemplazar REBUILD con REORGANIZE.  
   
 ```sql  
 ALTER INDEX cci_fact3   

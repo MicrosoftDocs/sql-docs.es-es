@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 72bf9910a86d66ac36cbebbb0be66f8a8df832e5
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: edc2a92b260e85c2de1ff5b4fc1758748643d174
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99235770"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346762"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Información general sobre restauración y recuperación (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "99235770"
 |escenario de restauración|Modelo de recuperación simple|Modelo de recuperación completa o modelo de recuperación optimizado para cargas masivas de registros|  
 |----------------------|---------------------------------|----------------------------------------------|  
 |restauración de la base de datos completa|Es la estrategia de restauración básica. Una restauración de base de datos completa puede implicar simplemente la restauración y recuperación de una copia de seguridad completa de base de datos. Por otra parte, una restauración de base de datos completa puede consistir en restaurar una copia de seguridad completa de base de datos y, luego, restaurar y recuperar una copia de seguridad diferencial.<br /><br /> Para obtener más información, vea [Restauraciones de base de datos completas &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md).|Es la estrategia de restauración básica. Una restauración completa de una base de datos supone restaurar una copia de seguridad completa de base de datos y, opcionalmente, una copia de seguridad diferencial (si existe), además de restaurar todas las copias de seguridad de registros posteriores (en orden secuencial). La restauración completa de base de datos finaliza al recuperar la última copia de seguridad de registros y restaurarla (RESTORE WITH RECOVERY).<br /><br /> Para obtener más información, vea [Restauraciones de base de datos completas &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|  
-|Restauración de archivos * *\** _|Restauración de uno o más archivos de solo lectura dañados, sin restaurar la base de datos completa. La restauración de archivos está disponible solo si la base de datos tiene como mínimo un grupo de archivos de solo lectura.|Restaura uno o más archivos, sin restaurar la base de datos completa. La restauración de archivos puede realizarse mientras la base de datos está sin conexión o, en algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cuando está en línea. Durante la restauración de archivos, los grupos de archivos en los que se incluyen los archivos en cuestión permanecen siempre sin conexión.|  
+|File restore **\***|Restauración de uno o más archivos de solo lectura dañados, sin restaurar la base de datos completa. La restauración de archivos está disponible solo si la base de datos tiene como mínimo un grupo de archivos de solo lectura.|Restaura uno o más archivos, sin restaurar la base de datos completa. La restauración de archivos puede realizarse mientras la base de datos está sin conexión o, en algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cuando está en línea. Durante la restauración de archivos, los grupos de archivos en los que se incluyen los archivos en cuestión permanecen siempre sin conexión.|  
 |Restauración de página|No aplicable|Restaura una o más páginas dañadas. La restauración de páginas puede realizarse mientras la base de datos está sin conexión o, en algunas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cuando está en línea. Durante la restauración de páginas, las páginas que se están restaurando permanecen siempre sin conexión.<br /><br /> Es preciso que haya disponible una cadena intacta de copias de seguridad de registros, hasta el archivo de registro actual, y deben aplicarse todas a fin de actualizar la página según el archivo de registro actual.<br /><br /> Para obtener más información, vea [Restaurar páginas &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md).|  
-|Restauración por etapas _*\**_|Restauración y recuperación de la base de datos por etapas a nivel de grupo de archivos, empezando por el grupo de archivos principal y todos los grupos de archivos secundarios de lectura/escritura.|Restauración y recuperación de la base de datos por etapas a nivel del grupo de archivos, empezando por el grupo de archivos principal.<br /><br /> Para obtener más información, vea [Restauraciones por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).|  
+|Restauración por etapas **\***|Restauración y recuperación de la base de datos por etapas a nivel de grupo de archivos, empezando por el grupo de archivos principal y todos los grupos de archivos secundarios de lectura/escritura.|Restauración y recuperación de la base de datos por etapas a nivel del grupo de archivos, empezando por el grupo de archivos principal.<br /><br /> Para obtener más información, vea [Restauraciones por etapas &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).|  
   
- _*\**_ La restauración con conexión solo se admite en la edición Enterprise.  
+ **\*** La restauración en línea solo se admite en la edición Enterprise.  
 
 ### <a name="steps-to-restore-a-database"></a>Pasos para restaurar una base de datos
 Para realizar una restauración de archivos, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] ejecuta dos pasos: 
@@ -87,7 +87,7 @@ Para realizar una restauración de la base de datos, [!INCLUDE[ssde_md](../../in
 -   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es posible que la restauración de archivos o páginas permita que otros datos de la base de datos permanezcan en línea durante la operación de restauración.  
 
 ## <a name="recovery-and-the-transaction-log"></a><a name="TlogAndRecovery"></a> Recuperación y el registro de transacciones
-Para la mayoría de los escenarios de restauración, es necesario aplicar una copia de seguridad del registro de transacciones y permitir que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ejecute el _ *proceso de recuperación** para que la base de datos esté en línea. La recuperación es el proceso que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que cada base de datos se inicie en un estado de transacción coherente o limpio.
+Para la mayoría de los escenarios de restauración, es necesario aplicar una copia de seguridad del registro de transacciones y permitir que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ejecute el **proceso de recuperación** para que la base de datos esté en línea. La recuperación es el proceso que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que cada base de datos se inicie en un estado de transacción coherente o limpio.
 
 En caso de una conmutación por error u otro apagado no limpio, las bases de datos pueden quedar en un estado en que algunas modificaciones no han llegado a escribirse desde la caché del búfer a los archivos de datos; estos pueden contener modificaciones como resultado de transacciones incompletas. Cuando se inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se ejecuta una recuperación de cada base de datos, que consta de tres fases en función del último [punto de control de base de datos](../../relational-databases/logs/database-checkpoints-sql-server.md):
 
@@ -117,9 +117,9 @@ La información sobre el progreso de cada fase de recuperación de base de datos
 |Restauración de página * *\** _|Totalmente compatible.|A veces._ *\*\** *|Ninguno.|  
 |Restauración por etapas (nivel de grupos de archivos) * *\** _|Totalmente compatible.|A veces._ *\*\** *|Solo está disponible para archivos secundarios de solo lectura.|  
   
- * *\** _ Disponible solo en la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ **\*** Disponible solo en la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- _ *\*\** * Para consultar las condiciones necesarias, vea [Restricciones de restauración con el modelo de recuperación simple](#RMsimpleScenarios), más adelante en este tema.  
+ **\*\*** Para consultar las condiciones necesarias, vea [Restricciones de restauración con el modelo de recuperación simple](#RMsimpleScenarios), más adelante en este tema.  
   
 > [!IMPORTANT]  
 > Independientemente del modelo de recuperación de una base de datos, una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede restaurar en una versión de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] anterior a la versión que creó la copia de seguridad.  

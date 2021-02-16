@@ -19,18 +19,18 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 942e69f127b37fa6caf4ba83605fabdf4a31da38
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8872cf6e593279a282c34868a2f019ac82e5bf01
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97408281"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100339493"
 ---
 # <a name="write-international-transact-sql-statements"></a>Escribir instrucciones Transact-SQL internacionales
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Las bases de datos y las aplicaciones de bases de datos que utilizan instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] obtendrán una mayor portabilidad de un idioma a otro, o admitirán varios idiomas, si se siguen estas directrices:  
 
--   A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use:
+-   A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use:
     -   Los tipos de datos **char**, **varchar** y **varchar(max)** con una intercalación compatible con [ UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) y los datos se codifican con UTF-8.
     -   Los tipos de datos **nchar**, **nvarchar** y **nvarchar(max)** con una intercalación habilitada para [caracteres complementarios (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), y los datos se codifican con UTF-16. El uso de una intercalación que no sea de SC da como resultado la codificación de los datos mediante UCS-2.      
 

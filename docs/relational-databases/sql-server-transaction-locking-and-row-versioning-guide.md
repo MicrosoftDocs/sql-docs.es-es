@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 815ad066f97a80d250dcd1c3b1a961e4a86b05a6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 47545adc6e3e620cd74585d477bdd028f1e8625f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97416953"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352493"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -912,7 +912,7 @@ GO
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> Evento extendido de interbloqueo
 A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], se debe usar el evento extendido de `xml_deadlock_report` (xEvent) en lugar de la clase de eventos Deadlock Graph en Seguimiento de SQL o SQL Profiler.
 
-También a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], cuando se producen interbloqueos, la sesión **_system\_health_* _ captura todos los xEvents `xml_deadlock_report` que contienen el grafo de interbloqueo. Como la sesión _system\_health* está habilitada de forma predeterminada, no es necesario configurar una sesión de xEvent independiente para capturar la información de interbloqueo. 
+También a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], cuando se producen interbloqueos, la sesión ***system\_health** _ captura todos los xEvents `xml_deadlock_report` que contienen el grafo de interbloqueo. Como la sesión _system\_health* está habilitada de forma predeterminada, no es necesario configurar una sesión de xEvent independiente para capturar la información de interbloqueo. 
 
 El grafo de interbloqueo que se capturaba normalmente consta de tres nodos distintos:
 -   **victim-list**. Identificador de proceso del elemento afectado por el interbloqueo.

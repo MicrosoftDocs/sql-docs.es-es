@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 titleSuffix: SQL Server on Linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
-ms.openlocfilehash: 2e423c615d026c21c3a5cc3ecaec04aaf5a44a3c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 825fec3eeb0abbfacd4bb5f1311e13b6f99189e6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471486"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346462"
 ---
 # <a name="configure-replication-with-t-sql"></a>Configuración de la replicación con T-SQL
 
@@ -45,7 +45,7 @@ Para realizar este tutorial, necesita:
    Vea [Empleo de SSMS para administrar SQL Server en Linux](./sql-server-linux-manage-ssms.md).
 
    >[!NOTE]
-   >[!INCLUDE[SQL Server 2017](../includes/sssqlv14-md.md)] ([CU18](https://support.microsoft.com/help/4527377)) y versiones posteriores admiten Replicación de SQL Server para instancias de SQL Server en Linux.
+   >[!INCLUDE[SQL Server 2017](../includes/sssql17-md.md)] ([CU18](https://support.microsoft.com/help/4527377)) y versiones posteriores admiten Replicación de SQL Server para instancias de SQL Server en Linux.
 
 ## <a name="detailed-steps"></a>Pasos detallados
 

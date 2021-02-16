@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74e4df5fc33b90ae9e455d566b41e6eae71408ac
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 45540a538982f75033f35ad759782317983dc958
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99187784"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071819"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversión no determinista de las cadenas de fecha literales en valores DATE
 
@@ -60,7 +60,7 @@ SL_Polish
 
 SL_Croatian
 2018-10-28
-**_/
+***/
 ```
 
 
@@ -69,7 +69,7 @@ SL_Croatian
 
 - `SET DATEFORMAT dmy;`
 
-El formato _ *dmy** anterior dice que el significado de la cadena de fecha de ejemplo "01-03-2018" se interpretaría como _el primer día de marzo del año 2018_.
+El formato **dmy** anterior dice que el significado de la cadena de fecha de ejemplo “01-03-2018” se interpretaría como _el primer día de marzo del año 2018_.
 
 Si en su lugar se ha especificado **mdy**, la misma cadena “01-03-2018” significaría _el tercer día de enero de 2018_.
 
@@ -115,10 +115,10 @@ MDY-Interpretation-of-input-format
 
 YMD-Interpretation--?--NotGuaranteed
 2018-12-09
-**_/
+***/
 ```
 
-En el ejemplo de código anterior, el último ejemplo tiene una discrepancia entre el formato _ *ymd** y la cadena de entrada. El tercer nodo de la cadena de entrada representa un valor numérico que es demasiado grande para ser un día. Microsoft no garantiza el valor de salida de este tipo de errores.
+En el ejemplo de código anterior, el último ejemplo tiene una discrepancia entre el formato **ymd** y la cadena de entrada. El tercer nodo de la cadena de entrada representa un valor numérico que es demasiado grande para ser un día. Microsoft no garantiza el valor de salida de este tipo de errores.
 
 #### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT ofrece códigos explícitos para control _determinista_ de formatos de fecha
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
 - CREATE_EXTERNAL_DATA_SOURCE
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74a6b4985ab31d69813e305c92ee80ae8bca75d2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 807994f4a6e1f3c7b426c3a7c47ecdf7c152ea3b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171647"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100070709"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -63,7 +63,7 @@ Crea un origen de datos externo para consultas de PolyBase. Los orígenes de dat
 - Virtualización y carga de datos mediante [PolyBase][intro_pb]
 - Operaciones de carga masiva con `BULK INSERT` o `OPENROWSET`
 
-**Se aplica a**: A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]
+**Se aplica a**: A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -91,13 +91,13 @@ Proporciona el protocolo de conectividad y la ruta de acceso al origen de datos 
 
 | Origen de datos externo    | Prefijo de ubicación | Ruta de acceso de ubicación                                         | Ubicaciones admitidas por producto o servicio |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
-| Cloudera o Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]                       |
-| Cuenta de Azure Storage (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], la característica Espacio de nombres jerárquico **no** se admite |
-| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
-| Oracle                  | `oracle`        | `<server_name>[:port]`                                | A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
-| Teradata                | `teradata`      | `<server_name>[:port]`                                | A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
-| MongoDB o CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
-| ODBC                    | `odbc`          | `<server_name>[:port]`                                | A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]: solo Windows        |
+| Cloudera o Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]                       |
+| Cuenta de Azure Storage (V2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], la característica Espacio de nombres jerárquico **no** se admite |
+| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
+| Oracle                  | `oracle`        | `<server_name>[:port]`                                | A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
+| Teradata                | `teradata`      | `<server_name>[:port]`                                | A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
+| MongoDB o CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
+| ODBC                    | `odbc`          | `<server_name>[:port]`                                | A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]: solo Windows        |
 | Operaciones masivas         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        |
 | Centro de Microsoft Edge         | `edgehub`         | No aplicable | EdgeHub siempre es local para la instancia de [Azure SQL Edge](/azure/azure-sql-edge/overview/). Como tal, no es necesario especificar una ruta de acceso o un valor de puerto. Solo está disponible en Azure SQL Edge.                      |
 | Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | Solo está disponible en Azure SQL Edge.                      |
@@ -115,7 +115,7 @@ Instrucciones y notas adicionales cuando se establece la ubicación:
 
 - [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] no comprueba la existencia del origen de datos externo cuando se crea el objeto. Para la validación, crea una tabla externa utilizando el origen de datos externo.
 - Para garantizar una semántica de consulta coherente, use el mismo origen de datos externo para todas las tablas cuando realice consultas a Hadoop.
-- Puede usar el prefijo de ubicación `sqlserver` para conectar [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o a Azure Synapse Analytics.
+- Puede usar el prefijo de ubicación `sqlserver` para conectar [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] o a Azure Synapse Analytics.
 - Especifique `Driver={<Name of Driver>}` al conectarse a través de `ODBC`.
 - `wasbs` es opcional, pero se recomienda para acceder a las cuentas de Azure Storage, ya que se enviarán los datos mediante una conexión TLS/SSL segura.
 - Las API `abfs` o `abfss` no se admiten al acceder a las cuentas de Azure Storage.
@@ -160,7 +160,7 @@ Para crear una credencial con ámbito de base de datos, vea [CREATE DATABASE SCO
 Especifica el tipo de origen de datos externo que se está configurando. Este parámetro no siempre es necesario.
 
 - Use HADOOP cuando el origen de datos externo sea Cloudera, Hortonworks o una cuenta de Azure Storage.
-- Use BLOB_STORAGE al ejecutar operaciones masivas desde una cuenta de Azure Storage mediante [BULK INSERT][bulk_insert] o [OPENROWSET][openrowset] con [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+- Use BLOB_STORAGE al ejecutar operaciones masivas desde una cuenta de Azure Storage mediante [BULK INSERT][bulk_insert] o [OPENROWSET][openrowset] con [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 
 > [!IMPORTANT]
 > No establezca `TYPE` si usa cualquier otro origen de datos externo.
@@ -212,7 +212,7 @@ Actualmente no se admite un token de SAS con tipo `HADOOP`. Solo se admite con u
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
-## <a name="examples-starting-with-sssql15"></a>Ejemplos (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])
+## <a name="examples-starting-with-sssql16-md"></a>Ejemplos (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
 > [!IMPORTANT]
 > Para obtener información sobre cómo instalar y habilitar PolyBase, vea [Instalación de PolyBase en Windows](../../relational-databases/polybase/polybase-installation.md)
@@ -314,7 +314,7 @@ WITH
   ) ;
 ```
 
-### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. Creación de un origen de datos externo para hacer referencia a una instancia con nombre de SQL Server a través de la conectividad de PolyBase ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>F. Creación de un origen de datos externo para hacer referencia a una instancia con nombre de SQL Server a través de la conectividad de PolyBase ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
 Para crear un origen de datos externo que haga referencia a una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede usar CONNECTION_OPTIONS para especificar el nombre de la instancia. En el ejemplo siguiente, `WINSQL2019` es el nombre de host y `SQL2019` el de la instancia.
 
@@ -368,7 +368,7 @@ go
 
 ### <a name="i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage"></a>I. Creación de un origen de datos externo para operaciones masivas de recuperación de datos desde Azure Storage
 
-**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+**Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 Use el origen de datos siguiente para las operaciones masivas con [BULK INSERT][bulk_insert] o [OPENROWSET][openrowset]. La credencial debe establecer `SHARED ACCESS SIGNATURE` como identidad, no debe tener al inicio `?` en el token de SAS, debe tener al menos permiso de lectura en el archivo que se debe cargar (por ejemplo `srt=o&sp=r`), y el período de expiración debe ser válido (todas las fechas se expresan en hora UTC). Para más información sobre las firmas de acceso compartido, vea [Uso de Firmas de acceso compartido (SAS)][sas_token].
 
 ```sql

@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cee8ccf62e9ec8a6497d3515e85b7aeff8f0b479
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ac0f913188b23b85548f87a4f458d1c2b754d15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457162"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347457"
 ---
 # <a name="integration-services-ssis-logging"></a>Registro de Integration Services (SSIS)
 
@@ -386,7 +386,7 @@ ms.locfileid: "88457162"
 ## <a name="enable-logging-for-package-execution-on-the-ssis-server"></a><a name="server_logging"></a> Habilitar el registro de ejecución del paquete en el servidor SSIS
   En este tema se describe cómo establecer o cambiar el nivel de registro para un paquete cuando se ejecuta un paquete implementado en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. El nivel de registro que se establece al ejecutar el paquete invalida el registro de paquete configurado en tiempo de diseño en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Vea [Habilitar el registro de paquetes en SQL Server Data Tools](#ssdt) para obtener más información.  
   
- En **Propiedades del servidor**de SQL Server, en la propiedad **Server logging level** (Nivel de registro de servidor), puede seleccionar un nivel de registro predeterminado de todo el servidor. Puede elegir entre uno de los niveles de registro integrados que se describen en este tema o puede elegir un nivel de registro personalizado existente. El nivel de registro seleccionado se aplica de manera predeterminada a todos los paquetes que se implementen en el catálogo de SSIS. También se aplica de forma predeterminada a un paso de trabajo del Agente SQL que ejecuta un paquete SSIS.  
+ En **Propiedades del servidor** de SQL Server, en la propiedad **Server logging level** (Nivel de registro de servidor), puede seleccionar un nivel de registro predeterminado de todo el servidor. Puede elegir entre uno de los niveles de registro integrados que se describen en este tema o puede elegir un nivel de registro personalizado existente. El nivel de registro seleccionado se aplica de manera predeterminada a todos los paquetes que se implementen en el catálogo de SSIS. También se aplica de forma predeterminada a un paso de trabajo del Agente SQL que ejecuta un paquete SSIS.  
   
  También puede especificar el nivel de registro de un paquete individual mediante uno de los métodos siguientes. En este tema se trata el primer método.  
   

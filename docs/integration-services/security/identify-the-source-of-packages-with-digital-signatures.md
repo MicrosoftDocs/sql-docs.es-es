@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0405dabd99568e09bc07502544db5a181bf357a5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: f4607ffe77d7fe93aff86d8dc707bb86e515d67d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192425"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340797"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identificar el origen de paquetes con firmas digitales
 
@@ -77,11 +77,11 @@ ms.locfileid: "92192425"
   
 1.  En el menú **Inicio** , haga clic en **Ejecutar**.  
   
-2.  En el cuadro de diálogo Ejecutar, escriba **Regedit**y haga clic en **Aceptar**.  
+2.  En el cuadro de diálogo Ejecutar, escriba **Regedit** y haga clic en **Aceptar**.  
   
 3.  Busque la clave del Registro HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS.  
   
-4.  Haga clic con el botón derecho en **MSDTS**, seleccione **Nuevo**y, después, haga clic en **Valor DWORD**.  
+4.  Haga clic con el botón derecho en **MSDTS**, seleccione **Nuevo** y, después, haga clic en **Valor DWORD**.  
   
 5.  Actualice el nombre del nuevo valor a **BlockedSignatureStates**.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "92192425"
   
 5.  En el cuadro de diálogo **Seleccionar el certificado** , seleccione un certificado.  
   
-6.  (Opcional) Haga clic en **Ver certificado**para ver la información del certificado.  
+6.  (Opcional) Haga clic en **Ver certificado** para ver la información del certificado.  
   
 7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Seleccionar un certificado** .  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 639e88a96ac639d20a6190bffeed75d46495aa51
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 272bc33012e37c58f6a3f8ea0ed51f1c216d716f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785071"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346272"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Funcionamiento de la instancia de clúster de conmutación por error (FCI) de RHEL para SQL Server
 
@@ -41,10 +41,10 @@ Para obtener más información sobre la configuración del clúster, las opcione
 
 ## <a name="failover-cluster-manually"></a><a name = "failManual"></a>Conmutación por error manual del clúster
 
-El comando `resource move` crea una restricción que obliga al recurso a iniciarse en el nodo de destino.  Después de ejecutar el comando `move`, al ejecutar el recurso `clear` se quitará la restricción, por lo que es posible volver a colocar el recurso o hacer que este conmute por error automáticamente. 
+El comando `resource move` crea una restricción que obliga al recurso a iniciarse en el nodo de destino.    Después de ejecutar el comando `move`, al ejecutar el recurso `clear` se quitará la restricción, por lo que es posible volver a colocar el recurso o hacer que este conmute por error automáticamente. 
 
 ```bash
-sudo pcs resource move <sqlResourceName> <targetNodeName>  
+sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
@@ -60,7 +60,7 @@ sudo pcs resource clear mssqlha
 Vea el estado actual del clúster:
 
 ```bash
-sudo pcs status  
+sudo pcs status  
 ```
 
 Vea el estado activo del clúster y los recursos:
@@ -183,7 +183,7 @@ Vea los registros del agente de recursos en `/var/log/cluster/corosync.log`.
     En el ejemplo siguiente se agrega un nodo denominado **vm3** al clúster.
 
     ```bash
-    sudo pcs    cluster auth  
+    sudo pcs    cluster auth  
     sudo pcs    cluster start 
     ```
 
@@ -192,7 +192,7 @@ Vea los registros del agente de recursos en `/var/log/cluster/corosync.log`.
 Para quitar un nodo de un clúster, ejecute el siguiente comando:
 
 ```bash
-sudo pcs    cluster node remove <nodeName>  
+sudo pcs    cluster node remove <nodeName>  
 ```
 
 ## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>Cambio de la frecuencia del intervalo de supervisión de recursos sqlservr
@@ -226,7 +226,7 @@ Aquí tiene un ejemplo de una salida correcta del cuórum de Pacemaker:
 
 ```
 Cluster name: MyAppSQL 
-Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
+Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
 Stack: corosync 
 Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum 
 3 nodes and 1 resource configured 

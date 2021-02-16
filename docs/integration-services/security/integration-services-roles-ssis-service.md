@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd1ad3437f02b0c0df834d3a16365140d9638798
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8801c1a4f7387f1ff5bc815b45897d5a4f68fdb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487764"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340786"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Roles de Integration Services (servicio SSIS)
 
@@ -69,10 +69,10 @@ ms.locfileid: "88487764"
 -   La columna **ownersid** contiene el identificador de seguridad único del usuario que creó el paquete. Esta columna define el propietario del paquete.  
   
 ### <a name="permissions"></a>Permisos  
- De forma predeterminada, los permisos de los roles fijos de nivel de base de datos **db_ssisadmin** y **db_ssisoperator** y el identificador de seguridad único del usuario que ha creado el paquete se aplican al rol de lector para paquetes, y los permisos del rol **db_ssisadmin** y el identificador de seguridad único del usuario que ha creado el paquete se aplican al rol de escritor. Un usuario debe ser miembro del rol **db_ssisadmin**, **db_ssisltduser**o **db_ssisoperator** para tener acceso de lectura al paquete. Un usuario debe ser miembro del rol **db_ssisadmin** para tener acceso de escritura.  
+ De forma predeterminada, los permisos de los roles fijos de nivel de base de datos **db_ssisadmin** y **db_ssisoperator** y el identificador de seguridad único del usuario que ha creado el paquete se aplican al rol de lector para paquetes, y los permisos del rol **db_ssisadmin** y el identificador de seguridad único del usuario que ha creado el paquete se aplican al rol de escritor. Un usuario debe ser miembro del rol **db_ssisadmin**, **db_ssisltduser** o **db_ssisoperator** para tener acceso de lectura al paquete. Un usuario debe ser miembro del rol **db_ssisadmin** para tener acceso de escritura.  
   
 ### <a name="access-to-packages"></a>Acceso a paquetes  
- Los roles fijos de nivel de base de datos trabajan conjuntamente con los roles definidos por el usuario. Los roles definidos por el usuario son los que se crean en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y posteriormente se usan para asignar permisos a los paquetes. Para tener acceso a un paquete, un usuario debe ser miembro del rol definido por el usuario y del rol fijo de nivel de base de datos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pertinente. Por ejemplo, si los usuarios son miembros del rol definido por el usuario **AuditUsers** asignado a un paquete, también deberán ser miembros del rol **db_ssisadmin**, **db_ssisltduser**o **db_ssisoperator** para tener acceso de lectura al paquete.  
+ Los roles fijos de nivel de base de datos trabajan conjuntamente con los roles definidos por el usuario. Los roles definidos por el usuario son los que se crean en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y posteriormente se usan para asignar permisos a los paquetes. Para tener acceso a un paquete, un usuario debe ser miembro del rol definido por el usuario y del rol fijo de nivel de base de datos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pertinente. Por ejemplo, si los usuarios son miembros del rol definido por el usuario **AuditUsers** asignado a un paquete, también deberán ser miembros del rol **db_ssisadmin**, **db_ssisltduser** o **db_ssisoperator** para tener acceso de lectura al paquete.  
   
  Si no asigna roles definidos por el usuario a los paquetes, el acceso a dichos paquetes se determina con los roles fijos de nivel de base de datos.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "88487764"
   
 2.  Haga clic en **Explorador de objetos** , en el menú **Ver** .  
   
-3.  En la barra de herramientas del Explorador de objetos, haga clic en **Conectar**y, a continuación, en **Motor de base de datos**.  
+3.  En la barra de herramientas del Explorador de objetos, haga clic en **Conectar** y, a continuación, en **Motor de base de datos**.  
   
 4.  En el cuadro de diálogo **Conectar al servidor** , indique el nombre del servidor y seleccione un modo de autenticación. Puede usar un punto (.), (local) o **localhost** para indicar el servidor local.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "88487764"
 ## <a name="package-roles-dialog-box-ui-reference"></a><a name="roles_dialog"></a> Referencia de la interfaz de usuario del cuadro de diálogo Roles del paquete
   Use el cuadro de diálogo **Roles de paquete** , disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], para especificar los roles de base de datos que tienen acceso de lectura al paquete y los roles de base de datos que tienen acceso de escritura al paquete. Los roles de base de datos se aplican solo a paquetes almacenados en la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** database.  
   
- Los roles enumerados en el cuadro de diálogo son los roles de base de datos actuales de la base de datos del sistema **msdb** . Si no se seleccionan roles, se aplican los roles de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] predeterminados. De manera predeterminada, el rol de lector incluye **db_ssisadmin**, **db_ssisoperator**y el usuario que creó el paquete. Un usuario que sea miembro de uno de estos roles o que haya creado los paquetes puede enumerar, ver, exportar y ejecutar paquetes. De manera predeterminada, el rol de escritor incluye **db_ssisadmin** y el usuario que creó el paquete. Un usuario que sea miembro de este rol y el usuario que creó los paquetes pueden importar, eliminar y cambiar paquetes.  
+ Los roles enumerados en el cuadro de diálogo son los roles de base de datos actuales de la base de datos del sistema **msdb** . Si no se seleccionan roles, se aplican los roles de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] predeterminados. De manera predeterminada, el rol de lector incluye **db_ssisadmin**, **db_ssisoperator** y el usuario que creó el paquete. Un usuario que sea miembro de uno de estos roles o que haya creado los paquetes puede enumerar, ver, exportar y ejecutar paquetes. De manera predeterminada, el rol de escritor incluye **db_ssisadmin** y el usuario que creó el paquete. Un usuario que sea miembro de este rol y el usuario que creó los paquetes pueden importar, eliminar y cambiar paquetes.  
   
  La columna **ownersid** de la tabla **sysssispackages** contiene el identificador de seguridad único del usuario que creó el paquete.  
   

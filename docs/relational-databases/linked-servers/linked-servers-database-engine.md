@@ -20,12 +20,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ea8f2b873b8990a00bc61cd8ce45c192feefaaa5
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 09738de0caf9b7da5fcf3bec7c413d53d5d46981
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869409"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100351191"
 ---
 # <a name="linked-servers-database-engine"></a>Servidores vinculados (motor de base de datos)
 
@@ -57,7 +57,7 @@ Puede configurar un servidor vinculado con [!INCLUDE[ssManStudioFull](../../incl
   
 Un *proveedor OLE DB* es una biblioteca DLL que administra un origen de datos específico e interactúa con él. Un *origen de datos OLE DB* identifica la base datos específica a la que se puede tener acceso mediante OLE DB. Aunque los orígenes de datos en los que se realizan consultas a través de definiciones de servidores vinculados son bases de datos normales, existen proveedores OLE DB para una amplia variedad de archivos y formatos de archivo. Se trata de archivos de texto, datos de hojas de cálculo y los resultados de búsquedas de contenido de texto completo.  
   
-A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], [Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID: MSOLEDBSQL) es el proveedor OLE DB predeterminado. En versiones anteriores, el [proveedor OLE DB SQL Server Native Client (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID: SQLNCLI11) era el proveedor OLE DB predeterminado.
+A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], [Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID: MSOLEDBSQL) es el proveedor OLE DB predeterminado. En versiones anteriores, el [proveedor OLE DB SQL Server Native Client (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID: SQLNCLI11) era el proveedor OLE DB predeterminado.
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están diseñadas para ser usadas con cualquier proveedor OLE DB que implemente las interfaces OLE DB requeridas. Pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ha probado con el proveedor OLE DB predeterminado.  
@@ -92,7 +92,7 @@ Puede utilizar procedimientos almacenados y vistas de catálogo para administrar
   
 -   Elimine una definición de servidor vinculado mediante la ejecución de **sp_dropserver**. También puede utilizar este procedimiento almacenado para quitar servidores remotos.  
   
-También puede definir servidores vinculados mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el Explorador de objetos, haga clic con el botón derecho en **Objetos de servidor**, seleccione **Nuevo**y, después, **Servidor vinculado**. Puede eliminar una definición de servidor vinculado al hacer clic con el botón derecho en el nombre del servidor vinculado y seleccionar **Eliminar**.  
+También puede definir servidores vinculados mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el Explorador de objetos, haga clic con el botón derecho en **Objetos de servidor**, seleccione **Nuevo** y, después, **Servidor vinculado**. Puede eliminar una definición de servidor vinculado al hacer clic con el botón derecho en el nombre del servidor vinculado y seleccionar **Eliminar**.  
   
  Cuando ejecute una consulta distribuida en un servidor vinculado, incluya el nombre de cuatro partes completo de una tabla para cada origen de datos en el que desee realizar la consulta. Este nombre de cuatro partes debe tener el formato _linked\_server\_name.catalog_ **.** _schema_ **.** _object\_name_.  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 03c9c90f1c9382c85141853ff19cc5d76b40f093
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 7313fbc789b37cf326d55566c1f087f80b4929df
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115943"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100351923"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configuración de un grupo de disponibilidad AlwaysOn de SQL Server para alta disponibilidad en Linux
 
@@ -178,8 +178,8 @@ Ejecute **solo uno** de los siguientes scripts:
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
       ),
-      N'node2' WITH ( 
-         ENDPOINT_URL = N'tcp://node2:5022', 
+      N'node2' WITH ( 
+         ENDPOINT_URL = N'tcp://node2:5022', 
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
@@ -211,7 +211,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->Después de crear el grupo de disponibilidad, debe configurar la integración con una tecnología de clúster, como Pacemaker, para la alta disponibilidad. En el caso de una configuración de escalado de lectura con grupos de disponibilidad, a partir de [!INCLUDE [SQL Server version](../includes/sssqlv14-md.md)] ya no es necesario configurar un clúster.
+>Después de crear el grupo de disponibilidad, debe configurar la integración con una tecnología de clúster, como Pacemaker, para la alta disponibilidad. En el caso de una configuración de escalado de lectura con grupos de disponibilidad, a partir de [!INCLUDE [SQL Server version](../includes/sssql17-md.md)] ya no es necesario configurar un clúster.
 
 Si ha seguido los pasos descritos en este documento, tendrá un grupo de disponibilidad que todavía no está agrupado en clúster. El siguiente paso es agregar el clúster. Esta configuración es válida en escenarios de equilibrio de carga y escalado de lectura, pero no está completa para alta disponibilidad. Para lograr la alta disponibilidad, deberá agregar el grupo de disponibilidad como un recurso de clúster. Vea [Pasos siguientes](#next-steps) para obtener instrucciones. 
 

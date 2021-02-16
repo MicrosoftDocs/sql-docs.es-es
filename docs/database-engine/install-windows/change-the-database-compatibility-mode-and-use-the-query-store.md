@@ -15,18 +15,18 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 7d4394c5fe4d790668bcc6733ce0aba0f643f7f3
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: ed9557558c820b3c1c6f633efc90d1237693a534
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170897"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347864"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Cambiar el nivel de compatibilidad de la base de datos y usar el almacén de consultas
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-En [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores, algunos cambios solo se habilitan una vez que se ha cambiado el [nivel de compatibilidad de la base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Esto se realiza por varias razones:  
+En [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores, algunos cambios solo se habilitan una vez que se ha cambiado el [nivel de compatibilidad de la base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Esto se realiza por varias razones:  
   
 - Ya que la actualización es una operación unidireccional (no se puede degradar el formato de archivo), hay un valor en la separación de la habilitación de características nuevas para una operación independiente dentro de la base de datos. Es posible revertir un valor a un nivel de compatibilidad de la base de datos anterior.  El nuevo modelo reduce el número de pasos que hay que realizar durante una ventana de interrupción.  
   
@@ -39,7 +39,7 @@ En [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores, al
 > - Los niveles de compatibilidad de las bases de datos tempdb, model, msdb y Resource quedan establecidos en el nivel de compatibilidad actual después de la actualización.   
 > - La base de datos del sistema maestra conserva el nivel de compatibilidad que tenía antes de la actualización.    
   
-El proceso de actualización para habilitar la nueva funcionalidad del procesador de consultas está relacionado con el modelo de servicio posterior a la versión del producto.  Algunas de esas correcciones se publican bajo la [marca de seguimiento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).  Los clientes que necesitan correcciones pueden participar en esas correcciones sin causar regresiones inesperadas para otros clientes. El modelo de mantenimiento posterior a la versión para las revisiones del procesador de consultas se documenta [aquí](https://support.microsoft.com/kb/974006). A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], moverse a un nuevo nivel de compatibilidad implica que ya no se necesita la marca de seguimiento 4199, puesto que esas correcciones ya están habilitadas de forma predeterminada en el nivel de compatibilidad más reciente. Por lo tanto, como parte del proceso de actualización, es importante validar que 4199 no está habilitado una vez que se completa el proceso de actualización.  
+El proceso de actualización para habilitar la nueva funcionalidad del procesador de consultas está relacionado con el modelo de servicio posterior a la versión del producto.  Algunas de esas correcciones se publican bajo la [marca de seguimiento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).  Los clientes que necesitan correcciones pueden participar en esas correcciones sin causar regresiones inesperadas para otros clientes. El modelo de mantenimiento posterior a la versión para las revisiones del procesador de consultas se documenta [aquí](https://support.microsoft.com/kb/974006). A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], moverse a un nuevo nivel de compatibilidad implica que ya no se necesita la marca de seguimiento 4199, puesto que esas correcciones ya están habilitadas de forma predeterminada en el nivel de compatibilidad más reciente. Por lo tanto, como parte del proceso de actualización, es importante validar que 4199 no está habilitado una vez que se completa el proceso de actualización.  
 
 > [!NOTE]
 > Sin embargo, la marca de seguimiento 4199 sigue resultando necesaria para habilitar cualquier nueva corrección del procesador de consultas publicada después de RTM, si procede.

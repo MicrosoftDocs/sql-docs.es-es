@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 83919dc2d8e8ce690bb9b44585e8658f6b3bf485
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 32c53e2c45ddb5e74700986d94dfd2b873885a3f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643265"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344650"
 ---
 # <a name="reference-for-the-creation-and-configuration-of-always-on-availability-groups"></a>Referencia para la creación y configuración de grupos de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
