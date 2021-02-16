@@ -12,12 +12,12 @@ ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
 monikerRange: =sql-server-2016
-ms.openlocfilehash: 95f920fc8648ed646f1056c9d334ee831651f5e2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a5038368e66524324fb0189b2f1b06e0b374e41a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465376"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100353690"
 ---
 # <a name="migrating-computed-columns"></a>Migrar columnas calculadas
 
@@ -25,7 +25,7 @@ ms.locfileid: "97465376"
 
 Las tablas optimizadas para memoria no admiten columnas calculadas. Sin embargo, puede simular una columna calculada.
 
-A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], se admiten columnas calculadas en tablas e índices optimizados para memoria.
+A partir de [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], se admiten columnas calculadas en tablas e índices optimizados para memoria.
 
 Debe considerar la necesidad de conservar sus columnas calculadas al migrar las tablas basadas en disco a tablas optimizadas para memoria. Las diferentes características de rendimiento de las tablas optimizadas para memoria y los procedimientos almacenados compilados de forma nativa pueden invalidar la necesidad de persistencia.  
   

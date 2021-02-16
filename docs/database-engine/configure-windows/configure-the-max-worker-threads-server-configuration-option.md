@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d95d8f774d2b9daba6bd2a0e7a179dd901ef0ac
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c5291b502ec70be8b86c6806e14404664d0b0831
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171047"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100347005"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ El valor predeterminado de **máximo de subprocesos de trabajo** es 0. Esto perm
   
 -   En la tabla siguiente se muestra el número configurado automáticamente de máximo de subprocesos de trabajo (cuando el valor se establece en 0) basado en diferentes combinaciones de CPU, arquitectura de equipo y versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mediante la fórmula: **_Trabajos máximos predeterminados_ + ((* CPU lógicas* - 4) * *Trabajos por CPU*)**.  
   
-    |Número de CPU|Equipo de 32 bits (hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|Equipo de 64 bits (hasta [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1)|Equipo de 64 bits (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
+    |Número de CPU|Equipo de 32 bits (hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|Equipo de 64 bits (hasta [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1)|Equipo de 64 bits (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
     |------------|------------|------------|------------|  
     |\<= 4|256|512|512|   
     |8|288|576|576|   
@@ -79,14 +79,14 @@ El valor predeterminado de **máximo de subprocesos de trabajo** es 0. Esto perm
     |128|1248|2496|4480|   
     |256|2272|4544|8576|   
     
-    Hasta [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1, los *trabajos por CPU* solo dependen de la arquitectura (32 bits o 64 bits):
+    Hasta [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1, los *trabajos por CPU* solo dependen de la arquitectura (32 bits o 64 bits):
     
     |Número de CPU|Equipo de 32 bits <sup>1</sup>|Equipo de 64 bits|   
     |------------|------------|------------|   
     |\<= 4|256|512|   
     |\> 4|256 + ((CPU lógicas - 4) * 8)|512 <sup>2</sup> + [(CPU lógicas - 4) * 16]|   
     
-    A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], los *Trabajos por CPU* dependen de la arquitectura y el número de procesadores (entre 4 y 64, o superior a 64):
+    A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], los *Trabajos por CPU* dependen de la arquitectura y el número de procesadores (entre 4 y 64, o superior a 64):
     
     |Número de CPU|Equipo de 32 bits <sup>1</sup>|Equipo de 64 bits|   
     |------------|------------|------------|   
@@ -94,7 +94,7 @@ El valor predeterminado de **máximo de subprocesos de trabajo** es 0. Esto perm
     |\> 4 y \<= 64|256 + ((CPU lógicas - 4) * 8)|512 <sup>2</sup> + [(CPU lógicas - 4) * 16]|   
     |\> 64|256 + [(CPU lógicas - 4) * 32]|512 <sup>2</sup> + [(CPU lógicas - 4) * 32]|   
   
-    <sup>1</sup> A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya no se puede instalar en un sistema operativo de 32 bits. Se muestran los valores de equipo de 32 bits como ayuda para los clientes que ejecutan [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones anteriores. Se recomienda 1024 como número máximo de subprocesos de trabajo para una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta en un equipo de 32 bits.
+    <sup>1</sup> A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya no se puede instalar en un sistema operativo de 32 bits. Se muestran los valores de equipo de 32 bits como ayuda para los clientes que ejecutan [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones anteriores. Se recomienda 1024 como número máximo de subprocesos de trabajo para una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta en un equipo de 32 bits.
     
     <sup>2</sup> A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], el valor de *trabajos máximos predeterminados* se divide por 2 con menos de 2 GB de memoria.
   

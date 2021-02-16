@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ea62ec35accc4f808fdbd1b2ff4319c0b44cdcc5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 5091c3437d0e74f3c108e13efb3789997cadb2d3
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195749"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489469"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extraer una DAC de una base de datos
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -162,5 +162,5 @@ $extractionunit.Extract($dacpacPath)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-  
+ - [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md) 
+ - [SqlPackage en canalizaciones de desarrollo](../../tools/sqlpackage/sqlpackage-pipelines.md)

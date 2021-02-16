@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 28d2bac4024f067f4c3eb07318a47ef0d91fd171
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: e39187e32afbcf72bf1eb950f18d5f21cef38211
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194290"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348298"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
@@ -56,9 +56,9 @@ ms.locfileid: "92194290"
 ## <a name="message-types"></a>Tipos de mensajes  
  Puede configurar los tipos de mensaje que proporciona la tarea Cola de mensajes de las siguientes maneras:  
   
--   El mensaje**Data file** especifica que un archivo contiene el mensaje. Al recibir mensajes, puede configurar la tarea para guardar el archivo, sobrescribir un archivo existente y especificar el paquete desde el cual la tarea puede recibir mensajes.  
+-   El mensaje **Data file** especifica que un archivo contiene el mensaje. Al recibir mensajes, puede configurar la tarea para guardar el archivo, sobrescribir un archivo existente y especificar el paquete desde el cual la tarea puede recibir mensajes.  
   
--   El mensaje**String** especifica el mensaje como una cadena. Al recibir mensajes, puede configurar la tarea para comparar la cadena recibida con una cadena definida por el usuario y actuar según la comparación. La comparación de cadenas puede ser exacta, distinguir o no entre mayúsculas y minúsculas o usar una subcadena.  
+-   El mensaje **String** especifica el mensaje como una cadena. Al recibir mensajes, puede configurar la tarea para comparar la cadena recibida con una cadena definida por el usuario y actuar según la comparación. La comparación de cadenas puede ser exacta, distinguir o no entre mayúsculas y minúsculas o usar una subcadena.  
   
 -   **String message to variable** especifica el mensaje de origen como una cadena que se envía a una variable de destino. Puede configurar la tarea para comparar la cadena recibida con una cadena definida por el usuario aplicando una comparación exacta, que no distinga entre mayúsculas y minúsculas o de subcadena. Este tipo de mensaje está disponible solamente cuando la tarea recibe mensajes.  
   

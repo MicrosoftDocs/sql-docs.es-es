@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 19b96ce10fc5579e86fde10b4c3331b0da060050
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: aaa5d2276908feccd86aac75012703e093b861d3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724966"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352129"
 ---
 # <a name="data-profile-viewer"></a>Visor de perfil de datos
 
@@ -42,20 +42,20 @@ ms.locfileid: "91724966"
   
  El visor utiliza varios paneles para mostrar los perfiles solicitados y los resultados calculados, y también permite la obtención de detalles:  
   
- Panel**Perfiles**  
+ Panel **Perfiles**  
  En el panel **Perfiles** se muestran los perfiles que se han pedido en la tarea de generación de perfiles de datos. Para ver los resultados calculados para el perfil, selecciónelo en el panel **Perfiles** y los resultados aparecerán en los otros paneles del visor.  
   
- Panel**Resultados**  
+ Panel **Resultados**  
  El panel **Resultados** usa una única fila para resumir los resultados calculados del perfil. Por ejemplo, si se solicita un **Perfil de distribución de longitud de columnas**, esta fila incluye la longitud mínima, la máxima y el recuento de filas. Para la mayoría de los perfiles, es posible seleccionar esta fila en el panel **Resultados** con objeto de ver los detalles adicionales en el panel **Detalles** opcional.  
   
- Panel**Detalles**  
+ Panel **Detalles**  
  Para la mayoría de los tipos de perfiles, en el panel **Detalles** se muestra información adicional sobre los resultados del perfil seleccionados en el panel **Resultados** . Por ejemplo, si solicita un **Perfil de distribución de longitud de columnas**, el panel **Detalles** muestra cada una de las longitudes de columna que se han hallado. El panel también muestra el número y el porcentaje de filas cuyo valor de columna tiene esa longitud de columna.  
   
  Para los tres tipos de perfil que se calculan sobre varias columnas (Clave candidata, Dependencia funcional e Inclusión de valores), en el panel **Detalles** se muestran las infracciones de la relación esperada. Por ejemplo, si se solicita un Perfil de claves candidatas, el panel Detalles muestra los valores duplicados que infringen la unicidad de la clave candidata.  
   
  Si el origen de datos que se usa para calcular el perfil está disponible, puede hacer doble clic en una fila en el panel **Detalles** para ver las filas de datos coincidentes en el panel **Obtención de detalles** .  
   
- Panel**Obtención de detalles**  
+ Panel **Obtención de detalles**  
  Puede hacer doble clic en una fila del panel **Detalles** para ver las filas coincidentes de datos en el panel **Obtención de detalles** cuando se cumplen las condiciones siguientes:  
   
 -   El origen de datos que se utiliza para calcular el perfil está disponible.  
@@ -80,13 +80,13 @@ ms.locfileid: "91724966"
  **Abrir**  
  Haga clic para buscar el archivo guardado que contiene la salida de la Tarea de generación de perfiles de datos.  
   
- Panel**Perfiles**  
+ Panel **Perfiles**  
  Expanda el árbol del panel **Perfiles** para ver los perfiles que están incluidos en la salida. Seleccione un perfil para ver los resultados de ese perfil.  
   
- Panel**Mensaje**  
+ Panel **Mensaje**  
  Muestra mensajes de estado.  
   
- Panel**Obtención de detalles**  
+ Panel **Obtención de detalles**  
  Muestra las filas de datos que coinciden con un valor en la salida, si el origen de datos que usa la Tarea de generación de perfiles de datos está disponible.  
   
  Por ejemplo, si está viendo la salida de un perfil Distribución de valores de columna de una columna de estados americanos, el panel **Distribución de valor detallado** podría contener una fila para "WA". Haga doble clic en la fila en el panel **Distribución de valores detallados** para ver las filas de datos en las que el valor de la columna de estado sea "WA" en el panel de obtención de detalles.  

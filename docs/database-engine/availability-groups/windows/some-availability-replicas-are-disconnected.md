@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f4641417055b4a237dbed4459f165dc66f7febc8
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: 6826e3db8016d7c1ad5ed2d28d273cfc831a8c1a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98765888"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352623"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>Algunas réplicas de disponibilidad están desconectadas
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

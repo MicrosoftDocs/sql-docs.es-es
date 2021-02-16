@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c7f9c14d023aa27f2f9c66be9814429870a19dae
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: e7eb4baa2f815357f9a4aea1751232fff77a9064
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99076297"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343866"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>Compatibilidad con la conectividad de cliente y controlador para grupos de disponibilidad
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e6e6dfd3092f4602f652af81e547b63fc1ddc3df
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: b2bd51dffb858f30e29b4a1b60e1c728afdbeb93
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236085"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067260"
 ---
 # <a name="configure-the-secure-enclave-in-sql-server"></a>Configuración del enclave seguro en SQL Server
 

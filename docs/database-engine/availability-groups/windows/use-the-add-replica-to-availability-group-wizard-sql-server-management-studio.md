@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 066a215fa5e616cf33734b3c582ed4789ee43461
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: e9180f809dd1300a0c5c6a4c5b5d429c6054adc4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641831"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340456"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>Agregue una réplica al grupo de disponibilidad Always On mediante el Asistente de grupo de disponibilidad de SQL Server Management Studio.
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

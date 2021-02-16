@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - OPENROWSET_TSQL
 - OPENROWSET
@@ -26,12 +26,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 43f3bbae327731f6522b71c0fdaafbc9441fe9ca
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: a2c7af1aaa1840b3c3468a00541f96325d8a5c52
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169754"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100352398"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -159,8 +159,8 @@ SELECT * FROM OPENROWSET(
    SINGLE_CLOB) AS DATA;
 ```
 
-**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data_file puede estar en Azure Blob Storage. Para ver ejemplos, vea [Ejemplos de acceso masivo a datos en Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+**Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
+A partir de [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, data_file puede estar en Azure Blob Storage. Para ver ejemplos, vea [Ejemplos de acceso masivo a datos en Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 > [!IMPORTANT]
 > Azure SQL Database solo admite la lectura desde Azure Blob Storage.
@@ -171,12 +171,12 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data
 `ERRORFILE` ="*nombre_de_archivo*" especifica el archivo que se usa para recopilar filas que tienen errores de formato y no se pueden convertir en un conjunto de filas OLE DB. Estas filas se copian en este archivo de errores desde el archivo de datos "tal cual".
 
 El archivo de errores se crea cuando se inicia la ejecución del comando. Se producirá un error si el archivo ya existe. Además, se crea un archivo de control con la extensión .ERROR.txt. Este archivo hace referencia a cada una de las filas del archivo de errores y proporciona diagnósticos de errores. Tras corregir los errores, pueden cargarse los datos.
-**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], `error_file_path` puede estar en Azure Blob Storage.
+**Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
+A partir de [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], `error_file_path` puede estar en Azure Blob Storage.
 
 ##### <a name="errorfile_data_source_name"></a>ERRORFILE_DATA_SOURCE_NAME
-**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blob Storage del archivo de error que contendrá los errores encontrados durante la importación. El origen de datos externo se debe crear con la opción `TYPE = BLOB_STORAGE` que se ha incluido en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Para más información, vea [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+**Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
+Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blob Storage del archivo de error que contendrá los errores encontrados durante la importación. El origen de datos externo se debe crear con la opción `TYPE = BLOB_STORAGE` que se ha incluido en [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1. Para más información, vea [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 ##### <a name="maxerrors"></a>MAXERRORS
 `MAXERRORS` =*máximo_de_errores* especifica el número máximo de errores de sintaxis o filas no compatibles, como se define en el archivo de formato, que pueden tener lugar antes de que OPENROWSET inicie una excepción. Hasta que se alcance el valor de MAXERRORS, OPENROWSET omite todas las filas erróneas, sin cargarlas, y cuenta cada fila errónea como un error.
@@ -249,10 +249,10 @@ SELECT *
 |ACP|Convierte columnas de los tipos de datos **char**, **varchar** o **text** de la página de códigos ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) a la página de códigos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |OEM (valor predeterminado)|Convierte columnas de los tipos de datos **char**, **varchar** o **text** de la página de códigos OEM del sistema a la página de códigos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |RAW|No se realiza ninguna conversión entre páginas de códigos. Ésta es la opción más rápida.|
-|*code_page*|Indica la página de códigos original en la que se codifican los datos de caracteres incluidos en el archivo de datos; por ejemplo, 850.<br /><br /> **Importante** Las versiones anteriores a [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] no admiten la página de códigos 65001 (codificación UTF-8).|
+|*code_page*|Indica la página de códigos original en la que se codifican los datos de caracteres incluidos en el archivo de datos; por ejemplo, 850.<br /><br /> **Importante** Las versiones anteriores a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] no admiten la página de códigos 65001 (codificación UTF-8).|
 
 ##### <a name="format"></a>FORMAT
-`FORMAT` **=** "CSV" **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+`FORMAT` **=** "CSV" **Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
 Especifica un archivo de valores separados por comas conforme a la norma [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
 ```sql
@@ -270,11 +270,11 @@ Es necesario usar un archivo de formato para definir los tipos de columna del co
 
 Para más información sobre los formatos de archivo, vea [Usar un archivo de formato para importar datos de forma masiva &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
 
-**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, format_file_path puede estar en Azure Blob Storage. Para ver ejemplos, vea [Ejemplos de acceso masivo a datos en Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
+**Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
+A partir de [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, format_file_path puede estar en Azure Blob Storage. Para ver ejemplos, vea [Ejemplos de acceso masivo a datos en Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 ##### <a name="fieldquote"></a>FIELDQUOTE
-`FIELDQUOTE` **=** "comillas_de_campo" **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+`FIELDQUOTE` **=** "comillas_de_campo" **Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
 Especifica un carácter que se usará como carácter de comillas en el archivo CSV. Si no se especifica, se usará el carácter de comillas (") como carácter de comillas, según define la norma [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
 ## <a name="remarks"></a>Observaciones
@@ -447,7 +447,7 @@ OPENROWSET (BULK N'D:\data.csv', FORMATFILE =
 
 ### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>G. Tener acceso a los datos de un archivo CSV con un archivo de formato
 
-**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
 
 ```sql
 SELECT *
@@ -484,7 +484,7 @@ FROM OPENROWSET
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>I. Tener acceso a los datos de un archivo almacenado en Azure Blob Storage
 
-**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
 En el siguiente ejemplo se usa un origen de datos externo que apunta a un contenedor en una cuenta de Azure Storage y una credencial con ámbito de base de datos creada para una firma de acceso compartido.
 
 ```sql

@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 57372929f190ff2fe32e7688d16acc75fafc9700
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 39e32e8715c92a14faf68fd22464a50fed349997
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171557"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347693"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestructura de generación de perfiles de consultas
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,25 +46,25 @@ La *infraestructura de generación de perfiles de estadísticas de ejecución de
 
 Los siguientes métodos de recopilación de información de planes de ejecución para **todas las sesiones** aprovechan la infraestructura de generación de perfiles estándar:
 
--  El evento extendido **_query_post_execution_showplan_*. Para habilitar eventos extendidos, consulte [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
-- El evento de seguimiento *Showplan XML** de [Seguimiento de SQL](../../relational-databases/sql-trace/sql-trace.md) y [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). Para obtener más información sobre este evento de seguimiento, vea [Showplan XML [clase de eventos]](../../relational-databases/event-classes/showplan-xml-event-class.md).
+-  El evento extendido ***query_post_execution_showplan***. Para habilitar eventos extendidos, consulte [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
+- El evento de seguimiento **Showplan XML** de [Seguimiento de SQL](../../relational-databases/sql-trace/sql-trace.md) y [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md). Para obtener más información sobre este evento de seguimiento, vea [Showplan XML [clase de eventos]](../../relational-databases/event-classes/showplan-xml-event-class.md).
 
 Cuando se ejecuta una sesión de eventos extendidos que usa el evento *query_post_execution_showplan*, la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) también se rellena, lo que habilita las estadísticas de consulta dinámicas para todas las sesiones mediante [Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md) o una consulta directa a la DMV. Para obtener más información, consulte [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md).
 
 ## <a name="the-lightweight-query-execution-statistics-profiling-infrastructure"></a><a name="lwp"></a> Infraestructura de generación de perfiles de estadísticas de ejecución de consultas ligera
 
-A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], se ha incorporado una nueva *infraestructura de generación de perfiles de estadísticas de ejecución de consultas ligera*, o **generación de perfiles ligera**. 
+A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], se ha incorporado una nueva *infraestructura de generación de perfiles de estadísticas de ejecución de consultas ligera*, o **generación de perfiles ligera**. 
 
 > [!NOTE]
 > Concretamente, los procedimientos almacenados compilados de forma nativa no se admiten con la generación de perfiles ligera.  
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v1"></a>Infraestructura de generación de perfiles de estadísticas de ejecución de consultas ligera v1
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 hasta [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]). 
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 hasta [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]). 
   
-A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], se ha reducido la sobrecarga de rendimiento para recopilar información sobre los planes de ejecución gracias a la incorporación de la generación de perfiles ligera. A diferencia de la generación de perfiles estándar, la ligera no recopila información en tiempo de ejecución de CPU, aunque sigue recopilando la información de uso de E/S y de recuento de filas.
+A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], se ha reducido la sobrecarga de rendimiento para recopilar información sobre los planes de ejecución gracias a la incorporación de la generación de perfiles ligera. A diferencia de la generación de perfiles estándar, la ligera no recopila información en tiempo de ejecución de CPU, aunque sigue recopilando la información de uso de E/S y de recuento de filas.
 
-Además, se ha incorporado un nuevo evento extendido **_query_thread_profile_* que aprovecha la generación de perfiles ligera. Este evento extendido expone estadísticas de ejecución por operador, lo que ofrece más información sobre el rendimiento de cada nodo y subproceso. Se puede configurar una sesión de ejemplo con este evento extendido como en el ejemplo siguiente:
+Además se ha incorporado un nuevo evento extendido ***query_thread_profile*** que aprovecha la generación de perfiles ligera. Este evento extendido expone estadísticas de ejecución por operador, lo que ofrece más información sobre el rendimiento de cada nodo y subproceso. Se puede configurar una sesión de ejemplo con este evento extendido como en el ejemplo siguiente:
 
 ```sql
 CREATE EVENT SESSION [NodePerfStats] ON SERVER
@@ -86,15 +86,15 @@ WITH (MAX_MEMORY=4096 KB,
 > [!NOTE]
 > Para más información sobre la sobrecarga de rendimiento del generación de perfiles de consulta, vea la entrada de blog [Developers Choice: Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar). 
 
-Cuando se ejecuta una sesión de eventos extendidos que usa el evento query_thread_profile, la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) también se rellena con la generación de perfiles ligera, lo que permite estadísticas de consulta dinámicas en todas las sesiones mediante el [Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md) o la consulta directa a la DMV.
+Cuando se ejecuta una sesión de eventos extendidos que usa el evento *query_thread_profile*, la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) también se rellena con la generación de perfiles ligera, lo que habilita las estadísticas de consulta dinámicas para todas las sesiones mediante [Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md) o la consulta directa a la DMV.
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v2"></a>Infraestructura de generación de perfiles de estadísticas de ejecución de consultas ligera v2
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
 
-[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 incluye una versión revisada de la generación de perfiles ligera con sobrecarga mínima. La generación de perfiles ligera también puede habilitarse de forma global mediante la [marca de seguimiento 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) para las versiones indicadas anteriormente en *Se aplica a*. Se ha incorporado una nueva DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) para devolver el plan de ejecución de consultas de las solicitudes en curso.
+[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 incluye una versión revisada de la generación de perfiles ligera con sobrecarga mínima. La generación de perfiles ligera también puede habilitarse de forma global mediante la [marca de seguimiento 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) para las versiones indicadas anteriormente en *Se aplica a*. Se ha incorporado una nueva DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) para devolver el plan de ejecución de consultas de las solicitudes en curso.
 
-A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU3 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, si la generación de perfiles ligera no está habilitada de forma global, se puede usar el nuevo argumento de [sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)**QUERY_PLAN_PROFILE** para habilitarla en el nivel de consulta y para cualquier sesión. Cuando una consulta que contiene esta nueva sugerencia finaliza, también se devuelve un nuevo evento extendido **_query_plan_profile_* que proporciona un archivo XML de plan de ejecución real similar al evento extendido query_post_execution_showplan*. 
+A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU3 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11, si la generación de perfiles ligera no está habilitada de forma global, se puede usar el nuevo argumento de [sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)**QUERY_PLAN_PROFILE** para habilitarla en el nivel de consulta y para cualquier sesión. Cuando una consulta que contiene esta nueva sugerencia finaliza, también se devuelve un nuevo evento extendido **_query_plan_profile_* que proporciona un archivo XML de plan de ejecución real similar al evento extendido query_post_execution_showplan*. 
 
 > [!NOTE]
 > El evento ampliado *query_plan_profile* también usa la generación de perfiles ligera, incluso si no se usa la sugerencia de consulta. 
@@ -120,9 +120,9 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### <a name="lightweight-query-execution-statistics-profiling-infrastructure-v3"></a>Infraestructura de generación de perfiles de estadísticas de ejecución de consultas ligera v3
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] incluyen una versión recién revisada de la generación de perfiles ligera que recopila información de recuento de filas para todas las ejecuciones. La generación de perfiles ligera está habilitada de forma predeterminada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], la marca de seguimiento 7412 no tiene ningún efecto. Se puede deshabilitar la generación de perfiles ligera en el nivel de base de datos mediante la [configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LIGHTWEIGHT_QUERY_PROFILING: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] incluyen una versión recién revisada de la generación de perfiles ligera que recopila información de recuento de filas para todas las ejecuciones. La generación de perfiles ligera está habilitada de forma predeterminada en [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], la marca de seguimiento 7412 no tiene ningún efecto. Se puede deshabilitar la generación de perfiles ligera en el nivel de base de datos mediante la [configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LIGHTWEIGHT_QUERY_PROFILING: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
 Se ha introducido una nueva DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) para devolver el equivalente del último plan de ejecución real conocido para la mayoría de las consultas, y se llama *últimas estadísticas de plan de consulta*. Las últimas estadísticas de plan de consulta se pueden habilitar en el nivel de base de datos mediante la [configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LAST_QUERY_PLAN_STATS: `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 
@@ -178,17 +178,17 @@ En la tabla siguiente se resumen las acciones para habilitar la generación de p
 
 |Ámbito|Generación de perfiles estándar|Generación de perfiles ligera|
 |---------------|---------------|---------------|
-|Global|Sesión de xEvent con el XE `query_post_execution_showplan`; a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Marca de seguimiento 7412; a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1|
+|Global|Sesión de xEvent con el XE `query_post_execution_showplan`; a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Marca de seguimiento 7412; a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1|
 |Global|Seguimiento de SQL y SQL Server Profiler con el evento de seguimiento `Showplan XML`, a partir de SQL Server 2000|Sesión de xEvent con el XE `query_thread_profile`; a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|
-|Global|-|Sesión de xEvent con el XE `query_post_execution_plan_profile`; a partir de CU14 de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
-|Sesión|Use `SET STATISTICS XML ON`, a partir de SQL Server 2000.|Use la sugerencia de consulta `QUERY_PLAN_PROFILE` con una sesión xEvent con el XE `query_plan_profile`, a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU3 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11.|
+|Global|-|Sesión de xEvent con el XE `query_post_execution_plan_profile`; a partir de CU14 de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]|
+|Sesión|Use `SET STATISTICS XML ON`, a partir de SQL Server 2000.|Use la sugerencia de consulta `QUERY_PLAN_PROFILE` con una sesión xEvent con el XE `query_plan_profile`, a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU3 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11.|
 |Sesión|Use `SET STATISTICS PROFILE ON`, a partir de SQL Server 2000.|-|
 |Sesión|Haga clic en el botón [Estadísticas de consultas activas](../../relational-databases/performance/live-query-statistics.md) en SSMS, a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2.|-|
 
 ## <a name="remarks"></a>Observaciones
 
 > [!IMPORTANT]
-> Debido a un posible análisis AV aleatorio al ejecutar un procedimiento almacenado de supervisión que haga referencia a [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md), asegúrese de que [KB 4078596](https://support.microsoft.com/help/4078596) esté instalado en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+> Debido a un posible análisis AV aleatorio al ejecutar un procedimiento almacenado de supervisión que haga referencia a [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md), asegúrese de que [KB 4078596](https://support.microsoft.com/help/4078596) esté instalado en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 A partir de la generación de perfiles ligera v2 y su baja sobrecarga, cualquier servidor que aún no esté enlazado a CPU puede ejecutar la generación de perfiles ligera **continuamente** y permitir que los profesionales de bases de datos pulsen en cualquier ejecución activa en cualquier momento, por ejemplo mediante Monitor de actividad o directamente al consultar a `sys.dm_exec_query_profiles`, y obtengan el plan de consulta con estadísticas en tiempo de ejecución.
 

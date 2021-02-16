@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - UPDATE STATISTICS
 - UPDATE_STATISTICS_TSQL
@@ -22,12 +22,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3680ba07e290f8b531ab46576f76bd3ffeee3460
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: ab5b7fac995e54160798d2f2c3113e391a84340d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170447"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100349986"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -108,7 +108,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
   
  SAMPLE es útil para los casos especiales en los que el plan de consulta, basado en el muestreo predeterminado, no es óptimo. En la mayoría de las situaciones, no es necesario especificar SAMPLE porque el optimizador de consultas utiliza el muestreo y determina el tamaño de muestra estadísticamente significativo de forma predeterminada, tal y como se exige para crear planes de consulta de alta calidad. 
  
-A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], el muestreo de datos para generar estadísticas se realiza en paralelo (en el nivel de compatibilidad 130) para mejorar el rendimiento de recopilación de estadísticas. El optimizador de consultas usará las estadísticas de ejemplo paralelas cada vez que un tamaño de tabla supere un determinado umbral. 
+A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], el muestreo de datos para generar estadísticas se realiza en paralelo (en el nivel de compatibilidad 130) para mejorar el rendimiento de recopilación de estadísticas. El optimizador de consultas usará las estadísticas de ejemplo paralelas cada vez que un tamaño de tabla supere un determinado umbral. 
    
  SAMPLE no se puede utilizar con la opción FULLSCAN. Cuando no se especifica SAMPLE ni FULLSCAN, el optimizador de consultas utiliza los datos muestreados y calcula el tamaño de la muestra de forma predeterminada.  
   
@@ -136,7 +136,7 @@ Cuando es **ON**, las estadísticas conservan el porcentaje de muestreo definido
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) y [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) exponen el valor de porcentaje de muestreo persistente para la estadística seleccionada.
  
- **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU4) y versiones posteriores (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1)  
+ **Se aplica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4) y versiones posteriores (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1)  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] Obliga a que se recalculen las estadísticas de nivel de hoja que abarcan las particiones especificadas en la cláusula ON PARTITIONS y, después, se combinen para generar las estadísticas globales. WITH RESAMPLE es necesario porque no se pueden combinar estadísticas de partición generadas con distintas frecuencias de muestreo.  
   
@@ -171,7 +171,7 @@ Cuando es **ON**, las estadísticas conservan el porcentaje de muestreo definido
 **Válido para** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.
 
 MAXDOP = *max_degree_of_parallelism*  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Reemplaza la opción de configuración **max degree of parallelism** durante la operación estadística. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   

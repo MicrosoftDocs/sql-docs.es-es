@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 49f47819a6ca128ce45f950c9cd6881e325bec59
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: ae7502fcba11d9892cbcf8ed2c94ef205e0abc53
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115608"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100273136"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>Inicio rápido: Ejecutar SQL Server en la nube
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]

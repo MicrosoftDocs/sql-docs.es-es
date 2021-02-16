@@ -12,12 +12,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42d638afd9fc98fb68eb024c0a712bea5f278a26
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 011a7d3fa710699f75afd4ca835ba1f082a956b5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170227"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100353612"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Características admitidas en los módulos T-SQL compilados de forma nativa
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,8 @@ ms.locfileid: "98170227"
 Se admiten las siguientes construcciones de consulta:  
 
 Expresión CASE: CASE se puede utilizar en cualquier instrucción o cláusula que permite una expresión válida.
-   - **Se aplica a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-    A partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] se admiten las instrucciones CASE para módulos T-SQL compilados de forma nativa.
+   - **Se aplica a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)].  
+    A partir de [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] se admiten las instrucciones CASE para módulos T-SQL compilados de forma nativa.
 
 Cláusula SELECT:  
 
@@ -176,8 +176,8 @@ Se admiten las siguientes instrucciones DML.
 -   Operadores ~, &, | y ^ bit a bit  
 
 -   APPLY, operador
-    - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], el operador APPLY se admite en los módulos compilados de forma nativa.
+    - **Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+      A partir de [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], el operador APPLY se admite en los módulos compilados de forma nativa.
 
 ##  <a name="built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> Funciones integradas en módulos compilados de forma nativa  
  Las funciones siguientes se admiten en restricciones de tablas optimizadas para memoria y en módulos T-SQL compilados de forma nativa.  
@@ -187,8 +187,8 @@ Se admiten las siguientes instrucciones DML.
 -   Funciones de fecha: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME y YEAR.  
 
 -   Funciones de cadena: LEN, LTRIM, RTRIM y SUBSTRING.  
-    - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], también se admiten las siguientes funciones integradas: TRIM, TRANSLATE y CONCAT_WS.  
+    - **Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+      A partir de [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], también se admiten las siguientes funciones integradas: TRIM, TRANSLATE y CONCAT_WS.  
 
 -   Funciones de identidad: SCOPE_IDENTITY  
 
@@ -197,8 +197,8 @@ Se admiten las siguientes instrucciones DML.
 -   Funciones uniqueidentifier: NEWID y NEWSEQUENTIALID  
 
 -   Funciones JSON  
-    - **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], las funciones JSON se admiten en los módulos compilados de forma nativa.
+    - **Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+      A partir de [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], las funciones JSON se admiten en los módulos compilados de forma nativa.
 
 -   Funciones de error: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY y ERROR_STATE  
 

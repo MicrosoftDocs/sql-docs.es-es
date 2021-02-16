@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - BULK_TSQL
 - BULK_INSERT
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 12c1273473fd91c0ea5222add0288fac1b06f37b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 1d1659f427386fd8fa807bc10e782eca572a2278
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170597"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100342550"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -98,15 +98,15 @@ BULK INSERT Sales.Orders
 FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 ```
 
-**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 y Azure SQL Database.
-A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data_file puede estar en Azure Blob Storage. En ese caso, deberá especificar la opción **data_source_name**. Para obtener un ejemplo, vea [Importación de datos desde un archivo en Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
+**Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1 y Azure SQL Database.
+A partir de [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, data_file puede estar en Azure Blob Storage. En ese caso, deberá especificar la opción **data_source_name**. Para obtener un ejemplo, vea [Importación de datos desde un archivo en Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 > [!IMPORTANT]
 > Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 **"** _data_source_name_ **"** 
-**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 y Azure SQL Database.
-Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blob Storage del archivo que se importará. El origen de datos externo se debe crear con la opción `TYPE = BLOB_STORAGE` que se ha incluido en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Para más información, vea [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Para obtener un ejemplo, vea [Importación de datos desde un archivo en Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
+**Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1 y Azure SQL Database.
+Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blob Storage del archivo que se importará. El origen de datos externo se debe crear con la opción `TYPE = BLOB_STORAGE` que se ha incluido en [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1. Para más información, vea [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Para obtener un ejemplo, vea [Importación de datos desde un archivo en Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 BATCHSIZE **=** _tamaño_de_lote_ Especifica el número de filas de un lote. Cada lote se copia en el servidor como una transacción. Si no ocurre así, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] confirma o revierte la transacción de cada lote. De forma predeterminada, todos los datos del archivo de datos especificado componen un lote. Para obtener información acerca de consideraciones de rendimiento, vea la sección "Comentarios" más adelante en este tema.
 
@@ -125,7 +125,7 @@ Una situación en la que quizá desee que las restricciones estén deshabilitada
 CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } Especifica la página de códigos de los datos del archivo de datos. CODEPAGE solo es pertinente si los datos contienen columnas de tipo **char**, **varchar** o **text** con valores de caracteres mayores que **127** o menores que **32**. Para obtener un ejemplo, vea [Especificación de una página de códigos](#d-specifying-a-code-page).
 
 > [!IMPORTANT]
-> CODEPAGE no es una opción admitida en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Para [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)], solo la opción **"RAW"** se permite para CODEPAGE.
+> CODEPAGE no es una opción admitida en [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)]. Para [!INCLUDE[ssSQLv15_md](../../includes/sssql19-md.md)], solo la opción **"RAW"** se permite para CODEPAGE.
 
 > [!NOTE]
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda especificar un nombre de intercalación para cada columna de un [archivo de formato](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).
@@ -135,7 +135,7 @@ CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** 
 |ACP|Convierte columnas de los tipos de datos **char**, **varchar** o **text** de la página de códigos [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (ISO 1252) a la página de códigos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |OEM (valor predeterminado)|Convierte columnas de los tipos de datos **char**, **varchar** o **text** de la página de códigos OEM a la página de códigos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|
 |RAW|No se realiza ninguna conversión de una página de códigos a otra; se trata de la opción más rápida.|
-|*code_page*|Número específico de una página de códigos; por ejemplo, 850.<br /><br /> **&#42;&#42;Importante&#42;&#42;** Las versiones anteriores a [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] no admiten la página de códigos 65001 (codificación UTF-8).|
+|*code_page*|Número específico de una página de códigos; por ejemplo, 850.<br /><br /> **&#42;&#42;Importante&#42;&#42;** Las versiones anteriores a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] no admiten la página de códigos 65001 (codificación UTF-8).|
 | &nbsp; | &nbsp; |
 
 DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenative'** } Especifica que BULK INSERT realiza la operación de importación con el valor del tipo de archivo de datos especificado.
@@ -153,11 +153,11 @@ DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenati
 ERRORFILE **="** _nombre_de_archivo_ **"** Especifica el archivo que se usa para recopilar filas que tienen errores de formato y no se pueden convertir en un conjunto de filas OLE DB. Estas filas se copian en este archivo de errores desde el archivo de datos "tal cual".
 
 El archivo de errores se crea cuando se ejecuta el comando. Se produce un error si el archivo ya existe. Además, se crea un archivo de control con la extensión .ERROR.txt. Este archivo hace referencia a cada fila del archivo de errores y proporciona diagnósticos de errores. Tan pronto como se corrigen los errores, se pueden cargar los datos.
-**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], `error_file_path` puede estar en Azure Blob Storage.
+**Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
+A partir de [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], `error_file_path` puede estar en Azure Blob Storage.
 
-"errorfile_data_source_name" **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blob Storage del archivo de error que contendrá los errores encontrados durante la importación. El origen de datos externo se debe crear con la opción `TYPE = BLOB_STORAGE` que se ha incluido en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Para más información, vea [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+"errorfile_data_source_name" **Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
+Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blob Storage del archivo de error que contendrá los errores encontrados durante la importación. El origen de datos externo se debe crear con la opción `TYPE = BLOB_STORAGE` que se ha incluido en [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1. Para más información, vea [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 FIRSTROW **=** _first_row_ Especifica el número de la primera fila que se va a cargar. El valor predeterminado es la primera fila del archivo de datos especificado. FIRSTROW está en base 1.
 
@@ -168,8 +168,8 @@ FIRE_TRIGGERS Especifica que todos los desencadenadores de inserción definidos 
 
 Si no se especifica FIRE_TRIGGERS, no se ejecuta ningún desencadenador de inserción.
 
-FORMATFILE_DATA_SOURCE **=** "nombre_del_origen_de_datos" **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
-Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blob Storage del archivo de formato que definirá el esquema de los datos importados. El origen de datos externo se debe crear con la opción `TYPE = BLOB_STORAGE` que se ha incluido en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Para más información, vea [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+FORMATFILE_DATA_SOURCE **=** "nombre_del_origen_de_datos" **Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] 1.1.
+Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blob Storage del archivo de formato que definirá el esquema de los datos importados. El origen de datos externo se debe crear con la opción `TYPE = BLOB_STORAGE` que se ha incluido en [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1. Para más información, vea [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 KEEPIDENTITY Especifica que se usará el valor o valores de identidad del archivo de datos importado para la columna de identidad. Si no se especifica KEEPIDENTITY, los valores de identidad de esta columna se comprueban pero no se importan y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente valores únicos basados en los valores de inicialización y de incremento especificados durante la creación de la tabla. Si el archivo de datos no contiene valores para la columna de identidad de la tabla o vista, utilice un archivo de formato para especificar que se debe omitir la columna de identidad de la tabla o vista cuando se importen los datos; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente valores únicos para la columna. Para obtener más información, vea [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).
 
@@ -200,7 +200,7 @@ Para el índice de almacén de columnas, El comportamiento de bloqueo es distint
 
 ### <a name="input-file-format-options"></a>Opciones de formato de archivos de entrada
 
-FORMAT **=** "CSV" **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+FORMAT **=** "CSV" **Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
 Especifica un archivo de valores separados por comas conforme a la norma [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
 ```sql
@@ -209,7 +209,7 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.csv'
 WITH ( FORMAT='CSV');
 ```
 
-FIELDQUOTE **=** "comillas_de_campo" **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+FIELDQUOTE **=** "comillas_de_campo" **Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1.
 Especifica un carácter que se usará como carácter de comillas en el archivo CSV. Si no se especifica, se usará el carácter de comillas (") como carácter de comillas, según define la norma [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
 FORMATFILE **=** "_ruta_de_acceso_de_formato_" Especifica la ruta de acceso completa de un archivo de formato. Un archivo de formato describe el archivo de datos que contiene respuestas almacenadas creado con la utilidad **bcp** en la misma tabla o vista. Se debe usar el archivo de formato si:
@@ -219,8 +219,8 @@ FORMATFILE **=** "_ruta_de_acceso_de_formato_" Especifica la ruta de acceso comp
 - Los delimitadores de columna varían.
 - Hay otros cambios en el formato de los datos. Los archivos de formato se suelen crear con la utilidad **bcp** y se modifican con un procesador de texto si es necesario. Para más información, vea [Utilidad bcp](../../tools/bcp-utility.md) y [Creación de un archivo de formato](../../relational-databases/import-export/create-a-format-file-sql-server.md).
 
-**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 y Azure SQL Database.
-A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, format_file_path puede estar en Azure Blob Storage.
+**Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1 y Azure SQL Database.
+A partir de [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, format_file_path puede estar en Azure Blob Storage.
 
 FIELDTERMINATOR **="** _terminador_de_campo_ **"** Especifica el terminador de campo que se va a usar para archivos de datos de tipo **char** y **widechar**. El terminador de campo predeterminado es \t (tabulador). Para obtener más información, vea [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
@@ -305,8 +305,8 @@ La instrucción BULK INSERT se puede ejecutar en una transacción definida por e
 
 ### <a name="importing-data-from-a-csv-file"></a>Importar datos desde un archivo CSV
 
-A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, BULK INSERT admite el formato CSV, al igual que Azure SQL Database.
-Antes de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, las operaciones de importación masiva [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admiten archivos de valores separados por comas (CSV). Sin embargo, en algunos casos se puede utilizar un archivo de valores separados por comas (CSV) como archivo de datos para una importación masiva de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conocer los requisitos para importar datos desde un archivo de datos CSV, vea [Preparar los datos para exportar o importar de forma masiva &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
+A partir de [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, BULK INSERT admite el formato CSV, al igual que Azure SQL Database.
+Antes de [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] CTP 1.1, las operaciones de importación masiva [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admiten archivos de valores separados por comas (CSV). Sin embargo, en algunos casos se puede utilizar un archivo de valores separados por comas (CSV) como archivo de datos para una importación masiva de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para conocer los requisitos para importar datos desde un archivo de datos CSV, vea [Preparar los datos para exportar o importar de forma masiva &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).
 
 ## <a name="logging-behavior"></a>Comportamiento del registro
 

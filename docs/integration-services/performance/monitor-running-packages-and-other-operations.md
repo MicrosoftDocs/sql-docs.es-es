@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50c651fac37223ad157ea4ee04c9842a0ee7083c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2716b85dde5aaa7a7e2df15e87004c838b8137ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457117"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353023"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Monitor de ejecución de paquetes y otras operaciones
 
@@ -67,7 +67,7 @@ ms.locfileid: "88457117"
   
 2.  Conéctese al motor de base de datos de Microsoft SQL Server  
   
-3.  En el Explorador de objetos, expanda el nodo **Integration Services** , haga clic con el botón derecho en **SSISDB**y, después, haga clic en **Operaciones activas**.  
+3.  En el Explorador de objetos, expanda el nodo **Integration Services** , haga clic con el botón derecho en **SSISDB** y, después, haga clic en **Operaciones activas**.  
   
 ### <a name="configure-the-options"></a>Configurar las opciones  
   
@@ -145,7 +145,7 @@ ms.locfileid: "88457117"
 |**Información de ejecución**|Muestra el número de ejecuciones en distintos estados (error, en ejecución, correcto, otros) en las últimas 24 horas.|  
 |**Información del paquete**|Muestra el número total de paquetes que se han ejecutado en las últimas 24 horas.|  
 |**Información de conexión**|Muestra las conexiones que se han usado en las ejecuciones con error en las últimas 24 horas.|  
-|**Información detallada del paquete**|Muestra los detalles de las ejecuciones completadas que se han realizado en las últimas 24 horas. Por ejemplo, esta sección muestra el número de ejecuciones con errores frente al número total de ejecuciones, la duración de las ejecuciones (en segundos) y la duración promedio de las ejecuciones durante los últimos tres meses.<br /><br /> Puede ver información adicional sobre un paquete si hace clic en **Información general**, **Todos los mensajes**y **Rendimiento de la ejecución**.<br /><br /> El informe **Rendimiento de la ejecución** muestra la duración de la última instancia de ejecución, así como las horas de inicio y de finalización, y el entorno que se aplicó.<br /><br /> El gráfico y la tabla asociada incluidos en el informe **Rendimiento de la ejecución** muestran la duración de las 10 últimas ejecuciones correctas del paquete. La tabla muestra también la duración promedio de ejecución durante un período de tres meses. Pueden haberse aplicado diferentes entornos y valores literales en tiempo de ejecución para estas 10 ejecuciones correctas del paquete.<br /><br /> Por último, el informe **Rendimiento de la ejecución** muestra el Tiempo activo y el TIempo total para los componentes de flujo de datos del paquete. El Tiempo activo se refiere al tiempo total que el componente ha pasado ejecutándose en todas las fases y el Tiempo total se refiere al tiempo total transcurrido para un componente. El informe solo muestra esta información para los componentes del paquete cuando el nivel de registro de la ejecución del último paquete se estableció en Performance (Rendimiento) o Verbose (Detallado).<br /><br /> El informe **Información general** muestra el estado de las tareas del paquete. El informe **Mensajes** muestra los mensajes de eventos y los mensajes de error para el paquete y las tareas, como las horas de inicio y de finalización, y el número de filas escritas.<br /><br /> También puede hacer clic **Ver mensajes** en el informe **Información general** para navegar al informe **Mensajes** . También puede hacer clic **Ver información general** en el informe **Mensajes** para navegar al informe **Información general** .|  
+|**Información detallada del paquete**|Muestra los detalles de las ejecuciones completadas que se han realizado en las últimas 24 horas. Por ejemplo, esta sección muestra el número de ejecuciones con errores frente al número total de ejecuciones, la duración de las ejecuciones (en segundos) y la duración promedio de las ejecuciones durante los últimos tres meses.<br /><br /> Puede ver información adicional sobre un paquete si hace clic en **Información general**, **Todos los mensajes** y **Rendimiento de la ejecución**.<br /><br /> El informe **Rendimiento de la ejecución** muestra la duración de la última instancia de ejecución, así como las horas de inicio y de finalización, y el entorno que se aplicó.<br /><br /> El gráfico y la tabla asociada incluidos en el informe **Rendimiento de la ejecución** muestran la duración de las 10 últimas ejecuciones correctas del paquete. La tabla muestra también la duración promedio de ejecución durante un período de tres meses. Pueden haberse aplicado diferentes entornos y valores literales en tiempo de ejecución para estas 10 ejecuciones correctas del paquete.<br /><br /> Por último, el informe **Rendimiento de la ejecución** muestra el Tiempo activo y el TIempo total para los componentes de flujo de datos del paquete. El Tiempo activo se refiere al tiempo total que el componente ha pasado ejecutándose en todas las fases y el Tiempo total se refiere al tiempo total transcurrido para un componente. El informe solo muestra esta información para los componentes del paquete cuando el nivel de registro de la ejecución del último paquete se estableció en Performance (Rendimiento) o Verbose (Detallado).<br /><br /> El informe **Información general** muestra el estado de las tareas del paquete. El informe **Mensajes** muestra los mensajes de eventos y los mensajes de error para el paquete y las tareas, como las horas de inicio y de finalización, y el número de filas escritas.<br /><br /> También puede hacer clic **Ver mensajes** en el informe **Información general** para navegar al informe **Mensajes** . También puede hacer clic **Ver información general** en el informe **Mensajes** para navegar al informe **Información general** .|  
   
  Puede filtrar la tabla que se muestra en cualquier página si hace clic en **Filtro** y selecciona los criterios deseados en el cuadro de diálogo **Configuración de filtro** . Los criterios de filtro disponibles dependen de los datos que se muestran. Puede cambiar el criterio de ordenación del informe haciendo clic en el icono de ordenación del cuadro de diálogo **Configuración de filtro** .  
   
@@ -194,7 +194,7 @@ ms.locfileid: "88457117"
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda el nodo **Catálogos de Integration Services** del Explorador de objetos.  
   
-2.  Haga clic con el botón derecho en **SSISDB**, haga clic en **Informes**y, después, haga clic en **Informes estándar**.  
+2.  Haga clic con el botón derecho en **SSISDB**, haga clic en **Informes** y, después, haga clic en **Informes estándar**.  
   
 3.  Haga clic en una o más de las opciones siguientes para ver un informe.  
   
