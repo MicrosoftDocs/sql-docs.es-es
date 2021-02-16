@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4054435b8341ab60d08866acb017ef85892f4faa
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 83985f8cb34b9efa8485f9827dd9692a38f91a65
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170587"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100344797"
 ---
 # <a name="best-practices-with-query-store"></a>Procedimientos recomendados con el almacén de consultas
 
@@ -73,7 +73,7 @@ Los parámetros predeterminados son suficientemente buenos como punto de partida
 
 Mientras que el almacén de consultas recopila consultas, planes de ejecución y estadísticas, su tamaño en la base de datos crece hasta que se alcanza este límite. Cuando esto ocurre, el Almacén de consultas cambia automáticamente el modo de operación a solo lectura y deja de recopilar datos nuevos, lo que significa que el análisis de rendimiento ya no es preciso.
 
-El valor predeterminado en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] es 100 MB. Es posible que este tamaño no sea suficiente si la carga de trabajo genera gran cantidad de planes y consultas diferentes, o bien si quiere conservar el historial de consultas durante un período de tiempo más largo. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], el valor predeterminado es de 1 GB. Realice el seguimiento del uso de espacio actual y aumente el valor de **Tamaño máximo (MB)** para impedir que el almacén de consultas cambie al modo de solo lectura.
+El valor predeterminado en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] es 100 MB. Es posible que este tamaño no sea suficiente si la carga de trabajo genera gran cantidad de planes y consultas diferentes, o bien si quiere conservar el historial de consultas durante un período de tiempo más largo. A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], el valor predeterminado es de 1 GB. Realice el seguimiento del uso de espacio actual y aumente el valor de **Tamaño máximo (MB)** para impedir que el almacén de consultas cambie al modo de solo lectura.
 
 > [!IMPORTANT]
 > El límite **Tamaño máximo (MB)** no se aplica de forma estricta. El tamaño de almacenamiento solo se comprueba cuando el almacén de consultas escribe datos en el disco. Este intervalo lo establece el valor de **Intervalo de vaciado de datos (minutos)** . Si Almacén de consultas ha infringido el límite de tamaño máximo entre las comprobaciones de tamaño de almacenamiento, pasa al modo de solo lectura. Si **Modo de limpieza basada en tamaño** está habilitado, también se desencadena el mecanismo de limpieza para aplicar el límite de tamaño máximo.
@@ -133,8 +133,8 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 
 **Modo de captura de Almacén de consultas**: especifica la directiva de captura de consultas para el almacén de consultas.
 
-- **Todos**: Captura todas las consultas. Es la opción predeterminada en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
-- **Automático**: se omiten las consultas poco frecuentes y aquellas con una duración de compilación y ejecución insignificante. Los umbrales para la duración del tiempo de ejecución, compilación y recuento de ejecuciones se determinan de forma interna. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], esta es la opción predeterminada.
+- **Todos**: Captura todas las consultas. Es la opción predeterminada en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+- **Automático**: se omiten las consultas poco frecuentes y aquellas con una duración de compilación y ejecución insignificante. Los umbrales para la duración del tiempo de ejecución, compilación y recuento de ejecuciones se determinan de forma interna. A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], esta es la opción predeterminada.
 - **Ninguna**: el almacén de consultas deja de capturar consultas nuevas.
 - **Personalizado**: permite un control adicional y la capacidad de ajustar la directiva de recopilación de datos. La nueva configuración personalizada define lo que sucede durante el umbral de tiempo de la directiva de captura interna. Es un límite de tiempo durante el que se evalúan las condiciones configurables y, si alguna de ellas es verdadera, la consulta se puede registrar en el almacén de consultas.
 
@@ -150,7 +150,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
 
 ### <a name="examples"></a>Ejemplos
 
-En el ejemplo siguiente, se establece QUERY_CAPTURE_MODE en AUTO y se configuran otras opciones recomendadas en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]:
+En el ejemplo siguiente, se establece QUERY_CAPTURE_MODE en AUTO y se configuran otras opciones recomendadas en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]:
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
@@ -183,7 +183,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-En el ejemplo siguiente, se establece QUERY_CAPTURE_MODE en AUTO y se configuran otras opciones recomendadas en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. *De manera opcional*, se establece la directiva de captura CUSTOM con los valores predeterminados, en lugar del nuevo modo de captura AUTO predeterminado:
+En el ejemplo siguiente, se establece QUERY_CAPTURE_MODE en AUTO y se configuran otras opciones recomendadas en [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]. *De manera opcional*, se establece la directiva de captura CUSTOM con los valores predeterminados, en lugar del nuevo modo de captura AUTO predeterminado:
 
 ```sql
 ALTER DATABASE [QueryStoreDB]
@@ -225,7 +225,7 @@ El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.
 
 |Versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Métrica de ejecución|Función estadística|
 |----------------------|----------------------|------------------------|
-|[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|Tiempo de CPU, Duración, Recuento de ejecuciones, Lecturas lógicas, Escrituras lógicas, Consumo de memoria, Lecturas físicas, Tiempo de CLR, Grado de paralelismo (DOP) y Recuento de filas|Promedio, máximo, mínimo, desviación estándar y total|
+|[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]|Tiempo de CPU, Duración, Recuento de ejecuciones, Lecturas lógicas, Escrituras lógicas, Consumo de memoria, Lecturas físicas, Tiempo de CLR, Grado de paralelismo (DOP) y Recuento de filas|Promedio, máximo, mínimo, desviación estándar y total|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|Tiempo de CPU, Duración, Recuento de ejecuciones, Lecturas lógicas, Escrituras lógicas, Consumo de memoria, Lecturas físicas, Tiempo de CLR, Grado de paralelismo, Recuento de filas, Memoria de registro, Memoria de TempDB y Tiempos de espera|Promedio, máximo, mínimo, desviación estándar y total|
 
 En el gráfico siguiente se muestra cómo localizar vistas del Almacén de consultas:
@@ -332,7 +332,7 @@ FROM sys.database_query_store_options;
 
 Si el problema continúa, significa que los datos del almacén de consultas siguen dañados en el disco.
 
-A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], el Almacén de consultas se puede recuperar si se ejecuta el procedimiento **sp_query_store_consistency_check** almacenado en la base de datos afectada. El almacén de consultas se debe deshabilitar antes de intentar la operación de recuperación. Para [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], tendrá que borrar los datos del almacén de consultas, como se muestra a continuación.
+A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], el Almacén de consultas se puede recuperar si se ejecuta el procedimiento **sp_query_store_consistency_check** almacenado en la base de datos afectada. El almacén de consultas se debe deshabilitar antes de intentar la operación de recuperación. Para [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], tendrá que borrar los datos del almacén de consultas, como se muestra a continuación.
 
 Si la recuperación no se ha realizado correctamente, puede intentar borrar el almacén de consultas antes de establecer el modo de lectura y escritura.
 
@@ -358,10 +358,10 @@ Mantenga los datos más relevantes en el Almacén de consultas. En la tabla sigu
 
 |Modo de captura del almacén de consultas|Escenario|
 |------------------------|--------------|
-|**Todo**|Analice la carga de trabajo exhaustivamente en cuanto a todas las formas de las consultas y sus frecuencias de ejecución, y otras estadísticas.<br /><br /> Identifique nuevas consultas en la carga de trabajo.<br /><br /> Detecte si las consultas ad-hoc se usan para identificar oportunidades de parametrización automática o manual.<br /><br />Nota: Este es el modo de captura predeterminado en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
-|**Automático**|Centre su atención en las consultas pertinentes y accionables. Un ejemplo son las que se ejecutan con regularidad o las que tienen un consumo significativo de recursos.<br /><br />Nota: A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], este es el modo de captura predeterminado.|
+|**Todo**|Analice la carga de trabajo exhaustivamente en cuanto a todas las formas de las consultas y sus frecuencias de ejecución, y otras estadísticas.<br /><br /> Identifique nuevas consultas en la carga de trabajo.<br /><br /> Detecte si las consultas ad-hoc se usan para identificar oportunidades de parametrización automática o manual.<br /><br />Nota: Este es el modo de captura predeterminado en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|
+|**Automático**|Centre su atención en las consultas pertinentes y accionables. Un ejemplo son las que se ejecutan con regularidad o las que tienen un consumo significativo de recursos.<br /><br />Nota: A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], este es el modo de captura predeterminado.|
 |**None**|Ya ha capturado el conjunto de consultas que quiere supervisar en tiempo de ejecución y quiere eliminar los objetos innecesarios que otras consultas podrían introducir.<br /><br /> El modo Ninguno es adecuado para entornos de pruebas y evaluación comparativa.<br /><br /> El modo Ninguno también es adecuado para los proveedores de software que incluyen la configuración del Almacén de consultas definida para supervisar la carga de trabajo de la aplicación.<br /><br /> El modo Ninguno se debe usar con precaución, ya que podría perder la oportunidad de realizar el seguimiento de consultas nuevas importantes y de optimizarlas. Evite el uso del modo Ninguno a menos que tenga un escenario específico que lo requiera.|
-|**Personalizada**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce un modo de captura Personalizado en el comando `ALTER DATABASE SET QUERY_STORE`. Cuando se habilita, una nueva configuración de la directiva de captura del almacén de consultas incluye más configuraciones del almacén de consultas para ajustar la recopilación de datos en un servidor específico.<br /><br />La nueva configuración personalizada define lo que sucede durante el umbral de tiempo de la directiva de captura interna. Es un límite de tiempo durante el que se evalúan las condiciones configurables y, si alguna de ellas es verdadera, la consulta se puede registrar en el almacén de consultas. Para obtener más información, vea [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|
+|**Personalizada**|[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduce un modo de captura Personalizado en el comando `ALTER DATABASE SET QUERY_STORE`. Cuando se habilita, una nueva configuración de la directiva de captura del almacén de consultas incluye más configuraciones del almacén de consultas para ajustar la recopilación de datos en un servidor específico.<br /><br />La nueva configuración personalizada define lo que sucede durante el umbral de tiempo de la directiva de captura interna. Es un límite de tiempo durante el que se evalúan las condiciones configurables y, si alguna de ellas es verdadera, la consulta se puede registrar en el almacén de consultas. Para obtener más información, vea [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|
 
 > [!NOTE]
 > Los cursores, las consultas dentro de procedimientos almacenados y las consultas compiladas de forma nativa siempre se capturan cuando Modo de captura de Almacén de consultas se establece en **Todo**, **Automático** o **Personalizado**. Para capturar consultas compiladas de forma nativa, habilite la recopilación de estadísticas por consulta mediante [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).
@@ -428,13 +428,13 @@ Las marcas de seguimiento globales 7745 y 7752 se pueden usar para mejorar la di
 - La marca de seguimiento 7752 permite la carga asincrónica del Almacén de consultas. Esto permite que una base de datos vuelva a estar en línea y que las consultas se ejecuten antes de que el almacén de consultas se haya recuperado completamente. El comportamiento predeterminado consiste en realizar la carga sincrónica del Almacén de consultas. Este comportamiento impide que se ejecuten las consultas antes de que el almacén de consultas se haya recuperado, pero también impide que se pierdan consultas en la colección de datos.
 
 > [!NOTE]
-> A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], este comportamiento se controla mediante el motor, y la marca de seguimiento 7752 no tiene ningún efecto.
+> A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], este comportamiento se controla mediante el motor, y la marca de seguimiento 7752 no tiene ningún efecto.
 
 > [!IMPORTANT]
-> Si va a usar el Almacén de consultas para resultados de la carga de trabajo Just-In-Time en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], prevea la instalación de las mejoras de escalabilidad de rendimiento descritas en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) lo antes posible. Sin estas mejoras, cuando la base de datos está sometida a cargas de trabajo intensas, puede producirse la contención de bloqueo por subproceso y el rendimiento del servidor puede resultar lento. En concreto, puede ver una contención intensa en el bloqueo por subproceso `QUERY_STORE_ASYNC_PERSIST` o `SPL_QUERY_STORE_STATS_COOKIE_CACHE`. Después de aplicar esta mejora, el Almacén de consultas ya no producirá la contención de bloqueo por subproceso.
+> Si va a usar el Almacén de consultas para resultados de la carga de trabajo Just-In-Time en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], prevea la instalación de las mejoras de escalabilidad de rendimiento descritas en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) lo antes posible. Sin estas mejoras, cuando la base de datos está sometida a cargas de trabajo intensas, puede producirse la contención de bloqueo por subproceso y el rendimiento del servidor puede resultar lento. En concreto, puede ver una contención intensa en el bloqueo por subproceso `QUERY_STORE_ASYNC_PERSIST` o `SPL_QUERY_STORE_STATS_COOKIE_CACHE`. Después de aplicar esta mejora, el Almacén de consultas ya no producirá la contención de bloqueo por subproceso.
 
 > [!IMPORTANT]
-> Si va a usar el Almacén de consultas para los resultados de la carga de trabajo Just-In-Time en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] a través de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), prevea la instalación de la mejora de escalabilidad de rendimiento descrita en SP2 CU15 de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], CU22 de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y CU8 de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] lo antes posible. Sin esta mejora, cuando la base de datos se encuentra sometida a cargas de trabajo ad hoc intensas, el Almacén de consultas puede usar una gran cantidad de memoria y el rendimiento del servidor puede ser lento. Después de aplicar esta mejora, el Almacén de consultas impone límites internos a la cantidad de memoria que pueden usar sus distintos componentes y puede cambiar automáticamente el modo de operación a solo lectura hasta que se devuelva suficiente memoria a [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Tenga en cuenta que los límites de memoria interna del Almacén de consultas no están documentados porque están sujetos a cambios.  
+> Si va a usar el Almacén de consultas para los resultados de la carga de trabajo Just-In-Time en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] a través de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), prevea la instalación de la mejora de escalabilidad de rendimiento descrita en SP2 CU15 de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], CU22 de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y CU8 de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] lo antes posible. Sin esta mejora, cuando la base de datos se encuentra sometida a cargas de trabajo ad hoc intensas, el Almacén de consultas puede usar una gran cantidad de memoria y el rendimiento del servidor puede ser lento. Después de aplicar esta mejora, el Almacén de consultas impone límites internos a la cantidad de memoria que pueden usar sus distintos componentes y puede cambiar automáticamente el modo de operación a solo lectura hasta que se devuelva suficiente memoria a [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Tenga en cuenta que los límites de memoria interna del Almacén de consultas no están documentados porque están sujetos a cambios.  
 
 
 ## <a name="using-query-store-in-azure-sql-database-active-geo-replication"></a><a name="geosyncreplicas"></a> Uso de Almacén de consultas en la replicación geográfica activa de Azure SQL Database

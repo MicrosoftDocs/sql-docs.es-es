@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 663f3fa3642a538e7be00a525a33fbc857aeff03
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: f3b2b309d07e14347aa2d89038c897b3db804c9b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194927"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354398"
 ---
 # <a name="xml-task"></a>Tarea XML
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b2197b4a47a01e114b4bac330fb170e5489ff614
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: d246e590cd54aca1b3a6ac911ec12d2835c8d91f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196001"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339232"
 ---
 # <a name="wmi-data-reader-task"></a>Tarea Lector de datos WMI
 

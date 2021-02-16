@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 30708e4bfb6dc21aa3f110a74754600aa3492b0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06ecff11e6fc32ad59e6457ec2404292a9c22955
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88348421"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353727"
 ---
 # <a name="derive-column-values-with-the-derived-column-transformation"></a>Derivación de valores de columna mediante la transformación Columna derivada
 
@@ -53,7 +53,7 @@ ms.locfileid: "88348421"
   
      Si se decide usar una columna nueva, el cuadro de diálogo **Editor de transformación Columna derivada** evalúa la expresión y asigna un tipo de datos a la columna, en función del tipo de datos, la longitud, precisión, escala y página de códigos.  
   
-8.  Al utilizar una nueva columna, seleccione un tipo de datos en la lista **Tipo de datos** . Según el tipo de datos seleccionado, actualice opcionalmente los valores en las columnas **Longitud**, **Precisión**, **Escala**y **Página de códigos** . Los metadatos de las columnas existentes no pueden cambiarse.  
+8.  Al utilizar una nueva columna, seleccione un tipo de datos en la lista **Tipo de datos** . Según el tipo de datos seleccionado, actualice opcionalmente los valores en las columnas **Longitud**, **Precisión**, **Escala** y **Página de códigos** . Los metadatos de las columnas existentes no pueden cambiarse.  
   
 9. Opcionalmente, modifique los valores de la columna **Nombre de columna derivada** .  
   

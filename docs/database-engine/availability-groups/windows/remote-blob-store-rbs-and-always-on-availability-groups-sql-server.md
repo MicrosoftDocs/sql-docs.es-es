@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 61316ca08eac7d24b1be4ef50c913aeba3358775
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: b0acb1b1efd5913eeb62acc5c3b82b40fb03ad88
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642531"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351043"
 ---
 # <a name="use-remote-blob-store-rbs-with-always-on-availability-groups"></a>Uso de Almacén remoto de blobs (RBS) con grupos de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

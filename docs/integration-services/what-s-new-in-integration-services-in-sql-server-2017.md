@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3275ee19e271c6d9d98e7ad432ad3a772283b583
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: b955aa61a4e196fc4c419a9b34e186590006df42
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "92193732"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345671"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novedades de Integration Services en SQL Server 2017
 
 [!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-En este tema, se describen las características que se han agregado o actualizado en [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
+En este tema, se describen las características que se han agregado o actualizado en [!INCLUDE[ssSQLv14_md](../includes/sssql17-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
 
 > [!NOTE]
 > SQL Server 2017 también incluye las características de SQL Server 2016 y las características agregadas en las actualizaciones de SQL Server 2016. Para obtener información sobre las nuevas características de SSIS en SQL Server 2016, consulte [Novedades de Integration Services en SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).

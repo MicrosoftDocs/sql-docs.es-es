@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - WAIT_AT_LOW_PRIORITY
 - ABORT_AFTER_WAIT
@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d604298ca4956ef699ab763255cb2534be30679
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 14c663264dc05f403f12e9cad390cd0ef52f17c1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170637"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100348503"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -565,7 +565,7 @@ SPARSE
 Indica que la columna es una columna dispersa. El almacenamiento de columnas dispersas está optimizado para los valores NULL. No se puede establecer las columnas dispersas como NOT NULL. Al convertir una columna de dispersa a no dispersa o viceversa, se bloquea la tabla durante la ejecución del comando. Es posible que tenga que usar la cláusula REBUILD para recuperar espacio. Para conocer otras restricciones y leer más información sobre columnas dispersas, vea [Usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md).
 
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica una máscara dinámica de datos. *mask_function* es el nombre de la función de máscara con los parámetros adecuados. Hay tres funciones disponibles:
 
@@ -577,7 +577,7 @@ Especifica una máscara dinámica de datos. *mask_function* es el nombre de la f
 Para quitar una máscara, utilice `DROP MASKED`. Para conocer más parámetros de función, vea [Enmascaramiento de datos dinámicos](../../relational-databases/security/dynamic-data-masking.md).
 
 WITH ( ONLINE = ON | OFF) \<as applies to altering a column>  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Permite realizar numerosas acciones de alteración de columna mientras la tabla sigue estando disponible. El valor predeterminado es OFF. La alteración de columna se puede realizar en línea para los cambios de columna relacionados con el tipo de datos, la precisión o la longitud de la columna, la nulabilidad, la escasez y la intercalación.
 
@@ -668,7 +668,7 @@ Especifica que *constraint_name* o *column_name* se quita de la tabla. Pueden es
 > Quitar una columna no recupera el espacio en disco de la columna. Tendrá que recuperar el espacio en disco de una columna quitada cuando el tamaño de fila de una tabla esté a punto de superar su límite o lo haya hecho ya. Recupere el espacio mediante la creación de un índice agrupado en la tabla o regenerando un índice agrupado existente mediante la utilización de [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). Para obtener más información acerca del impacto de quitar los tipos de datos LOB, vea esta [entrada del blog de CSS](/archive/blogs/psssql/how-it-works-gotcha-varcharmax-caused-my-queries-to-be-slower).
 
 PERIOD FOR SYSTEM_TIME  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Quita la especificación de las columnas que va a utilizar el sistema para el control de versiones del sistema.
 
@@ -792,7 +792,7 @@ Si especifica *partition_scheme_name*, se aplican las reglas para [CREATE TABLE]
 **"** NULL **"** especifica que se quitarán todas las referencias a los grupos de archivos FILESTREAM para la tabla. Se deben quitar primero todas las columnas FILESTREAM. Use SET FILESTREAM_ON = "**NULL**" para eliminar todos los datos FILESTREAM que estén asociados a una tabla.
 
 SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ] ) ] } **)**  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Habilita o deshabilita el control de versiones del sistema de una tabla. Para habilitar el control de versiones del sistema de una tabla, el sistema comprueba que se cumplan los requisitos de restricción del tipo de datos, de la restricción de nulabilidad y de la clave principal para el control de versiones del sistema. Si no utiliza el argumento HISTORY_TABLE, el sistema genera una nueva tabla de historial que coincide con el esquema de la tabla actual, crea un vínculo entre las dos tablas y permite que el sistema registre el historial de cada registro de la tabla actual en la tabla de historial. El nombre de esta tabla de historial será `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Si usa el argumento HISTORY_TABLE para crear un vínculo a un historial existente y usarlo, el sistema crea un vínculo entre la tabla actual y la tabla especificada. Al crear un vínculo a una tabla de historial existente, puede realizar una comprobación de coherencia de datos. Esta comprobación de coherencia de datos garantiza que los registros existentes no se superponen. La comprobación de coherencia de datos se ejecuta de manera predeterminada. Para obtener más información, consulte [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
@@ -1000,7 +1000,7 @@ Elimina todas las transacciones de usuario que están bloqueando la operación D
 Requiere el permiso **ALTER ANY CONNECTION**.
 
 IF EXISTS  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Quita condicionalmente la columna o restricción solo si ya existe.
 
@@ -1092,7 +1092,7 @@ Para ejecutar la instrucción DDL a fin de regenerar el índice en línea, todas
 
 ## <a name="compatibility-support"></a>Soporte de compatibilidad
 
-La instrucción ALTER TABLE solo permite nombres de tabla de dos partes (esquema.objeto). En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la especificación de un nombre de tabla con uno de los siguientes formatos produce el error 117 en tiempo de compilación.
+La instrucción ALTER TABLE solo permite nombres de tabla de dos partes (esquema.objeto). En [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], la especificación de un nombre de tabla con uno de los siguientes formatos produce el error 117 en tiempo de compilación.
 
 - servidor.baseDeDatos.esquema.tabla
 - .baseDeDatos.esquema.tabla
@@ -1737,7 +1737,7 @@ REBUILD WITH
 
 En el ejemplo siguiente se muestra cómo ejecutar una operación de alteración de columna con la opción ONLINE.
 
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 CREATE TABLE dbo.doc_exy (column_a INT) ;
@@ -1756,7 +1756,7 @@ GO
 
 Los cuatro ejemplos siguientes le ayudarán a familiarizarse con la sintaxis para usar el control de versiones del sistema. Para obtener más ayuda, consulte [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md).
 
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 #### <a name="a-add-system-versioning-to-existing-tables"></a>A. Agregar el control de versiones del sistema a las tablas existentes
 

@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15
-ms.openlocfilehash: 8d116fbf036540337bef9d0b21bb66f79017bfd2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5e2dd566b0c5842636619c8331bfc88378dc4f84
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464506"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350865"
 ---
 # <a name="scalar-udf-inlining"></a>Inserción de UDF escalares
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-En este artículo se presenta Inserción de UDF escalar, una característica del conjunto de características de [procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md). Esta característica mejora el rendimiento de las consultas que llaman a UDF escalares en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
+En este artículo se presenta Inserción de UDF escalar, una característica del conjunto de características de [procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md). Esta característica mejora el rendimiento de las consultas que llaman a UDF escalares en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sssql19](../../includes/sssql19-md.md)]).
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Funciones escalares definidas por el usuario de T-SQL
 Las funciones definidas por el usuario (UDF) que se implementan en [!INCLUDE[tsql](../../includes/tsql-md.md)] y que devuelven un único valor de datos se conocen como Funciones escalares definidas por el usuario de T-SQL. Las UDF de T-SQL son una forma elegante de lograr la reutilización y modularidad del código en todas las consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Algunos cálculos (como las reglas de negocios complejas) son más fáciles de expresar en forma de UDF imperativa. Las UDF ayudan a crear una lógica compleja, sin necesidad de tener experiencia en escribir consultas de SQL complejas. Para obtener más información sobre las UDF, vea [Creación de funciones definidas por el usuario (motor de base de datos)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).
@@ -174,13 +174,13 @@ Según la complejidad de la lógica de la UDF, es posible que el plan de consult
 
 <sup>3</sup> Las funciones intrínsecas cuyos resultados dependen de la hora actual del sistema son dependientes de la hora. Una función intrínseca que puede actualizar algún estado global interno es un ejemplo de una función con efectos secundarios. Estas funciones devuelven resultados diferentes cada vez que se llaman, según el estado interno.
 
-<sup>4</sup> Restricción agregada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2
+<sup>4</sup> Restricción agregada en [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU2
 
-<sup>5</sup> Restricción agregada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4
+<sup>5</sup> Restricción agregada en [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU4
 
-<sup>6</sup> Restricción agregada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5
+<sup>6</sup> Restricción agregada en [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU5
 
-<sup>7</sup> Restricción agregada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6
+<sup>7</sup> Restricción agregada en [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU6
 
 > [!NOTE]
 > Para obtener información sobre las correcciones más recientes de la inserción de UDF escalares de T-SQL y los cambios en escenarios de elegibilidad de inserción, vea el artículo de Knowledge Base: [FIX: Problemas de inserción de UDF escalares en SQL Server 2019](https://support.microsoft.com/help/4538581).
@@ -283,7 +283,7 @@ Como se describe en este artículo, la inserción de UDF escalar transforma una 
 1. Es posible que las sugerencias de combinación de nivel de consulta ya no sean válidas, ya que la inserción puede introducir nuevas combinaciones. En su lugar será necesario usar sugerencias de combinación locales.
 1. Las vistas que hacen referencia a UDF escalares insertadas no se pueden indexar. Si tiene que crear un índice en esas vistas, deshabilite la inserción para las UDF a las que se hace referencia.
 1. Puede haber algunas diferencias en el comportamiento del [enmascaramiento dinámico de datos](../security/dynamic-data-masking.md) con la inserción de UDF. En determinadas situaciones (en función de la lógica de la UDF), es posible que la inserción sea más conservadora que el enmascaramiento de las columnas de salida. En escenarios donde las columnas a las que se hace referencia en una UDF no son columnas de salida, no se enmascararán. 
-1. Si una UDF hace referencia a funciones integradas como `SCOPE_IDENTITY()`, `@@ROWCOUNT` o `@@ERROR`, con la inserción se cambiará el valor devuelto por la función integrada. Este cambio de comportamiento se debe a que la inserción modifica el ámbito de las instrucciones dentro de la UDF. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2, la inserción se bloquea si la UDF hace referencia a determinadas funciones intrínsecas (por ejemplo `@@ROWCOUNT`).
+1. Si una UDF hace referencia a funciones integradas como `SCOPE_IDENTITY()`, `@@ROWCOUNT` o `@@ERROR`, con la inserción se cambiará el valor devuelto por la función integrada. Este cambio de comportamiento se debe a que la inserción modifica el ámbito de las instrucciones dentro de la UDF. A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU2, la inserción se bloquea si la UDF hace referencia a determinadas funciones intrínsecas (por ejemplo `@@ROWCOUNT`).
 
 ## <a name="see-also"></a>Consulte también
 [Creación de funciones definidas por el usuario (motor de base de datos)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   

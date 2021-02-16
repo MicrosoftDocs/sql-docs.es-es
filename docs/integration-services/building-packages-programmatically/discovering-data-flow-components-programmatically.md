@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a29345489624c38d4c8e00732bce2977eb6cca7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f575dda54bd0c6ce21debd4f283f77a3eb1fe569
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352411"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100355041"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>Detectar componentes de flujo de datos mediante programación
 
@@ -90,7 +90,7 @@ Module Module1
 End Module  
 ```
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar componentes de flujo de datos mediante programación](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md)  
   
   

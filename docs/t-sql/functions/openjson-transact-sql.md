@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - OPENJSON
 - OPENJSON_TSQL
@@ -18,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: chadam
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
-ms.openlocfilehash: 1c7b948b1f883d1de6c6bb6556aee25c0e859695
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: b29315567520dff0d4700aeb476279bf6cfe24b7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98085995"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100340641"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -109,7 +109,7 @@ SELECT * FROM OpenJson(@json);
 
 Es una expresión de ruta de acceso JSON opcional que hace referencia a un objeto o una matriz dentro de *expresiónJSON*. **OPENJSON** busca en el texto de JSON en la posición especificada y analiza solo el fragmento al que se hace referencia. Para más información, vea [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).
 
-En [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y en [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], puede proporcionar una variable como el valor de *path*.
+En [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] y en [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], puede proporcionar una variable como el valor de *path*.
   
 En el ejemplo siguiente se devuelve un objeto anidado especificando la *path*:  
 

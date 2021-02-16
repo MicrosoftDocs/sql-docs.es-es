@@ -11,12 +11,12 @@ ms.author: haoqian
 ms.reviewer: maghan
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 8de8aeb3b41c8ae44020c0cb0d4cca656ee96418
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 13f9a386b6ab60280edf2d8b494721dd233b042a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522947"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347412"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ejecutar paquetes en la escalabilidad horizontal de Integration Services (SSIS)
 
@@ -58,7 +58,7 @@ Tras implementar los paquetes en el servidor de Integration Services, puede ejec
 
 4. Ejecute los paquetes y vea los informes.
 
-    Haga clic en **Aceptar** para iniciar las ejecuciones de paquetes. Para ver el informe de ejecución de un paquete, haga clic con el botón derecho en el paquete en el Explorador de objetos, haga clic en **Informes**, en **Todas las ejecuciones**y busque la ejecución.
+    Haga clic en **Aceptar** para iniciar las ejecuciones de paquetes. Para ver el informe de ejecución de un paquete, haga clic con el botón derecho en el paquete en el Explorador de objetos, haga clic en **Informes**, en **Todas las ejecuciones** y busque la ejecución.
     
 ## <a name="run-packages-with-stored-procedures"></a><a name="stored_proc"></a> Ejecución de paquetes con procedimientos almacenados
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af2caf850d3f7facb61a7484c5af44e4ba785fa3
-ms.sourcegitcommit: 5f9d682924624fe1e1a091995cd3a673605a4e31
+ms.openlocfilehash: 67f6fe5f8c1577142ac2356a070a954f94b856f1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98860918"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075019"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>Diagnóstico y resolución de la contención de bloqueos temporales en SQL Server
 
@@ -89,16 +89,16 @@ Use el objeto **SQL Server:Latches** y los contadores asociados del Monitor de 
 
 SQL Server realiza un seguimiento de la información de espera acumulada, a la que se puede acceder mediante la vista de administración dinámica (DMV) *sys.dm_os_wait_stats*. SQL Server emplea tres tipos de tiempos de espera de bloqueo temporal, tal como se define en el elemento "wait_type" correspondiente de la DMV *sys.dm_os_wait_stats*:
 
-* **Bloqueo temporal de búfer (BUF)** : se usa para garantizar la coherencia de las páginas de datos y de índice de los objetos de usuario. También se usa para proteger el acceso a las páginas de datos que SQL Server usa para los objetos del sistema. Por ejemplo, las páginas que administran asignaciones están protegidas mediante bloqueos temporales de búfer. Estas incluyen páginas de Espacio disponible en páginas (PFS), Mapa de asignación global (GAM), Mapa de asignación global compartido (SGAM) y Mapa de asignación de índices (IAM). Los bloqueos temporales de búfer se notifican en *sys.dm_os_wait_stats* con un elemento *wait_type* de **PAGELATCH\_\** _.
+* **Bloqueo temporal de búfer (BUF)** : se usa para garantizar la coherencia de las páginas de datos y de índice de los objetos de usuario. También se usa para proteger el acceso a las páginas de datos que SQL Server usa para los objetos del sistema. Por ejemplo, las páginas que administran asignaciones están protegidas mediante bloqueos temporales de búfer. Estas incluyen páginas de Espacio disponible en páginas (PFS), Mapa de asignación global (GAM), Mapa de asignación global compartido (SGAM) y Mapa de asignación de índices (IAM). Los bloqueos temporales de búfer se notifican en *sys.dm_os_wait_stats* con un elemento *wait_type* **PAGELATCH\_\*** .
 
-_ **Bloqueo temporal no de búfer (no BUF)** : se usa para garantizar la coherencia de las estructuras en memoria que no son páginas del grupo de búferes. Cualquier espera de los bloqueos temporales no de búfer se notifica como *wait_type* de **LATCH\_\** _.
+* **Bloqueo temporal no de búfer (no BUF)** : se usa para garantizar la coherencia de las estructuras en memoria que no son páginas del grupo de búferes. Cualquier espera de los bloqueos temporales no de búfer se notifica como *wait_type* **LATCH\_\*** .
 
-_ **Bloqueo temporal de E/S**: subconjunto de bloqueos temporales de búfer que garantizan la coherencia de las mismas estructuras protegidas por los bloqueos temporales de búfer cuando estas estructuras necesitan cargarse en el grupo de búferes con una operación de E/S. Los bloqueos temporales de E/S evitan que otro subproceso cargue la misma página en el grupo de búferes con un bloqueo temporal no compatible. Se asocian con un elemento *wait_type* de **PAGEIOLATCH\_\** _.
+* **Bloqueo temporal de E/S**: subconjunto de bloqueos temporales de búfer que garantizan la coherencia de las mismas estructuras protegidas por los bloqueos temporales de búfer cuando estas estructuras necesitan cargarse en el grupo de búferes con una operación de E/S. Los bloqueos temporales de E/S evitan que otro subproceso cargue la misma página en el grupo de búferes con un bloqueo temporal no compatible. Se asocian con un elemento *wait_type* **PAGEIOLATCH\_\*** .
 
    > [!NOTE]
    > Si ve muchas esperas PAGEIOLATCH, eso significa que SQL Server está esperando al subsistema de E/S. Aunque es de esperar una cierta cantidad de esperas PAGEIOLATCH y es el comportamiento normal, si los tiempos de espera de PAGEIOLATCH medios suelen ser superiores a 10 milisegundos (ms), debe investigar por qué el subsistema de E/S está sometido a presión.
 
-Al examinar la DMV sys.dm_os_wait_stats*, si encuentra bloqueos temporales no de búfer, se debe examinar *sys.dm_os_latch_waits* para obtener un desglose detallado de la información de espera acumulada de los bloqueos temporales no de búfer. Todos los tiempos de espera de bloqueo temporal de búfer se clasifican en la clase de bloqueo temporal BUFFER; el resto se usa para clasificar los bloqueos temporales no de búfer.
+Al examinar la DMV *sys.dm_os_wait_stats*, si encuentra bloqueos temporales no de búfer, se debe examinar *sys.dm_os_latch_waits* para obtener un desglose detallado de la información de espera acumulada de los bloqueos temporales no de búfer. Todos los tiempos de espera de bloqueo temporal de búfer se clasifican en la clase de bloqueo temporal BUFFER; el resto se usa para clasificar los bloqueos temporales no de búfer.
 
 ## <a name="symptoms-and-causes-of-sql-server-latch-contention"></a>Síntomas y causas de la contención de bloqueos temporales de SQL Server
 

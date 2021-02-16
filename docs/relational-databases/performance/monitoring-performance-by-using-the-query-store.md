@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: e61f723ddbc3010cc705c076675b731482fdee6b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c8a836f1a8daf2b4b6a9d5b76156191799013484
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171847"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341717"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisión del rendimiento mediante el almacén de consultas
 
@@ -31,7 +31,7 @@ La característica del Almacén de consultas de [!INCLUDE[ssNoVersion](../../inc
 Para más información sobre el funcionamiento del Almacén de consultas de Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea [Funcionamiento del almacén de consultas de Base de datos SQL de Azure](best-practice-with-the-query-store.md#Insight).
 
 > [!IMPORTANT]
-> Si usa el Almacén de consultas para conclusiones de la carga de trabajo just-in-time en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], tenga previsto instalar las correcciones de escalabilidad de rendimiento en [KB 4340759](https://support.microsoft.com/help/4340759) lo antes posible.
+> Si usa el Almacén de consultas para conclusiones de la carga de trabajo just-in-time en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], tenga previsto instalar las correcciones de escalabilidad de rendimiento en [KB 4340759](https://support.microsoft.com/help/4340759) lo antes posible.
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Habilitar el Almacén de consultas
 
@@ -645,7 +645,7 @@ Al usar **sp_query_store_force_plan** solo puede forzar los planes que se grabar
 
 #### <a name="a-namectp23-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Plan para forzar la compatibilidad con cursores estáticos y de avance rápido
 
-A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y Azure SQL Database (todos lo modelos de implementación), el Almacén de consultas admite la capacidad de forzar planes de ejecución de consulta para los cursores de API y [!INCLUDE[tsql](../../includes/tsql-md.md)] estáticos y de avance rápido. Se admite el forzado mediante `sp_query_store_force_plan` o a través de los informes del Almacén de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+A partir de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] y Azure SQL Database (todos lo modelos de implementación), el Almacén de consultas admite la capacidad de forzar planes de ejecución de consulta para los cursores de API y [!INCLUDE[tsql](../../includes/tsql-md.md)] estáticos y de avance rápido. Se admite el forzado mediante `sp_query_store_force_plan` o a través de los informes del Almacén de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 ### <a name="remove-plan-forcing-for-a-query"></a>Quitar el forzado de un plan para una consulta
 

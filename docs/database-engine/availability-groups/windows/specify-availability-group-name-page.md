@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f5171195bb3d275eb170330565cd9f90531dc0c6
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: 82671e390d67faf6a7059a0d4c267dd744b5a936
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783411"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100352568"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Página Especificar opciones de grupo de disponibilidad para un grupo de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "98783411"
 
    * **EXTERNAL**
       
-      Use esta opción cuando el grupo de disponibilidad se hospede en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que esté administrada por una tecnología de clúster externo para alta disponibilidad y recuperación ante desastres (por ejemplo, Pacemaker en Linux). Válido para [!INCLUDE[sssqlv14](../../../includes/sssqlv14-md.md)] y versiones posteriores.
+      Use esta opción cuando el grupo de disponibilidad se hospede en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que esté administrada por una tecnología de clúster externo para alta disponibilidad y recuperación ante desastres (por ejemplo, Pacemaker en Linux). Válido para [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] y versiones posteriores.
 
    * **NONE**
       
-      Use esta opción cuando el grupo de disponibilidad se hospede en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que no esté administrada por una tecnología de clúster para el equilibrio de carga y el escalado de lectura. Válido para [!INCLUDE[sssqlv14](../../../includes/sssqlv14-md.md)] y versiones posteriores. 
+      Use esta opción cuando el grupo de disponibilidad se hospede en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que no esté administrada por una tecnología de clúster para el equilibrio de carga y el escalado de lectura. Válido para [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] y versiones posteriores. 
  
    **Detección del estado del nivel de la base de datos** Active esta casilla para habilitar la opción de detección del estado del nivel de la base de datos (DB_FAILOVER) del grupo de disponibilidad. La detección del estado de la base de datos advierte cuando una base de datos deja de estar en estado en línea, cuando algo va mal, y activará la conmutación automática por error del grupo de disponibilidad. Vea [Opción de conmutación por error de detección del estado del nivel de la base de datos de un grupo de disponibilidad](sql-server-always-on-database-health-detection-failover-option.md).
 

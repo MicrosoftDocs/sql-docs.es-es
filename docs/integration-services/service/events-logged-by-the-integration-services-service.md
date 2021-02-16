@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a9897a33c986a78061d18b06ba76db7685e5fb3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45612ea0bfdbda2b27e6cac8b4deb1e302eb9298
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487698"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346557"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Eventos registrados por el servicio Integration Services
 
@@ -82,7 +82,7 @@ ms.locfileid: "88487698"
   
 ### <a name="to-view-service-events-for-integration-services-in-windows-event-viewer"></a>Para ver los registros de eventos para Integration Services en el Visor de eventos de Windows  
   
-1.  En el **Panel de control**, si utiliza la Vista clásica, haga clic en **Herramientas administrativas**o bien, si utiliza la Vista por categorías, haga clic en **Rendimiento y mantenimiento** y, a continuación, en **Herramientas administrativas**.  
+1.  En el **Panel de control**, si utiliza la Vista clásica, haga clic en **Herramientas administrativas** o bien, si utiliza la Vista por categorías, haga clic en **Rendimiento y mantenimiento** y, a continuación, en **Herramientas administrativas**.  
   
 2.  Haga clic en **Visor de eventos**.  
   
