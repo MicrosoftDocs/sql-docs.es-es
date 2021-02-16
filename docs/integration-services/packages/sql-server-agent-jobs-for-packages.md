@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 04007ee3165838669fd1b0faefdcb20d09940af7
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 353acdd28f3611bcc387bd4122ca377a2d8d0ca5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192477"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346862"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabajos del Agente SQL Server para paquetes
 
@@ -97,7 +97,7 @@ ms.locfileid: "92192477"
   
     4.  Haga clic con el botón secundario en SSISDB, apunte a Informes y a Informes estándar, y haga clic en Todas las ejecuciones.  
   
-    5.  En el informe **Todas las ejecuciones** , busque el identificador de ejecución en la columna **Id.** Haga clic en **Información general**, en **Todos los mensajes**o en **Rendimiento de la ejecución** para ver información sobre la ejecución de este paquete.  
+    5.  En el informe **Todas las ejecuciones** , busque el identificador de ejecución en la columna **Id.** Haga clic en **Información general**, en **Todos los mensajes** o en **Rendimiento de la ejecución** para ver información sobre la ejecución de este paquete.  
   
     Para obtener más información acerca de los informes Información general, Todos los mensajes y Rendimiento de la ejecución, vea [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
 
@@ -118,7 +118,7 @@ ms.locfileid: "92192477"
   
 4.  Para hacer que el trabajo esté disponible para programación, seleccione **Habilitado**.  
   
-5.  Para crear un paso de trabajo para el paquete que desea programar, haga clic en **Pasos**y, a continuación, haga clic en **Nuevo**.  
+5.  Para crear un paso de trabajo para el paquete que desea programar, haga clic en **Pasos** y, a continuación, haga clic en **Nuevo**.  
   
 6.  Seleccione **Paquete de Integración Services** en el tipo de paso de trabajo.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "92192477"
     |**Logging**|Asocie un proveedor de registro con la ejecución del paquete.<br /><br /> **Proveedor de registro SSIS para archivos de texto**<br /> Escribe entradas de registro en archivos de texto ASCII<br /><br /> **Proveedor de registro SSIS para SQL Server**<br /> Escribe entradas de registro en la tabla sysssislog de la base de datos MSDB.<br /><br /> **Proveedor de registro SSIS para SQL Server Profiler**<br /> Escribe seguimientos que puede ver mediante SQL Server Profiler.<br /><br /> **Proveedor de registro SSIS para el Registro de eventos de Windows**<br /> Escribe entradas de registro en el registro de la aplicación del registro de eventos de Windows.<br /><br /> **Proveedor de registro SSIS para archivos XML**<br /> Escribe archivos de registro en un archivo XML.<br /><br /> Para el archivo de texto, el archivo XML y los proveedores de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler, está seleccionando los administradores de conexiones de archivos incluidos en el paquete. Para el proveedor de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , está seleccionando un administrador de conexiones OLE DB incluidos en el paquete.<br /><br /> Esta opción corresponde a la opción **/Logger** para **dtexec**.|  
     |**Valores establecidos**|Invalide una configuración de propiedad del paquete. En el cuadro **Propiedades** , escriba valores en las columnas **Ruta de acceso de la propiedad** y **Valor** . Después de especificar los valores para una propiedad, aparece una fila vacía en el cuadro **Propiedades** para que pueda especificar valores para otra propiedad.<br /><br /> Para quitar una propiedad del cuadro Propiedades, haga clic en la fila y, a continuación, haga clic en **Quitar**.<br /><br /> Puede averiguar la ruta de acceso de la propiedad realizando una de las siguientes acciones.<br /><br /> \- Copie la ruta de acceso de propiedad del archivo de configuración XML (\*.dtsconfig). La ruta de acceso aparece en la sección Configuration, como un valor del atributo Path. A continuación se muestra un ejemplo de la ruta de acceso para la propiedad MaximumErrorCount: \Package.Properties[MaximumErrorCount]<br /><br /> \- Ejecute el **Asistente para la configuración de paquetes** y copie las rutas de acceso de propiedad de la página final **Finalización del asistente** . Después puede cancelar el asistente.|  
     |**Comprobación**|**Ejecutar solo los paquetes firmados**<br /> Indica si se comprueba la firma del paquete. Si el paquete no está firmado o la firma no es válida, se produce un error en el paquete. Esta opción corresponde a la opción **/VerifySigned** para **dtexec**.<br /><br /> **Comprobar la compilación del paquete**<br /> Indica si el número de compilación del paquete se comprueba con el número de compilación especificado en el cuadro **Compilación** situado junto a esta opción. Si se produce una discrepancia, el paquete no se ejecuta. Esta opción corresponde a la opción **/VerifyBuild** para **dtexec**.<br /><br /> **Comprobar el Id. del paquete**<br /> Indica si se comprueba el GUID del paquete comparándolo con el identificador de paquete especificado en el cuadro **Id. del paquete** situado junto a esta opción. Esta opción corresponde a la opción **/VerifyPackageID** para **dtexec**.<br /><br /> **Comprobar el Id. de versión**<br /> Indica si se comprueba el GUID de versión del paquete comparándolo con el identificador de versión especificado en el cuadro **Id. de versión** situado junto a esta opción. Esta opción corresponde a la opción **/VerifyVersionID** para **dtexec**.|  
-    |**Línea de comandos**|Modifique las opciones de línea de comandos para dtexec. Para obtener más información acerca de las opciones, vea [dtexec Utility](../../integration-services/packages/dtexec-utility.md).<br /><br /> **Restaurar las opciones originales**<br /> Use las opciones de la línea de comandos que ha establecido en las pestañas **Paquete**, **Configuraciones**, **Archivos de comandos**, **Orígenes de datos**, **Opciones de ejecución**, **Registro**, **Valores establecidos**y **Comprobación** del cuadro de diálogo **Propiedades del paso de trabajo** .<br /><br /> **Editar el comando manualmente**<br /> Escriba opciones de la línea de comandos adicionales en el cuadro **Línea de comandos** .<br /><br /> Antes de hacer clic en **Aceptar** para guardar los cambios en el paso de trabajo, puede quitar todas las opciones adicionales que ha escrito en el cuadro **Línea de comandos** si hace clic en **Restaurar las opciones originales**.<br /><br /> **\*\* Sugerencia \*\*** Puede copiar la línea de comandos en una ventana de símbolo del sistema, agregar `dtexec`y ejecutar el paquete desde la línea de comandos. Esta es una forma sencilla de generar el texto de la línea de comandos.|  
+    |**Línea de comandos**|Modifique las opciones de línea de comandos para dtexec. Para obtener más información acerca de las opciones, vea [dtexec Utility](../../integration-services/packages/dtexec-utility.md).<br /><br /> **Restaurar las opciones originales**<br /> Use las opciones de la línea de comandos que ha establecido en las pestañas **Paquete**, **Configuraciones**, **Archivos de comandos**, **Orígenes de datos**, **Opciones de ejecución**, **Registro**, **Valores establecidos** y **Comprobación** del cuadro de diálogo **Propiedades del paso de trabajo** .<br /><br /> **Editar el comando manualmente**<br /> Escriba opciones de la línea de comandos adicionales en el cuadro **Línea de comandos** .<br /><br /> Antes de hacer clic en **Aceptar** para guardar los cambios en el paso de trabajo, puede quitar todas las opciones adicionales que ha escrito en el cuadro **Línea de comandos** si hace clic en **Restaurar las opciones originales**.<br /><br /> **\*\* Sugerencia \*\*** Puede copiar la línea de comandos en una ventana de símbolo del sistema, agregar `dtexec`y ejecutar el paquete desde la línea de comandos. Esta es una forma sencilla de generar el texto de la línea de comandos.|  
   
 9. Haga clic en **Aceptar** para guardar la configuración y cierre el cuadro de diálogo **Nuevo paso de trabajo** .  
   

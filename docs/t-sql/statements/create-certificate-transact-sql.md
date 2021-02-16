@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CERTIFICATE
 - CREATE_CERTIFICATE_TSQL
@@ -28,12 +28,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 238fcde63bf0af459ab741f54a411fefb317bfe9
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 4774ca76959e70514d93c31b9a8ccb81650dc97d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170357"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344051"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-pdw](../../includes/applies-to-version/sql-asdb-pdw.md)]
@@ -168,7 +168,7 @@ CREATE CERTIFICATE certificate_name
 ## <a name="remarks"></a>Comentarios  
  Un certificado es un elemento protegible de nivel de base de datos que sigue el estándar X.509 y admite los campos V1 de X.509. `CREATE CERTIFICATE` puede cargar un certificado desde un archivo, una constante binaria o un ensamblado. Esta instrucción también puede generar un par de claves y crear un certificado con firma personal.  
   
- La clave privada debe ser \<= 2500 bytes en formato cifrado. Las claves privadas generadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen una longitud de 1024 bits hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y tienen 2048 bits a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Las claves privadas importadas de un origen externo presentan una longitud mínima de 384 bits y una máxima de 4.096 bits. La longitud de una clave privada importada debe ser un entero múltiplo de 64 bits. Los certificados que se usan para TDE tienen un límite de tamaño de clave privada de 3456 bits.  
+ La clave privada debe ser \<= 2500 bytes en formato cifrado. Las claves privadas generadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen una longitud de 1024 bits hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y tienen 2048 bits a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Las claves privadas importadas de un origen externo presentan una longitud mínima de 384 bits y una máxima de 4.096 bits. La longitud de una clave privada importada debe ser un entero múltiplo de 64 bits. Los certificados que se usan para TDE tienen un límite de tamaño de clave privada de 3456 bits.  
   
  Se almacena el número de serie completo del certificado, pero solo se muestran los 16 primeros bytes en la vista de catálogo sys.certificates.  
   
@@ -187,7 +187,7 @@ CREATE CERTIFICATE certificate_name
   
  Se puede crear una descripción binaria de un certificado mediante las funciones [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) y [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md). Para ver un ejemplo donde se usa **CERTPRIVATEKEY** y **CERTENCODED** para copiar un certificado en otra base de datos, vea el ejemplo B del artículo [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).  
 
-Los algoritmos MD2, MD4, MD5, SHA y SHA1 están en desuso en [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Hasta [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], un certificado autofirmado se creaba mediante SHA1. A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], un certificado autofirmado se crea mediante SHA2_256.
+Los algoritmos MD2, MD4, MD5, SHA y SHA1 están en desuso en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Hasta [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], un certificado autofirmado se creaba mediante SHA1. A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], un certificado autofirmado se crea mediante SHA2_256.
 
 ## <a name="permissions"></a>Permisos  
  Debe tener el permiso `CREATE CERTIFICATE` para la base de datos. Solo los inicios de sesión de Windows, los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los roles de aplicación pueden poseer certificados. Los grupos y roles no pueden poseer los certificados.  

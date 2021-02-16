@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fe89a97c1fb13d9446b0fe07f04c7399b42a439e
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 6d26daafb62777091cb962332d47d8c00620e4d4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489775"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100343206"
 ---
 # <a name="oracle-source"></a>Origen de Oracle
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ffe53e3f7819a2ca9bdd8adc9cb3db66aad57371
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ebcf99ad025477a562f2a050eb1c2c3f3f63e12f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627589"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344398"
 ---
 # <a name="choose-an-authentication-mode"></a>Elegir un modo de autenticación
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,9 +71,9 @@ ms.locfileid: "85627589"
   
 1.  En el menú **Inicio** , haga clic en **Ejecutar**.  
   
-2.  En el cuadro de diálogo **Ejecutar** , escriba **secpol.msc**y haga clic en **Aceptar**.  
+2.  En el cuadro de diálogo **Ejecutar** , escriba **secpol.msc** y haga clic en **Aceptar**.  
   
-3.  En la aplicación **Configuración de seguridad local** , expanda **Configuración de seguridad**, expanda **Directivas de cuenta**y, a continuación, haga clic en **Directiva de contraseñas**.  
+3.  En la aplicación **Configuración de seguridad local** , expanda **Configuración de seguridad**, expanda **Directivas de cuenta** y, a continuación, haga clic en **Directiva de contraseñas**.  
 
      Las directivas de contraseñas se describen en el panel de resultados.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 369c52eeb66a3d8ca5042f54d71ea9001d30b194
-ms.sourcegitcommit: af64e2b8d498af26b973e86db5c00f8d72991295
+ms.openlocfilehash: fe088ed697e4150b2272f3a390b4002714ab4dc4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98193042"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338276"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de la versión de SQL Server 2017 en Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "98193042"
 Las siguientes notas de la versión son válidas para [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] ejecutándose en Linux. Este artículo se divide en secciones para cada versión. La versión de disponibilidad general tiene compatibilidad detallada y una lista de problemas conocidos. Cada actualización acumulativa o versión de distribución general (GDR) tiene un vínculo a un artículo de soporte técnico en el que se describen los cambios en la actualización acumulativa, así como vínculos a las descargas de paquetes para Linux.
 
 > [!TIP]
-> Estas notas de la versión son específicas para versiones de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Para obtener más información sobre la nueva versión de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], vea [Notas de la versión para la versión preliminar de SQL Server 2019 en Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true).
+> Estas notas de la versión son específicas para versiones de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Para obtener más información sobre la nueva versión de [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], vea [Notas de la versión para la versión preliminar de SQL Server 2019 en Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true).
 
 ## <a name="supported-platforms"></a>Plataformas compatibles
 
@@ -604,7 +604,7 @@ En las secciones siguientes, se describen problemas conocidos con la versión de
          sudo systemctl restart mssql-server
          ```
 
-- Las bases de datos de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] en Windows que usan OLTP en memoria no se pueden restaurar en [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] en Linux. Para restaurar una base de datos de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] que use OLTP en memoria, primero actualice las bases de datos a [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] o [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] en Windows antes de moverlas a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux mediante las funciones de copia de seguridad y restauración, o asociar/desasociar.
+- Las bases de datos de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] en Windows que usan OLTP en memoria no se pueden restaurar en [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] en Linux. Para restaurar una base de datos de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] que use OLTP en memoria, primero actualice las bases de datos a [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] o [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] en Windows antes de moverlas a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux mediante las funciones de copia de seguridad y restauración, o asociar/desasociar.
 
 - El permiso de usuario **ADMINISTER BULK OPERATIONS** no se admite en Linux en este momento.
 

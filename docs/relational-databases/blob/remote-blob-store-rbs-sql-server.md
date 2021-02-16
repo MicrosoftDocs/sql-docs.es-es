@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bfd234025664e7508d7d9cf942ff81a216b447a2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 89a79b07977d8fec2e2dd6f2a8b9acd9cea0ba5e
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171757"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100343162"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "98171757"
 
 | Versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] | Ubicación de descarga de RBS |
 |:---|:---|
-| [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]Feature Pack SP2](https://www.microsoft.com/download/details.aspx?id=56833) |
+| [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]Feature Pack SP2](https://www.microsoft.com/download/details.aspx?id=56833) |
 | [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992) |
-| [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] Página de descarga de RBS](https://go.microsoft.com/fwlink/?linkid=2109005) |
+| [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] Página de descarga de RBS](https://go.microsoft.com/fwlink/?linkid=2109005) |
 | &nbsp; | &nbsp; |
   
  
@@ -72,7 +72,7 @@ ms.locfileid: "98171757"
 ### <a name="credential-store-symmetric-key"></a>Clave simétrica de almacén de credenciales  
  Si un proveedor requiere que se instale y use un secreto almacenado en el almacén de credenciales, RBS usa una clave simétrica para cifrar los secretos de proveedor que un cliente puede usar para obtener autorización en el almacén de blobs del proveedor.  
   
--   RBS 2016 usa una clave simétrica **AES_128** . [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] no permite crear nuevas claves **TRIPLE_DE** S, salvo por motivos de compatibilidad con versiones anteriores. Para obtener más información, vea [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
+-   RBS 2016 usa una clave simétrica **AES_128** . [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] no permite crear nuevas claves **TRIPLE_DE** S, salvo por motivos de compatibilidad con versiones anteriores. Para obtener más información, vea [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md).  
   
 -   RBS 2014 y las versiones anteriores usan un almacén de credenciales que contiene secretos cifrados con el algoritmo de clave simétrica **TRIPLE_DES** , actualmente obsoleto. Si a día de hoy usa **TRIPLE_DES**, [!INCLUDE[msCoName](../../includes/msconame-md.md)] le recomienda mejorar la seguridad con los pasos de este tema para rotar la clave a un método de cifrado más seguro.  
   

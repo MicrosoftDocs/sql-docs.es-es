@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 7a73a233a84d532f55dc61797f44e5d39013722f
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: f603b138773ea76fe73ea3d6929ece535779e23c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067352"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351988"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Tutorial: Implementación y ejecución de un paquete de SQL Server Integration Services (SSIS) en Azure
 
@@ -52,7 +52,7 @@ Estas son las dos consideraciones más importantes que debe recordar. Estos paso
 
 1. Abra SQL Server Management Studio.
 
-2. **Conéctese al servidor**. En el cuadro de diálogo **Conectar con el servidor** , especifique la siguiente información:
+2. **Conéctese al servidor**. En el cuadro de diálogo **Conectar con el servidor**, especifique la siguiente información:
 
    | Configuración       | Valor sugerido | Descripción | 
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -62,7 +62,7 @@ Estas son las dos consideraciones más importantes que debe recordar. Estos paso
    | **Inicio de sesión** | La cuenta de administrador del servidor | Es la cuenta que especificó cuando creó el servidor. |
    | **Contraseña** | La contraseña de la cuenta de administrador del servidor | Es la contraseña que especificó cuando creó el servidor. |
 
-3. **Conéctese a la base de datos de SSISDB**. Seleccione **Opciones** para expandir el cuadro de diálogo **Conectar con el servidor**. En el cuadro de diálogo **Conectar con el servidor** expandido, seleccione la pestaña **Propiedades de conexión**. En el campo **Conectar con base de datos** , seleccione o escriba `SSISDB`.
+3. **Conéctese a la base de datos de SSISDB**. Seleccione **Opciones** para expandir el cuadro de diálogo **Conectar con el servidor**. En el cuadro de diálogo **Conectar con el servidor** expandido, seleccione la pestaña **Propiedades de conexión**. En el campo **Conectar con base de datos**, seleccione o escriba `SSISDB`.
 
 4. A continuación, seleccione **Conectar**. La ventana Explorador de objetos se abre en SSMS. 
 
@@ -89,23 +89,23 @@ Para más información sobre cómo implementar los paquetes y respecto del Asist
 ### <a name="deploy-a-project-with-the-deployment-wizard"></a>Implementar un proyecto con el Asistente para implementación
 1. En la página **Introducción** del Asistente para implementación, revise la introducción. Seleccione **Siguiente** para abrir la página **Seleccionar origen**.
 
-2. En la página **Seleccionar origen** , seleccione el proyecto SSIS existente que hay que implementar.
+2. En la página **Seleccionar origen**, seleccione el proyecto SSIS existente que hay que implementar.
     -   Para implementar un archivo de implementación de proyectos que haya creado, seleccione **Archivo de implementación de proyecto** y especifique la ruta de acceso del archivo .ispac.
     -   Para implementar un proyecto que resida en un catálogo de SSIS, seleccione **Catálogo de Integration Services** y especifique el nombre del servidor y la ruta de acceso al proyecto en el catálogo. En este paso solo se pueden volver a implementar los proyectos que residen en SSISDB y que hospeda SQL Server.
     -   Seleccione **Siguiente** para ver la página **Seleccionar destino**.
   
-3.  En la página **Seleccionar destino** , seleccione el destino del proyecto.
+3.  En la página **Seleccionar destino**, seleccione el destino del proyecto.
     -   Escriba el nombre completo del servidor con el formato `<server_name>.database.windows.net`.
     -   Proporcione la información de autenticación y, después, seleccione **Conectar**.
     -   A continuación, haga clic en **Examinar** para seleccionar la carpeta de destino de SSISDB.
-    -   Después, seleccione **Siguiente** para abrir la página **Revisión** (el botón **Siguiente** solo se habilitará después de que haya seleccionado **Conectar** ).
+    -   Después, seleccione **Siguiente** para abrir la página **Revisión** (el botón **Siguiente** solo se habilitará después de que haya seleccionado **Conectar**).
   
-4.  En la página **Revisión** , revise la configuración seleccionada.
+4.  En la página **Revisión**, revise la configuración seleccionada.
     -   Puede cambiar las selecciones si hace clic en **Anterior** o en cualquiera de los pasos del panel izquierdo.
     -   Haga clic en **Implementar** para iniciar el proceso de implementación.
 
     > [!NOTE]
-    > Si recibe el mensaje de error **No hay ningún agente de trabajo activo (proveedor de datos SqlClient de .NET)** , asegúrese de que se está ejecutando Azure-SSIS Integration Runtime. Este error se produce si intenta implementar mientras Azure-SSIS IR está en estado detenido.
+    > Si recibe el mensaje de error **No hay ningún agente de trabajo activo (proveedor de datos SqlClient de .NET)**, asegúrese de que se está ejecutando Azure-SSIS Integration Runtime. Este error se produce si intenta implementar mientras Azure-SSIS IR está en estado detenido.
 
 5.  Una vez completado el proceso de implementación, se abrirá la página **Resultados**. Esta página muestra si cada acción si se completó correctamente o no.
     -   Si la acción no se realiza correctamente, seleccione **Error** en la columna **Resultado** para que aparezca una explicación del error.
@@ -182,13 +182,13 @@ Write-Host "All done."
 
 2. Haga clic con el botón derecho y seleccione **Ejecutar** para abrir el cuadro de diálogo **Ejecutar paquete**.
 
-3.  En el cuadro de diálogo **Ejecutar paquete** , configure la ejecución del paquete mediante las opciones de las pestañas **Parámetros** , **Administradores de conexión** y **Avanzadas**.
+3.  En el cuadro de diálogo **Ejecutar paquete**, configure la ejecución del paquete mediante las opciones de las pestañas **Parámetros**, **Administradores de conexión** y **Avanzadas**.
 
 4.  Seleccione **Aceptar** para ejecutar el paquete.
 
 ## <a name="monitor-the-running-package-in-ssms"></a>Supervisar el paquete en ejecución en SSMS
 
-Para ver el estado de las operaciones de Integration Services que se están ejecutando actualmente en el servidor de Integration Services, como las de implementación, validación y ejecución del paquete, use el cuadro de diálogo **Operaciones activas** de SSMS. Para abrir el cuadro de diálogo **Operaciones activas** , haga clic con el botón derecho en **SSISDB** y, a continuación, seleccione **Operaciones activas**.
+Para ver el estado de las operaciones de Integration Services que se están ejecutando actualmente en el servidor de Integration Services, como las de implementación, validación y ejecución del paquete, use el cuadro de diálogo **Operaciones activas** de SSMS. Para abrir el cuadro de diálogo **Operaciones activas**, haga clic con el botón derecho en **SSISDB** y, a continuación, seleccione **Operaciones activas**.
 
 También puede seleccionar un paquete en el Explorador de objetos, hacer clic con el botón derecho y seleccionar **Informes**. A continuación, elija **Informes estándar** y **Todas las ejecuciones**.
 

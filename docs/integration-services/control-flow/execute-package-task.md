@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ab1215ca58f64c6e28f78e423bdee5a66b4c46b2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8251f2ff30fafff584b4f56fe93a9b7423ea412b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725944"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352083"
 ---
 # <a name="execute-package-task"></a>Tarea Ejecutar paquete
 
@@ -49,7 +49,7 @@ ms.locfileid: "91725944"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye tareas que realizan operaciones de flujo de trabajo, como ejecutar archivos ejecutables y por lotes. Para obtener más información, vea [Execute Process Task](../../integration-services/control-flow/execute-process-task.md).  
   
 ## <a name="running-packages"></a>Ejecutar paquetes  
- La tarea Ejecutar paquete puede ejecutar paquetes secundarios incluidos en el mismo proyecto que contiene el paquete primario. Para seleccionar un paquete secundario del proyecto, establezca la propiedad **ReferenceType** en **Referencia de proyecto**y, a continuación, establezca la propiedad **PackageNameFromProjectReference** .  
+ La tarea Ejecutar paquete puede ejecutar paquetes secundarios incluidos en el mismo proyecto que contiene el paquete primario. Para seleccionar un paquete secundario del proyecto, establezca la propiedad **ReferenceType** en **Referencia de proyecto** y, a continuación, establezca la propiedad **PackageNameFromProjectReference** .  
   
 > [!NOTE]  
 >  La opción **ReferenceType** es de solo lectura y se establece en **Referencia externa** si el proyecto que contiene el paquete no se ha convertido al modelo de implementación de proyectos. [Implementación de proyectos y paquetes de Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "91725944"
   
  Sin embargo, a veces puede desearse que el paquete primario y los paquetes secundarios no completen su ejecución como una unidad. También es posible que no desee agregar la sobrecarga de otro proceso. Por ejemplo, si se produce un error en un proceso secundario y el procesamiento posterior del proceso primario del paquete depende de que el proceso secundario se complete correctamente, el paquete secundario deberá ejecutarse en el proceso del paquete primario.  
   
- De forma predeterminada, la propiedad ExecuteOutOfProcess de la tarea Ejecutar paquete se establece en **False**y el paquete secundario se ejecuta en el mismo proceso que el paquete primario. Si establece esta propiedad en **True**, el paquete secundario se ejecuta en un proceso independiente. Esto puede ralentizar el inicio del paquete secundario. Además, si establece la propiedad en **True**, no se podrá depurar el paquete en una instalación de solo herramientas. Debe instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información, vea [Instalar Integration Services](../../integration-services/install-windows/install-integration-services.md)  
+ De forma predeterminada, la propiedad ExecuteOutOfProcess de la tarea Ejecutar paquete se establece en **False** y el paquete secundario se ejecuta en el mismo proceso que el paquete primario. Si establece esta propiedad en **True**, el paquete secundario se ejecuta en un proceso independiente. Esto puede ralentizar el inicio del paquete secundario. Además, si establece la propiedad en **True**, no se podrá depurar el paquete en una instalación de solo herramientas. Debe instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información, vea [Instalar Integration Services](../../integration-services/install-windows/install-integration-services.md)  
   
 ## <a name="extending-transactions"></a>Extender transacciones  
  La transacción utilizada por el paquete primario puede ampliarse al paquete secundario; por tanto, puede confirmarse o revertirse el trabajo realizado por ambos paquetes. Por ejemplo, las inserciones en la base de datos realizadas por el paquete primario pueden confirmarse o revertirse en función de las inserciones en la base de datos realizadas por el paquete secundario y viceversa. Para obtener más información, vea [Inherited Transactions](../integration-services-transactions.md).  
@@ -165,7 +165,7 @@ ms.locfileid: "91725944"
  Si el paquete secundario está protegido con contraseña, tiene que proporcionar esta contraseña o hacer clic en el botón de puntos suspensivos (…) y crear una contraseña.  
   
  **ExecuteOutOfProcess**  
- Especifique si el paquete secundario se ejecuta en el proceso del paquete primario o en un proceso independiente. De forma predeterminada, la propiedad ExecuteOutOfProcess de la tarea Ejecutar paquete se establece en **False**y el paquete secundario se ejecuta en el mismo proceso que el paquete primario. Si establece esta propiedad en **true**, el paquete secundario se ejecuta en un proceso independiente. Esto puede ralentizar el inicio del paquete secundario. Además, si establece la propiedad en **true**, no podrá depurar el paquete si ha realizado una instalación de solo herramientas (tendrá que instalar el producto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ). Para más información, vea [Instalar Integration Services](../../integration-services/install-windows/install-integration-services.md).  
+ Especifique si el paquete secundario se ejecuta en el proceso del paquete primario o en un proceso independiente. De forma predeterminada, la propiedad ExecuteOutOfProcess de la tarea Ejecutar paquete se establece en **False** y el paquete secundario se ejecuta en el mismo proceso que el paquete primario. Si establece esta propiedad en **true**, el paquete secundario se ejecuta en un proceso independiente. Esto puede ralentizar el inicio del paquete secundario. Además, si establece la propiedad en **true**, no podrá depurar el paquete si ha realizado una instalación de solo herramientas (tendrá que instalar el producto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ). Para más información, vea [Instalar Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
 #### <a name="referencetype-dynamic-options"></a>Opciones dinámicas de ReferenceType  
   

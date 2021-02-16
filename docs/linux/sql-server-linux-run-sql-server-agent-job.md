@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 61790d066d6cdf0d3e2a520cca740823b78fc6dc
-ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
+ms.openlocfilehash: bc52f0a2052d0b9abd1700e92af3a30c0e02bad2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92524050"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346447"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Creación y ejecución de trabajos del Agente SQL Server en Linux
 
@@ -60,7 +60,7 @@ Para usar el Agente SQL Server en Linux, primero debe habilitarlo en un equipo q
 
 ## <a name="create-a-sample-database"></a>Crear una base de datos de ejemplo
 
-Use los siguientes pasos para crear una base de datos de ejemplo denominada **SampleDB** . Esta base de datos se usará para el trabajo de copia de seguridad diario.
+Use los siguientes pasos para crear una base de datos de ejemplo denominada **SampleDB**. Esta base de datos se usará para el trabajo de copia de seguridad diario.
 
 1. En el equipo Linux, abra una sesión de terminal de Bash.
 
@@ -78,7 +78,7 @@ Use los siguientes pasos para crear una base de datos de ejemplo denominada **Sa
 
 ## <a name="create-a-job-with-transact-sql"></a>Crear un trabajo con Transact-SQL
 
-Con los siguientes pasos se crea un trabajo del Agente SQL Server en Linux con comandos Transact-SQL. El trabajo ejecuta una copia de seguridad diaria de la base de datos de ejemplo, **SampleDB** .
+Con los siguientes pasos se crea un trabajo del Agente SQL Server en Linux con comandos Transact-SQL. El trabajo ejecuta una copia de seguridad diaria de la base de datos de ejemplo, **SampleDB**.
 
 > [!TIP]
 > Puede usar cualquier cliente de T-SQL para ejecutar estos comandos. Por ejemplo, en Linux puede usar [sqlcmd](sql-server-linux-setup-tools.md) o [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md). Desde un servidor Windows Server remoto, también puede ejecutar consultas en SQL Server Management Studio (SSMS) o usar la interfaz de usuario para la administración de trabajos (que explicaremos en la siguiente sección).
@@ -155,7 +155,7 @@ También puede crear y administrar trabajos de forma remota mediante SQL Server 
 
 1. Inicie SSMS en Windows y conéctese a la instancia de SQL Server de Linux. Para más información, vea [Administrar SQL Server en Linux con SSMS](sql-server-linux-manage-ssms.md).
 
-1. Confirme que ha creado una base de datos de ejemplo denominada **SampleDB** .
+1. Confirme que ha creado una base de datos de ejemplo denominada **SampleDB**.
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-0.png" alt="Create a SampleDB database" style="width: 550px;"/>
 

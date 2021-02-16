@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1b5726aad103012b0ed7619749c1f6f669baa234
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: 87ac1c0759264b00567d5edc2cd9f22727fdd0fa
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241849"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100353862"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitación de conexiones cifradas en el Motor de base de datos
 
@@ -40,7 +40,7 @@ ms.locfileid: "98241849"
  El equipo de servidor debe tener un certificado aprovisionado. Para aprovisionar el certificado en el equipo de servidor, debe [importarlo en Windows](#single-server). El equipo cliente se debe configurar para que [confíe en la entidad de certificación raíz del certificado](#about).  
   
 > [!IMPORTANT]
-> A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], ya no se incluye Capa de sockets seguros (SSL). En su lugar use Seguridad de la capa de transporte (TLS).
+> A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], ya no se incluye Capa de sockets seguros (SSL). En su lugar use Seguridad de la capa de transporte (TLS).
 
 ## <a name="transport-layer-security-tls"></a>Seguridad de la capa de transporte (TLS)
 
@@ -100,9 +100,9 @@ Para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cargue un cer
 
 ## <a name="install-on-single-server"></a><a name="single-server"></a>Instalación en un solo servidor
 
-Con [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], la administración de certificados se integra en el Administrador de configuración de SQL Server. Administrador de configuración de SQL Server para [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] se puede usar con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vea [Administración de certificados (Administrador de configuración de SQL Server)](../../database-engine/configure-windows/manage-certificates.md) para agregar un certificado a una única instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Con [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], la administración de certificados se integra en el Administrador de configuración de SQL Server. Administrador de configuración de SQL Server para [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] se puede usar con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vea [Administración de certificados (Administrador de configuración de SQL Server)](../../database-engine/configure-windows/manage-certificates.md) para agregar un certificado a una única instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-Si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], y Administrador de configuración de SQL Server para [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] no está disponible, siga estos pasos:
+Si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], y Administrador de configuración de SQL Server para [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] no está disponible, siga estos pasos:
 
 1. En el menú **Inicio** , haga clic en **Ejecutar**; en el cuadro **Abrir** , escriba **MMC** y haga clic en **Aceptar**.  
   
@@ -130,9 +130,9 @@ Si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[
   
 ## <a name="install-across-multiple-servers"></a>Instalación en varios servidores
 
-Con [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], la administración de certificados se integra en el Administrador de configuración de SQL Server. Administrador de configuración de SQL Server para [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] se puede usar con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consulte [Administración de certificados (Administrador de configuración de SQL Server)](../../database-engine/configure-windows/manage-certificates.md) para agregar un certificado en una configuración de clúster de conmutación por error o de grupo de disponibilidad.
+Con [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], la administración de certificados se integra en el Administrador de configuración de SQL Server. Administrador de configuración de SQL Server para [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] se puede usar con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consulte [Administración de certificados (Administrador de configuración de SQL Server)](../../database-engine/configure-windows/manage-certificates.md) para agregar un certificado en una configuración de clúster de conmutación por error o de grupo de disponibilidad.
 
-Si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], y Administrador de configuración de SQL Server para no está disponible para [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], siga los pasos de la sección [Para aprovisionar (instalar) un certificado en un solo servidor](#single-server) para cada servidor.
+Si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], y Administrador de configuración de SQL Server para no está disponible para [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], siga los pasos de la sección [Para aprovisionar (instalar) un certificado en un solo servidor](#single-server) para cada servidor.
 
 ## <a name="export-server-certificate"></a>Exportación del certificado de servidor  
   

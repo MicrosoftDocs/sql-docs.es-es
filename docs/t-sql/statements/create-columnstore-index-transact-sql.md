@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
 - COLUMNSTORE INDEX
@@ -30,12 +30,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57665811cd12b4c31effb82a91a722780a774874
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 47759238673fa5e88c02421e27d0e12177072605
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170457"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347047"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "98170457"
 Convierta una tabla de almacén de filas en un índice de almacén de columnas o cree un índice no clúster de almacén de columnas. Use un índice de almacén de columnas para ejecutar de forma eficaz los análisis operativos en tiempo real en una carga de trabajo OLTP o para mejorar la compresión de los datos y el rendimiento de las consultas de las cargas de trabajo de almacenamiento de datos.  
   
 > [!NOTE]
-> A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], puede crear la tabla como un índice clúster de almacén de columnas.   Ya no es necesario crear una tabla de almacén de filas y luego convertirla en un índice clúster de almacén de columnas.  
+> A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], puede crear la tabla como un índice clúster de almacén de columnas.   Ya no es necesario crear una tabla de almacén de filas y luego convertirla en un índice clúster de almacén de columnas.  
 
 > [!TIP]
 > Para obtener más información sobre las directrices de diseño de índices, vea la [Guía de diseño de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md).
@@ -120,10 +120,10 @@ Algunas de las opciones no están disponibles en todas las versiones del motor d
 
 |Opción| CLUSTERED | NONCLUSTERED |
 |---|---|---|
-| COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] |
-| DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] | 
-| ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
-| WHERE, cláusula | N/D | [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] |
+| COMPRESSION_DELAY | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] |
+| DATA_COMPRESSION | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] | 
+| ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssql19-md.md)] | [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] |
+| WHERE, cláusula | N/D | [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] |
 
 Todas las opciones están disponibles en Azure SQL Database.
 
@@ -355,13 +355,13 @@ Las opciones SET de la columna de valor requerido son necesarias siempre que se 
 -   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar (max) [se aplica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y al nivel Premium, al nivel estándar (S3 y versiones posteriores) y a todos los niveles de ofertas de núcleo virtual, solo en los índices de almacén de columnas agrupado]   
+-   nvarchar (max) [se aplica a [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] y al nivel Premium, al nivel estándar (S3 y versiones posteriores) y a todos los niveles de ofertas de núcleo virtual, solo en los índices de almacén de columnas agrupado]   
 -   nchar [ ( *n* ) ]  
 -   varchar [ ( *n* ) ]  
--   varchar (max) [se aplica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y al nivel Premium, al nivel estándar (S3 y versiones posteriores) y a todos los niveles de ofertas de núcleo virtual, solo en los índices de almacén de columnas agrupado]
+-   varchar (max) [se aplica a [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] y al nivel Premium, al nivel estándar (S3 y versiones posteriores) y a todos los niveles de ofertas de núcleo virtual, solo en los índices de almacén de columnas agrupado]
 -   char [ ( *n* ) ]  
 -   varbinary [ ( *n* ) ] 
--   varbinary (max) [se aplica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y a Azure SQL Database en el nivel Premium, en el nivel estándar (S3 y versiones posteriores) y en todos los niveles de ofertas de núcleo virtual, solo en los índices de almacén de columnas agrupado]
+-   varbinary (max) [se aplica a [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] y a Azure SQL Database en el nivel Premium, en el nivel estándar (S3 y versiones posteriores) y en todos los niveles de ofertas de núcleo virtual, solo en los índices de almacén de columnas agrupado]
 -   binary [ ( *n* ) ]  
 -   uniqueidentifier (Se aplica a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores)
   
@@ -369,7 +369,7 @@ Si la tabla subyacente tiene una columna con un tipo de datos no admitido para l
   
 **Las columnas que usan alguno de los siguientes tipos de datos no pueden incluirse en un índice de almacén de columnas:**
 -   ntext, text e image  
--   nvarchar(max), varchar(max) y varbinary(max) (Se aplica a [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] y versiones anteriores e índices no clúster de almacén de columnas) 
+-   nvarchar(max), varchar(max) y varbinary(max) (Se aplica a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones anteriores e índices no clúster de almacén de columnas) 
 -   rowversion (y timestamp)  
 -   sql_variant  
 -   Tipos CLR (hierarchyid y tipos espaciales)  
@@ -383,11 +383,11 @@ Si la tabla subyacente tiene una columna con un tipo de datos no admitido para l
 -   No se pueden modificar mediante la instrucción **ALTER INDEX**. Para cambiar el índice no clúster, debe quitar y volver a crear el índice de almacén de columnas en su lugar. Puede usar **ALTER INDEX** para deshabilitar y volver a compilar un índice de almacén de columnas.  
 -   No se pueden crear mediante la palabra clave **INCLUDE**.  
 -   No pueden incluir las palabras clave **ASC** ni **DESC** para ordenar el índice. Los índices de almacén de columnas se ordenan de acuerdo con los algoritmos de compresión. La ordenación eliminaría muchas mejoras de rendimiento.  
--   No se pueden incluir columnas de objetos grandes (LOB) de tipo nvarchar(max), varchar(max) y varbinary(max) en índices no clúster de almacén de columnas. Solo los índices clúster de almacén de columnas admiten tipos LOB, a partir de la versión [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y Azure SQL Database configurados en el nivel Premium, nivel estándar (S3 y posteriores) y en todos los niveles de ofertas de núcleo virtual. Tenga en cuenta que las versiones anteriores no admiten tipos LOB en los índices clúster y no clúster de almacén de columnas.
+-   No se pueden incluir columnas de objetos grandes (LOB) de tipo nvarchar(max), varchar(max) y varbinary(max) en índices no clúster de almacén de columnas. Solo los índices clúster de almacén de columnas admiten tipos LOB, a partir de la versión [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] y Azure SQL Database configurados en el nivel Premium, nivel estándar (S3 y posteriores) y en todos los niveles de ofertas de núcleo virtual. Tenga en cuenta que las versiones anteriores no admiten tipos LOB en los índices clúster y no clúster de almacén de columnas.
 
 
 > [!NOTE]  
-> A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], se puede crear un índice de almacén de columnas no agrupado en una vista indexada.  
+> A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], se puede crear un índice de almacén de columnas no agrupado en una vista indexada.  
 
 
  **Los índices de almacén de columnas no se pueden combinar con las siguientes características:**  
@@ -453,7 +453,7 @@ GO
 ```  
   
 ### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>C. Administrar índices no clúster al convertir una tabla de almacén de filas en un índice de almacén de columnas.  
- En este ejemplo se muestra cómo administrar índices no clúster al convertir una tabla de almacén de filas en un índice de almacén de columnas. En realidad, a partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], no es necesaria ninguna acción especial; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define automáticamente y vuelve a compilar los índices no clúster en el nuevo índice clúster de almacén de columnas.  
+ En este ejemplo se muestra cómo administrar índices no clúster al convertir una tabla de almacén de filas en un índice de almacén de columnas. En realidad, a partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], no es necesaria ninguna acción especial; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define automáticamente y vuelve a compilar los índices no clúster en el nuevo índice clúster de almacén de columnas.  
   
  Si quiere quitar los índices no clúster, use la instrucción DROP INDEX antes de crear el índice de almacén de columnas. La opción DROP EXISTING solo quita el índice clúster que se va a convertir. No quita los índices no clúster.  
   
@@ -582,7 +582,7 @@ ON MyFactTable;
  Hay dos maneras de volver a generar todo el índice clúster de almacén de columnas. Puede usar CREATE CLUSTERED COLUMNSTORE INDEX o [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) y la opción REBUILD. Con ambos métodos se obtienen los mismos resultados.  
   
 > [!NOTE]  
-> A partir de [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], use `ALTER INDEX...REORGANIZE` en lugar de recompilar con los métodos que se describen en este ejemplo.  
+> A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], use `ALTER INDEX...REORGANIZE` en lugar de recompilar con los métodos que se describen en este ejemplo.  
   
 ```sql  
 --Determine the Clustered Columnstore Index name of MyDimTable.  

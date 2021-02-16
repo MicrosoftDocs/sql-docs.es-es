@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 2681515e691478d095149a7dc4a8a578c6a89bf3
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 2a4460dadef71d61cb01ce67c27438cee2054857
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192535"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351985"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Programar la ejecución de paquetes SSIS implementados en Azure con SQL Server Management Studio (SSMS)
 

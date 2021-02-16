@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER EXTERNAL DATA SOURCE
 - ALTER_EXTERNAL_DATA_SOURCE
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c168be7ae24c23c24920e3d5a1d844cb84a2bb2c
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 28b287969222e47501fd9e4fd18fef091a02a683
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98082940"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100337977"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -69,7 +69,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
  CREDENTIAL = Credential_Name especifica la credencial con nombre. Vea [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
 TYPE = [HADOOP | BLOB_STORAGE]   
-**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+**Se aplica a:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 Solo para operaciones masivas, `LOCATION` debe ser la dirección URL válida en Azure Blob Storage. No coloque **/** , el nombre de archivo o parámetros de firma de acceso compartido al final de la dirección URL de `LOCATION`.
 La credencial usada debe crearse mediante el uso de `SHARED ACCESS SIGNATURE` como identidad. Para más información sobre las firmas de acceso compartido, vea [Uso de Firmas de acceso compartido (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1).
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f893df24e74e0367ab98545a9003de6d93f47f0
-ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
+ms.openlocfilehash: 4c82e88ea4ec23db6c1e1c3e21de3551a2283150
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99835806"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352033"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS
 

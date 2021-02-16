@@ -17,18 +17,18 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
-ms.openlocfilehash: 5d9f07f96f83767a84f7ee0128d674f4ab955eed
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: e14f354812c99b9ed3e8be86734e3cb8e07db751
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170857"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489479"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Características en desuso del motor de base de datos de SQL Server 2017
 
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
-  Este tema describe las características desusadas de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que siguen estando disponibles en [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
+  Este tema describe las características desusadas de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que siguen estando disponibles en [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
   
 Cuando se establece que una característica está en desuso, significa que:
 
@@ -46,7 +46,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
 > [!NOTE]
-> Esta lista es idéntica a la lista de [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]. No hay anunciada ninguna nueva característica de motor de base de datos en desuso o descontinuada de [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)].
+> Esta lista es idéntica a la lista de [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]. No hay anunciada ninguna nueva característica de motor de base de datos en desuso o descontinuada de [!INCLUDE[sssql17-md](../includes/sssql17-md.md)].
 
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>Características en desuso en la próxima versión de SQL Server
 

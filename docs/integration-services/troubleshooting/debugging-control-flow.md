@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bea31577692752b028bdbddbf0ed440dfee7e493
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53fc539f46751cf6073aee0d5cd3aefae1971283
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421969"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338399"
 ---
 # <a name="debugging-control-flow"></a>Depurar el flujo de control
 
@@ -109,7 +109,7 @@ ms.locfileid: "88421969"
 ## <a name="debug-windows"></a>Ventanas de depuración  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] incluye varias ventanas que se pueden usar para trabajar con puntos de interrupción y para depurar paquetes que contienen puntos de interrupción. Para obtener más información sobre cada ventana, abra la ventana y luego presione F1 para mostrar la Ayuda correspondiente de esa ventana.  
   
- Para abrir estas ventanas en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en el menú **Depurar** , seleccione **Ventanas**y luego haga clic en **Puntos de interrupción**, **Salida**o **Inmediata**.  
+ Para abrir estas ventanas en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en el menú **Depurar** , seleccione **Ventanas** y luego haga clic en **Puntos de interrupción**, **Salida** o **Inmediata**.  
   
  Las ventanas se describen en la siguiente tabla.  
   

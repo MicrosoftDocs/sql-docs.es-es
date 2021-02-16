@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc8ff10121320da5b291c3c10cdcdac36f0cc364
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: c69bed5fbec76fab380f91515827630fa60938a5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194072"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342166"
 ---
 # <a name="debugging-data-flow"></a>Depurar el flujo de datos
 
@@ -246,7 +246,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
 3.  Ahora, agregue la instrucción add_data_tap antes de la llamada a start_execution.  
   
- El parámetro task_package_path del procedimiento almacenado add_data_tap corresponde a la propiedad PackagePath de la tarea de flujo de datos en Visual Studio. En Visual Studio, haga clic con el botón derecho en **Tarea Flujo de datos**y, después, haga clic en **Propiedades** para abrir la ventana Propiedades.  Anote el valor de la propiedad **PackagePath** para usarlo como valor para el parámetro task_package_path en la llamada al procedimiento almacenado add_data_tap.  
+ El parámetro task_package_path del procedimiento almacenado add_data_tap corresponde a la propiedad PackagePath de la tarea de flujo de datos en Visual Studio. En Visual Studio, haga clic con el botón derecho en **Tarea Flujo de datos** y, después, haga clic en **Propiedades** para abrir la ventana Propiedades.  Anote el valor de la propiedad **PackagePath** para usarlo como valor para el parámetro task_package_path en la llamada al procedimiento almacenado add_data_tap.  
   
  El parámetro dataflow_path_id_string del procedimiento almacenado add_data_tap corresponde a la propiedad IdentificationString de la ruta de flujo de datos a la que desea agregar una derivación de datos. Para obtener dataflow_path_id_string, haga clic en la ruta de flujo de datos (flecha entre las tareas del flujo de datos) y anote el valor de la propiedad **IdentificationString** de la ventana Propiedades.  
   

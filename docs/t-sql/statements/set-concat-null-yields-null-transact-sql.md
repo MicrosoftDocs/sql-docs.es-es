@@ -24,12 +24,12 @@ ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b94e9597cc77ab73a02ba614249dfc78b1e9d3e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: cd90dbb72c47370684f943f033c10e7a1bb4cf1d
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161144"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525209"
 ---
 # <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -41,16 +41,18 @@ ms.locfileid: "99161144"
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Sintaxis  
-  
+## <a name="syntax"></a>Sintaxis
+
+### <a name="syntax-for-ssnoversion-mdmd-and-sssodfull-mdmd"></a>Sintaxis para [!INCLUDE[ssnoversion-md.md](../../includes/ssnoversion-md.md)] y [!INCLUDE[sssodfull-md.md](../../includes/sssodfull-md.md)]
+
 ```syntaxsql
--- Syntax for SQL Server  
     
 SET CONCAT_NULL_YIELDS_NULL { ON | OFF }   
 ```  
-  
+
+### <a name="syntax-for-sssdw-mdmd-and-sspdw-mdmd"></a>Sintaxis para [!INCLUDE[sssdw-md.md](../../includes/sssdw-md.md)] y [!INCLUDE[sspdw-md.md](../../includes/sspdw-md.md)]
+
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  

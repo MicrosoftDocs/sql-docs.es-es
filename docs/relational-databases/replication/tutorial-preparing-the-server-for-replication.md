@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2f9cbaaca472c6b63d0196cb2f751e28b184e206
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 7506b3b57d81187269c26fae3cafc2d3cdbc6628
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868396"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348627"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutorial: Preparación de SQL Server para la replicación (publicador, distribuidor, suscriptor)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -216,7 +216,7 @@ Si su instancia de SQL Server Management Studio se ejecuta con derechos administ
   
 ## <a name="set-database-permissions"></a>Establecer los permisos para la base de datos  
   
-1. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Seguridad**, haga clic con el botón derecho en **Inicios de sesión**y, después, seleccione **Nuevo inicio de sesión**:  
+1. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Seguridad**, haga clic con el botón derecho en **Inicios de sesión** y, después, seleccione **Nuevo inicio de sesión**:  
 
    ![Comando Nuevo inicio de sesión en el menú contextual](media/tutorial-preparing-the-server-for-replication/newlogin.png)
   
