@@ -1,7 +1,7 @@
 ---
 description: 'Definiciones de roles: roles predefinidos'
 title: 'Definiciones de roles: roles predefinidos | Microsoft Docs'
-ms.date: 06/10/2020
+ms.date: 02/04/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -13,28 +13,31 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c0929f82f7f9a086fa58856b6e1357807c198f7
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 19846d90b09ce660d2ffbd2e1ef996984057d420
+ms.sourcegitcommit: 6f4fb9cfd0cad06127a6328adc745e2ba7c191d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987399"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99570449"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definiciones de roles: roles predefinidos
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se instala junto con roles predefinidos que puede usar para conceder acceso a operaciones del servidor de informes. Cada rol predefinido describe una recopilación de tareas relacionadas. Puede asignar grupos y cuentas de usuario a los roles predefinidos para proporcionar acceso inmediato a las operaciones del servidor de informes.  
   
 ## <a name="how-to-use-predefined-roles"></a>Uso de los roles predefinidos  
   
 1. Revise los roles predefinidos para determinar si puede utilizarlos tal y como están. Si necesita ajustar las tareas o definir roles adicionales, conviene que lo haga antes de empezar a asignar usuarios a roles específicos. Para crear o editar roles, utilice SQL Server Management Studio. Para más información, consulte [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
   
-2. Identifique qué usuarios y grupos requieren acceso al servidor de informes y en qué nivel. A la mayoría de los usuarios se les debería asignar el rol **Explorador** o el rol **Generador de informes** . A un pequeño número de usuarios se les debería asignar el rol **Publicador** . A el rol **Administrador de contenido**conviene asignar muy pocos usuarios.  
+2. Identifique qué usuarios y grupos requieren acceso al servidor de informes y en qué nivel. A la mayoría de los usuarios se les debería asignar el rol **Explorador** o el rol **Generador de informes** . A un pequeño número de usuarios se les debería asignar el rol **Publicador** . A el rol **Administrador de contenido** conviene asignar muy pocos usuarios.  
 
 3. Cuando esté preparado para asignar cuentas de usuario y de grupo a roles concretos, use el portal web. Para más información, vea [Conceder acceso de usuario a un servidor de informes](../../reporting-services/security/grant-user-access-to-a-report-server.md).  
   
 ##  <a name="predefined-role-definitions"></a><a name="bkmk_rolelist"></a> Definiciones de roles predefinidos  
  Los roles predefinidos se definen de acuerdo con las tareas que admiten. Puede modificar estos roles o reemplazarlos por roles personalizados.  
   
- El*ámbito* define los límites dentro de los cuales se usan los roles. Los roles de nivel de elemento proporcionan diversos niveles de acceso a los elementos del servidor de informes y a las operaciones que afectan a esos elementos. Los roles de nivel de elemento se definen en el nodo raíz (Inicio), así como en todos los elementos de la jerarquía de carpetas del servidor de informes. Los roles de nivel de sistema autorizan el acceso en el nivel de sitio. Los roles de nivel de elemento y de nivel de sistema se excluyen mutuamente, pero se utilizan juntos para proporcionar permisos completos al contenido y a las operaciones del servidor de informes.  
+ El *ámbito* define los límites dentro de los cuales se usan los roles. Los roles de nivel de elemento proporcionan diversos niveles de acceso a los elementos del servidor de informes y a las operaciones que afectan a esos elementos. Los roles de nivel de elemento se definen en el nodo raíz (Inicio), así como en todos los elementos de la jerarquía de carpetas del servidor de informes. Los roles de nivel de sistema autorizan el acceso en el nivel de sitio. Los roles de nivel de elemento y de nivel de sistema se excluyen mutuamente, pero se utilizan juntos para proporcionar permisos completos al contenido y a las operaciones del servidor de informes.  
   
  En la tabla siguiente se describe el ámbito predefinido de los roles:  
   
@@ -58,22 +61,24 @@ ms.locfileid: "91987399"
   
 |Tarea|Descripción|  
 |----------|-----------------|  
+|Comentarios sobre los informes|Cree, vea, modifique y elimine los comentarios de los informes.| 
 |Usar informes|Permite leer definiciones de informes.|  
 |Crear informes vinculados|Crear informes vinculados que se basen en un informe no vinculado.|  
 |Administrar todas las suscripciones|Ver, modificar y eliminar cualquier suscripción para informes e informes vinculados, independientemente de quién sea su propietario. Esta tarea permite crear suscripciones controladas por datos. También admite la edición y ejecución de la [actualización programada para archivos de Power BI (.pbix) en Power BI Report Server](/power-bi/report-server/configure-scheduled-refresh).|  
+|Administración de comentarios|Elimine los comentarios de otros usuarios de los informes.| 
 |Administración de orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades del origen de datos.|  
-|Administrar carpetas|Cree, vea y elimine carpetas; vea y modifique propiedades de carpetas.|  
-|Administración de modelos|Crear, ver y eliminar modelos; ver y modificar propiedades de modelos.|  
+|Administrar carpetas|Cree, vea y elimine carpetas; vea y modifique propiedades de carpetas.| 
 |Administrar suscripciones individuales|Crear, ver, modificar y eliminar suscripciones de usuarios a informes e informes vinculados. Esta tarea también admite la edición y ejecución de la [actualización programada para archivos de Power BI (.pbix) en Power BI Report Server](/power-bi/report-server/configure-scheduled-refresh).|  
+|Administración de modelos|Crear, ver y eliminar modelos; ver y modificar propiedades de modelos.|  
 |Administrar historial de informe|Cree, vea y elimine el historial del informe, vea las propiedades del historial del informe; vea y modifique la configuración que determina los límites del historial de instantáneas y cómo funciona el almacenamiento en caché.|  
 |Administrar informes|Agregue y elimine informes, modifique parámetros de informes, vea y modifique propiedades de informes, vea y modifique orígenes de datos que proporcionen contenido al informe, vea y modifique definiciones de informe y establezca directivas de seguridad de nivel de informe.|  
 |Administrar recursos|Cree, modifique y elimine recursos; vea y modifique propiedades de recursos.|  
 |Establecer la seguridad de elementos individuales|Definir directivas de seguridad para informes, informes vinculados, carpetas, recursos y orígenes de datos. Para obtener más información, vea [Elementos protegibles](../../reporting-services/security/securable-items.md).|  
 |Ver orígenes de datos|Vea elementos de orígenes de datos compartidos en la jerarquía de carpetas.|  
-|Ver informes|Ejecutar informes y ver propiedades de informes.|  
-|Ver modelos|Ver los modelos de la jerarquía de carpetas, utilizar modelos como orígenes de datos para un informe y ejecutar consultas en el modelo para recuperar datos.|  
-|Ver recursos|Ver recursos y propiedades de recursos.|  
 |Ver carpetas|Ver el contenido de carpetas y navegar por la jerarquía de carpetas.|  
+|Ver modelos|Ver los modelos de la jerarquía de carpetas, utilizar modelos como orígenes de datos para un informe y ejecutar consultas en el modelo para recuperar datos.|  
+|Ver informes|Ejecutar informes y ver propiedades de informes.|  
+|Ver recursos|Ver recursos y propiedades de recursos.|  
   
 ### <a name="customizing-the-content-manager-role"></a>Personalización del rol Administrador de contenido  
  Este rol está destinado a usuarios de confianza cuya responsabilidad general sea administrar y mantener el contenido del servidor de informes. Puede quitar tareas de esta definición, pero, al hacerlo, es posible que no quede claro qué puede administrarse. Por ejemplo, si quita la tarea "Ver informes" de esta definición de rol, impedirá que el **Administrador de contenido** pueda ver el contenido de los informes y, por lo tanto, no podrá comprobar los cambios en la configuración de credenciales y parámetros.  
@@ -96,10 +101,11 @@ ms.locfileid: "91987399"
 |Tarea|Descripción|  
 |----------|-----------------|  
 |Crear informes vinculados|Cree informes vinculados y publíquelos en una carpeta del servidor de informes.|  
+|Administración de comentarios|Elimine los comentarios de otros usuarios de los informes.| 
 |Administración de orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades de un origen de datos.|  
 |Administrar carpetas|Cree, vea y elimine carpetas; vea y modifique propiedades de carpetas.|  
-|Administrar informes|Agregue y elimine informes, modifique parámetros de informes, vea y modifique propiedades de informes, vea y modifique orígenes de datos que proporcionan contenido al informe, vea y modifique definiciones de informe.|  
 |Administración de modelos|Cree, vea y elimine modelos de informe; vea y modifique propiedades de modelos de informe.|  
+|Administrar informes|Agregue y elimine informes, modifique parámetros de informes, vea y modifique propiedades de informes, vea y modifique orígenes de datos que proporcionan contenido al informe, vea y modifique definiciones de informe.|  
 |Administrar recursos|Cree, modifique y elimine recursos; vea y modifique propiedades de recursos.|  
   
 ### <a name="customizing-the-publisher-role"></a>Personalización del rol Publicador  
@@ -117,12 +123,13 @@ ms.locfileid: "91987399"
   
 |Tarea|Descripción|  
 |----------|-----------------|  
+|Comentarios sobre los informes|Cree, vea, modifique y elimine los comentarios de los informes.| 
+|Administrar suscripciones individuales|Crear, ver, modificar y eliminar suscripciones de usuarios a informes e informes vinculados, así como crear programaciones para dichas suscripciones.| 
+|Ver carpetas|Ver el contenido de carpetas y navegar por la jerarquía de carpetas.| 
+|Ver modelos|Ver los modelos de la jerarquía de carpetas, utilizar modelos como orígenes de datos para un informe y ejecutar consultas en el modelo para recuperar datos.| 
 |Ver informes|Ejecutar un informe y ver propiedades de informe.|  
 |Ver recursos|Ver recursos y propiedades de recursos.|  
-|Ver carpetas|Ver el contenido de carpetas y navegar por la jerarquía de carpetas.|  
-|Ver modelos|Ver los modelos de la jerarquía de carpetas, utilizar modelos como orígenes de datos para un informe y ejecutar consultas en el modelo para recuperar datos.|  
-|Administrar suscripciones individuales|Crear, ver, modificar y eliminar suscripciones de usuarios a informes e informes vinculados, así como crear programaciones para dichas suscripciones.|  
-  
+   
 ### <a name="customizing-the-browser-role"></a>Personalización del rol Explorador  
  Puede modificar el rol **Explorador** para que se adapte a sus necesidades. Por ejemplo, puede quitar la tarea "Administrar suscripciones individuales" si no desea permitir suscripciones o puede quitar la tarea "Ver recursos" si no desea que los usuarios vean documentación auxiliar u otros elementos que se puedan cargar en el servidor de informes.  
   
@@ -136,12 +143,13 @@ ms.locfileid: "91987399"
   
 |Tarea|Descripción|  
 |----------|-----------------|  
+|Comentarios sobre los informes|Cree, vea, modifique y elimine los comentarios de los informes.| 
 |Usar informes|Permite leer definiciones de informes.|  
-|Ver informes|Ejecutar un informe y ver propiedades de informe.|  
-|Ver recursos|Ver recursos y propiedades de recursos.|  
+|Administrar suscripciones individuales|Crear, ver, modificar y eliminar suscripciones de usuarios a informes e informes vinculados, así como crear programaciones para dichas suscripciones.|  
 |Ver carpetas|Ver el contenido de carpetas y navegar por la jerarquía de carpetas.|  
 |Ver modelos|Ver los modelos de la jerarquía de carpetas, utilizar modelos como orígenes de datos para un informe y ejecutar consultas en el modelo para recuperar datos.|  
-|Administrar suscripciones individuales|Crear, ver, modificar y eliminar suscripciones de usuarios a informes e informes vinculados, así como crear programaciones para dichas suscripciones.|  
+|Ver informes|Ejecutar un informe y ver propiedades de informe.|  
+|Ver recursos|Ver recursos y propiedades de recursos.|  
   
 ### <a name="customizing-the-report-builder-role"></a>Personalización del rol Generador de informes  
  Puede modificar el rol **Generador de informes** para adaptarlo a sus necesidades. Las recomendaciones suelen ser iguales que para el rol **Explorador** : quite la tarea "Administrar suscripciones individuales" si no desea admitir suscripciones, quite la tarea "Ver recursos" si no desea que los usuarios vean recursos y mantenga las tareas "Ver informes" y "Ver carpetas" para permitir la visualización y navegación en carpetas.  
@@ -158,21 +166,24 @@ ms.locfileid: "91987399"
   
 |Tarea|Descripción|  
 |----------|-----------------|  
+|Comentarios sobre los informes|Cree, vea, modifique y elimine los comentarios de los informes.| 
 |Crear informes vinculados|Cree informes vinculados que se basen en informes almacenados en la carpeta Mis informes del usuario.|  
-|Administrar carpetas|Cree, vea y elimine carpetas; vea y modifique propiedades de carpetas.|  
+|Administración de comentarios|Elimine los comentarios de otros usuarios de los informes.| 
 |Administración de orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades del origen de datos.|  
+|Administrar carpetas|Cree, vea y elimine carpetas; vea y modifique propiedades de carpetas.|  
 |Administrar suscripciones individuales|Cree, vea, modifique y elimine suscripciones para informes e informes vinculados.|  
+|Administrar historial de informe|Cree, vea y elimine el historial del informe, vea las propiedades del historial del informe; vea y modifique la configuración que determina los límites del historial de instantáneas y cómo funciona el almacenamiento en caché.|  
 |Administrar informes|Agregue y elimine informes, modifique parámetros de informes, vea y modifique propiedades de informes, vea y modifique orígenes de datos que proporcionan contenido al informe, vea y modifique definiciones de informe y establezca directivas de seguridad de nivel de informe.|  
 |Administrar recursos|Cree, modifique y elimine recursos, y vea y modifique sus propiedades.|  
-|Ver informes|Ejecute informes que se almacenen en la carpeta Mis informes del usuario y vea propiedades de informes.|  
 |Ver orígenes de datos|Vea elementos de orígenes de datos compartidos en la jerarquía de carpetas.|  
-|Ver recursos|Ver recursos y propiedades de recursos.|  
 |Ver carpetas|Vea el contenido de carpetas.|  
+|Ver informes|Ejecute informes que se almacenen en la carpeta Mis informes del usuario y vea propiedades de informes.|  
+|Ver recursos|Ver recursos y propiedades de recursos.|  
   
 ### <a name="customizing-the-my-reports-role"></a>Personalización del rol Mis informes  
  Puede modificar este rol para que se adapte a sus necesidades. Sin embargo, se recomienda conservar las tareas "Administrar informes" y "Administrar carpetas" para permitir la administración básica del contenido. Además, este rol debería permitir todas las tareas basadas en vistas, de forma que los usuarios puedan ver el contenido de las carpetas y ejecutar los informes que administren.  
   
- Aunque la tarea 'Establecer la seguridad de elementos individuales' no forma parte de la definición predeterminada del rol, puede agregar esta tarea al rol **Mis informes** para que los usuarios puedan personalizar la configuración de seguridad de las subcarpetas e informes.  
+ Aunque la tarea "Establecer la seguridad de elementos individuales" no forma parte de la definición predeterminada del rol, puede agregarla al rol **Mis informes** para que los usuarios puedan personalizar la configuración de seguridad de subcarpetas e informes.  
   
 ##  <a name="system-administrator-role"></a><a name="bkmk_systemadministrator"></a> Rol Administrador del sistema  
  El rol **Administrador del sistema** es un rol predefinido que incluye tareas útiles para un administrador de servidor de informes con responsabilidad global sobre el servidor, pero no necesariamente sobre su contenido.  
@@ -189,9 +200,9 @@ ms.locfileid: "91987399"
 |Ejecutar definiciones de informe|Inicie la ejecución de la definición del informe sin publicarlo en un servidor de informes.|  
 |Trabajos de administración|Vea y cancele trabajos que se estén ejecutando. Para obtener más información, vea [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md).|  
 |Administrar propiedades del servidor de informes|Vea y modifique propiedades que se apliquen al servidor de informes y a elementos administrados por el servidor de informes.<br /><br /> Esta tarea permite cambiar el nombre del portal web, habilitar Mis informes y establecer los valores predeterminados del historial del informe.|  
+|Administrar la seguridad del servidor de informes|Vea y modifique asignaciones de roles del sistema.|  
 |Administrar roles|Cree, vea, modifique y elimine definiciones de roles.<br /><br /> Los miembros del rol **Administrador del sistema** pueden utilizar la página Configuración del sitio para administrar roles.|  
 |Administrar programaciones compartidas|Cree, vea, modifique y elimine programaciones compartidas que sirven para ejecutar o actualizar informes.|  
-|Administrar la seguridad del servidor de informes|Vea y modifique asignaciones de roles del sistema.|  
   
  El rol **Administrador del sistema** se utiliza en la seguridad predeterminada.  
   

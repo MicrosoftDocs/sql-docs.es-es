@@ -22,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: e0e6692a24371b91b57ad2269ec48c43db1e1a8c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 013586570ce43b8270ae2613c05ced8bc9bdc48b
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99206077"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525219"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -52,11 +52,11 @@ fn_get_audit_file ( file_pattern,
     
     Este argumento debe incluir una ruta de acceso (letra de unidad o recurso compartido de red) y un nombre de archivo que pueda contener un carácter comodín. Se puede usar un solo asterisco (*) para recopilar varios archivos de un conjunto de archivos de auditoría. Por ejemplo:  
   
-    -   **\<path>\\\** _: Recopila todos los archivos de auditoría en la ubicación especificada.  
+    -   **\<path>\\\*** : Recopila todos los archivos de auditoría en la ubicación especificada.  
   
-    -   _* \<path> \LoginsAudit_{GUID} * * _: recopila todos los archivos de auditoría que tienen el nombre y el par GUID especificados.  
+    -   **\<path> \ LOGINSAUDIT_ {GUID}***: recopila todos los archivos de auditoría que tienen el nombre y el par GUID especificados.  
   
-    -   _* \<path> \LoginsAudit_{GUID} _00_29384. sqlaudit * *: recopilar un archivo de auditoría específico.  
+    -   **\<path> \ LOGINSAUDIT_ {GUID} _00_29384. sqlaudit** : recopilar un archivo de auditoría específico.  
   
  - **Azure SQL Database**:
  
@@ -115,7 +115,7 @@ fn_get_audit_file ( file_pattern,
 | server_principal_name | **sysname** | Inicio de sesión actual. Acepta valores NULL. |  
 | server_principal_sid | **varbinary** | SID del inicio de sesión actual. Acepta valores NULL. |  
 | session_id | **smallint** | Identificador de la sesión en la que se produjo el evento. No admite valores NULL. |  
-| session_server_principal_name | **sysname** | Entidad de seguridad de servidor para la sesión. Acepta valores NULL. |  
+| session_server_principal_name | **sysname** | Entidad de seguridad de servidor para la sesión. Acepta valores NULL. Devuelve la identidad del inicio de sesión original que se conectó a la instancia de SQL Server en caso de que haya modificadores de contexto explícitos o implícitos.|  
 | statement | **nvarchar(4000)** | Instrucción TSQL, si existe. Acepta valores NULL. Devuelve NULL si no es aplicable. |  
 | Correcto | **bit** | Indica si la acción que desencadenó el evento se realizó correctamente. No admite valores NULL. Para todos los eventos que no sean los eventos de inicio de sesión, esto solo notifica si la comprobación del permiso tuvo o no tuvo éxito, no la operación.<br /> 1 = correcta (success)<br /> 0 = error |
 | target_database_principal_id | **int** | Entidad de seguridad de la base de datos donde se realizó la operación GRANT/DENY/REVOKE. No admite valores NULL. Devuelve 0 si no es aplicable. |  

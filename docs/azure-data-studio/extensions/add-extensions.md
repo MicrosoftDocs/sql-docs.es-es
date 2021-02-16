@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: 2e2e76c436c02f2cbc5878228f1be2d57248816c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3cc965ffd169d53e59706ca4ba68f2bcdddb5aa9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123531"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052125"
 ---
 # <a name="extend-the-functionality-of-azure-data-studio"></a>Extensión de la funcionalidad de Azure Data Studio
 
@@ -58,7 +58,7 @@ En lugar de quitar una extensión de forma permanente, puede deshabilitarla temp
 
 ### <a name="enable-an-extension"></a>Habilitación de extensiones
 
-Si se ha deshabilitado una extensión, se encontrará en la sección **Deshabilitado** de la lista de extensiones, marcada como ***Deshabilitada***. Puede volver a habilitarla con los comandos **Habilitar** o **Habilitar (área de trabajo)** en el menú desplegable. La **paleta de comandos** también permite habilitar todas las extensiones con los comandos **Extensiones: Habilitar todas las extensiones** y **Extensiones: Habilitar todas las extensiones (área de trabajo)** .
+Si se ha deshabilitado una extensión, se encontrará en la sección **Deshabilitado** de la lista de extensiones, marcada como **_Deshabilitada_ *_. Puede volver a habilitarla con los comandos _* Habilitar** o **Habilitar (área de trabajo)** del menú desplegable. La **paleta de comandos** también permite habilitar todas las extensiones con los comandos **Extensiones: Habilitar todas las extensiones** y **Extensiones: Habilitar todas las extensiones (área de trabajo)** .
 
 ![habilitación de extensión](media/add-extensions/extensions-enable.png)
 

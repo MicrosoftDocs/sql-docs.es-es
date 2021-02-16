@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: 07a393bb785aafda352aff28f920cb4316a47191
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: 8f58ec917fa6c26e4095649c33fca8b4048b96b1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577942"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081506"
 ---
 # <a name="sqlpackage-deploy-report-and-drift-report"></a>Informe de implementación e informe de desfase de SqlPackage
 La acción [DeployReport](#deployreport-action-parameters) de SqlPackage.exe crea un informe XML de los cambios que se producirían al usar una acción de publicación.
@@ -76,7 +76,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Especifica si se intenta la acción a pesar de las posibles plataformas de SQL Server incompatibles.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|No bloquee la transferencia de datos en una tabla con Seguridad de nivel de fila si esta propiedad está establecida en true. El valor predeterminado es False.|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Hace una copia de seguridad de la base de datos antes de implementar ningún cambio.|
-|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')|Especifica que se debe finalizar el episodio de publicación si existiera la posibilidad de que se perdieran datos a causa de la operación de publicación.|
+|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')| Especifica que la operación se terminará durante el paso de validación del esquema si los cambios de esquema resultantes pueden incurrir en una pérdida de datos, incluso debido a la reducción de la precisión de los datos o a un cambio de tipo de datos que necesite una operación de conversión. El valor predeterminado (`True`) hace que la operación finalice independientemente de si la base de datos de destino contiene datos.  Todavía se puede producir un error en la ejecución con un valor `False` para BlockOnPossibleDataLoss durante la ejecución del plan de implementación si hay datos en el destino que no se pueden convertir al nuevo tipo de columna. |
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|Especifica si bloquear la actualización de una base de datos cuyo esquema ha dejado de corresponderse con su registro o no está registrada. |
 |**/p:**|CommandTimeout=(INT32 '60')|Especifica el tiempo de espera de comando en segundos cuando se ejecutan consultas en SQL Server. |
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Especifica si la declaración de las variables SETVAR se incluyen entre comentarios en el script de publicación generado. Puede optar por esta opción si planea usar una herramienta como SQLCMD.EXE para especificar los valores de la línea de comandos al publicar. |

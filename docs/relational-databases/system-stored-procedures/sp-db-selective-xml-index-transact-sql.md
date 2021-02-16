@@ -17,20 +17,20 @@ helpviewer_keywords:
 - sp_db_selective_xml_index procedure
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5df370a674026b4c6ebc7eb59985505821e3b028
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: ed30d2b8df6141b308d32dee8f2fdcec0c2eceb1
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489449"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525181"
 ---
 # <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Habilita y deshabilita la funcionalidad de Índice XML selectivo en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se llama sin ningún parámetro, el procedimiento almacenado devuelve 1 si el índice XML selectivo está habilitado en una base de datos determinada.  
-  
+
 > [!NOTE]  
->  Para deshabilitar el índice XML selectivo mediante este procedimiento almacenado, la base de datos se debe poner en modo de recuperación simple mediante el comando de [opciones set de Alter database &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) .  
+> A partir de [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] , no se puede deshabilitar la funcionalidad de índice XML selectivo. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] , para deshabilitar la característica de índice XML selectivo mediante este procedimiento almacenado, la base de datos se debe colocar en el modelo de recuperación simple mediante el comando [ALTER database Set &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

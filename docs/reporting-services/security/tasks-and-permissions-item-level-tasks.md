@@ -1,7 +1,7 @@
 ---
 description: 'Tareas y permisos: tareas de nivel de elemento'
 title: Tareas de nivel de elemento | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 02/04/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -11,14 +11,17 @@ helpviewer_keywords:
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a6ff9b1cef9a4ee7edf5b71d669416921330e5d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 82101577abe86914aff2ac1d5296d7dc176a60b0
+ms.sourcegitcommit: 6f4fb9cfd0cad06127a6328adc745e2ba7c191d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492578"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99570439"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>Tareas y permisos: tareas de nivel de elemento
+  
+  [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+  
   Una tarea de nivel de elemento es una recopilación de permisos que relacionan con un informe, carpeta, modelo de informe, recurso u origen de datos compartido. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] también incluye tareas de nivel de sistema que se aplican en el sitio del servidor de informes en conjunto. Para más información, vea [Tareas de nivel de sistema](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). Para obtener más información acerca de tareas y permisos en general, vea [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
   
 > [!NOTE]  
@@ -31,10 +34,12 @@ ms.locfileid: "88492578"
   
 |Tarea|Se aplica al elemento|Permisos|  
 |----------|---------------------|-----------------|  
+|Comentarios sobre los informes<br />(SSRS 2017 y versiones posteriores, Power BI Report Server)|Informes|Leer propiedades<br /><br /> Crear comentarios<br /><br /> Eliminar comentarios<br /><br /> Leer comentarios<br /><br /> Actualizar comentarios|  
 |Usar informes|Informes|Leer contenido<br /><br /> Leer definiciones de informe<br /><br /> Leer propiedades|  
 |Usar informes|Conjuntos de datos compartidos|Leer contenido<br /><br /> Leer definiciones de informe<br /><br /> Leer propiedades|  
 |Crear informes vinculados|Informes|Crear vínculo<br /><br /> Leer propiedades|  
 |Administrar todas las suscripciones|Informes|Leer propiedades<br /><br /> Leer cualquier suscripción<br /><br /> Crear cualquier suscripción<br /><br /> Eliminar cualquier suscripción<br /><br /> Actualizar cualquier suscripción|  
+|Administración de comentarios<br />(SSRS 2017 y versiones posteriores, Power BI Report Server)|Informes|Leer propiedades<br /><br />Eliminar cualquier comentario|  
 |Administración de orígenes de datos|Carpetas|Crear origen de datos|  
 |Administración de orígenes de datos|Orígenes de datos|Actualizar propiedades<br /><br /> Eliminar contenido de actualización<br /><br /> Leer propiedades|  
 |Administrar carpetas|Carpetas|Creación de la carpeta<br /><br /> Eliminar propiedades de actualización<br /><br /> Leer propiedades|  

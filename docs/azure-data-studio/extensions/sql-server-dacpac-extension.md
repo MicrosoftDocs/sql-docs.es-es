@@ -9,16 +9,16 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: f14aee08f889511af005c4451e4e1431397171a2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: e0cfe057767488eb0a7ddb741934a10410898ffa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123482"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040265"
 ---
 # <a name="sql-server-dacpac-extension"></a>Extensión dacpac de SQL Server
 
-El **Asistente para aplicaciones de capa de datos** proporciona una experiencia de asistente fácil de usar para implementar y extraer archivos dacpac, así como para importar y exportar archivos bacpac.
+El **Asistente para aplicaciones de capa de datos** proporciona una experiencia de asistente fácil de usar al implementar y extraer archivos dacpac, así como importar y exportar archivos bacpac.
 
 ## <a name="features"></a>Características
 
