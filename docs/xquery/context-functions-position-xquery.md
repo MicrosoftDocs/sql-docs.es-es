@@ -35,7 +35,7 @@ ms.locfileid: "100345028"
 fn:position() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , **FN: Position ()** solo se puede usar en el contexto de un predicado dependiente del contexto. Concretamente, solo se puede utilizar entre corchetes ([ ]). Las comparaciones con esta función no reducen la cardinalidad durante una inferencia de tipo estático.  
   
 ## <a name="examples"></a>Ejemplos  
