@@ -347,11 +347,11 @@
         - name: Supervisar el rendimiento del servidor de informes
           href: ../reporting-services/report-server/monitoring-report-server-performance.md
           items:
-            - name: Contadores de rendimiento para los objetos de rendimiento de MSRS 2011 Web Service y MSRS 2011 Windows Service (modo nativo)
+            - name: "Contadores de rendimiento, objetos de rendimiento de MSRS\_2016 Web Service y MSRS\_2016 Windows Service (modo nativo)"
               href: ../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md
-            - name: Contadores de rendimiento para los objetos de rendimiento en modo SharePoint de MSRS 2011 Web Service y SharePoint de MSRS 2011 Windows Service (modo SharePoint)
+            - name: "Contadores de rendimiento, objetos de rendimiento del modo SharePoint de MSRS\_2016 Web Service y MSRS\_2016 Windows Service"
               href: ../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md
-            - name: 'Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service'
+            - name: 'Contadores de rendimiento, objetos de rendimiento ReportServer:Service y ReportServerSharePoint:Service'
               href: ../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md
         - name: Establecer las propiedades del procesamiento de informes
           href: ../reporting-services/report-server/set-report-processing-properties.md

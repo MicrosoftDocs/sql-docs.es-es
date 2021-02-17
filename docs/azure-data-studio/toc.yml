@@ -122,6 +122,8 @@
           href: notebooks/notebooks-kusto-kernel.md
         - name: Uso de Kqlmagic
           href: notebooks/notebooks-kqlmagic.md
+        - name: Uso de parametrización
+          href: notebooks/notebooks-parameterization.md
     - name: Implementación
       items:
         - name: Implementación de Azure SQL Database
