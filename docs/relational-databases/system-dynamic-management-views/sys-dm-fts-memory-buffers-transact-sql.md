@@ -57,7 +57,7 @@ En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos 
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|En|Relación|  
+|From|En|Relación|  
 |----------|--------|------------------|  
 |dm_fts_memory_buffers.pool_id|dm_fts_memory_pools.pool_id|Varios a uno|  
   

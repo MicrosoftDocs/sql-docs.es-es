@@ -39,7 +39,7 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  Secuencia de elementos. Si la secuencia está vacía, la función devuelve True. De lo contrario, la función devuelve False.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La función **FN: exists ()** no se admite. Como alternativa, se puede usar la función **Not ()** .  
   
 ## <a name="examples"></a>Ejemplos  

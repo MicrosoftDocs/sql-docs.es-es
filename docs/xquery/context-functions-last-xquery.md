@@ -35,7 +35,7 @@ ms.locfileid: "100340518"
 fn:last() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  En SQL Server, **FN: Last ()** solo se puede usar en el contexto de un predicado dependiente del contexto. En concreto, solo se puede utilizar entre corchetes (`[ ]`).  
   
 ## <a name="examples"></a>Ejemplos  

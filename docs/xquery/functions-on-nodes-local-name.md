@@ -39,7 +39,7 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  Nombre del nodo cuya parte de nombre local se recuperará.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 -   En SQL Server, **FN: local-name ()** sin un argumento solo se puede usar en el contexto de un predicado dependiente del contexto. En concreto, solo se puede utilizar entre corchetes (`[ ]`).  
   

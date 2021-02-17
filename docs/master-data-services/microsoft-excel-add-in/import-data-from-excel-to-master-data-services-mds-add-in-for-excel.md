@@ -28,7 +28,7 @@ ms.locfileid: "100352757"
 >  -   Al publicar los cambios, se eliminan los comentarios de las celdas administradas por MDS.  
 > -   Una fórmula no se admite en una celda administrada por MDS. Una fórmula en una celda administrada por MDS se trata como un valor de texto.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  

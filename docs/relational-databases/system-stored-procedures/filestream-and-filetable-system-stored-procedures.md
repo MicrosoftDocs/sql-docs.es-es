@@ -37,7 +37,7 @@ ms.locfileid: "100346700"
   Cierra los identificadores de archivos no transaccionales para datos de FileTable.
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Secuencia de archivos](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Vistas de administración dinámica de secuencia de archivo y FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)

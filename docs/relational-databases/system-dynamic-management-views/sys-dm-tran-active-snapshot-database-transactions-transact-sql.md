@@ -50,7 +50,7 @@ ms.locfileid: "100342803"
 > [!NOTE]  
 >  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys.dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
   
@@ -77,7 +77,7 @@ sys.dm_tran_active_snapshot_database_transactions
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, se requiere la cuenta de [Administrador del servidor](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o la cuenta de [Administrador de Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **Sys.dm_tran_active_snapshot_database_transactions** notifica las transacciones que tienen asignado un número de secuencia de la transacción (xsn). Este XSN se asigna cuando la transacción tiene acceso por primera vez al almacén de versiones. En una base de datos habilitada para el aislamiento de instantáneas o el aislamiento de lectura confirmada que utiliza las versiones de fila, los ejemplos muestran cuándo se asigna un valor XSN a una transacción:  
   
 -   Si una transacción se ejecuta con el nivel de aislamiento serializable, se asigna un XSN cuando la transacción ejecuta por primera vez una instrucción, como una operación UPDATE, que provoca la creación de una versión de fila.  

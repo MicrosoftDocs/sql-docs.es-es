@@ -51,7 +51,7 @@ ms.locfileid: "100340734"
 |**inline_type**|**bit**|**Válido para** : [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] y versiones posteriores.<br /><br />Indica si la inserción está activada para el módulo actualmente. <br /><br />0 = la inclusión está desactivada<br /><br /> 1 = la inserción está activada.<br /><br /> En el caso de las UDF escalares, el valor será 1 si la inserción está activada (explícita o implícitamente). El valor siempre será 1 para TVF en línea y 0 para otros tipos de módulo.<br />|  
 
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La expresión SQL de una restricción predeterminada, objeto de tipo D, se encuentra en la vista de catálogo [Sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) . La expresión SQL de una restricción CHECK, objeto de tipo C, se encuentra en la vista de catálogo [Sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) .  
   
  Esta información también se describe en [sys.dm_db_uncontained_entities &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  

@@ -35,7 +35,7 @@ ms.locfileid: "100343102"
   
 ||||  
 |-|-|-|  
-|**Nombre de la columna**|**Tipo**|**Descripción**|  
+|**Nombre de la columna**|**Type**|**Descripción**|  
 |**object_id**|int|Identificador de objeto de la tabla que contiene el índice.|  
 |**fulltext_index_page_count**|**bigint**|Tamaño lógico de la extracción en número de páginas de índice.|  
 |**keyphrase_index_page_count**|**bigint**|Tamaño lógico de la extracción en número de páginas de índice.|  

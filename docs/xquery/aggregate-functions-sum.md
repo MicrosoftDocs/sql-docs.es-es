@@ -39,7 +39,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  *$arg*  
  Secuencia de valores atómicos cuya suma se va a calcular.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Todos los tipos de valores atomizados que se pasan a **SUM ()** deben ser subtipos del mismo tipo base. Los tipos base aceptados son los tres tipos numéricos base integrados o xdt:untypedAtomic. Los valores del tipo xdt:untypedAtomic se convierten a xs:double. Si hay una combinación de estos tipos, o si se pasan otros valores de otros tipos, se genera un error estático.  
   
  El resultado de **SUM ()** recibe el tipo base de los tipos pasados, como XS: Double en el caso de XDT: untypedAtomic, incluso si la entrada es opcionalmente la secuencia vacía. Si se trata de una entrada vacía estática, el resultado es 0 con el tipo estático y dinámico xs:integer.  

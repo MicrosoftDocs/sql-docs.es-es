@@ -27,7 +27,7 @@ ms.locfileid: "100339032"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine una vista de suscripción cuando ya no se necesite. Al eliminar una vista de suscripción en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , la vista se quita de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . También puede editar una vista de suscripción.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de integraciones** . Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  

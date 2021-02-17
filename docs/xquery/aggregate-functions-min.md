@@ -39,7 +39,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Secuencia de elementos de los cuales se devolverá el valor mínimo.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Todos los tipos de valores atomizados que se pasan a **min ()** deben ser subtipos del mismo tipo base. Los tipos base aceptados son los tipos que admiten la operación **gt** . Entre estos tipos se incluyen los tres tipos base numéricos integrados, los tipos base de fecha y hora, xs:string, xs:boolean y xdt:untypedAtomic. Los valores del tipo xdt:untypedAtomic se convierten a xs:double. Si hay una combinación de estos tipos, o si se pasan otros valores de otros tipos, se genera un error estático.  
   
  El resultado de **min ()** recibe el tipo base de los tipos pasados, como XS: Double en el caso de XDT: untypedAtomic. Si la entrada se encuentra estáticamente vacía, se considera implícitamente vacía y se devuelve un error estático.  

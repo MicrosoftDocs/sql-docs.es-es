@@ -42,7 +42,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  *$arg 2*  
  Subcadena que se va a buscar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si el valor de *$arg 2* es una cadena de longitud cero, la función devuelve **true**. Si el valor de *$ARG 1* es una cadena de longitud cero y el valor de *$arg 2* no es una cadena de longitud cero, la función devuelve **false**.  
   
  Si el valor de *$ARG 1* o *$arg 2* es la secuencia vacía, el argumento se trata como la cadena de longitud cero.  

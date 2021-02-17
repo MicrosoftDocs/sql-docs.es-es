@@ -58,10 +58,10 @@ ms.locfileid: "100344322"
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, se requiere la cuenta de [Administrador del servidor](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o la cuenta de [Administrador de Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
    
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sys.dm_os_buffer_descriptors devuelve páginas que utiliza la base de datos de recursos. sys.dm_os_buffer_descriptors no devuelve información acerca de las páginas liberadas o robadas, o de las páginas que tenían errores cuando se leyeron.  
   
-|De|En|Activado|Relación|  
+|From|En|Activado|Relación|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|varios a uno|  
 |sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|varios a uno|  

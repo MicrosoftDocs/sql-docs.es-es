@@ -40,7 +40,7 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  Cadena de origen cuya longitud se va a calcular.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si el valor de *$arg* es una secuencia vacía, se devuelve un valor **xs: Integer** de 0.  
   
  El comportamiento de los pares suplentes en funciones XQuery depende del nivel de compatibilidad de la base de datos. Si el nivel de compatibilidad es 110 o superior, cada par suplente se cuenta como un carácter individual. Para los niveles de compatibilidad inferiores, se cuentan como dos caracteres. Para obtener más información, vea [nivel de compatibilidad de Alter database &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Intercalación y compatibilidad con Unicode](../relational-databases/collations/collation-and-unicode-support.md).  

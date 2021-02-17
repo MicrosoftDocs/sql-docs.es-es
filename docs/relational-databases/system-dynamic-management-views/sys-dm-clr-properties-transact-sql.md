@@ -69,7 +69,7 @@ ms.locfileid: "100352695"
   
  El **estado detenida de CLR** solo aparece cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está cerrando.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las propiedades y los valores de esta vista pueden cambiar en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debido a las mejoras de la funcionalidad de integración de CLR.  
   
 ## <a name="permissions"></a>Permisos  

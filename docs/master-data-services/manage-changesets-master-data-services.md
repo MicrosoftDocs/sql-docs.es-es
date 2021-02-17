@@ -24,7 +24,7 @@ ms.locfileid: "100338184"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] puede administrar todos los cambios por modelo y versión.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** . Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   

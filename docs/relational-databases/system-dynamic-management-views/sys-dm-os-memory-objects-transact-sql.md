@@ -64,7 +64,7 @@ ms.locfileid: "100338891"
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, se requiere la cuenta de [Administrador del servidor](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o la cuenta de [Administrador de Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los objetos de memoria son montones. Proporcionan asignaciones con una granularidad más fina que las que proporcionan los distribuidores de memoria. Los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan objetos de memoria en lugar de distribuidores de memoria. Los objetos de memoria utilizan la interfaz del asignador de la página del distribuidor de memoria para asignar páginas. Los objetos de memoria no utilizan interfaces de memoria virtual o compartida. Según los patrones de asignación, los componentes pueden crear diferentes tipos de objetos de memoria para asignar regiones de tamaño arbitrario.  
   
  El tamaño de página típico de un objeto de memoria es de 8 KB. No obstante, los objetos de memoria incrementales pueden tener tamaños de página que van desde 512 bytes hasta 8 KB.  

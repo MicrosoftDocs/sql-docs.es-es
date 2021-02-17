@@ -27,7 +27,7 @@ ms.locfileid: "100341439"
 > [!NOTE]  
 >  La validación de datos aparece automáticamente al publicar datos. Para obtener más información, consulte [Validación &#40;Master Data Services&#41;](../../master-data-services/validation-master-data-services.md).  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe tener acceso al área funcional **Explorador** .  

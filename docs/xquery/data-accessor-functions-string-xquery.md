@@ -40,7 +40,7 @@ fn:string($arg as item()?) as xs:string
  *$arg*  
  Es un nodo o un valor atómico.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 -   Si *$arg* es la secuencia vacía, se devuelve la cadena de longitud cero.  
   

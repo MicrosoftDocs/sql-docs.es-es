@@ -110,9 +110,9 @@ Esta acción instala:
 
 1. Abra [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] y, a continuación, seleccione **configuración de base de datos** en el panel izquierdo.
 
-1. Seleccione **crear base de datos** para abrir el **Asistente para crear bases de datos**. Seleccione **Siguiente**.
+1. Seleccione **crear base de datos** para abrir el **Asistente para crear bases de datos**. Seleccione **Next** (Siguiente).
 
-1. En la página **servidor de base de datos** , complete el campo instancia de **SQL Server** y, a continuación, elija el tipo de **autenticación**. Seleccione **probar conexión** para confirmar que puede usar sus credenciales para conectarse a la base de datos mediante el tipo de autenticación elegido. Seleccione **Siguiente**.
+1. En la página **servidor de base de datos** , complete el campo instancia de **SQL Server** y, a continuación, elija el tipo de **autenticación**. Seleccione **probar conexión** para confirmar que puede usar sus credenciales para conectarse a la base de datos mediante el tipo de autenticación elegido. Seleccione **Next** (Siguiente).
 
    > [!NOTE]
    > - Una instancia de SQL Server tiene el siguiente aspecto `xxxxxxx.xxxxxxx.database.windows.net` .
@@ -123,7 +123,7 @@ Esta acción instala:
 
    ![Captura de pantalla de la página servidor de base de datos del Asistente para crear bases de datos.](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "MDS-SQLServer2019-config-MI_CreateDBConnect")  
 
-1. Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desactive la casilla **SQL Server intercalación predeterminada** y seleccione una o varias de las opciones disponibles. Por ejemplo, **distingue mayúsculas de minúsculas**. Seleccione **Siguiente**.
+1. Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desactive la casilla **SQL Server intercalación predeterminada** y seleccione una o varias de las opciones disponibles. Por ejemplo, **distingue mayúsculas de minúsculas**. Seleccione **Next** (Siguiente).
 
    ![Captura de pantalla de la página base de datos del Asistente para crear bases de datos.](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "MDS-SQLServer2019-config-MI_CreatedDBName")
 
@@ -228,7 +228,7 @@ Para corregir este problema, debe actualizar la versión de la base de datos:
 
 1. Seleccione **Finalizar** una vez completadas todas las tareas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Base de datos de Master Data Services](../master-data-services/master-data-services-database.md)
 - [Aplicación web Master Data Services](../master-data-services/master-data-manager-web-application.md)

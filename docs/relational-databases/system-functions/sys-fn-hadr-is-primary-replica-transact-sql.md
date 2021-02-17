@@ -48,7 +48,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ## <a name="returns"></a>Devoluciones  
  Devuelve el tipo de datos **bool**: 1 si la base de datos de la instancia actual es la réplica principal, de lo contrario, es 0.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Utilice esta función para determinar fácilmente si la instancia local hospeda la réplica principal de la base de datos de disponibilidad especificada. El código de ejemplo podría ser similar al siguiente.  
   
 ```sql

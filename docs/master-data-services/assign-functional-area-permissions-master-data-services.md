@@ -27,7 +27,7 @@ ms.locfileid: "100339537"
 
   Asigne el permiso de área funcional para conceder a los usuarios o grupos acceso a las áreas funcionales de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional **Permisos de usuario y de grupo** .  

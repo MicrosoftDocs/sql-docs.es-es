@@ -33,7 +33,7 @@ ms.locfileid: "100339005"
 > [!NOTE]  
 >  No puede eliminar un miembro si se utiliza como un valor de atributo basado en dominio para otro miembro.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  

@@ -50,7 +50,7 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
 ## <a name="returns"></a>Devoluciones  
  Devuelve el tipo de datos **bool**: 1 si la base de datos de la instancia actual está en la réplica preferida; en caso contrario, es 0.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Utilice esta función en un script de copia de seguridad para determinar si la base de datos actual está en la réplica preferida para las copias de seguridad. Puede ejecutar un script en cada réplica de disponibilidad. Cada uno de estos trabajos examina los mismos datos para determinar qué trabajo debe ejecutarse, por lo que solamente los trabajos programados pasan a la etapa de copia de seguridad. El código de ejemplo podría ser similar al siguiente.  
   
 ```  

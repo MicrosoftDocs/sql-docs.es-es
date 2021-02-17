@@ -74,7 +74,7 @@ ms.locfileid: "100342881"
 |**max_page_server_reads**|**bigint**|Número máximo de lecturas del servidor de páginas que ha realizado este desencadenador durante una ejecución.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
 
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, se filtran todas las filas que contienen datos que no pertenecen al inquilino conectado.  
 
 Cuando se completa una consulta, se actualizan las estadísticas en la vista.  

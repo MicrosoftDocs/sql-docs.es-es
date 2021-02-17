@@ -26,7 +26,7 @@ ms.locfileid: "100272886"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede cambiar la dirección de correo electrónico a la que se envían las notificaciones y el formato predeterminado del correo electrónico de notificación.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional de **Usuarios y grupos** .  

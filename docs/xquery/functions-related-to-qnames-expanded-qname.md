@@ -41,7 +41,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  Es la parte local del nombre de QName.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Lo siguiente se aplica a la función **Expanded-QName ()** :  
   
 -   Si el valor de *$paramLocal* especificado no tiene el formato léxico correcto para el tipo XS: NCName, se devuelve la secuencia vacía y representa un error dinámico.  

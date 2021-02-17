@@ -46,7 +46,7 @@ Devuelve información acerca de todas las esperas de bloqueos temporales organiz
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, se requiere la cuenta de [Administrador del servidor](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o la cuenta de [Administrador de Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sys.dm_os_latch_stats se puede utilizar para identificar el origen de la contención del bloqueo temporal examinando los tiempos y números de esperas relativos en las diferentes clases de bloqueos temporales. En algunas situaciones, se puede resolver o reducir la contención de bloqueos temporales. No obstante, puede haber situaciones que requerirán ponerse en contacto con los servicios de soporte al cliente de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 Puede restablecer el contenido de sys.dm_os_latch_stats utilizando `DBCC SQLPERF` de la forma siguiente:  

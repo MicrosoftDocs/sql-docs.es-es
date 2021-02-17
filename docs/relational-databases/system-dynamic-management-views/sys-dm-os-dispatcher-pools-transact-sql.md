@@ -38,7 +38,7 @@ ms.locfileid: "100338868"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |dispatcher_pool_address|**varbinary(8**|Dirección del grupo de distribuidores. dispatcher_pool_address es única. No admite valores NULL.|  
-|tipo|**nvarchar(256)**|El tipo del grupo de distribuidores. No admite valores NULL. Hay dos tipos de grupos de distribuidores:<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> Consultar la DMV para obtener la lista completa|  
+|type|**nvarchar(256)**|El tipo del grupo de distribuidores. No admite valores NULL. Hay dos tipos de grupos de distribuidores:<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> Consultar la DMV para obtener la lista completa|  
 |name|**nvarchar(256)**|El nombre del grupo de distribuidores. No admite valores NULL.|  
 |dispatcher_count|**int**|El número de subprocesos de distribución activos. No admite valores NULL.|  
 |dispatcher_ideal_count|**int**|El número de subprocesos de distribución que el grupo de distribuidores puede incrementar. No admite valores NULL.|  

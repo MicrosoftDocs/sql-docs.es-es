@@ -30,7 +30,7 @@ SSMA Extension Pack implementa procedimientos almacenados extendidos y agrega la
 
 Además, al migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA crea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajos del agente cuando se usa el motor de migración de datos del lado servidor para migrar los datos.
 
-### <a name="prerequisites"></a>Requisitos previos
+### <a name="prerequisites"></a>Prerrequisitos
 
 Antes de instalar SSMA para los componentes de servidor de Oracle en, asegúrese de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el sistema cumple los requisitos siguientes:
 
@@ -110,7 +110,7 @@ También se agregarán los siguientes procedimientos almacenados extendidos a la
 - `xp_ora2ms_exec2_ex`
 - `xp_ora2ms_versioninfo2`
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instalación de SSMA para el cliente de Oracle](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)
 - [Migrar bases de datos de Oracle a SQL Server](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)

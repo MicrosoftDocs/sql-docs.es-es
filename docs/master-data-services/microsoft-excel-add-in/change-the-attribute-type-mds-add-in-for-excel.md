@@ -29,7 +29,7 @@ ms.locfileid: "100272466"
 > [!NOTE]  
 >   No se puede actualizar el tipo o la longitud de las columnas **Nombre** o **Código** .  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso a las áreas funcionales del **Explorador** y de **Administración del sistema** .  

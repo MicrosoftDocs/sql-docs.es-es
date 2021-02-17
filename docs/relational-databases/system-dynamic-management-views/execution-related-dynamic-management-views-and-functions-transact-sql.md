@@ -117,7 +117,7 @@ ms.locfileid: "100344370"
 :::row-end:::
 
 > [!NOTE]  
->  La vista de administración dinámica **Sys.dm_exec_query_transformation_stats** se identifica solo con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.  
+>  La vista de administración dinámica **Sys.dm_exec_query_transformation_stats** se identifica solo con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.  
   
 ## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

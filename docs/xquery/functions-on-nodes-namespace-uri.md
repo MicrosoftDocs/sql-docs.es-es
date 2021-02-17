@@ -39,7 +39,7 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  Nombre del nodo cuya parte del URI del espacio de nombres se va a recuperar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 -   Si se omite este argumento, el valor predeterminado es el nodo del contexto.  
   

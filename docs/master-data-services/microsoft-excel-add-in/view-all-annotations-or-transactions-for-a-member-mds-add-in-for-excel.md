@@ -24,7 +24,7 @@ ms.locfileid: "100340373"
 
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede ver las anotaciones (comentarios) y las transacciones de las filas de datos (miembros) cuando quiera ver actualizaciones de los datos a través del tiempo.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe tener una hoja de cálculo activa que contenga datos administrados por MDS.  

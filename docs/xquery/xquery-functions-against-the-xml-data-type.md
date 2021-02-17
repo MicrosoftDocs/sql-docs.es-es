@@ -33,7 +33,7 @@ ms.locfileid: "100352817"
   
  En la tabla siguiente se enumeran las funciones de XQuery que se admiten con el tipo de datos **XML**.  
   
-|Categoría|Nombre de la función|  
+|Category|Nombre de la función|  
 |--------------|-------------------|  
 |[Funciones en valores numéricos]()|[umbral](../xquery/numeric-values-functions-ceiling.md)|  
 ||[floor](../xquery/numeric-values-functions-floor.md)|  

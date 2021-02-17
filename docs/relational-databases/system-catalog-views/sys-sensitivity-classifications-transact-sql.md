@@ -50,7 +50,7 @@ Devuelve una fila por cada elemento clasificado en la base de datos.
 |**rank_desc**|**sysname**|Representación textual del rango:  <br><br>NINGUNO, BAJO, MEDIO, ALTO, CRÍTICO|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
 - Esta vista proporciona visibilidad en el estado de clasificación de la base de datos. Se puede usar para administrar las clasificaciones de la base de datos, así como para generar informes.
 - Actualmente solo se admite la clasificación de columnas de base de datos.

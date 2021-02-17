@@ -40,7 +40,7 @@ fn:number($arg as node()?) as xs:double?
  *$arg*  
  Nodo cuyo valor se devolverá como un número.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si no se especifica *$arg* , se devuelve el valor numérico del nodo de contexto, convertido en Double. En SQL Server, **FN: Number ()** sin un argumento solo se puede usar en el contexto de un predicado dependiente del contexto. En concreto, solo se puede utilizar entre corchetes ([ ]). Por ejemplo, la siguiente expresión devuelve el `ROOT` elemento <>.  
   
 ```  

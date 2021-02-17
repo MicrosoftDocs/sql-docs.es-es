@@ -67,7 +67,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  Si @vardecimal_storage_format no se proporciona el argumento, devuelve el nombre de la base de datos de columnas y el estado vardecimal.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_db_vardecimal_storage_format devuelve el estado vardecimal pero no lo puede cambiar.  
   
  sp_db_vardecimal_storage_format será incorrecto en las siguientes circunstancias:  

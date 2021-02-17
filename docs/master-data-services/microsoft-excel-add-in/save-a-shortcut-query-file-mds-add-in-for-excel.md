@@ -24,7 +24,7 @@ ms.locfileid: "100340386"
 
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede guardar un archivo de consulta de método abreviado cuando necesite tener acceso con frecuencia al mismo conjunto de datos.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   La hoja de cálculo activa debe contener datos administrados por MDS en el formato que desee. Por ejemplo, debería ver las columnas en el orden que se desea, con los filtros aplicados. Para obtener más información, consulte [Filtrar los datos antes de exportar &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md) y [Reordenar columnas &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md).  

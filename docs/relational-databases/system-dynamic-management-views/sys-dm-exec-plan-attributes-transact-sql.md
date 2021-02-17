@@ -84,7 +84,7 @@ En la tabla anterior, el **atributo** puede tener los valores siguientes:
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, se requiere la cuenta de [Administrador del servidor](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o la cuenta de [Administrador de Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="set-options"></a>Opciones de Set  
  Las copias del mismo plan compilado solo pueden diferir en el valor de la columna **set_options** . Esto indica que las diferentes conexiones usan conjuntos distintos de opciones SET para la misma consulta. El uso de conjuntos de opciones distintos no suele ser aconsejable porque puede ocasionar compilaciones adicionales, una menor reutilización de los planes y la inflación de la caché de los planes debido a que hay varias copias de los planes en la caché.  
@@ -92,7 +92,7 @@ En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos 
 ### <a name="evaluating-set-options"></a>Evaluar las opciones de Set  
  Para traducir el valor devuelto en **set_options** a las opciones con las que se compiló el plan, reste los valores del valor **set_options** , empezando por el mayor valor posible, hasta que llegue a 0. Cada valor que reste se corresponde con una opción que se usó en el plan de consulta. Por ejemplo, si el valor de **set_options** es 251, las opciones con las que se compiló el plan son ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS (32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), paralelo plan (2) y ANSI_PADDING (1).  
   
-|Opción|Valor|  
+|Opción|Value|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |ParallelPlan<br /><br /> Indica que las opciones de paralelismo del plan han cambiado.|2|  
@@ -120,7 +120,7 @@ En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos 
 ### <a name="evaluating-cursor-options"></a>Evaluar las opciones de los cursores  
  Para traducir el valor devuelto en **required_cursor_options** y **acceptable_cursor_options** a las opciones con las que se compiló el plan, reste los valores del valor de la columna, empezando por el mayor valor posible, hasta que llegue a 0. Cada valor que reste se corresponde con una opción de cursor que se usó en el plan de consulta.  
   
-|Opción|Valor|  
+|Opción|Value|  
 |------------|-----------|  
 |None|0|  
 |INSENSITIVE|1|  

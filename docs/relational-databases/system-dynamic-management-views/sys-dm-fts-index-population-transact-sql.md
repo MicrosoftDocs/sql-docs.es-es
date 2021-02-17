@@ -55,7 +55,7 @@ ms.locfileid: "100345306"
 |**start_time**|**datetime**|Hora en que se inició el rellenado.|  
 |**incremental_timestamp**|**timestamp**|Representa la marca de tiempo de inicio de un llenado completo. Para los otros de tipos de llenado este valor es el último punto de comprobación confirmado que representa el progreso de los llenados.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando la indización semántica estadística está habilitada además de la indización de texto completo, la extracción y el rellenado de frases clave semánticas y la extracción de datos de similitud de documentos se producen simultáneamente con la indización de texto completo. El rellenado del índice de similitud de documentos se produce posteriormente en una segunda fase. Para obtener más información, vea [administrar y supervisar la búsqueda semántica](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
 ## <a name="permissions"></a>Permisos  
@@ -68,7 +68,7 @@ En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos 
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|En|Relación|  
+|From|En|Relación|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Uno a uno|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Uno a uno|  

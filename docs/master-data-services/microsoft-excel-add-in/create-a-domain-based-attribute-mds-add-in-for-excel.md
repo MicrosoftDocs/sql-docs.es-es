@@ -29,7 +29,7 @@ ms.locfileid: "100272426"
 > [!NOTE]  
 >   Si los usuarios escriben un valor en la columna restringida, en lugar de seleccionarlo en la lista, los errores aparecen en la columna **$InputStatus$** al publicar.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso a las áreas funcionales del **Explorador** y de **Administración del sistema** .  

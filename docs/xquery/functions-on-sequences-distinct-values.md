@@ -39,7 +39,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  *$arg*  
  Secuencia de valores atómicos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Todos los tipos de valores atomizados que se pasan a **DISTINCT-Values ()** deben ser subtipos del mismo tipo base. Los tipos base aceptados son los tipos que admiten la operación **EQ** . Entre estos tipos se incluyen los tres tipos base numéricos integrados, los tipos base de fecha y hora, xs:string, xs:boolean y xdt:untypedAtomic. Los valores de tipo xdt:untypedAtomic se convierten en xs:string. Si hay un mezcla de estos tipos, o si se pasan otros valores de otros tipos, se produce un error estático.  
   
  El resultado de **DISTINCT-Values ()** recibe el tipo base de los tipos pasados, como XS: String en el caso de XDT: untypedAtomic, con la cardinalidad original. Si la entrada está vacía estáticamente, el vacío es implícito y se genera un error estático.  

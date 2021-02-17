@@ -29,7 +29,7 @@ ms.locfileid: "100338985"
   
 -   **Nota** Cuando existan grupos de atributos, los atributos que no pertenezcan a un grupo de atributos no se muestran en el **explorador**. Cuando no existe ningún grupo de atributos, se muestran todos.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  

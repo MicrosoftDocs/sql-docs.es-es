@@ -56,7 +56,7 @@ ms.locfileid: "100345324"
 |**row_count_in_thousands**|**int**|Número de filas estimado (en miles) en todos los índices de texto completo en este catálogo de texto completo.|  
 |**is_importing**|**bit**|Indica si se va a importar el catálogo de texto completo:<br /><br /> 1 = Se va a importar el catálogo.<br /><br /> 2 = No se va a importar el catálogo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La columna de is_importing era nueva en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 ## <a name="permissions"></a>Permisos  
@@ -69,7 +69,7 @@ En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos 
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|En|Relación|  
+|From|En|Relación|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Uno a uno|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Uno a uno|  

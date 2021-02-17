@@ -27,7 +27,7 @@ ms.locfileid: "100341428"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una entidad para contener los miembros y sus atributos.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -73,7 +73,7 @@ ms.locfileid: "100341428"
 |Nombre|Descripción|  
 |----------|-----------------|  
 |Estado|El estado de la entidad. Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la entidad se está actualizando.<br /><br /> ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización")<br /><br /> Si se producen errores al crear o editar una entidad, se muestra la imagen siguiente.<br /><br /> ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto")|  
-|nombre|El nombre de la entidad.|  
+|Nombre|El nombre de la entidad.|  
 |Descripción|La descripción de la entidad.|  
 |Tabla de ensayo|El nombre de prefijo de la tabla que se usa para almacenar datos.|  
 |Tipo de registro de transacciones|El tipo de registro de transacciones de la entidad.|  

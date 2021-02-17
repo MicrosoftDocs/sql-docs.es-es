@@ -43,7 +43,7 @@ ms.locfileid: "100345603"
   
  Cuando se reactiva un miembro o colección, se restauran todas las transacciones anteriores.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], debe disponer de permiso para el área funcional **Administración de versiones** .  

@@ -30,7 +30,7 @@ ms.locfileid: "100340225"
 > [!NOTE]  
 >  También debe limitar el uso de caracteres especiales (símbolos, guiones, etc.).  
   
--   [Models](../master-data-services/reserved-words-master-data-services.md#models)  
+-   [Modelos](../master-data-services/reserved-words-master-data-services.md#models)  
   
 -   [Entidades](../master-data-services/reserved-words-master-data-services.md#entities)  
   

@@ -45,7 +45,7 @@ ms.locfileid: "100349338"
   
  Los operadores generales se definen en la tabla siguiente.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |=|Igual|  
 |!=|No igual a|  
@@ -140,7 +140,7 @@ WHERE ContactID=1
   
  Los operadores de comparación de valores se definen en la tabla siguiente.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |eq|Igual|  
 |ne|No igual a|  

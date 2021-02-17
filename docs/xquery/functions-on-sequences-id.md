@@ -39,7 +39,7 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Uno o varios valores xs:IDREF.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El resultado de la función es una secuencia de elementos de la instancia XML, en el orden del documento, que tiene un valor xs:ID equivalente a uno o varios de los valores xs:IDREF de la lista de posibles valores xs:IDREF.  
   
  Si el valor xs:IDREF no coincide con ningún elemento, la función devolverá la secuencia vacía.  

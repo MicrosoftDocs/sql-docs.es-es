@@ -39,7 +39,7 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  Elementos que se deben contar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Devuelve 0 si *$arg* es una secuencia vacía.  
   
 ## <a name="examples"></a>Ejemplos  

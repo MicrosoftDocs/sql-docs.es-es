@@ -52,7 +52,7 @@ En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos 
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|En|Relación|  
+|From|En|Relación|  
 |----------|--------|------------------|  
 |dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|Varios a uno|  
   

@@ -39,7 +39,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Secuencia de valores atómicos a partir de la cual se va a devolver el valor máximo.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Todos los tipos de valores atomizados que se pasan a **Max ()** deben ser subtipos del mismo tipo base. Los tipos base aceptados son los tipos que admiten la operación **gt** . Entre estos tipos se incluyen los tres tipos base numéricos integrados, los tipos base de fecha y hora, xs:string, xs:boolean y xdt:untypedAtomic. Los valores del tipo xdt:untypedAtomic se convierten a xs:double. Si hay una combinación de estos tipos, o si se pasan otros valores de otros tipos, se genera un error estático.  
   
  El resultado de **Max ()** recibe el tipo base de los tipos pasados, como XS: Double en el caso de XDT: untypedAtomic. Si la entrada está vacía estáticamente, el vacío es implícito y se genera un error estático.  

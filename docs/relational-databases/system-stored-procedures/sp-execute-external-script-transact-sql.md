@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` Una lista de valores para los parámetros de entrada utilizados por el script externo.  
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 > [!IMPORTANT]
 > El árbol de consultas se controla mediante el aprendizaje automático de SQL y los usuarios no pueden realizar operaciones arbitrarias en la consulta.

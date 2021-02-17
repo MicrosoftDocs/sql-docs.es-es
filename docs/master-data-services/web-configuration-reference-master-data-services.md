@@ -46,7 +46,7 @@ ms.locfileid: "100348887"
 ## <a name="masterdataservices-element"></a>Elemento masterDataServices  
  El **\<masterDataServices>** elemento es un elemento personalizado que se utiliza para conectar un [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] servicio Web a una [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos.  
   
-### <a name="syntax"></a>Syntax  
+### <a name="syntax"></a>Sintaxis  
   
 ```  
 <masterDataServices>  

@@ -64,7 +64,7 @@ ms.locfileid: "100343116"
 |**last_system_update**|**datetime**|Hora en que el sistema realizó la última actualización.|  
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cada búsqueda, recorrido o actualización en el índice especificado realizado por una ejecución de la consulta se cuenta como un uso de ese índice e incrementa el contador correspondiente en esa vista. Se ofrece información tanto de las operaciones causadas por las consultas emitidas por el usuario, como de las consultas generadas internamente, tales como los recorridos realizados para recopilar estadísticas.  
   
  El contador de **user_updates** indica el nivel de mantenimiento en el índice causado por operaciones de inserción, actualización o eliminación en la vista o tabla subyacente. Puede utilizar esta vista para determinar los índices que las aplicaciones apenas utilizan. También puede utilizar esta vista para determinar los índices que producen una sobrecarga de mantenimiento. Puede considerar la opción de quitar los índices que produzcan esta sobrecarga, pero que no se utilicen para consultas o se usen con poca frecuencia.  

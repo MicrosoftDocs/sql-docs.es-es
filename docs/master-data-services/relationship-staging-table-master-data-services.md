@@ -30,7 +30,7 @@ ms.locfileid: "100353702"
 ##  <a name="table-columns"></a><a name="TableColumns"></a> Columnas de la tabla  
  En la tabla siguiente se explica para qué se usa cada uno de los campos de la tabla de ensayo Relationship.  
   
-|Nombre de columna|Descripción|Valor|  
+|Nombre de columna|Descripción|Value|  
 |-----------------|-----------------|-----------|  
 |**Id**|Identificador asignado automáticamente.|No especifique ningún valor en este campo. Si no se ha procesado el lote, este campo está en blanco.|  
 |**RelationshipType**|Obligatorio<br /><br /> Tipo de relación que se está estableciendo.|Los valores posibles son:<br /><br /> **1**: primario<br /><br /> **2**: relacionado (del mismo nivel)|  
@@ -40,7 +40,7 @@ ms.locfileid: "100353702"
 |**HierarchyName**|Obligatorio<br /><br /> Nombre de jerarquía explícita. Cada miembro consolidado solo puede pertenecer a una jerarquía.||  
 |**ParentCode**|Obligatorio<br /><br /> Para las relaciones de elementos primarios y secundarios, el código del miembro consolidado que será el elemento primario del miembro secundario hoja o consolidado.<br /><br /> Para las relaciones relacionadas, el código de uno de los miembros relacionados.||  
 |**ChildCode**|Obligatorio<br /><br /> Para las relaciones de elementos primarios y secundarios, el código del miembro consolidado u hoja que será el elemento secundario.<br /><br /> Para las relaciones relacionadas, el código de uno de los miembros relacionados.||  
-|**Criterio de ordenación**|Opcionales<br /><br /> Entero que indica el orden del miembro en relación con los demás miembros bajo el elemento primario. Cada miembro secundario debe tener un identificador único.||  
+|**Criterio de ordenación**|Opcional<br /><br /> Entero que indica el orden del miembro en relación con los demás miembros bajo el elemento primario. Cada miembro secundario debe tener un identificador único.||  
 |**ErrorCode**|Muestra un código de error. Para todos los registros con un **ImportStatus_ID** de **2**, consulte [Errores del proceso de almacenamiento provisional &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md).||  
   
 ## <a name="see-also"></a>Consulte también  

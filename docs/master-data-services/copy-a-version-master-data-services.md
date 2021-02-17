@@ -27,7 +27,7 @@ ms.locfileid: "100272746"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], copie una versión del modelo para crear una nueva versión del mismo.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de versiones** .  

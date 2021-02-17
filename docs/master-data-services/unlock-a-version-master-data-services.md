@@ -27,7 +27,7 @@ ms.locfileid: "100336231"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], desbloquee una versión de un modelo para permitir cambios en los miembros del modelo y en sus atributos.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de versiones** .  

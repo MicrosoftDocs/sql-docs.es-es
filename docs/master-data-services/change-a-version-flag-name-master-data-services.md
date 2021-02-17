@@ -26,7 +26,7 @@ ms.locfileid: "100272896"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se puede cambiar el nombre de una marca de versión.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de versiones** .  

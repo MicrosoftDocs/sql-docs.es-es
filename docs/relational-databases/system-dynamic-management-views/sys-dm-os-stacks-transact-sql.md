@@ -43,7 +43,7 @@ ms.locfileid: "100344305"
 |**frame_index**|**int**|Cada línea representa una llamada de función que, cuando se ordena en orden ascendente por índice de marco para un **stack_address** determinado, devuelve la pila de llamadas completa. No admite valores NULL.|  
 |**frame_address**|**varbinary(8**|Dirección de la llamada a función. No admite valores NULL.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **Sys.dm_os_stacks** requiere que los símbolos del servidor y otros componentes estén presentes en el servidor para mostrar la información correctamente.  
   
 ## <a name="permissions"></a>Permisos

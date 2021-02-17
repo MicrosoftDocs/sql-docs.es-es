@@ -132,7 +132,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
 
     >  [!INCLUDE[sqlv15](../includes/sssql19-md.md)] agrega compatibilidad con Instancia administrada de SQL Server. Establezca el valor de **SQL Server instancia** en el host de la instancia administrada. Por ejemplo, `xxxxxx.xxxxxx.database.windows.net`.
 
-4. Seleccione el **tipo de autenticación** y, a continuación, haga clic en **conexión de prueba** para confirmar que puede conectarse a la base de datos con las credenciales del tipo de autenticación que ha seleccionado. Haga clic en **Siguiente**.
+4. Seleccione el **tipo de autenticación** y, a continuación, haga clic en **conexión de prueba** para confirmar que puede conectarse a la base de datos con las credenciales del tipo de autenticación que ha seleccionado. Haga clic en **Next**.
 
     >Para [!INCLUDE[sqlv15](../includes/sssql19-md.md)] , para conectarse a la instancia administrada, use uno de los siguientes tipos de autenticación:
     >
@@ -146,7 +146,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desmarque la casilla **Intercalación predeterminada de SQL Server** y haga clic en una o varias de las opciones disponibles, como **Distinguir mayúsculas de minúsculas**. Haga clic en **Siguiente**.
+4.  Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desmarque la casilla **Intercalación predeterminada de SQL Server** y haga clic en una o varias de las opciones disponibles, como **Distinguir mayúsculas de minúsculas**. Haga clic en **Next**.
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   

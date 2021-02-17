@@ -50,7 +50,7 @@ fn:substring($sourceString as xs:string?,
  *$length*  
  [opcional] Número de caracteres que se va a recuperar. Si no se especifica, devuelve todos los caracteres de la ubicación especificada en *$startingLoc* hasta el final de la cadena.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La versión de la función con tres argumentos devuelve los caracteres de `$sourceString` cuya posición `$p` sea:  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  

@@ -26,7 +26,7 @@ ms.locfileid: "100347755"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede agregar miembros hoja y consolidados a una colección.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  

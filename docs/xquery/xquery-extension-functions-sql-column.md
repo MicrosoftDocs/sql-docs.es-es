@@ -39,7 +39,7 @@ ms.locfileid: "100341877"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Tenga en cuenta que la referencia a una columna especificada en la función **SQL: column ()** dentro de una expresión XQuery hace referencia a una columna de la fila que se está procesando.  
   
  En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , solo se puede hacer referencia a una instancia **XML** en el contexto de la expresión de origen de una instrucción INSERT de XML-DML; de lo contrario, no se puede hacer referencia a columnas que son de tipo **XML** o un tipo definido por el usuario CLR.  

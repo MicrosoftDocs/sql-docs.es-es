@@ -24,7 +24,7 @@ En este artículo se proporcionan vínculos directos para descargar bases de dat
 
 Para obtener más información sobre los ejemplos, vea el [repositorio de github de ejemplos](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases). 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2019) o [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) o [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)

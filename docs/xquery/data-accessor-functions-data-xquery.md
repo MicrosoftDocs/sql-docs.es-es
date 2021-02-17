@@ -39,7 +39,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
  *$arg*  
  Secuencia de elementos cuyos valores con tipo van a devolverse.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La siguiente información se aplica a los valores con tipo:  
   
 -   El valor con tipo de un valor atómico es el propio valor atómico.  

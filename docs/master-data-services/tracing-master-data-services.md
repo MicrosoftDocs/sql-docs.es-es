@@ -67,7 +67,7 @@ ms.locfileid: "100341407"
     |CorrelationID|Se asigna un identificador de correlación para cada solicitud. Todos los seguimientos desencadenados por esta solicitud compartirán el mismo identificador de correlación.<br /><br /> Cuando se produce un error en la interfaz de usuario, aparece el identificador de correlación en el mensaje de error.|  
     |Operación|Nombre de la operación de solicitud. Si la solicitud es una solicitud de interfaz de usuario web, el nombre de la operación es la dirección URL. Si la solicitud es una solicitud de API, el nombre de la operación es el nombre del servicio.|  
     |Nivel|Nivel de esta entrada de seguimiento.|  
-    |Mensaje|Cuerpo del mensaje de seguimiento.|  
+    |Message|Cuerpo del mensaje de seguimiento.|  
   
 ## <a name="external-resources"></a>Recursos externos  
  Entrada de blog [Troubleshooting Logging Improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)(Solución de problemas de mejora del registro), en msdn.com.  

@@ -41,7 +41,7 @@ fn:concat ($string as xs:string?
  *$string*  
  Cadena opcional que se concatenará.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La función requiere al menos dos argumentos. Si un argumento es una secuencia vacía, se tratará como una cadena de longitud cero.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres adicionales (pares suplentes)  

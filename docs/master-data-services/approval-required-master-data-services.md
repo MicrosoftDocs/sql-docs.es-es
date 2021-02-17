@@ -31,7 +31,7 @@ ms.locfileid: "100339583"
 >   
 >  Los cambios realizados por una regla de negocio omiten la aprobación.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para acceder al área funcional de Administración del sistema.  

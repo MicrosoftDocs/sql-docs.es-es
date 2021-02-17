@@ -30,7 +30,7 @@ ms.locfileid: "100350300"
 > [!NOTE]  
 >  Los miembros de la entidad de todas las versiones se eliminarán de forma permanente.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  

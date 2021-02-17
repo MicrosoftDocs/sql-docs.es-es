@@ -39,7 +39,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Secuencia de valores atómicos cuyo promedio se va a calcular.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Todos los tipos de los valores atomizados que se pasan a **AVG ()** deben ser un subtipo de exactamente uno de los tres tipos base numéricos integrados o XDT: untypedAtomic. No se pueden mezclar. Los valores de tipo xdt:untypedAtomic se tratan como xs:double. El resultado de **AVG ()** recibe el tipo base de los tipos pasados, como XS: Double en el caso de XDT: untypedAtomic.  
   
  Si la entrada está vacía estáticamente, el vacío es implícito y se genera un error estático.  

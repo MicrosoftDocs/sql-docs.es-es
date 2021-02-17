@@ -28,7 +28,7 @@ ms.locfileid: "100272636"
 
   Use el Asistente para la implementación de modelos de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para crear un paquete de los objetos del modelo solamente. Si necesita incluir datos en un paquete, consulte [Implementar un paquete de implementación de modelo mediante MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   En la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , debe tener permiso de acceso al área funcional **Administración del sistema** .  
@@ -47,7 +47,7 @@ ms.locfileid: "100272636"
   
 4.  En la página **Crear paquete** , seleccione un modelo en la lista **Modelo** .  
   
-5.  Haga clic en **Siguiente**.  
+5.  Haga clic en **Next**.  
   
 6.  Haga clic en **Descargar**.  
   

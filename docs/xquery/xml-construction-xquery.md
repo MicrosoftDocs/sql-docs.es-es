@@ -590,7 +590,7 @@ where ProductModelID=7;
   
 -   atributo  
   
--   texto  
+-   text  
   
  En el caso de los nodos de elemento y atributo, estas palabras clave van seguidas del nombre del nodo y de la expresión, entre llaves, que genera el contenido del nodo. En el ejemplo siguiente, se construye este XML:  
   

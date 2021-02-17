@@ -27,7 +27,7 @@ ms.locfileid: "100272406"
 > [!NOTE]  
 >  Los administradores pueden reactivar miembros eliminados. Para obtener más información, consulte [Reactivar un miembro o una colección &#40;Master Data Services&#41;](../../master-data-services/reactivate-a-member-or-collection-master-data-services.md).  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe tener permiso para el área funcional **Explorador** .  

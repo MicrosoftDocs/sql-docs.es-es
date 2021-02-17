@@ -34,7 +34,7 @@ ms.locfileid: "100272386"
 > [!NOTE]  
 >  Todos los miembros deben superar la validación antes de que se pueda confirmar una versión.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de versiones** .  

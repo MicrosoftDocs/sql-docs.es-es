@@ -51,7 +51,7 @@ ms.locfileid: "100343022"
 |**elapsed_max_ms**|**int**|Tiempo transcurrido de la solicitud más grande en milisegundos.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta vista devuelve información solo para los trabajos de estadísticas de actualización asincrónica. Para obtener más información sobre las estadísticas de actualización asincrónica, vea [estadísticas](../../relational-databases/statistics/statistics.md).  
   
 ## <a name="permissions"></a>Permisos

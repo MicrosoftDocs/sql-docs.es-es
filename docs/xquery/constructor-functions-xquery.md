@@ -44,7 +44,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *TYP*  
  Cualquier tipo XSD integrado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Se admiten constructores para tipos XSD atómicos base y derivados. Sin embargo, no se admiten los subtipos de **xs: Duration**, que incluye **XDT: yearMonthDuration y XDT: dayTimeDuration**, y **xs: QName**, **xs: NMTOKEN** y **xs: Notation** . Los tipos atómicos definidos por el usuario que están disponibles en las colecciones de esquemas asociadas también están disponibles, siempre que se deriven directa o indirectamente de los tipos siguientes.  
   
 #### <a name="supported-base-types"></a>Tipos base compatibles  

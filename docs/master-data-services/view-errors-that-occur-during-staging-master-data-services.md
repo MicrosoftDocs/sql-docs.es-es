@@ -30,7 +30,7 @@ ms.locfileid: "100351900"
   
 -   stg.viw_name_RelationshipErrorDetails para las actualizaciones de la relación de la jerarquía.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   En la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , debe tener permisos SELECT en las vistas stg.viw_name_MemberErrorDetails o stg.viw_name_RelationshipErrorDetails.  

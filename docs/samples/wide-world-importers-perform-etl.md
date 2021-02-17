@@ -35,7 +35,7 @@ El procesamiento principal comienza rellenando la tabla de dimensiones Date. El 
 
 A continuación, una serie de tareas flujo de datos carga cada dimensión. A continuación, carga cada hecho.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 - SQL Server 2016 (o posterior), con las bases de datos WideWorldImporters y WideWorldImportersDW (en la misma instancia o en instancias diferentes de SQL Server)
 - SQL Server Management Studio

@@ -72,7 +72,7 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En SQL Database objetivos de servicio Basic, S0 y S1, y para las bases de datos de grupos elásticos, se requiere la cuenta de [Administrador del servidor](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) o la cuenta de [Administrador de Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . En el resto de los objetivos del servicio SQL Database, `VIEW DATABASE STATE` se requiere el permiso en la base de datos.   
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando se inicia una transacción de instantáneas, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra todas las transacciones activas en ese momento determinado. **Sys.dm_tran_transactions_snapshot** notifica esta información para todas las transacciones de instantáneas activas.  
   
  Cada transacción se identifica mediante un número de secuencia que se asigna cuando se inicia la transacción. Las transacciones empiezan en el momento en que se ejecuta una instrucción BEGIN TRANSACTION o BEGIN WORK. No obstante, [!INCLUDE[ssDE](../../includes/ssde-md.md)] asigna el número de secuencia de la transacción con la ejecución de la primera instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] que tiene acceso a datos después de la instrucción BEGIN TRANSACTION o BEGIN WORK. Los números de secuencia de la transacción se incrementan de uno en uno.  

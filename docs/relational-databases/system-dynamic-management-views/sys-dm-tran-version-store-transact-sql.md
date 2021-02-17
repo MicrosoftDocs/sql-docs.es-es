@@ -38,7 +38,7 @@ ms.locfileid: "100347978"
  Puesto que el registro de versiones se almacena como binario, no existen problemas con las diferentes intercalaciones de bases de datos distintas. Utilice **Sys.dm_tran_version_store** para buscar las versiones anteriores de las filas en representación binaria tal como existen en el almacén de versiones.  
   
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Sintaxis  
   
 ```  
 sys.dm_tran_version_store  

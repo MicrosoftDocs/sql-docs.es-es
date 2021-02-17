@@ -41,7 +41,7 @@ fn:lower-case($arg as xs:string?) as xs:string
 |-|-|
 |*$arg*|Valor de cadena que se va a convertir a letra minúscula.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si el valor de *$arg* está vacío, se devuelve una cadena de longitud cero.  
   
 ## <a name="examples"></a>Ejemplos  

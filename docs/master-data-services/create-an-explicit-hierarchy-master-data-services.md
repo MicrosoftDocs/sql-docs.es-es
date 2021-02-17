@@ -29,7 +29,7 @@ ms.locfileid: "100351911"
   
  Después de crear una jerarquía explícita, puede agregarle miembros en el área funcional de **Explorador** .  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  

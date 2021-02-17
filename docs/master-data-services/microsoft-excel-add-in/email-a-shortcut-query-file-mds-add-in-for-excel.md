@@ -24,7 +24,7 @@ ms.locfileid: "100342156"
 
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede enviar por correo electrónico un archivo de consulta de acceso directo a alguien si quiere asegurarse de que va a trabajar con los mismos datos que usted. Debe compartir las consultas en lugar de guardar la hoja de cálculo y enviarla por correo electrónico.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe tener Outlook 2010 o posterior instalado.  

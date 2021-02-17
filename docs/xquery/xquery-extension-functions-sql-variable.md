@@ -35,7 +35,7 @@ ms.locfileid: "100350387"
 sql:variable("variableName") as xdt:anyAtomicType?  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Tal y como se describe en el tema [enlazar datos relacionales dentro de XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), puede utilizar esta función al utilizar [métodos de tipo de datos XML](../t-sql/xml/xml-data-type-methods.md) para exponer un valor relacional dentro de XQuery.  
   
  Por ejemplo, el [método Query ()](../t-sql/xml/query-method-xml-data-type.md) se utiliza para especificar una consulta en una instancia XML almacenada en una variable o columna de tipo de datos **XML** . En ocasiones, es posible que también se desee que la consulta utilice valores de una variable [!INCLUDE[tsql](../includes/tsql-md.md)], o un parámetro, para combinar los datos relacionales y XML. Para ello, utilice la función **SQL: variable** .  
