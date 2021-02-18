@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e1a2fe365ff2cf40e1dd7e08e113a586e7c2b666
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: 571cf683c8d905cfb499624cbd05dc40efe94b86
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783525"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100344645"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -263,7 +263,7 @@ ms.locfileid: "98783525"
   
 -   **Nombre único del grupo de disponibilidad:**  cada nombre de grupo de disponibilidad debe ser único en el WSFC. La longitud máxima del nombre de un grupo de disponibilidad es 128 caracteres.  
   
--   **Réplicas de disponibilidad:**  Cada grupo de disponibilidad admite una réplica principal y hasta ocho réplicas secundarias. Todas las réplicas pueden ejecutarse en el modo de confirmación asincrónica o hasta tres de ellas pueden ejecutarse en el modo de confirmación sincrónica (una réplica principal con dos réplicas secundarias sincrónicas).  
+-   **Réplicas de disponibilidad:**  Cada grupo de disponibilidad admite una réplica principal y hasta ocho réplicas secundarias. Todas las réplicas pueden ejecutarse en el modo de confirmación asincrónica, o bien hasta cinco de ellas pueden ejecutarse en el modo de confirmación sincrónica (una réplica principal con dos réplicas secundarias sincrónicas).  
   
 -   **Número máximo de grupos de disponibilidad y bases de datos de disponibilidad por equipo:** El número real de bases de datos y grupos de disponibilidad que puede colocar en un equipo (equipo físico o máquina virtual) depende del hardware y de la carga de trabajo, pero no hay ningún límite impuesto. Microsoft ha probado hasta 10 grupos de disponibilidad y 100 bases de datos por máquina física, pero este no es un límite vinculante. Según la especificación de hardware en el servidor y la carga de trabajo, puede poner un mayor número de bases de datos y grupos de disponibilidad en una instancia de SQL Server. Los signos de sistemas sobrecargados pueden incluir, pero no limitarse a los siguientes: agotamiento de subprocesos de trabajo, tiempos de respuesta lentos para vistas del sistema del grupo de disponibilidad y DMV de AlwaysOn o volcados del sistema del distribuidor detenidos. Asegúrese de comprobar minuciosamente el entorno con una carga de trabajo similar a la que usará en producción para asegurarse de que puede controlar la capacidad de carga de trabajo máxima con sus contratos de nivel de servicio de aplicación. Cuando evalúe los contratos de nivel de servicio, no olvide tener en cuenta la carga en condiciones de error además de los tiempos de respuesta esperados.  
   

@@ -25,12 +25,13 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: 6b6610293bb78ef34ae5ca8b88f762c9ab4948e9
-ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||  azure-sqldw-latest
+ms.openlocfilehash: 6bb1014c22353826b6e4429726d4d28549cc274a
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "99978867"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489339"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -100,7 +101,8 @@ MERGE
   
 <clause_search_condition> ::=  
     <search_condition> 
-```  
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ```syntaxsql
@@ -117,9 +119,9 @@ MERGE
     [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]
     [ OPTION ( <query_hint> [ ,...n ] ) ]
-;  -- The semi-colon is required, or the query will return syntax  error. 
+;  -- The semi-colon is required, or the query will return a syntax error. 
 ```
- 
+
 ## <a name="arguments"></a>Argumentos
 
 WITH \<common_table_expression>  
@@ -236,7 +238,9 @@ Especifica el patrón de coincidencia de gráficos. Para obtener más informaci�
 >[!NOTE]
 > En Azure Synapse Analytics, el comando MERGE (versión preliminar) tiene las siguientes diferencias en comparación con SQL Server y Azure SQL Database.  
 > - Una actualización MERGE se implementa como un par de eliminación e inserción. El recuento de filas afectado de una actualización MERGE incluye las filas eliminadas e insertadas. 
+
 > - Durante la versión preliminar, MERGE…WHEN NOT MATCHED INSERT no se admiten en tablas con columnas IDENTITY.  
+
 > - En esta tabla se describe la compatibilidad de las tablas con distintos tipos de distribución:
 
 >|MERGE CLAUSE en Azure Synapse Analytics|Tabla de distribución TARGET admitida| Tabla de distribución SOURCE admitida|Comentario|  
@@ -257,7 +261,6 @@ MERGE es una palabra clave totalmente reservada cuando el nivel de compatibilida
   
 No use la instrucción **MERGE** cuando se usa la replicación de actualización en cola. **MERGE** y el desencadenador de actualización en cola no son compatibles. Reemplace la instrucción **MERGE** con una instrucción de inserción o de actualización.  
 
-
 ## <a name="trigger-implementation"></a>Implementación de desencadenadores
 
 Para cada acción de inserción, actualización o eliminación especificada en la instrucción MERGE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activa los desencadenadores AFTER correspondientes definidos en la tabla de destino, pero no garantiza qué acción activará los desencadenadores primero o último. Los desencadenadores definidos para la misma acción cumplen el orden que especifique. Para más información sobre cómo establecer el orden de activación de los desencadenadores, vea [Especificar el primer y el último desencadenador](../../relational-databases/triggers/specify-first-and-last-triggers.md).  
@@ -272,11 +275,11 @@ Si se definen desencadenadores INSTEAD OF INSERT en *target_table*, la operació
 
 Requiere el permiso SELECT en la tabla de origen y los permisos INSERT, UPDATE o DELETE en la tabla de destino. Para más información, consulte la sección Permisos de los artículos [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md) y [DELETE](../../t-sql/statements/delete-transact-sql.md).  
   
-## <a name="optimizing-merge-statement-performance"></a>Optimizar el rendimiento de la instrucción MERGE
+## <a name="optimizing-merge-statement-performance"></a>Optimización del rendimiento de la instrucción MERGE
 
 Mediante la instrucción MERGE, puede reemplazar las instrucciones DML individuales con una instrucción única. Esto puede mejorar el rendimiento de las consultas debido a que las operaciones se realizan dentro de una instrucción única y, por consiguiente, se reduce el número de veces que se procesan los datos en las tablas de destino y de origen. Sin embargo, las mejoras en el rendimiento dependerán de si hay índices, combinaciones y otras consideraciones correctas en su lugar.
 
-### <a name="index-best-practices"></a>Prácticas recomendadas para índices
+### <a name="index-best-practices"></a>Procedimientos recomendados para índices
 
 Para mejorar el rendimiento de la instrucción MERGE, recomendamos las siguientes instrucciones de índices:
 
@@ -285,7 +288,7 @@ Para mejorar el rendimiento de la instrucción MERGE, recomendamos las siguiente
 
 Estos índices aseguran que las claves de combinación son únicas y los datos de las tablas están ordenados. Se mejora el rendimiento de las consultas debido a que el optimizador de consultas no necesita realizar un procesamiento de validación adicional para buscar y actualizar filas duplicadas, y no son necesarias operaciones de ordenación adicionales.
 
-### <a name="join-best-practices"></a>Prácticas recomendadas para JOIN
+### <a name="join-best-practices"></a>Procedimientos recomendados para JOIN
 
 Para mejorar el rendimiento de la instrucción MERGE y asegurarse de que se obtienen los resultados correctos, recomendamos las siguientes instrucciones de combinación:
 
@@ -302,7 +305,7 @@ La operación de combinación en la instrucción MERGE se optimiza de la misma m
 
 Puede exigir el uso de una combinación concreta especificando la cláusula `OPTION (<query_hint>)` en la instrucción MERGE. Se recomienda no usar la combinación hash como una sugerencia de consulta para las instrucciones MERGE porque este tipo de combinación no usa índices.
 
-### <a name="parameterization-best-practices"></a>Prácticas recomendadas para parametrización
+### <a name="parameterization-best-practices"></a>Procedimientos recomendados para parametrización
 
 Si una instrucción SELECT, INSERT, UPDATE o DELETE se ejecuta sin parámetros, el optimizador de consultas de SQL Server puede decidir parametrizar la instrucción internamente. Esto indica que todos los valores literales incluidos en la consulta se sustituirán por parámetros. Por ejemplo, la instrucción INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10) se puede implementar internamente como INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2). Este proceso, denominado parametrización simple, aumenta la capacidad del motor relacional para hacer coincidir nuevas instrucciones SQL con los planes de ejecución existentes compilados previamente. Se puede mejorar el rendimiento de las consultas debido a que se reduce la frecuencia de las compilaciones y recompilaciones de la consulta. El optimizador de consultas no aplica el proceso de parametrización simple a las instrucciones MERGE. Por consiguiente, puede que no se realicen las instrucciones MERGE que contienen los valores literales, además de las instrucciones INSERT, DELETE o UPDATE individuales, porque se compila un plan nuevo cada vez que se ejecuta la instrucción MERGE.
 
@@ -312,7 +315,7 @@ Para mejorar el rendimiento de las consultas, recomendamos las siguientes instru
 - Si no puede parametrizar la instrucción, cree una guía de plan de tipo `TEMPLATE` y especifique la sugerencia de consulta `PARAMETERIZATION FORCED` en la guía de plan.
 - Si las instrucciones MERGE se ejecutan con frecuencia en la base de datos, considere la posibilidad de establecer en FORCED la opción PARAMETERIZATION en la base de datos. Actúe con precaución cuando establezca esta opción. La opción `PARAMETERIZATION` es un valor de nivel de base de datos y afecta a la manera en que se procesan todas las consultas a la base de datos.
 
-### <a name="top-clause-best-practices"></a>Prácticas recomendadas para la cláusula TOP
+### <a name="top-clause-best-practices"></a>Procedimientos recomendados para la cláusula TOP
 
 En la instrucción MERGE, la cláusula TOP especifica el número o porcentaje de filas afectadas después de que la tabla de origen y la tabla de destino se combinen, y después de quitar las filas que no cumplen los requisitos para una acción de inserción, actualización o eliminación. La cláusula TOP reduce aún más el número de filas combinadas al valor especificado y se aplican las acciones de inserción, actualización o eliminación a las filas combinadas restantes de una manera desordenada. Es decir, no hay ningún orden en el que las filas se distribuyan entre las acciones definidas en las cláusulas WHEN. Por ejemplo, cuando se especifica TOP (10) afecta a 10 filas; de estas filas, 7 se pueden actualizar y 3 insertar, o se pueden eliminar 1, actualizar 5 e insertar 4, etc.
 
@@ -333,7 +336,7 @@ Es habitual usar la cláusula TOP para realizar operaciones del lenguaje de mani
 
 Dado que la cláusula TOP solo se aplica una vez aplicadas estas cláusulas, cada ejecución inserta una fila no coincidente inigualable o actualiza una fila existente.
 
-### <a name="bulk-load-best-practices"></a>Prácticas recomendadas para carga masiva
+### <a name="bulk-load-best-practices"></a>Procedimientos recomendados para la carga masiva
 
 La instrucción MERGE se puede usar para cargar eficazmente datos de manera masiva del archivo de datos de origen en una tabla de destino especificando la cláusula `OPENROWSET(BULK…)` como el origen de la tabla. De esta forma, el archivo completo se procesa en un lote único.
 
@@ -346,7 +349,7 @@ Para mejorar el rendimiento del proceso de mezcla masiva, recomendamos las sigui
 
 Estas instrucciones garantizan que las claves de unión son únicas y que el criterio de ordenación de los datos en el archivo de origen coincide con la tabla de destino. Se mejora el rendimiento de las consultas debido a que las operaciones de ordenación adicionales no son necesarias y no se requieren copias innecesarias de datos.
 
-### <a name="measuring-and-diagnosing-merge-performance"></a>Medir y diagnosticar el rendimiento de MERGE
+### <a name="measuring-and-diagnosing-merge-performance"></a>Medición y diagnóstico del rendimiento de MERGE
 
 Las características siguientes están disponibles para ayudarle a medir y diagnosticar el rendimiento de las instrucciones MERGE.
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7f9b06bd6805e75c053037b18fc6870ef1469500
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: c38eb3d70f724dc90e14aa77641dddd781233a62
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642229"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343871"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Grupos de disponibilidad Always On: una solución de alta disponibilidad y recuperación ante desastres
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -45,11 +45,11 @@ ms.locfileid: "97642229"
   
     -   *Modo de confirmación asincrónica*. Este modo de disponibilidad es una solución de recuperación de desastres que funciona bien cuando las réplicas de disponibilidad se distribuyen sobre distancias considerables.  
   
-    -   *Modo de confirmación sincrónica*. Este modo de disponibilidad resalta alta disponibilidad y protección de datos del rendimiento, a costa de aumentar la latencia de las transacciones. Un grupo de disponibilidad determinado puede admitir hasta tres réplicas de disponibilidad de confirmación sincrónica, incluida la réplica principal actual.  
+    -   *Modo de confirmación sincrónica*. Este modo de disponibilidad resalta alta disponibilidad y protección de datos del rendimiento, a costa de aumentar la latencia de las transacciones. Un grupo de disponibilidad determinado puede admitir hasta cinco réplicas de disponibilidad de confirmación sincrónica, incluida la réplica principal actual.  
   
      Para obtener más información, vea [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md). 
 
-     [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] aumenta el número máximo de réplicas sincrónicas a 5, de las 3 que eran en [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)]. Puede configurar este grupo de cinco réplicas para habilitar la conmutación automática por error dentro del grupo. Hay una réplica principal, además de cuatro réplicas secundarias sincrónicas.
+     [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] aumenta el número máximo de réplicas sincrónicas a 5, de las 3 que eran en [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)]. Puede configurar este grupo de cinco réplicas para habilitar la conmutación automática por error dentro del grupo. Hay una réplica principal, además de cuatro réplicas secundarias sincrónicas.
   
 -   Admite varias formas de conmutación por error de un grupo de disponibilidad: conmutación automática por error, conmutación por error manual planeada (suele denominarse simplemente "conmutación por error manual") y conmutación por error manual forzada (suele denominarse simplemente "conmutación por error forzada"). Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   

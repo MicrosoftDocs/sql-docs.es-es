@@ -8,12 +8,12 @@ ms.date: 01/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9a73013e7d49523f8aba418a2961336998190fc5
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 652db6f752f8bf46ad2b7d4779063c79359e3a33
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98689122"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350944"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Procedimientos recomendados de rendimiento e instrucciones de configuración para SQL Server en Linux
 
@@ -102,13 +102,13 @@ Para asegurarse de que la unidad adjuntada al sistema se vuelve a montar de form
 
 Se recomienda usar el atributo **noatime** con cualquier sistema de archivos que se utilice para almacenar archivos de datos y de registro de SQL Server. Consulte la documentación de Linux para obtener información sobre cómo establecer este atributo. A continuación se muestra un ejemplo de cómo habilitar la opción **noatime** para un volumen montado en la máquina virtual de Azure.
 
-La entrada del punto de montaje en **_/etc/fstab_* _
+Entrada del punto de montaje en ***/etc/fstab***
 
 ```bash
 UUID="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" /data1 xfs,rw,attr2,noatime 0 0
 ```
 
-En el ejemplo anterior, UUID representa el dispositivo que puede encontrar mediante el comando _*_blkid_*_.
+En el ejemplo anterior, UUID representa el dispositivo que puede encontrar mediante el comando ***blkid***.
 
 #### <a name="sql-server-and-forced-unit-access-fua-io-subsystem-capability"></a>Funcionalidad del subsistema de E/S de SQL Server y acceso de unidad forzada (FUA)
 
@@ -125,7 +125,7 @@ Use la configuración recomendada que se muestra a continuación si se cumplen l
 Configuración recomendada:
 
 1. Habilite la marca de seguimiento 3979 como parámetro de inicio.
-2. Use _ *mssql-conf** para configurar `control.writethrough = 1` y `control.alternatewritethrough = 0`.
+2. Use **mssql-conf** para configurar `control.writethrough = 1` y `control.alternatewritethrough = 0`.
 
 Para casi todas las demás configuraciones que no cumplen las condiciones anteriores, la configuración recomendada es la siguiente:
 
@@ -134,13 +134,13 @@ Para casi todas las demás configuraciones que no cumplen las condiciones anteri
 
 ### <a name="kernel-and-cpu-settings-for-high-performance"></a>Configuración del kernel y la CPU para alto rendimiento
 
-En la sección siguiente se describe la configuración recomendada del sistema operativo Linux relacionada con el alto rendimiento de una instalación de SQL Server. Vea la documentación del sistema operativo Linux para obtener información sobre el proceso de configuración de estas opciones. El uso que se describe de [**_Optimizado_* _](https://tuned-project.org) ayuda a establecer muchas configuraciones de CPU y kernel que se describen a continuación.
+En la sección siguiente se describe la configuración recomendada del sistema operativo Linux relacionada con el alto rendimiento de una instalación de SQL Server. Vea la documentación del sistema operativo Linux para obtener información sobre el proceso de configuración de estas opciones. El uso que se describe de [***Optimizado***](https://tuned-project.org) ayuda a establecer muchas configuraciones de CPU y kernel que se detallan a continuación.
 
-#### <a name="using-__tuned__-to-configure-kernel-settings"></a>Uso de _*_Optimizado_*_ para configurar las opciones del kernel
+#### <a name="using-tuned-to-configure-kernel-settings"></a>Uso de ***Optimizado*** para configurar las opciones del kernel
 
-Para los usuarios de Red Hat Enterprise Linux (RHEL), el perfil de rendimiento [Optimizado](https://tuned-project.org) configura de forma automática algunas opciones del kernel y la CPU (excepto para C-States). A partir de RHEL 8.0, se ha desarrollado un perfil _*_Optimizado_*_ denominado _ *mssql** conjuntamente con Red Hat, que ofrece optimizaciones relacionadas con el rendimiento de Linux más precisas para cargas de trabajo de SQL Server. Este perfil incluye el perfil de rendimiento de RHEL y a continuación se presentan sus definiciones para que las revise con otras distribuciones de Linux y versiones de RHEL sin este perfil.
+Para los usuarios de Red Hat Enterprise Linux (RHEL), el perfil de rendimiento [Optimizado](https://tuned-project.org) configura de forma automática algunas opciones del kernel y la CPU (excepto para C-States). A partir de RHEL 8.0, se ha desarrollado un perfil **Optimizado** _denominado _ *mssql** conjuntamente con Red Hat. Ofrece optimizaciones relacionadas con el rendimiento de Linux más precisas para cargas de trabajo de SQL Server. Este perfil incluye el perfil de rendimiento de RHEL y a continuación se presentan sus definiciones para que las revise con otras distribuciones de Linux y versiones de RHEL sin este perfil.
 
-Para SUSE Linux Enterprise Server 12 SP5, Ubuntu 18.04 y Red Hat Enterprise Linux 7.x, el paquete **_Optimizado_ *_ se puede instalar manualmente. Se puede usar para crear y configurar el perfil _* mssql** como se describe a continuación.
+Para SUSE Linux Enterprise Server 12 SP5, Ubuntu 18.04 y Red Hat Enterprise Linux 7.x, el paquete ***Optimizado** _ se puede instalar manualmente. Se puede usar para crear y configurar el perfil _ *mssql**, tal como se describe a continuación.
 
 ##### <a name="proposed-linux-settings-using-a-tuned-mssql-profile"></a>Configuración propuesta de Linux mediante un perfil Optimizado mssql
 
@@ -207,7 +207,7 @@ En la tabla siguiente se proporcionan recomendaciones para la configuración de 
 | min_perf_pct | 100 | Consulte la documentación sobre Intel P-state. |
 | C-States | Solo C1 | Consulte la documentación del sistema o de Linux para saber cómo asegurarse de que C-States solo se establece en C1 |
 
-El uso de **_Optimizado_ *_ como se ha descrito antes configura automáticamente el regulador de frecuencia de la CPU, ENERGY_PERF_BIAS y los valores correctos de min_perf_pct debido al perfil de rendimiento que se usa como base para el perfil _* mssql**. El parámetro C-States se debe configurar manualmente según la documentación proporcionada por Linux o el distribuidor del sistema.
+El uso de ***Optimizado** _, tal como se ha descrito antes, configura automáticamente el regulador de frecuencia de la CPU, ENERGY_PERF_BIAS y los valores correctos de min_perf_pct debido al perfil de rendimiento que se usa como base para el perfil _ *mssql**. El parámetro C-States se debe configurar manualmente según la documentación proporcionada por Linux o el distribuidor del sistema.
 
 #### <a name="disk-settings-recommendations"></a>Recomendaciones de configuración de disco
 
@@ -223,15 +223,15 @@ En la tabla siguiente se proporcionan recomendaciones para la configuración del
 - **vm.swappiness**: este parámetro controla el peso relativo dado para intercambiar memoria de proceso en tiempo de ejecución en comparación con la caché del sistema de archivos. El valor predeterminado de este parámetro es 60, que indica el intercambio de páginas de memoria de proceso en tiempo de ejecución en comparación con la eliminación de páginas de caché del sistema de archivos con una proporción de 60:140. Al establecer el valor 1 se indica una preferencia segura por mantener la memoria de proceso en tiempo de ejecución en la memoria física a costa de la caché del sistema de archivos. Como SQL Server usa el grupo de búferes como una caché de páginas de datos y prefiere escribir en el hardware físico omitiendo la caché del sistema de archivos para una recuperación confiable, la configuración de intercambio intenso puede ser beneficiosa para una instancia dedicada de SQL Server y de alto rendimiento.
 Puede encontrar información adicional en [Documentación de /proc/sys/vm/ - #swappiness](https://www.kernel.org/doc/html/latest/admin-guide/sysctl/vm.html#swappiness).
 
-- **vm.dirty_\** _: los accesos de escritura de archivos de SQL Server no están almacenados en caché, lo que satisface sus requisitos de integridad de datos. Estos parámetros permiten un rendimiento de escritura asincrónico eficaz y reducen el impacto de la E/S de almacenamiento de las escrituras de almacenamiento en caché de Linux al permitir un almacenamiento en caché suficientemente grande mientras se limita el vaciado.
+- **vm.dirty_\*** : los accesos de escritura de archivos de SQL Server no están almacenados en caché, lo que satisface sus requisitos de integridad de datos. Estos parámetros permiten un rendimiento de escritura asincrónico eficaz y reducen el impacto de la E/S de almacenamiento de las escrituras de almacenamiento en caché de Linux al permitir un almacenamiento en caché suficientemente grande mientras se limita el vaciado.
 
-- _*kernel.sched_\**_: estos valores de parámetro representan la recomendación actual para ajustar el algoritmo de programación totalmente justa (CFS) en el kernel de Linux, para mejorar el rendimiento de las llamadas de E/S de red y de almacenamiento con respecto a las operaciones de adelantamiento y reanudación de los subprocesos.
+- **kernel.sched_\*** : estos valores de parámetro representan la recomendación actual para ajustar el algoritmo de programación totalmente justa (CFS) en el kernel de Linux, para mejorar el rendimiento de las llamadas de E/S de red y de almacenamiento con respecto a las operaciones de adelantamiento y reanudación de los subprocesos.
 
-El perfil _*_Optimizado_** **mssql*_ configura los valores _*vm.swappiness**, **vm.dirty_\* *_ y _* kernel.sched_\**_. La configuración del disco `readahead` mediante el comando `blockdev` se realiza por dispositivo y se debe realizar manualmente.
+El perfil **_Optimizado_ *_ **mssql** configura los valores _* vm.swappiness**, **vm.dirty_\* *_ y _* kernel.sched_\*** . La configuración del disco `readahead` mediante el comando `blockdev` se realiza por dispositivo y se debe realizar manualmente.
 
 #### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Configuración del equilibrio automático de NUMA del kernel con sistemas NUMA de varios nodos
 
-Si instala SQL Server en un sistema _ *NUMA** de varios nodos, la configuración de kernel **kernel.numa_balancing** siguiente está habilitada de forma predeterminada. Para permitir que SQL Server funcione con la máxima eficacia en un sistema **NUMA**, deshabilite el equilibrio automático de NUMA en un sistema NUMA de varios nodos:
+Si instala SQL Server en un sistema **NUMA** de varios nodos, la configuración de kernel **kernel.numa_balancing** siguiente está habilitada de forma predeterminada. Para permitir que SQL Server funcione con la máxima eficacia en un sistema **NUMA**, deshabilite el equilibrio automático de NUMA en un sistema NUMA de varios nodos:
 
 ```bash
 sysctl -w kernel.numa_balancing=0
@@ -257,13 +257,13 @@ La mayoría de las instalaciones de Linux deben tener esta opción activada de f
 echo madvise > /sys/kernel/mm/transparent_hugepage/enabled
 ```
 
-O bien, modifique el perfil  **_Tuned_* _ **mssql** con la línea:
+O modifique el perfil **_Optimizado_** **mssql** con esta línea:
 
 ```bash
 vm.transparent_hugepages=madvise
 ```
 
-Y active el perfil _ *mssql** después de la modificación:
+Y active el perfil **mssql** después de la modificación:
 
 ```bash
 tuned-adm off

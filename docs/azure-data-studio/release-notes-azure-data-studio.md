@@ -8,25 +8,26 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 1/22/2021
-ms.openlocfilehash: d249e36c9b15cabe9556701c8aafc3cb5ab66fac
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 2/10/2021
+ms.openlocfilehash: 17cc8ef3252ad39c344de7a7c51a9af80c1f6030
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100040015"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343400"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión de Azure Data Studio
 
 **[Descargue e instale la versión más reciente](./download-azure-data-studio.md)** .
 
-## <a name="january-2021-hotfix"></a>Enero de 2021 (revisión)
+## <a name="december-2020-hotfix"></a>Diciembre de 2020 (revisión)
 
-22 de enero de 2021&nbsp; / &nbsp;versión: 1.25.2
+Versión del &nbsp; / &nbsp; 10 de febrero de 2021: 1.25.3
 
 | Change | Detalles |
 | ------ | ------- |
-| Corrección del error [nº 13899](https://github.com/microsoft/azuredatastudio/issues/13899)| Desplazamiento a los vínculos de referencia cruzada adecuados en Notebooks |
+| Corrección del error [nº 13899](https://github.com/microsoft/azuredatastudio/issues/13899) | Desplazamiento a los vínculos de referencia cruzada adecuados en Notebooks |
+| Actualización de Electron para incorporar correcciones de errores importantes| N/D |
 
 ## <a name="december-2020"></a>Diciembre de 2020
 

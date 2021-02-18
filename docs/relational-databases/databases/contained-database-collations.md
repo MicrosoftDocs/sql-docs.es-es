@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 09edac79bf52c2826436ecdfdf25b0db342f4aeb
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a1da6b96aea93feaacdb5384716ef6cd0ab82a06
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363569"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489409"
 ---
 # <a name="contained-database-collations"></a>Intercalaciones de bases de datos independientes
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -156,7 +156,7 @@ JOIN #T2
   
 -   La base de datos en la que el lote comienza determina el comportamiento de la intercalación de un lote.  
   
- Observe que esta decisión se toma antes de que se ejecute ningún comando, incluso un **USE**inicial. Es decir, si un lote comienza en una base de datos independiente, pero el primer comando es **USE** para una base de datos dependiente, el comportamiento de la intercalación contenida se seguirá usando para el lote. Por tanto, una referencia a una variable, por ejemplo, puede tener varios resultados posibles:  
+ Observe que esta decisión se toma antes de que se ejecute ningún comando, incluso un **USE** inicial. Es decir, si un lote comienza en una base de datos independiente, pero el primer comando es **USE** para una base de datos dependiente, el comportamiento de la intercalación contenida se seguirá usando para el lote. Por tanto, una referencia a una variable, por ejemplo, puede tener varios resultados posibles:  
   
 -   La referencia puede encontrar una coincidencia exactamente. En este caso, la referencia funcionará sin generar un error.  
   

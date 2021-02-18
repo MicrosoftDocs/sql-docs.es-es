@@ -20,16 +20,16 @@ ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94fb9ab933a4bd2ed7d42f1b43f86a48df6b3b35
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: 9e2eced4a7ca9a8e8f443c709d65cc6e2906082a
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98812996"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489499"
 ---
 # <a name="shrink-a-database"></a>Reducir una base de datos
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  En este tema se describe cómo reducir una base de datos mediante objetos de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema, se describe cómo reducir una base de datos en [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mediante objetos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  La reducción de los archivos de datos permite recuperar espacio moviendo páginas de datos del final del archivo a espacio desocupado próximo al principio del archivo. Cuando se crea suficiente espacio libre al final del archivo, las páginas de datos situadas al final del archivo pueden desasignarse y devolverse al sistema de archivos.  
   

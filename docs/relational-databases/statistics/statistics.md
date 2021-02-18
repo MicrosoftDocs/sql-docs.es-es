@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521904030d97213770d4a2310b51eaadc37d4e5d
-ms.sourcegitcommit: 05fc736e6b6b3a08f503ab124c3151f615e6faab
+ms.openlocfilehash: 996ae78401e57e538ef2835ec107a2cc5400741a
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478590"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100352468"
 ---
 # <a name="statistics"></a>Estadísticas
 
@@ -128,10 +128,9 @@ ORDER BY s.name;
   |Temporales|*n* < 6|6|
   |Temporales|6 <= *n* <= 500|500|
   |Permanente|*n* <= 500|500|
-  |Temporal o permanente|500 <= *n* <= 25 000|500 + (0.20 * *n*)|
-  |Temporal o permanente|*n* > 25 000|SQRT(1000 * *n*)|
+  |Temporal o permanente|*n* >= 500|MIN ( 500 + (0,20 * *n*), SQRT(1000 * *n*) ) |
 
-  Por ejemplo, si la tabla contiene 2 millones de filas, el cálculo es `SQRT(1,000 * 2,000,000) = 44,721` y las estadísticas se actualizarán cada 44 721 modificaciones.
+  Por ejemplo, si la tabla contiene 2 millones de filas, entonces, el cálculo es el valor mínimo de `500 + (0.20 * 2,000,000) = 400,500` y `SQRT(1,000 * 2,000,000) = 44,721`. Esto significa que las estadísticas se actualizarán cada 44 721 modificaciones.
 
 > [!IMPORTANT]
 > En [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o bien en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores en el [nivel de compatibilidad de la base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 e inferior, habilite la [marca de seguimiento 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use un umbral de actualización de estadísticas descendente y dinámico.

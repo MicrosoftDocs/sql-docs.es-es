@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4038ba678af8635f3ac2bd12f68c818a61e2c87f
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: 86f23acdc6dd82210c5747915d78aafc2344fc6b
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99075638"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100348107"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurar una base de datos de SQL Server a un momento dado (modelo de recuperación completa)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -156,7 +156,7 @@ ms.locfileid: "99075638"
   
 3.  Restaure la última copia de seguridad de base de datos diferencial, si la hubiera, sin recuperar la base de datos (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Aplique cada copia de seguridad del registro de transacciones en la misma secuencia en que fueron creadas, especificando la hora a la que tiene previsto detener la restauración del registro (RESTORE DATABASE *database_name* FROM <dispositivo_copia_seguridad> WITH STOPAT **=**_time_**,** RECOVERY).  
+4.  Aplique cada copia de seguridad del registro de transacciones en la misma secuencia en que fueron creadas, especificando la hora a la que tiene previsto detener la restauración del registro (RESTORE DATABASE *nombre_de_base_de_datos* FROM <dispositivo_de_copia_de_seguridad> WITH STOPAT **=** _hora_ **,** RECOVERY).  
   
     > [!NOTE]  
     >  Las opciones RECOVERY y STOPAT. Si la copia de seguridad de registros de transacciones no contiene la hora solicitada (por ejemplo, si la hora especificada está fuera de los límites del intervalo cubierto por el registro de transacciones), se genera una advertencia y no se recupera la base de datos.  

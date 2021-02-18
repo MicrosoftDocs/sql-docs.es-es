@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a616e9b8fb1ebce6edd15c6af101765963d862f8
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 787a683eb0fc666eff8f3c72519bbba149dafe96
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97640321"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100340810"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Instrucciones y mecanismos de los tiempos de espera de comprobación de estado, clúster y concesión para grupos de disponibilidad Always On 
 
@@ -98,7 +98,7 @@ Los valores de retraso determinan el tiempo de espera entre los latidos del serv
 Para obtener una lista de todos los valores del clúster actual, en cualquier nodo de clúster de destino, abra un terminal de PowerShell con privilegios elevados. Ejecute el siguiente comando:
 
 ```PowerShell
- Get-Cluster | fl \
+ Get-Cluster | fl *
 ``` 
 
 Para actualizar cualquiera de estos valores, ejecute este comando en un terminal de PowerShell con privilegios elevados:
@@ -125,6 +125,8 @@ El mecanismo de concesión se controla mediante un único valor específico para
 
    Según la configuración del grupo de disponibilidad, es posible que haya recursos adicionales para los agentes de escucha, los discos compartidos, los recursos compartidos de archivos, etc., ya que estos recursos no requieren ninguna configuración adicional. 
 
+> [!NOTE]  
+>  El nuevo valor de la propiedad "LeaseTimeout" se aplicará después de que el recurso se desconecte y vuelva a conectarse.
    
 ### <a name="health-check-values"></a>Valores de comprobación de estado 
 

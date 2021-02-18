@@ -21,12 +21,12 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 9c97ee3e1f268553a828e035498b203c8fa1e747
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 14a7dce61b50ced328c103ec88973e9bf7b18c7d
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97438950"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100345247"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -160,6 +160,8 @@ Como requisito previo para crear una tabla externa, el administrador del disposi
  No se admiten operaciones de lenguaje de manipulación de datos (DML) en las tablas externas. Por ejemplo, no se pueden usar las instrucciones de actualización, inserción o eliminación de [!INCLUDE[tsql](../../includes/tsql-md.md)] para modificar los datos externos.
 
  CREATE TABLE, DROP TABLE, CREATE STATISTICS, DROP STATISTICS, CREATE VIEW y DROP VIEW son las únicas operaciones de lenguaje de manipulación de datos (DDL) que se permiten en las tablas externas.
+
+ No se pueden crear tablas externas para el grupo de SQL sin servidor en una ubicación donde actualmente tiene datos. A fin de volver a usar una ubicación que se ha utilizado para almacenar datos, la ubicación debe eliminarse manualmente en ADLS.
 
  PolyBase puede consumir un máximo de 33 000 archivos por carpeta cuando se ejecutan 32 consultas simultáneas de PolyBase. Esta cifra máxima engloba los archivos y las subcarpetas de cada carpeta de HDFS. Si el grado de simultaneidad es inferior a 32, un usuario puede ejecutar consultas de PolyBase en carpetas de HDFS que contengan más de 33 000 archivos. Se recomienda que los usuarios de Hadoop y PolyBase mantengan unas rutas de acceso de archivo cortas y no usen más de 30 000 archivos por carpeta de HDFS. Si hay referencias a demasiados archivos, podría producirse una excepción de memoria insuficiente de JVM.
 

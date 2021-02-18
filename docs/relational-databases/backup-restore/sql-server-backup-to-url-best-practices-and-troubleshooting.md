@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: dc7532aaead7b2257755f2db689c2cbbbd05d3c3
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6620e688dcd8094bbc5b27bfbb540a2e7d3b1585
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97639276"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100348832"
 ---
 # <a name="sql-server-back-up-to-url-best-practices-and-troubleshooting"></a>Procedimientos recomendados y solución de problemas de copia de seguridad en URL de SQL Server
 
@@ -44,6 +44,8 @@ ms.locfileid: "97639276"
 -   El uso de la opción `WITH COMPRESSION` durante la copia de seguridad puede reducir al mínimo los costos de almacenamiento y los costos de transacciones de almacenamiento. También puede reducir el tiempo necesario para completar el proceso de copia de seguridad.  
 
 - Establezca los argumentos `MAXTRANSFERSIZE` y `BLOCKSIZE` tal como se recomienda en [Copia de seguridad en URL de SQL Server](./sql-server-backup-to-url.md).
+
+- SQL Server es independiente del tipo de redundancia de almacenamiento que se usa. La copia de seguridad en blobs en páginas y blobs en bloques se admite para cada redundancia de almacenamiento (LRS, ZRS, GRS, RA-GRS, RA-GZRS, etc.).
   
 ## <a name="handling-large-files"></a>Controlar archivos grandes  
   
@@ -155,15 +157,27 @@ CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'
 , SECRET = '<storage access key>' ;  
 ```  
   
-La credencial existe pero la cuenta de inicio de sesión usada para ejecutar el comando de copia de seguridad no tiene permisos de acceso a las credenciales. Use una cuenta de inicio de sesión en el rol **db_backupoperator** con los permisos **_Alter any credential_* _.  
+La credencial existe pero la cuenta de inicio de sesión usada para ejecutar el comando de copia de seguridad no tiene permisos de acceso a las credenciales. Use una cuenta de inicio de sesión en el rol **db_backupoperator** con los permisos **_Alter any credential_**.  
   
 Compruebe los valores de clave y nombre de la cuenta de almacenamiento. La información almacenada en la credencial debe coincidir con los valores de propiedad de la cuenta de Azure Storage que se usa en las operaciones de copia de seguridad y restauración.  
   
-  
+
+**Errores 400 (solicitud incorrecta)**
+
+Con SQL Server 2012, es posible que se produzca un error al realizar una copia de seguridad similar a la siguiente:
+
+```
+Backup to URL received an exception from the remote endpoint. Exception Message: 
+The remote server returned an error: (400) Bad Request..
+```
+
+Esto se debe a la versión de TLS que admite la cuenta de Azure Storage. Cambie la versión de TLS admitida, o bien use la solución alternativa que se describe en [KB4017023](https://support.microsoft.com/en-us/topic/kb4017023-sql-server-2012-2014-or-2016-backup-to-microsoft-azure-blob-storage-service-url-isn-t-compatible-for-tls-1-2-e9ef6124-fc05-8128-86bc-f4f4f5ff2b78).
+
+
 ## <a name="proxy-errors"></a>Errores de proxy  
  Si usa servidores proxy para tener acceso a Internet, pueden producirse los problemas siguientes:  
   
- _ *Limitación de la conexión por los servidores proxy**  
+ **Limitación de la conexión por los servidores proxy**  
   
  Los servidores proxy pueden tener configuraciones que limitan el número de conexiones por minuto. Copia de seguridad en URL es un proceso multiproceso y, por tanto, puede sobrepasar este límite. Si esto ocurre, el servidor proxy elimina la conexión. Para resolver este problema, cambie la configuración de proxy para que SQL Server no utilice el proxy. A continuación se muestran algunos ejemplos de los tipos o mensajes de error que puede ver en el registro de errores:  
   

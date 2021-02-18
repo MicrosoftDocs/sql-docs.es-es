@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: fee5c2f4f1d8a286830f4e1fdefdb1043964a726
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 9007a29a613f1fea6891af33b66e69d98f2058b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505229"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100355265"
 ---
 # <a name="execution-plans"></a>Planes de ejecución
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,9 +46,9 @@ Un plan de ejecución de consulta es una definición de los siguientes elementos
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tiene tres opciones para mostrar los planes de ejecución:        
-> -  El **_[Plan de ejecución estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md)_* _ es el plan compilado, que genera el Optimizador de consultas en función de las estimaciones. Este es el plan de consulta que se almacena en la caché de planes.        
-> -  El _*_ [Plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md) _*_ es el plan compilado más su [contexto de ejecución](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Estará disponible _*una vez finalizada la ejecución de la consulta**. Esto incluye la información del entorno de ejecución real, como advertencias de ejecución o, en versiones más recientes del [!INCLUDE[ssde_md](../../includes/ssde_md.md)], el tiempo transcurrido y el tiempo de CPU usado durante la ejecución.         
-> -  Las **_[Estadísticas de consulta activa](../../relational-databases/performance/live-query-statistics.md)_ *_ son lo mismo que el plan compilado más su contexto de ejecución. Está disponible para _* ejecuciones de consultas en curso** y se actualiza cada segundo. Esto incluye información del entorno de ejecución, como el número real de filas que fluyen a través de los [operadores](../../relational-databases/showplan-logical-and-physical-operators-reference.md), el tiempo transcurrido y el progreso estimado de la consulta.
+> -  El ***[plan de ejecución estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md)*** es el plan compilado, generado por el optimizador de consultas en función de las estimaciones. Este es el plan de consulta que se almacena en la caché de planes.        
+> -  El * **[plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md)** _ es el plan compilado más su [contexto de ejecución](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse). Estará disponible _*una vez finalizada la ejecución de la consulta**. Esto incluye la información del entorno de ejecución real, como advertencias de ejecución o, en versiones más recientes del [!INCLUDE[ssde_md](../../includes/ssde_md.md)], el tiempo transcurrido y el tiempo de CPU usado durante la ejecución.         
+> -  Las * **[estadísticas de consulta activa](../../relational-databases/performance/live-query-statistics.md)** _ son el plan compilado más su contexto de ejecución. Está disponible para _*ejecuciones de consultas en curso** y se actualiza cada segundo. Esto incluye información del entorno de ejecución, como el número real de filas que fluyen a través de los [operadores](../../relational-databases/showplan-logical-and-physical-operators-reference.md), el tiempo transcurrido y el progreso estimado de la consulta.
 
 > [!TIP]
 > Para más información sobre el procesamiento de consultas y los planes de ejecución de consultas, consulte las secciones [Optimización de las instrucciones SELECT](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) y [Almacenar en caché y volver a utilizar un plan de ejecución](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) de la Guía de arquitectura de procesamiento de consultas.

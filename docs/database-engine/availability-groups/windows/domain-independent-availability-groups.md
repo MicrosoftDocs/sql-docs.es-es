@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 6c809abd5c333013b197dd48ca2fb4832bf6b615
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 060e9e635aa7be4dd3c00e11b0f3a36073cdaa54
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643621"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100349286"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Creación de un grupo de disponibilidad independiente del dominio
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -150,10 +150,10 @@ Actualmente, la creación de un grupo de disponibilidad independiente del domini
          )
    ```
 
-13. Asigne derechos a cada usuario creado en esa instancia en el paso 9, de forma que puedan conectarse al punto de conexión. 
+13. Asigne derechos a cada inicio de sesión creado en esa instancia en el paso 8 para poder conectarse al punto de conexión. 
 
    ```sql
-   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_Login];
    GO
    ```
 

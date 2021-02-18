@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8591620ce92aca8a6c272539721f20a8a64fd9ae
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: e02d3676b1b303ef6dbbae4a509ed0db0c608071
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237098"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525239"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -823,7 +823,7 @@ Las restricciones siguientes se aplican a los índices con particiones:
 Para evaluar cómo afecta el cambio del estado de compresión a una tabla, índice o partición, use el procedimiento almacenado [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .
 
 ## <a name="permissions"></a>Permisos
-Debe tener un permiso de `ALTER` sobre la tabla o vista. El usuario debe ser miembro del rol fijo de servidor `sysadmin` o los roles fijos de base de datos `db_ddladmin` y `db_owner`.
+Requiere el permiso `ALTER` en la tabla, o bien la vista o pertenencia en el rol fijo de base de datos `db_ddladmin`.
 
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones
 En [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], no puede crear lo siguiente:
