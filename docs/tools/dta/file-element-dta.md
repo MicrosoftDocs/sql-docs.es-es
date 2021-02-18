@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 557501bb02cdb3a0b29c1f9654b5414bff6134b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb7d075fba09db4de518018f29190cb0c351bf27
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785974"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335981"
 ---
 # <a name="file-element-dta"></a>File (DTA, elemento)
 
@@ -45,7 +45,7 @@ Especifica el archivo de carga de trabajo. Una carga de trabajo es un conjunto d
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Utilice el tipo de datos **string** para especificar la ruta de acceso del directorio al archivo de carga de trabajo. Por ejemplo:<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> Tenga en cuenta que el servidor aplica el límite de longitud.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Repetición**|Una obligatoria si no se especifica ningún otro tipo de carga de trabajo. Es necesario especificar un elemento secundario **EventString**, **File**o **Database** para el elemento primario **Workload** , aunque solo se puede utilizar un tipo. Por ejemplo, si se especifica una carga de trabajo con el elemento **File** , no se puede especificar una carga de trabajo con el elemento **Database** en el mismo archivo de entrada XML.|  
+|**Repetición**|Una obligatoria si no se especifica ningún otro tipo de carga de trabajo. Es necesario especificar un elemento secundario **EventString**, **File** o **Database** para el elemento primario **Workload** , aunque solo se puede utilizar un tipo. Por ejemplo, si se especifica una carga de trabajo con el elemento **File** , no se puede especificar una carga de trabajo con el elemento **Database** en el mismo archivo de entrada XML.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   

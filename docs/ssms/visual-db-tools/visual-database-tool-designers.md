@@ -21,12 +21,12 @@ ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 22a49dc4a6d4dbff64a0468c4caae5cadc4b16a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 129de2adfa1b3b033551d3b41db4eac8f34891fe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479959"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338771"
 ---
 # <a name="visual-database-tool-designers"></a>Diseñadores de Visual Database Tools
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -88,7 +88,7 @@ Una vez que se ha abierto el diseñador, aparece el menú **Diseñador de consul
 >   
 > Esta versión de Visual Database Tools no admite Microsoft SQL Server 7 ni versiones anteriores.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Diseñar diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
 [Diseñar tablas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

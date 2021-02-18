@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: b4f0e4ed75e992095cff1f9ae315e3036ba7ef90
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: c0d0da7b2f74eb9dacdef390ede2cdd34d0356fa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766228"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336022"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificaciones de capacidad máxima para SQL Server
 
@@ -56,7 +56,7 @@ Tamaño y número máximo de diversos objetos definidos en las bases de datos [!
 |Bytes por clave externa|900||
 |Bytes por clave principal|900||
 |Bytes por fila|8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite el almacenamiento de desbordamiento de fila, lo que habilita la inserción de columnas de longitud variable de manera no consecutiva. Solo se almacena una raíz de 24 bytes en el registro principal para las columnas de longitud variable insertadas de manera no consecutiva. Esta característica permite que el límite sea más alto que en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Compatibilidad con filas largas](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support).|
-|Bytes por fila en tablas optimizadas para memoria|8,060|A partir de [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] , las tablas optimizadas para memoria admiten el almacenamiento no consecutivo. Las columnas de longitud variable se insertan de manera no consecutiva si el tamaño máximo de todas las columnas de la tabla supera los 8060 bytes; esta acción es una decisión en tiempo de compilación. Solo se almacena una referencia de 8 bytes de forma consecutiva para las columnas almacenadas de forma no consecutiva. Para obtener más información, vea [Tamaño de tabla y fila de las tablas con optimización para memoria](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|
+|Bytes por fila en tablas optimizadas para memoria|8,060|A partir de [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] , las tablas optimizadas para memoria admiten el almacenamiento no consecutivo. Las columnas de longitud variable se insertan de manera no consecutiva si el tamaño máximo de todas las columnas de la tabla supera los 8060 bytes; esta acción es una decisión en tiempo de compilación. Solo se almacena una referencia de 8 bytes de forma consecutiva para las columnas almacenadas de forma no consecutiva. Para obtener más información, vea [Tamaño de tabla y fila de las tablas con optimización para memoria](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|
 |Bytes en texto de origen de un procedimiento almacenado|El menor del tamaño del lote o 250 MB||
 |Bytes por columna `varchar(max) `, `varbinary(max)`, `xml`, `text` o `image`|2^31-1||
 |Caracteres por columna `ntext` o `nvarchar(max)`|2^30-1||
@@ -83,7 +83,7 @@ Tamaño y número máximo de diversos objetos definidos en las bases de datos [!
 |Referencias de tabla de claves externas por tabla|Saliente = 253. Entrante = 10 000.|Para ver las restricciones, vea [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|
 |Longitud del identificador (en caracteres)|128||
 |Instancias por equipo|50 instancias en un servidor independiente.<br /><br />25 instancias de clúster de conmutación por error cuando se usan discos de clúster compartidos como almacenamiento.<br/><br/>50 instancias de clúster de conmutación por error con recursos compartidos de archivos SMB como opción de almacenamiento.||
-|Índices por tabla optimizada para memoria|999 a partir de [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] y en [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/>8 en [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] y [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]||
+|Índices por tabla optimizada para memoria|999 a partir de [!INCLUDE[ssSQL17](../includes/ssSQL17-md.md)] y en [!INCLUDE[ssSDSFull](../includes/ssSDSFull-md.md)]<br/>8 en [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)] y [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]||
 |Longitud de una cadena que contiene instrucciones SQL (tamaño de lote)|65 536 (tamaño del paquete de red)|El tamaño del paquete de red es el tamaño de los paquetes de flujo TDS que se usan para la comunicación entre aplicaciones y el [!INCLUDE[ssDE](../includes/ssde-md.md)] relacional. El tamaño del paquete predeterminado es 4 KB y se controla mediante la opción de configuración Tamaño de paquete de red.|
 |Bloqueos por conexión|Máximo de bloqueos por servidor||
 |Bloqueos por instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Limitado solo por la memoria|Este valor sirve para asignaciones de bloqueo estático. Los bloqueos dinámicos están limitados solo por la memoria.|

@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: f927e003673cb4397250fe532d57452ddb4e6445
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6333f571ea271420b4044f7e3cf562d2f1edcc15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474566"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353538"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Auditoría local para la recopilación de datos de uso y diagnóstico de SQL Server (CEIP)
 
@@ -108,23 +108,23 @@ Cree una carpeta nueva (directorio de auditoría local) donde la uditoría local
 
 1. Vaya a la ruta de CPE correspondiente:
 
-   | Versión | **_Motor de base de datos_* _: clave del Registro |
+   | Versión | ***Motor de base de datos***: Clave del Registro |
    | :------ | :----------------------------- |
-   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL_ *13**.* Nombre_de_la_instancia*\\CPE |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL **13**.*Nombre-Instancia*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL **14**.*Nombre-Instancia*\\CPE |
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSSQL **15**.*Nombre-Instancia*\\CPE |
    | &nbsp; | &nbsp; |
 
-   | Versión | ***Analysis Services** _: clave del Registro |
+   | Versión | ***Analysis Services***: Clave del Registro |
    | :------ | :------------------------------- |
-   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS_ *13**.* Nombre-de-la-instancia*\\CPE |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS **13**.*Nombre-Instancia*\\CPE |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS **14**.*Nombre-Instancia*\\CPE |
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\MSAS **15**.*Nombre-Instancia*\\CPE |  
    | &nbsp; | &nbsp; |
 
-   | Versión | ***Integration Services** _: clave del Registro |
+   | Versión | ***Integration Services***: Clave del Registro |
    | :------ | :---------------------------------- |
-   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\_ *130** |
+   | 2016    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**130** |
    | 2017    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**140** |
    | 2019    | HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\**150** |
    | &nbsp; | &nbsp; |

@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 65f9f3c32da239c7ae6f41dfbe74b7ee8bb9ce41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0394038ecd114f30c1a32005e126a4aa20b548a2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726865"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345808"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>Establecer opciones globales de seguimiento (SQL Server Profiler)
 
@@ -29,7 +29,7 @@ En este tema se describe cómo establecer las opciones que se aplican a todos lo
   
 1.  En el menú **Herramientas** , haga clic en **Opciones**.  
   
-2.  En el cuadro de diálogo **Opciones generales**haga clic en **Elegir fuente**para modificar las opciones de visualización y luego haga clic en **Aceptar**.  
+2.  En el cuadro de diálogo **Opciones generales** haga clic en **Elegir fuente** para modificar las opciones de visualización y luego haga clic en **Aceptar**.  
   
 3.  Opcionalmente puede seleccionar **Iniciar la traza inmediatamente tras realizar la conexión**.  
   

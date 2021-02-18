@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: acfc7ece997debd1ca77ec8441907ab4e99d0dcd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a9fa6e0647fc00b573f6296747765b6d85a3f39d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731975"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349490"
 ---
 # <a name="xml-input-file-samples-dta"></a>Ejemplos de archivos de entrada XML (DTA)
 

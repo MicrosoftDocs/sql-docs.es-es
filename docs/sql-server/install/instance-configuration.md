@@ -16,12 +16,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: cawrites
 ms.author: chadam
 robots: noindex,nofollow
-ms.openlocfilehash: 08b7d5d8c1680be42902fe287c14418b2732f7f9
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 7b678ac25174b75db198739e0e9bc191d29f18d9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98595437"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336168"
 ---
 # <a name="installation-wizard-help"></a>Ayuda del Asistente para instalación
 
@@ -365,11 +365,11 @@ Configure las opciones de **tempdb** según sus requisitos y la carga de trabajo
   
 * El valor de **Número de archivos** equivale a la cantidad total de archivos de datos de **tempdb**. El valor predeterminado es por debajo de 8 o el número de núcleos lógicos detectados durante la instalación. Como regla general, si el número de procesadores lógicos es menor o igual a 8, use el mismo número de archivos de datos que procesadores lógicos. Si el número de procesadores lógicos es superior a 8, utilice 8 archivos de datos. Si se produce la contención, aumente el número de archivos de datos en múltiplos de 4 (hasta el número de procesadores lógicos) hasta que la contención se encuentre dentro de niveles aceptables, o realice cambios en la carga de trabajo o el código.
   
-* El **tamaño inicial (MB)** equivale al tamaño inicial en megabytes para cada archivo de datos de **tempdb**. El valor predeterminado es de 8 MB (o 4 MB para [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] presenta un tamaño máximo de archivo inicial de 262 144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql16-md.md)] tenía un tamaño máximo de archivo inicial de 1024 MB. Todos los archivos de datos de **tempdb** tienen el mismo tamaño inicial. Como **tempdb** se vuelve a crear cada vez que SQL Server se inicia o conmuta por error, debe especificar un valor parecido al tamaño requerido por la carga de trabajo para ofrecer un funcionamiento normal. Para optimizar aún más la creación de **tempdb** durante el inicio, habilite la [inicialización instantánea de archivos de base de datos](../../relational-databases/databases/database-instant-file-initialization.md).  
+* El **tamaño inicial (MB)** equivale al tamaño inicial en megabytes para cada archivo de datos de **tempdb**. El valor predeterminado es de 8 MB (o 4 MB para [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssql17](../../includes/sssql17-md.md)] presenta un tamaño máximo de archivo inicial de 262 144 MB (256 GB). [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] tenía un tamaño máximo de archivo inicial de 1024 MB. Todos los archivos de datos de **tempdb** tienen el mismo tamaño inicial. Como **tempdb** se vuelve a crear cada vez que SQL Server se inicia o conmuta por error, debe especificar un valor parecido al tamaño requerido por la carga de trabajo para ofrecer un funcionamiento normal. Para optimizar aún más la creación de **tempdb** durante el inicio, habilite la [inicialización instantánea de archivos de base de datos](../../relational-databases/databases/database-instant-file-initialization.md).  
   
 * El **tamaño inicial total (MB)** es el tamaño acumulado de todos los archivos de datos de **tempdb**.  
   
-* **Crecimiento automático (MB)** es la cantidad de espacio en megabytes en la que cada archivo de datos de **tempdb** aumentará automáticamente cuando se quede sin espacio. En [!INCLUDE[sssql15](../../includes/sssql16-md.md)] y versiones posteriores, todos los archivos de datos aumentarán su tamaño al mismo tiempo en la cantidad especificada en esta configuración.  
+* **Crecimiento automático (MB)** es la cantidad de espacio en megabytes en la que cada archivo de datos de **tempdb** aumentará automáticamente cuando se quede sin espacio. En [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] y versiones posteriores, todos los archivos de datos aumentarán su tamaño al mismo tiempo en la cantidad especificada en esta configuración.  
   
 * **Crecimiento automático total (MB)** es el tamaño acumulado de cada evento de crecimiento automático.  
 * **Directorios de datos** muestra todos los directorios que contienen archivos de datos de **tempdb**. Cuando hay varios directorios, los archivos de datos se colocan en ellos mediante un mecanismo round robin. Por ejemplo, si crea 3 directorios y especifica 8 archivos de datos, los archivos de datos 1, 4 y 7 se crean en el primer directorio. En el segundo se crean los archivos de datos 2, 5 y 8. Los archivos de datos 3 y 6 están en el tercer directorio.  
@@ -380,7 +380,7 @@ Configure las opciones de **tempdb** según sus requisitos y la carga de trabajo
   
 **TempDB log file** (Archivo de registro de TempDB) es el nombre del archivo de registro. Este archivo se crea automáticamente. Las siguientes opciones se aplican únicamente a los archivos de registro de **tempdb** :  
   
-* **Tamaño inicial (MB)** es el tamaño inicial del archivo de registro de **tempdb** . El valor predeterminado es de 8 MB (o 4 MB para [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] presenta un tamaño máximo de archivo inicial de 262 144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql16-md.md)] tenía un tamaño máximo de archivo inicial de 1024 MB. Como **tempdb** se vuelve a crear cada vez que SQL Server se inicia o conmuta por error, debe especificar un valor parecido al tamaño requerido por la carga de trabajo para ofrecer un funcionamiento normal. Para optimizar aún más la creación de **tempdb** durante el inicio, habilite la [inicialización instantánea de archivos de base de datos](../../relational-databases/databases/database-instant-file-initialization.md).  
+* **Tamaño inicial (MB)** es el tamaño inicial del archivo de registro de **tempdb** . El valor predeterminado es de 8 MB (o 4 MB para [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssql17](../../includes/sssql17-md.md)] presenta un tamaño máximo de archivo inicial de 262 144 MB (256 GB). [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] tenía un tamaño máximo de archivo inicial de 1024 MB. Como **tempdb** se vuelve a crear cada vez que SQL Server se inicia o conmuta por error, debe especificar un valor parecido al tamaño requerido por la carga de trabajo para ofrecer un funcionamiento normal. Para optimizar aún más la creación de **tempdb** durante el inicio, habilite la [inicialización instantánea de archivos de base de datos](../../relational-databases/databases/database-instant-file-initialization.md).  
   
   > [!NOTE]
   > **Tempdb** usa el registro mínimo. No se puede hacer una copia de seguridad del archivo de registro de **tempdb**. Se vuelve a crear cada vez que SQL Server se inicia o cuando una instancia del clúster conmuta por error.
@@ -420,7 +420,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ## <a name="a-namemaxdop-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> Página Configuración del Motor de base de datos: MaxDOP
 
-El **grado máximo de paralelismo (MaxDOP)** determina el número máximo de procesadores que puede usar una sola instrucción. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce la posibilidad de configurar esta opción durante la instalación. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] detecta también automáticamente la configuración de MaxDOP recomendada para el servidor en función del número de núcleos.  
+El **grado máximo de paralelismo (MaxDOP)** determina el número máximo de procesadores que puede usar una sola instrucción. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] introduce la posibilidad de configurar esta opción durante la instalación. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] detecta también automáticamente la configuración de MaxDOP recomendada para el servidor en función del número de núcleos.  
 
 Si se omite esta página durante la instalación, el valor predeterminado de MaxDOP es el valor recomendado que se muestra en esta página, en lugar del valor de [!INCLUDE[ssde_md](../../includes/ssde_md.md)] predeterminado para las versiones anteriores (0). También puede configurar manualmente esta opción en esta página y modificarla tras la instalación. 
 

@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
-ms.openlocfilehash: 4e101a017197d83217a574ca6521dd60328f536a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 39717778ca2456d77b6ceff4ba72e8de06dac75f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470336"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339703"
 ---
 # <a name="python-tutorial-run-predictions-using-python-embedded-in-a-stored-procedure"></a>Tutorial de Python: Ejecución de predicciones con Python insertado en un procedimiento almacenado
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -34,14 +34,14 @@ Todo el código de Python necesario para la puntuación se facilita como parte d
 En este artículo, hará lo siguiente:
 
 > [!div class="checklist"]
-> + Creará y usará procedimientos almacenados para la puntuación por lotes
-> + Creará y usará procedimientos almacenados para la puntuación de una sola fila
+> + Crear y usar procedimientos almacenados para la puntuación por lotes
+> + Crear y usar procedimientos almacenados para puntuar una sola fila
 
 En la [parte uno](python-taxi-classification-introduction.md), ha instalado los requisitos previos y ha restaurado la base de datos de ejemplo.
 
 En la [parte dos](python-taxi-classification-explore-data.md), ha explorado los datos de ejemplo y ha generado algunos trazados.
 
-En la [parte tres](python-taxi-classification-create-features.md), aprendió a crear características a partir de datos sin procesar mediante una función de Transact-SQL. Después, llamó a esa función desde un procedimiento almacenado para crear una tabla que contiene los valores de las características.
+En la [tres](python-taxi-classification-create-features.md), aprendió a crear características a partir de datos sin procesar mediante una función de Transact-SQL. Después, llamó a esa función desde un procedimiento almacenado para crear una tabla que contiene los valores de las características.
 
 En la [parte cuatro](python-taxi-classification-train-model.md), cargó los módulos y llamó a las funciones necesarias para crear y entrenar el modelo mediante un procedimiento almacenado de SQL Server.
 

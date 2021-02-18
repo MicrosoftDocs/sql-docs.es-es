@@ -15,12 +15,12 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: a1d8686e1502fab121e49abed19f8f01488d22b7
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: 11b6399adb28a81f5364e6073a6fb0fde757ffe7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439359"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338061"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Cómo representa combinaciones el Diseñador de consultas y vistas (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +60,7 @@ Una combinación puede expresarse de varias maneras en una instrucción SQL. La 
   
 Las opciones de sintaxis para combinar tablas incluyen:  
   
--   **Calificador JOIN para la cláusula FROM** .   Las palabras clave INNER y OUTER especifican el tipo de combinación. Esta sintaxis es estándar para SQL ANSI 92.  
+-   **Calificador JOIN para la cláusula FROM**.   Las palabras clave INNER y OUTER especifican el tipo de combinación. Esta sintaxis es estándar para SQL ANSI 92.  
   
     Por ejemplo, si combina las tablas `publishers` y `pub_info` según la columna `pub_id` de cada tabla, la instrucción SQL resultante podría tener el siguiente aspecto:  
   
@@ -72,7 +72,7 @@ Las opciones de sintaxis para combinar tablas incluyen:
   
     Si crea una combinación externa, aparecen las palabras LEFT OUTER o RIGHT OUTER en lugar de la palabra INNER.  
   
--   **La cláusula WHERE compara columnas de ambas tablas** .   Aparecerá una cláusula WHERE si la base de datos no admite la sintaxis JOIN, o si la especificó el usuario. Si la combinación se crea en la cláusula WHERE, ambos nombres de tabla aparecen en la cláusula FROM.  
+-   **La cláusula WHERE compara columnas de ambas tablas**.   Aparecerá una cláusula WHERE si la base de datos no admite la sintaxis JOIN, o si la especificó el usuario. Si la combinación se crea en la cláusula WHERE, ambos nombres de tabla aparecen en la cláusula FROM.  
   
     Por ejemplo, la instrucción siguiente combina las tablas `publishers` y `pub_info` .  
   

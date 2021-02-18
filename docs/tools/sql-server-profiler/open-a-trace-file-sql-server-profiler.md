@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 166bb88c60717d0b01ba658d720e00898aade380
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef536b0100187a663c6f1a06e7b295d49aab648e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774791"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335921"
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>Abrir un archivo de seguimiento (SQL Server Profiler)
 
@@ -26,7 +26,7 @@ En este tema se describe cómo abrir un archivo de seguimiento mediante el [!INC
   
 ### <a name="to-open-a-trace-file"></a>Para abrir un archivo de seguimiento  
   
-1.  En el menú **Archivo** , haga clic en **Abrir**y, a continuación, en **Archivo de seguimiento**.  
+1.  En el menú **Archivo** , haga clic en **Abrir** y, a continuación, en **Archivo de seguimiento**.  
   
 2.  En el cuadro de diálogo **Abrir archivo** , seleccione el archivo de datos de seguimiento que desee abrir.  
   

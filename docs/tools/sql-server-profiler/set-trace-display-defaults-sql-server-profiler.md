@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9a1e746b4f418c23e22dafc6c07b211c188b8a13
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 96e420bbca08ca14af89614fa28c35e7b3f78dbb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726867"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345752"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Establecer los valores predeterminados de presentación de seguimiento (SQL Server Profiler)
 
@@ -31,9 +31,9 @@ En este tema se describe el modo de establecer las opciones de la herramienta qu
   
 2.  En el cuadro de diálogo **Opciones generales** , haga clic en **Elegir fuente**.  
   
-3.  En el cuadro de diálogo **Fuente** , seleccione la **Fuente**, el **Estilo de fuente**y el **Tamaño** que desee que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] utilice para mostrar los seguimientos.  
+3.  En el cuadro de diálogo **Fuente** , seleccione la **Fuente**, el **Estilo de fuente** y el **Tamaño** que desee que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] utilice para mostrar los seguimientos.  
   
-4.  Haga clic en **Aceptar**para aplicar la configuración y cerrar el cuadro de diálogo **Fuente** .  
+4.  Haga clic en **Aceptar** para aplicar la configuración y cerrar el cuadro de diálogo **Fuente** .  
   
 5.  En el cuadro de diálogo **Opciones generales** , active la casilla **Usar la configuración regional para mostrar valores de fecha y hora** para que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] utilice la configuración regional establecida en el sistema cuando se muestren los seguimientos.  
   

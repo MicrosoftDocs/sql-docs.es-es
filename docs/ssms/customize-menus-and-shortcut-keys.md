@@ -20,12 +20,12 @@ ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 242dc262053aefe5a95e6e65d99ae98965491e55
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 9e8e6bc470b522ad27ff6e61d5383bbf6a87bd61
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034932"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344195"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizar los menús y los métodos abreviados de teclado
 
@@ -107,7 +107,7 @@ Las teclas de aceleración de los procedimientos almacenados que usan la tecla C
   
 4.  Vaya a la lista **Controles** mediante la tecla TAB y use las teclas de flecha para seleccionar el botón que desea cambiar.  
   
-5.  Presione **ALT+M**para seleccionar **Modificar selección**.  
+5.  Presione **ALT+M** para seleccionar **Modificar selección**.  
   
 6.  Vaya al cuadro **Nombre** del menú contextual mediante la tecla TAB, escriba un nombre para el botón de la barra de herramientas con una Y comercial (&) delante de la letra que vaya a ser la tecla de aceleración.  
   
@@ -153,7 +153,7 @@ Las teclas de aceleración de los procedimientos almacenados que usan la tecla C
   
 3.  En el cuadro **Comandos** , arrastre **Nuevo menú** hasta la barra de menús y colóquelo donde desee que aparezca el nuevo menú.  
   
-4.  En el menú, haga clic con el botón derecho en **Nuevo menú**y, en el cuadro **Nombre** , escriba un nombre para el nuevo menú.  
+4.  En el menú, haga clic con el botón derecho en **Nuevo menú** y, en el cuadro **Nombre** , escriba un nombre para el nuevo menú.  
   
 5.  En el cuadro de diálogo **Personalizar** , seleccione una categoría, como **Archivo**, y un comando, como **Abrir archivo**. Arrastre el comando hasta el nuevo menú. Al situar el puntero en el nuevo menú, el menú se expandirá. Coloque el comando en el menú expandido.  
   

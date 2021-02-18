@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 491d12da17cde905ab1f9038f7a0b1e78af113a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9cd6bc990ccd82ece2e7a9b9aabb9831fbc8f5b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731907"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345778"
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>Guardar los resultados de un seguimiento en un archivo (SQL Server Profiler)
 
@@ -27,12 +27,12 @@ En este tema se describe cómo utilizar el [!INCLUDE[ssSqlProfiler](../../includ
   
 ### <a name="to-save-trace-results-to-a-file"></a>Para guardar los resultados de un seguimiento en un archivo  
   
-1.  En el menú **Archivo** , haga clic en **Nuevo seguimiento**y conéctese a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  En el menú **Archivo** , haga clic en **Nuevo seguimiento** y conéctese a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Aparecerá el cuadro de diálogo **Propiedades de seguimiento**.  
   
     > [!NOTE]  
-    >  Si se selecciona **Iniciar el seguimiento inmediatamente tras realizar la conexión**, el cuadro de diálogo **Propiedades de seguimiento**no aparecerá y, en su lugar, se iniciará el seguimiento. Para desactivar esta configuración, en el menú **Herramientas**, haga clic en **Opciones**y desactive la casilla **Iniciar el seguimiento inmediatamente tras realizar la conexión** .  
+    >  Si se selecciona **Iniciar el seguimiento inmediatamente tras realizar la conexión**, el cuadro de diálogo **Propiedades de seguimiento** no aparecerá y, en su lugar, se iniciará el seguimiento. Para desactivar esta configuración, en el menú **Herramientas**, haga clic en **Opciones** y desactive la casilla **Iniciar el seguimiento inmediatamente tras realizar la conexión** .  
   
 2.  En el cuadro **Nombre de seguimiento** , escriba un nombre para el seguimiento.  
   
@@ -54,7 +54,7 @@ En este tema se describe cómo utilizar el [!INCLUDE[ssSqlProfiler](../../includ
     -   Active la casilla **El servidor procesa los datos de seguimiento** para asegurarse de que el servidor registra todos los eventos del seguimiento.  
   
         > [!NOTE]  
-        >  Cuando la casilla **El servidor procesa los datos de seguimiento**está desactivada, el servidor no registra los eventos si con ello el rendimiento disminuye considerablemente.  
+        >  Cuando la casilla **El servidor procesa los datos de seguimiento** está desactivada, el servidor no registra los eventos si con ello el rendimiento disminuye considerablemente.  
   
 ## <a name="see-also"></a>Consulte también  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

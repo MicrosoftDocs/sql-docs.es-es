@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 4c8a0f29addf80905ef6edaf5920e479fbaa48e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22d126dae4356bd6830c801369375b8705e37b37
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681168"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349527"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Modificación de las cuentas de servicios de controlador y de cliente
 
@@ -34,7 +34,7 @@ En este tema, aprenderá a modificar las cuentas de servicio del cliente y Distr
   
 1.  En el equipo del controlador, detenga el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller.  
   
-2.  En **Servicios**, haga clic con el botón derecho en **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller**y luego seleccione **Propiedades**.  
+2.  En **Servicios**, haga clic con el botón derecho en **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** y luego seleccione **Propiedades**.  
   
 3.  En la ventana **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** , en la pestaña **Iniciar sesión** , seleccione **Esta cuenta**, escriba la nueva cuenta de inicio de sesión o haga clic en **Examinar** para buscarla y, a continuación, haga clic en **Aceptar**.  
   
@@ -64,7 +64,7 @@ En este tema, aprenderá a modificar las cuentas de servicio del cliente y Distr
   
     3.  En la ventana **Servicios de componentes**, vaya a **Raíz de consola -> Servicios de componentes -> Equipos -> Mi PC -> DCOM Config ->DReplayController**.  
   
-    4.  Haga clic con el botón derecho en **DReplayController**y luego haga clic en **Propiedades**.  
+    4.  Haga clic con el botón derecho en **DReplayController** y luego haga clic en **Propiedades**.  
   
     5.  En la ventana **Propiedades de DReplayController** , en la pestaña **Seguridad** , haga clic en **Editar** en la sección **Permisos de inicio y activación** .  
   

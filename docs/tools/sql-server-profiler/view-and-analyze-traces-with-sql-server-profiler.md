@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: c806d55867c63c273bd528ecafc4419d31fde7e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b95380a4a99e525cc97588b2051d1812c6e2d34a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722631"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338638"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Ver y analizar seguimientos con SQL Server Profiler
 
@@ -33,7 +33,7 @@ Utilice [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para ver l
  Puede configurar el formato de visualización de la fecha y hora del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] como ayuda en el análisis de seguimientos.  
   
 ## <a name="troubleshooting-data"></a>Solución de problemas de los datos  
- El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]permite solucionar problemas de datos mediante la agrupación de seguimientos o archivos de seguimiento según las columnas de datos **Duration**, **CPU**, **Reads**o **Writes** . Algunos ejemplos son consultas que no se ejecutan satisfactoriamente o que tienen una cantidad excepcionalmente alta de lecturas lógicas.  
+ El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]permite solucionar problemas de datos mediante la agrupación de seguimientos o archivos de seguimiento según las columnas de datos **Duration**, **CPU**, **Reads** o **Writes** . Algunos ejemplos son consultas que no se ejecutan satisfactoriamente o que tienen una cantidad excepcionalmente alta de lecturas lógicas.  
   
  Puede buscar información adicional si guarda los seguimientos en tablas y utiliza [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizar consultas en los datos de eventos. Por ejemplo, para determinar los eventos **SQL:BatchCompleted** con un tiempo de espera excesivo, ejecute lo siguiente:  
   
@@ -50,16 +50,16 @@ AND     CPU < (Duration * 1000)
 ## <a name="displaying-object-names-when-viewing-traces"></a>Mostrar nombres de objetos al ver seguimientos  
  Si quiere visualizar el nombre de un objeto en lugar de su identificador (**Object ID**), debe capturar las columnas de datos **Server Name** y **Database ID** junto con **Object Name** .  
   
- Si decide realizar una agrupación mediante la columna de datos **Object ID** , realícela primero mediante las columna de datos **Server Name** y **Database ID** , y luego mediante **Object ID** . Del mismo modo, si decide realizar una agrupación mediante la columna de datos **Index ID** , realícela primero mediante las columna de datos **Server Name**, **Database ID**y **Object ID** , y luego mediante **Index ID** . Es necesario que siga este orden ya que los Id. de objeto y de índice no son exclusivos entre servidores y bases de datos (ni entre objetos, en el caso de los Id. de índice).  
+ Si decide realizar una agrupación mediante la columna de datos **Object ID** , realícela primero mediante las columna de datos **Server Name** y **Database ID** , y luego mediante **Object ID** . Del mismo modo, si decide realizar una agrupación mediante la columna de datos **Index ID** , realícela primero mediante las columna de datos **Server Name**, **Database ID** y **Object ID** , y luego mediante **Index ID** . Es necesario que siga este orden ya que los Id. de objeto y de índice no son exclusivos entre servidores y bases de datos (ni entre objetos, en el caso de los Id. de índice).  
   
 ## <a name="finding-specific-events-within-a-trace"></a>Buscar eventos específicos en un seguimiento  
  Para encontrar y agrupar eventos en un seguimiento, siga estos pasos:  
   
 1.  Cree el seguimiento.  
   
-    -   Una vez definida, capture las columnas de datos **Event Class**, **ClientProcessID**y **Start Time** además de cualquier otra columna de datos que desee capturar. Para obtener más información, vea [Crear un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md).  
+    -   Una vez definida, capture las columnas de datos **Event Class**, **ClientProcessID** y **Start Time** además de cualquier otra columna de datos que desee capturar. Para obtener más información, vea [Crear un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md).  
   
-    -   Agrupe los datos capturados por la columna de datos **Event Class**y capture el seguimiento en un archivo o una tabla. Para agrupar los datos capturados, haga clic en la opción **Organizar columnas** de la pestaña **Selección de eventos** del cuadro de diálogo Propiedades de seguimiento. Para obtener más información, vea [Organizar las columnas mostradas en un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md).  
+    -   Agrupe los datos capturados por la columna de datos **Event Class** y capture el seguimiento en un archivo o una tabla. Para agrupar los datos capturados, haga clic en la opción **Organizar columnas** de la pestaña **Selección de eventos** del cuadro de diálogo Propiedades de seguimiento. Para obtener más información, vea [Organizar las columnas mostradas en un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md).  
   
     -   Inicie el seguimiento y deténgalo una vez pasado el tiempo apropiado o cuando se haya capturado el número de eventos.  
   
@@ -71,11 +71,11 @@ AND     CPU < (Duration * 1000)
   
 3.  Muestre los eventos en el contexto.  
   
-    -   Muestre las propiedades del seguimiento y agrupe por la columna de datos **ClientProcessID**en lugar de **Event Class** .  
+    -   Muestre las propiedades del seguimiento y agrupe por la columna de datos **ClientProcessID** en lugar de **Event Class** .  
   
-    -   Expanda los nodos de cada Id. de proceso de cliente que desee ver. Realice una búsqueda manual en el seguimiento o utilice **Buscar** hasta que encuentre los valores de **Start Time**anotados anteriormente de los eventos de destino. Los eventos se muestran en orden cronológico con los demás eventos que pertenecen a cada identificador de proceso de cliente seleccionado. Por ejemplo, los eventos **Deadlock** y **Deadlock Chain**, capturados dentro del seguimiento, aparecen inmediatamente después de los eventos **SQL:BatchStarting**events within the expyed client process ID.  
+    -   Expanda los nodos de cada Id. de proceso de cliente que desee ver. Realice una búsqueda manual en el seguimiento o utilice **Buscar** hasta que encuentre los valores de **Start Time** anotados anteriormente de los eventos de destino. Los eventos se muestran en orden cronológico con los demás eventos que pertenecen a cada identificador de proceso de cliente seleccionado. Por ejemplo, los eventos **Deadlock** y **Deadlock Chain**, capturados dentro del seguimiento, aparecen inmediatamente después de los eventos **SQL:BatchStarting** events within the expyed client process ID.  
   
- La misma técnica se puede emplear para buscar cualquier evento agrupado. Una vez que haya encontrado los eventos que busca, agrúpelos por **ClientProcessID**, **ApplicationName**u otra clase de eventos para ver la actividad relacionada en orden cronológico.  
+ La misma técnica se puede emplear para buscar cualquier evento agrupado. Una vez que haya encontrado los eventos que busca, agrúpelos por **ClientProcessID**, **ApplicationName** u otra clase de eventos para ver la actividad relacionada en orden cronológico.  
   
 ## <a name="see-also"></a>Consulte también  
  [Ver un seguimiento guardado &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md)   

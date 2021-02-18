@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 75200101105cc77a8b1dc7304c0333ab2727960d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1acad3d3f747d46edf9c0db5a31bb89904df3e97
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734185"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353320"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>Iniciar un seguimiento automáticamente después de conectarse a un servidor (SQL Server Profiler)
 
@@ -32,7 +32,7 @@ En este tema se describe el modo de iniciar seguimientos de forma automática tr
 2.  Active la casilla **Iniciar la traza inmediatamente tras realizar la conexión** .  
   
 > [!NOTE]  
->  Si se selecciona **Iniciar el seguimiento inmediatamente tras realizar la conexión**, el cuadro de diálogo **Propiedades de seguimiento**no aparecerá y, en su lugar, se iniciará el seguimiento. Para editar las propiedades del seguimiento, primero debe desactivar este ajuste.  
+>  Si se selecciona **Iniciar el seguimiento inmediatamente tras realizar la conexión**, el cuadro de diálogo **Propiedades de seguimiento** no aparecerá y, en su lugar, se iniciará el seguimiento. Para editar las propiedades del seguimiento, primero debe desactivar este ajuste.  
   
 ## <a name="see-also"></a>Consulte también  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

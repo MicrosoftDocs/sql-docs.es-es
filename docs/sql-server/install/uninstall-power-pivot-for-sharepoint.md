@@ -11,12 +11,12 @@ ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e07f558163cd7b028f318d3df66c4a1ae16af84b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 375f351c1d80e957fba29f81b9d2afc423c222ad
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988069"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336097"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Desinstalar Power Pivot para SharePoint
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "91988069"
   
 -   Compruebe que se ejecuta el servicio de administración de SharePoint.  
   
-1.  **Ejecutar la herramienta de configuración** : tenga en cuenta que las herramientas de configuración se muestran solo cuando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] se instala en el servidor local. En el menú **Inicio** , seleccione **Todos los programas**, haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], haga clic en **Herramientas de configuración**y, a continuación, haga clic en uno de los elementos siguientes:  
+1.  **Ejecutar la herramienta de configuración** : tenga en cuenta que las herramientas de configuración se muestran solo cuando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] se instala en el servidor local. En el menú **Inicio** , seleccione **Todos los programas**, haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], haga clic en **Herramientas de configuración** y, a continuación, haga clic en uno de los elementos siguientes:  
   
     -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "91988069"
   
 2.  Seleccione **Quitar características, servicios, aplicaciones y soluciones** y haga clic en **Aceptar**.  
   
-3.  También puede ampliar la ventana al tamaño máximo. Aparecerá una barra de botones en la parte inferior de la ventana con los comandos **Validar** **Ejecutar**y **Salir** .  
+3.  También puede ampliar la ventana al tamaño máximo. Aparecerá una barra de botones en la parte inferior de la ventana con los comandos **Validar** **Ejecutar** y **Salir** .  
   
 4.  Revise cada acción de la lista de tareas para entender lo que realiza cada una.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "91988069"
   
 6.  Haga clic en **Validar** para comprobar si cada acción es válida. Si la opción **Validar** no está disponible, significa que todas las acciones son válidas para el sistema.  
   
-7.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la advertencia siguiente, para recordarle que las acciones se procesan en modo por lotes: "Todos los parámetros de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?".  
+7.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción **Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la advertencia siguiente, para recordarle que las acciones se procesan en modo por lotes: "Todos los parámetros de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?".  
   
 8.  Haga clic en **Sí** para continuar.  
   
@@ -123,7 +123,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o enumdeployments  
     ```  
   
-3.  Revise las implementaciones existentes para la siguiente información: **Tipo**es Retracción o Implementación, **Archivo** es powerpivotwebapp.wsp o powerpivotfarm.wsp.  
+3.  Revise las implementaciones existentes para la siguiente información: **Tipo** es Retracción o Implementación, **Archivo** es powerpivotwebapp.wsp o powerpivotfarm.wsp.  
   
 4.  En las implementaciones o las retracciones relacionadas con soluciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], copie el valor GUID para **JobId** y péguelo en el comando siguiente (use los comandos Marcar, Copiar y Pegar del menú Edición del shell para copiar el GUID):  
   
@@ -184,7 +184,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      Por el contrario, las aplicaciones de destino individuales que generó automáticamente el Servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se eliminan automáticamente cuando se desinstala [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
-4.  En el Panel de control, haga clic en **Programas**y, a continuación, haga clic en **Desinstalar un programa** . Desinstale cualquier biblioteca de cliente de Analysis Services que ya no se use. Analysis Services ADOMD.NET y Objetos de administración de análisis de Microsoft SQL Server no se quitan al desinstalar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. El programa de instalación de SQL Server no desinstala automáticamente las bibliotecas porque podrían usarlas otros programas que utilizan datos de Analysis Services. Debe desinstalar estas bibliotecas cliente individualmente si ya no las necesita.  
+4.  En el Panel de control, haga clic en **Programas** y, a continuación, haga clic en **Desinstalar un programa** . Desinstale cualquier biblioteca de cliente de Analysis Services que ya no se use. Analysis Services ADOMD.NET y Objetos de administración de análisis de Microsoft SQL Server no se quitan al desinstalar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. El programa de instalación de SQL Server no desinstala automáticamente las bibliotecas porque podrían usarlas otros programas que utilizan datos de Analysis Services. Debe desinstalar estas bibliotecas cliente individualmente si ya no las necesita.  
   
      No desinstale el complemento SharePoint de SQL Server Reporting Services 2010 a menos que esté siguiendo instrucciones de solución de problemas o de instalación que le indiquen de manera concreta que debe hacerlo. Servicios de Access utiliza el complemento Reporting Services. Lo instala la herramienta de preparación de productos de SharePoint y debe permanecer en el sistema para admitir la funcionalidad que necesita SharePoint.  
   

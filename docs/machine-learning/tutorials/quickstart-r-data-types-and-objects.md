@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 763ffa0cc6cf65d17489397bf63014493bf2ac19
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e005d979e1c2b2de531979d18d2a7fc882f2b734
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101910"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339632"
 ---
 # <a name="quickstart-data-structures-data-types-and-objects-using-r-with-sql-machine-learning"></a>Inicio rápido: Estructuras de datos, tipos de datos y objetos mediante R con aprendizaje automático de SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -184,7 +184,7 @@ En segundo plano, la columna de tres valores se convierte en una matriz de una s
 |---|---|---|---|
 |12|13|14|15|
 |120|130|140|150|
-|1200|1300|1400|1\.500|
+|1200|1300|1400|1.500|
 
 Con todo, observe lo que ocurre cuando se cambia el tamaño de la matriz `y`.
 

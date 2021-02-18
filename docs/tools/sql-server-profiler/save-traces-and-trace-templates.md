@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 084471f17aac4d9f731facaad71c2e265a2c275d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c75f865ed31e43f2fbdec96cfc65fcbd9619c1d1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726911"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345776"
 ---
 # <a name="save-traces-and-trace-templates"></a>Guardar seguimientos y plantillas de seguimiento
 

@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 48728a7557edc0d2ddfa5d3e1dbf3e9acb868aa7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 27dd9d883f7bd728e0bba751798257afb138cb81
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726854"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342042"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>Configurar los valores predeterminados de definición de seguimiento (SQL Server Profiler)
 
@@ -27,15 +27,15 @@ El valor predeterminado de definición de seguimiento es la plantilla de seguimi
   
 ### <a name="to-set-trace-definition-defaults"></a>Para configurar los valores predeterminados de definición de seguimiento  
   
-1.  En el menú **Archivo** , seleccione **Plantillas**y haga clic en **Editar plantilla**.  
+1.  En el menú **Archivo** , seleccione **Plantillas** y haga clic en **Editar plantilla**.  
   
 2.  En la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento**, seleccione un tipo de servidor en la lista **Seleccionar tipo de servidor**.  
   
-3.  En el cuadro de diálogo **Seleccionar nombre de plantilla**seleccione el nombre de la plantilla que desee utilizar como predeterminada para la definición de seguimiento.  
+3.  En el cuadro de diálogo **Seleccionar nombre de plantilla** seleccione el nombre de la plantilla que desee utilizar como predeterminada para la definición de seguimiento.  
   
 4.  Seleccione **Usar como plantilla predeterminada para tipo de servidor seleccionado**.  
   
-5.  Si es necesario, haga clic en la pestaña **Selección de eventos**para modificar la plantilla.  
+5.  Si es necesario, haga clic en la pestaña **Selección de eventos** para modificar la plantilla.  
   
 6.  Haga clic en **Save**(Guardar).  
   

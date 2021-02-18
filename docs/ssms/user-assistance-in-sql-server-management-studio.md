@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26b2ecf32bb6c7a683f0321f342258b44ff4d214
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c1d8ad8f855a2888dc1a37fd985f2b1a3bfc0357
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417841"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338792"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Asistencia al usuario en SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ El **Contenido** y el **Índice** ofrecen una funcionalidad y una interfaz con l
 Ayuda sobre la Ayuda (Ayuda de [!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer) vincula a los usuarios con la documentación sobre el Visor de ayuda, pero los temas se encuentran en una colección independiente de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para más información acerca del Visor de ayuda, seleccione **Ayuda sobre la Ayuda** en el menú Ayuda de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online y comunidades de SQL Server  
-La Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece a los usuarios formas de ponerse en contacto con MSDN Online y con comunidades centradas en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]en la Web para obtener información. Puede:  
+La Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece a los usuarios formas de ponerse en contacto con MSDN Online y con comunidades centradas en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]en la Web para obtener información. Puede hacer lo siguiente:  
   
 -   Obtener acceso a las comunidades de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde la página Cómo.  
   
@@ -96,7 +96,7 @@ Los Libros en pantalla también se pueden abrir como una ventana dentro de [!INC
   
 #### <a name="to-configure-help-and-sql-server-books-online-to-launch-inside-the-management-studio-window"></a>Para configurar la Ayuda y los Libros en pantalla de SQL Server de modo que se inicien dentro de la ventana Management Studio  
   
-1.  En el menú **Herramientas** , haga clic en **Opciones**, expanda **Entorno**, expanda **Ayuda**y, a continuación, haga clic en **General**.  
+1.  En el menú **Herramientas** , haga clic en **Opciones**, expanda **Entorno**, expanda **Ayuda** y, a continuación, haga clic en **General**.  
   
 2.  En el cuadro **Mostrar la Ayuda usando** , haga clic en **Visor de ayuda integrada**.  
   

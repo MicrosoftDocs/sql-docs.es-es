@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abc9fccd9c81f26b872a991c05a2d653384ad123
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 0d4b3a2e75a00e3688ec53c5e64e6ab7727375a2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036948"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341042"
 ---
 # <a name="registered-servers-f1-help"></a>Servidores registrados (Ayuda F1)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "92036948"
  ## <a name="reporting-services-new-or-edit-server-registration-general-tab"></a>Nuevo o Editar el registro de servidores (pestaña General) de Reporting Services 
   Utilice esta pestaña para especificar opciones cuando registre una instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Para obtener acceso a esta página, en Servidores registrados, haga clic en **Reporting Services** , en la barra de herramientas de **Servidores registrados** haga clic con el botón derecho en cualquier grupo de servidores registrados como, por ejemplo, **Reporting Services**, seleccione **Nuevo**y haga clic en **Registro de servidor**.  
+ Para obtener acceso a esta página, en Servidores registrados, haga clic en **Reporting Services** , en la barra de herramientas de **Servidores registrados** haga clic con el botón derecho en cualquier grupo de servidores registrados como, por ejemplo, **Reporting Services**, seleccione **Nuevo** y haga clic en **Registro de servidor**.  
   
 ### <a name="options"></a>Opciones  
  **Tipo de servidor**  
@@ -80,7 +80,7 @@ ms.locfileid: "92036948"
  
   Utilice esta pestaña para especificar opciones cuando registre una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- Para obtener acceso a esta página, en Servidores registrados, haga clic en **Analysis Services** , en la barra de herramientas de Servidores registrados haga clic con el botón derecho en cualquier grupo de servidores registrados como, por ejemplo, **Analysis Services**, seleccione **Nuevo**y haga clic en **Registro de servidor**.  
+ Para obtener acceso a esta página, en Servidores registrados, haga clic en **Analysis Services** , en la barra de herramientas de Servidores registrados haga clic con el botón derecho en cualquier grupo de servidores registrados como, por ejemplo, **Analysis Services**, seleccione **Nuevo** y haga clic en **Registro de servidor**.  
   
 ### <a name="options"></a>Opciones  
  **Tipo de servidor**  
@@ -114,7 +114,7 @@ ms.locfileid: "92036948"
  
  Utilice esta pestaña para especificar las opciones cuando se registra [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- Para obtener acceso a esta página, en Servidores registrados, haga clic en **Integration Services** en la barra de herramientas de **Servidores registrados** , haga clic con el botón derecho en cualquier grupo de servidores registrados, seleccione **Nuevo**y, luego, haga clic en **Registro de servidor**.  
+ Para obtener acceso a esta página, en Servidores registrados, haga clic en **Integration Services** en la barra de herramientas de **Servidores registrados** , haga clic con el botón derecho en cualquier grupo de servidores registrados, seleccione **Nuevo** y, luego, haga clic en **Registro de servidor**.  
   
 ### <a name="options"></a>Opciones  
  **Tipo de servidor**  

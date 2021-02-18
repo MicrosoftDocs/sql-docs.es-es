@@ -9,12 +9,12 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: e7480b4d31685be402c98892557ddfb5f7db0ab5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e3dd91e29d88fc2ab6f7216f0bac38632caa7b25
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470986"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352511"
 ---
 # <a name="tips-for-using-r-packages"></a>Sugerencias para usar paquetes de R
 
@@ -88,7 +88,7 @@ Si sigue las instrucciones que se indican a continuación, podrá evitar los err
 
 + Sepa qué biblioteca de paquetes está asociada a la instancia. Para más información, vea [Obtener información sobre paquetes de R](../package-management/r-package-information.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 ::: moniker range="<=sql-server-2017"
 + [Instalación de paquetes con herramientas de R](install-r-packages-standard-tools.md)

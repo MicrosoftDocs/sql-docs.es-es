@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
-ms.openlocfilehash: 3a27b3eac1c02d01df32615988cd7c7c702a3cca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fca2ba1e0f8b1e979ff94c9c3900ec2f73c6292
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789955"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351090"
 ---
 # <a name="modify-trace-templates"></a>Modificar plantillas de seguimiento
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "85789955"
   
 ## <a name="to-modify-a-trace-template"></a>Para modificar una plantilla de seguimiento  
   
-1.  En el menú **Archivo** , seleccione **Plantillas**y haga clic en **Editar plantilla**.  
+1.  En el menú **Archivo** , seleccione **Plantillas** y haga clic en **Editar plantilla**.  
   
 2.  En el cuadro de diálogo **Propiedades de la plantilla de seguimiento** , en la pestaña **General** , modifique el tipo de servidor y el nombre de la plantilla si es necesario o elija una plantilla predeterminada para el tipo de servidor.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af98af52bfe6416c489be821fa2d8b27092fac27
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 349b8f5bd757e623b79b043d14ce9de91c34e942
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918371"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341982"
 ---
 # <a name="sqllogship-application"></a>sqllogship (aplicación)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  La aplicación **sqllogship** , SqlLogShip.exe, está instalada en el directorio x:\Archivos de programa\Microsoft SQL Server\130\Tools\Binn.  
   
 ## <a name="permissions"></a>Permisos  
- **sqllogship** usa la autenticación de Windows. La cuenta de la autenticación de Windows donde se ejecuta el comando requiere acceso al directorio de Windows y permisos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . El requisito depende de si el comando **sqllogship** especifica la opción **-backup**, **-copy**o **-restore** .  
+ **sqllogship** usa la autenticación de Windows. La cuenta de la autenticación de Windows donde se ejecuta el comando requiere acceso al directorio de Windows y permisos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . El requisito depende de si el comando **sqllogship** especifica la opción **-backup**, **-copy** o **-restore** .  
   
 |Opción|Acceso al directorio|Permisos|  
 |------------|----------------------|-----------------|  

@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 122aa921cb742d05c46e2d32430c857f4a723dee
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1c9f3528ac4f377e379afd26e6583df3fe63fb2b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920901"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353329"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag , utilidad
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -134,7 +134,7 @@ sqldiag
   
  Use **+** sin la fecha (solo HH:MM:SS) para especificar una hora que sea relativa a la fecha y la hora actuales. Por ejemplo, si especifica **/B +02:00:00**, **SQLdiag** esperará 2 horas antes de empezar a recopilar información.  
   
- No inserte ningún espacio entre **+** y el valor de *start_time*especificado.  
+ No inserte ningún espacio entre **+** y el valor de *start_time* especificado.  
   
  Si especifica una hora de inicio que se encuentra en el pasado, **SQLdiag** cambia forzosamente la fecha de inicio para que la fecha y la hora de inicio se encuentren en el futuro. Por ejemplo, si especifica **/B 01:00:00** y la hora actual es 08:00:00, **SQLdiag** cambia forzosamente la fecha de inicio para que sea el día siguiente.  
   
@@ -227,7 +227,7 @@ sqldiag
   
  **SQLDIAG START**  
   
- El argumento **/A** , que especifica una instancia con nombre de **SQLdiag**, es el único que se puede usar con **START**, **STOP**o **STOP_ABORT** para controlar una instancia específica del servicio **SQLdiag** . Por ejemplo:  
+ El argumento **/A** , que especifica una instancia con nombre de **SQLdiag**, es el único que se puede usar con **START**, **STOP** o **STOP_ABORT** para controlar una instancia específica del servicio **SQLdiag** . Por ejemplo:  
   
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
@@ -288,7 +288,7 @@ SQLDIAG STOP /A Instance1
 ```  
   
 > [!NOTE]  
->  **/A** es el único argumento de la línea de comandos que se puede usar con **START**, **STOP**o **STOP_ABORT**. Si necesita especificar una instancia con nombre de **SQLdiag** con uno de los verbos de control del servicio, especifique **/A** tras el verbo de control en la línea de comandos como se muestra en el ejemplo de sintaxis anterior. Cuando se emplean estos verbos de control, deben ser los primeros argumentos utilizados en la línea de comandos.  
+>  **/A** es el único argumento de la línea de comandos que se puede usar con **START**, **STOP** o **STOP_ABORT**. Si necesita especificar una instancia con nombre de **SQLdiag** con uno de los verbos de control del servicio, especifique **/A** tras el verbo de control en la línea de comandos como se muestra en el ejemplo de sintaxis anterior. Cuando se emplean estos verbos de control, deben ser los primeros argumentos utilizados en la línea de comandos.  
   
  Para detener el servicio lo más rápido posible, ejecute **SQLDIAG STOP_ABORT** en la carpeta de inicio de la utilidad. Este comando anula todas las recopilaciones de diagnósticos en curso sin esperar a que terminen de ejecutarse.  
   
@@ -302,7 +302,7 @@ SQLDIAG STOP /A Instance1
 sqldiag /B +01:00:00 /E +03:00:00  
 ```  
   
- Cuando se especifica un valor *start_time* relativo, **SQLdiag** se inicia a una hora relativa respecto a la hora y la fecha actuales. Cuando se especifica un valor *end_time* relativo, **SQLdiag** finaliza a una hora relativa respecto al valor *start_time*especificado. Si la hora o la fecha de inicio y de finalización que ha especificado corresponden al pasado, **SQLdiag** cambiará forzosamente la fecha de inicio para que la fecha y la hora de inicio correspondan al futuro.  
+ Cuando se especifica un valor *start_time* relativo, **SQLdiag** se inicia a una hora relativa respecto a la hora y la fecha actuales. Cuando se especifica un valor *end_time* relativo, **SQLdiag** finaliza a una hora relativa respecto al valor *start_time* especificado. Si la hora o la fecha de inicio y de finalización que ha especificado corresponden al pasado, **SQLdiag** cambiará forzosamente la fecha de inicio para que la fecha y la hora de inicio correspondan al futuro.  
   
  Esto tiene importantes implicaciones para las fechas de inicio y de finalización que elija. Considere el ejemplo siguiente:  
   
