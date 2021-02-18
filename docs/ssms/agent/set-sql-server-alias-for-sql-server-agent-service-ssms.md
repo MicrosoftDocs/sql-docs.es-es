@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016
-ms.openlocfilehash: 4530aebde58448903015b8f948ad8f005d9134ee
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 37c1456fae6d21208e9b43f6ea5002aa45bbdcef
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472246"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354834"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service"></a>Configuración de un alias de SQL Server para servicio Agente SQL Server
 

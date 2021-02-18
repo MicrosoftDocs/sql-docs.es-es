@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0ec2ab7fa84dc3f4b4155a093794d5a4e49b56ec
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 7d249f9b70479603ad66e6b68cec784b1476324a
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100046856"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489319"
 ---
 # <a name="sql-server-big-data-clusters-transparent-data-encryption-tde-at-rest-usage-guide"></a>Guía de uso del cifrado de datos transparente (TDE) en reposo de Clústeres de macrodatos de SQL Server
 
@@ -26,8 +26,6 @@ En general, la experiencia es igual que en SQL Server en Linux y se aplica la [
 
 __Características no admitidas:__
 * Cifrado de grupo de datos
-* Rotación de claves de cifrado para las bases de datos de un grupo de disponibilidad contenido en una [implementación de alta disponibilidad](deployment-high-availability.md).
-
 
 ## <a name="prerequisites"></a><a id="prereqs"></a> Requisitos previos
 
