@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: bd11ff436649d4e871c09fb2ebba85f56a83ccc4
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 1e410b42c5e53b479f28febee1ccd716d68437d8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96127638"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354009"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Administración de inicios de sesión y trabajos tras la conmutación de roles (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Al implementar una solución de alta disponibilidad o de recuperación ante desastres para una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es importante reproducir información relevante que se almacena para dicha base de datos en las bases de datos **master** o **msdb** . Generalmente, la información relevante incluye los trabajos de la base de datos principal y los inicios de sesión de los usuarios o los procesos que necesitan conectarse con la base de datos. Debe duplicar esta información en las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeden una base de datos reflejada o secundaria. Si es posible, tras la conmutación de roles es mejor reproducir mediante programación la información en la nueva base de datos principal.  
+   Al implementar una solución de alta disponibilidad o de recuperación ante desastres para una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es importante reproducir información relevante que se almacena para dicha base de datos en las bases de datos **master** o **msdb**. Generalmente, la información relevante incluye los trabajos de la base de datos principal y los inicios de sesión de los usuarios o los procesos que necesitan conectarse con la base de datos. Debe duplicar esta información en las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeden una base de datos reflejada o secundaria. Si es posible, tras la conmutación de roles es mejor reproducir mediante programación la información en la nueva base de datos principal.  
   
 ## <a name="logins"></a>Inicios de sesión  
  En las instancias de servidor que hospeden una copia de la base de datos, debe reproducir los inicios de sesión que tengan permiso de acceso a la base de datos principal. Cuando cambie el rol principal, solo los usuarios cuyos inicios de sesión existan en la nueva instancia del servidor principal podrán tener acceso la nueva base de datos principal. Los usuarios cuyos inicios de sesión no estén definidos en la nueva instancia del servidor principal se quedarán huérfanos y no podrán tener acceso a la base de datos.  
@@ -47,7 +47,7 @@ ms.locfileid: "96127638"
 > [!NOTE]  
 >  Las distintas instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden configurarse de forma diferente, con distintas letras de unidad, por ejemplo. Los trabajos para cada asociado deben permitir tales diferencias.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 11e424ef4f32b91a7c4d65faf796335a3f7faf26
-ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.openlocfilehash: 8e0e2e47cbcfaf9aa6719b60bbd894d103596c18
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99251228"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341635"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Clústeres de conmutación por error de Windows Server con SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "99251228"
  Recurso de clúster  
  Una entidad física o lógica que puede ser propiedad de un nodo, ser puesta en línea y sin conexión, ser movida entre nodos y ser administrada como un objeto de clúster. Un recurso de clúster puede ser propiedad de un único nodo en cualquier momento.  
   
- Role  
+ Rol  
  Una colección de recursos de clúster administrados como un único objeto de clúster para proporcionar una funcionalidad específica. Para SQL Server, un rol debe ser un grupo de disponibilidad Always On (AG) o una instancia de clúster de conmutación por error Always On (FCI). Un rol contiene todos los recursos de clúster necesarios para un AG o una FCI. La conmutación por error y la conmutación por recuperación siempre actúan en contexto de roles. Para una FCI, un rol contendrá un recurso de dirección IP, un recurso de nombre de red y los recursos de SQL Server. Un rol de AG contendrá el recurso de AG y, si hay un agente de escucha configurado, un nombre de red y un recurso de IP. 
 
  Recurso de nombre de red  
@@ -173,7 +173,7 @@ ms.locfileid: "99251228"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
--   [Tecnologías de Windows Server: clústeres de conmutación por error](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Tecnologías de Windows Server:  Clústeres de conmutación por error](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
 
 -   [Información general de los Espacios de almacenamiento directo \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 
@@ -188,5 +188,5 @@ ms.locfileid: "99251228"
  [Información general de los grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Configuración de los votos y modos de cuórum WSFC (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Directiva de conmutación por error para instancias de clústeres de conmutación por error](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [Recuperación ante desastres del clúster WSFC mediante cuórum forzado (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+ [Recuperación ante desastres del clúster WSFC mediante quórum forzado (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
  [SQL Server 2016 Supports Windows Server 2016 Storage Spaces Direct](https://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/) (SQL Server 2016 admite ahora Espacios de almacenamiento directo en Windows Server 2016)
