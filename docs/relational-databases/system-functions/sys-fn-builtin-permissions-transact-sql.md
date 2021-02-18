@@ -76,7 +76,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|Intercalación del servidor|Descripción de la clase protegible.|  
 |permission_name|**nvarchar(60)**|Intercalación del servidor|Nombre del permiso.|  
-|tipo|**varchar(4)**|Intercalación del servidor|Código de tipo de permiso compacto. Vea la tabla siguiente.|  
+|type|**varchar(4)**|Intercalación del servidor|Código de tipo de permiso compacto. Vea la tabla siguiente.|  
 |covering_permission_name|**nvarchar(60)**|Intercalación del servidor|Si no es NULL, es el nombre del permiso en esta clase que implica los otros permisos en la clase.|  
 |parent_class_desc|**nvarchar(60)**|Intercalación del servidor|S no es NULL, es el nombre de la clase principal que contiene la clase actual.|  
 |parent_covering_permission_name|**nvarchar(60)**|Intercalación del servidor|Si no es NULL, es el nombre del permiso en la clase principal que implica los otros permisos en esa clase.|  
@@ -322,7 +322,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XA|EXTERNAL ACCESS ASSEMBLY|SERVER|  
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  `sys.fn_builtin_permissions` es una función con valores de tabla que emite una copia de la jerarquía de permisos predefinida. Esta jerarquía incluye los permisos que cubre. El `DEFAULT` conjunto de resultados describe un grafo dirigido y acíclicos de la jerarquía de permisos, de la que la raíz es (Class = Server, Permission = Control Server).  
   
  `sys.fn_builtin_permissions` no acepta parámetros correlacionados.  
