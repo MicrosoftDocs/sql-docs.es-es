@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current'
-ms.openlocfilehash: 571b49dfa3ce555aad02ffe8d6ba7c68a033bbdc
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8e2e8994f92bfb96fa66c2c6a08c7db198902b45
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470126"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354211"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>Tutorial de R: Explorar y visualizar datos
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -41,7 +41,7 @@ En este artículo, hará lo siguiente:
 
 En la [parte uno](r-taxi-classification-introduction.md), ha instalado los requisitos previos y ha restaurado la base de datos de ejemplo.
 
-En la [parte tres](r-taxi-classification-create-features.md), aprenderá a crear características a partir de datos sin procesar mediante una función de Transact-SQL. Después, llamaremos a esa función desde un procedimiento almacenado para crear una tabla que contiene los valores de las características.
+En la [tercera](r-taxi-classification-create-features.md), aprenderá a crear características a partir de datos sin procesar mediante una función de Transact-SQL. Después, llamaremos a esa función desde un procedimiento almacenado para crear una tabla que contiene los valores de las características.
 
 En la [parte cuatro](r-taxi-classification-train-model.md), cargará los módulos y llamará a las funciones necesarias para crear y entrenar el modelo mediante un procedimiento almacenado de SQL Server.
 

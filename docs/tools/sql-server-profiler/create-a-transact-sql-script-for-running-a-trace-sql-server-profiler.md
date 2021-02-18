@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9f34472358f0d0cde586a25374c0de90ab708539
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3322ffac27ff7017f36cbbcec348bcbf3f65f52c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774857"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349390"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>Crear un script de Transact-SQL para ejecutar un seguimiento (SQL Server Profiler)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "85774857"
   
 1.  Abra un archivo o una tabla de seguimiento. Para obtener más información, vea [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) o el Asistente para la optimización del [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md).  
   
-2.  En el menú**Archivo**seleccione **Exportar**, **Definición de seguimiento de scripts**y, a continuación, haga clic en la versión que corresponda al servidor cuyo seguimiento desee realizar.  
+2.  En el menú **Archivo** seleccione **Exportar**, **Definición de seguimiento de scripts** y, a continuación, haga clic en la versión que corresponda al servidor cuyo seguimiento desee realizar.  
   
 3.  En el cuadro de diálogo **Guardar como** , especifique un nombre para el archivo de script y haga clic en **Guardar**.  
   

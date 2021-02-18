@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1d16b944072ea4c6945b0358f576a73e40b8b117
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: b2e188200daf0469f80cf74db901bcc240fd8706
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596954"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340692"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Auditoría local para la recopilación de datos de uso y diagnóstico de SSMS
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +62,7 @@ Para optar por recibir o no recibir la recopilación de datos de uso de SSMS:
 
   Tipo de entrada `DWORD`: `0` es dejar optar por no recibir; `1` es optar por recibir
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Configuración de la recopilación de datos de uso y diagnóstico para SQL Server](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
 - [Auditoría local para la recopilación de datos de uso y diagnóstico de SQL Server](../sql-server/usage-and-diagnostic-data-in-local-audit.md)

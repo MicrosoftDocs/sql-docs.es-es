@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 151c562d5448d94743ba13a49954cd2e7a5c0547
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9000da1493b61383f301308d5269fe4349c2e76
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774721"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353383"
 ---
 # <a name="replay-a-single-event-at-a-time-sql-server-profiler"></a>Reproducir un único evento cada vez (SQL Server Profiler)
 
@@ -31,13 +31,13 @@ En este tema se describe cómo reproducir un solo evento cada vez en un archivo 
   
      Asegúrese de que el archivo o la tabla de seguimiento que abre contiene las clases de evento necesarias para la reproducción. Para más información, consulte [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md).  
   
-2.  En el menú **Reproducir** , haga clic en **Paso**y conéctese a la instancia de servidor en el que desea reproducir el seguimiento.  
+2.  En el menú **Reproducir** , haga clic en **Paso** y conéctese a la instancia de servidor en el que desea reproducir el seguimiento.  
   
 3.  Compruebe la configuración en el cuadro de diálogo **Configuración de reproducción** y haga clic en **Aceptar**. Para obtener más información sobre cómo especificar la configuración en el cuadro de diálogo **Configuración de reproducción**, vea [Reproducir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md) o [Reproducir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md).  
   
 4.  Para reproducir el primer evento, haga clic en **Aceptar** en el cuadro de diálogo **Configuración de reproducción** .  
   
-5.  Para reproducir eventos posteriores, en el menú **Reproducir** , haga clic en **Paso**o pulse F10. Vuelva a hacer clic en **Paso** o pulse F10 para cada evento.  
+5.  Para reproducir eventos posteriores, en el menú **Reproducir** , haga clic en **Paso** o pulse F10. Vuelva a hacer clic en **Paso** o pulse F10 para cada evento.  
   
 ## <a name="see-also"></a>Consulte también  
  [Reproducir seguimientos](../../tools/sql-server-profiler/replay-traces.md)   

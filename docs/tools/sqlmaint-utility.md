@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d6e9aff189018cf140ac3a39593e11e69241e4e
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: c822bd2acbd92bcfd9b3008c78c3ccef244f3c88
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332262"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338556"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint, utilidad
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-  La utilidad**sqlmaint** realiza un conjunto especificado de operaciones de mantenimiento en una o varias bases de datos. Use **sqlmaint** para ejecutar comprobaciones de DBCC, realizar una copia de seguridad de una base de datos y su registro de transacciones, actualizar estadísticas y volver a generar índices. Todas las actividades de mantenimiento de bases de datos generan un informe que se puede enviar a un archivo de texto designado, un archivo HTML o una cuenta de correo electrónico. **sqlmaint** ejecuta los planes de mantenimiento de bases de datos creados con versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para ejecutar los planes de mantenimiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde el símbolo del sistema, emplee la [utilidad dtexec](../integration-services/packages/dtexec-utility.md).  
+  La utilidad **sqlmaint** realiza un conjunto especificado de operaciones de mantenimiento en una o varias bases de datos. Use **sqlmaint** para ejecutar comprobaciones de DBCC, realizar una copia de seguridad de una base de datos y su registro de transacciones, actualizar estadísticas y volver a generar índices. Todas las actividades de mantenimiento de bases de datos generan un informe que se puede enviar a un archivo de texto designado, un archivo HTML o una cuenta de correo electrónico. **sqlmaint** ejecuta los planes de mantenimiento de bases de datos creados con versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para ejecutar los planes de mantenimiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde el símbolo del sistema, emplee la [utilidad dtexec](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../includes/ssnotedepnextavoid-md.md)] Use en su lugar la característica de plan de mantenimiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener más información sobre los planes de mantenimiento, vea [Planes de mantenimiento](../relational-databases/maintenance-plans/maintenance-plans.md).  
@@ -106,7 +106,7 @@ number[minutes | hours | days | weeks | months]
  Especifica el identificador exclusivo global (GUID) de un plan de mantenimiento de base de datos definido mediante el Asistente para planes de mantenimiento de bases de datos. La única información del plan que **sqlmaint** usa es la lista de las bases de datos incluidas en él. Todas las actividades de mantenimiento que se especifiquen en los demás parámetros de **sqlmaint** se aplicarán a esta lista de bases de datos. Debe coincidir con un valor de plan_id en msdb.dbo.sysdbmaintplans.  
   
  **-Rpt** _text_file_  
- Especifica la ruta de acceso completa y el nombre del archivo en que se va a generar el informe. También se genera el informe en la pantalla. El informe mantiene información de las versiones al agregar una fecha al nombre de archivo. La fecha se genera de la siguiente manera: al final del nombre de archivo pero antes del punto, con el formato _*yyyyMMddhhmm*. *yyyy* = año, *MM* = mes, *dd* = día, *hh* = hora, *mm* = minuto.  
+ Especifica la ruta de acceso completa y el nombre del archivo en que se va a generar el informe. También se genera el informe en la pantalla. El informe mantiene información de las versiones al agregar una fecha al nombre de archivo. La fecha se genera de la siguiente manera: al final del nombre de archivo pero antes del punto, con el formato _ *yyyyMMddhhmm*. *yyyy* = año, *MM* = mes, *dd* = día, *hh* = hora, *mm* = minuto.  
   
  Si ejecuta la utilidad a las 10:23 a.m. el 1 de diciembre de 1996 y este es el valor de *text_file* :  
   
@@ -126,7 +126,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  Especifica el operador al que se envía el informe generado a través de SQL Mail.  
   
  **-HtmlRpt** _html_file_  
- Especifica la ruta de acceso completa y el nombre del archivo en que se va a generar un informe HTML. **sqlmaint** genera el nombre de archivo anexando una cadena con el formato _*yyyyMMddhhmm* al nombre de archivo, al igual que en el caso del parámetro **-Rpt** .  
+ Especifica la ruta de acceso completa y el nombre del archivo en que se va a generar un informe HTML. **sqlmaint** genera el nombre de archivo anexando una cadena con el formato _ *yyyyMMddhhmm* al nombre de archivo, al igual que en el caso del parámetro **-Rpt** .  
   
  Se requiere el nombre UNC completo del archivo para *html_file* cuando **sqlmaint** tiene acceso a un servidor remoto.  
   
@@ -167,7 +167,7 @@ UPDATE STATISTICS table WITH SAMPLE sample_percent PERCENT;
  Debe especificarse para ejecutar los comandos de mantenimiento de DBCC con **sqlmaint** en columnas calculadas.  
   
  **-WriteHistory**  
- Especifica que se escriba una entrada en msdb.dbo.sysdbmaintplan_history para cada acción de mantenimiento que **sqlmaint**realice. Si se especifica **-PlanName** o **-PlanID** , las entradas de sysdbmaintplan_history usarán el identificador del plan especificado. Si se especifica **-D** , las entradas de sysdbmaintplan_history para el identificador de plan estarán compuestas de ceros.  
+ Especifica que se escriba una entrada en msdb.dbo.sysdbmaintplan_history para cada acción de mantenimiento que **sqlmaint** realice. Si se especifica **-PlanName** o **-PlanID** , las entradas de sysdbmaintplan_history usarán el identificador del plan especificado. Si se especifica **-D** , las entradas de sysdbmaintplan_history para el identificador de plan estarán compuestas de ceros.  
   
  **-BkUpDB** [ *backup_path*] |  **-BkUpLog** [ *backup_path* ]  
  Especifica una operación de copia de seguridad. **-BkUpDb** hace una copia de seguridad de toda la base de datos. **-BkUpLog** hace una copia de seguridad solo del registro de transacciones.  
@@ -213,7 +213,7 @@ dbname_log_yyyymmddhhmm.BAK
  Especifica que el medio de copia de seguridad es una cinta.  
   
  **-BkUpOnlyIfClean**  
- Indica que solo se realice la copia de seguridad si las comprobaciones **-Ck** especificadas no han detectado problemas en los datos. Las acciones de mantenimiento se ejecutan en la misma secuencia en que aparecen en el símbolo del sistema. Especifique los parámetros **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**o **-CkCat** antes de los parámetros **-BkUpDB**/ **-BkUpLog** si también va a especificar **-BkUpOnlyIfClean**; de lo contrario, la copia de seguridad se llevará a cabo con independencia de que la comprobación indique la existencia de problemas o no.  
+ Indica que solo se realice la copia de seguridad si las comprobaciones **-Ck** especificadas no han detectado problemas en los datos. Las acciones de mantenimiento se ejecutan en la misma secuencia en que aparecen en el símbolo del sistema. Especifique los parámetros **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl** o **-CkCat** antes de los parámetros **-BkUpDB**/ **-BkUpLog** si también va a especificar **-BkUpOnlyIfClean**; de lo contrario, la copia de seguridad se llevará a cabo con independencia de que la comprobación indique la existencia de problemas o no.  
   
  **-VrfyBackup**  
  Especifica que solo se ejecute RESTORE VERIFYONLY en la copia de seguridad cuando finalice.  
@@ -236,7 +236,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   Si no se produce alguna de las operaciones de mantenimiento.  
   
--   Si las comprobaciones **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**o **-CkCat** detectan algún problema en los datos.  
+-   Si las comprobaciones **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl** o **-CkCat** detectan algún problema en los datos.  
   
 -   Si se detecta un error general.  
   

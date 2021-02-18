@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: ba1ed37292b3b92ead4af84cb3f00d4b51e3372d
-ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.openlocfilehash: 2891d4dcfcae8689dda1aaf78cad9c4c43bae220
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99250926"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350476"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Mover un servidor registrado o un grupo de servidores registrados
 
@@ -38,7 +38,7 @@ En este tema se describe cómo organizar los servidores en Servidores registrado
   
 2. En el cuadro de diálogo **Mover registro de servidor** , expanda la lista de grupos de servidores, haga clic en el nodo donde desea que se muestre el servidor o grupo de servidores y, a continuación, haga clic en **Aceptar**.  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Registrar servidores](./register-servers.md)
 

@@ -9,26 +9,26 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: 749e13242c81e5a566ae13dfd66385194639db37
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: aadb59645e474557a92e3e87a0cd9c0c50df0b46
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596226"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100271752"
 ---
-# <a name="whats-new-in-sql-server-2019"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
+# <a name="whats-new-in-sql-server-2019"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se basa en versiones anteriores para potenciar SQL Server como una plataforma que proporciona diversas opciones de lenguajes de desarrollo, tipos de datos, entornos locales o en la nube, y sistemas operativos.
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] se basa en versiones anteriores para potenciar SQL Server como una plataforma que proporciona diversas opciones de lenguajes de desarrollo, tipos de datos, entornos locales o en la nube, y sistemas operativos.
 
-En este artículo se resumen las nuevas características y mejoras de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+En este artículo se resumen las nuevas características y mejoras de [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 
-Para obtener más información y consultar los problemas conocidos, vea [Notas de la versión de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](sql-server-version-15-release-notes.md).
+Para obtener más información y consultar los problemas conocidos, vea [Notas de la versión de [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]](sql-server-version-15-release-notes.md).
 
-Para obtener la mejor experiencia con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], use las [herramientas más recientes](../azure-data-studio/download-azure-data-studio.md).
+Para obtener la mejor experiencia con [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], use las [herramientas más recientes](../azure-data-studio/download-azure-data-studio.md).
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] presenta [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] para [!INCLUDE[sql-server](../includes/ssnoversion-md.md)]. También proporciona funciones y mejoras adicionales para el motor de base de datos de SQL Server, SQL Server Analysis Services, SQL Server Machine Learning Services, SQL Server en Linux y SQL Server Master Data Services.
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] presenta [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] para [!INCLUDE[sql-server](../includes/ssnoversion-md.md)]. También proporciona funciones y mejoras adicionales para el motor de base de datos de SQL Server, SQL Server Analysis Services, SQL Server Machine Learning Services, SQL Server en Linux y SQL Server Master Data Services.
 
 En el vídeo siguiente se proporciona una introducción a SQL Server 2019 de 13 minutos:
 
@@ -50,7 +50,7 @@ Hoy en día, las empresas son propietarias de ingentes cantidades de datos que c
 Para obtener más información, vea [¿Qué son los [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] de SQL Server?](../big-data-cluster/big-data-cluster-overview.md).
 
 ## <a name="intelligent-database"></a>Base de datos inteligente
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] mejora las innovaciones de las versiones anteriores para proporcionar un rendimiento inmediato líder del sector. Desde el [procesamiento de consultas inteligente](../relational-databases/performance/intelligent-query-processing.md) hasta la compatibilidad con dispositivos de memoria persistente, las características de base de datos inteligente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mejoran el rendimiento y la escalabilidad de todas las cargas de trabajo de bases de datos sin realizar cambios en el diseño de la aplicación o la base de datos.
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] mejora las innovaciones de las versiones anteriores para proporcionar un rendimiento inmediato líder del sector. Desde el [procesamiento de consultas inteligente](../relational-databases/performance/intelligent-query-processing.md) hasta la compatibilidad con dispositivos de memoria persistente, las características de base de datos inteligente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mejoran el rendimiento y la escalabilidad de todas las cargas de trabajo de bases de datos sin realizar cambios en el diseño de la aplicación o la base de datos.
 
 ### <a name="intelligent-query-processing"></a>Procesamiento de consultas inteligentes
 Con el [procesamiento de consultas inteligente](../relational-databases/performance/intelligent-query-processing.md), las cargas de trabajo paralelas críticas mejoran cuando se ejecutan a escala. Y, al mismo tiempo, continúan adaptándose al mundo de los datos que cambia constantemente. El procesamiento de consultas inteligente está disponible de forma predeterminada en la configuración más reciente del [nivel de compatibilidad de la base de datos](../t-sql/statements/alter-database-transact-sql-compatibility-level.md#differences-between-compatibility-level-140-and-level-150), lo cual proporciona un gran impacto que mejora el rendimiento de las cargas de trabajo existentes con un esfuerzo de implementación mínimo.
@@ -58,7 +58,7 @@ Con el [procesamiento de consultas inteligente](../relational-databases/performa
 |Nueva característica o actualización | Detalles |
 |:---|:---|
 |Comentarios de concesión de memoria del modo de fila |Se expande en la característica de comentarios de concesión de memoria de modo de proceso por lotes al ajustar los tamaños de concesión de memoria tanto para los operadores del modo de proceso por lotes como del modo de fila. Este ajuste puede corregir automáticamente las concesiones excesivas que producen una pérdida de memoria y una simultaneidad reducida. También puede corregir las concesiones de memoria insuficiente que provocan un costoso desbordamiento en disco. Consulte [Comentarios de concesión de memoria del modo de fila](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
-|Modo por lotes en el almacén de filas | Permite la ejecución en modo por lotes sin necesidad de índices de almacén de columnas. La ejecución en modo por lotes usa la CPU de manera más eficaz durante las cargas de trabajo analíticas, aunque, hasta [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], solo se usaba cuando una consulta incluía operaciones con índices de almacén de columnas. Pero puede que algunas aplicaciones usen características que no son compatibles con los índices de almacén de columnas y, por lo tanto, no pueden aprovechar el modo por lotes. A partir de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], el modo por lotes está habilitado en las cargas de trabajo analíticas válidas cuyas consultas incluyan operaciones con cualquier tipo de índice (almacén de filas o almacén de columnas). Consulte [Modo por lotes en el almacén de filas](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
+|Modo por lotes en el almacén de filas | Permite la ejecución en modo por lotes sin necesidad de índices de almacén de columnas. La ejecución en modo por lotes usa la CPU de manera más eficaz durante las cargas de trabajo analíticas, aunque, hasta [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], solo se usaba cuando una consulta incluía operaciones con índices de almacén de columnas. Pero puede que algunas aplicaciones usen características que no son compatibles con los índices de almacén de columnas y, por lo tanto, no pueden aprovechar el modo por lotes. A partir de [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], el modo por lotes está habilitado en las cargas de trabajo analíticas válidas cuyas consultas incluyan operaciones con cualquier tipo de índice (almacén de filas o almacén de columnas). Consulte [Modo por lotes en el almacén de filas](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
 |Inserción de UDF escalares|Transforma automáticamente las UDF escalares en expresiones relacionales y las inserta en la consulta SQL de llamada. Esta transformación mejora el rendimiento de las cargas de trabajo que aprovechan las UDF escalares. Vea [Inserción de UDF escalar](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
 |Compilación diferida de variables de tabla|Mejora la calidad del plan y el rendimiento general de las consultas que hacen referencia a las variables de tabla. Durante la optimización y la compilación inicial, esta característica propaga las estimaciones de cardinalidad que se basan en los recuentos de filas de variables de tabla reales. Esta información precisa del recuento de filas optimiza las operaciones del plan de bajada. Consulte [Compilación diferida de variables de tabla](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
 |Procesamiento de consultas aproximado con `APPROX_COUNT_DISTINCT` |En escenarios en los que la precisión absoluta no es importante, pero la capacidad de respuesta es crítica, se agrega `APPROX_COUNT_DISTINCT` en grandes conjuntos de datos con menos recursos que `COUNT(DISTINCT())` para obtener una simultaneidad superior. Consulte [Procesamiento de consultas aproximado](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
@@ -66,17 +66,17 @@ Con el [procesamiento de consultas inteligente](../relational-databases/performa
 
 
 ### <a name="in-memory-database"></a>Base de datos en memoria
-Las tecnologías de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de [base de datos en memoria](../relational-databases/in-memory-database.md) aprovechan la innovación de hardware moderna para ofrecer un rendimiento y una escalabilidad sin precedentes. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se basa en las innovaciones anteriores en esta área, como el procesamiento de transacciones en línea (OLTP) en memoria, para impulsar un nuevo nivel de escalabilidad en todas las cargas de trabajo de base de datos.  
+Las tecnologías de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de [base de datos en memoria](../relational-databases/in-memory-database.md) aprovechan la innovación de hardware moderna para ofrecer un rendimiento y una escalabilidad sin precedentes. [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] se basa en las innovaciones anteriores en esta área, como el procesamiento de transacciones en línea (OLTP) en memoria, para impulsar un nuevo nivel de escalabilidad en todas las cargas de trabajo de base de datos.  
 
 |Nueva característica o actualización | Detalles |
 |:---|:---|
 |Grupo de búferes híbrido| Nueva característica del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], en que se accede directamente a las páginas de base de datos ubicadas en archivos de base de datos presentes en un dispositivo de memoria persistente (PMEM) cuando sea necesario. Vea [Grupo de búferes híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md).|
-|Metadatos tempdb optimizados para memoria| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduce una nueva característica que forma parte de la familia de características [Base de datos en memoria](../relational-databases/in-memory-database.md), metadatos TempDB optimizados para memoria, que quita este cuello de botella de forma eficaz y desbloquea un nuevo nivel de escalabilidad para cargas de trabajo intensivas de TempDB. En [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], las tablas del sistema implicadas en la administración de metadatos de la tabla temporal del sistema se pueden mover a tablas optimizadas para memoria no duraderas y sin bloqueos temporales. Vea [Metadatos tempdb optimizados para memoria](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
-| Compatibilidad de OLTP en memoria para instantáneas de base de datos | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduce compatibilidad para crear [instantáneas de base de datos](../relational-databases/databases/database-snapshots-sql-server.md) de bases de datos que incluyen grupos de archivos optimizados para memoria. |
+|Metadatos tempdb optimizados para memoria| [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] introduce una nueva característica que forma parte de la familia de características [Base de datos en memoria](../relational-databases/in-memory-database.md), metadatos TempDB optimizados para memoria, que quita este cuello de botella de forma eficaz y desbloquea un nuevo nivel de escalabilidad para cargas de trabajo intensivas de TempDB. En [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], las tablas del sistema implicadas en la administración de metadatos de la tabla temporal del sistema se pueden mover a tablas optimizadas para memoria no duraderas y sin bloqueos temporales. Vea [Metadatos tempdb optimizados para memoria](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
+| Compatibilidad de OLTP en memoria para instantáneas de base de datos | [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] introduce compatibilidad para crear [instantáneas de base de datos](../relational-databases/databases/database-snapshots-sql-server.md) de bases de datos que incluyen grupos de archivos optimizados para memoria. |
 | &nbsp; | &nbsp; |
 
 ### <a name="intelligent-performance"></a>Rendimiento inteligente
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se basa en las innovaciones en la base de datos inteligente de versiones anteriores para garantizar que [funciona más rápido](/archive/blogs/bobsql/). Estas mejoras ayudan a superar cuellos de botella de recursos conocidos y proporcionan varias opciones para configurar el servidor de base de datos para que ofrezca un rendimiento predecible en todas las cargas de trabajo.
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] se basa en las innovaciones en la base de datos inteligente de versiones anteriores para garantizar que [funciona más rápido](/archive/blogs/bobsql/). Estas mejoras ayudan a superar cuellos de botella de recursos conocidos y proporcionan varias opciones para configurar el servidor de base de datos para que ofrezca un rendimiento predecible en todas las cargas de trabajo.
 
 |Nueva característica o actualización | Detalles |
 |:---|:---|
@@ -85,7 +85,7 @@ Las tecnologías de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de [b
 |Regulación de recursos| El tipo de datos del valor configurable para la opción `REQUEST_MAX_MEMORY_GRANT_PERCENT` de `CREATE WORKLOAD GROUP` y `ALTER WORKLOAD GROUP` se ha cambiado de "integer" a "float" para permitir un mayor control granular de los límites de la memoria. Consulte [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) y [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Recompilaciones reducidas para cargas de trabajo| Mejora el rendimiento cuando se usan tablas temporales en varios ámbitos al reducir las recompilaciones innecesarias. Vea [Recompilaciones reducidas para cargas de trabajo](../relational-databases/tables/tables.md#ctp23). |
 |Escalabilidad de puntos de control indirectos |Vea [Escalabilidad mejorada de puntos de control indirectos](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
-|Actualizaciones de PFS simultáneas|[Las páginas PFS](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) son páginas especiales dentro de un archivo de base de datos que SQL Server usa para ayudar a localizar espacio libre cuando asigna espacio para un objeto. La contención de bloqueos temporales de página en las páginas PFS normalmente se asocia con [TempDB](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), pero también se puede producir en las bases de datos de usuario cuando hay muchos subprocesos de asignación de objetos simultáneos. Esta mejora cambia la manera en que se administra la simultaneidad con las actualizaciones de PFS para que puedan actualizarse en un bloqueo temporal compartido, en lugar de un bloqueo exclusivo. Este comportamiento está activado de forma predeterminada en todas las bases de datos (incluida TempDB) a partir de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
+|Actualizaciones de PFS simultáneas|[Las páginas PFS](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) son páginas especiales dentro de un archivo de base de datos que SQL Server usa para ayudar a localizar espacio libre cuando asigna espacio para un objeto. La contención de bloqueos temporales de página en las páginas PFS normalmente se asocia con [TempDB](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), pero también se puede producir en las bases de datos de usuario cuando hay muchos subprocesos de asignación de objetos simultáneos. Esta mejora cambia la manera en que se administra la simultaneidad con las actualizaciones de PFS para que puedan actualizarse en un bloqueo temporal compartido, en lugar de un bloqueo exclusivo. Este comportamiento está activado de forma predeterminada en todas las bases de datos (incluida TempDB) a partir de [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].|
 |Migración de trabajo con un programador |La migración de trabajos permite que un programador inactivo migre un trabajo de la cola de ejecutables de otro programador en el mismo nodo NUMA y que reanude inmediatamente la tarea de este trabajo migrado. Esta mejora proporciona un uso de CPU más equilibrado en situaciones en las que se asignan varias tareas de ejecución prolongada al mismo programador. Para obtener más información, consulte [Rendimiento inteligente de SQL Server 2019: migración de trabajo](https://techcommunity.microsoft.com/t5/SQL-Server/SQL-Server-2019-Intelligent-Performance-Worker-Migration/ba-p/939610). |
 | &nbsp; | &nbsp; |
 
@@ -105,7 +105,7 @@ La supervisión de las mejoras le permite obtener información de rendimiento de
 | &nbsp; | &nbsp; |
 
 ## <a name="developer-experience"></a>Experiencia del desarrollador
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] sigue proporcionando una experiencia de desarrollo de primera clase con mejoras en los tipos de datos de gráficos y espaciales, con compatibilidad con UTF-8 y con un nuevo marco de extensibilidad que permite a los desarrolladores usar el lenguaje que prefieran para obtener información sobre sus datos.
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] sigue proporcionando una experiencia de desarrollo de primera clase con mejoras en los tipos de datos de gráficos y espaciales, con compatibilidad con UTF-8 y con un nuevo marco de extensibilidad que permite a los desarrolladores usar el lenguaje que prefieran para obtener información sobre sus datos.
 
 ### <a name="graph"></a>Grafo
 
@@ -145,7 +145,7 @@ Para ayudar a las empresas de diferentes países y regiones en las que el requis
 | &nbsp; | &nbsp; |
 
 ### <a name="error-messages"></a>Mensajes de error
-Cuando se produce un error en un proceso de extracción, transformación y carga de datos (ETL) porque el origen y el destino no tienen los mismos tipos de datos o la misma longitud, la solución solía llevar mucho tiempo, especialmente en grandes conjuntos de datos. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] permite obtener información de forma más rápida sobre los errores de truncamiento de datos.
+Cuando se produce un error en un proceso de extracción, transformación y carga de datos (ETL) porque el origen y el destino no tienen los mismos tipos de datos o la misma longitud, la solución solía llevar mucho tiempo, especialmente en grandes conjuntos de datos. [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] permite obtener información de forma más rápida sobre los errores de truncamiento de datos.
 
 |Nueva característica o actualización | Detalles |
 |:---|:---|
@@ -153,7 +153,7 @@ Cuando se produce un error en un proceso de extracción, transformación y carga
 | &nbsp; | &nbsp; |
 
 ## <a name="mission-critical-security"></a>Seguridad crítica
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona una arquitectura de seguridad diseñada para permitir que los administradores de bases de datos y los desarrolladores creen aplicaciones de base de datos seguras y combatan las amenazas. Cada versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ha mejorado las versiones anteriores con la introducción de nuevas características y funcionalidades, y [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] continúa mejorando en este aspecto.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona una arquitectura de seguridad diseñada para permitir que los administradores de bases de datos y los desarrolladores creen aplicaciones de base de datos seguras y combatan las amenazas. Cada versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ha mejorado las versiones anteriores con la introducción de nuevas características y funcionalidades, y [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] continúa mejorando en este aspecto.
 
 |Nueva característica o actualización | Detalles |
 |:---|:---|
@@ -164,13 +164,13 @@ Cuando se produce un error en un proceso de extracción, transformación y carga
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>Alta disponibilidad
-Una tarea habitual que todo usuario que implemente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] debe tener en cuenta es la comprobación de que todas las instancias críticas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y las bases de datos que contienen están disponibles cuando el negocio y los usuarios finales las necesitan. La disponibilidad es un pilar fundamental de la plataforma de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], y [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] presenta muchas características nuevas y mejoras que permiten a las empresas asegurarse de que sus entornos de base de datos tienen una alta disponibilidad.
+Una tarea habitual que todo usuario que implemente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] debe tener en cuenta es la comprobación de que todas las instancias críticas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y las bases de datos que contienen están disponibles cuando el negocio y los usuarios finales las necesitan. La disponibilidad es un pilar fundamental de la plataforma de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], y [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] presenta muchas características nuevas y mejoras que permiten a las empresas asegurarse de que sus entornos de base de datos tienen una alta disponibilidad.
 
 ### <a name="availability-groups"></a>Grupos de disponibilidad
 
 |Nueva característica o actualización | Detalles |
 |:---|:---|
-|Hasta cinco réplicas sincrónicas|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] aumenta el número máximo de réplicas sincrónicas a 5, de las 3 que eran en [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Puede configurar este grupo de cinco réplicas para habilitar la conmutación automática por error dentro del grupo. Hay una réplica principal, además de cuatro réplicas secundarias sincrónicas.|
+|Hasta cinco réplicas sincrónicas|[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] aumenta el número máximo de réplicas sincrónicas a 5, de las 3 que eran en [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Puede configurar este grupo de cinco réplicas para habilitar la conmutación automática por error dentro del grupo. Hay una réplica principal, además de cuatro réplicas secundarias sincrónicas.|
 |Redireccionamiento de la conexión de réplicas de secundaria a principal| Permite que las conexiones de las aplicaciones cliente se dirijan a la réplica principal, independientemente del servidor de destino especificado en la cadena de conexión. Para obtener más información, consulte [Secondary to primary replica read/write connection redirection (Always On Availability Groups)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md) (Redireccionamiento de la conexión de lectura/escrita de réplicas de secundaria a principal [Grupos de disponibilidad Always On]).|
 |Ventajas de HADR| Todos los clientes de Software Assurance de SQL Server podrán disfrutar de tres ventajas mejoradas en cualquier versión de SQL Server que todavía sea compatible con Microsoft. Para obtener más información, consulte [nuestro anuncio](https://cloudblogs.microsoft.com/sqlserver/2019/10/30/new-high-availability-and-disaster-recovery-benefits-for-sql-server/).
 | &nbsp; | &nbsp; |
@@ -192,7 +192,7 @@ Una tarea habitual que todo usuario que implemente [!INCLUDE[ssNoVersion](../inc
 | &nbsp; | &nbsp; |
 
 ## <a name="platform-choice"></a>Elección de la plataforma
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se basa en las innovaciones introducidas en [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] para que pueda ejecutar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en la plataforma de su elección con más funcionalidad y seguridad que nunca.
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] se basa en las innovaciones introducidas en [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] para que pueda ejecutar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en la plataforma de su elección con más funcionalidad y seguridad que nunca.
 
 ### <a name="linux"></a><a id="sql-server-on-linux"></a>Linux
 
@@ -204,18 +204,18 @@ Una tarea habitual que todo usuario que implemente [!INCLUDE[ssNoVersion](../inc
 |Machine Learning Services en Linux | Vea [Instalación de SQL Server Machine Learning Services (Python y R) en Linux](../linux/sql-server-linux-setup-machine-learning.md). |
 |Mejoras de tempdb | De forma predeterminada, una nueva instalación de SQL Server en Linux crea varios archivos de datos de TempDB en función del número de núcleos lógicos (con un máximo de ocho archivos de datos). Esto no se aplica a las actualizaciones de versión principal o secundaria en contexto. Cada archivo tempdb es de 8 MB con un crecimiento automático de 64 MB. Este comportamiento es similar a la instalación de SQL Server predeterminada en Windows. |
 |PolyBase en Linux | Vea [Instalación de PolyBase en Linux](../relational-databases/polybase/polybase-linux-setup.md) para informarse sobre conectores que no son de Hadoop.<br/><br/>Consulte [Asignación del tipo de PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
-| Compatibilidad con Captura de datos modificados (CDC) | La característica Captura de datos modificados (CDC) ahora es compatible con Linux para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
+| Compatibilidad con Captura de datos modificados (CDC) | La característica Captura de datos modificados (CDC) ahora es compatible con Linux para [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]. |
 | &nbsp; | &nbsp; |
 
 ### <a name="containers"></a>Contenedores
-La manera más sencilla de empezar a trabajar con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es usar contenedores. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] amplía las innovaciones introducidas en versiones anteriores para que pueda implementar contenedores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en nuevas plataformas de forma más segura y con mayor funcionalidad.
+La manera más sencilla de empezar a trabajar con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es usar contenedores. [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] amplía las innovaciones introducidas en versiones anteriores para que pueda implementar contenedores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en nuevas plataformas de forma más segura y con mayor funcionalidad.
 
 |Nueva característica o actualización | Detalles |
 |:---|:---|
-| Registro de contenedor de Microsoft | Ahora [Registro de contenedor de Microsoft](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) reemplaza a Docker Hub para nuevas imágenes de contenedor de Microsoft oficiales, incluido [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
-| Contenedores no raíz | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] presenta la capacidad de crear contenedores más seguros mediante el inicio del proceso de [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] como un usuario no raíz de forma predeterminada. Vea [Compilación y ejecución de contenedores de SQL Server como un usuario no raíz](../linux/sql-server-linux-docker-container-deployment.md). |
-| Imágenes de contenedor certificadas de Red Hat | A partir de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], puede ejecutar contenedores de SQL Server en Red Hat Enterprise Linux. |
-| Compatibilidad con PolyBase y Machine Learning| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] presenta nuevas formas de trabajar con contenedores de SQL Server como Machine Learning Services y PolyBase. Consulte algunos ejemplos en el [repositorio de GitHub de contenedores de SQL Server](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples). |
+| Registro de contenedor de Microsoft | Ahora [Registro de contenedor de Microsoft](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) reemplaza a Docker Hub para nuevas imágenes de contenedor de Microsoft oficiales, incluido [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]. |
+| Contenedores no raíz | [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] presenta la capacidad de crear contenedores más seguros mediante el inicio del proceso de [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] como un usuario no raíz de forma predeterminada. Vea [Compilación y ejecución de contenedores de SQL Server como un usuario no raíz](../linux/sql-server-linux-docker-container-deployment.md). |
+| Imágenes de contenedor certificadas de Red Hat | A partir de [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], puede ejecutar contenedores de SQL Server en Red Hat Enterprise Linux. |
+| Compatibilidad con PolyBase y Machine Learning| [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] presenta nuevas formas de trabajar con contenedores de SQL Server como Machine Learning Services y PolyBase. Consulte algunos ejemplos en el [repositorio de GitHub de contenedores de SQL Server](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples). |
 | &nbsp; | &nbsp; |
 
 ## <a name="setup-options"></a>Opciones de configuración
@@ -278,7 +278,7 @@ Esta versión de las características de SQL Server Reporting Services admite i
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Talleres de SQL Server](https://aka.ms/sqlworkshops)
-- [Notas de la versión de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](sql-server-version-15-release-notes.md)
-- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Notas técnicas del producto](https://aka.ms/sql2019whitepaper)
+- [Notas de la versión de [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]](sql-server-version-15-release-notes.md)
+- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]: Notas técnicas del producto](https://aka.ms/sql2019whitepaper)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

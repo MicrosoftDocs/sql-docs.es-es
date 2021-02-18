@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 2495eb7c020e6fb64fb894d4d6bb7614707f84bc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c42ee61b5a97f7634104cdda579d522501d77c96
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774865"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345896"
 ---
 # <a name="extract-a-script-from-a-trace-sql-server-profiler"></a>Extraer un script de un seguimiento (SQL Server Profiler)
 
@@ -29,7 +29,7 @@ En este tema se describe cómo extraer eventos de [!INCLUDE[tsql](../../includes
   
 1.  Abra la tabla o archivo de seguimiento que contiene los eventos de [!INCLUDE[tsql](../../includes/tsql-md.md)] que desea guardar en un archivo de script de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para obtener más información, vea [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) o el Asistente para la optimización del [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md).  
   
-2.  En el menú **Archivo** , seleccione **Exportar**, **Extraer eventos de SQL Server**y, luego, haga clic en **Extraer eventos de Transact-SQL**.  
+2.  En el menú **Archivo** , seleccione **Exportar**, **Extraer eventos de SQL Server** y, luego, haga clic en **Extraer eventos de Transact-SQL**.  
   
 3.  En el cuadro de diálogo **Guardar como** , escriba un nombre para el archivo de [!INCLUDE[tsql](../../includes/tsql-md.md)] y haga clic en **Guardar**.  
   

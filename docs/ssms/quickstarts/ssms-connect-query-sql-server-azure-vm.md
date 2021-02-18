@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein, mikeray
 ms.custom: contperf-fy21q2
 ms.date: 12/15/2020
-ms.openlocfilehash: 1c3bf8f69678ecf291594991650c3bb4c21d4652
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: b6442715c1482ed581302667bcdaf7985948c554
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596747"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350601"
 ---
 # <a name="quickstart-connect-and-query-a-sql-server-instance-on-an-azure-virtual-machine-using-sql-server-management-studio-ssms"></a>Inicio rápido: Conexión a una instancia de SQL Server en una máquina virtual de Azure y realización de consultas con SQL Server Management Studio (SSMS)
 

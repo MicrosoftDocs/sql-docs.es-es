@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 39e73066aad7c8913225c9b7c0e06f123e53a123
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: e948ad2c4d9e08d3fb4c5da91f7bfd76a563c64a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644180"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349963"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>Utilidades del símbolo del sistema de SQL (motor de base de datos)
 

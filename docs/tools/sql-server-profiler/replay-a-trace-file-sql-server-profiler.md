@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: e473cfa21a026563bc2ac71b39e25d66d4c6a619
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b7d6139941e7ee3b80e62596e95f0d5d492cbc1d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774779"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349385"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>Reproducir un archivo de seguimiento (SQL Server Profiler)
 
@@ -29,9 +29,9 @@ La reproducción es la capacidad de abrir un seguimiento guardado y reproducirlo
   
 ### <a name="to-replay-a-trace-file"></a>Para reproducir un archivo de seguimiento  
   
-1.  En el menú **Archivo** , seleccione **Abrir**y, a continuación, haga clic en **Archivo de seguimiento**. Seleccione un archivo de seguimiento que contenga las clases de eventos necesarias para la reproducción.  
+1.  En el menú **Archivo** , seleccione **Abrir** y, a continuación, haga clic en **Archivo de seguimiento**. Seleccione un archivo de seguimiento que contenga las clases de eventos necesarias para la reproducción.  
   
-2.  En el menú **Reproducir** , haga clic en **Iniciar**y conéctese a la instancia del servidor en la que desee reproducir el seguimiento.  
+2.  En el menú **Reproducir** , haga clic en **Iniciar** y conéctese a la instancia del servidor en la que desee reproducir el seguimiento.  
   
 3.  En el cuadro de diálogo **Configuración de reproducción** , en la pestaña **Opciones básicas de reproducción** , especifique **Servidor de reproducción**. Haga clic en **Cambiar** para cambiar el servidor visualizado en el cuadro **Servidor de reproducción** .  
   
@@ -41,7 +41,7 @@ La reproducción es la capacidad de abrir un seguimiento guardado y reproducirlo
   
     -   **Guardar en la tabla**, que especifica una tabla de base de datos en la que se guardará la reproducción.  
   
-5.  Elija **Reproducir eventos en el oden de seguimiento**o **Reproducir eventos mediante múltiples subprocesos**. En la tabla siguiente se explica la diferencia entre estas opciones.  
+5.  Elija **Reproducir eventos en el oden de seguimiento** o **Reproducir eventos mediante múltiples subprocesos**. En la tabla siguiente se explica la diferencia entre estas opciones.  
   
     |Opción|Descripción|  
     |------------|-----------------|  
@@ -50,13 +50,13 @@ La reproducción es la capacidad de abrir un seguimiento guardado y reproducirlo
   
 6.  Seleccione **Mostrar resultados de la reproducción** para ver la reproducción mientras se ejecuta.  
   
-7.  Si lo desea, haga clic en la pestaña **Opciones avanzadas de reproducción**para configurar las siguientes opciones:  
+7.  Si lo desea, haga clic en la pestaña **Opciones avanzadas de reproducción** para configurar las siguientes opciones:  
   
     -   Para reproducir todos los identificadores de proceso de servidor (SPID), seleccione **Reproducir los SPID del sistema**.  
   
     -   Para limitar la reproducción a los procesos que pertenecen a un determinado SPID, seleccione **Reproducir solo un SPID**. En el cuadro **SPID para reproducir** , escriba el SPID.  
   
-    -   Para reproducir eventos producidos durante un determinado periodo, seleccione **Limitar reproducción por fecha y hora**. Seleccione una fecha y una hora en **Hora de inicio**y **Hora de finalización**para especificar el periodo que se incluirá en la reproducción.  
+    -   Para reproducir eventos producidos durante un determinado periodo, seleccione **Limitar reproducción por fecha y hora**. Seleccione una fecha y una hora en **Hora de inicio** y **Hora de finalización** para especificar el periodo que se incluirá en la reproducción.  
   
     -   Para controlar el modo en que SQL Server administra los procesos durante la reproducción, configure **Opciones del monitor de estado**.  
   

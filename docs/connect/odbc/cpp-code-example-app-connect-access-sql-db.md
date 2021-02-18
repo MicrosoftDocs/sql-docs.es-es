@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2afdfa860f3ee3be1789b448701218fd850407a3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d8ee700b81afbce69602b4dfc6dbdcca9270c256
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245024"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350362"
 ---
 # <a name="c-odbc-example-application-accesses-a-sql-database"></a>La aplicación de ejemplo ODBC de C++ accede a una base de datos SQL
 

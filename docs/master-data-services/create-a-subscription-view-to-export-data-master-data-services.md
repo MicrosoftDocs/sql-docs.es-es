@@ -61,7 +61,7 @@ ms.locfileid: "100272606"
   
 10. Si elige **Niveles explícitos** o **Niveles derivados** en la lista **Formato** , escriba el número de niveles en la jerarquía que se incluirán en la vista.  
   
-11. Haga clic en **Save**(Guardar).  
+11. Haga clic en **Guardar**.  
   
 ## <a name="view-information"></a>Información sobre las vistas  
  Por cada vista creada, se agrega a la cuadrícula una fila con diez columnas. En la siguiente tabla se describen las columnas.  

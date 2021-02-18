@@ -20,12 +20,12 @@ ms.manageR: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 3bd61a8a290f8863d13c2052d0a50835461c5aae
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 51c90ad84344c98ff0e144bd611ab243715e1787
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038401"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341059"
 ---
 # <a name="register-servers"></a>Registrar servidores
 
@@ -85,6 +85,6 @@ Registrar un servidor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofu
 |Crear un servidor de administración central y un grupo de servidores|[Crear un servidor de administración central y un grupo de servidores &#40;SQL Server Management Studio&#41;](./create-a-central-management-server-and-server-group.md)|  
 |Ejecutar instrucciones en varios servidores simultáneamente|[Ejecutar instrucciones con varios servidores simultáneamente &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Servidores remotos](../../database-engine/configure-windows/remote-servers.md)  
   

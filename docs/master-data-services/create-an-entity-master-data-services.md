@@ -65,7 +65,7 @@ ms.locfileid: "100341428"
   
 9. Opcional. Active la casilla **Habilitar compresión de datos** . La compresión de fila está activada de forma predeterminada. Para obtener más información, consulte [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
-10. Haga clic en **Save**(Guardar).  
+10. Haga clic en **Guardar**.  
   
 ## <a name="grid-columns"></a>Columnas de la cuadrícula  
  Por cada entidad creada, se agrega una fila con trece columnas a la cuadrícula. Las columnas son las siguientes.  

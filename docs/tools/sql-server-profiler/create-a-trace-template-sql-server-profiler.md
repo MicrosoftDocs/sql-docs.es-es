@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: af272f50f281a8c3a564913cfb91be8abcab2898
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 453989e908808e0444807bcfb9dd817b3f79c436
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774877"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349363"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>Crear una plantilla de seguimiento (SQL Server Profiler)
 
@@ -26,13 +26,13 @@ ms.locfileid: "85774877"
   
 ### <a name="to-create-a-trace-template"></a>Para crear una plantilla de seguimiento  
   
-1.  En el menú **Archivo** , haga clic en **Plantillas**y, a continuación, en **Nueva plantilla**.  
+1.  En el menú **Archivo** , haga clic en **Plantillas** y, a continuación, en **Nueva plantilla**.  
   
 2.  En el cuadro de diálogo **Propiedades de la plantilla de seguimiento** , seleccione un tipo de servidor en la lista **Seleccionar tipo de servidor**.  
   
 3.  En el cuadro **Nuevo nombre de plantilla** , escriba un nombre para la plantilla.  
   
-4.  También puede hacer clic en **Basar plantilla nueva en una existente**y, a continuación, seleccionar una plantilla de la lista.  
+4.  También puede hacer clic en **Basar plantilla nueva en una existente** y, a continuación, seleccionar una plantilla de la lista.  
   
      Todos los eventos, las columnas de datos y los filtros se establecen inicialmente tal como se especifica en la plantilla seleccionada.  
   

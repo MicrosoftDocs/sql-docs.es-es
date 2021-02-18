@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 697674390fe11ff569451dcb0153482f7b8aefd8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: edc3ed219b019a81f3093db88a19526e5e9dee0a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789976"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340558"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>Buscar un valor o una columna de datos durante la ejecución de un seguimiento (SQL Server Profiler)
 
@@ -31,7 +31,7 @@ En este tema se describe cómo buscar un valor o una columna de datos específic
   
 2.  En el menú **Edición** , haga clic en **Buscar**.  
   
-3.  En el cuadro de diálogo**Buscar** , escriba un valor de búsqueda en el cuadro de texto **Buscar what** y, si lo desea, especifique una columna de datos.  
+3.  En el cuadro de diálogo **Buscar** , escriba un valor de búsqueda en el cuadro de texto **Buscar what** y, si lo desea, especifique una columna de datos.  
   
 4.  Para buscar la siguiente repetición de un valor, haga clic en **Buscar siguiente**.  
   
