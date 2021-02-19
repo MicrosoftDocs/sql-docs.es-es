@@ -8889,6 +8889,8 @@ items:
                 href: ssms/configure-login-auditing-sql-server-management-studio.md
               - name: Habilitar la copia desde la ventana de buscar y reemplazar
                 href: ssms/troubleshoot/enable-copying-find-replace-window.md
+              - name: Habilitación del movimiento de pestañas
+                href: ssms/troubleshoot/workaround-move-tabs.md
               - name: Solución de problemas
                 items:
                   - name: Obtención de un volcado de memoria completo
