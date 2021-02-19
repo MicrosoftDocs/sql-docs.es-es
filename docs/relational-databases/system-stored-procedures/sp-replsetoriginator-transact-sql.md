@@ -46,7 +46,7 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  el Agente de distribución ejecuta **sp_replsetoriginator** para registrar el origen de las transacciones aplicadas por la replicación. Esta información se utiliza para invocar la detección de bucles invertidos en suscripciones transaccionales bidireccionales que tienen establecida la propiedad de bucles invertidos.  
   
 ## <a name="permissions"></a>Permisos  
