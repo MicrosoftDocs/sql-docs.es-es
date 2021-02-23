@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de R: Ingeniería de características'
+title: 'Tutorial de R: Diseño de características'
 description: Tutorial en el que se muestra cómo crear características de datos mediante funciones de SQL Server para el análisis en bases de datos.
 ms.prod: sql
 ms.technology: machine-learning-services
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 38920a0d7dda05b2dbd853035c4ce0c17ffd74f2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 502600980a3cb1f80eaeca64284f0a189cfcb405
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470036"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272986"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Creación de características de datos con R y SQL Server (tutorial)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ En este paso, aprenderá dos métodos diferentes para crear una característica 
 
 El objetivo consiste en crear un conjunto de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que incluya las columnas originales más la nueva característica numérica, *direct_distance*.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 En este paso se da por supuesto que hay una sesión de R en curso basada en los pasos anteriores de este tutorial. Usaremos las cadenas de conexión y los objetos de origen de datos creados en esos pasos. También emplearemos las siguientes herramientas y paquetes para ejecutar el script.
 
@@ -109,7 +109,7 @@ En primer lugar, seguiremos el método que suelen emplear los usuarios de R. Obt
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + La función rxDataStep admite varios métodos para modificar los datos en su lugar. Para obtener más información, vea este artículo:  [Cómo transformar datos y crear subconjuntos de ellos en Microsoft R](/r-server/r/how-to-revoscaler-data-transform).
+    + La función rxDataStep admite varios métodos para modificar los datos en su lugar. Para obtener más información, consulte el artículo sobre [cómo transformar datos y crear subconjuntos de ellos en Microsoft R](/r-server/r/how-to-revoscaler-data-transform).
     
     Aun así, hay que tener en cuenta un par de cuestiones sobre rxDataStep: 
     
@@ -129,7 +129,7 @@ En este ejercicio, aprenderá a realizar la misma tarea con las funciones de SQL
 
 Cambie a [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) o a otro editor de consultas para ejecutar el script de T-SQL.
 
-1. Use una función de SQL denominada *fnCalculateDistance*. La función ya debe existir en la base de datos NYCTaxi_Sample. En el Explorador de objetos, vaya a esta ruta de acceso para comprobar que la función existe: Databases > NYCTaxi_Sample > Programmability > Functions > Scalar-valued Functions > dbo.fnCalculateDistance.
+1. Use una función de SQL denominada *fnCalculateDistance*. La función ya debe existir en la base de datos NYCTaxi_Sample. En Explorador de objetos, vaya a esta ruta de acceso para comprobar que la función existe: Bases de datos > NYCTaxi_Sample > Programación > Funciones > Funciones escalares > dbo.fnCalculateDistance.
 
     Si la función no existe, use SQL Server Management Studio para generar la función en la base de datos NYCTaxi_Sample.
 
@@ -227,7 +227,7 @@ Cambie a [SQL Server Management Studio](../../ssms/download-sql-server-managemen
     ```
 
     > [!NOTE]
-    > En algunos casos, podría recibir un error similar al siguiente: *Se denegó el permiso EXECUTE en el objeto 'fnCalculateDistance'* . Si es así, asegúrese de que el inicio de sesión que usa tiene permisos para ejecutar scripts y crear objetos en la base de datos, no solo en la instancia.
+    > En algunos casos, podría recibir un error similar al siguiente: *Se denegó el permiso EXECUTE en el objeto "fnCalculateDistance"* . Si es así, asegúrese de que el inicio de sesión que usa tiene permisos para ejecutar scripts y crear objetos en la base de datos, no solo en la instancia.
     > Compruebe el esquema del objeto, fnCalculateDistance. Si el objeto lo creó el propietario de la base de datos y el inicio de sesión pertenece al rol db_datareader, debe conceder al inicio de sesión permisos explícitos para ejecutar el script.
 
 ## <a name="comparing-r-functions-and-sql-functions"></a>Comparación de funciones de R y de SQL

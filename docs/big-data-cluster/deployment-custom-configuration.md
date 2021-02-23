@@ -4,21 +4,23 @@ titleSuffix: SQL Server big data clusters
 description: Aprenda a personalizar una implementación de clúster de macrodatos con los archivos de configuración integrados en la herramienta de administración de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: rajmera3
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d983b4d0d7cfb02a587675984fdc42c54bf9f0ec
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ffb41a559c6f262fe6d25a50c51b6e6553a2a7b8
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100047205"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343924"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configuración de opciones de implementación de recursos y servicios de clúster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+> [!Note]
+> La versión CU9 y las versiones posteriores de Clústeres de macrodatos admiten la funcionalidad de administración de configuración. Esta característica habilita las configuraciones posteriores a la implementación y proporciona una mayor visibilidad y una mejor capacidad de configuración del clúster. La versión CU8 y las versiones anteriores no tienen esta funcionalidad, de modo que las configuraciones solo se pueden realizar en el momento de la implementación.
 
 Partiendo de un conjunto predefinido de perfiles de configuración integrados en la herramienta de administración [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], la configuración predeterminada se puede modificar fácilmente para satisfacer de mejor forma los requisitos de carga de trabajo de BDC. La estructura de los archivos de configuración permite actualizar de forma granular la configuración de cada servicio del recurso.
 
@@ -28,6 +30,9 @@ Vea este vídeo de 13 minutos para información general sobre la configuración
 
 > [!TIP]
 > Vea los artículos sobre cómo configurar la **alta disponibilidad** de componentes esenciales como la [instancia maestra de SQL Server](deployment-high-availability.md) o el [nodo de nombre de HDFS](deployment-high-availability-hdfs-spark.md) para más información sobre cómo implementar servicios de alta disponibilidad.
+
+> [!TIP]
+> Consulte el artículo [Propiedades de configuración de Clústeres de macrodatos de SQL Server](reference-config-bdc-overview.md) para ver qué opciones se pueden configurar. En el caso de CU8 o versiones anteriores, vea [Propiedades de configuración de la instancia maestra de SQL Server (versiones anteriores a CU9)](reference-config-master-instance.md) para conocer las configuraciones disponibles para la instancia maestra de SQL Server, y [Propiedades de configuración de Apache Spark y Apache Hadoop (HDFS)](reference-config-spark-hadoop.md) para obtener información sobre las propiedades de Apache Spark y Hadoop.
 
 También puede definir configuraciones de nivel de recurso o actualizar las configuraciones de todos los servicios de un recurso. Este es un resumen de la estructura de `bdc.json`:
 

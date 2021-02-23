@@ -10,12 +10,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: df878f94c2ed6338ae28cbff156460ffdef87826
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 69749c0da2a5f7ef672a4673b5bc857898e9964f
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100046665"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489189"
 ---
 # <a name="encryption-at-rest-concepts-and-configuration-guide"></a>Conceptos y guía de configuración del cifrado en reposo
 
@@ -29,9 +29,9 @@ La plataforma Clústeres de macrodatos de SQL Server almacena datos en estas do
 Hay dos enfoques posibles para poder cifrar datos de manera transparente en Clústeres de macrodatos de SQL Server:
 
 * __Cifrado de volumen__. Este enfoque es compatible con la plataforma de Kubernetes y se espera como un procedimiento recomendado para las implementaciones de Clústeres de macrodatos. En esta guía no se trata el cifrado de volumen. Consulte la documentación del dispositivo o de la plataforma de Kubernetes para ver guías sobre cómo cifrar correctamente los volúmenes que se usarán para Clústeres de macrodatos de SQL Server.
-* __Cifrado de nivel de aplicación__. Esta arquitectura hace referencia al cifrado de datos por parte de la aplicación que controla los datos antes de que se escriban en el disco. En caso de que se expongan los volúmenes, un atacante no podrá restaurar los artefactos de datos en ningún otro lugar, a menos que el sistema de destino también se haya configurado con las mismas claves de cifrado. 
+* __Cifrado de nivel de aplicación__. Esta arquitectura hace referencia al cifrado de datos por parte de la aplicación que controla los datos antes de que se escriban en el disco. En caso de que se expongan los volúmenes, un atacante no podrá restaurar los artefactos de datos en ningún otro lugar, a menos que el sistema de destino también se haya configurado con las mismas claves de cifrado.
 
-El conjunto de características de cifrado en reposo de Clústeres de macrodatos de SQL Server admite el escenario principal de cifrado de nivel de aplicación para los componentes de HDFS y SQL Server.
+El __conjunto de características de cifrado en reposo de Clústeres de macrodatos de SQL Server__ admite el escenario principal de __cifrado de nivel de aplicación__ para los componentes de __SQL Server__ y __HDFS__.
 
 Se proporcionan las funcionalidades siguientes:
 
@@ -48,9 +48,6 @@ Un servicio hospedado de controlador responsable de administrar claves y certifi
 * Compatibilidad con KMS de Hadoop. Actúa como el servicio de administración de claves para el componente HDFS en BDC.
 * Administración de certificados de TDE de SQL Server.
 
-En este momento no se admite esta característica:
-* *Compatibilidad con control de versiones de claves*. 
-
 Durante el resto de este documento, haremos referencia a este servicio como __KMS de BDC__. Además, el término __BDC__ se usa para hacer referencia a la plataforma informática __Clústeres de macrodatos de SQL Server__.
 
 ### <a name="system-managed-keys-and-certificates"></a>Certificados y claves administrados por el sistema
@@ -65,9 +62,9 @@ Claves y certificados proporcionados por el usuario que van a ser administrados 
 
 Soluciones de claves externas compatibles con KMS de BDC para delegación externa. Esta funcionalidad no se admite en este momento.
 
-## <a name="encryption-at-rest-on-sql-server-big-data-clusters-cu8"></a>Cifrado en reposo en Clústeres de macrodatos de SQL°Server CU8
+## <a name="encryption-at-rest-on-sql-server-big-data-clusters"></a>Cifrado en reposo en Clústeres de macrodatos de SQL Server
 
-Clústeres de macrodatos de SQL Server CU8 es la versión inicial del conjunto de características de cifrado en reposo. Lea con atención este documento para evaluar completamente el escenario.
+Lea con atención este documento para evaluar completamente el escenario.
 
 El conjunto de características presenta el __servicio de controlador KMS de BDC__ para brindar claves y certificados administrados por el sistema para el cifrado de datos en reposo tanto en SQL Server como en HDFS. Esas claves y certificados los administra el servicio y en esta documentación se proporcionan los lineamientos operativos sobre cómo interactuar con el servicio.
 
@@ -80,7 +77,7 @@ El conjunto de características presenta el __servicio de controlador KMS de BDC
 * Las bases de datos de usuario y las bases de datos aprovisionadas por BDC de la instancia maestra no se cifrarán de manera automática. Los administradores de bases de datos pueden usar el certificado instalado para cifrar cualquier base de datos.
 * El grupo de proceso y el bloque de almacenamiento se cifrarán automáticamente mediante el certificado generado por el sistema.
 * Si bien es técnicamente posible con el comando `EXECUTE AT` de T-SQL, no se recomienda el cifrado de grupo de datos, ni tampoco se admite en este momento. El uso de esta técnica para cifrar las bases de datos del grupo de datos podría no ser efectivo y es posible que el cifrado no se realice en el estado deseado. También se crea una ruta de actualización incompatible con respecto a las versiones siguientes.
-* En este momento no hay ninguna rotación de certificados. Se puede descifrar y, a continuación, cifrar con un certificado nuevo mediante comandos T-SQL, si no se encuentra en implementaciones de alta disponibilidad.
+* La rotación de claves de SQL Server se consigue mediante los comandos administrativos estándar de T-SQL. Para obtener instrucciones completas, consulte la [guía de uso del cifrado de datos transparente (TDE) en reposo de Clústeres de macrodatos de SQL Server](encryption-at-rest-sql-server-tde.md).
 * La supervisión del cifrado se produce a través de las DMV de SQL Server estándar existentes para TDE.
 * Se puede hacer copias de seguridad y restaurar una base de datos habilitada para TDE en el clúster.
 * Se admite la alta disponibilidad. Si una base de datos de la instancia principal de SQL Server está cifrada, también se cifrará toda la réplica secundaria de la base de datos.
@@ -91,12 +88,20 @@ El conjunto de características presenta el __servicio de controlador KMS de BDC
 * Una clave generada por el sistema se aprovisionará en KMS de Hadoop. El nombre de la clave es `securelakekey`. En CU8, la clave predeterminada es 256 bits y se admite el cifrado AES de 256 bits.
 * Una zona de cifrado predeterminada se aprovisionará con la clave generada por el sistema anterior en una ruta de acceso denominada `/securelake`.
 * Los usuarios pueden crear zonas de cifrado y claves adicionales si siguen las instrucciones específicas que aparecen en esta guía. Los usuarios podrán elegir el tamaño de clave de 128, 192 o 256 durante la creación de las claves.
-* La rotación de claves en contexto para HDFS no es posible en CU8. Como alternativa, los datos se pueden migrar de una zona de cifrado a otra mediante distcp.
+* La rotación de claves de las zonas de cifrado de HDFS se consigue mediante azdata. Para obtener instrucciones completas, consulte la [guía de uso de las zonas de cifrado de HDFS de Clústeres de macrodatos de SQL Server](encryption-at-rest-hdfs-encryption-zones.md).
 * No se admite el montaje en niveles de HDFS sobre una zona de cifrado.
 
-## <a name="configuration-guide"></a>Guía de configuración
+## <a name="encryption-at-rest-administration"></a>Administración del cifrado en reposo
 
-El cifrado en reposo de Clústeres de macrodatos de SQL Server es una característica administrada por el servicio y puede requerir pasos adicionales según la ruta de acceso de implementación.
+La lista siguiente contiene las funcionalidades de administración para el cifrado en reposo:
+
+* La administración del [cifrado de datos transparente (TDE) de SQL Server](encryption-at-rest-sql-server-tde.md) se realiza mediante los comandos estándar de T-SQL.
+* La administración de las [zonas de cifrado de HDFS](encryption-at-rest-hdfs-encryption-zones.md) y de las claves de HDFS se realiza mediante los comandos de azdata.
+* Las siguientes características de administración se llevan a cabo mediante el uso de [cuadernos operativos](cluster-manage-notebooks.md):
+    - Copia de seguridad y recuperación de claves de HDFS
+    - Eliminación de claves de HDFS
+
+## <a name="configuration-guide"></a>Guía de configuración
 
 Durante las __implementaciones nuevas de Clústeres de macrodatos de SQL Server__, desde CU8 en adelante, el __cifrado en reposo estará habilitado y configurado de manera predeterminada__. Esto significa lo siguiente:
 
@@ -106,14 +111,11 @@ Durante las __implementaciones nuevas de Clústeres de macrodatos de SQL Server
 
 Se aplican los requisitos y comportamientos predeterminados descritos en la sección anterior.
 
-Si __actualiza el clúster a CU8__, __lea atentamente la sección siguiente__.
+__Si instala una nueva implementación de BDC de SQL Server de CU8 en adelante, o bien actualiza directamente a CU9, no es necesario que realice ningún paso adicional__.
 
-### <a name="upgrading-to-cu8"></a>Actualización a CU8
+### <a name="upgrade-scenarios"></a>Actualización de los escenarios
 
-   > [!CAUTION]
-   > Antes de actualizar a Clústeres de macrodatos de SQL Server CU8, haga una copia de seguridad completa de los datos.
-
-En los clústeres existentes, el proceso de actualización no exigirá el cifrado de los datos de usuario y no se configurarán zonas de cifrado de HDFS. Este es el comportamiento predeterminado y se deben tener en cuenta las necesidades siguientes por componente:
+En los clústeres existentes, el proceso de actualización no aplicará nuevo cifrado ni volverá a cifrar los datos de usuario que no se hayan cifrado. Este es el comportamiento predeterminado y se deben tener en cuenta las necesidades siguientes por componente:
 
 * __SQL Server__
 
@@ -124,17 +126,31 @@ En los clústeres existentes, el proceso de actualización no exigirá el cifrad
 * __HDFS__
 
     1. __HDFS__. El proceso de actualización no tocará los archivos ni las carpetas de HDFS fuera de las zonas de cifrado.
-    1. __No se configurarán zonas de cifrado__. El componente KMS de Hadoop no se configurará para usar KMS de BDC. A fin de configurar y habilitar la característica de zonas de cifrado de HDFS después de la actualización, siga la sección siguiente.
 
-### <a name="enable-hdfs-encryption-zones-after-upgrade"></a>Habilitación de zonas de cifrado de HDFS después de la actualización
+### <a name="upgrading-to-cu9-from-cu8-or-earlier"></a>Actualización a CU9 desde CU8 o versiones anteriores
 
-Ejecute estas acciones si actualizó el clúster a CU8 (`azdata upgrade`) y quiere habilitar zonas de cifrado de HDFS.
+No se necesita realizar ningún paso adicional.
+
+### <a name="upgrading-to-cu8-from-cu6-or-earlier"></a>Actualización a CU8 desde CU6 o versiones anteriores
+
+   > [!CAUTION]
+   > Antes de actualizar a Clústeres de macrodatos de SQL Server CU8, haga una copia de seguridad completa de los datos.
+
+
+__No se configurarán zonas de cifrado__. El componente KMS de Hadoop no se configurará para usar KMS de BDC. A fin de configurar y habilitar la característica de zonas de cifrado de HDFS después de la actualización, siga las instrucciones de la siguiente sección.
+
+#### <a name="enable-hdfs-encryption-zones-after-upgrade-to-cu8"></a>Habilitación de zonas de cifrado de HDFS después de la actualización a CU8
+
+Si actualizó el clúster a CU8 (`azdata upgrade`) y quiere habilitar zonas de cifrado de HDFS, tiene dos opciones:
+
+* Ejecutar el [cuaderno operativo](cluster-manage-notebooks.md) de Azure Data Studio denominado __SOP0128: Habilitación de zonas de cifrado de HDFS en Clústeres de macrodatos__ para llevar a cabo la configuración.
+* Ejecutar scripts, tal y como se describe a continuación.
 
 Requisitos:
 
 - Clúster integrado en [Active Directory](active-directory-prerequisites.md).
 
-- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] configurada y conectada en el clúster en el modo de AD.
+- [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] configurada y conectada en el clúster en el modo de AD.
 
 Siga el procedimiento siguiente para volver a configurar el clúster con compatibilidad con zonas de cifrado.
 

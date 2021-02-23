@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b62e62de6169a01641bd70f7f4cd60341b9b46c1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f09834f72bbcf5932961045a803c57dc9702a242
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474256"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344171"
 ---
 # <a name="search-text-with-regular-expressions"></a>Buscar texto mediante expresiones regulares
 
@@ -51,7 +51,7 @@ En la tabla siguiente se describen las expresiones regulares disponibles en la *
 |Fin de palabra|>|Coincide únicamente cuando una palabra finaliza en este punto del texto.|
 |Salto de línea|\n|Devuelve un salto de línea independiente de la plataforma. En una expresión de Reemplazar, inserta un salto de línea.|
 |Un carácter cualquiera del conjunto|[]|Devuelve cualquier carácter situado dentro de []. Para especificar un intervalo de caracteres, escriba los caracteres inicial y final separados por un guión (-), como en [a-z].|
-|Un carácter cualquiera no perteneciente al conjunto|[^...]|Devuelve cualquier carácter que no se encuentre en el juego de caracteres que sigue a ^.|
+|Un carácter cualquiera no perteneciente al conjunto|[^…]|Devuelve cualquier carácter que no se encuentre en el juego de caracteres que sigue a ^.|
 |Or|&#124;|Devuelve la expresión situada antes o la situada después del símbolo OR (&#124;). Se utiliza fundamentalmente dentro de un grupo. Por ejemplo, (sponge&#124;mud) bath devuelve "sponge bath" y "mud bath".|
 |Escape|\|Devuelve el carácter que sigue a la barra diagonal inversa (\\) como un literal. Esto permite buscar los caracteres utilizados en la notación de expresiones regulares, como { y ^. Por ejemplo, \\^ busca el carácter ^.|
 |Expresión de etiqueta|{}|Devuelve texto etiquetado con la expresión entre comillas.|

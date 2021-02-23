@@ -1,5 +1,5 @@
 ---
-title: 'SQL Server 2016 y 2017: Requisitos de hardware y software'
+title: 'SQL Server 2016 y 2017: Requisitos de hardware y de software'
 description: Una lista de los requisitos de hardware, software y sistema operativo para instalar y ejecutar SQL Server 2016 y SQL Server 2017.
 ms.custom: seo-lt-2019
 ms.date: 02/19/2020
@@ -45,19 +45,19 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: chadam
 author: cawrites
-ms.openlocfilehash: 8583c629fc43656e082d32ec00b1e942d2e92b3d
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2fc1268ceeec1b03da9f5bd16301169504053f1c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170617"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352467"
 ---
 # <a name="sql-server-2016-and-2017-hardware-and-software-requirements"></a>SQL Server 2016 y 2017: Requisitos de hardware y de software
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 En el artículo se enumeran los requisitos mínimos de hardware y software para instalar y ejecutar SQL Server 2016 y SQL Server 2017 en el sistema operativo Windows.  
 
-Para los requisitos de hardware y software para otras versiones de SQL Server, vea:
+Para obtener los requisitos de hardware y software de otras versiones de SQL Server, vea:
 - [SQL Server 2019](hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 - [SQL Server en Linux](../../linux/sql-server-linux-setup.md#system)
 
@@ -90,7 +90,7 @@ Los siguientes requisitos de software se aplican a todas las instalaciones:
 |Componente|Requisito|  
 |---------------|-----------------|  
 |.NET Framework|[!INCLUDE[sql2016](../../includes/sssql16-md.md)] y versiones posteriores necesitan [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 para el Motor de base de datos, Master Data Services o la replicación. El programa de instalación de SQL Server instala automáticamente [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] también se puede instalar manualmente desde [Microsoft .NET Framework 4.6 (instalador web) para Windows](https://support.microsoft.com/kb/3045560).<br/><br/> Para ver más información, recomendaciones y directrices sobre [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6, consulte la [Guía de implementación de .NET Framework para desarrolladores](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]y [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] necesitan [KB2919355](https://support.microsoft.com/kb/2919355) para instalar [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
-|Software de red|Los sistemas operativos admitidos para [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] tienen software de red integrado. Las instancias con nombre y predeterminadas de una instalación independiente admiten los siguientes protocolos de red: Memoria compartida, canalizaciones con nombre, TCP/IP y VIA.<br/><br/> **Nota:** El protocolo VIA no es compatible con los clústeres de conmutación por error. Los clientes o las aplicaciones que se ejecutan en el mismo nodo del clúster de conmutación por error que la instancia de SQL Server pueden usar el protocolo de memoria compartida para conectarse a SQL Server con la dirección de la canalización local. Sin embargo, este tipo de conexión no es compatible con clúster y generará un error después de la conmutación por error de una instancia. Por tanto, no se recomienda y solo se debe usar en escenarios muy específicos.<br/><br/> **Importante:** El protocolo VIA está desusado. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> Para obtener más información acerca de los protocolos de red y las bibliotecas de red, vea [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
+|Software de red|Los sistemas operativos admitidos para [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] tienen software de red integrado. Las instancias con nombre y predeterminadas de una instalación independiente admiten los siguientes protocolos de red: Memoria compartida, Canalizaciones con nombre, TCP/IP y VIA.<br/><br/> **Nota:** El protocolo VIA no es compatible con los clústeres de conmutación por error. Los clientes o las aplicaciones que se ejecutan en el mismo nodo del clúster de conmutación por error que la instancia de SQL Server pueden usar el protocolo de memoria compartida para conectarse a SQL Server con la dirección de la canalización local. Sin embargo, este tipo de conexión no es compatible con clúster y generará un error después de la conmutación por error de una instancia. Por tanto, no se recomienda y solo se debe usar en escenarios muy específicos.<br/><br/> **Importante:** El protocolo VIA está en desuso. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> Para obtener más información acerca de los protocolos de red y las bibliotecas de red, vea [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
 
 El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala los siguientes componentes de software que el producto necesita:  
   
@@ -117,9 +117,9 @@ La siguiente tabla muestra qué ediciones de SQL Server 2016 y 2017 son compati
 | Windows Server 2016 Datacenter    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2016 Standard      |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2016 Essentials    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
-| Windows Server 2012 R2 Datacenter |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
+| Windows Server 2012 R2 Datacenter |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2012 R2 Standard   |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
-| Windows Server 2012 R2 Essentials |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
+| Windows Server 2012 R2 Essentials |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2012 R2 Foundation |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2012 Datacenter    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2012 Standard      |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
@@ -132,7 +132,7 @@ La siguiente tabla muestra qué ediciones de SQL Server 2016 y 2017 son compati
 | Windows 8.1 Enterprise            |    No      |    Sí    |    Sí   | No  |   Sí   |
 | Windows 8.1 Pro                   |    No      |    Sí    |    Sí   | No  |   Sí   |
 | Windows 8.1 Enterprise            |    No      |    Sí    |    Sí   | No  |   Sí   |
-| Windows 8 Pro                     |    No      |    Sí    |    Sí   | No  |   Sí   |
+| Windows 8 Pro                     |    No      |    Sí    |    Sí   | No  |   Sí   |
 | Windows 8                         |    No      |    Sí    |    Sí   | No  |   Sí   | 
 
 Para conocer los requisitos mínimos de versión para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[win8srv](../../includes/win8srv-md.md)] o [!INCLUDE[win8](../../includes/win8-md.md)], vea [Usar SQL Server en Windows 8 y versiones posteriores del sistema operativo Windows](https://support.microsoft.com/kb/2681562). 
@@ -152,10 +152,10 @@ La instalación de SQL Server 2016 y 2017 en el modo Server Core es compatible
 :::row-end:::
 :::row:::
     :::column:::
-        Windows Server 2016 Standard
+        Windows Server 2016 Standard
     :::column-end:::
     :::column:::
-        Windows Server 2016 Datacenter
+        Windows Server 2016 Datacenter
     :::column-end:::
 :::row-end:::
 :::row:::

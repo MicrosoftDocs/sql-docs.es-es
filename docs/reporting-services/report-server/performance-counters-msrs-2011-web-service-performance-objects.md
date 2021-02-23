@@ -1,7 +1,7 @@
 ---
-title: Servicio web de MSRS 2011 de contadores de rendimiento, objetos de rendimiento | Microsoft Docs
-description: Obtenga información sobre los contadores de rendimiento para los objetos de rendimiento Servicio web y Servicio de Windows de MSRS 2011.
-ms.date: 06/26/2019
+title: Contadores de rendimiento para los objetos de rendimiento de modo nativo de MSRS 2016 | Microsoft Docs
+description: Obtenga información sobre los contadores de rendimiento para los objetos de rendimiento MSRS 2016 Web Service y MSRS 2016 Windows Service.
+ms.date: 02/17/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -17,35 +17,35 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016'
-ms.openlocfilehash: 655c0a2fdcd36c7b93b87d3d8979751fcd757e8b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 1a6704706a152073cdfa1367aed5c0d194834bec
+ms.sourcegitcommit: 6c93282cce1216dac327cb28848a3ab4d51b776e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97424744"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "100646338"
 ---
-# <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Servicio web de MSRS 2011 de contadores de rendimiento, objetos de rendimiento
-  En este tema se describen los contadores de rendimiento para los objetos de rendimiento **MSRS 2011 Web Service** y **MSRS 2011 Windows Service** . Estos objetos son parte de una implementación de modo nativo de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
+# <a name="performance-counters-msrs-2016-native-mode-performance-objects"></a>Contadores de rendimiento para los objetos de rendimiento de modo nativo de MSRS 2016
+  En este tema se describen los contadores de rendimiento para los objetos de rendimiento **MSRS 2016 Web Service** (Servicio web de MSRS 2016) y **MSRS 2016 Windows Service** (Servicio de Windows de MSRS 2016). Estos objetos forman parte de una implementación en modo nativo de SQL Server 2016 Reporting Services.  
   
 > [!NOTE]  
 >  Estos objetos de rendimiento supervisan los eventos en el servidor de informes local. Si ejecuta un servidor de informes en una implementación escalada, los recuentos se aplican al servidor actual y no a la implementación escalada.  
   
  Los objetos de rendimiento están disponibles en el Monitor de rendimiento de Windows (**Perfmon.exe**). Para más información, consulte la documentación de Windows, [Generar perfiles en tiempo de ejecución](/dotnet/framework/debug-trace-profile/runtime-profiling) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
- Para obtener información relacionada con los contadores de rendimiento en modo de SharePoint, vea [Contadores de rendimiento para los objetos de rendimiento en modo SharePoint de MSRS 2011 Web Service y SharePoint de MSRS 2011 Windows Service &#40;modo SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
+ Para obtener información relacionada con los contadores de rendimiento en modo de SharePoint, vea el artículo sobre los [contadores de rendimiento para los objetos de rendimiento MSRS 2016 Web Service SharePoint Mode y MSRS 2016 Windows Service SharePoint Mode (modo de SharePoint)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
  En este tema:  
   
--   [Contadores de rendimiento de MSRS 2011 Web Service](#bkmk_webservice)  
+-   [Contadores de rendimiento para MSRS 2016 Web Service](#bkmk_webservice)  
   
--   [Contadores de rendimiento de MSRS 2011 Windows Service](#bkmk_windowsservice)  
+-   [Contadores de rendimiento para MSRS 2016 Windows Service](#bkmk_windowsservice)  
   
 -   [Usar cmdlets de PowerShell para devolver listas](#bkmk_powershell)  
   
-##  <a name="msrs-2011-web-service-performance-counters"></a><a name="bkmk_webservice"></a> Contadores de rendimiento de MSRS 2011 Web Service  
- El objeto de rendimiento **MSRS 2011 Web Service** supervisa el rendimiento del servidor de informes. Este objeto de rendimiento incluye una colección de contadores que se usan para realizar el seguimiento del procesamiento del servidor de informes que se suele iniciar mediante operaciones interactivas de visualización de informes. Cuando se configura este contador, se puede aplicar a todas las instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o se pueden seleccionar instancias concretas. Estos contadores se restablecen siempre que [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.  
+##  <a name="msrs-2016-web-service-performance-counters"></a><a name="bkmk_webservice"></a>Contadores de rendimiento para MSRS 2016 Web Service  
+ El objeto de rendimiento **MSRS 2016 Web Service** supervisa el rendimiento del servidor de informes. Este objeto de rendimiento incluye una colección de contadores que se usan para realizar el seguimiento del procesamiento del servidor de informes que se suele iniciar mediante operaciones interactivas de visualización de informes. Cuando se configura este contador, se puede aplicar a todas las instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o se pueden seleccionar instancias concretas. Estos contadores se restablecen siempre que [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.  
   
- En la tabla siguiente se enumeran los contadores que se incluyen con el objeto de rendimiento **MSRS 2011 Web Service** .  
+ En la tabla siguiente se enumeran los contadores que se incluyen con el objeto de rendimiento **MSRS 2016 Web Service**.  
   
 |Contador|Descripción|  
 |-------------|-----------------|  
@@ -72,10 +72,10 @@ ms.locfileid: "97424744"
 |**Total de informes ejecutados**|Número total de informes que se han ejecutado correctamente después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.|  
 |**Total de solicitudes**|Número total de solicitudes efectuadas al servidor de informes después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.|  
   
-##  <a name="msrs-2011-windows-service-performance-counters"></a><a name="bkmk_windowsservice"></a> Contadores de rendimiento de MSRS 2011 Windows Service  
- El objeto de rendimiento **MSRS 2011 Windows Service** supervisa el servicio servidor de informes de Windows. Este objeto de rendimiento incluye una colección de contadores que se usan para realizar el seguimiento del procesamiento de informes que se inicia mediante operaciones programadas. Entre las operaciones programadas se incluyen la suscripción y la entrega, las instantáneas de ejecución de informes y el historial del informe. Cuando se configura este contador, se puede aplicar a todas las instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o se pueden seleccionar instancias concretas.  
+##  <a name="msrs-2016-windows-service-performance-counters"></a><a name="bkmk_windowsservice"></a> Contadores de rendimiento para MSRS 2016 Windows Service  
+ El objeto de rendimiento **MSRS 2016 Windows Service** supervisa el servicio servidor de informes de Windows. Este objeto de rendimiento incluye una colección de contadores que se usan para realizar el seguimiento del procesamiento de informes que se inicia mediante operaciones programadas. Entre las operaciones programadas se incluyen la suscripción y la entrega, las instantáneas de ejecución de informes y el historial del informe. Cuando se configura este contador, se puede aplicar a todas las instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o se pueden seleccionar instancias concretas.  
   
- En la tabla siguiente se enumeran los contadores que se incluyen con el objeto de rendimiento **MSRS 2011 Windows Service** .  
+ En la tabla siguiente se enumeran los contadores que se incluyen con el objeto de rendimiento **MSRS 2016 Windows Service**.  
   
 |Contador|Descripción|  
 |-------------|-----------------|  
@@ -121,11 +121,11 @@ get-counter -listset msr*
  El siguiente script de Windows PowerShell devuelve la lista de contadores de rendimiento para CounterSetName.  
   
 ```  
-(get-counter -listset "MSRS 2011 Windows Service").paths  
+(get-counter -listset "MSRS 2016 Windows Service").paths  
 ```  
   
 ## <a name="see-also"></a>Consulte también  
  [Supervisar el rendimiento del servidor de informes](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Contadores de rendimiento para los objetos de rendimiento en modo SharePoint de MSRS 2011 Web Service y SharePoint de MSRS 2011 Windows Service &#40;modo SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
+ [Contadores de rendimiento para los objetos de rendimiento MSRS 2016 Web Service SharePoint Mode y MSRS 2016 Windows Service SharePoint Mode (modo de SharePoint)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
  [Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   

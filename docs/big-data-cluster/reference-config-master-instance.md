@@ -5,20 +5,22 @@ description: Artículo de referencia para las propiedades de configuración de l
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: rahul.ajmera
-ms.date: 08/04/2020
+ms.date: 02/11/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2f251357c818577b0ecd761c4a5ca2f030eeca58
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 2d986013374e7f69111288d2d0f50b09130a2d68
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100043985"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343512"
 ---
-# <a name="sql-server-master-instance-configuration-properties"></a>Propiedades de configuración de la instancia maestra de SQL Server
+# <a name="sql-server-master-instance-configuration-properties----pre-cu9-release"></a>Propiedades de configuración de la instancia maestra de SQL Server (versiones anteriores a CU9)
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+> [!NOTE]
+> La siguiente información solo se aplica a los clústeres de versiones anteriores a CU9 que no están habilitados para la configuración y que requieren el archivo mssql-conf para configurar la instancia maestra de SQL Server. Los clústeres de CU9 y versiones posteriores aprovechan la funcionalidad de administración de configuración y ya no requieren el uso de un archivo mssql-conf. [Aquí](reference-config-bdc-overview.md) puede encontrar las configuraciones disponibles para la instancia maestra de SQL Server y otros componentes de BDC.
 
 ## <a name="properties"></a>Propiedades
 

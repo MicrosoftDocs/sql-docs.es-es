@@ -1,7 +1,7 @@
 ---
 title: Supervisar el rendimiento del servidor de informes | Microsoft Docs
 description: Obtenga información sobre cómo supervisar el rendimiento del servidor de informes para evaluar su actividad, ver tendencias, diagnosticar cuellos de botella y recopilar datos sobre la configuración del sistema.
-ms.date: 06/20/2019
+ms.date: 02/12/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -17,14 +17,17 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 12afa9794e4d48e2c7b16620ce845660f61801bc
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: deae632ce9305b58b72e24e1a57507f9f4c5ee89
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461416"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489439"
 ---
 # <a name="monitoring-report-server-performance"></a>Supervisar el rendimiento del servidor de informes
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
   Utilice las herramientas de supervisión del rendimiento para supervisar el rendimiento del servidor de informes a fin de evaluar la actividad del servidor, observar tendencias, diagnosticar cuellos de botella del sistema y recopilar datos que pueden ayudar a determinar si la configuración actual del sistema es suficiente. Para optimizar el rendimiento del servidor, puede especificar la frecuencia con que se recicla el dominio de aplicación del servidor de informes. Para obtener más información, vea [Configurar la memoria disponible para las aplicaciones del servidor de informes](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
   
 ## <a name="sources-of-performance-data"></a>Orígenes de datos de rendimiento  
@@ -34,13 +37,13 @@ ms.locfileid: "97461416"
   
 -   Visor de eventos  
   
--   Consola Rendimiento  
+-   Monitor de rendimiento  
   
  El Administrador de tareas brinda información sobre los programas y los procesos que se ejecutan en el equipo. Puede utilizar el Administrador de tareas para supervisar indicadores clave del rendimiento del servidor de informes. También puede evaluar la actividad de ejecutar procesos y visualizar gráficos y datos con relación al uso de la CPU y de la memoria. Para obtener información sobre cómo utilizar el Administrador de tareas, vea la documentación del producto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- Puede utilizar la consola Rendimiento y el Visor de eventos para crear registros y alertas sobre el procesamiento de informes y la utilización de recursos. Para obtener información sobre los eventos de Windows generados por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Registro de aplicación Windows](../../reporting-services/report-server/windows-application-log.md). Para información sobre la consola Rendimiento, vea "Contadores de rendimiento de Windows" más adelante en este artículo.  
+ Puede usar el Monitor de rendimiento y el Visor de eventos para crear registros y alertas sobre el procesamiento de informes y el consumo de recursos. Para obtener información sobre los eventos de Windows generados por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Registro de aplicación Windows](../../reporting-services/report-server/windows-application-log.md). Para obtener información sobre el Monitor de rendimiento, vea la sección "Contadores de rendimiento de Windows" más adelante en este artículo.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también proporcionan información acerca de la base de datos del servidor de informes y las bases de datos temporales que se usan para la administración de sesiones y el almacenamiento en caché.  
+ Las utilidades de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md) y [Eventos extendidos](../../relational-databases/extended-events/extended-events.md), también proporcionan información sobre la base de datos del servidor de informes y las bases de datos temporales que se usan para la administración de sesiones y el almacenamiento en caché.  
   
 ## <a name="windows-performance-counters"></a>Contadores de rendimiento de Windows  
  La supervisión de determinados contadores de rendimiento permite:  
@@ -55,41 +58,41 @@ ms.locfileid: "97461416"
   
 -   Validar que los cambios realizados en la configuración del sistema producen el efecto deseado en el rendimiento.  
 
-::: moniker range=">=sql-server-2017"
   
 ## <a name="reporting-services-performance-objects"></a>Objetos de rendimiento en Reporting Services  
-SQL Server 2016 Reporting Services o posterior (SSRS) incluye los siguientes objetos de rendimiento:  
+SQL Server 2016 Reporting Services incluye los siguientes objetos de rendimiento:  
   
--   **MSRS 2011 Web Service** y **MSRS 2011 SharePoint Mode Web Service** para supervisar el rendimiento del servidor de informes. Estos objetos de rendimiento incluyen una colección de contadores que se usan para realizar el seguimiento del procesamiento del servidor de informes que se suele iniciar mediante operaciones interactivas de visualización de informes. Estos contadores se restablecen siempre que [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.  
+-   **MSRS 2016 Web Service** (Servicio web de MSRS 2016) y **MSRS 2016 Web Service SharePoint Mode** (Modo de SharePoint del servicio web de MSRS 2016) para supervisar el rendimiento del servidor de informes. Estos objetos de rendimiento incluyen una colección de contadores que se usan para realizar el seguimiento del procesamiento del servidor de informes que se suele iniciar mediante operaciones interactivas de visualización de informes. Estos contadores se restablecen siempre que el servicio web del servidor de informes se detiene o se recicla.  
   
--   **MSRS 2011 Windows Service** y **MSRS 2011 Windows Service SharePoint Mode** para supervisar las operaciones programadas y la entrega de informes. Estos objetos de rendimiento incluyen una colección de contadores que se usan para realizar el seguimiento del procesamiento de informes que se inicia mediante operaciones programadas. Entre las operaciones programadas se incluyen la suscripción y la entrega, las instantáneas de ejecución de informes y el historial del informe.  
+-   **MSRS 2016 Windows Service** (Servicio de Windows de MSRS 2016) y **MSRS 2016 Windows Service SharePoint Mode** (Modo de SharePoint del servicio de Windows de MSRS 2016) para supervisar las operaciones programadas y la entrega de informes. Estos objetos de rendimiento incluyen una colección de contadores que se usan para realizar el seguimiento del procesamiento de informes que se inicia mediante operaciones programadas. Entre las operaciones programadas se incluyen la suscripción y la entrega, las instantáneas de ejecución de informes y el historial del informe.  
   
--   **Servicio ReportServer** y **servicio ReportServerSharePoint** para supervisar los eventos relacionados con HTTP y la administración de memoria. Estos contadores son específicos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y realizan el seguimiento de los eventos relacionados con HTTP para el servidor de informes, como solicitudes, conexiones e intentos de inicio de sesión. Este objeto de rendimiento también incluye contadores relacionados con la administración de memoria.  
+-   **ReportServer:Service** y **ReportServerSharePoint:Service** para supervisar los eventos relacionados con HTTP y la administración de memoria. Estos contadores son específicos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y realizan el seguimiento de los eventos relacionados con HTTP para el servidor de informes, como solicitudes, conexiones e intentos de inicio de sesión. Este objeto de rendimiento también incluye contadores relacionados con la administración de memoria.  
   
- Si tiene varias instancias de servidor de informes en un solo equipo, puede supervisarlas conjuntamente o por separado. Elija las instancias que desea incluir al agregar un contador. Para obtener más información sobre cómo usar la Consola de rendimiento (perfmon.msc) y agregar contadores, vea la documentación del producto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Si tiene varias instancias de servidor de informes en un solo equipo, puede supervisarlas conjuntamente o por separado. Elija las instancias que desea incluir al agregar un contador. Para obtener más información sobre cómo usar el Monitor de rendimiento (perfmon.msc) y agregar contadores, vea la documentación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] sobre el [Monitor de rendimiento de Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11)).  
   
 ## <a name="other-performance-counters"></a>Otros contadores de rendimiento  
- Los contadores de rendimiento personalizados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se proporcionan solo para el **servicio web de MSRS 2008**, el **servicio Windows de MSRS 2008** y el **servicio ReportServer**. Los objetos de rendimiento siguientes proporcionan datos adicionales de supervisión de rendimiento para el servidor de informes.  
-  
+ Los contadores de rendimiento personalizados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] solo se proporcionan para los objetos de rendimiento de Reporting Services enumerados anteriormente. Los siguientes objetos de rendimiento de .NET Framework proporcionan datos adicionales de supervisión de rendimiento para el servidor de informes.
+ 
+ > [!NOTE]
+ > Power BI Report Server y SQL Server Reporting Services 2017 (y versiones posteriores) no incluyen objetos de rendimiento de Reporting Services. Hay [contadores de rendimiento de.NET Framework](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/performance-counters) disponibles para proporcionar datos de supervisión de rendimiento para el servidor de informes. 
+ 
 |Objeto de rendimiento|Notas|  
 |------------------------|-----------|  
-|**.NET CLR Data** y **.NET CLR Memory**|El portal web utiliza los contadores de rendimiento de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Para obtener más información, vea la página sobre cómo mejorar el rendimiento y la escalabilidad de aplicaciones de .NET en MSDN.|  
+|**.NET CLR Data** y **.NET CLR Memory**|El portal web utiliza los contadores de rendimiento de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Para obtener más información, descargue la guía sobre cómo [mejorar el rendimiento y la escalabilidad de aplicaciones de .NET](https://www.microsoft.com/download/details.aspx?id=11711).|  
 |**Proceso**|Agregue los contadores de rendimiento **Elapsed Time** y **ID Process** para que una instancia de ReportingServicesService realice el seguimiento del tiempo de funcionamiento de un proceso mediante el identificador del proceso.|  
   
 ## <a name="sharepoint-events"></a>Eventos de SharePoint  
  Además de los objetos de rendimiento de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , también puede configurar eventos de SharePoint si está ejecutando un servidor de informes en modo integrado de SharePoint y ha configurado el entorno de informes para utilizar un producto de SharePoint. En esta sección, utilice Eventos para un servidor de informes en modo integrado de SharePoint para revisar los eventos de diagnóstico que pueden proporcionar información útil si el entorno de informes está integrado en SharePoint.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Contadores de rendimiento para los objetos de rendimiento de MSRS 2011 Web Service y MSRS 2011 Windows Service &#40;modo nativo&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
+ [Contadores de rendimiento para los objetos de rendimiento MSRS 2016 Web Service y MSRS 2016 Windows Service (modo nativo)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
  Describe los contadores de rendimiento que utiliza el servicio web del servidor de informes.  
   
- [Contadores de rendimiento para los objetos de rendimiento en modo SharePoint de MSRS 2011 Web Service y SharePoint de MSRS 2011 Windows Service &#40;modo SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [Contadores de rendimiento para los objetos de rendimiento MSRS 2016 Web Service SharePoint Mode y MSRS 2016 Windows Service SharePoint Mode (modo de SharePoint)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  Describe los contadores de rendimiento que utiliza el servicio de Windows del servidor de informes.  
   
  [Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
  Describe los contadores de rendimiento de eventos relacionados con HTTP y la administración de memoria en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
-
-::: moniker-end
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar la memoria disponible para las aplicaciones del servidor de informes](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   

@@ -5,16 +5,16 @@ description: Obtenga información sobre cómo actualizar los clústeres de macro
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 09/30/2020
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2a79c82f2c3fd443d7237fc3b0a1f7c51102bceb
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 799afc246b106c4b49d6aba44f8d26a761d6c2cc
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048020"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343965"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>Implementación del clúster de macrodatos de SQL Server en el modo de Active Directory
 
@@ -54,8 +54,10 @@ La integración de AD necesita los parámetros siguientes. Agregue estos paráme
 
 - **Parámetro opcional** `security.activeDirectory.realm`: en la mayoría de casos, el dominio es igual al nombre de dominio. En los casos en los que no sean iguales, use este parámetro para definir el nombre del dominio (por ejemplo, `CONTOSO.LOCAL`). El valor proporcionado para este parámetro debe ser completo.
 
-  > [!IMPORTANT]
-  > En este momento, el clúster de macrodatos no es compatible con una configuración en la que el nombre de dominio de Active Directory sea diferente del nombre de **NETBIOS** del dominio de Active Directory.
+- **Parámetro opcional** `security.activeDirectory.netbiosDomainName`: este es el nombre NETBIOS del dominio de AD. En la mayoría de los casos, será la primera etiqueta del nombre de dominio de AD. En caso contrario, use este parámetro para definir el nombre de dominio NETBIOS. Este valor no debe contener puntos. Normalmente, este nombre se usa para calificar las cuentas de usuario del dominio. Por ejemplo, CONTOSO\user, donde CONTOSO es el nombre de dominio NETBIOS.
+
+  > [!NOTE]
+  > A partir de SQL Server 2019 CU9, se ha habilitado compatibilidad con una configuración en la que el nombre de dominio de Active Directory es diferente del nombre **NETBIOS** del dominio de Active Directory mediante el uso de *security.activeDirectory.netbiosDomainName*.
 
 - `security.activeDirectory.domainDnsName`: Nombre del dominio DNS que se usará para el clúster (por ejemplo, `contoso.local`).
 

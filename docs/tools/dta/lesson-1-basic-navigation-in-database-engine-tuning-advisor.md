@@ -13,20 +13,20 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 735176a4fbb92d91d446f47492b2ddaa11098b2e
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: e8c4f32eab8fa7d7791a5f4718d8d771cb1dd6cd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489421"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354472"
 ---
-# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>Lección 1: Navegación básica en el Asistente para la optimización de motor de base de datos (DTA)
+# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>Lección 1: Navegación básica en el Asistente para la optimización de motor de base de datos (DTA)
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 El Asistente para la optimización de motor de base de datos ofrece una interfaz gráfica de usuario (GUI) para ver sesiones de optimización e informes de recomendaciones de optimización. Esta lección muestra cómo iniciar la herramienta y configurar la presentación. Al final de esta lección, habrá aprendido las diferentes formas de iniciar la herramienta y cómo configurar su presentación para proporcionar compatibilidad con las tareas de optimización que realiza regularmente.  
 
-## <a name="prerequisites"></a>Prerrequisitos 
+## <a name="prerequisites"></a>Requisitos previos 
 
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, acceso a un servidor que ejecute SQL Server y una base de datos de AdventureWorks.
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.openlocfilehash: 15a4bdb66ea87f85337540adfec4b5e175b1c55b
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 2cc921b7aa1acaf99da8a632dc8e3996d648682c
+ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100058130"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100636704"
 ---
 # <a name="apache-spark-connector-sql-server--azure-sql"></a>Conector de Apache Spark: SQL Server y Azure SQL
 
@@ -25,7 +25,14 @@ Esta biblioteca contiene el código fuente del conector de Apache Spark para SQL
 
 [Apache Spark](https://spark.apache.org/) es un motor de análisis unificado para el procesamiento de datos a gran escala.
 
-Puede obtener el conector en [Maven](https://search.maven.org/search?q=spark-mssql-connector). Para importar el conector, use la coordenada `com.microsoft.azure:spark-mssql-connector:<latest version>`. También puede compilar el conector desde el origen o descargar el archivo jar de la sección Versión de GitHub. Para obtener la información más reciente sobre el conector, vea el [repositorio de GitHub del conector de Spark para SQL](https://github.com/microsoft/sql-spark-connector).
+Hay dos versiones del conector disponibles mediante Maven, una versión compatible con Spark 2.4.5 y una versión compatible con Spark 3.0.0. Ambas versiones se pueden encontrar [aquí](https://search.maven.org/search?q=spark-mssql-connector) y se pueden importar mediante las siguientes coordenadas:
+
+| Conector | Coordenada de Maven |
+| --------- | ------------------ |
+| Conector compatible con Spark 2.4.5 | `com.microsoft.azure:spark-mssql-connector:1.0.1` |
+| Conector compatible con Spark 3.0.0 | `com.microsoft.azure:spark-mssql-connector_2.12_3.0:1.0.0-alpha` |
+
+También puede compilar el conector desde el origen o descargar el archivo jar de la sección Versión de GitHub. Para obtener la información más reciente sobre el conector, vea el [repositorio de GitHub del conector de Spark para SQL](https://github.com/microsoft/sql-spark-connector).
 
 ## <a name="supported-features"></a>Características admitidas
 
@@ -37,8 +44,8 @@ Puede obtener el conector en [Maven](https://search.maven.org/search?q=spark-mss
 
 | Componente                            | Versiones admitidas              |
 |--------------------------------------|---------------------------------|
-| Spark de Apache                         | 2.4.5 (Spark 3.0 no compatible) |
-| Scala                                | 2.11                            |
+| Spark de Apache                         | 2.4.5 y 3.0.0 |
+| Scala                                | 2.11 y 2.12                            |
 | Microsoft JDBC Driver para SQL Server | 8,2                             |
 | Microsoft SQL Server                 | SQL Server 2008 o posterior        |
 | Azure SQL Database                  | Compatible                       |
@@ -51,7 +58,7 @@ El conector de Apache Spark para SQL Server y Azure SQL admite las opciones de
 
 Además, se admiten estas opciones:
 
-| Opción | Default | Descripción |
+| Opción | Valor predeterminado | Descripción |
 | --------- | ------------------ | ------------------------------------------ |
 | `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` o `NO_DUPLICATES`. `NO_DUPLICATES` implementa una inserción confiable en escenarios de reinicio del ejecutor. |
 | `dataPoolDataSource` | `none` | `none` implica que el valor no está establecido y el conector debe escribir en una única instancia de SQL Server. Establezca este valor en el nombre del origen de datos para escribir en una tabla de grupo de datos en un clúster de macrodatos.|

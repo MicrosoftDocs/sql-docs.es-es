@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/17/2020
-ms.openlocfilehash: 2e1d3faf6d17417ea1f4a134778ddd9342441231
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 050447d6f1f9f13f04b01dec82e1b50ca6efbc69
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596865"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354816"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notas de la versión de SQL Server Management Studio (SSMS)
 
@@ -722,7 +722,7 @@ Puede hacer referencia a [Comentarios del usuario de SQL Server](https://feedba
 |Clasificación de datos|Se ha agregado la nueva característica "Clasificación de datos" a SMO. El objeto de columna expone propiedades nuevas: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId e IsClassified (de solo lectura). Para obtener más información, consulte [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../t-sql/statements/add-sensitivity-classification-transact-sql.md)|
 |Clasificación de datos|Se ha agregado el elemento de menú "Informe de clasificación" al control flotante "Clasificación de datos".|
 |Clasificación de datos| Recomendaciones actualizadas.|
-|Actualización del nivel de compatibilidad de la base de datos|Se ha agregado una nueva opción en **_Nombre de base de datos_ *_ > _* _Tareas_ *_ > _* _Actualizar base de datos_ *_. Esta opción iniciará _* Asistente para la optimización de consultas (QTA)** que guía a los usuarios a través de los procesos siguientes: Recopilación de una línea de base de rendimiento antes de actualizar el nivel de compatibilidad de la base de datos. Actualización al nivel de compatibilidad de la base de datos deseado.  Recopilación de un segundo paso de datos de rendimiento a través de la misma carga de trabajo. Detección de regresiones de carga de trabajo y proporcionar recomendaciones comprobadas para mejorar el rendimiento de la carga de trabajo.  Esto es similar al proceso de actualización de base de datos documentado en [escenarios de uso del almacén de consultas](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), excepto el último paso donde QTA no se basa en un estado correcto conocido previamente para generar las recomendaciones.|
+|Actualización del nivel de compatibilidad de la base de datos|Se ha agregado una nueva opción en ***Nombre de base de datos** _ > _*_Tareas_*_ > _*_Actualizar base de datos_*_. Esta opción iniciará el nuevo _ *Asistente para la optimización de consultas (QTA)* * que guía a los usuarios por los procesos siguientes: Recopilación de una línea de base de rendimiento antes de actualizar el nivel de compatibilidad de la base de datos. Actualización al nivel de compatibilidad de la base de datos deseado.  Recopilación de un segundo paso de datos de rendimiento a través de la misma carga de trabajo. Detección de regresiones de carga de trabajo y proporcionar recomendaciones comprobadas para mejorar el rendimiento de la carga de trabajo.  Esto es similar al proceso de actualización de base de datos documentado en [escenarios de uso del almacén de consultas](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), excepto el último paso donde QTA no se basa en un estado correcto conocido previamente para generar las recomendaciones.|
 |Asistente para aplicaciones de capa de datos|Se ha agregado compatibilidad para importar o exportar la aplicación de capa de datos con tablas de grafos.|
 |Asistente para la importación de archivos planos|Se ha agregado lógica para notificar al usuario que una importación puede haber producido un cambio de nombre de las columnas.|
 |Integration Services (SSIS)|Se ha agregado compatibilidad para permitir que los clientes programen paquetes SSIS en los Azure-SSIS IR que están en la nube de Azure Government.|

@@ -5,16 +5,16 @@ description: Una descripción de los pods que normalmente se implementan en un c
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 03/30/2020
+ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1df5bfe16ca1d64e3d748923796d521c95aacc78
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 20f31d6cbf4bcdbbdc666b50dea626f79e298db1
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100039585"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343931"
 ---
 # <a name="resources-deployed-with-big-data-cluster"></a>Recursos implementados con el clúster de macrodatos
 
@@ -181,18 +181,7 @@ Solo se admite una puerta de enlace.
 
 ## <a name="open-source-container-references"></a>Referencias de contenedor de código abierto
 
-Algunos contenedores se desarrollan mediante proyectos de código abierto. Para obtener información sobre los contenedores de código abierto que se usan, vea:
-
-- [Elasticsearch](https://www.elastic.co/)
-- [Kibana](https://www.elastic.co/kibana)
-- [InfluxDB](https://www.influxdata.com)
-- [Grafana](https://grafana.com/)
-- [Fluent Bit](https://docs.fluentbit.io/manual/about/what-is-fluent-bit)
-- [HDFS DataNode](concept-storage-pool.md)
-- [HDFS NameNode](https://cwiki.apache.org/confluence/display/HADOOP2/NameNode) 
-- [Spark](configure-spark-hdfs.md)
-- [ZooKeeper](https://kubernetes.io/docs/tutorials/stateful-application/zookeeper/) 
-
+Para obtener información sobre proyectos y versiones específicos de código abierto, consulte el artículo [Referencia de software de código abierto](reference-open-source-software.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

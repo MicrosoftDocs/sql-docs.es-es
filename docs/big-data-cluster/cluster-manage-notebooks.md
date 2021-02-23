@@ -10,12 +10,12 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 34592d9a6cb3db8bde5a2a25098314fd9ace1208
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 3af391b2fe6a2c104a4854afdb57b4dc5eb95029
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100039485"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489179"
 ---
 # <a name="manage-big-data-clusters-bdc-the-cluster-with-notebooks"></a>Administración de Clústeres de macrodatos (BDC) con cuadernos
 
@@ -31,7 +31,7 @@ Una vez que se instalan todas las dependencias y que la operación **Ejecutar to
 Esta sección contiene un conjunto de cuadernos útiles para instalar y desinstalar las herramientas de la línea de comandos y los paquetes necesarios para administrar Clústeres de macrodatos de SQL Server.
 
 |Nombre |Descripción |
-|---|---|---|---|
+|---|---|
 |SOP010: Actualización de un clúster de macrodatos|Use este cuaderno para actualizar un Clúster de macrodatos mediante azdata. |
 |SOP012: Instalación de unixodbc para Mac|Use este cuaderno cuando obtenga errores al usar la instalación con brew de odbc para SQL Server.|
 |SOP036: Instalación de la interfaz de la línea de comandos de kubectl|Use este cuaderno para instalar la interfaz de la línea de comandos kubectl independientemente del sistema operativo.|
@@ -49,13 +49,24 @@ Esta sección contiene un conjunto de cuadernos útiles para instalar y desinsta
 |SOP064: Desinstalación de la CLI de azdata (con el administrador de paquetes)|Use este cuaderno para desinstalar la CLI de azdata (con el administrador de paquetes).|
 |SOP069: Instalación de ODBC para SQL Server|Use este cuaderno para instalar el controlador ODBC, ya que algunos subcomandos de azdata requieren el controlador ODBC de SQL Server.|
 
+## <a name="encryption-at-rest-utilities-on-big-data-cluster-bdc"></a>Utilidades de cifrado en reposo en Clústeres de macrodatos (BDC)
+
+Esta sección contiene un conjunto de cuadernos útiles para administrar las características de cifrado en reposo en BDC.
+
+|Nombre |Descripción |
+|---|---|
+|SOP0124: Enumeración de las claves para el cifrado en reposo|Use este cuaderno para enumerar todas las claves de HDFS.|
+|SOP0128: Habilitación de zonas de cifrado de HDFS en Clústeres de macrodatos|Use este cuaderno para habilitar las zonas de cifrado de HDFS al realizar la actualización a CU8 desde CU6 o una versión anterior. No es necesario en las nuevas implementaciones de CU8 y versiones posteriores, ni cuando se actualiza a CU9.|
+|SOP0125: Eliminación de las claves para el cifrado en reposo|Use este cuaderno para eliminar las claves de las zonas de cifrado de HDFS. __Proceda con precaución.__|
+|SOP0126: Copia de seguridad de las claves para el cifrado en reposo|Use este cuaderno para realizar copias de seguridad de las claves de las zonas de cifrado de HDFS.|
+|SOP0127: Restauración de las claves para el cifrado en reposo|Use este cuaderno para restaurar las claves de las zonas de cifrado HDFS.|
 
 ## <a name="managing-certificates-on-big-data-clusters-bdc"></a>Administración de certificados en Clústeres de macrodatos (BDC)
 
 Un conjunto de cuadernos para ejecutar un cuaderno para administrar certificados en Clústeres de macrodatos.
 
 |Nombre |Descripción |
-|---|---|---|---|
+|---|---|
 |CER001: Generación de un certificado de CA raíz|Genere un certificado de CA raíz. Considere la posibilidad de usar un certificado de CA raíz para todos los clústeres que no sean de producción en cada entorno, ya que esta técnica reduce el número de certificados de CA raíz que deben cargarse en los clientes que se conectan a estos clústeres. |
 |CER002: Descarga del certificado de CA raíz existente|Use este cuaderno para descargar un certificado de CA raíz generado desde un clúster.|
 |CER003: Carga del certificado de CA raíz existente|Cargue el certificado de CA raíz existente.|
