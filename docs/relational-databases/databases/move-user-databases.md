@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: feb85bc9b14169c862447c8465ce47c4637b5c32
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 64b8416375cdc61c43e8799b33891096858a79f7
+ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195028"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100636728"
 ---
 # <a name="move-user-databases"></a>Mover bases de datos de usuario
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,19 +48,19 @@ ms.locfileid: "92195028"
 ## <a name="planned-relocation-procedure"></a>Procedimiento de reubicación planeada  
  Para mover un archivo de datos o de registros como parte de una reubicación planeada, siga estos pasos:  
   
-1.  Ejecute la instrucción siguiente:  
+1.  Para cada archivo que se va a mover, ejecute la siguiente instrucción.  
+  
+    ```  
+    ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name, FILENAME = 'new_path\os_file_name' );  
+    ```  
+  
+2.  Ejecute la instrucción siguiente:  
   
     ```  
     ALTER DATABASE database_name SET OFFLINE;  
     ```  
   
-2.  Mueva el archivo o los archivos a la nueva ubicación.  
-  
-3.  Con cada archivo que mueva, ejecute la instrucción siguiente:  
-  
-    ```  
-    ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name, FILENAME = 'new_path\os_file_name' );  
-    ```  
+3.  Mueva el archivo o los archivos a la nueva ubicación.  
   
 4.  Ejecute la instrucción siguiente:  
   
