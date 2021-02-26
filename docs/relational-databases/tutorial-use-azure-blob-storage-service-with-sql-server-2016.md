@@ -15,12 +15,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a87a9842ac5fdf05de192d1fc562fe241441c75
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5ed027db3b2749997a12674cb657c448a26b9732
+ms.sourcegitcommit: 6c93282cce1216dac327cb28848a3ab4d51b776e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100340040"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "100646393"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Usar el servicio Azure Blob Storage con SQL Server 2016
 
@@ -42,6 +42,9 @@ Para completar este tutorial, debe estar familiarizado con los conceptos de copi
 - Instale [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Descargue las [bases de datos de ejemplo de AdventureWorks2016](../samples/adventureworks-install-configure.md).
 - Asigne la cuenta de usuario al rol [db_backupoperator](./security/authentication-access/database-level-roles.md) y conceda permisos [Modificar cualquier credencial](../t-sql/statements/alter-credential-transact-sql.md). 
+
+> [!IMPORTANT]
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no admite [Azure Data Lake Storage](/azure/storage/blobs/data-lake-storage-introduction); asegúrese de que el [espacio de nombres jerárquico](/azure/storage/blobs/data-lake-storage-namespace) no esté habilitado en la cuenta de almacenamiento que se emplea en este tutorial.
 
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1. Crear una directiva de acceso almacenada y un almacenamiento de acceso compartido
 

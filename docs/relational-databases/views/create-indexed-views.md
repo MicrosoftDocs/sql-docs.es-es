@@ -19,12 +19,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 148f93b43f704686b3083954cb3d7353f33a16e0
-ms.sourcegitcommit: c6cc0b669b175ae290cf5b08952010661ebd03c3
+ms.openlocfilehash: 5c074add532e55209c8fc304a98da686cec60aab
+ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100530868"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100636734"
 ---
 # <a name="create-indexed-views"></a>Crear vistas indizadas
 
@@ -159,8 +159,8 @@ Los índices de las tablas y las vistas se pueden deshabilitar. Cuando se deshab
 
 Para crear la vista, un usuario necesita el permiso **CREATE VIEW** en la base de datos y el permiso **ALTER** en el esquema en el que se crea la vista. Si la tabla base reside en otro esquema, por lo menos se requiere el permiso **REFERENCES** relativo a la tabla. Si el usuario que crea el índice es diferente a los usuarios que han creado la vista, se requiere el permiso **ALTER** en la vista solamente para la creación del índice (cubierto por ALTER en el esquema).
 
-    > [!NOTE]  
-    > Indexes can only be created on views which have the same owner as the referenced table or tables. This is also called an intact **ownership-chain** between the view and the table(s). Typically, when table and view reside within the same schema, the same schema-owner applies to all objects within the schema. But it is possible that individual objects have different explicit owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
+> [!NOTE]  
+> Los índices solo se pueden crear sobre vistas que tengan el mismo propietario que las tablas de referencia. También se denomina **cadena de propiedad** intacta entre la vista y las tablas. Normalmente, si la tabla y la vista residen en el mismo esquema, se aplica el mismo propietario del esquema a todos los objetos de este. Así pues, es posible crear una vista y no ser su propietario. Por otro lado, también es posible que objetos concretos de un esquema tengan propietarios explícitos diferentes. La columna **principal_id** de sys.tables contiene un valor si el propietario y el propietario del esquema son distintos.
 
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL
