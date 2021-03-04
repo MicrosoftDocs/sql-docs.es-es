@@ -13,12 +13,12 @@ ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 444691b0ec7196c2dcb09426b7e7cb3063445826
-ms.sourcegitcommit: 0bee2b4392d50151c3839a937371588cc2ce2d3e
+ms.openlocfilehash: ce49303d14dc92811b383349c7fa8d74202ab8ea
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98667733"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836942"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Tablas y columnas (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,5 +47,4 @@ Enumere las columnas de la tabla seleccionada en la lista **Tabla de clave exter
 > Las columnas que elija para la clave externa deben tener el mismo tipo de datos que las columnas principales correspondientes. Debe haber un número igual de columnas en cada una de las claves. Por ejemplo, si la clave principal de la tabla en el lado principal de la relación se compone de dos columnas, necesitará hacer coincidir cada una de esas columnas con una columna de la tabla del lado de la clave externa de la relación.  
   
 ## <a name="see-also"></a>Consulte también  
-[Cómo: crear relaciones entre tablas](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
-  
+[Cómo: crear relaciones entre tablas](../../relational-databases/tables/create-foreign-key-relationships.md)  

@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83985f8cb34b9efa8485f9827dd9692a38f91a65
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: c8379a2e1c18ea5da82abda5ad25dee47679a742
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "100344797"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837794"
 ---
 # <a name="best-practices-with-query-store"></a>Procedimientos recomendados con el almacén de consultas
 
@@ -441,7 +441,7 @@ Las marcas de seguimiento globales 7745 y 7752 se pueden usar para mejorar la di
 
 Almacén de consultas en una réplica de replicación geográfica activa secundaria de Azure SQL Database será una copia de solo lectura de la actividad en la réplica principal. 
 
-Evite los niveles no coincidentes de las instancias de Azure SQL Database que participan en la replicación geográfica. Una base de datos secundaria debe tener el mismo tamaño de proceso que la base de datos principal o similar, y debe estar en el mismo nivel de servicio. Busque el tipo de espera HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO en [sys.dm_db_wait_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database) que indica la limitación de velocidad del registro de transacciones en la réplica principal debido a un retraso secundario.
+Evite los niveles no coincidentes de las instancias de Azure SQL Database que participan en la replicación geográfica. Una base de datos secundaria debe tener el mismo tamaño de proceso que la base de datos principal o similar, y debe estar en el mismo nivel de servicio. Busque el tipo de espera HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO en [sys.dm_db_wait_stats](../system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md) que indica la limitación de velocidad del registro de transacciones en la réplica principal debido a un retraso secundario.
 
 Para obtener más información sobre la estimación y configuración del tamaño de la base de datos de Azure SQL secundaria de replicación geográfica activa, vea [Configuración de la base de datos secundaria](/azure/azure-sql/database/active-geo-replication-overview#configuring-secondary-database).
 

@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 46b57275d92f4eb6acb64c276e3b34ea67efb429
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 62ad5c26342ce03d3098d5a835776d193df4b88c
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99202032"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837237"
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -130,14 +130,14 @@ pdo_sqlsrv.report_additional_errors = 0
 
 ## <a name="warnings-and-errors"></a>Advertencias y errores
 
-A partir de la versión 5.9.0, las advertencias de ODBC ya no se registran como errores. Es decir, los [códigos de error](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes) con el prefijo "01" se registran como advertencias. En otras palabras, si el usuario quiere registrar solo los errores, debe actualizar el archivo php.ini de la siguiente manera:
+A partir de la versión 5.9.0, las advertencias de ODBC ya no se registran como errores. Es decir, los [códigos de error](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md) con el prefijo "01" se registran como advertencias. En otras palabras, si el usuario quiere registrar solo los errores, debe actualizar el archivo php.ini de la siguiente manera:
 
 ```
 [pdo_sqlsrv]  
 pdo_sqlsrv.log_severity = 1
 ```
 
-En este caso, el archivo de registro no contendrá ningún mensaje de advertencia. Consulte cómo funciona el [registro](https://docs.microsoft.com/sql/connect/php/logging-activity#logging-activity-using-the-pdo_sqlsrv-driver) para los usuarios que usan el controlador pdo_sqlsrv.
+En este caso, el archivo de registro no contendrá ningún mensaje de advertencia. Consulte cómo funciona el [registro](./logging-activity.md#logging-activity-using-the-pdo_sqlsrv-driver) para los usuarios que usan el controlador pdo_sqlsrv.
 
 ## <a name="see-also"></a>Consulte también  
 [Clase PDO](../../connect/php/pdo-class.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 45b617e91f2f296aa9749f7f8f2f25b640ddf546
-ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
+ms.openlocfilehash: 82e1ad1147867abd9308dc89517855df830a38e6
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99623775"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837158"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -240,7 +240,7 @@ Como puede ver en la representación JSON siguiente, se muestran los metadatos d
 
 ## <a name="sensitivity-rank-using-a-predefined-set-of-values"></a>Rango de confidencialidad con un conjunto predefinido de valores
 
-A partir de la versión 5.9.0, los controladores de PHP incluyen la recuperación de rangos de clasificación al usar el controlador ODBC 17.4.2 o versiones posteriores. El usuario puede definir un rango al usar la instrucción [ADD SENSITIVITY CLASSIFICATION](/sql/t-sql/statements/add-sensitivity-classification-transact-sql) para clasificar cualquier columna de datos. 
+A partir de la versión 5.9.0, los controladores de PHP incluyen la recuperación de rangos de clasificación al usar el controlador ODBC 17.4.2 o versiones posteriores. El usuario puede definir un rango al usar la instrucción [ADD SENSITIVITY CLASSIFICATION](../../t-sql/statements/add-sensitivity-classification-transact-sql.md) para clasificar cualquier columna de datos. 
 
 Por ejemplo, si el usuario asigna `NONE` y `LOW` a BirthDate y SSN respectivamente, la representación JSON se muestra de la siguiente manera:
 
@@ -249,7 +249,7 @@ Por ejemplo, si el usuario asigna `NONE` y `LOW` a BirthDate y SSN respectivamen
 {"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
 ```
 
-Tal y como se muestra en [la clasificación de confidencialidad](/sql/relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql), los valores numéricos de los rangos son:
+Tal y como se muestra en [la clasificación de confidencialidad](../../relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql.md), los valores numéricos de los rangos son:
 
 ```
 0 for NONE
@@ -313,4 +313,4 @@ A continuación se muestra la representación JSON actualizada:
 
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 
-[Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
+[Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)

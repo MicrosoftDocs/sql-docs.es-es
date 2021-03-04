@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bc92b0af972236b588369869afc5b023735ae699
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 130d2a9f2d92a77ab2d2e033f8e5f4fb9f88ef9f
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237132"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837674"
 ---
 # <a name="run-transact-sql-statements-using-secure-enclaves"></a>Configuración y uso de Always Encrypted con enclaves seguros
 
@@ -67,7 +67,7 @@ El entorno debe cumplir los requisitos siguientes para admitir la ejecución de 
 - Debe obtener por parte del administrador del servicio de atestación una dirección URL de atestación del entorno.
 
   - Si usa [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] y el Servicio de protección de host (HGS), vea [Determinación y uso compartido de la dirección URL de atestación de HGS](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - Si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] y Microsoft Azure Attestation, vea [Determinación de la dirección URL de atestación de la directiva de atestación](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation).
+  - Si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] y Microsoft Azure Attestation, vea [Determinación de la dirección URL de atestación de la directiva de atestación](./always-encrypted-enclaves.md?view=sql-server-ver15#secure-enclave-attestation).
 
 - Si se va a conectar a la base de datos mediante la aplicación, debe usar un controlador cliente que admita Always Encrypted con enclaves seguros. La aplicación se debe conectar a la base de datos con Always Encrypted habilitado para la conexión de base de datos y el protocolo y la dirección URL de atestación configurados correctamente. Para obtener más información, vea [Desarrollo de aplicaciones mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-client-development.md).
 - Si usa SQL Server Management Studio (SSMS) o Azure SQL Data Studio, debe habilitar Always Encrypted y configurar el protocolo y la dirección URL de atestación al conectarse a la base de datos. Vea las secciones siguientes para obtener información.

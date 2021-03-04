@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 61f03a3d1175e5d38952c3e9e578a025c474188a
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: c82362cf9a3d73d1bd9a7c714957e222ad15af18
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2021
-ms.locfileid: "100273116"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837636"
 ---
 # <a name="tutorial-configure-active-directory-authentication-with-sql-server-on-linux--containers"></a>Tutorial: Configuración de la autenticación de Active Directory con SQL Server en contenedores de Linux
 
@@ -158,7 +158,7 @@ Para habilitar la autenticación de AD en contenedores de SQL Server en Linux e
 2. Con la herramienta adutil, cree el usuario que SQL Server utilizará como cuenta de AD con privilegios.
 
    ```bash
-   adutil user create --name sqluser -distname CN=sqluser,CN=Users,DC=CONTOSO,DC=COM --password 'P@ssw0rd'
+   adutil user create --name sqluser --distname CN=sqluser,CN=Users,DC=CONTOSO,DC=COM --password 'P@ssw0rd'
    ```
 
     > [!NOTE]

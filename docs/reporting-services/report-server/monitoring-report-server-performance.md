@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: deae632ce9305b58b72e24e1a57507f9f4c5ee89
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: f24b3bb19150271532561d691a1ed1f4c89dfbc5
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489439"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838095"
 ---
 # <a name="monitoring-report-server-performance"></a>Supervisar el rendimiento del servidor de informes
 
@@ -68,13 +68,13 @@ SQL Server 2016 Reporting Services incluye los siguientes objetos de rendimien
   
 -   **ReportServer:Service** y **ReportServerSharePoint:Service** para supervisar los eventos relacionados con HTTP y la administración de memoria. Estos contadores son específicos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y realizan el seguimiento de los eventos relacionados con HTTP para el servidor de informes, como solicitudes, conexiones e intentos de inicio de sesión. Este objeto de rendimiento también incluye contadores relacionados con la administración de memoria.  
   
- Si tiene varias instancias de servidor de informes en un solo equipo, puede supervisarlas conjuntamente o por separado. Elija las instancias que desea incluir al agregar un contador. Para obtener más información sobre cómo usar el Monitor de rendimiento (perfmon.msc) y agregar contadores, vea la documentación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] sobre el [Monitor de rendimiento de Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11)).  
+ Si tiene varias instancias de servidor de informes en un solo equipo, puede supervisarlas conjuntamente o por separado. Elija las instancias que desea incluir al agregar un contador. Para obtener más información sobre cómo usar el Monitor de rendimiento (perfmon.msc) y agregar contadores, vea la documentación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] sobre el [Monitor de rendimiento de Windows](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249(v=ws.11)).  
   
 ## <a name="other-performance-counters"></a>Otros contadores de rendimiento  
  Los contadores de rendimiento personalizados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] solo se proporcionan para los objetos de rendimiento de Reporting Services enumerados anteriormente. Los siguientes objetos de rendimiento de .NET Framework proporcionan datos adicionales de supervisión de rendimiento para el servidor de informes.
  
  > [!NOTE]
- > Power BI Report Server y SQL Server Reporting Services 2017 (y versiones posteriores) no incluyen objetos de rendimiento de Reporting Services. Hay [contadores de rendimiento de.NET Framework](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/performance-counters) disponibles para proporcionar datos de supervisión de rendimiento para el servidor de informes. 
+ > Power BI Report Server y SQL Server Reporting Services 2017 (y versiones posteriores) no incluyen objetos de rendimiento de Reporting Services. Hay [contadores de rendimiento de.NET Framework](/dotnet/framework/debug-trace-profile/performance-counters) disponibles para proporcionar datos de supervisión de rendimiento para el servidor de informes. 
  
 |Objeto de rendimiento|Notas|  
 |------------------------|-----------|  
@@ -98,4 +98,3 @@ SQL Server 2016 Reporting Services incluye los siguientes objetos de rendimien
  [Configurar la memoria disponible para las aplicaciones del servidor de informes](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)  
-  

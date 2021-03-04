@@ -5,18 +5,18 @@ ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
-ms.author: v-chojas
+ms.author: v-daenge
 author: David-Engel
-ms.openlocfilehash: c814fa5e755c46d09d3c02a6ef17e3d4ab562db7
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f1f075c7ea2e80ec1760012c33ed9f719837c036
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633200"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837436"
 ---
 # <a name="custom-keystore-providers"></a>Proveedores de almacén de claves personalizados
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -188,7 +188,7 @@ El parámetro **onError** apunta a una función de informe de errores, con el si
 |:--|:--|
 |`ctx`|[Input] El contexto en el que se informa del error.|
 |`msg`|[Input] El mensaje de error del que se debe informar. Cadena de caracteres anchos terminada en NULL. Para permitir que exista información parametrizada, esta cadena puede contener secuencias de formato de inserción de la forma aceptada por la función [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage). Se puede especificar funcionalidad extendida mediante este parámetro, como se describe a continuación.|
-|…|[Input] Parámetros variádicos adicionales para ajustar especificadores de formato en MSG, según sea adecuado.|
+|...|[Input] Parámetros variádicos adicionales para ajustar especificadores de formato en MSG, según sea adecuado.|
 
 Para informar de un error que se ha producido, el proveedor llama a onError, y proporciona el parámetro de contexto pasado a la función del proveedor por el controlador y un mensaje de error con parámetros adicionales opcionales a los que se aplica formato en él. El proveedor puede llamar a esta función varias veces para publicar varios mensajes de error de forma consecutiva en una invocación de función del proveedor. Por ejemplo:
 

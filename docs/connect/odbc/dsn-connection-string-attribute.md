@@ -8,14 +8,14 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-chojas
-ms.author: v-jizho2
-author: karinazhou
-ms.openlocfilehash: b959ef2098119185665a8dbe057eda97d2121bf0
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.author: v-daenge
+author: David-Engel
+ms.openlocfilehash: d905ac9c7f2ea02bfac04b54e247d833ae337b96
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100038555"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837390"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Atributos y palabras clave de cadena de conexión y DSN
 

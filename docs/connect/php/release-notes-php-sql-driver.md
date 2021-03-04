@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d53811bef7cb4c570d2aa60638474f815548a17
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 0df2acfa00507f42d3ee03a0a65ff2ae25aafbd1
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100058340"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837190"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Notas de la versión de los controladores de Microsoft para PHP para SQL Server
 
@@ -68,7 +68,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | Establecimiento del tiempo de espera de la consulta sin usar el tiempo de expiración de bloqueo, lo que ahorra un viaje adicional al servidor. | &nbsp; |
 | &nbsp; | &nbsp; |
 
-<sup>1</sup> Esta versión requiere el controlador ODBC 17.4.2 o una versión posterior. De lo contrario, aparecerá una advertencia por no definir un atributo. Esta advertencia se puede suprimir si se usa un controlador ODBC anterior. Si usa SQLSRV, consulte [Procedimientos: Configuración del control de errores y advertencias con el controlador SQLSRV](https://docs.microsoft.com/sql/connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver). Si usa PDO_SQLSRV, las advertencias se suprimen de forma predeterminada, pero se pueden registrar. Consulte el articulo [Actividad de registro](https://docs.microsoft.com/sql/connect/php/logging-activity) para obtener más información.
+<sup>1</sup> Esta versión requiere el controlador ODBC 17.4.2 o una versión posterior. De lo contrario, aparecerá una advertencia por no definir un atributo. Esta advertencia se puede suprimir si se usa un controlador ODBC anterior. Si usa SQLSRV, consulte [Procedimientos: Configuración del control de errores y advertencias con el controlador SQLSRV](./how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md). Si usa PDO_SQLSRV, las advertencias se suprimen de forma predeterminada, pero se pueden registrar. Consulte el articulo [Actividad de registro](./logging-activity.md) para obtener más información.
 
 ## <a name="581"></a>5.8.1
 
