@@ -1,23 +1,21 @@
 ---
 title: Seguridad de Distributed Replay
-titleSuffix: SQL Server Distributed Replay
 description: En este artículo se describen los pasos de configuración de seguridad para Distributed Replay de SQL Server y consideraciones importantes para la protección de datos y los pasos de eliminación.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: d7ae823b6d5839ce4fdc966af48c0634a37b1e2a
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 907fbe327e712c4e9a6aa989a33822baa6122a07
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100345939"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836884"
 ---
 # <a name="distributed-replay-security"></a>Seguridad de reproducción distribuida
 
