@@ -11,12 +11,12 @@ ms.topic: how-to
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ee15152be634c08cb04ec6a01716604fae720471
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: dc50006d17228bf3b5ec03c2a672ed113260bf3b
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100069740"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839265"
 ---
 # <a name="troubleshoot-common-issues-for-always-encrypted-with-secure-enclaves"></a>Solución de problemas comunes de Always Encrypted con enclaves seguros
 
@@ -28,7 +28,7 @@ Para obtener información sobre cómo ejecutar consultas mediante enclaves segur
 
 Para ejecutar instrucciones mediante un enclave seguro, debe habilitar Always Encrypted y especificar una dirección URL de atestación para la conexión de base de datos, como se explica en [Requisitos previos para ejecutar instrucciones con enclaves seguros](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves). Pero se producirá un error en la conexión si especifica una dirección URL de atestación pero la base de datos en [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] o la instancia de [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] de destino no es compatible con los enclaves seguros, o bien no se ha configurado correctamente.
 
-- Si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], compruebe que en la base de datos se utiliza la configuración de hardware de la [serie DC](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series). Para obtener más información, vea [Habilitación de Intel SGX para la base de datos de Azure SQL](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx).
+- Si usa [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], compruebe que en la base de datos se utiliza la configuración de hardware de la [serie DC](/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series). Para obtener más información, vea [Habilitación de Intel SGX para la base de datos de Azure SQL](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx).
 - Si usa [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], compruebe que el enclave seguro está configurado correctamente para la instancia. Para obtener más información, vea [Configuración del enclave seguro en SQL Server](always-encrypted-enclaves-configure-enclave-type.md).
 
 ## <a name="attestation-errors-when-using-microsoft-azure-attestation"></a>Errores de atestación al usar Microsoft Azure Attestation
@@ -56,7 +56,7 @@ Se pueden producir errores en varios pasos del flujo de trabajo anterior debido 
   - Probablemente la causa principal sea una directiva de atestación incorrecta. Asegúrese de que usa la directiva recomendada por Microsoft. Para obtener más información, vea [Creación y configuración de un proveedor de atestación](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation#create-and-configure-an-attestation-provider).
   - También se puede producir un error en la validación de la directiva como resultado de una infracción de seguridad que pone en peligro el enclave del lado servidor.
 - La aplicación cliente no se puede conectar al proveedor de atestación y recuperar la clave de firma pública (en el paso 5). Entre las causas probables se encuentran las siguientes:
-  - Es posible que la configuración de los firewalls entre la aplicación y el proveedor de atestación bloquee las conexiones. Para solucionar problemas de la conexión bloqueada, compruebe que se puede conectar al punto de conexión OpenId del proveedor de atestación. Por ejemplo, use un explorador web desde el equipo en el que se hospeda la aplicación para ver si puede conectarse al punto de conexión OpenID. Para obtener más información, vea [Configuración de metadatos: Get](https://docs.microsoft.com/rest/api/attestation/metadataconfiguration/get).
+  - Es posible que la configuración de los firewalls entre la aplicación y el proveedor de atestación bloquee las conexiones. Para solucionar problemas de la conexión bloqueada, compruebe que se puede conectar al punto de conexión OpenId del proveedor de atestación. Por ejemplo, use un explorador web desde el equipo en el que se hospeda la aplicación para ver si puede conectarse al punto de conexión OpenID. Para obtener más información, vea [Configuración de metadatos: Get](/rest/api/attestation/metadataconfiguration/get).
 
 ## <a name="attestation-errors-when-using-host-guardian-service"></a>Errores de atestación al usar el Servicio de protección de host
 

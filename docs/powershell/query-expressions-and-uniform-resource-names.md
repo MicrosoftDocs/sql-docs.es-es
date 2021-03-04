@@ -1,5 +1,5 @@
 ---
-title: Expresiones de consulta y nombres de recursos uniformes | Microsoft Docs
+title: Expresiones de consulta y nombres de recursos uniformes
 description: Obtenga información sobre las expresiones de consulta, que enumeran uno o más objetos de una jerarquía del modelo de objetos, y sobre los nombres de recursos uniformes (URN), que identifican de forma única a un solo objeto.
 ms.prod: sql
 ms.technology: sql-server-powershell
@@ -8,22 +8,21 @@ helpviewer_keywords:
 - query expressions
 - unique resource names
 - URN
-ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 10/14/2020
-ms.openlocfilehash: ea6bb90e43c66160463cdfa0229826b3a7013762
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e1955201f60f58c6513928c7185dbbdad16cf445
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "100338236"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839492"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expresiones de consulta y nombres de recursos uniformes
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Los modelos de objetos de administración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SMO) y los complementos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell usan dos tipos de cadenas de expresiones que se parecen a las expresiones XPath. Las expresiones de consulta son cadenas que especifican un conjunto de criterios usados para enumerar uno o más objetos de una jerarquía del modelo de objetos. Un nombre de recurso uniforme (URN) es un tipo específico de cadena de expresión de consulta que identifica exclusivamente un objeto único.  
 
