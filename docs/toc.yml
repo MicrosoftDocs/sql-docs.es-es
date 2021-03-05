@@ -6176,6 +6176,22 @@ items:
                 href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
       - name: SQL Server Migration Assistant (SSMA)
         href: ssma/toc.yml
+      - name: Azure Synapse Pathway
+        items:
+          - name: Información general
+            href: tools/synapse-pathway/azure-synapse-pathway-overview.md
+          - name: Preguntas más frecuentes sobre Azure Synapse Pathway
+            href: tools/synapse-pathway/pathway-faq.md
+          - name: En segundo plano
+            href: tools/synapse-pathway/synapse-pathway-behind-the-scenes.md
+          - name: Instalación
+            href: tools/synapse-pathway/synapse-pathway-download.md
+          - name: 'Tutorial: Ejecución de Azure Synapse Pathway'
+            href: tools/synapse-pathway/synapse-pathway-assessment.md
+          - name: 'Tutorial: Guardar y cargar'
+            href: tools/synapse-pathway/tutorial-save-load-assessment.md
+          - name: Generar informes
+            href: tools/synapse-pathway/report-generation.md
   - name: 'Administración, supervisión y optimización'
     items:
       - name: Administrar
@@ -7200,6 +7216,8 @@ items:
                     href: relational-databases/polybase/polybase-troubleshoot-connectivity.md
                   - name: Preguntas más frecuentes de PolyBase
                     href: relational-databases/polybase/polybase-faq.md
+                  - name: Errores de PolyBase y posibles soluciones
+                    href: relational-databases/polybase/polybase-errors-and-possible-solutions.md
           - name: Referencia
             items:
               - name: Referencia de T-SQL
