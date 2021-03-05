@@ -2,7 +2,7 @@
 description: CHANGETABLE (Transact-SQL)
 title: CHANGETABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2016
+ms.date: 02/12/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3d4e72681f16689c6241c8f9d7b35119d898722
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2de815ad24a41604f18d0083a800df3a56feb021
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99196138"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186639"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,48 +36,47 @@ ms.locfileid: "99196138"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
 CHANGETABLE (  
-    { CHANGES table , last_sync_version  
-    | VERSION table , <primary_key_values> } )  
-[AS] table_alias [ ( column_alias [ ,...n ] )  
+    { CHANGES <table_name> , <last_sync_version> 
+    | VERSION <table_name> , <primary_key_values> } 
+    , [ FORCESEEK ] 
+    )  
+[AS] <table_alias> [ ( <column_alias> [ ,...n ] )  
   
 <primary_key_values> ::=  
-( column_name [ , ...n ] ) , ( value [ , ...n ] )  
+( <column_name> [ , ...n ] ) , ( <value> [ , ...n ] )  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Tabla* de cambios, *last_sync_version*  
+ CAMBIOS *TABLE_NAME* , *last_sync_version*  
  Devuelve información de seguimiento de todos los cambios en una tabla que se han producido desde la versión especificada por *last_sync_version*.  
   
- *table*  
+ *table_name*  
  Es la tabla definida por el usuario de la que obtener cambios a los que se ha realizado el seguimiento. El seguimiento de cambios debe estar habilitado en la tabla. Puede utilizarse un nombre de tabla de uno, dos, tres o cuatro partes. El nombre de tabla puede ser un sinónimo de la tabla.  
   
  *last_sync_version*  
- Cuando obtiene cambios, la aplicación que realiza la llamada debe especificar el punto del que se requieren cambios. El parámetro last_sync_version especifica ese punto. La función devuelve de todas las filas que se han cambiado desde esa versión. La aplicación consulta la recepción de cambios con una versión superior a last_sync_version.  
-  
- Normalmente, antes de obtener los cambios, la aplicación llamará a **CHANGE_TRACKING_CURRENT_VERSION ()** para obtener la versión que se usará la próxima vez que se requieran cambios. Por consiguiente, la aplicación no tiene que interpretar ni conocer el valor real.  
-  
- Dado que el valor de last_sync_version lo obtiene la aplicación que realiza la llamada, la aplicación tiene que conservar el valor. Si la aplicación pierde este valor, será necesario reinicializar los datos.  
-  
- *last_sync_version* es **BIGINT**. El valor debe ser escalar. Una expresión producirá un error de sintaxis.  
-  
- Si el valor es NULL, se devuelven todos los cambios a los que se ha realizado el seguimiento.  
-  
+ Valor escalar **BIGINT** que acepta valores NULL. Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) producirá un error de sintaxis. Si el valor es NULL, se devuelven todos los cambios a los que se ha realizado el seguimiento.
+Cuando obtiene cambios, la aplicación que realiza la llamada debe especificar el punto del que se requieren cambios. El *last_sync_version* especifica ese punto. La función devuelve de todas las filas que se han cambiado desde esa versión. La aplicación está consultando para recibir los cambios con una versión mayor que *last_sync_version*. Normalmente, antes de obtener los cambios, la aplicación llamará `CHANGE_TRACKING_CURRENT_VERSION()` a para obtener la versión que se usará la próxima vez que se requieran cambios. Por consiguiente, la aplicación no tiene que interpretar ni conocer el valor real. Dado que la aplicación que realiza la llamada obtiene *last_sync_version* , la aplicación tiene que conservar el valor. Si la aplicación pierde este valor, será necesario reinicializar los datos. 
  *last_sync_version* debe validarse para asegurarse de que no es demasiado antigua, ya que es posible que se haya limpiado parte o toda la información de los cambios según el período de retención configurado para la base de datos. Para obtener más información, vea [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) y [opciones set de ALTER DATABASE &#40;transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- *Tabla* de versiones, {<primary_key_values>}  
- Devuelve la última información de seguimiento de cambios para una fila especificada. Los valores de clave principal deben identificar la fila. <primary_key_values> identifica las columnas de clave principal y especifica los valores. Los nombres de columna de clave principal se pueden especificar en cualquier orden.  
+ VERSIÓN *TABLE_NAME*, { *primary_key_values* }  
+ Devuelve la última información de seguimiento de cambios para una fila especificada. Los valores de clave principal deben identificar la fila. *primary_key_values* identifica las columnas de clave principal y especifica los valores. Los nombres de columna de clave principal se pueden especificar en cualquier orden.  
   
- *Tabla*  
+ *table_name*  
  Es la tabla definida por el usuario de la que obtener la información de seguimiento de cambios. El seguimiento de cambios debe estar habilitado en la tabla. Puede utilizarse un nombre de tabla de uno, dos, tres o cuatro partes. El nombre de tabla puede ser un sinónimo de la tabla.  
   
  *column_name*  
  Especifica el nombre de la columna o columnas de clave principal. Se pueden especificar varios nombres de columna y en cualquier orden.  
   
- *Valor*  
+ *value*  
  Es el valor de la clave principal. Si hay varias columnas de clave principal, los valores se deben especificar en el mismo orden en el que aparecen las columnas en la lista de *column_name* .  
-  
+
+ FORCESEEK   
+ **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU16 y [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] ), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]    
+ 
+ Parámetro opcional que fuerza la utilización de una operación de búsqueda para tener acceso a la *TABLE_NAME*. En algunos casos en los que muy pocas filas han cambiado, se puede seguir usando una operación de examen para tener acceso a la *TABLE_NAME*. Si una operación de examen presenta un problema de rendimiento, use el `FORCESEEK` parámetro.
+
  APLICAR *table_alias* [(*column_alias* [,... *n* ])]  
  Proporciona los nombres de los resultados devueltos por CHANGETABLE.  
   
@@ -86,7 +85,7 @@ CHANGETABLE (
   
  *column_alias*  
  Es un alias de columna opcional o lista de alias de columna para las columnas devueltas por CHANGETABLE. Esto permite personalizar los nombres de columna en caso de que haya nombres duplicados en los resultados.  
-  
+
 ## <a name="return-types"></a>Tipos de valor devuelto  
  **table**  
   
@@ -123,31 +122,23 @@ CHANGETABLE (
   
  Si elimina una fila y, a continuación, inserta una fila con la clave principal anterior, el cambio se considera una actualización para todas las columnas de la fila.  
   
- Los valores que se devuelven para las columnas SYS_CHANGE_OPERATION y SYS_CHANGE_COLUMNS son relativos a la línea de base (last_sync_version) especificada. Por ejemplo, si se realizó una operación de inserción en la versión 10 y una operación de actualización en la versión 15, y si la línea base *last_sync_version* es 12, se informará de una actualización. Si el valor de *last_sync_version* es 8, se informará de una inserción. SYS_CHANGE_COLUMNS nunca notificará columnas calculadas como si hubieran sido actualizadas.  
+ Los valores que se devuelven para las `SYS_CHANGE_OPERATION` `SYS_CHANGE_COLUMNS` columnas y son relativos a la línea de base (last_sync_version) especificada. Por ejemplo, si se realiza una operación de inserción en `10` la versión y una operación de actualización en `15` la versión, y si la línea base *last_sync_version* es, se informará de `12` una actualización. Si el valor de *last_sync_version* es `8` , se informará de una inserción. `SYS_CHANGE_COLUMNS` nunca notificará columnas calculadas como si hubieran sido actualizadas.  
   
  Generalmente, se someten a seguimiento todas las operaciones que insertan, actualizan o eliminan datos en tablas de usuario, incluida la instrucción MERGE.  
   
  Las siguientes operaciones, que afectan a datos de tablas de usuario, no se someten a seguimiento:  
   
--   Ejecutar la instrucción UPDATETEXT  
+-   Ejecutar la `UPDATETEXT` instrucción. Esta instrucción ha quedado desusada y no estará presente en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin embargo, se realiza un seguimiento de los cambios que se realizan mediante la `.WRITE` cláusula de la instrucción UPDATE.  
   
-     Esta instrucción ha quedado desusada y no estará presente en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin embargo, sí se realiza el seguimiento de los cambios realizados mediante la cláusula  .WRITE de la instrucción UPDATE.  
-  
--   Eliminar filas mediante TRUNCATE TABLE  
-  
-     Cuando se trunca una tabla, la información de versión del seguimiento de cambios asociada a la tabla se restablece como si el seguimiento de cambios se hubiera habilitado recientemente en la tabla. Una aplicación cliente debe validar siempre su última versión sincronizada. Se producirá un error en la validación si se ha truncado la tabla.  
+-   Eliminar filas mediante el uso de `TRUNCATE TABLE` . Cuando se trunca una tabla, la información de versión del seguimiento de cambios asociada a la tabla se restablece como si el seguimiento de cambios se hubiera habilitado recientemente en la tabla. Una aplicación cliente debe validar siempre su última versión sincronizada. Se producirá un error en la validación si se ha truncado la tabla.  
   
 ## <a name="changetableversion"></a>CHANGETABLE(VERSION...)  
  Se devuelve un conjunto de resultados vacío si se especifica una clave principal inexistente.  
   
- El valor de SYS_CHANGE_VERSION podría ser NULL si lleva sin realizarse un cambio más tiempo del correspondiente al período de retención (por ejemplo, la limpieza ha quitado la información de los cambios) o si la fila nunca ha cambiado desde que el seguimiento de cambios se habilitó en la tabla.  
+ El valor de `SYS_CHANGE_VERSION` puede ser null si no se ha realizado un cambio durante más tiempo que el período de retención (por ejemplo, si la limpieza ha quitado la información de cambios) o si la fila nunca ha cambiado desde que se habilitó el seguimiento de cambios para la tabla.  
   
 ## <a name="permissions"></a>Permisos  
- Requiere los siguientes permisos en la tabla especificada por el valor de la *tabla* para obtener información sobre el seguimiento de cambios:  
-  
--   Permiso SELECT en las columnas de clave principal  
-  
--   VIEW CHANGE TRACKING  
+ Requiere el `SELECT` permiso en las columnas de clave principal y el `VIEW CHANGE TRACKING` permiso en la tabla especificada por el *<table_name* valor de>para obtener información del seguimiento de cambios.
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -216,5 +207,4 @@ WHERE
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;&#41;de Transact-SQL ](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
  [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
-  
   

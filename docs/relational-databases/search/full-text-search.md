@@ -1,7 +1,7 @@
 ---
 description: Búsqueda de texto completo
 title: Búsqueda de texto completo | Microsoft Docs
-ms.date: 04/10/2018
+ms.date: 12/29/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -13,15 +13,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54b05c64727697c263c55572da9707c95c516a11
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: d54ee59b6c3c94968ade02196945a8cd626a19f0
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100348599"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186079"
 ---
 # <a name="full-text-search"></a>Búsqueda de texto completo
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 La búsqueda de texto completo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] permite a los usuarios y aplicaciones ejecutar consultas de texto completo en datos basados en caracteres en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
@@ -254,4 +254,4 @@ Solo se permite un índice de texto completo por cada tabla. Para crear un índi
   
  Los separadores de palabras (y lematizadores) y los filtros se ejecutan en el proceso de host de demonio de filtro (fdhost.exe).  
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+

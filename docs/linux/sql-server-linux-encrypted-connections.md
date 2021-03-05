@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 83d89d99bf2acebf663309926ae298a64d64732c
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1040fec65e6ffce580a33b6ef581c4f22a3903ef
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100348143"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186419"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Cifrado de conexiones a SQL Server en Linux
 
@@ -59,11 +59,12 @@ sudo mv mssql.key /etc/ssl/private/
 
 ```bash
 systemctl stop mssql-server 
-cat /var/opt/mssql/mssql.conf 
+sudo cat /var/opt/mssql/mssql.conf 
 sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
 sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
 sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
 sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
+systemctl start mssql-server 
 ```
 
 - **Registro del certificado en el equipo cliente (Windows, Linux o macOS)**
@@ -116,11 +117,12 @@ sudo mv mssql.key /etc/ssl/private/
 
 ```bash
 systemctl stop mssql-server 
-cat /var/opt/mssql/mssql.conf 
+sudo cat /var/opt/mssql/mssql.conf 
 sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
 sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
 sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
-sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
+sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1
+systemctl start mssql-server 
 ```
 
 -   **Ejemplos de cadena de conexión** 

@@ -1,5 +1,6 @@
 ---
-title: sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analytics) | Microsoft Docs
+title: sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analytics)
+description: Use **sp_pdw_database_encryption_regenerate_system_keys** para rotar el certificado y la clave de cifrado de base de datos para las bases de datos internas que se cifran cuando TDE está habilitado en el dispositivo.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 3d7a4efb9a629938b6cfc7d48c990351bc2a5cbc
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 2c6474944be4ef9911f30ed49947e1a0e959a456
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100271782"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186402"
 ---
 # <a name="sp_pdw_database_encryption_regenerate_system_keys-azure-synapse-analytics"></a>sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analytics)
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Use **sp_pdw_database_encryption_regenerate_system_keys** para rotar el certificado y la clave de cifrado de base de datos para las bases de datos internas que se cifran cuando TDE está habilitado en el dispositivo. incluidos `tempdb`. Esto solo se realizará correctamente si TDE está habilitado.  
+Use **sp_pdw_database_encryption_regenerate_system_keys** para rotar el certificado y la clave de cifrado de base de datos para las bases de datos internas que se cifran cuando TDE está habilitado en el dispositivo. incluidos `tempdb`. Esto solo se realizará correctamente si TDE está habilitado.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +39,7 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El procedimiento no tiene parámetros.  
   
  Este procedimiento se debe usar cuando el tráfico del dispositivo es bajo.  

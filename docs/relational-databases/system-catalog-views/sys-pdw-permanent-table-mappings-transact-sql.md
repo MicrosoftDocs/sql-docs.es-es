@@ -1,5 +1,6 @@
 ---
 title: sys.pdw_permanent_table_mappings (Transact-SQL)
+description: Vincula las tablas de usuario permanentes a los nombres de objeto interno **object_id**.
 ms.custom: ''
 ms.date: 07/24/2020
 ms.prod: sql
@@ -11,17 +12,17 @@ dev_langs:
 author: mstehrani
 ms.author: emtehran
 monikerRange: = azure-sqldw-latest
-ms.openlocfilehash: 1258a6131ccd0ad2280066faef6ac966bb0fb4d5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ab6ec23c35f9766a82e9a0c07f31433b2cbbc2ce
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99212058"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186595"
 ---
 # <a name="syspdw_permanent_table_mappings-transact-sql"></a>sys.pdw_permanent_table_mappings (Transact-SQL)
 [!INCLUDE [applies-to-version/asa](../../includes/applies-to-version/asa.md)]
 
-  Vincula las tablas de usuario permanentes a los nombres de objeto interno **object_id**.  
+Vincula las tablas de usuario permanentes a los nombres de objeto interno **object_id**.  
   
 > [!NOTE]
 > **Sys.pdw_permanent_table_mappings** contiene las asignaciones a las tablas permanentes y no incluye las asignaciones de tablas temporales o externas.

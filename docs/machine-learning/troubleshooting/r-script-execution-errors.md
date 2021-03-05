@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 28dcbe177f5bc91ea73170978e2da9022154976f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0f9f086ec09830e65f85ca2df5232e8b401cb9eb
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470666"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186422"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>Errores comunes de scripting de R en SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -39,7 +39,7 @@ También se recomienda revisar y reescribir ligeramente el script para corregir 
 
 Además, puede usar el paquete sqlrutils para agrupar el script de R en un formato que se consuma más fácilmente como un procedimiento almacenado. Para más información, consulte:
 * [Paquete sqlrutils](../r/ref-r-sqlrutils.md)
-* [Creación de un procedimiento almacenado mediante sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
+* [Creación de un procedimiento almacenado mediante sqlrutils](/machine-learning-server/r-reference/sqlrutils/how-to-create-a-stored-procedure-from-r)
 
 ## <a name="script-returns-inconsistent-results"></a>El script devuelve resultados incoherentes
 
