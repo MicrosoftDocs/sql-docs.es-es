@@ -2,19 +2,19 @@
 title: Versión preliminar de Azure Synapse Pathway, entre bambalinas
 description: Información técnica detallada sobre la manera en que Azure Synapse Pathway traduce el código.
 author: anshul82-ms
-ms.author: anrampal.
+ms.author: anrampal
 ms.prod: sql
-ms.technology: Azure Synapse Pathway
+ms.technology: tools-other
 ms.topic: conceptual
 ms.date: 03/02/2021
 monikerRange: =azure-sqldw-latest
 ms.custom: template-concept
-ms.openlocfilehash: dbd362e53b5bfcd916c53e90d6f66c8fb44f0374
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 9f23aa23ef40ee7df5ad601b73ad526df7bcf0da
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101873146"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186316"
 ---
 # <a name="azure-synapse-pathway-preview-behind-the-scenes"></a>Versión preliminar de Azure Synapse Pathway, entre bambalinas
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
@@ -23,7 +23,7 @@ El objetivo de Azure Synapse Pathway consiste en conservar la intención funcion
 
 Cada una de las fases conserva y aumenta el conocimiento del origen, incluidos los metadatos específicos del origen, para garantizar la máxima calidad de la traducción.
 
- ![Azure Synapse Pathway](./media/technical-deep-dive/behind-the-scene.png)
+ ![Azure Synapse Pathway](./media/synapse-pathway-behind-the-scenes/behind-the-scene.png)
 
 ## <a name="stage-1--lexing-and-parsing"></a>Fase 1: tokenización y análisis
 
@@ -49,7 +49,7 @@ Azure Synapse SQL define la función absoluta como se indica a continuación:
 ABS ( numeric_expression )  
 ```
 
-En este sencillo caso, Synapse Pathway entiende que la conversión en Synapse SQL de "float" a "numeric" es una [conversión](../../t-sql/functions/cast-and-convert-transact-sql?view=azure-sqldw-latest#implicit-conversions) implícita y no requiere ninguna conversión adicional. En resumen, es una traducción de código sencilla, limpia y eficaz.
+En este sencillo caso, Synapse Pathway entiende que la conversión en Synapse SQL de "float" a "numeric" es una [conversión](../../t-sql/functions/cast-and-convert-transact-sql.md?view=azure-sqldw-latest&preserve-view=true#implicit-conversions) implícita y no requiere ninguna conversión adicional. En resumen, es una traducción de código sencilla, limpia y eficaz.
 
 El hecho de conservar esta metainformación sobre las instrucciones y los fragmentos de origen resulta de ayuda en el caso de diferencias estructurales entre las plataformas (por ejemplo, en conversiones en la lógica de cancelación para predicados de condiciones de búsqueda en una cláusula WHERE).
 

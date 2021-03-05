@@ -6,17 +6,17 @@ ms.author: anrampal
 ms.topic: overview
 ms.date: 03/02/2021
 ms.prod: sql
-ms.technology: Azure Synapse Pathway
+ms.technology: tools-other
 monikerRange: =azure-sqldw-latest
 ms.custom: template-overview
-ms.openlocfilehash: 345346d2161800810ba3d07667b831107f70b215
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 8352fb6a70c54ede61d544a147f970237404c9f5
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101873140"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186344"
 ---
-# <a name="azure-synapse-pathway-preview"></a>Versión preliminar de Azure Synapse Pathway
+# <a name="azure-synapse-pathway-preview-faq"></a>Preguntas más frecuentes sobre la versión preliminar de Azure Synapse Pathway
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
 
 En esta guía encontrará las preguntas más frecuentes sobre la versión preliminar de Azure Synapse Pathway.
@@ -58,7 +58,9 @@ A. Dado que puede ejecutar Synapse Pathway en su entorno local, no se captura ni
 
 A. Azure Synapse Pathway se encuentra actualmente en **versión preliminar**.   Puede recibir soporte técnico para Synapse Pathway a través del canal de soporte técnico de Microsoft. Para notificar una incidencia, diríjase a Azure Portal o a los portales estándar (generalmente de soporte técnico local).
 
-> [!NOTE] Al igual que en el caso de cualquier otro servicio de Azure, todos los servicios en versión preliminar pueden recibir soporte técnico, pero sin ningún contrato de nivel de servicio.
+
+> [!NOTE] 
+> Al igual que en el caso de cualquier otro servicio de Azure, todos los servicios en versión preliminar pueden recibir soporte técnico, pero sin ningún contrato de nivel de servicio.
 
 <!-- ### Troubleshooting and optimization
 

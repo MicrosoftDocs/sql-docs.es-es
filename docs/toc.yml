@@ -335,8 +335,6 @@ items:
                         href: machine-learning/r/operationalizing-your-r-code.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                       - name: Conversión de código de R para SQL Server
                         href: machine-learning/r/converting-r-code-for-use-in-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
-                      - name: Crear un procedimiento almacenado mediante sqlrutils
-                        href: machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                   - name: Predicciones
                     items:
                       - name: Puntuación nativa con PREDICT T-SQL
