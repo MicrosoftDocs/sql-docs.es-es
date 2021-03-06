@@ -1,8 +1,8 @@
 ---
-title: Usar palabras clave de cadenas de conexión
+title: Usar palabras clave de cadena de conexión
 description: Algunas API de SQL Server Native Client usan cadenas de conexión para especificar atributos de conexión. Las cadenas de conexión son pares palabra clave-valor.
 ms.custom: ''
-ms.date: 08/01/2016
+ms.date: 03/05/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: native-client
@@ -18,12 +18,12 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbe28b09c88f63e6e0a9a764fea3da17feb3d1f0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8abbefef4c13cf0006b80f24771a06cc067a6324
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463426"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247456"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>Usar palabras clave de cadena de conexión con SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,14 +68,14 @@ ms.locfileid: "97463426"
 |**AttachDBFileName**|Nombre del archivo principal de una base de datos adjuntable. Incluya la ruta de acceso completa y todos los caracteres de escape \ si usa una variable de cadena de caracteres de C:<br /><br /> `AttachDBFileName=c:\\MyFolder\\MyDB.mdf`<br /><br /> Esta base de datos se adjunta y se convierte en la base de datos predeterminada para la conexión. Para usar **AttachDBFileName** también debe especificar el nombre de la base de datos en el parámetro de base de datos [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) o en el atributo de conexión SQL_COPT_CURRENT_CATALOG. Si la base de datos se ha adjuntado previamente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no vuelve a adjuntarla; utiliza la base de datos adjuntada como valor predeterminado para la conexión.|  
 |**AutoTranslate**|Cuando es "yes", las cadenas de caracteres ANSI enviadas entre el cliente y el servidor se traducen mediante la conversión a través de Unicode para minimizar los problemas de caracteres extendidos coincidentes entre las páginas de códigos del cliente y del servidor.<br /><br /> Los datos de SQL_C_CHAR de cliente enviados a una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] variable, parámetro o columna **Char**, **VARCHAR** o **Text** se convierten de carácter a Unicode mediante la página de códigos ANSI (ACP) del cliente y, a continuación, se convierten de Unicode a carácter mediante la ACP del servidor.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]los datos de tipo **Char**, **VARCHAR** o **Text** enviados a una variable de SQL_C_CHAR de cliente se convierten de carácter a Unicode mediante la ACP del servidor y, a continuación, se convierten de Unicode a carácter mediante el cliente ACP.<br /><br /> El controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client realiza estas conversiones en el cliente. Esto requiere que la misma página de códigos ANSI (ACP) que se utiliza en el servidor esté disponible en el cliente.<br /><br /> Esta configuración no tiene ningún efecto en las conversiones que se realizan para estas transferencias:<br /><br /> \* Unicode SQL_C_WCHAR datos de cliente enviados a **Char**, **VARCHAR** o **Text** en el servidor.<br /><br /> &#42; datos de servidor **Char**, **VARCHAR** o **Text** enviados a una variable de SQL_C_WCHAR Unicode en el cliente.<br /><br /> \* Los datos de cliente de SQL_C_CHAR ANSI enviados a **nchar**, **nvarchar** o **ntext** de Unicode en el servidor.<br /><br /> \* Datos de servidor **nchar**, **nvarchar** o **ntext** de Unicode enviados a una variable de SQL_C_CHAR ANSI en el cliente.<br /><br /> Cuando es "no", no se realiza la traducción de caracteres.<br /><br /> El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client no traduce los datos de SQL_C_CHAR de caracteres ANSI del cliente enviados a variables, parámetros o columnas **Char**, **VARCHAR** o **Text** en el servidor. No se realiza ninguna traducción en los datos **Char**, **VARCHAR** o **Text** enviados desde el servidor a SQL_C_CHAR variables en el cliente.<br /><br /> Si el cliente y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] están utilizando distintas ACP, pueden malinterpretarse los caracteres extendidos.|  
 |**Base de datos**|Nombre de la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] predeterminada para la conexión. Si no se especifica **Database** , se usa la base de datos predeterminada definida para el inicio de sesión. La base de datos predeterminada del origen de datos ODBC invalida la base de datos predeterminada definida para el inicio de sesión. La base de datos debe ser una base de datos existente, a menos que también se especifique **AttachDBFileName** . Si también se especifica **AttachDBFileName** , el archivo principal al que apunta se adjunta y se le asigna el nombre de base de datos especificado por la **base de datos**.|  
-|**Driver**|Nombre del controlador devuelto por [SQLDrivers](../../../relational-databases/native-client-odbc-api/sqldrivers.md). El valor de palabra clave para el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client es "{SQL Server Native Client 11.0}". Se requiere la palabra clave **Server** si se especifica **driver** y **DriverCompletion** está establecido en SQL_DRIVER_NOPROMPT.<br /><br /> Para obtener más información acerca de los nombres de controlador, consulte [uso de los archivos de encabezado y biblioteca de SQL Server Native Client](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md).|  
+|**Controlador**|Nombre del controlador devuelto por [SQLDrivers](../../../relational-databases/native-client-odbc-api/sqldrivers.md). El valor de palabra clave para el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client es "{SQL Server Native Client 11.0}". Se requiere la palabra clave **Server** si se especifica **driver** y **DriverCompletion** está establecido en SQL_DRIVER_NOPROMPT.<br /><br /> Para obtener más información acerca de los nombres de controlador, consulte [uso de los archivos de encabezado y biblioteca de SQL Server Native Client](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md).|  
 |**DSN**|Nombre de un usuario de ODBC u origen de datos del sistema existente. Esta palabra clave reemplaza los valores que se pueden especificar en las palabras clave **Server**, **Network** y **Address** .|  
 |**Encrypt**|Especifica si los datos deben cifrarse antes de enviarse a través de la red. Los valores posibles son "yes" y "no". El valor predeterminado es "no".|  
-|**Reserva**|Esta palabra clave está desusada y el controlador OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client omite su valor.|  
+|**Ultimo**|Esta palabra clave está desusada y el controlador OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client omite su valor.|  
 |**Failover_Partner**|Nombre del servidor del asociado de conmutación por error que va a utilizarse si no puede establecerse una conexión al servidor principal.|  
 |**FailoverPartnerSPN**|SPN del asociado de conmutación por error. El valor predeterminado es una cadena vacía. Una cadena vacía hace que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utilice el SPN predeterminado generado por el controlador.|  
 |**FileDSN**|Nombre de origen de datos de un archivo ODBC existente.|  
-|**Idioma**|Nombre de idioma de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (opcional). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede almacenar mensajes para varios idiomas en **sysmessages**. Si se conecta a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con varios idiomas, **Language** especifica qué conjunto de mensajes se utiliza para la conexión.|  
+|**Lenguaje**|Nombre de idioma de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (opcional). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede almacenar mensajes para varios idiomas en **sysmessages**. Si se conecta a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con varios idiomas, **Language** especifica qué conjunto de mensajes se utiliza para la conexión.|  
 |**MARS_Connection**|Habilita o deshabilita conjuntos de resultados activos múltiples (MARS) en la conexión. Los valores reconocidos son "yes" y "no". El valor predeterminado es "no".|  
 |**MultiSubnetFailover**|Especifique siempre **multiSubnetFailover = Yes** al conectarse al agente de escucha del grupo de disponibilidad de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] grupo de disponibilidad o una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia de clúster de conmutación por error. **multiSubnetFailover = Yes** configura [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para proporcionar una detección y conexión más rápidas al servidor activo (actualmente). Los valores posibles son **Yes** y **No**. El valor predeterminado es **No**. Por ejemplo:<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la compatibilidad de Native Client con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , consulte [SQL Server Native Client compatibilidad con la alta disponibilidad y la recuperación ante desastres](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).|  
 |**Net**|Sinónimo de "Network".|  
@@ -155,7 +155,7 @@ ms.locfileid: "97463426"
 |**Encrypt**|SSPROP_INIT_ENCRYPT|Especifica si los datos deben cifrarse antes de enviarse a través de la red. Los valores posibles son "yes" y "no". El valor predeterminado es "no".|  
 |**FailoverPartner**|SSPROP_INIT_FAILOVERPARTNER|Nombre del servidor de conmutación por error utilizado para la creación de reflejo de la base de datos.|  
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|SPN del asociado de conmutación por error. El valor predeterminado es una cadena vacía. Una cadena vacía hace que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utilice el SPN predeterminado generado por el proveedor.|  
-|**Idioma**|SSPROP_INIT_CURRENTLANGUAGE|Lenguaje [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|**Lenguaje**|SSPROP_INIT_CURRENTLANGUAGE|Lenguaje [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|Habilita o deshabilita conjuntos de resultados activos múltiples (MARS) en la conexión si el servidor es [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior. Los valores posibles son "yes" y "no". El valor predeterminado es "no".|  
 |**Net**|SSPROP_INIT_NETWORKLIBRARY|Sinónimo de "Network".|  
 |**Network**|SSPROP_INIT_NETWORKLIBRARY|Biblioteca de red que se utiliza para establecer una conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la organización.|  
@@ -279,7 +279,7 @@ ms.locfileid: "97463426"
   
  **Nota** En la cadena de conexión, la propiedad "Old Password" establece SSPROP_AUTH_OLD_PASSWORD, que es la contraseña actual (posiblemente expirada) que no está disponible a través de una propiedad de cadena del proveedor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Generar aplicaciones con SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

@@ -15,18 +15,20 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4c59fb5228ef46a693e343716d1e58e56c042a53
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1094f10eedc819123cd446c0933ec14df511ac75
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100061560"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247346"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Evaluar la preparación de una SQL Server la migración de datos a Azure SQL Database mediante el Data Migration Assistant
 
-La migración de cientos de instancias de SQL Server y miles de bases de datos a Azure SQL Database, nuestra oferta de plataforma como servicio (PaaS), es una tarea considerable. Para simplificar el proceso tanto como sea posible, debe sentirse seguro de la preparación relativa de la migración. La identificación de frutas de bajo nivel, incluidos los servidores y las bases de datos que están totalmente preparados o que requieren un esfuerzo mínimo para prepararse para la migración, facilitan y aceleran sus esfuerzos.
+La migración de cientos de instancias de SQL Server y miles de bases de datos a Azure SQL Database o de Azure SQL Instancia administrada, nuestras ofertas de plataforma como servicio (PaaS), es una tarea considerable. Para simplificar el proceso tanto como sea posible, debe sentirse seguro de la preparación relativa de la migración. La identificación de frutas de bajo nivel, incluidos los servidores y las bases de datos que están totalmente preparados o que requieren un esfuerzo mínimo para prepararse para la migración, facilitan y aceleran sus esfuerzos.
 
 En este artículo se proporcionan instrucciones paso a paso para aprovechar el [Data Migration Assistant](./dma-overview.md) para resumir los resultados de la preparación y exponerlos en el concentrador de [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
+
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
 
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
@@ -94,7 +96,7 @@ Después de crear correctamente un proyecto de migración, en **herramientas de 
 1. Descargue Data Migration Assistant mediante el vínculo proporcionado y, a continuación, instálelo en un equipo con acceso a las instancias de SQL Server de origen.
 2. Inicie Data Migration Assistant.
 
-### <a name="create-an-assessment"></a>Creación de una evaluación
+### <a name="create-an-assessment"></a>Crear una evaluación
 
 1. A la izquierda, seleccione el **+** icono y, a continuación, seleccione el **tipo de proyecto** evaluación.
 2. Especifique el nombre del proyecto y, a continuación, seleccione los tipos de servidor de origen y de servidor de destino.

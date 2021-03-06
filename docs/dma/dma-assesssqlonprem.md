@@ -15,21 +15,22 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c88a289e21e7cd70980763474e82b7dd6cbd49c2
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 300d88b66c2105235ab04ff616d9fcf81b24e944
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489522"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247334"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Evaluación de la migración de SQL Server con Data Migration Assistant
 
 Las siguientes instrucciones paso a paso le ayudarán a realizar la primera evaluación de la migración a SQL Server locales, SQL Server que se ejecutan en una máquina virtual de Azure o Azure SQL Database mediante el uso de Data Migration Assistant.
 
-   > [!NOTE]
-   > Data Migration Assistant v 5.0 incluye compatibilidad para analizar la conectividad de base de datos y las consultas SQL incrustadas en el código de la aplicación. Para obtener más información, consulte la entrada de blog sobre el [uso de Data Migration Assistant para evaluar el nivel de acceso a datos de una aplicación](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
+Data Migration Assistant v 5.0 incluye compatibilidad para analizar la conectividad de base de datos y las consultas SQL incrustadas en el código de la aplicación. Para obtener más información, consulte la entrada de blog sobre el [uso de Data Migration Assistant para evaluar el nivel de acceso a datos de una aplicación](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
 
-## <a name="create-an-assessment"></a>Creación de una evaluación
+[!INCLUDE [online-offline](../includes/azure-migrate-to-assess-sql-data-estate.md)]
+
+## <a name="create-an-assessment"></a>Crear una evaluación
 
 1. Seleccione el icono de **nuevo** (+) y, a continuación, seleccione el tipo de proyecto **evaluación** .
 
@@ -39,7 +40,7 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
 
 3. Haga clic en **Crear**.
 
-   ![Creación de una evaluación](../dma/media/dma-assesssqlonprem/new-assessment.png)
+   ![Crear una evaluación](../dma/media/dma-assesssqlonprem/new-assessment.png)
 
 ## <a name="choose-assessment-options"></a>Elegir opciones de evaluación
 
@@ -119,7 +120,7 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
 
 ## <a name="view-results"></a>Vista de resultados
 
-La duración de la evaluación depende del número de bases de datos agregadas y el tamaño del esquema de cada base de datos. Los resultados se muestran para cada base de datos en cuanto están disponibles.
+La duración de la valoración depende del número de bases de datos agregadas y del tamaño de esquema de cada base de datos. Los resultados se mostrarán para cada base de datos en cuanto estén disponibles.
 
 1. Seleccione la base de datos que ha completado la evaluación y, a continuación, cambie entre los **problemas de compatibilidad** y las **recomendaciones de características** mediante el modificador.
 
