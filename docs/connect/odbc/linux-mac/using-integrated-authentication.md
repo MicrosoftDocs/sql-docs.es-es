@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4f53290d9b9a1ecd161ef02161f29c172297a93f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4e918602b3793d95d6192a832f110500454ee8a5
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727427"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837380"
 ---
 # <a name="using-integrated-authentication"></a>Uso de la autenticación integrada
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -41,7 +41,7 @@ La opción `-E` de `sqlcmd` y la opción `-T` de `bcp` también pueden utilizars
 
 Asegúrese de que el servidor principal de Linux que se va a conectar a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya esté autenticado con el KDC de Kerberos.
   
-No se admiten**ServerSPN** ni **FailoverPartnerSPN** .  
+No se admiten **ServerSPN** ni **FailoverPartnerSPN** .  
   
 ## <a name="deploying-a-linux-or-macos-odbc-driver-application-designed-to-run-as-a-service"></a>Implementación de un controlador ODBC de Linux o MacOS en una aplicación diseñada para ejecutarse como un servicio
 
@@ -107,7 +107,7 @@ La sintaxis que usan los SPN en los atributos de cadena de conexión o atributos
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Autenticación de un equipo Linux o macOS con Active Directory
 
-Para configurar Kerberos, escriba datos en el archivo `krb5.conf`. `krb5.conf` se encuentra en `/etc/` pero puede hacer referencia a otro archivo con la sintaxis, por ejemplo, `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. A continuación se muestra un archivo `krb5.conf` de ejemplo:  
+<a name="configure-kerberos"></a>Para configurar Kerberos, escriba datos en el archivo `krb5.conf`. `krb5.conf` se encuentra en `/etc/` pero puede hacer referencia a otro archivo con la sintaxis, por ejemplo, `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`. A continuación se muestra un archivo `krb5.conf` de ejemplo:  
   
 ```  
 [libdefaults]  

@@ -1,7 +1,7 @@
 ---
-title: Instalación de PolyBase en Windows | Microsoft Docs
+title: Instalación de PolyBase en Windows
 description: Aprenda a instalar PolyBase como un solo nodo o grupo de escalado horizontal de PolyBase. Puede usar un asistente para la instalación o un símbolo del sistema. Por último, habilite PolyBase.
-ms.date: 09/24/2018
+ms.date: 02/05/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016'
-ms.openlocfilehash: 00cb6468e269b057fb5d5d539a3f0efdd8be36ed
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ca5c7911444dcc5cdd87787a80ee0d9e572797ef
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100351816"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838102"
 ---
 # <a name="install-polybase-on-windows"></a>Instalación de PolyBase en Windows
 
@@ -161,11 +161,12 @@ Tras la instalación, se debe habilitar PolyBase para acceder a sus característ
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
 RECONFIGURE;
 ```
-
-
 ## <a name="post-installation-notes"></a>Notas posteriores a la instalación  
 
 PolyBase instala tres bases de datos de usuario: DWConfiguration, DWDiagnostics y DWQueue. Estas bases de datos son para uso de PolyBase. No las modifique ni las elimine.  
+
+> [!CAUTION]
+> Al agregar PolyBase a una instalación existente de SQL Server, se instalará la característica en el nivel de versión del disco de instalación, que puede estar detrás del nivel de versión de otras características de SQL Server. Esto puede producir un comportamiento o errores inesperados. Realice siempre un seguimiento de la característica de PolyBase mediante la incorporación de la nueva característica al mismo nivel de versión. Instale los Service Pack, las actualizaciones acumulativas o las versiones de distribución general según sea necesario. Para determinar la versión de PolyBase, consulte [Determinación del nivel de versión, edición y actualización de SQL Server y sus componentes](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level#polybase).
    
 ### <a name="how-to-confirm-installation"></a><a id="confirminstall"></a> Cómo confirmar la instalación  
 

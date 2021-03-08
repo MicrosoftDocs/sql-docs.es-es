@@ -1,19 +1,19 @@
 ---
 description: Una lista de las actualizaciones acumulativas y Service Packs más recientes, con números de compilación para Microsoft SQL Server.
 title: Últimas actualizaciones de SQL Server
-ms.date: 02/11/2021
+ms.date: 02/24/2021
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: SrinivasSQLMS
 ms.author: skandi
 ms.reviewer: hristins
-ms.openlocfilehash: f5b522ae47687b2b960b23812f859b3a97238f5e
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 78d8a8cc4968123107d6f6add773792381cd9534
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100353083"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837613"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Actualizaciones más recientes de Microsoft SQL Server
 
@@ -30,7 +30,7 @@ En cada uno de los vínculos siguientes se proporciona información sobre todos 
 |Versiones de productos   | Service Pack más reciente |  GDR más reciente | Actualización acumulativa más reciente | Fecha de publicación de la actualización acumulativa | Instrucciones generales  |
 |--|--|--|--|--|--|
 |SQL Server 2019|N/D|[KB 4583458](https://support.microsoft.com/help/4583458)|CU 9 [(KB 5000642)](https://support.microsoft.com/help/5000642)|11/2/2021|[Instalación de SQL Server 2019](./install-sql-server.md)|
-|SQL Server 2017|N/D|[KB 4583456](https://support.microsoft.com/help/4583456)|CU 22 [(KB 4583457)](https://support.microsoft.com/help/4583457)|12/1/2021|[Instalación de SQL Server 2017](./install-sql-server.md)|
+|SQL Server 2017|N/D|[KB 4583456](https://support.microsoft.com/help/4583456)|CU 23 [(KB 5000685)](https://support.microsoft.com/help/5000685)|24/2/2021|[Instalación de SQL Server 2017](./install-sql-server.md)|
 |SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4583460](https://support.microsoft.com/help/4583460)|CU 16 [(KB 5000645)](https://support.microsoft.com/kb/5000645)|11/2/2021|[Instalación de SQL Server 2016](./install-sql-server.md)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/help/4505221)|09/07/2019|[Instalación de SQL Server 2016](./install-sql-server.md)|
 |SQL Server 2016|N/D|[KB4058560](https://support.microsoft.com/help/4058560)|CU 9 [(KB 4058559)](https://support.microsoft.com/help/4058559)|22/11/2017|[Instalación de SQL Server 2016](./install-sql-server.md)|

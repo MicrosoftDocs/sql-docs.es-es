@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 2f87ae98424eef3f6aeadca1f11da6d9d1f2b403
-ms.sourcegitcommit: 8bdb5a51f87a6ff3b94360555973ca0cd0b6223f
+ms.openlocfilehash: acbe6e9241f003f100bedc3fd01d297fb91e8141
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100549391"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836712"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instancias de clúster de conmutación por error de AlwaysOn (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "100549391"
  Una FCI consta de un conjunto de servidores físicos (nodos) que contienen una configuración de hardware similar y una configuración de software idéntica que incluye la versión y el nivel de revisión del sistema operativo, así como la versión, el nivel de revisión, los componentes y el nombre de instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Es necesaria una configuración de software idéntica para garantizar que la FCI pueda estar totalmente funcional cuando realice la conmutación por error entre los nodos.  
   
  Grupo de recursos de WSFC  
- Una FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ejecuta en un grupo de recursos de WSFC. Cada nodo del grupo de recursos conserva una copia sincronizada de los valores de configuración y las claves del Registro con punto de comprobación para garantizar la funcionalidad total de la FCI después de una conmutación por error, y solo uno de los nodos del clúster pertenece al grupo de recursos cada vez (el nodo activo). El servicio de WSFC administra el clúster de servidores, la configuración de quórum, la directiva de conmutación por error y las operaciones de conmutación por error, así como el VNN y las direcciones IP virtuales para la FCI. En caso de que se produzca un error (errores de hardware, errores del sistema operativo o errores de aplicación o de servicio) o se realice una actualización planeada, la propiedad del grupo de recursos se mueve a otro nodo de la FCI. El número de nodos que se admiten en un grupo de recursos de WSFC depende de la edición de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Además, el mismo clúster de WSFC puede ejecutar varias FCI (varios grupos de recursos), dependiendo de la capacidad de hardware, como número de CPUs, memoria y número de discos.  
+ Una FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ejecuta en un grupo de recursos de WSFC. Cada nodo del grupo de recursos conserva una copia sincronizada de los valores de configuración y las claves del Registro con punto de comprobación para garantizar la funcionalidad total de la FCI después de una conmutación por error, y solo uno de los nodos del clúster pertenece al grupo de recursos cada vez (el nodo activo). El servicio de WSFC administra el clúster de servidores, la configuración de quórum, la directiva de conmutación por error y las operaciones de conmutación por error, así como el VNN y las direcciones IP virtuales para la FCI. En caso de se produzca un error (errores de hardware, errores del sistema operativo o errores de aplicación o servicio) o se realice una actualización planeada, la propiedad del grupo de recursos se mueve a otro nodo de FCI. El número de nodos que se admiten en un grupo de recursos de WSFC depende de la edición [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Además, el mismo clúster de WSFC puede ejecutar varias FCI (varios grupos de recursos), dependiendo de la capacidad de hardware, como número de CPUs, memoria y número de discos.  
   
  Binarios de SQL Server  
  Los archivos binarios del producto se instalan localmente en cada nodo de la FCI; es un proceso similar a las instalaciones independientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Sin embargo, durante el inicio, los servicios no se inician automáticamente sino que son administrados por WSFC.  

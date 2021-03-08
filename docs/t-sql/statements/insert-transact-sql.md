@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a6fd7131b63741a82c120e1e0b222405865a9d
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 505cda4f226945cd8788e777b8ac1ea35a3aa47e
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99237183"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837735"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -210,7 +210,10 @@ Cláusula OUTPUT
  Si los valores de la lista Value no están en el mismo orden que las columnas de la tabla o no contienen un valor para cada columna de la tabla, se debe usar *column_list* para especificar de forma explícita la columna que almacenará cada valor de entrada.  
   
  Puede utilizar el constructor de filas de [!INCLUDE[tsql](../../includes/tsql-md.md)] (que también se denomina constructor con valores de tabla) para especificar varias filas en una única instrucción INSERT. El constructor de filas se compone de una única cláusula VALUES con varias listas de valores escritos entre paréntesis y separados por una coma. Para más información, vea [Constructor con valores de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
-  
+
+> [!NOTE]  
+> En Azure Synapse Analytics, los valores de inserción solo pueden ser valores literales constantes o referencias de variables. Para insertar un valor no literal, establezca una variable en un valor que no sea constante e inserte la variable.
+
  DEFAULT  
  Hace que [!INCLUDE[ssDE](../../includes/ssde-md.md)] cargue el valor predeterminado definido para una columna. Si no existe ningún valor predeterminado para la columna y esta admite valores NULL, se inserta NULL. En una columna definida con el tipo de datos **timestamp**, se inserta el siguiente valor de marca de tiempo. DEFAULT no es un valor válido para una columna de identidad.  
   

@@ -9,12 +9,12 @@ ms.date: 02/11/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f3e1e0ed29121f0fb0ffcac54885ca80de3e63c
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: c4cb10ac3ba1e0fd8b437e7f0509dc16cc72d854
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489309"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837072"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Notas de la versión para los Clústeres de macrodatos de SQL Server 2019
 
@@ -98,7 +98,7 @@ SQL Server 2019 CU9 para Clústeres de macrodatos de SQL Server incluye func
    Los clústeres que usan `mssql-conf` para las configuraciones de la instancia maestra de SQL Server requieren pasos adicionales después de la actualización a CU9. Siga las instrucciones que encontrará [aquí](bdc-upgrade-configuration.md).
 
 - Experiencia de [!INCLUDE[azdata](../includes/azure-data-cli-azdata.md)] mejorada para el cifrado en reposo.
-- Capacidad para instalar dinámicamente paquetes de Python y Spark mediante entornos virtuales.
+- Capacidad para [instalar dinámicamente paquetes de Python y Spark](spark-install-packages.md) mediante entornos virtuales.
 - Versiones de software actualizadas para la mayoría de nuestros componentes de OSS (Grafana, Kibana, FluentBit, etc.) para garantizar que las imágenes de BDC están actualizadas con las últimas mejoras y correcciones. Consulte el artículo [Referencia de software de código abierto](reference-open-source-software.md).
 - Otras mejoras y correcciones de errores.
 
@@ -145,7 +145,7 @@ Esta versión incluye mejoras y correcciones menores. En los siguientes artícul
 - [Implementación de clústeres de macrodatos con el clúster privado de Azure Kubernetes Service (AKS)](private-deploy.md)
 - [Restricción del tráfico de salida de clústeres de macrodatos en el clúster privado de Azure Kubernetes Service (AKS)](private-restrict-egress-traffic.md)
 - [Implementación de clústeres de macrodatos de SQL Server con alta disponibilidad](deployment-high-availability.md)
-- [Configuración de un clúster de macrodatos de SQL Server](configure-cluster.md)
+- [Configuración de un clúster de macrodatos de SQL Server](./configure-bdc-overview.md)
 - [Configuración de Apache Spark y Apache Hadoop en clústeres de macrodatos](configure-spark-hdfs.md)
 - [Propiedades de configuración de la instancia maestra de SQL Server](reference-config-master-instance.md)
 - [Propiedades de configuración de Apache Spark y Apache Hadoop (HDFS)](reference-config-spark-hadoop.md)

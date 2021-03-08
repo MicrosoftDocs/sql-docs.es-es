@@ -6,33 +6,33 @@ author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 10/01/2020
+ms.date: 02/25/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 83e9d79f0316646d6ee25233e604e6751167b5f2
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 7c26dc7e193d3dd5ad688af4d4dc79e2dd3eeea7
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100039525"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101835972"
 ---
 # <a name="check-out-cluster-logs--with-kibana-dashboard"></a>Consulta de los registros de clúster con el panel de Kibana
 
-En este artículo se describe cómo supervisar una aplicación dentro de un clúster de macrodatos de SQL Server.
+En este artículo se describe cómo supervisar una aplicación dentro de [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)].
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
-- [Clúster de macrodatos de SQL Server 2019](deployment-guidance.md)
+- [[!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]](deployment-guidance.md)
 - [Utilidad de línea de comandos azdata](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>Capacidades
 
-En SQL Server 2019, puede crear, eliminar, describir, inicializar, enumerar, ejecutar y actualizar la aplicación. En la tabla siguiente se describen los comandos de implementación de aplicaciones que puede usar con **azdata**.
+En [!INCLUDE[sssql19-md](../includes/sssql19-md.md)], puede crear, eliminar, describir, inicializar, enumerar, ejecutar y actualizar la aplicación. En la tabla siguiente se describen los comandos de implementación de aplicaciones que puede usar con **azdata**.
 
 |Get-Help |Descripción |
 |:---|:---|
-|`azdata bdc endpoint list` | Enumera los puntos de conexión para el clúster de macrodatos. |
+|`azdata bdc endpoint list` | Enumera los puntos de conexión de [!INCLUDE[ssbigdataclusters-ss-nover](../includes/ssbigdataclusters-ss-nover.md)]. |
 
 
 Puede usar el ejemplo siguiente para enumerar el punto de conexión del **panel de Kibana**:
@@ -51,8 +51,10 @@ Vínculo a un panel de Kibana:
 ![Panel de Kibana](./media/view-cluster-status/kibana-dashboard.png)
 
 > [!NOTE]
-> El explorador Microsoft Edge (antiguo) no es compatible con Kibana; deberá usar el explorador basado en Chromium para que el panel se muestre correctamente. Si se usa un explorador no compatible, aparecerá una página en blanco al cargar los paneles. Consulte aquí qué exploradores son compatibles con Kibana.
+> El explorador Microsoft Edge más antiguo no es compatible con Kibana; deberá usar el explorador basado en Edge Chromium para que el panel se muestre correctamente. Si se usa un explorador no compatible, aparecerá una página en blanco al cargar los paneles. Consulte los [exploradores admitidos para Kibana](https://www.elastic.co/support/matrix#matrix_browsers).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md) para obtener más información sobre los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
+
+

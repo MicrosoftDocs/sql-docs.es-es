@@ -1,7 +1,7 @@
 ---
 title: Ciclo de vida de soporte del controlador SqlClient
 description: Página que contiene información del ciclo de vida de soporte técnico.
-ms.date: 01/04/2020
+ms.date: 02/26/2021
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: 200e600448f1f93cca3d566be10d6065ffd537e7
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: d0fc4a58dbd8375bd988fbee851cab68368b28d1
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878588"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836992"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>Ciclo de vida de soporte del controlador SqlClient
 
@@ -36,14 +36,14 @@ Las nuevas versiones estables (GA) se publican cada 6 meses a partir de una cad
 
 | Versión | Fecha oficial de lanzamiento | Última versión de revisión | Fecha de publicación de la actualización acumulativa | Nivel de soporte técnico  | Finalización del soporte |
 | -- | -- | -- | -- | -- | -- |
-| 2.1 | 19 de noviembre de 2020 | 2.1.1 | 18 de diciembre de 2020 | Current | |
-| 2.0 | 16 de junio de 2020 | 2.0.1 | 25 de agosto de 2020 | Current | 19 de febrero de 2021 |
+| 2.1 | 19 de noviembre de 2020 | 2.1.1 | 18 de diciembre de 2020 | LTS | 20 de noviembre de 2023 |
 | 1.1 | 20 de noviembre de 2019 | 1.1.3 | 15 de mayo de 2020 | LTS | 21 de noviembre de 2022 |
 
 ### <a name="out-of-support-releases"></a>Versiones fuera de soporte técnico
 
 | Versión | Fecha de publicación de la revisión más reciente | Última versión de revisión | Fin de soporte técnico |
 | -- | -- | -- | -- |
+| 2.0 | 16 de junio de 2020 | 2.0.1 | 25 de agosto de 2020 |
 | 1.0 | 26 de septiembre de 2019 | 1.0.19269.1 | 20 de febrero de 2020 |
 
 ### <a name="long-term-support-lts-releases"></a>Versiones de soporte técnico a largo plazo (LTS)

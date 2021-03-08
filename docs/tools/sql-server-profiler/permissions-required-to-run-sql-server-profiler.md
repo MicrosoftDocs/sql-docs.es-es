@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: d2fc45ca6d3bdcfafe2c061be7303e2a8ed361e1
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 4c264805e9733f4842f97d945a4807865c8a535a
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100353390"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839440"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Permisos necesarios para ejecutar SQL Server Profiler
 
@@ -25,7 +25,9 @@ ms.locfileid: "100353390"
 De forma predeterminada, la ejecución del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] requiere los mismos permisos de usuario que los procedimientos almacenados de Transact-SQL que se utilizan para crear seguimientos. Para ejecutar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], debe concederse a los usuarios el permiso ALTER TRACE. Para obtener más información, vea [GRANT &#40;permisos de servidor de Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md).
 
 > [!IMPORTANT]
-> Los usuarios que tienen el permiso SHOWPLAN, ALTER TRACE o VIEW SERVER STATE pueden ver consultas capturadas en la salida del plan de presentación. Estas consultas pueden contener información confidencial, como contraseñas. Por consiguiente, se recomienda conceder estos permisos solo a los usuarios que tengan autorización para ver información confidencial, como los miembros del rol fijo de base de datos db_owner o los miembros del rol fijo de servidor sysadmin. Además, se recomienda guardar solo los archivos del plan de presentación o los archivos de seguimiento que contengan eventos relacionados con el plan de presentación en una ubicación que utilice el sistema de archivos NTFS, así como restringir el acceso a los usuarios que tengan autorización para ver información confidencial.
+> Los planes de consulta y el texto de consulta, capturados por Seguimiento de SQL, así como por otros medios, por ejemplo, las vistas y funciones de administración dinámica (DMV y DMF), o los eventos extendidos, pueden contener información confidencial. Por lo tanto, los permisos ALTER TRACE, SHOWPLAN y el permiso de cobertura VIEW SERVER STATE deben concederse únicamente a aquellos que los necesiten para cumplir sus funciones de trabajo, según el principio de privilegio mínimo.
+>
+> Además, se recomienda guardar solo los archivos del plan de presentación o los archivos de seguimiento que contengan eventos relacionados con el plan de presentación en una ubicación que utilice el sistema de archivos NTFS, así como restringir el acceso a los usuarios que tengan autorización para ver información confidencial.
 
 > [!IMPORTANT]
 > Seguimiento de SQL y [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] están en desuso. El espacio de nombres *Microsoft.SqlServer.Management.Trace* que contiene los objetos Trace y Replay de Microsoft SQL Server también están en desuso.

@@ -6,17 +6,17 @@ ms.date: 12/13/2017
 ms.prod: sql
 ms.technology: integration-services
 ms.topic: conceptual
-author: haoqian
+author: HaoQian-MS
 ms.author: haoqian
 ms.reviewer: maghan
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 13f9a386b6ab60280edf2d8b494721dd233b042a
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 25f550f711364760de9cc07608b46532cfa34219
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100347412"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839028"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ejecutar paquetes en la escalabilidad horizontal de Integration Services (SSIS)
 
@@ -125,6 +125,9 @@ Para volver a cambiar el modo de ejecución predeterminado de modo que los paque
 
 ## <a name="run-package-in-sql-server-agent-job"></a><a name="sql_agent"></a> Ejecución del paquete en el trabajo del Agente SQL Server
 En un trabajo del Agente SQL Server, puede ejecutar un paquete SSIS como paso del trabajo. Para ejecutar el paquete en escalabilidad horizontal, establezca el modo de ejecución en **Escalabilidad horizontal**. Una vez configurado el modo de ejecución predeterminado en **Escalabilidad horizontal**, los trabajos del Agente SQL Server se ejecutarán en dicho modo.
+
+> [!NOTE]
+> No se puede detener la escalabilidad horizontal de la ejecución de paquetes mediante la cancelación del trabajo de Agente SQL Server. Para detener la ejecución de la escalabilidad horizontal, se recomienda usar el procedimiento almacenado catalog.stop_operation o usar el panel **Operaciones activas**. 
 
 ## <a name="next-steps"></a>Pasos siguientes
 -   [Solución de problemas de escalabilidad horizontal](troubleshooting-scale-out.md)

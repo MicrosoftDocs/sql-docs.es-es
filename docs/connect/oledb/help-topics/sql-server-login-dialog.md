@@ -5,17 +5,17 @@ ms.custom: ''
 ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: 647551a314829ef196914e964cbd08237ef085d7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9b5b0e7040bb2797729c9f759ea5a676a5fbc287
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99195300"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837479"
 ---
 # <a name="sql-server-login-dialog-box"></a>Cuadro de diálogo de inicio de sesión de SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ Cuando intenta conectarse sin especificar suficiente información, el controlado
 |Opción|Descripción|
 |---   |---        |
 |Server|Nombre de una instancia de SQL Server en la red. Seleccione un nombre de servidor\instancia de la lista, o escriba el nombre de servidor\instancia en el cuadro **Servidor**. Opcionalmente, se puede crear un alias de servidor en el equipo cliente mediante el **Administrador de configuración de SQL Server** y escribir ese nombre en el cuadro **Servidor**. <br/><br/>Puede escribir "(local)" si está utilizando el mismo equipo que SQL Server. Después puede establecer conexión con una instancia local de SQL Server, incluso si ejecuta una versión que no está en red de SQL Server.<br/><br/>Para más información sobre los nombres de servidor para diferentes tipos de redes, consulte [Instalación de SQL Server](../../../database-engine/install-windows/install-sql-server.md).|
-|Modo de autenticación|Puede seleccionar las siguientes opciones de autenticación en la lista desplegable:<br/><ul><li>`Windows Authentication:` autenticación en SQL Server con las credenciales de la cuenta de Windows del usuario que ha iniciado sesión actualmente.</li><li>`SQL Server Authentication:` autenticación con el identificador y la contraseña de inicio de sesión.</li><li>`Active Directory - Integrated:` autenticación integrada con una identidad de Azure Active Directory. Este modo también se puede usar para la autenticación de Windows en SQL Server.</li><li>`Active Directory - Password:` autenticación de identificador de usuario y contraseña con una identidad de Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` autenticación interactiva con una identidad de Azure Active Directory. Este modo admite Microsoft Azure Multi-Factor Authentication (MFA).</li><li>`Active Directory - Service Principal:` Autenticación con una entidad de servicio de Azure Active Directory. El **identificador de inicio de sesión** debe establecerse en el identificador de la aplicación (cliente). La **contraseña** debe establecerse en el secreto de la aplicación (cliente).</li></ul>|
+|Modo de autenticación|Puede seleccionar las siguientes opciones de autenticación en la lista desplegable:<br/><ul><li>`Windows Authentication:` autenticación en SQL Server con las credenciales de la cuenta de Windows del usuario que ha iniciado sesión actualmente.</li><li>`SQL Server Authentication:` autenticación con el identificador y la contraseña de inicio de sesión.</li><li>`Active Directory - Integrated:` autenticación integrada con una identidad de Azure Active Directory. Este modo también se puede usar para la autenticación de Windows en SQL Server.</li><li>`Active Directory - Password:` autenticación de identificador de usuario y contraseña con una identidad de Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` autenticación interactiva con una identidad de Azure Active Directory. Este modo admite Multi-Factor Authentication (MFA) de Azure Active Directory.</li><li>`Active Directory - Service Principal:` Autenticación con una entidad de servicio de Azure Active Directory. El **identificador de inicio de sesión** debe establecerse en el identificador de la aplicación (cliente). La **contraseña** debe establecerse en el secreto de la aplicación (cliente).</li></ul>|
 |Dirección SPN del servidor|Si utiliza una conexión de confianza, puede especificar un nombre principal de servicio (SPN) para el servidor.|
 |Id. de inicio de sesión|Especifica el identificador de inicio de sesión que se va a usar en la conexión. El cuadro de texto del identificador de inicio de sesión solo se habilita si `Authentication Mode` se establece en `SQL Server Authentication`, `Active Directory - Password`, `Active Directory - Universal with MFA support` o `Active Directory - Service Principal`.|
 |Contraseña|Especifica la contraseña usada para la conexión. El cuadro de texto de contraseña solo se habilita si `Authentication Mode` se establece en `SQL Server Authentication`, `Active Directory - Password` o `Active Directory - Service Principal`.|

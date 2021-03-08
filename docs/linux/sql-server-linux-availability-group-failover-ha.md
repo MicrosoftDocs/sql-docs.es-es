@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 52fbeee33dd992f4916f33a1545b59265a8b47f9
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 863278eacebc4b405a4a44e72c4318e950d0cc1d
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100345648"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837684"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Conmutación por error del grupo de disponibilidad Always On en Linux
 
@@ -50,17 +50,18 @@ Para conmutar por error de forma manual el recurso de un grupo de disponibilidad
 - **Ejemplo de RHEL/Ubuntu**
 
    ```bash
-   sudo pcs resource move ag_cluster-master nodeName2 --master
+   sudo pcs resource move ag_cluster-master nodeName2 --master --lifetime=30S
    ```
 
 - **Ejemplo de SLES**
 
    ```bash
-   crm resource migrate ag_cluster nodeName2
+   crm resource migrate ag_cluster nodeName2 --lifetime=30S
    ```
 
 >[!IMPORTANT]
->Después de conmutar por error de forma manual un recurso, necesita quitar una restricción de ubicación que se agregará automáticamente.
+>Cuando se usa la opción --lifetime, la restricción de ubicación creada para trasladar el recurso es temporal por naturaleza y es válida durante 30 segundos en el ejemplo anterior.
+>Tenga en cuenta que la restricción temporal no se borra automáticamente y puede aparecer en la lista de restricciones, pero como una restricción expirada. Las restricciones expiradas no afectan al comportamiento de la conmutación por error del clúster de pacemaker. Si no usa la opción --lifetime al mover el recurso, debe quitar una restricción de ubicación que se agregue automáticamente como se indica a continuación.
 
 #### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> Paso 2. Quitar la restricción de ubicación
 

@@ -2,7 +2,7 @@
 title: Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad
 description: Obtenga información sobre la interoperabilidad de la replicación, el seguimiento de cambios y la captura de datos modificados al usarlos con grupos de disponibilidad AlwaysOn de SQL Server.
 ms.custom: seo-lt-2019
-ms.date: 08/21/2018
+ms.date: 02/23/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: availability-groups
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f82db97e9b818ecca6682cf6778850dab8a238c1
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1ee6a097a60930064ee23389d1d54e965336e3d7
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100344549"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837703"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicación, seguimiento de cambios y captura de datos modificados - Grupos de disponibilidad AlwaysOn
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,12 +42,12 @@ ms.locfileid: "100344549"
 ###  <a name="general-changes-to-replication-agents-to-support-availability-groups"></a><a name="Changes"></a> Cambios generales en los agentes de replicación para admitir grupos de disponibilidad  
  Tres agentes de replicación se han modificado para admitir [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Los agentes de registro del LOG, de instantáneas y de mezcla se han modificado para consultar la base de datos de distribución del publicador redirigido y utilizar el nombre de agente de escucha del grupo de disponibilidad devuelto, si se ha declarado un publicador redirigido, para conectarse al publicador de la base de datos.  
   
- De forma predeterminada, cuando los agentes consultan el distribuidor para determinar si se ha redirigido el publicador original, se comprobará la idoneidad de la redirección o el destino actual antes de devolver el host redirigido al agente. Este es el comportamiento recomendado. Sin embargo, si el inicio del agente se produce con mucha frecuencia, la sobrecarga asociada al procedimiento almacenado de validación puede ser demasiado costosa. Se ha agregado un nuevo modificador de la línea de comandos, *BypassPublisherValidation*, a los agentes de registro del LOG, de instantáneas y de mezcla. Cuando se utiliza el modificador, el publicador redirigido se devuelve inmediatamente al agente y se omite la ejecución del procedimiento almacenado de validación.  
+ De forma predeterminada, cuando los agentes consultan el distribuidor para determinar si se ha redirigido el publicador original, se comprobará la idoneidad de la redirección o el destino actual antes de devolver el host redirigido al agente. Este es el comportamiento recomendado. Sin embargo, si el inicio del agente se produce con mucha frecuencia, la sobrecarga asociada al procedimiento almacenado de validación puede ser demasiado costosa. Se ha agregado un nuevo modificador de la línea de comandos, *BypassPublisherValidation*, a los agentes del lector del registro, de instantáneas y de combinación. Cuando se utiliza el modificador, el publicador redirigido se devuelve inmediatamente al agente y se omite la ejecución del procedimiento almacenado de validación.  
   
  Los errores devueltos por el procedimiento almacenado de validación se registran en los registros de historial del agente. Los errores con una gravedad superior o igual a 16 provocarán la terminación de los agentes. Algunas capacidades de reintento se han integrado en los agentes para controlar la desconexión esperada de una base de datos publicada cuando se conmuta por error a una principal.  
   
 #### <a name="log-reader-agent-modifications"></a>Modificaciones del Agente de registro del LOG  
- El Agente de registro del LOG ha sido objeto de los siguientes cambios.  
+ El Agente de lector del registro ha sido objeto de los siguientes cambios.  
   
 -   **Coherencia de la base de datos replicada**  
   
@@ -109,7 +109,7 @@ ms.locfileid: "100344549"
     ```  
   
     > [!NOTE]  
-    >  Se deben crear los trabajos en todos los destinos posibles de conmutación por error antes de la conmutación por error y marcarlos como deshabilitados hasta que la réplica de disponibilidad de un host se convierta en la nueva réplica principal. Los trabajos de CDC que se ejecutan en la base de datos principal anterior también deben estar deshabilitados cuando la base de datos local se convierte en una base de datos secundaria. Para deshabilitar y habilitar trabajos, use la opción *\@enabled* de [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Para obtener más información sobre cómo crear trabajos de CDC, vea [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT).  
+    >  Debe crear los trabajos en la nueva réplica principal después de la conmutación por error. Los trabajos de CDC que se ejecutan en la base de datos principal anterior deben estar deshabilitados cuando la base de datos local se convierte en una base de datos secundaria. Después de esto, si la réplica vuelve a ser principal, hay que volver a habilitar los trabajos CDC en la réplica. Para deshabilitar y habilitar trabajos, use la opción *\@enabled* de [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Para obtener más información sobre cómo crear trabajos de CDC, vea [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT).  
   
 -   **Agregar roles de CDC a una réplica de la base de datos principal de AlwaysOn**  
   
@@ -224,7 +224,7 @@ Si la captura de datos modificados debe deshabilitarse en una base de datos que 
 
 ### <a name="distributed-availability-groups"></a>Grupos de disponibilidad distribuidos
 
-El publicador o la base de datos de distribución de un grupo de disponibilidad no se pueden configurar como parte de un grupo de disponibilidad distribuido. La base de datos del publicador de un grupo de disponibilidad y la base de datos de distribución de un grupo de disponibilidad requieren un punto de conexión de escucha para la configuración y el uso adecuados. Pero no se puede configurar un punto de conexión de escucha para un grupo de disponibilidad distribuido.
+El publicador o la base de datos de distribución de un grupo de disponibilidad no se pueden configurar como parte de un grupo de disponibilidad distribuido. La base de datos del publicador de un grupo de disponibilidad y la base de datos de distribución de un grupo de disponibilidad requieren un punto de conexión de escucha para la configuración y el uso adecuados. Sin embargo, no se puede configurar un punto de conexión del cliente de escucha para un grupo de disponibilidad distribuido.
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Replicación**  

@@ -2,7 +2,7 @@
 title: Conexión con bcp
 description: Obtenga información sobre cómo usar la utilidad bcp con Microsoft ODBC Driver for SQL Server en Linux y macOS.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/24/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b66ebab16bc26beec9ef9cd8699f53e75d36d478
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f8bff2d5d9892d709885d0888e36ca042aa72242
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727447"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837401"
 ---
 # <a name="connecting-with-bcp"></a>Conexión con bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -74,7 +74,14 @@ Especifica la ruta de acceso completa de un archivo de formato.
   
 - -F *first_row*  
 Especifica el número de la primera fila que se exportará desde una tabla o que se importará desde un archivo de datos.  
-  
+
+- -G  
+El cliente usa este modificador al conectarse a Azure SQL Database o a Azure Synapse Analytics para especificar que el usuario se autentica mediante la autenticación de Azure Active Directory. El modificador -G requiere al menos sqlcmd versión 17.6. Para determinar su versión, ejecute bcp -v.
+
+> [!IMPORTANT]
+> La opción `-G` solo se aplica a Azure SQL Database y a Azure Synapse Analytics.
+> La autenticación interactiva de AAD no se admite actualmente ni en Linux ni en macOS. La autenticación integrada de AAD requiere la versión 17.6.1 o superior de [Microsoft ODBC Driver 17 for SQL  Server](../download-odbc-driver-for-sql-server.md) y un [entorno de Kerberos configurado](using-integrated-authentication.md#configure-kerberos) correctamente.
+
 - -k  
 Especifica que las columnas vacías deben conservar un valor NULL durante la operación, en vez de tener valores predeterminados para las columnas insertadas.  
   

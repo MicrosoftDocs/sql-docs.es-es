@@ -3,17 +3,17 @@ title: Notas de la versión de SQL Server 2017 en Linux
 description: Este artículo contiene las notas de la versión y las características admitidas de SQL Server 2017 ejecutándose en Linux. Se incluyen las notas de la versión más reciente y de varias versiones anteriores.
 author: VanMSFT
 ms.author: vanto
-ms.date: 09/10/2020
+ms.date: 02/24/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: fe088ed697e4150b2272f3a390b4002714ab4dc4
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 1494c406ca4889e64e2016c36d48d5c7d54ee84a
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100338276"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837944"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de la versión de SQL Server 2017 en Linux
 
@@ -46,6 +46,7 @@ En la tabla siguiente, se muestra la lista del historial de versiones de [!INCLU
 
 | Release               | Versión       | Fecha de la versión |
 |-----------------------|---------------|--------------|
+| [CU23](#CU23)         | 14.0.3381.3  | 2020-02-24   |
 | [CU22-GDR](#CU22)         | 14.0.3370.1  | 2021-01-12 |
 | [CU22](#CU22)         | 14.0.3356.20  | 2020-09-10   |
 | [CU21](#CU21)         | 14.0.3335.7   | 01-07-2020   |
@@ -84,6 +85,27 @@ Si va a actualizar paquetes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
 - [Instalar la búsqueda de texto completo SQL Server en Linux](sql-server-linux-setup-full-text-search.md)
 - [Instalar SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Habilitar el Agente SQL Server](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu23-february-2021"></a><a id="CU23"></a> CU23 (febrero de 2021)
+
+Esta es la publicación de la actualización acumulativa 23 (CU23) de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. La versión de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] para esta versión es la 14.0.3381.3. Para obtener información sobre las correcciones y mejoras de esta versión, vea <https://support.microsoft.com/help/5000685>.
+
+### <a name="package-details"></a>Detalles del paquete
+
+En el caso de las instalaciones de paquetes manuales o sin conexión, puede descargar los paquetes RPM y Debian con la información de la tabla siguiente:
+
+> [!NOTE]
+> **Ubuntu 18.04** y **RHEL 8** ya se admiten en SQL Server 2017 a partir de CU20.
+>
+> Los vínculos de instalación de paquetes sin conexión para Ubuntu apuntan a paquetes Ubuntu 18.04, excepto para el paquete SSIS (que no está disponible para Ubuntu 18.04). Si busca paquetes de Ubuntu 16.04, consulte la ruta de descarga <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>.
+>
+> Los vínculos de instalación de paquetes sin conexión para Red Hat apuntan a paquetes RHEL 8, excepto para el paquete SSIS (que no está disponible para RHEL 8). Si busca paquetes RHEL 7, consulte la ruta de acceso de descarga <https://packages.microsoft.com/rhel/7/mssql-server-2017/>.
+
+| Paquete | Versión del paquete | Descargas |
+|-----|-----|-----|
+| Paquete RPM de Red Hat | 14.0.3381.3-2 | [Paquete RPM del motor](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3381.3-2.x86_64.rpm)</br>[Paquete RPM de alta disponibilidad](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3381.3-2.x86_64.rpm)</br>[Paquete RPM de búsqueda de texto completo](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3381.3-2.x86_64.rpm)</br>[Paquete SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Paquete RPM de SLES | 14.0.3381.3-2 | [Paquete RPM del motor mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3381.3-2.x86_64.rpm)</br>[Paquete RPM de alta disponibilidad](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3381.3-2.x86_64.rpm)</br>[Paquete RPM de búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3381.3-2.x86_64.rpm) | 
+| Paquete de Debian para Ubuntu 18.04 | 14.0.3381.3-2 | [Paquete de Debian del motor](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3381.3-2_amd64.deb)</br>[Paquete de Debian de alta disponibilidad](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3381.3-2_amd64.deb)</br>[Paquete de Debian de la búsqueda de texto completo](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3381.3-2_amd64.deb)<br/>[Paquete SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a name="cu22-gdr-january-2021"></a><a id="CU22-GDR"></a> CU22-GDR (enero de 2021)
 

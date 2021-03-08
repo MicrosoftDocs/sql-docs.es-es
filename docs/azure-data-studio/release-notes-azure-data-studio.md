@@ -8,17 +8,30 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 2/10/2021
-ms.openlocfilehash: 17cc8ef3252ad39c344de7a7c51a9af80c1f6030
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.date: 2/18/2021
+ms.openlocfilehash: c666ae644200c1b2beefb7f73c8a819294831985
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100343400"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101836032"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión de Azure Data Studio
 
 **[Descargue e instale la versión más reciente](./download-azure-data-studio.md)** .
+
+## <a name="february-2021"></a>Febrero de 2021
+
+18 de febrero de 2021 &nbsp; / &nbsp; versión 1.26.0
+
+&nbsp;
+
+| Change | Detalles |
+| ------ | ------- |
+| Correcciones de errores | Para obtener una la lista completa de las correcciones, vea [Correcciones y problemas en GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22February+2021+Release%22+is%3Aclosed). |
+| Actualización de extensiones | [Dacpac](extensions/sql-server-dacpac-extension.md) <br/> [Kusto (KQL)](extensions/kusto-extension.md) </br> [MachineLearning](extensions/machine-learning-extension.md) </br> [Generador de perfiles](extensions/sql-server-profiler-extension.md) </br> [SchemaCompare](extensions/schema-compare-extension.md) </br> [SQLDatabaseProjects](extensions/sql-database-project-extension.md) |
+| Nuevas características de Azure Arc | Ahora se admiten varios controladores de datos. <br/> Opciones del cuadro de diálogo de nueva conexión como el archivo kube config <br/> Mejoras del panel de Postgres |
+| Nuevas características de los cuadernos | Mejora del tiempo de inicio del servidor de Jupyter en un 50 % en Windows <br/> Se agregó compatibilidad para editar los libros de Jupyter mediante el clic con el botón derecho. <br/> Se agregó compatibilidad con la parametrización del cuaderno de URI, así como la [documentación de parametrización del cuaderno](https://docs.microsoft.com/sql/azure-data-studio/notebooks/notebooks-parameterization). |
 
 ## <a name="december-2020-hotfix"></a>Diciembre de 2020 (revisión)
 

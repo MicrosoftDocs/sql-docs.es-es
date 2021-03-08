@@ -5,17 +5,17 @@ ms.custom: ''
 ms.date: 09/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: 52089c92af76611fe8ab60b53dc7cf2848fb31c5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e3a7367daa776da3641c1b9a506f8f8335ce05d9
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99195312"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837500"
 ---
 # <a name="universal-data-link-udl-configuration"></a>Configuración de vínculo de datos universal (UDL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ La pestaña Conexión es específica del proveedor y solo muestra las propiedade
 |Opción|Descripción|
 |---   |---        |
 |Seleccionar o especificar un nombre de servidor|Seleccione un nombre de servidor en la lista desplegable o escriba la ubicación del servidor donde se encuentra la base de datos a la que desea obtener acceso. La selección de la base de datos en el servidor es una acción independiente. Actualice la lista haciendo clic en "Actualizar".
-|Especificación de información para iniciar sesión en el servidor|Puede seleccionar las siguientes opciones de autenticación en esta lista desplegable: <ul><li>`Windows Authentication:` autenticación en SQL Server con las credenciales de la cuenta de Windows del usuario que ha iniciado sesión actualmente.</li><li>`SQL Server Authentication:` autenticación con el identificador y la contraseña de inicio de sesión.</li><li>`Active Directory - Integrated:` autenticación integrada con una identidad de Azure Active Directory. Este modo también se puede usar para la autenticación de Windows en SQL Server.</li><li>`Active Directory - Password:` autenticación de identificador de usuario y contraseña con una identidad de Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` autenticación interactiva con una identidad de Azure Active Directory. Este modo admite Microsoft Azure Multi-Factor Authentication (MFA).</li><li>`Active Directory - Service Principal:` Autenticación con una entidad de servicio de Azure Active Directory. El **nombre de usuario** debe establecerse en el identificador de la aplicación (cliente). La **contraseña** debe establecerse en el secreto de la aplicación (cliente).</li></ul>|
+|Especificación de información para iniciar sesión en el servidor|Puede seleccionar las siguientes opciones de autenticación en esta lista desplegable: <ul><li>`Windows Authentication:` autenticación en SQL Server con las credenciales de la cuenta de Windows del usuario que ha iniciado sesión actualmente.</li><li>`SQL Server Authentication:` autenticación con el identificador y la contraseña de inicio de sesión.</li><li>`Active Directory - Integrated:` autenticación integrada con una identidad de Azure Active Directory. Este modo también se puede usar para la autenticación de Windows en SQL Server.</li><li>`Active Directory - Password:` autenticación de identificador de usuario y contraseña con una identidad de Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` autenticación interactiva con una identidad de Azure Active Directory. Este modo admite Multi-Factor Authentication (MFA) de Azure Active Directory.</li><li>`Active Directory - Service Principal:` Autenticación con una entidad de servicio de Azure Active Directory. El **nombre de usuario** debe establecerse en el identificador de la aplicación (cliente). La **contraseña** debe establecerse en el secreto de la aplicación (cliente).</li></ul>|
 |Dirección SPN del servidor|Si utiliza una conexión de confianza, puede especificar un nombre principal de servicio (SPN) para el servidor.|
 |Nombre de usuario|Escriba el identificador de usuario que se usará en la autenticación al iniciar sesión en el origen de datos.|
 |Contraseña|Escriba la contraseña que se utilizará en la autenticación al iniciar sesión en el origen de datos.|

@@ -1,26 +1,28 @@
 ---
-title: Supervisión y solución de problemas de PolyBase | Microsoft Docs
+title: Supervisión y solución de problemas de PolyBase
 description: Para solucionar problemas de PolyBase, use estas vistas y DMV. Vea el plan de consulta de PolyBase, supervise los nodos de un grupo de PolyBase y configure la alta disponibilidad de los nodos de nombre de Hadoop.
-ms.date: 04/23/2019
+ms.date: 02/17/2021
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
+dev_langs:
+- TSQL
+- XML
 f1_keywords:
 - PolyBase, monitoring
 - PolyBase, performance monitoring
 helpviewer_keywords:
 - PolyBase, troubleshooting
-ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016'
-ms.openlocfilehash: 5945f88320f01f6ce431bea79483528bf8dbeb64
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 5306f392623bebdb08d17b704e12b06c5ce9e8fa
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100351751"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101835328"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Supervisión y solución de problemas de PolyBase
 
@@ -171,7 +173,7 @@ Supervise y solucione problemas de las consultas de PolyBase con los siguientes 
    ORDER BY total_elapsed_time DESC;  
    ```  
 
-## <a name="to-view-the--polybase-query-plan-to-be-changed"></a>Para ver el plan de consulta de PolyBase (y cambiarlo): 
+## <a name="to-view-the-polybase-query-plan-to-be-changed"></a>Para ver el plan de consulta de PolyBase (y cambiarlo) 
 
 1. En SSMS, habilite **Incluir plan de ejecución real** (Ctrl+M) y ejecute la consulta.
 
@@ -258,10 +260,35 @@ Actualmente, PolyBase no se comunica con servicios de alta disponibilidad de Nam
 
 Solución alternativa: Usar un nombre DNS para volver a enrutar las conexiones al NameNode activo. Para ello, debe asegurarse de que el origen de datos externo usa un nombre DNS para comunicarse con el NameNode. Si se produce una conmutación por error de NameNode, deberá cambiar la dirección IP asociada al nombre DNS usado en la definición del origen de datos externo. Se volverán a enrutar todas las conexiones nuevas al NameNode correcto. Las conexiones existentes generarán un error si se produce una conmutación por error. Para automatizar este proceso, un "latido" puede hacer ping en el NameNode activo. Si se produce un error en el latido, se puede dar por hecho que se ha producido una conmutación por error y pasar automáticamente a las direcciones IP secundarias.
 
+## <a name="log-file-locations"></a>Ubicaciones de archivos de registro
+
+En los servidores de Windows, los registros se encuentran en la ruta de acceso del directorio de instalación, de forma predeterminada: C:\Archivos de programa\Microsoft SQL Server\MSSQLnn.InstanceName\MSSQL\Log\Polybase\.
+
+En los servidores de Linux, los registros se encuentran de forma predeterminada en /var/opt/mssql/log/polybase.
+
+Archivos de registro de movimiento de datos de PolyBase:  
+- <INSTANCENAME>_<SERVERNAME>_Dms_errors.log 
+- <INSTANCENAME>_<SERVERNAME>_Dms_movement.log 
+
+Archivos de registro del servicio de motor de PolyBase:  
+- <INSTANCENAME>_<SERVERNAME>_DWEngine_errors.log 
+- <INSTANCENAME>_<SERVERNAME>_DWEngine_movement.log 
+- <INSTANCENAME>_<SERVERNAME>_DWEngine_server.log 
+
+En Windows, los archivos de registro de Java de PolyBase:
+- <SERVERNAME> Dms polybase.log
+- <SERVERNAME>_DWEngine_polybase.log
+ 
+En Linux, los archivos de registro de Java de PolyBase:
+- /var/opt/mssql-extensibility/hdfs_bridge/log/hdfs_bridge_pdw.log
+- /var/opt/mssql-extensibility/hdfs_bridge/log/hdfs_bridge_dms.log
+
+
 ## <a name="error-messages-and-possible-solutions"></a>Mensajes de error y posibles soluciones
 
-Para solucionar los errores de tabla externa, vea el blog de Murshed Zaman [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](/archive/blogs/sqlcat/polybase-setup-errors-and-possible-solutions "Errores de instalación de PolyBase y posibles soluciones").
+Para ver escenarios de solución de problemas comunes, consulte [Errores de PolyBase y posibles soluciones](polybase-errors-and-possible-solutions.md).
 
 ## <a name="see-also"></a>Consulte también
 
-[Solución de problemas de conectividad de Kerberos con PolyBase](polybase-troubleshoot-connectivity.md)
+[Solución de problemas de conectividad de Kerberos con PolyBase](polybase-troubleshoot-connectivity.md)   
+[Errores de PolyBase y posibles soluciones](polybase-errors-and-possible-solutions.md)   

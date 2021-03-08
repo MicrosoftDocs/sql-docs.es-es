@@ -8,27 +8,29 @@ helpviewer_keywords:
 - feature adding [SQL Server]
 - " SQL Server, features"
 - adding features to  SQL Server
-ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: cawrites
 ms.author: chadam
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 09/07/2019
+ms.date: 02/05/2021
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 2f756136657d20a694cbaa2263500624eeaf8c27
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b8b520e3c5f44342970881e3e67b3dbf95ce9853
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100347874"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837588"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Agregar características a una instancia de SQL Server (programa de instalación)
 
 [!INCLUDE [ SQL Server - Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-En este artículo se proporciona un procedimiento paso a paso para agregar características a una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Algunos componentes o servicios de SQL Server son específicos de una instancia de SQL Server. También se denominan dependientes de la instancia. Comparten la misma versión que la instancia que los hospeda y se usan exclusivamente para dicha instancia. Puede agregar los componentes dependientes de la instancia a una instancia de SQL Server, junto con los componentes compartidos si no están instalados. Para obtener una lista de las características admitidas por las diferentes ediciones de SQL Server, consulte [Ediciones y características admitidas de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) o [Ediciones y características admitidas de SQL Server 2019 (15.x)](../../sql-server/editions-and-components-of-sql-server-version-15.md).
+En este artículo se proporciona un procedimiento paso a paso para agregar características a una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Algunos componentes o servicios de SQL Server son específicos de una instancia de SQL Server. También se denominan dependientes de la instancia. Comparten la misma versión que la instancia que los hospeda y se usan exclusivamente para dicha instancia. Puede agregar los componentes dependientes de la instancia a una instancia de SQL Server, junto con los componentes compartidos si no están instalados. Para obtener una lista de las características admitidas por las diferentes ediciones de SQL Server, consulte [Ediciones y características admitidas de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md) o [Ediciones y características admitidas de SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 
 Para agregar características a una instancia de SQL Server desde el símbolo del sistema, vea [Instalar SQL Server desde el símbolo del sistema](./install-sql-server-from-the-command-prompt.md).
+
+> [!CAUTION]
+> Al agregar características a una instalación existente de SQL Server, se instalará la característica en el nivel de versión del disco de instalación, que puede estar detrás del nivel de versión de otras características de SQL Server. Esto puede producir un comportamiento o errores inesperados. Siga siempre la realización correcta de la configuración de SQL Server mediante la incorporación de la nueva característica al mismo nivel de versión. Instale los Service Pack, las actualizaciones acumulativas o las versiones de distribución general según sea necesario. Para determinar la versión de las características agregadas a una instalación de SQL Server, consulte [Determinación del nivel de versión, edición y actualización de SQL Server y sus componentes](https://docs.microsoft.com/troubleshoot/sql/general/determine-version-edition-update-level).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -156,3 +158,4 @@ Configuración de la instalación de SQL Server
 - [Reparar una instalación de SQL Server 2016 con errores](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 - [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) (Actualización de SQL Server mediante el Asistente para instalación [programa de instalación])
 - [Instalar SQL Server desde el símbolo del sistema](./install-sql-server-from-the-command-prompt.md)
+- [Últimas actualizaciones de SQL Server](latest-updates-for-microsoft-sql-server.md)

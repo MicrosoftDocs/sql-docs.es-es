@@ -2,7 +2,7 @@
 description: MERGE (Transact-SQL)
 title: MERGE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/20/2019
+ms.date: 02/27/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -26,12 +26,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||  azure-sqldw-latest
-ms.openlocfilehash: 6bb1014c22353826b6e4429726d4d28549cc274a
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: c7b388649cf7ca535d5d81eb2d05cf4f0a27d373
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489339"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838970"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -238,16 +238,84 @@ Especifica el patrón de coincidencia de gráficos. Para obtener más informaci�
 >[!NOTE]
 > En Azure Synapse Analytics, el comando MERGE (versión preliminar) tiene las siguientes diferencias en comparación con SQL Server y Azure SQL Database.  
 > - Una actualización MERGE se implementa como un par de eliminación e inserción. El recuento de filas afectado de una actualización MERGE incluye las filas eliminadas e insertadas. 
-
 > - Durante la versión preliminar, MERGE…WHEN NOT MATCHED INSERT no se admiten en tablas con columnas IDENTITY.  
-
 > - En esta tabla se describe la compatibilidad de las tablas con distintos tipos de distribución:
-
+>
 >|MERGE CLAUSE en Azure Synapse Analytics|Tabla de distribución TARGET admitida| Tabla de distribución SOURCE admitida|Comentario|  
 >|-----------------|---------------|-----------------|-----------|  
 >|**WHEN MATCHED**| Todos los tipos de distribución |Todos los tipos de distribución||  
 >|**NOT MATCHED BY TARGET**|HASH |Todos los tipos de distribución|Use UPDATE/DELETE FROM…JOIN para sincronizar dos tablas. |
 >|**NOT MATCHED BY SOURCE**|Todos los tipos de distribución|Todos los tipos de distribución|||  
+
+>[!IMPORTANT]
+> En Azure Synapse Analytics, el comando MERGE, actualmente en versión preliminar, puede, en determinadas condiciones, dejar la tabla de destino en un estado incoherente, con filas colocadas en la distribución equivocada, lo que hace que las consultas posteriores devuelvan, en algunos casos, resultados incorrectos. Este problema puede producirse cuando se cumplen estas dos condiciones:
+>
+> - La instrucción MERGE de T-SQL se ejecutó en una tabla TARGET con distribución de HASH en la base de datos Azure Synapse SQL.
+> - La tabla TARGET de la combinación tiene índices secundarios o una restricción UNIQUE.
+>
+> Hasta que la corrección esté disponible, evite usar el comando MERGE en las tablas TARGET con distribución de HASH que tienen índices secundarios o restricciones UNIQUE.  También se puede deshabilitar temporalmente la compatibilidad con la característica MERGE en las bases de datos con tablas con distribución de HASH que tienen restricciones UNIQUE o índices secundarios.      
+>
+> Un recordatorio importante, las características en versión preliminar están destinadas únicamente a las pruebas y no deben usarse en instancias de producción o en datos de producción. También debe conservar una copia de los datos de prueba si los datos son importantes.
+> 
+> Para comprobar qué tablas con distribución de hash en una base de datos no pueden funcionar con MERGE debido a este problema, ejecute esta instrucción.
+>```sql
+> select a.name, c.distribution_policy_desc, b.type from sys.tables a join sys.indexes b
+> on a.object_id = b.object_id
+> join
+> sys.pdw_table_distribution_properties c
+> on a.object_id = c.object_id
+> where b.type = 2 and c.distribution_policy_desc = 'HASH'
+> ```
+> 
+> Para comprobar si una tabla de destino con distribución de hash para la combinación se ve afectada por este problema, siga estos pasos para examinar si las tablas tienen filas descargadas en una distribución incorrecta.  Si se devuelve "no es necesario reparar", esta tabla no se ve afectada.  
+>
+>```sql
+> if object_id('[check_table_1]', 'U') is not null
+> drop table [check_table_1]
+> go
+> if object_id('[check_table_2]', 'U') is not null
+> drop table [check_table_2]
+> go
+>
+> create table [check_table_1] with(distribution = round_robin) as
+> select <DISTRIBUTION_COLUMN> as x from <MERGE_TARGET_TABLE> group by <DISTRIBUTION_COLUMN>;
+> go
+>
+> create table [check_table_2] with(distribution = hash(x)) as
+> select x from [check_table_1];
+>go
+>
+> if not exists(select top 1 * from (select <DISTRIBUTION_COLUMN> as x from <MERGE_TARGET_TABLE> except select x from 
+> [check_table_2]) as tmp)
+> select 'no need for repair' as result
+> else select 'needs repair' as result
+> go
+>
+> if object_id('[check_table_1]', 'U') is not null
+> drop table [check_table_1]
+> go
+> if object_id('[check_table_2]', 'U') is not null
+> drop table [check_table_2]
+> go
+>```
+>Para reparar las tablas afectadas, ejecute estas instrucciones para copiar todas las filas de la tabla antigua en una nueva tabla.
+>```sql
+> if object_id('[repair_table_temp]', 'U') is not null
+> drop table [repair_table_temp];
+> go
+> if object_id('[repair_table]', 'U') is not null
+> drop table [repair_table];
+> go
+> create table [repair_table_temp] with(distribution = round_robin) as select * from <MERGE_TARGET_TABLE>;
+> go
+>
+> -- [repair_table] will hold the repaired table generated from <MERGE_TARGET_TABLE>
+> create table [repair_table] with(distribution = hash(<DISTRIBUTION_COLUMN>)) as select * from [repair_table_temp];
+> go
+>if object_id('[repair_table_temp]', 'U') is not null
+> drop table [repair_table_temp];
+> go
+> ```   
 
 Al menos se debe especificar una de las tres cláusulas MATCHED, pero se pueden especificar en cualquier orden. Una variable no puede actualizarse más de una vez en la misma cláusula MATCHED.  
   

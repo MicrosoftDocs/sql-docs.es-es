@@ -8,12 +8,12 @@ ms.date: 06/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0c95b3a843cbec0e703efea846b9c80f99b9dc41
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: ce07fb02a81b4e44375d80f643713b9a0b62d80d
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100346230"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101839008"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitaciones y problemas conocidos de SSIS en Linux
 
@@ -94,7 +94,7 @@ Las siguientes tareas del plan de mantenimiento se admiten en Linux:
 | Componente | Limitaciones |
 |------------|---|
 | Origen y destino de ADO.NET | Solo se admite el proveedor de datos SQLClient. |
-| Origen y destino de archivo plano | Solo se admiten rutas de acceso de archivo de tipo Windows a las que se aplica la regla de asignación de rutas de acceso predeterminada. Por ejemplo, `D:\home\ssis\travel.csv` se convierte en `/home/ssis/travel.csv`. |
+| Origen y destino de archivo plano | 1. Solo se admiten rutas de acceso de archivo de tipo Windows a las que se aplica la regla de asignación de rutas de acceso predeterminada. Por ejemplo, `D:\home\ssis\travel.csv` se convierte en `/home/ssis/travel.csv`. 2. No se admite el recurso compartido de archivos de Azure que se montó en Red Hat 7. |
 | Origen OData | Solo admite la autenticación básica. |
 | Origen y destino de ODBC | Admite controladores ODBC Unicode de 64 bits en Linux. Depende del administrador de controladores UnixODBC en Linux. |
 | Origen y destino de OLE DB | Solo se admiten SQL Server Native Client 11.0 y el proveedor OLE DB de Microsoft para SQL Server. |
@@ -145,5 +145,5 @@ Los proveedores de registro de SSIS para archivos de texto, archivos XML y SQL 
 ## <a name="related-content-about-ssis-on-linux"></a>Contenido relacionado sobre SSIS en Linux
 -   [Extracción, transformación y carga de datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
 -   [Instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
--   [Configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
+-   [Configuración de SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
 -   [Programación de la ejecución de paquetes de SQL Server Integration Services en Linux con cron](sql-server-linux-schedule-ssis-packages.md)

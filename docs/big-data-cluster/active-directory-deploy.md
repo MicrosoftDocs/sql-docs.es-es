@@ -5,16 +5,16 @@ description: Obtenga información sobre cómo actualizar los clústeres de macro
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 02/11/2021
+ms.date: 02/19/2021
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 799afc246b106c4b49d6aba44f8d26a761d6c2cc
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 9417444a1c9d28181529ace79b6dcff6162b7f2d
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100343965"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101837041"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>Implementación del clúster de macrodatos de SQL Server en el modo de Active Directory
 
@@ -27,6 +27,21 @@ Para la implementación del BDC con la integración de AD, hay cierta informaci�
 Con el uso del perfil `kubeadm-prod`, (o `openshift-prod` a partir de la versión CU5), tendrá automáticamente los marcadores de posición para la información relacionada con la seguridad y con el punto de conexión que se necesitan para la integración de AD.
 
 Además, debe proporcionar las credenciales que [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] usará para crear los objetos necesarios en AD. Estas credenciales se proporcionan como variables de entorno.
+
+### <a name="traffic-and-ports"></a>Tráfico y puertos
+
+Compruebe que los firewalls o aplicaciones de terceros permiten los puertos necesarios para la comunicación de Active Directory. 
+
+![Diagrama de tráfico entre el clúster de macrodatos y Active Directory. El ontrolador, el servicio de soporte de seguridad y otros servicios de clúster hablan a través de LDAP o Kerberos a los controladores de dominio. El servicio de proxy DNS de BDC habla a través de DNS a los servidores DNS.](media/big-data-cluster-overview/big-data-cluster-active-directory-dns-traffic-ports.png)
+
+Las solicitudes se realizan en estos protocolos hacia y desde los servicios del clúster de Kubernetes al dominio de Active Directory, por lo que se debe permitir la entrada y salida en cualquier firewall o aplicación de terceros que escuche en los puertos necesarios tanto para TCP como para UDP. Los números de puerto estándar que usa Active Directory:
+
+| Servicio | Port |
+|:---|:---|
+| DNS | 53 |
+| LDAP <BR> LDAPS | 389<BR> 636 |
+| Kerberos | 88 |
+| Puerto de catálogo global <BR>mediante LDAP<BR>mediante LDAPS |<BR> 3268 <BR> 3269 |
 
 ## <a name="set-security-environment-variables"></a>Establecimiento de variables de entorno de seguridad
 
@@ -45,21 +60,21 @@ La integración de AD necesita los parámetros siguientes. Agregue estos paráme
 
 - `security.activeDirectory.ouDistinguishedName`: nombre distintivo de una unidad organizativa (UO) en la que se agregarán todas las cuentas de AD que cree la implementación del clúster. Si se llama al dominio `contoso.local`, el nombre distintivo de la UO será `OU=BDC,DC=contoso,DC=local`.
 
-- `security.activeDirectory.dnsIpAddresses`: contiene la lista de direcciones IP de los servidores DNS del dominio. 
+- `security.activeDirectory.dnsIpAddresses`: contiene la lista de direcciones IP de los servidores DNS del dominio. 
 
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: lista de FQDN del controlador de dominio. El FQDN contiene el nombre de host o de la máquina del controlador de dominio. Si tiene varios controladores de dominio, aquí se puede proporcionar una lista. Ejemplo: `HOSTNAME.CONTOSO.LOCAL`.
 
   > [!IMPORTANT]
   > Cuando hay varios controladores de dominio que atienden a un dominio, utilice el controlador de dominio principal (PDC) como primera entrada en la lista de `domainControllerFullyQualifiedDns` de la configuración de seguridad. Para obtener el nombre del PDC, escriba `netdom query fsmo` en el símbolo del sistema y luego presione **Entrar**.
 
-- **Parámetro opcional** `security.activeDirectory.realm`: en la mayoría de casos, el dominio es igual al nombre de dominio. En los casos en los que no sean iguales, use este parámetro para definir el nombre del dominio (por ejemplo, `CONTOSO.LOCAL`). El valor proporcionado para este parámetro debe ser completo.
+- **Parámetro opcional** `security.activeDirectory.realm`: en la mayoría de casos, el dominio es igual al nombre de dominio. En los casos en los que no sean iguales, use este parámetro para definir el nombre del dominio kerberos (por ejemplo, `CONTOSO.LOCAL`). El valor proporcionado para este parámetro debe ser completo.
 
-- **Parámetro opcional** `security.activeDirectory.netbiosDomainName`: este es el nombre NETBIOS del dominio de AD. En la mayoría de los casos, será la primera etiqueta del nombre de dominio de AD. En caso contrario, use este parámetro para definir el nombre de dominio NETBIOS. Este valor no debe contener puntos. Normalmente, este nombre se usa para calificar las cuentas de usuario del dominio. Por ejemplo, CONTOSO\user, donde CONTOSO es el nombre de dominio NETBIOS.
+- **Parámetro opcional** `security.activeDirectory.netbiosDomainName`: este es el nombre NETBIOS del dominio de AD. En la mayoría de los casos, será la primera etiqueta del nombre de dominio de AD. En caso contrario, use este parámetro para definir el nombre de dominio NETBIOS. Este valor no debe contener puntos. Normalmente, este nombre se usa para calificar las cuentas de usuario del dominio. Por ejemplo, CONTOSO\user, donde CONTOSO es el nombre de dominio NETBIOS.
 
   > [!NOTE]
   > A partir de SQL Server 2019 CU9, se ha habilitado compatibilidad con una configuración en la que el nombre de dominio de Active Directory es diferente del nombre **NETBIOS** del dominio de Active Directory mediante el uso de *security.activeDirectory.netbiosDomainName*.
 
-- `security.activeDirectory.domainDnsName`: Nombre del dominio DNS que se usará para el clúster (por ejemplo, `contoso.local`).
+- `security.activeDirectory.domainDnsName`: nombre del dominio DNS que se usará para el clúster (por ejemplo, `contoso.local`).
 
 - `security.activeDirectory.clusterAdmins`: este parámetro toma un grupo de AD. El ámbito del grupo de AD debe ser universal o global. Los miembros de este grupo tendrán el rol de clúster `bdcAdmin`, que les concederá permisos de administrador en el clúster. Esto significa que tendrán [permisos de `sysadmin` en SQL Server](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles), [permisos de `superuser` en HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User) y permisos de administrador cuando se conecten al punto de conexión del controlador.
 
@@ -70,7 +85,7 @@ La integración de AD necesita los parámetros siguientes. Agregue estos paráme
 
 Los grupos de AD de esta lista se asignan al rol de clúster de macrodatos `bdcUser` y se les debe conceder acceso a SQL Server (vea [Permisos de SQL Server](../relational-databases/security/permissions-hierarchy-database-engine.md)) o a HDFS (vea [Guía de permisos de HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)). Al conectarse al punto de conexión del controlador, estos usuarios solo pueden mostrar los puntos de conexión disponibles en el clúster mediante el comando `azdata bdc endpoint list`.
 
-A fin de obtener información detallada sobre cómo actualizar los grupos de AD para esta configuración, vea [Administración del acceso al Clúster de macrodatos en el modo de Active Directory](manage-user-access.md).
+A fin de obtener información detallada sobre cómo actualizar los grupos de AD para esta configuración, consulte [Administración del acceso al clúster de macrodatos en el modo de Active Directory](manage-user-access.md).
 
   >[!TIP]
   >Para habilitar la experiencia de exploración de HDFS cuando se conecta a SQL Server maestro en Azure Data Studio, se debe conceder a un usuario con el rol bdcUser permisos VIEW SERVER STATE, ya que Azure Data Studio usa la DMV `sys.dm_cluster_endpoints` para obtener el punto de conexión de la puerta de enlace de Knox requerido para conectarse a HDFS.
@@ -223,7 +238,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.act
 
 Ahora debe haber establecido todos los parámetros necesarios para una implementación del BDC con la integración de Active Directory.
 
-Ahora puede implementar el clúster de BDC integrado con Active Directory mediante el comando [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] y el perfil de implementación kubeadm-prod. Para obtener la documentación completa sobre cómo implementar [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], visite [Procedimiento para implementar clústeres de macrodatos de SQL Server en Kubernetes](deployment-guidance.md).
+Ahora puede implementar el clúster de BDC integrado con Active Directory mediante el comando [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] y el perfil de implementación kubeadm-prod. Para obtener la documentación completa sobre cómo implementar [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], consulte [Procedimientos para implementar Clústeres de macrodatos de SQL Server en Kubernetes](deployment-guidance.md).
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>Comprobación de la entrada de DNS inverso para el controlador de dominio
 

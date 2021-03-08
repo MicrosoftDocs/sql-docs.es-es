@@ -14,12 +14,12 @@ ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea1d2300b2ff2431d58b8fb2d6139ecad130a965
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 074033472f37787c0bcf1da6f261a5f835f0cbec
+ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97432443"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101838989"
 ---
 # <a name="sql-injection"></a>Inyección de código SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -93,8 +93,8 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |Carácter de entrada|Significado en Transact-SQL|  
 |---------------------|------------------------------|  
 |**;**|Delimitador de consultas.|  
-|**"**|Delimitador de cadenas de datos de caracteres.|  
-|**--**|Delimitador de cadenas de datos de caracteres.<br />.|  
+|**'**|Delimitador de cadenas de datos de caracteres.|  
+|**--**|Delimitador del comentario de una sola línea. El servidor no evalúa el texto siguiente **--** hasta el final de esa línea.|  
 |**/\**_ ... _*\*/**|Delimitadores de comentarios. El servidor no evalúa el texto incluido entre **/\* *_ y _* \*/** .|  
 |**xp_**|Se usa al principio del nombre de procedimientos almacenados extendidos de catálogo, como `xp_cmdshell`.|  
   
