@@ -15,12 +15,12 @@ helpviewer_keywords:
 - deprecation [SQL Server], feature list
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 518b29507e7992b267922e09c97bf98b1657205d
-ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
+ms.openlocfilehash: e4227e17c9b8f3319e771d7de9d93fefddbaa487
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100525171"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186162"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Características desusadas del motor de base de datos de SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -28,9 +28,9 @@ ms.locfileid: "100525171"
 En este artículo, se describen las características en desuso de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que siguen estando disponibles en [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
   
 Cuando se establece que una característica está en desuso, significa que:
--  Solo está en modo de mantenimiento. No se realizarán cambios nuevos, ni tampoco cambios relacionados con la interoperabilidad con características nuevas.
--  Nos esforzamos por no quitar una característica en desuso en las versiones futuras para facilitar las actualizaciones, aunque en raras ocasiones puede que optemos por quitar permanentemente la característica de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si limita las innovaciones futuras.
--  Para un nuevo trabajo de desarrollo, no se recomienda el uso de las características en desuso.      
+- Solo está en modo de mantenimiento. No se realizarán cambios nuevos, ni tampoco los relacionados con la resolución de la interoperabilidad con características nuevas.
+- Nos esforzamos por no quitar una característica en desuso en las versiones futuras para facilitar las actualizaciones, Sin embargo, en raras ocasiones puede que optemos por interrumpir (quitar) permanentemente la característica de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si limita las innovaciones futuras.
+- En el caso de trabajos nuevos de desarrollo, no utilice características en desuso. En el caso de aplicaciones existentes, planifique modificar lo antes posible las aplicaciones que actualmente usan estas características.     
 
 Para [!INCLUDE[sssql17-md](../includes/sssql17-md.md)], vea [Características desusadas del motor de base de datos de SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md).
 
@@ -44,7 +44,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```  
   
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>Características en desuso en la próxima versión de SQL Server
- Las características del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] siguientes no se admitirán en la siguiente versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No utilice estas características en nuevos trabajos de desarrollo y modifique lo antes posible las aplicaciones que las utilizan actualmente. El valor **Nombre de la característica** aparece en los eventos de seguimiento como ObjectName, así como en los contadores de rendimiento y `sys.dm_os_performance_counters` como el nombre de instancia. El valor de **Id. de la característica** aparece en los eventos de seguimiento como el identificador de objeto (ObjectId).  
+ Las características siguientes de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] no se admitirán en una versión futura de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No utilice estas características en nuevos trabajos de desarrollo y modifique lo antes posible las aplicaciones que las utilizan actualmente. El valor **Nombre de la característica** aparece en los eventos de seguimiento como ObjectName, así como en los contadores de rendimiento y `sys.dm_os_performance_counters` como el nombre de instancia. El valor de **Id. de la característica** aparece en los eventos de seguimiento como el identificador de objeto (ObjectId).  
   
 |Category|Característica desusada|Sustituta|Nombre de característica|Id. de la característica|  
 |--------------|------------------------|-----------------|------------------|----------------|  

@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 68228106bcd2620cb684bd61efec353fdb49585c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: abdd25c6166b40436584a1260d4b1b09d40900c4
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884833"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186092"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Escribir eventos de auditoría de SQL Server en el registro de seguridad  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 En un entorno de alta seguridad, el registro de seguridad de Windows es la ubicación adecuada para escribir los eventos que registran el acceso a los objetos. Se admiten otras ubicaciones de auditoría pero están más expuestas a alteraciones.  
   
- Hay dos requisitos clave para escribir las auditorías del servidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el registro de seguridad de Windows:  
+ Hay tres requisitos clave para escribir las auditorías del servidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el registro de seguridad de Windows:  
   
 -   El valor Auditar el acceso a objetos se debe configurar para capturar los eventos. La herramienta de directiva de auditoría (`auditpol.exe`) expone diversos valores de subdirectivas en la categoría **Auditar el acceso a objetos** . Para permitir que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] audite el acceso a los objetos, configure el valor **Aplicación generada** .  
 -   La cuenta en la que el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se esté ejecutando debe tener el permiso **Generar auditorías de seguridad** para escribir en el registro de seguridad de Windows. De forma predeterminada, las cuentas LOCAL SERVICE y NETWORK SERVICE tienen este permiso. No se requiere este paso si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se está ejecutando en alguna de esas cuentas.  
@@ -56,7 +56,7 @@ La directiva de auditoría de Windows puede afectar a la auditoría de [!INCLUDE
   
 1.  Abra un símbolo del sistema con permisos administrativos.  
   
-    1.  En el menú **Inicio** , seleccione **Todos los programas**, **Accesorios**, haga clic con el botón derecho en **Símbolo del sistema**y, después, haga clic en **Ejecutar como administrador**.  
+    1.  En el menú **Inicio** , seleccione **Todos los programas**, **Accesorios**, haga clic con el botón derecho en **Símbolo del sistema** y, después, haga clic en **Ejecutar como administrador**.  
   
     2.  Si se abre el cuadro de diálogo **Control de cuentas de usuario** , haga clic en **Continuar**.  
   
@@ -74,7 +74,7 @@ La directiva de auditoría de Windows puede afectar a la auditoría de [!INCLUDE
   
 2.  Escriba **secpol.msc** y, a continuación, haga clic en **Aceptar**. Si aparece el cuadro de diálogo **Control de cuentas de usuario** , haga clic en **Continuar**.  
   
-3.  En la herramienta Directiva de seguridad local, expanda **Configuración de seguridad**, expanda **Directivas locales**y, a continuación, haga clic en **Asignación de derechos de usuario**.  
+3.  En la herramienta Directiva de seguridad local, expanda **Configuración de seguridad**, expanda **Directivas locales** y, a continuación, haga clic en **Asignación de derechos de usuario**.  
   
 4.  En el panel de resultados, haga doble clic en **Generar auditorías de seguridad**.  
   
@@ -94,7 +94,7 @@ La directiva de auditoría de Windows puede afectar a la auditoría de [!INCLUDE
   
 2.  Escriba **secpol.msc** y, a continuación, haga clic en **Aceptar**. Si aparece el cuadro de diálogo **Control de cuentas de usuario** , haga clic en **Continuar**.  
   
-3.  En la herramienta Directiva de seguridad local, expanda **Configuración de seguridad**, expanda **Directivas locales**y, a continuación, haga clic en **Directiva de auditoría**.  
+3.  En la herramienta Directiva de seguridad local, expanda **Configuración de seguridad**, expanda **Directivas locales** y, a continuación, haga clic en **Directiva de auditoría**.  
   
 4.  En el panel de resultados, haga doble clic en **Auditar el acceso a objetos**.  
   

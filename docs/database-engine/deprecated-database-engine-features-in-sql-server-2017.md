@@ -3,7 +3,7 @@ title: Características en desuso del motor de base de datos de SQL Server 201
 titleSuffix: SQL Server 2019
 description: Obtenga información sobre las características en desuso del motor de base de datos que siguen disponibles en SQL Server 2017 (14.x), pero que no se deben usar en las aplicaciones nuevas.
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 03/03/2021
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -17,24 +17,23 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
-ms.openlocfilehash: e14f354812c99b9ed3e8be86734e3cb8e07db751
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: e3b27292b817d0ec0bf22afcc1e8eaab61864e82
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489479"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186464"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Características en desuso del motor de base de datos de SQL Server 2017
 
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
-  Este tema describe las características desusadas de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que siguen estando disponibles en [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
+  En este artículo, se describen las características en desuso de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] que siguen estando disponibles en [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
   
 Cuando se establece que una característica está en desuso, significa que:
-
-- Solo está en modo de mantenimiento. No se realizarán cambios nuevos, ni tampoco cambios relacionados con la interoperabilidad con características nuevas.
-- Nos esforzamos por no quitar una característica en desuso en las versiones futuras para facilitar las actualizaciones, aunque en raras ocasiones puede que optemos por quitar permanentemente la característica de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si limita las innovaciones futuras.
-- Para un nuevo trabajo de desarrollo, no se recomienda el uso de las características en desuso.      
+- Solo está en modo de mantenimiento. No se realizarán cambios nuevos, ni tampoco los relacionados con la resolución de la interoperabilidad con características nuevas.
+- Nos esforzamos por no quitar una característica en desuso en las versiones futuras para facilitar las actualizaciones, Sin embargo, en raras ocasiones puede que optemos por interrumpir (quitar) permanentemente la característica de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si limita las innovaciones futuras.
+- En el caso de trabajos nuevos de desarrollo, no utilice características en desuso. En el caso de aplicaciones existentes, planifique modificar lo antes posible las aplicaciones que actualmente usan estas características.     
 
 Puede supervisar el uso de características desusadas utilizando el contador de rendimiento del objeto de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Características desusadas y eventos de seguimiento. Para obtener más información, vea [Usar objetos de SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 
@@ -49,8 +48,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > Esta lista es idéntica a la lista de [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]. No hay anunciada ninguna nueva característica de motor de base de datos en desuso o descontinuada de [!INCLUDE[sssql17-md](../includes/sssql17-md.md)].
 
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>Características en desuso en la próxima versión de SQL Server
-
-Las siguientes características del Motor de base de datos de SQL Server estarán en desuso en la próxima versión de SQL Server. No utilice estas características en nuevos trabajos de desarrollo y modifique lo antes posible las aplicaciones que las utilizan actualmente. El valor **Nombre de la característica** aparece en los eventos de seguimiento como ObjectName, así como en los contadores de rendimiento y `sys.dm_os_performance_counters` como el nombre de instancia. El valor de **Id. de la característica** aparece en los eventos de seguimiento como el identificador de objeto (ObjectId).
+Las características siguientes de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] no se admitirán en una versión futura de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No utilice estas características en nuevos trabajos de desarrollo y modifique lo antes posible las aplicaciones que las utilizan actualmente. El valor **Nombre de la característica** aparece en los eventos de seguimiento como ObjectName, así como en los contadores de rendimiento y `sys.dm_os_performance_counters` como el nombre de instancia. El valor de **Id. de la característica** aparece en los eventos de seguimiento como el identificador de objeto (ObjectId).
 
 ### <a name="back-up-and-restore"></a>Copia de seguridad y restauración
 
@@ -62,7 +60,7 @@ Las siguientes características del Motor de base de datos de SQL Server estar�
 
 | Característica desusada | Sustituta | Nombre de característica | Id. de la característica |
 |--------------------|-------------|--------------|------------|
-Actualización desde la versión 100 (SQL Server 2008 y SQL Server 2008 R2). | Cuando una versión de SQL Server se queda sin [soporte técnico](/lifecycle/products/?products=sql-server), el nivel de compatibilidad de base de datos asociado se marca como en desuso. Pero se sigue dando soporte a las aplicaciones certificadas en cualquier nivel de compatibilidad de base de datos admitido, siempre que sea posible, para facilitar las actualizaciones. Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Nivel de compatibilidad de la base de datos 100 | 108 |
+Actualización desde la versión 100 ([!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]). | Cuando una versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se queda sin [soporte técnico](/lifecycle/products/?products=sql-server), el nivel de compatibilidad de la base de datos asociado se marcará como en desuso. Pero se sigue dando soporte a las aplicaciones certificadas en cualquier nivel de compatibilidad de base de datos admitido, siempre que sea posible, para facilitar las actualizaciones. Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md). | Nivel de compatibilidad de la base de datos 100 | 108 |
 
 ### <a name="database-objects"></a>Objetos de base de datos
 
@@ -325,7 +323,7 @@ Las siguientes características del Motor de base de datos de SQL Server se adm
 
 | Característica desusada | Sustituta | Nombre de característica |
 |--------------------|-------------|--------------|
-| Secuencia de llamada a funciones :: | Reemplazada por SELECT *column_list* FROM sys.\<*function_name*>().<br /><br />Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. | '::' function calling syntax |
+| Secuencia de llamada a funciones :: | Reemplazado por SELECT *column_list* FROM sys.\<*function_name*>().<br /><br />Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. | '::' function calling syntax |
 | Referencias de columnas de tres y de cuatro partes en la lista SELECT. | Los nombres de dos partes son el comportamiento compatible con el estándar.|Nombre de columna de varias partes |
 | Cadena entrecomillada utilizada como alias de columna para una expresión de una lista SELECT:<br /><br />'*string_alias*' = *expression* | *expression* [AS] *column_alias*<br /><br />*expression* [AS] [*column_alias*]<br /><br />*expression* [AS] "*column_alias*"<br /><br />*expression* [AS] '*column_alias*'<br /><br />*column_alias* = *expression* | Literales de cadena como alias de columna |
 | Procedimientos numerados | Ninguno. No debe usarse. | ProcNums |

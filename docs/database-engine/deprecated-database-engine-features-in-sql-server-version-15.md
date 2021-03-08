@@ -15,12 +15,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: b6a8b2edf94d74720836e02589ec8e1270f38dac
-ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
+ms.openlocfilehash: 4e322ff478e9ccdc031882e7c3b5b18fd8506e42
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100525176"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186477"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2019-15x"></a>Características en desuso del motor de base de datos de SQL Server 2019 (15.x)
 
@@ -35,9 +35,9 @@ ms.locfileid: "100525176"
 
 Cuando se establece que una característica está en desuso, significa que:
 
-- Solo está en modo de mantenimiento. No se realizarán cambios nuevos, ni tampoco cambios relacionados con la interoperabilidad con características nuevas.
-- Nos esforzamos por no quitar una característica en desuso en las versiones futuras para facilitar las actualizaciones, aunque en raras ocasiones puede que optemos por quitar permanentemente la característica de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si limita las innovaciones futuras.
-- Para un nuevo trabajo de desarrollo, no se recomienda el uso de las características en desuso.      
+- Solo está en modo de mantenimiento. No se realizarán cambios nuevos, ni tampoco los relacionados con la resolución de la interoperabilidad con características nuevas.
+- Nos esforzamos por no quitar una característica en desuso en las versiones futuras para facilitar las actualizaciones, Sin embargo, en raras ocasiones puede que optemos por interrumpir (quitar) permanentemente la característica de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si limita las innovaciones futuras.
+- En el caso de trabajos nuevos de desarrollo, no utilice características en desuso. En el caso de aplicaciones existentes, planifique modificar lo antes posible las aplicaciones que actualmente usan estas características.     
 
 Puede supervisar el uso de características en desuso utilizando el contador de rendimiento del objeto de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Características desusadas, o bien los eventos ampliados `deprecation_announcement` y `deprecation_final_support`. Para obtener más información, vea [Usar objetos de SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 

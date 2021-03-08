@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: 874c3175b830cbcdb5805c5bdb06a747015ff889
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 67e14f965889cbbeecf2a9800d49b70622b88502
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100273016"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186392"
 ---
 # <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>Sqlrutils (paquete de R en SQL Server Machine Learning Services)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -35,7 +35,7 @@ También puede ejecutar el procedimiento almacenado desde un entorno de R pasand
   
 ## <a name="full-reference-documentation"></a>Documentación de referencia completa
 
-El paquete **sqlrutils** se distribuye en varios productos de Microsoft, pero el uso es el mismo independientemente de si se obtiene el paquete en SQL Server o en otro producto. Dado que las funciones son las mismas, la [documentación de las funciones individuales de sqlrutils](/machine-learning-server/r-reference/revoscaler/revoscaler) se publica en una sola ubicación en la [referencia de R](/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para Microsoft Machine Learning Server. Si existe algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
+El paquete **sqlrutils** se distribuye en varios productos de Microsoft, pero el uso es el mismo independientemente de si se obtiene el paquete en SQL Server o en otro producto. Dado que las funciones son las mismas, la documentación de las funciones individuales de sqlrutils se publica en una sola ubicación en la [referencia del paquete sqlrutils](/machine-learning-server/r-reference/sqlrutils/sqlrutils) para Microsoft Machine Learning Server. Si existe algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
 
 ## <a name="functions-list"></a>Lista de funciones
 
@@ -106,4 +106,4 @@ El objeto del procedimiento almacenado no suele tener datos o valores asociados,
 
 ## <a name="see-also"></a>Consulte también
 
-[Cómo crear un procedimiento almacenado mediante sqlrutils](how-to-create-a-stored-procedure-using-sqlrutils.md)
+[Cómo crear un procedimiento almacenado mediante sqlrutils](/machine-learning-server/r-reference/sqlrutils/how-to-create-a-stored-procedure-from-r)

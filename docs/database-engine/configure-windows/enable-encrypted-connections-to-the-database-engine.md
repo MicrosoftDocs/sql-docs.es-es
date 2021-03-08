@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 87ac1c0759264b00567d5edc2cd9f22727fdd0fa
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 4139b8b53a50aa58329f6a5a5c490d99ee9f0524
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "100353862"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186288"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitación de conexiones cifradas en el Motor de base de datos
 
@@ -71,7 +71,7 @@ Al habilitar el cifrado TLS aumenta la seguridad de los datos que se transmiten 
  El cliente debe ser capaz de comprobar la propiedad del certificado utilizado por el servidor. Si el cliente tiene el certificado de clave pública de la entidad de certificación que firmó el certificado del servidor, no es necesario realizar una mayor configuración. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows incluye los certificados de clave pública de muchas entidades de certificación. Si el certificado del servidor lo firmó una entidad de certificación pública o privada para la que el cliente no tiene certificado de clave pública, debe instalar el certificado de clave pública de esta entidad de certificación.  
   
 > [!NOTE]  
-> Si desea utilizar el cifrado con un clúster de conmutación por error, debe instalar el certificado del servidor con el nombre DNS completo del servidor virtual en todos los nodos del clúster de conmutación por error. Por ejemplo, si tiene un clúster con dos nodos cuyos nombres son **_test1.\_\<your company>\*.com*** y **_test2.\_\<your company>\*.com***, ay un servidor virtual denominado **_virtsql_*_, debe instalar un certificado para _ *_virtsql.\_\<your company>\*.com*** en ambos nodos. Puede establecer el valor de la opción **ForceEncryption** en el cuadro de propiedades **Protocolos para virtsql** de **Configuración de red de SQL Server** en **Sí**.
+> Si desea utilizar el cifrado con un clúster de conmutación por error, debe instalar el certificado del servidor con el nombre DNS completo del servidor virtual en todos los nodos del clúster de conmutación por error. Por ejemplo, si tiene un clúster con dos nodos cuyos nombres son ***test1.\*\<your company>\*.com*** y **_test2.\_\<your company>\*.com***, y un servidor virtual denominado **_virtsql_*_, debe instalar un certificado para _ *_virtsql.\_\<your company>\*.com*** en ambos nodos. Puede establecer el valor de la opción **ForceEncryption** en el cuadro de propiedades **Protocolos para virtsql** de **Configuración de red de SQL Server** en **Sí**.
 
 > [!NOTE]
 > Al crear conexiones cifradas para un indexador de Azure Search en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una máquina virtual de Azure, vea [Configuración de una conexión desde un indexador de Azure Search a SQL Server en una máquina virtual de Azure](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers). 
@@ -85,6 +85,9 @@ Para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cargue un cer
 - La cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener el permiso necesario para acceder al certificado TLS.
 
 - La hora actual del sistema debe ser posterior al valor de la propiedad **Válido desde** del certificado y anterior a la propiedad **Válido hasta** del certificado.
+
+> [!NOTE]  
+> La validez del certificado se evalúa al conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con las conexiones de cliente que se inician especificando la opción de cifrado como verdadera, a menos que la configuración del Certificado de servidor de confianza lo invalide. 
 
 - El certificado debe estar destinado a la autenticación del servidor. Para esto es necesario que la propiedad **Uso mejorado de clave** del certificado para especificar **Autenticación del servidor (1.3.6.1.5.5.7.3.1)** .
 

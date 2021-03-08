@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 1/25/2021
-ms.openlocfilehash: 19328956cab5d7c5e449e48d99bbfda1b999ca6f
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/3/2021
+ms.openlocfilehash: 7e55abe0d02a9f9deffffdaa7639d911faad1fa3
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100067123"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102185752"
 ---
 # <a name="sql-assessment-api"></a>API de SQL Assessment
 
@@ -24,9 +24,13 @@ La API SQL Server Assessment resulta útil si quiere asegurarse de que la confi
 
 La API se puede usar para evaluar lo siguiente:
  
-* Instancia administrada de Azure SQL Database y SQL Server, versión 2012 y posteriores.
+* SQL Server en Azure Virtual Machines
 
-* SQL en sistemas basados en Linux.
+* Instancia administrada de Azure SQL Database
+
+* SQL Server 2012 y versiones posteriores
+
+* SQL en sistemas basados en Linux
 
 La extensión SQL Assessment de SQL Server también usa la API para Azure Data Studio (ADS).
 

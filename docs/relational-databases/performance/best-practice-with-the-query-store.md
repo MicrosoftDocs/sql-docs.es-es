@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8379a2e1c18ea5da82abda5ad25dee47679a742
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 85c9a992660b63f70d2193acd114e7b07d3c1092
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837794"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186502"
 ---
 # <a name="best-practices-with-query-store"></a>Procedimientos recomendados con el almacén de consultas
 
@@ -434,7 +434,7 @@ Las marcas de seguimiento globales 7745 y 7752 se pueden usar para mejorar la di
 > Si va a usar el Almacén de consultas para resultados de la carga de trabajo Just-In-Time en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], prevea la instalación de las mejoras de escalabilidad de rendimiento descritas en [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) lo antes posible. Sin estas mejoras, cuando la base de datos está sometida a cargas de trabajo intensas, puede producirse la contención de bloqueo por subproceso y el rendimiento del servidor puede resultar lento. En concreto, puede ver una contención intensa en el bloqueo por subproceso `QUERY_STORE_ASYNC_PERSIST` o `SPL_QUERY_STORE_STATS_COOKIE_CACHE`. Después de aplicar esta mejora, el Almacén de consultas ya no producirá la contención de bloqueo por subproceso.
 
 > [!IMPORTANT]
-> Si va a usar el Almacén de consultas para los resultados de la carga de trabajo Just-In-Time en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] a través de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), prevea la instalación de la mejora de escalabilidad de rendimiento descrita en SP2 CU15 de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], CU22 de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y CU8 de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] lo antes posible. Sin esta mejora, cuando la base de datos se encuentra sometida a cargas de trabajo ad hoc intensas, el Almacén de consultas puede usar una gran cantidad de memoria y el rendimiento del servidor puede ser lento. Después de aplicar esta mejora, el Almacén de consultas impone límites internos a la cantidad de memoria que pueden usar sus distintos componentes y puede cambiar automáticamente el modo de operación a solo lectura hasta que se devuelva suficiente memoria a [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Tenga en cuenta que los límites de memoria interna del Almacén de consultas no están documentados porque están sujetos a cambios.  
+> Si va a usar el Almacén de consultas para los resultados de la carga de trabajo Just-In-Time en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] a través de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), planifique la instalación de la mejora de escalabilidad de rendimiento descrita en SP2 CU15 de [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], CU23 de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y CU9 de [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] lo antes posible. Sin esta mejora, cuando la base de datos se encuentra sometida a cargas de trabajo ad hoc intensas, el Almacén de consultas puede usar una gran cantidad de memoria y el rendimiento del servidor puede ser lento. Después de aplicar esta mejora, el Almacén de consultas impone límites internos a la cantidad de memoria que pueden usar sus distintos componentes y puede cambiar automáticamente el modo de operación a solo lectura hasta que se devuelva suficiente memoria a [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Tenga en cuenta que los límites de memoria interna del Almacén de consultas no están documentados porque están sujetos a cambios.  
 
 
 ## <a name="using-query-store-in-azure-sql-database-active-geo-replication"></a><a name="geosyncreplicas"></a> Uso de Almacén de consultas en la replicación geográfica activa de Azure SQL Database
