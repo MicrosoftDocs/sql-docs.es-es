@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 8f769581355224f8a9e3c6c222aabec2dc2478ad
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0e74808f16b7b287544d11d209d4da94d8485b3b
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99109334"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102463878"
 ---
 # <a name="sysperiods-transact-sql"></a>Sys. periods (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,6 +43,6 @@ ms.locfileid: "99109334"
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.all_columns &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.system_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)   
- [Preguntas más frecuentes sobre el catálogo del sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [Preguntas más frecuentes sobre el catálogo del sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml)   
  [Tablas temporales](../../relational-databases/tables/temporal-tables.md)  
   

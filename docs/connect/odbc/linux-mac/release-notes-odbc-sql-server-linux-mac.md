@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 2c178b7afd7bf46003b689ef56af67f12609e0a9
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 83f8dbb834af379e02635130e23c0f5fd7299f3b
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837345"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464291"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Notas de la versión de Microsoft ODBC Driver for SQL Server en Linux y macOS
 
@@ -101,7 +101,7 @@ Cuando se usa Always Encrypted con enclaves seguros y Azure Key Vault, las longi
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
-| Always Encrypted con enclaves seguros. | Consulte [Uso de Always Encrypted con ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
+| Always Encrypted con enclaves seguros. | Consulte [Uso de Always Encrypted con ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
 | Carga dinámica de OpenSSL | Consulte [Instrucciones de programación ](programming-guidelines.md#bkmk-openssl). |
 | Configuración de Mantener conexión TCP configurable. | Consulte [Conectarse a SQL Server](connection-string-keywords-and-data-source-names-dsns.md). |
 | Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
@@ -141,7 +141,7 @@ Cuando se usa Always Encrypted con enclaves seguros y Azure Key Vault, las longi
 
 ## <a name="17"></a>17
 
-**Nuevas distribuciones compatibles**: macOS High Sierra y Ubuntu 17.10 
+**Nuevas distribuciones compatibles**: macOS High Sierra y Ubuntu 17.10
 
 **Mejoras de rendimiento**: el rendimiento se multiplica por más de 10 cuando el controlador convierte a o desde UTF-8/16.
 
@@ -151,19 +151,21 @@ Compatibilidad con Always Encrypted para la API de BCP
 
 El nuevo atributo de cadena de conexión UseFMTOnly hace que el controlador use metadatos heredados en casos especiales que requieren tablas temporales.
 
-Compatibilidad con Instancia administrada de Azure SQL. 
+Compatibilidad con Instancia administrada de Azure SQL.
+
 > [!NOTE]
 > Hay varias diferencias cuando se usa Instancia administrada:
-> -   No se admite FILESTREAM. 
-> -   No se admite el acceso al sistema de archivos local, pero es necesario para algunas cosas como los archivos de seguimiento. 
-> -   No es posible crear el UDT desde la ruta de acceso local. 
-> -   No se admite la Autenticación integrada de Windows. 
-> -   DTC no se admite 
-> -   La cuenta "sa" no está presente (la cuenta predeterminada se llama "cloudSA").
-> -   El ERROR de token TDS (0xAA) devuelve un nombre de servidor incorrecto.
-> -   No se admiten caracteres especiales en el nombre de la base de datos. 
-> -   No se admite ALTER DATABASE [dbname1] MODIFY NAME = [dbname2].
-> -   Los mensajes de error siempre se muestran en inglés, independientemente de la configuración de idioma (igual que Azure). 
+>
+> - No se admite FILESTREAM.
+> - No se admite el acceso al sistema de archivos local, pero es necesario para algunas cosas como los archivos de seguimiento.
+> - No es posible crear el UDT desde la ruta de acceso local.
+> - No se admite la Autenticación integrada de Windows.
+> - DTC no se admite
+> - La cuenta "sa" no está presente (la cuenta predeterminada se llama "cloudSA").
+> - El ERROR de token TDS (0xAA) devuelve un nombre de servidor incorrecto.
+> - No se admiten caracteres especiales en el nombre de la base de datos.
+> - No se admite ALTER DATABASE [dbname1] MODIFY NAME = [dbname2].
+> - Los mensajes de error siempre se muestran en inglés, independientemente de la configuración de idioma (igual que Azure).
 
 ## <a name="131-for-ssnoversion-on-linux-and-macos-may-2017"></a>13.1, para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Linux y macOS, mayo de 2017
 

@@ -12,12 +12,12 @@ ms.reviewer: v-daenge
 author: v-chojas
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 23af1879610f55cfccb7c6e8a9f8071752a2a35c
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 2c7ea508a6f0f79a000de1ae42f5e7eb3de09f5a
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837302"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464773"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Notas de la versión de Microsoft ODBC Driver for SQL Server en Windows
 
@@ -165,7 +165,7 @@ Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
-| Always Encrypted con enclaves seguros. | Consulte [Uso de Always Encrypted con ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
+| Always Encrypted con enclaves seguros. | Consulte [Uso de Always Encrypted con ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
 | Configuración de Mantener conexión TCP configurable. | Consulte [Conectarse a SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md). |
 | Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
 | &nbsp; | &nbsp; |

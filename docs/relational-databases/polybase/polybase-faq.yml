@@ -1,0 +1,29 @@
+### YamlMime:FAQ
+metadata:
+  title: Preguntas más frecuentes en PolyBase | Microsoft Docs
+  description: Compare PolyBase y los servidores vinculados, y compare PolyBase en clústeres de macrodatos y en instancias independientes. Descubra las novedades de PolyBase 2019.
+  ms.date: 12/02/2020
+  ms.prod: sql
+  ms.technology: polybase
+  ms.topic: conceptual
+  author: MikeRayMSFT
+  ms.author: mikeray
+  ms.reviewer: mikeray
+  ms.openlocfilehash: ad8a61554bf76ae318f33df6d50a59795448fff4
+  ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 03/08/2021
+  ms.locfileid: "102466204"
+title: Preguntas más frecuentes
+summary: >
+  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+sections:
+- name: Omitido
+  questions:
+  - question: PolyBase frente a servidores vinculados
+    answer: "En la tabla siguiente se resaltan las diferencias entre las características de servidor vinculado y PolyBase:\n\n|PolyBase | Servidores vinculados|\n|--------------------------|--------------------------|  \n|Objeto con ámbito de base de datos.|Objeto con ámbito de instancia.|\n|Usa controladores ODBC.|Usa proveedores OLEDB.|\n|Admite operaciones de solo lectura en todos los orígenes de datos y operaciones de inserción solo para HADOOP y el origen de datos del grupo de datos.|Admite tanto operaciones de lectura como de escritura.|\n|Las consultas al origen de datos remotos desde una sola conexión se pueden escalar horizontalmente |Las consultas al origen de datos remotos desde una única conexión no se pueden escalar horizontalmente|\n|Se admite la aplicación de predicados.|Se admite la aplicación de predicados.|\n|No se necesita ninguna configuración independiente para el grupo de disponibilidad|Se necesita una configuración independiente para cada instancia del grupo de disponibilidad|\n|Solo autenticación básica|Autenticación básica e integrada|\n|Adecuado para procesar un gran número de filas de consultas de análisis|Adecuado para consultas OLTP que devuelven algunas filas|\n|Las consultas que usan tablas externas no pueden participar en transacciones distribuidas|Las consultas distribuidas pueden participar en transacciones distribuidas|\n"
+  - question: Novedades en PolyBase 2019
+    answer: "PolyBase en [!INCLUDE[sssql19](../../includes/sssql19-md.md)] puede leer ahora datos de una mayor variedad de orígenes de datos. Los datos de estos orígenes de datos externos se pueden almacenar como tablas externas en SQL Server. PolyBase además admite el cálculo de aplicación en estos orígenes de datos externos, excepto los tipos de ODBC genéricos.\n\n**Orígenes de datos compatibles**\n\n- SQL Server\n- Oracle\n- Teradata\n- MongoDB\n- Tipos genéricos de ODBC compatibles\n  \n> [!NOTE]\n> PolyBase puede permitir la conexión a orígenes de datos externos mediante controladores ODBC de terceros. Estos controladores no se proporcionan con PolyBase y podrían no funcionar según lo previsto. Para más información, consulte la [guía](../../relational-databases/polybase/polybase-configure-odbc-generic.md) para la configuración genérica de ODBC de PolyBase.  \n"
+  - question: PolyBase en clústeres de macrodatos frente a PolyBase en instancias independientes
+    answer: "En la tabla siguiente se resaltan las características de PolyBase disponibles en la instalación independiente de [!INCLUDE[sssql19](../../includes/sssql19-md.md)] y el clúster de macrodatos de [!INCLUDE[sssql19](../../includes/sssql19-md.md)]:\n\n|Característica |Clúster de macrodatos|Instancia independiente|\n|--------------------------|--------------------------|---------|   \n|Crear un origen de datos externos desde SQL Server, Oracle, Teradata y Mongo DB |X|X|\n|Crear un origen de datos externos con un controlador ODBC de terceros compatible | | X|\n|Crear un origen de datos externos para el origen de datos HADOOP | X| X|\n|Crear un origen de datos externo para Azure Blob Storage | X| X|\n|Crear una tabla externa en un grupo de datos de SQL Server | X| |\n|Crear una tabla externa en un grupo de almacenamiento de SQL Server | X| |\n|Escalar horizontalmente la ejecución de consultas | X| X (solo Windows) |\n\n> [!NOTE]\n> En la tabla no se describe la funcionalidad disponible en la versión más reciente de CTP de [!INCLUDE[sssql19](../../includes/sssql19-md.md)]. Para ver las características disponibles, consulte las notas de la versión. Para más información sobre las conexiones mediante el conector ODBC genérico, consulte la [guía para configurar tipos genéricos de ODBC](polybase-configure-odbc-generic.md)."

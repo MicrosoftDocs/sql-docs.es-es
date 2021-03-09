@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 10/20/2020
-ms.openlocfilehash: daba14f8b407d2ce5aabd81fc38915c29e114a5e
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: b9adac14bfd458b96fe4e46c478af2d2b5d6a181
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100048074"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464874"
 ---
 # <a name="what-is-azure-data-studio"></a>¿Qué es Azure Data Studio?
 
@@ -22,7 +22,7 @@ Azure Data Studio es una herramienta de base de datos multiplataforma para pro
 
 Azure Data Studio ofrece una experiencia de editor moderna con IntelliSense, fragmentos de código, integración del control de código fuente y un terminal integrado. Se ha diseñado para usuarios de plataformas de datos, con gráficos integrados de conjuntos de resultados de consultas y paneles personalizables.
 
-El código fuente de Azure Data Studio y sus proveedores de datos está disponible en GitHub en un CLUF de código fuente que proporciona derechos para modificar y usar el software, pero no para redistribuirlo ni hospedarlo en un servicio en la nube. Para obtener más información, vea [Preguntas más frecuentes de Azure Data Studio](faq.md).
+El código fuente de Azure Data Studio y sus proveedores de datos está disponible en GitHub en un CLUF de código fuente que proporciona derechos para modificar y usar el software, pero no para redistribuirlo ni hospedarlo en un servicio en la nube. Para obtener más información, vea [Preguntas más frecuentes de Azure Data Studio](faq.yml).
 
 **[Descarga e instalación de Azure Data Studio](./download-azure-data-studio.md)**
 
@@ -167,7 +167,7 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Descarga e instalación de Azure Data Studio](./download-azure-data-studio.md)
-- [Preguntas más frecuentes sobre Azure Data Studio](faq.md)
+- [Preguntas más frecuentes sobre Azure Data Studio](faq.yml)
 - [Conectarse y consultar SQL Server](quickstart-sql-server.md)
 - [Conectarse y consultar Azure SQL Database](quickstart-sql-database.md)
 

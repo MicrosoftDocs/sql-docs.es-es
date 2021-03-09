@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 8843bf303f20a7d8aa0baac5be3d9da4e7c54e01
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 6d602db9c189b6e7fce8b767b60204253ccb7f67
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886372"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464401"
 ---
 # <a name="programming-guidelines"></a>Instrucciones de programación
 
@@ -148,7 +148,7 @@ En el momento de redactar este documento, el tamaño predeterminado de la pila e
 3.  Al usar el controlador con aplicaciones multiproceso, la validación del identificador de unixODBC puede convertirse en un cuello de botella de rendimiento. En estos escenarios, se puede obtener significativamente más rendimiento compilando unixODBC con la opción `--enable-fastvalidate`. Sin embargo, tenga cuidado de que esto puede hacer que las aplicaciones que pasan identificadores no válidos a las API de ODBC se bloqueen en lugar de devolver errores de `SQL_INVALID_HANDLE`.
 
 ## <a name="see-also"></a>Consulte también  
-[Preguntas más frecuentes](frequently-asked-questions-faq-for-odbc-linux.md)
+[Preguntas más frecuentes](frequently-asked-questions-faq-for-odbc-linux.yml)
 
 [Problemas conocidos en esta versión del controlador](known-issues-in-this-version-of-the-driver.md)
 

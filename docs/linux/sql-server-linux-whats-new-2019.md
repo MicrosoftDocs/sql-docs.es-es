@@ -7,12 +7,12 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d6978bfa68d3a9b922e46454481618e448e91b96
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 8cc766248f4dd2776a0367b2c0ac6e12f385433e
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100346204"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464670"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Novedades de SQL Server 2019 en Linux
 
@@ -36,7 +36,7 @@ Las actualizaciones se han realizado en SQL Server 2019 en Linux:
 |:-----|:-----|
 |Compatibilidad con la replicación |[Replicación de SQL Server en Linux](sql-server-linux-replication.md)
 |Compatibilidad con el Coordinador de transacciones distribuidas de Microsoft (MSDTC) |[Cómo configurar el Coordinador de transacciones distribuidas de Microsoft (MSDTC) en Linux](sql-server-linux-configure-msdtc.md) |
-|Compatibilidad de OpenLDAP con proveedores terceros de AD |[Tutorial: Usar la autenticación de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md) |
+|Compatibilidad de OpenLDAP con proveedores terceros de AD |[Tutorial: Uso de la autenticación de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md) |
 |Machine Learning en Linux |[Instalar Machine Learning en Linux](sql-server-linux-setup-machine-learning.md) |
 |Mejoras de `tempdb` | De forma predeterminada, una nueva instalación de SQL Server en Linux crea varios archivos de datos `tempdb` en función del número de núcleos lógicos (con un máximo de 8 archivos de datos). Esto no es aplicable a actualizaciones de versión principal o secundaria en contexto. Cada archivo `tempdb` es de 8 MB con un crecimiento automático de 64 MB. Este comportamiento es similar a la instalación de SQL Server predeterminada en Windows. |
 | PolyBase en Linux | [Instale PolyBase](../relational-databases/polybase/polybase-linux-setup.md) en Linux para conectores que no son Hadoop.<br/><br/>[Asignación del tipo de PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
@@ -54,6 +54,6 @@ Para instalar SQL Server en Linux, use uno de los siguientes tutoriales:
 - [Ejecución en Docker](quickstart-install-connect-docker.md?view=sql-server-linux-ver15&preserve-view=true)
 - [Aprovisionar una máquina virtual de SQL en Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
-Para obtener respuesta a las preguntas más frecuentes, vea [Preguntas más frecuentes sobre SQL Server en Linux](sql-server-linux-faq.md). Para ver otras mejoras presentadas en SQL Server 2019, vea [Novedades de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true).
+Para obtener respuesta a las preguntas más frecuentes, vea [Preguntas más frecuentes sobre SQL Server en Linux](sql-server-linux-faq.yml). Para ver otras mejoras presentadas en SQL Server 2019, vea [Novedades de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15&preserve-view=true).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
