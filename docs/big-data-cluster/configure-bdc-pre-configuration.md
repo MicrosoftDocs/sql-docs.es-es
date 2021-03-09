@@ -9,12 +9,12 @@ ms.date: 02/11/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b00ed57288d19f08555a00eec8c9e62edc0f8cf6
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: f2adf48a0aef465f4c013b5adaf97a75be4abf77
+ms.sourcegitcommit: 765262cdc6352a5325148afc22fa4f1499fe1aa3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100343969"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514872"
 ---
 # <a name="configure-a-sql-server-big-data-cluster---pre-cu9-release"></a>Configuración de un clúster de macrodatos de SQL Server (versiones anteriores a CU9)
 
@@ -102,7 +102,7 @@ Un Clúster de macrodatos tiene cuatro categorías de configuración:
 
 Por ejemplo, todas las configuraciones del servicio `hdfs` pertenecen a la categoría `hdfs`. Tenga en cuenta que todas las configuraciones de Hadoop (sitio principal), HDFS y Zookeeper pertenecen a la categoría `hdfs`; todas las configuraciones de Livy, Spark, Yarn, Hive y Metastore de Hive pertenecen a la categoría `spark`. 
 
-[Configuraciones admitidas](reference-config-spark-hadoop.md#supported-configurations) muestra propiedades de Apache Spark y Hadoop que se pueden configurar al implementar un clúster de macrodatos de SQL Server.
+[Configuraciones admitidas](reference-config-spark-hadoop.md) muestra propiedades de Apache Spark y Hadoop que se pueden configurar al implementar un clúster de macrodatos de SQL Server.
 
 En las siguientes secciones se enumeran las propiedades que **no puede** modificar en un clúster:
 
