@@ -6146,7 +6146,7 @@ items:
             href: dma/dma-assess-ssis.md
           - name: Guardado y carga de evaluaciones
             href: dma/dma-save-load-assessments.md
-          - name: Identificación de la SKU de Azure SQL Database adecuada
+          - name: Identificación de la SKU de Azure SQL de destino
             href: dma/dma-sku-recommend-sql-db.md
           - name: Actualización de SQL Server a una versión posterior
             href: dma/dma-migrateonpremsql.md
@@ -7213,7 +7213,7 @@ items:
                   - name: Conectividad de Kerberos
                     href: relational-databases/polybase/polybase-troubleshoot-connectivity.md
                   - name: Preguntas más frecuentes de PolyBase
-                    href: relational-databases/polybase/polybase-faq.md
+                    href: relational-databases/polybase/polybase-faq.yml
                   - name: Errores de PolyBase y posibles soluciones
                     href: relational-databases/polybase/polybase-errors-and-possible-solutions.md
           - name: Referencia
@@ -10037,7 +10037,7 @@ items:
               - name: SQL Server 2017
                 href: linux/sql-server-linux-editions-and-components-2017.md
           - name: Preguntas más frecuentes
-            href: linux/sql-server-linux-faq.md
+            href: linux/sql-server-linux-faq.yml
       - name: Guías de inicio rápido
         items:
           - name: 'Instalación y conexión: Red Hat'
@@ -11513,7 +11513,7 @@ items:
         href: relational-databases/system-catalog-views/catalog-views-transact-sql.md
         items:
           - name: Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server
-            href: relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md
+            href: relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.yml
           - name: 'Esquemas: sys.schemas'
             href: relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md
           - name: 'Mensajes (de errores): sys.messages'

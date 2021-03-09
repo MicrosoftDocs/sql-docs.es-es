@@ -1,7 +1,7 @@
 ---
 title: 'Acceso a datos externos: MongoDB: PolyBase'
 description: En el artículo se explica cómo usar PolyBase en una instancia de SQL Server para consultar datos externos en MongoDB. Cree tablas externas para hacer referencia a los datos externos.
-ms.date: 12/13/2019
+ms.date: 03/05/2021
 ms.metadata: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15'
-ms.openlocfilehash: 306feebece733cf382f486dc686117016800f4d1
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: a9d975bf5a65ec8ece1aa2f3b1e957007046f4c8
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100351796"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247511"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurar PolyBase para acceder a datos externos en MongoDB
 
@@ -42,29 +42,32 @@ En esta sección se utilizan los siguientes comandos de Transact-SQL:
 
 1. Cree una credencial de ámbito de base de datos para acceder al origen MongoDB.
 
-    ```sql
-    /*  specify credentials to external data source
-    *  IDENTITY: user name for external source. 
-    *  SECRET: password for external source.
-    */
-    CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
-    ```
-    
-   > [!IMPORTANT] 
-   > El conector ODBC de MongoDB para PolyBase solo admite la autenticación básica, no la autenticación Kerberos.    
-    
-1. Cree un origen de datos externo con [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+   Con el script siguiente se crea una credencial con ámbito de base de datos. Antes de ejecutar el script, actualícelo para su entorno:
+
+    - Reemplace `<credential_name>` por un nombre para la credencial.
+    - Reemplace `<username>` por el nombre de usuario del origen externo.
+    - Reemplace `<password>` por la contraseña adecuada. 
 
     ```sql
-    /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
-    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    *CONNECTION_OPTIONS: Specify driver location
-    *  CREDENTIAL: the database scoped credential, created above.
-    */
+    CREATE DATABASE SCOPED CREDENTIAL <credential_name> WITH IDENTITY = '<username>', Secret = '<password>';
+    ```
+
+   > [!IMPORTANT]
+   > El conector ODBC de MongoDB para PolyBase solo admite la autenticación básica, no la autenticación Kerberos.
+
+1. Crear un origen de datos externo
+
+    Con el script siguiente se crea el origen de datos externo. A modo de referencia, consulte [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Antes de ejecutar el script, actualícelo para su entorno:
+
+    - Actualice la ubicación. Establezca los valores de `<server>` y `<port>` para su entorno.
+    - Reemplace `<credential_name>` por el nombre de la credencial que creó en el paso anterior.
+    - Opcionalmente, puede especificar `PUSHDOWN = ON` o `PUSHDOWN = OFF` si quiere especificar el cálculo de aplicación en el origen externo.
+
+    ```sql
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH (LOCATION = 'mongodb://<server>[:<port>]',
+    WITH (LOCATION = '<mongodb://<server>[:<port>]>',
     -- PUSHDOWN = ON | OFF,
-    CREDENTIAL = credential_name);
+    CREDENTIAL = <credential_name>);
     ```
 
 1. **Opcional:** Cree estadísticas en una tabla externa.
@@ -75,12 +78,17 @@ En esta sección se utilizan los siguientes comandos de Transact-SQL:
     CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
     ```
 
->[!IMPORTANT] 
->Una vez que se haya creado un origen de datos externos, se puede usar el comando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) para crear una tabla consultable a través de ese origen.
+>[!IMPORTANT]
+>Una vez que se haya creado un origen de datos externos, se puede usar el comando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) para crear una tabla consultable mediante ese origen.
 >
 >Para obtener un ejemplo, vea [Crear una tabla externa para MongoDB](../../t-sql/statements/create-external-table-transact-sql.md#k-create-an-external-table-for-mongodb).
 
+## <a name="mongodb-connection-options"></a>Opciones de conexión de MongoDB
+
+Para obtener información sobre las opciones de conexión de MongoDB, consulte la [documentación de MongoDB sobre el formato de URI de cadena de conexión](https://docs.mongodb.com/manual/reference/connection-string/#connection-string-options).
+
 ## <a name="flattening"></a>Acoplamiento
+
 El acoplamiento está habilitado para los datos anidados y repetidos de las colecciones de documentos de MongoDB. El usuario debe habilitar `create an external table` y especificar explícitamente un esquema relacional mediante colecciones de documentos de MongoDB que podrían tener datos anidados o repetidos. Los tipos de datos JSON anidados o repetidos se acoplarán del siguiente modo:
 
 * Objeto: colección de pares clave-valor sin ordenar delimitada por llaves (anidadas)
@@ -111,10 +119,10 @@ Como ejemplo, SQL Server evalúa la colección de restaurantes del conjunto de 
 
 La dirección del objeto se acoplará de la siguiente manera:
 
-* El campo anidado restaurant.address.building se convierte en restaurant.address_building
-* El campo anidado restaurant.address.coord se convierte en restaurant.address_coord
-* El campo anidado restaurant.address.street se convierte en restaurant.address_street
-* El campo anidado restaurant.address.zipcode se convierte en restaurant.address_zipcode
+- El campo anidado `restaurant.address.building` pasa a ser `restaurant.address_building`.
+- El campo anidado `restaurant.address.coord` pasa a ser `restaurant.address_coord`.
+- El campo anidado `restaurant.address.street` pasa a ser `restaurant.address_street`.
+- El campo anidado `restaurant.address.zipcode` pasa a ser `restaurant.address_zipcode`.
 
 Las calificaciones de la matriz se acoplará de la siguiente manera:
 
@@ -128,7 +136,28 @@ Las calificaciones de la matriz se acoplará de la siguiente manera:
 
 ## <a name="cosmos-db-connection"></a>Conexión de Cosmos DB
 
-Con la API de Mongo de Cosmos DB y el conector de PolyBase de Mongo DB, puede crear una tabla externa de una **instancia de Cosmos DB**. Esto se consigue mediante los mismos pasos indicados arriba. Asegúrese de que la credencial de ámbito de base de datos, la dirección del servidor, el puerto y la cadena de ubicación reflejen los del servidor de Cosmos DB. 
+Con la API de Mongo de Cosmos DB y el conector de PolyBase de Mongo DB, puede crear una tabla externa de una **instancia de Cosmos DB**. Esto se consigue mediante los mismos pasos indicados arriba. Asegúrese de que la credencial de ámbito de base de datos, la dirección del servidor, el puerto y la cadena de ubicación reflejen los del servidor de Cosmos DB.
+
+## <a name="examples"></a>Ejemplos
+
+En el ejemplo siguiente se crea un origen de datos externo con los parámetros siguientes:
+
+| Parámetro | Valor|
+|---|---|
+| Nombre | `external_data_source_name`|
+| Servicio | `mongodb0.example.com`|
+| Instancia | `27017`|
+| Conjunto de réplicas | `myRepl`|
+| TLS | `true`|
+| Cálculo de aplicación | `On`|
+
+```sql
+CREATE EXTERNAL DATA SOURCE external_data_source_name
+    WITH (LOCATION = 'mongodb://mongodb0.example.com:27017',
+    CONNECTION_OPTION = 'replicaSet=myRepl','tls=true',
+    PUSHDOWN = ON ,
+    CREDENTIAL = credential_name);
+```
 
 ## <a name="next-steps"></a>Pasos siguientes
 

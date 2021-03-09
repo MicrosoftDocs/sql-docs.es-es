@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/24/2021
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 1b7d902064ef7a083b706af08730e91319be312f
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 928936a4b4ad6524e4d0817b94696353cb8427e9
+ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101836849"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102186607"
 ---
 # <a name="sqlcmd-utility"></a>Utilidad sqlcmd
 
@@ -180,7 +180,8 @@ El cliente usa este modificador al conectarse a SQL Database o a Azure Synapse A
 
 > [!IMPORTANT]
 > La opción `-G` solo se aplica a Azure SQL Database y a Azure Synapse Analytics.
-> La autenticación interactiva de AAD no se admite actualmente ni en Linux ni en macOS. La autenticación integrada de AAD requiere la versión 17.6.1 o superior de [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) y un [entorno de Kerberos configurado](../connect/odbc/linux-mac/using-integrated-authentication#configure-kerberos) correctamente.
+> La autenticación interactiva de AAD no se admite actualmente ni en Linux ni en macOS. La autenticación integrada de AAD requiere la versión 17.6.1 o superior de [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) y un [entorno de Kerberos configurado](../connect/odbc/linux-mac/using-integrated-authentication.md) correctamente.
+
 
 - **Nombre de usuario y contraseña de Azure Active Directory:** 
 
@@ -199,7 +200,7 @@ El cliente usa este modificador al conectarse a SQL Database o a Azure Synapse A
 - **Autenticación integrada de Azure Active Directory**
 
    Para autenticación integrada de Azure Active Directory, proporcione la opción **-G** sin un nombre de usuario o contraseña.
-   *La autenticación integrada de AAD requiere la versión 17.6.1 o superior de [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) y un [entorno de Kerberos configurado](../connect/odbc/linux-mac/using-integrated-authentication.md#configure-kerberos) correctamente.*
+   *La autenticación integrada de AAD requiere la versión 17.6.1 o superior de [Microsoft ODBC Driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) y un [entorno de Kerberos configurado](../connect/odbc/linux-mac/using-integrated-authentication.md) correctamente.*
 
     ```cmd
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
@@ -467,11 +468,10 @@ No. Sin embargo, se recomienda el uso de una contraseña segura.
   
 - **image**  
   
-> [!NOTE]  
->  Los UDT pueden ser de longitud fija, en función de la implementación. Si esta longitud de un UDT de longitud fija es más corta que *anchura_de_visualización*, el valor del UDT devuelto no se ve afectado. No obstante, si la longitud es mayor que *anchura_de_visualización*, la salida queda truncada.  
-   
+> [!NOTE]
+> Los UDT pueden ser de longitud fija, en función de la implementación. Si esta longitud de un UDT de longitud fija es más corta que *anchura_de_visualización*, el valor del UDT devuelto no se ve afectado. No obstante, si la longitud es mayor que *anchura_de_visualización*, la salida queda truncada.  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  Use la opción **-y 0** con mucha precaución, ya que puede causar graves problemas de rendimiento en el servidor y en la red, según el tamaño de los datos devueltos.  
   
  **-Y** _fixed_length_type_display_width_  
@@ -514,7 +514,7 @@ No. Sin embargo, se recomienda el uso de una contraseña segura.
  Enumera los equipos servidores configurados localmente y los nombres de los equipos servidores que difunden en la red. Este parámetro no se puede usar en combinación con otros parámetros. El número máximo de equipos de servidor que se puede enumerar es 3000. Si la lista de servidor se trunca debido al tamaño del búfer, aparece un mensaje de advertencia.  
   
 > [!NOTE]  
->  Debido a la naturaleza de las difusiones en las redes, **sqlcmd** podría no recibir una respuesta de todos los servidores a tiempo. Por lo tanto, la lista de servidores devuelta puede variar en cada invocación de esta opción.  
+> Debido a la naturaleza de las difusiones en las redes, **sqlcmd** podría no recibir una respuesta de todos los servidores a tiempo. Por lo tanto, la lista de servidores devuelta puede variar en cada invocación de esta opción.  
   
  Si se especifica el parámetro opcional **c**, la salida aparece sin la línea de encabezado **Servers:** y cada línea de servidor se muestra sin espacios iniciales. Esta presentación se conoce como salida limpia. La salida limpia mejora el rendimiento del procesamiento de los lenguajes de scripting.  
   
