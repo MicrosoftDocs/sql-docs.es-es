@@ -8,19 +8,19 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 3/3/2021
-ms.openlocfilehash: 7e55abe0d02a9f9deffffdaa7639d911faad1fa3
-ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
+ms.date: 3/5/2021
+ms.openlocfilehash: 37e31834df74bf91fcf31004973c1556b8f34552
+ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102185752"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102247464"
 ---
 # <a name="sql-assessment-api"></a>API de SQL Assessment
 
-La API SQL Server Assessment ofrece un mecanismo para evaluar la configuración de la instancia de SQL Server a efectos de los procedimientos recomendados. La API se entrega con un conjunto de reglas que contiene las reglas de procedimientos recomendados sugeridas por el equipo de SQL Server. Este conjunto de reglas se ha mejorado con el lanzamiento de nuevas versiones, pero cabe destacar que, al mismo tiempo, la API se ha diseñado con el objetivo de proporcionar una solución altamente personalizable y extensible. Por lo tanto, los usuarios pueden ajustar las reglas predeterminadas y crear las suyas propias.
+La API de SQL Assessment ofrece un mecanismo para evaluar la configuración de la instancia de SQL Server a efectos de los procedimientos recomendados. La API se entrega con un conjunto de reglas que contiene las reglas de procedimientos recomendados sugeridas por el equipo de SQL Server. Este conjunto de reglas se ha mejorado con el lanzamiento de nuevas versiones, pero cabe destacar que, al mismo tiempo, la API se ha diseñado con el objetivo de proporcionar una solución altamente personalizable y extensible. Por lo tanto, los usuarios pueden ajustar las reglas predeterminadas y crear las suyas propias.
 
-La API SQL Server Assessment resulta útil si quiere asegurarse de que la configuración de SQL Server esté en consonancia con los procedimientos recomendados. Después de una valoración inicial, se puede realizar un seguimiento de la estabilidad de la configuración mediante evaluaciones programadas periódicamente.
+La API de SQL Assessment resulta útil si quiere asegurarse de que la configuración de SQL Server esté en consonancia con los procedimientos recomendados. Después de una valoración inicial, se puede realizar un seguimiento de la estabilidad de la configuración mediante evaluaciones programadas periódicamente.
 
 La API se puede usar para evaluar lo siguiente:
  
@@ -34,11 +34,14 @@ La API se puede usar para evaluar lo siguiente:
 
 La extensión SQL Assessment de SQL Server también usa la API para Azure Data Studio (ADS).
 
+>[!NOTE]
+>La API de SQL Assessment proporciona una evaluación de diversas áreas, pero no profundiza en la seguridad. Se recomienda usar la [evaluación de vulnerabilidades de SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment) para mejorar de forma proactiva la seguridad de la base de datos.
+
 ## <a name="rules"></a>Reglas
 
 Las reglas, a las que a veces se hace referencia como "comprobaciones", se definen en archivos con formato JSON. El formato del conjunto de reglas requiere que se especifiquen su nombre y versión. Al usar conjuntos de reglas personalizados, podrá saber fácilmente qué recomendaciones proceden de los distintos conjunto de reglas.
 
-El conjunto de reglas de Microsoft está disponible en GitHub. Puede visitar el [repositorio de ejemplos](https://aka.ms/sql-assessment-api) para obtener más detalles.
+El conjunto de reglas de Microsoft está disponible en GitHub. Puede ver [todo el conjunto de reglas](https://github.com/microsoft/sql-server-samples/blob/567d49a42d4cf10e4942b19290ab80828b451b77/samples/manage/sql-assessment-api/DefaultRuleset.csv) en el [repositorio de ejemplos](https://aka.ms/sql-assessment-api).
 
 ## <a name="sql-assessment-cmdlets-and-associated-extensions"></a>Cmdlets de SQL Assessment y extensiones asociadas
 
@@ -156,10 +159,11 @@ Las reglas específicas tienen umbrales que se comparan con el valor actual de u
 
 Puede encadenar conjuntos de reglas agregando uno o más archivos JSON como parámetros a la llamada API SQL Server Assessment. Su organización podría escribir esos archivos u obtenerlos de un tercero. Por ejemplo, puede tener el archivo JSON que deshabilite reglas específicas del conjunto de reglas de Microsoft y otro archivo JSON de un experto del sector que incluya reglas que le resulten útiles para su entorno, seguido de otro archivo JSON que cambie algunos valores de umbral en ese archivo JSON.
 
-> [!IMPORTANT]  
-> Le recomendamos que no utilice conjuntos de reglas que provengan de fuentes que no sean de confianza hasta que los haya revisado detenidamente para asegurarse de que sean seguros.
+>[!IMPORTANT]
+>Le recomendamos que no utilice conjuntos de reglas que provengan de fuentes que no sean de confianza hasta que los haya revisado detenidamente para asegurarse de que sean seguros.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 * [Objetos de administración de SQL Server (SMO)](../../relational-databases/server-management-objects-smo/overview-smo.md)
-* [PowerShell](../../powershell/download-sql-server-ps-module.md).
+* [PowerShell](../../powershell/download-sql-server-ps-module.md)
+* [Evaluación de vulnerabilidad de SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-vulnerability-assessment)
