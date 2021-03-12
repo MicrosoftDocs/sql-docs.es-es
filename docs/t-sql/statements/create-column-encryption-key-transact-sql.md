@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: ad44213480ea1a48e49c685952474b436491c65b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: bfd4616ff90642c53316f05b44a8e7be89f490cf
+ms.sourcegitcommit: a76f5270429de5ca5a164505d6c9b832aca60b3e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99204931"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103202625"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 
