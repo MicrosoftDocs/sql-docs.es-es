@@ -8,15 +8,17 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 3/5/2021
-ms.openlocfilehash: 37e31834df74bf91fcf31004973c1556b8f34552
-ms.sourcegitcommit: 0bcda4ce24de716f158a3b652c9c84c8f801677a
+ms.date: 3/10/2021
+ms.openlocfilehash: 34a7ff8c9380a88bb285a6d2e51e57e652f0310d
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "102247464"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622857"
 ---
 # <a name="sql-assessment-api"></a>API de SQL Assessment
+
+[!INCLUDE [SQL Server 2012, ASMI, SQL Server on Azure VM, SQL on Linux](../../includes/applies-to-version/sql-asmi-sqlavm-sql-linux.md)]
 
 La API de SQL Assessment ofrece un mecanismo para evaluar la configuración de la instancia de SQL Server a efectos de los procedimientos recomendados. La API se entrega con un conjunto de reglas que contiene las reglas de procedimientos recomendados sugeridas por el equipo de SQL Server. Este conjunto de reglas se ha mejorado con el lanzamiento de nuevas versiones, pero cabe destacar que, al mismo tiempo, la API se ha diseñado con el objetivo de proporcionar una solución altamente personalizable y extensible. Por lo tanto, los usuarios pueden ajustar las reglas predeterminadas y crear las suyas propias.
 

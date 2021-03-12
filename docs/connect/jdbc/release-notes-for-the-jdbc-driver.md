@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c394eaeb6ec8361dd429b944b128d19a0cf33319
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: b308bd441b063592a39dae710c782aaf826c3071
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837532"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464793"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Notas de la versión de Microsoft JDBC Driver para SQL Server
 
@@ -34,7 +34,7 @@ Si tiene que descargar el controlador en un idioma distinto al que se ha detecta
 Para obtener el controlador en un archivo ZIP: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2155948&clcid=0x40a)  
 Para obtener el controlador en un archivo tar.gz: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2155949&clcid=0x40a)  
 
-### <a name="compliance"></a>Cumplimiento normativo
+### <a name="92-compliance"></a>Cumplimiento normativo de la versión 9.2
 
 | Cambio respecto del cumplimiento | Detalles |
 | :---------------- | :------ |
@@ -43,7 +43,7 @@ Para obtener el controlador en un archivo tar.gz: [Chino (simplificado)](https:/
 | Compatible con Java Development Kit (JDK) versión 15.0, 11.0 y 1.8. | Microsoft JDBC Driver 9.2 para SQL Server ahora es compatible con Java Development Kit (JDK), versión 15.0, además de con JDK 11.0 y 1.8. |
 | &nbsp; | &nbsp; |
 
-### <a name="releases"></a>Versiones
+### <a name="92-releases"></a>Lanzamientos de la versión 9.2
 
 Número de versión: 9.2.1  
 Fecha de publicación: 2 de marzo de 2021
@@ -66,29 +66,32 @@ Archivo Tar.gz: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2
 Microsoft JDBC Driver 9.2 para SQL Server ahora es compatible con Java Development Kit (JDK), versión 15.0, además de con JDK 11.0 y 1.8.
 
 ### <a name="added-support-for-azure-active-directory-interactive-authentication"></a>Compatibilidad agregada con la autenticación interactiva de Azure Active Directory
+
 | Incorporación del tipo de autenticación | Detalles |
 | :---------- | :------ |
 | Microsoft JDBC Driver 9.2 para SQL Server ahora admite la autenticación en Azure Key Vault mediante la autenticación interactiva. | Consulte [Conexión mediante autenticación de Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="added-support-for-azure-active-directory-service-principal-authentication"></a>Compatibilidad agregada con la autenticación de la entidad de servicio de Azure Active Directory
+
 | Incorporación del tipo de autenticación | Detalles |
 | :---------- | :------ |
 | Microsoft JDBC Driver 9.2 para SQL Server ahora admite la autenticación en Azure Key Vault mediante el identificador de cliente y el secreto de una identidad de entidad de servicio. | Consulte [Conexión mediante autenticación de Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-azure-key-vault-library-to-use-modern-azure-key-vault-library"></a>Actualización de la biblioteca de Azure Key Vault para poder usar la biblioteca moderna de Azure Key Vault
+
 | Cambios en la biblioteca de Azure Key Vault | Detalles |
 | :------------------- | :------ |
 | Microsoft JDBC Driver 9.2 se ha migrado de la biblioteca de Azure Key Vault y las bibliotecas de autenticación de Active Directory (ADAL) de generación anterior a las bibliotecas más modernas de Azure Key Vault y de identidades de Azure. | **CAMBIO DE DEPENDENCIAS**. Asegúrese de actualizar las dependencias de la aplicación si usa la autenticación de Azure Active Directory o Azure Key Vault. Consulte los requisitos de dependencias al [trabajar con el proveedor de Azure Key Vault](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-the-azure-key-vault-provider) o con [autenticación de Azure Active Directory](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-azure-active-directory-authentication) |
 | &nbsp; | &nbsp; |
 
 ### <a name="enabled-usebulkcopyforbatchinsert-for-non-azure-synapse-analytics-servers"></a>Habilitación de useBulkCopyForBatchInsert para servidores que no son de Azure Synapse Analytics
+
 | Cambios en useBulkCopyForBatchInsert para servidores que no son de Azure Synapse Analytics | Detalles |
 | :------------------- | :------ |
 | Microsoft JDBC Driver 9.2 ahora permite el uso de la API de copia masiva para la operación de inserción por lotes en servidores que no son de Azure Synapse Analytics. | Consulte [Uso de la API de copia masiva para la operación de inserción por lotes](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md). |
 | &nbsp; | &nbsp; |
-
 
 ## <a name="previous-releases"></a>Versiones anteriores
 
@@ -104,7 +107,7 @@ Si tiene que descargar el controlador en un idioma distinto al que se ha detecta
 Para obtener el controlador en un archivo ZIP: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40a)  
 Para obtener el controlador en un archivo tar.gz: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40a)  
 
-### <a name="compliance"></a>Cumplimiento normativo
+### <a name="84-compliance"></a>Cumplimiento normativo de la versión 8.4
 
 | Cambio respecto del cumplimiento | Detalles |
 | :---------------- | :------ |
@@ -113,7 +116,7 @@ Para obtener el controlador en un archivo tar.gz: [Chino (simplificado)](https:/
 | Compatible con Java Development Kit (JDK) versión 14.0, 11.0 y 1.8. | Microsoft JDBC Driver 8.4 para SQL Server ahora es compatible con Java Development Kit (JDK), versión 14.0, además de con JDK 11.0 y 1.8. |
 | &nbsp; | &nbsp; |
 
-### <a name="releases"></a>Versiones
+### <a name="84-releases"></a>Lanzamientos de la versión 8.4
 
 Número de versión: 8.4.1  
 Fecha de publicación: 27 de agosto de 2020  
@@ -175,7 +178,7 @@ Si tiene que descargar el controlador en un idioma distinto al que se ha detecta
 Para obtener el controlador en un archivo ZIP: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2122433&clcid=0x40a)  
 Para obtener el controlador en un archivo tar.gz: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2122536&clcid=0x40a)  
 
-### <a name="compliance"></a>Cumplimiento normativo
+### <a name="82-compliance"></a>Cumplimiento normativo de la versión 8.2
 
 | Cambio respecto del cumplimiento | Detalles |
 | :---------------- | :------ |
@@ -184,7 +187,7 @@ Para obtener el controlador en un archivo tar.gz: [Chino (simplificado)](https:/
 | Compatible con Java Development Kit (JDK) versión 13.0, 11.0 y 1.8. | Microsoft JDBC Driver 8.2 para SQL Server es compatible con Java Development Kit (JDK) versión 13.0, además de con JDK 11.0 y 1.8. |
 | &nbsp; | &nbsp; |
 
-### <a name="releases"></a>Versiones
+### <a name="82-releases"></a>Lanzamientos de la versión 8.2
 
 Número de versión: 8.2.2  
 Fecha de publicación: 24 de marzo de 2020  
@@ -210,7 +213,7 @@ Microsoft JDBC Driver 8.2 para SQL Server es compatible con Java Development 
 | Cambio de Always Encrypted | Detalles |
 | :--------- | :------ |
 | Microsoft JDBC Driver 8.2 para SQL Server ahora admite Always Encrypted con enclaves seguros. Los detalles se pueden encontrar aquí: Always Encrypted con enclaves seguros. |
-| Más información y código de ejemplo. | [Always Encrypted con enclaves seguros](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
+| Más información y código de ejemplo. | Vea [Always Encrypted con enclaves seguros](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server-sup1sup"></a>Mejora del rendimiento al recuperar tipos de datos temporales de SQL Server <sup>1</sup>
@@ -231,7 +234,7 @@ Microsoft JDBC Driver 8.2 para SQL Server es compatible con Java Development 
 | El archivo DLL también se ha cargado en el repositorio de Maven para facilitar el acceso. | Vea [esta página](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth). |
 | &nbsp; | &nbsp; |
 
-### <a name="known-issues"></a>Problemas conocidos
+### <a name="82-known-issues"></a>Problemas conocidos de la versión 8.2
 
 | Problemas conocidos | Detalles |
 | :----------- | :------ |
@@ -250,7 +253,7 @@ Si tiene que descargar el controlador en un idioma distinto al que se ha detecta
 Para obtener el controlador en un archivo ejecutable autoextraíble: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2122712&clcid=0x40a)  
 Para obtener el controlador en un archivo tar.gz: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2122613&clcid=0x40a)  
 
-### <a name="compliance"></a>Cumplimiento normativo
+### <a name="74-compliance"></a>Cumplimiento normativo de la versión 7.4
 
 | Cambio respecto del cumplimiento | Detalles |
 | :---------------- | :------ |
@@ -259,7 +262,7 @@ Para obtener el controlador en un archivo tar.gz: [Chino (simplificado)](https:/
 | Compatible con Java Development Kit (JDK) versión 12.0, 11.0 y 1.8. | Microsoft JDBC Driver 7.4 para SQL Server es compatible con Java Development Kit (JDK) versión 12.0, además de con JDK 11.0 y 1.8. |
 | &nbsp; | &nbsp; |
 
-### <a name="releases"></a>Versiones
+### <a name="74-releases"></a>Lanzamientos de la versión 7.4
 
 Número de versión: 7.4.1  
 Fecha de publicación: 2 de agosto de 2019  
@@ -299,7 +302,7 @@ Microsoft JDBC Driver 7.4 para SQL Server es compatible con Java Development Kit
 | Detalles adicionales. | Consulte [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) (Dependencias de características de Microsoft JDBC Driver para SQL Server). |
 | &nbsp; | &nbsp; |
 
-### <a name="known-issues"></a>Problemas conocidos
+### <a name="74-known-issues"></a>Problemas conocidos de la versión 7.4
 
 | Problemas conocidos | Detalles |
 | :----------- | :------ |
@@ -319,7 +322,7 @@ Si tiene que descargar el controlador en un idioma distinto al que se ha detecta
 Para obtener el controlador en un archivo ejecutable autoextraíble: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2122435&clcid=0x40a)  
 Para obtener el controlador en un archivo tar.gz: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2122434&clcid=0x40a)  
 
-### <a name="compliance"></a>Cumplimiento normativo
+### <a name="72-compliance"></a>Cumplimiento normativo de la versión 7.2
 
 | Cambio respecto del cumplimiento | Detalles |
 | :---------------- | :------ |
@@ -328,7 +331,7 @@ Para obtener el controlador en un archivo tar.gz: [Chino (simplificado)](https:/
 | Compatible con Java Development Kit (JDK) versión 11.0, además de con JDK 1.8. | Microsoft JDBC Driver 7.2 para SQL Server is compatible con Java Development Kit (JDK) versión 11.0, además de con JDK 1.8. |
 | &nbsp; | &nbsp; |
 
-### <a name="releases"></a>Versiones
+### <a name="72-releases"></a>Lanzamientos de la versión 7.2
 
 Número de versión: 7.2.2  
 Fecha de publicación: 16 de abril de 2019  
@@ -387,7 +390,7 @@ Fecha de publicación: 31 de enero de 2019
 | Detalles adicionales. | Consulte [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) (Dependencias de características de Microsoft JDBC Driver para SQL Server). |
 | &nbsp; | &nbsp; |
 
-### <a name="known-issues"></a>Problemas conocidos
+### <a name="72-known-issues"></a>Problemas conocidos de la versión 7.2
 
 | Problemas conocidos | Detalles |
 | :----------- | :------ |
@@ -504,7 +507,7 @@ El controlador ahora admite los tipos de datos `datetime` y `smallDatetime` cuan
 
 El controlador JDBC Driver ahora admite los tipos de datos `sql_variant` para su uso con SQL Server. El tipo de datos `sql_variant` también se admite con características como los TVP y la copia masiva con las siguientes limitaciones:
 
-* **Para valores de fecha**:
+- **Para valores de fecha**:
 
   Cuando se usa un TVP para rellenar una tabla que contiene valores `datetime`, `smalldatetime`, o `date` almacenados en una columna `sql_variant`, la llamada al método `getDateTime()`, `getSmallDateTime()` o `getDate()` en el conjunto de resultados no funciona e inicia la siguiente excepción:
 
@@ -512,7 +515,7 @@ El controlador JDBC Driver ahora admite los tipos de datos `sql_variant` para su
 
   Como solución, utilice el método `getString()` o `getObject()` en su lugar.
 
-* **Uso de TVP con sql_variant para valores nulos**:
+- **Uso de TVP con sql_variant para valores nulos**:
   
   Si usa TVP para rellenar una tabla y envía un valor NULL al tipo de columna `sql_variant`, encontrará una excepción. La inserción de un valor NULL con el tipo de columna `sql_variant` en un TVP no se admite actualmente.
 
@@ -542,7 +545,7 @@ Para obtener el controlador en un archivo tar.gz: [Chino (simplificado)](https:/
 
 Microsoft JDBC Driver 6.2 para SQL Server es totalmente compatible con las especificaciones 4.1 y 4.2 de JDBC. Los archivos JAR en el paquete 6.2 adquieren su nombre según la compatibilidad de la versión de Java. Por ejemplo, el archivo mssql-jdbc-6.2.2.jre8.jar del paquete 6.2 se recomienda para su uso con Java 8.
 
-### <a name="releases"></a>Versiones
+### <a name="62-releases"></a>Lanzamientos de la versión 6.2
 
 Número de versión: 6.2.2  
 Fecha de publicación: 3 de octubre de 2017  
@@ -578,16 +581,16 @@ El controlador JDBC Driver ahora se puede utilizar en las JVM que se ejecutan en
 
 El controlador JDBC Driver ahora es compatible con:
 
-* Método de entidad de seguridad y contraseña para las aplicaciones donde la configuración de Kerberos no se puede modificar o no puede recuperar un token nuevo o un archivo keytab. Este método puede usarse para la autenticación en una instancia de SQL Server que permite solo la autenticación de Kerberos.
-* Autenticación entre dominios que utiliza la autenticación integrada de Kerberos sin configurar explícitamente el SPN del servidor. El controlador ahora calcula automáticamente el dominio Kerberos incluso cuando no se proporciona.
-* Delegación restringida de Kerberos mediante la aceptación de credenciales de usuario suplantadas como un objeto de credencial GSS a través del origen de datos. Esta credencial suplantada se usa a continuación para establecer una conexión de Kerberos.
+- Método de entidad de seguridad y contraseña para las aplicaciones donde la configuración de Kerberos no se puede modificar o no puede recuperar un token nuevo o un archivo keytab. Este método puede usarse para la autenticación en una instancia de SQL Server que permite solo la autenticación de Kerberos.
+- Autenticación entre dominios que utiliza la autenticación integrada de Kerberos sin configurar explícitamente el SPN del servidor. El controlador ahora calcula automáticamente el dominio Kerberos incluso cuando no se proporciona.
+- Delegación restringida de Kerberos mediante la aceptación de credenciales de usuario suplantadas como un objeto de credencial GSS a través del origen de datos. Esta credencial suplantada se usa a continuación para establecer una conexión de Kerberos.
 
 ### <a name="added-timeouts"></a>Adición de tiempos de expiración
 
 El controlador JDBC Driver ahora admite los siguientes tiempos de expiración configurables. Puede cambiarlos según las necesidades de la aplicación.
 
-* Tiempo de expiración de consulta para controlar el número de segundos que deben transcurrir antes de que se produzca un error por tiempo de espera al ejecutar una consulta.
-* Tiempo de expiración de socket para especificar el número de milisegundos que deben transcurrir antes de que se produzca un error por tiempo de espera en una lectura o aceptación de socket.
+- Tiempo de expiración de consulta para controlar el número de segundos que deben transcurrir antes de que se produzca un error por tiempo de espera al ejecutar una consulta.
+- Tiempo de expiración de socket para especificar el número de milisegundos que deben transcurrir antes de que se produzca un error por tiempo de espera en una lectura o aceptación de socket.
 
 ## <a name="61"></a>6.1
 

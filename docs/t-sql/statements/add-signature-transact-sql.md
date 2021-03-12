@@ -18,12 +18,12 @@ ms.author: vanto
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/10/2020
-ms.openlocfilehash: 95bfeb321f43fb860bbbeecb32ac18ec221e5067
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 86513345502531da670b870b5ecf70de9270f18f
+ms.sourcegitcommit: ece104654ac14e10d32e59f45916fa944665f4df
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99194688"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102474909"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 
@@ -83,7 +83,7 @@ El módulo que se va a firmar o contrafirmar, y el certificado o la clave simét
 > [!CAUTION]
 > La firma de módulos solo se debe utilizar para conceder permisos, nunca para denegarlos ni revocarlos.  
   
- Los desencadenadores del lenguaje de definición de Data (DDL) y las funciones con valores de tabla insertadas no se pueden firmar.  
+ Los desencadenadores del lenguaje de definición de datos (DDL) y las funciones con valores de tabla insertadas no se pueden firmar.  
   
  Para obtener más información acerca de las firmas, vea la vista de catálogo sys.crypt_properties.  
   
@@ -93,15 +93,15 @@ El módulo que se va a firmar o contrafirmar, y el certificado o la clave simét
 ## <a name="countersignatures"></a>Contrafirmas  
  Al ejecutar un módulo firmado, las firmas se agregarán temporalmente al token de SQL, pero se pierden si el módulo ejecuta otro módulo o si termina la ejecución. Una contrafirma es una forma especial de firma. Por si sola, una contrafirma no concede ningún permiso; sin embargo, permite a las firmas realizadas por el mismo certificado o clave asimétrica conservarse mientras dure la llamada realizada al objeto contrafirmado.  
   
- Por ejemplo, suponga que la usuaria Alice llama al procedimiento ProcSelectT1ForAlice, que llama al procedimiento procSelectT1, que realiza una selección en la tabla T1. Alice dispone del permiso EXECUTE en ProcSelectT1ForAlice y procSelectT1, pero no tiene el permiso SELECT en T1 y no hay ninguna cadena de propiedad implicada en esta cadena completa. Alice no puede tener acceso a la tabla T1, ni directamente ni a través del uso de ProcSelectT1ForAlice y procSelectT1. Como queremos que Alice use siempre ProcSelectT1ForAlice para el acceso, no es aconsejable concederle permiso para ejecutar procSelectT1. ¿Cómo podemos lograr esto?  
+ Por ejemplo, suponga que la usuaria Alice llama al procedimiento ProcForAlice, que llama al procedimiento ProcSelectT1, que realiza una selección en la tabla T1. Alice dispone del permiso EXECUTE en ProcForAlice y ProcSelectT1, pero no tiene el permiso SELECT en T1 y no hay ninguna cadena de propiedad implicada en esta cadena completa. Alice no puede acceder a la tabla T1, ni directamente ni a través del uso de ProcForAlice y ProcSelectT1. Como queremos que Alice use siempre ProcForAlice para el acceso, no es aconsejable concederle permiso para ejecutar ProcSelectT1. ¿Cómo podemos lograr esto?  
   
--   Si firmamos procSelectT1, procSelectT1 puede tener acceso a T1 y entonces Alice puede invocar a procSelectT1 directamente y no tiene que llamar a ProcSelectT1ForAlice.  
+-   Si firmamos ProcSelectT1, ProcSelectT1 puede acceder a T1, de modo que Alice puede invocar a ProcSelectT1 directamente sin tener que llamar a ProcForAlice.  
   
--   Podríamos denegar el permiso EXCEUTE en procSelectT1 a Alice, pero entonces Alice no podría llamar a procSelectT1 a través de ProcSelectT1ForAlice.
+-   Podríamos denegar el permiso EXECUTE en ProcSelectT1 a Alice, pero entonces Alice no podría llamar a ProcSelectT1 a través de ProcForAlice.
   
--   Si solo se firma ProcSelectT1ForAlice, no funcionaría, porque la firma se perdería en la llamada a procSelectT1.  
+-   Si solo se firma ProcForAlice, no funcionaría, porque la firma se perdería en la llamada a ProcSelectT1.  
   
-Pero al contrafirmar procSelectT1 con el mismo certificado que se usó para firmar ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantendrá la firma a través de la cadena de llamadas y permitirá el acceso a T1. Si Alice intenta llamar directamente a procSelectT1, no puede tener acceso a T1, porque la contrafirma no concede ningún derecho. El ejemplo C siguiente muestra el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] para este ejemplo.  
+Pero al contrafirmar ProcSelectT1 con el mismo certificado que se usó para firmar ProcForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantendrá la firma a través de la cadena de llamadas y permitirá el acceso a T1. Si Alice intenta llamar directamente a ProcSelectT1, no podrá acceder a T1, porque la contrafirma no concede ningún derecho. El ejemplo C siguiente muestra el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] para este ejemplo.  
   
 ## <a name="permissions"></a>Permisos  
 
@@ -211,42 +211,42 @@ BEGIN
     SELECT * FROM T1;  
 END;  
 GO  
-GRANT EXECUTE ON procSelectT1 to public;  
+GRANT EXECUTE ON ProcSelectT1 to public;  
   
 -- Create special procedure for accessing T1  
-CREATE PROCEDURE  procSelectT1ForAlice AS  
+CREATE PROCEDURE  ProcForAlice AS  
 BEGIN  
    IF USER_ID() <> USER_ID('Alice')  
     BEGIN  
         PRINT 'Only Alice can use this.';  
         RETURN  
     END  
-   EXEC procSelectT1;  
+   EXEC ProcSelectT1;  
 END;  
 GO;  
-GRANT EXECUTE ON procSelectT1ForAlice TO PUBLIC;  
+GRANT EXECUTE ON ProcForAlice TO PUBLIC;  
   
 -- Verify procedure works for a sysadmin user  
-EXEC procSelectT1ForAlice;  
+EXEC ProcForAlice;  
   
 -- Alice still can't use the procedure yet  
 EXECUTE AS LOGIN = 'Alice';  
-    EXEC procSelectT1ForAlice;  
+    EXEC ProcForAlice;  
 REVERT;  
   
 -- Sign procedure to grant it SELECT permission  
-ADD SIGNATURE TO procSelectT1ForAlice BY CERTIFICATE csSelectT   
+ADD SIGNATURE TO ProcForAlice BY CERTIFICATE csSelectT   
 WITH PASSWORD = 'SimplePwd01';  
   
--- Counter sign proc_select_t, to make this work  
-ADD COUNTER SIGNATURE TO procSelectT1 BY CERTIFICATE csSelectT   
+-- Counter sign ProcSelectT1, to make this work  
+ADD COUNTER SIGNATURE TO ProcSelectT1 BY CERTIFICATE csSelectT   
 WITH PASSWORD = 'SimplePwd01';  
   
 -- Now the proc works.   
--- Note that calling procSelectT1 directly still doesn't work  
+-- Note that calling ProcSelectT1 directly still doesn't work  
 EXECUTE AS LOGIN = 'Alice';  
-    EXEC procSelectT1ForAlice;  
-    EXEC procSelectT1;  
+    EXEC ProcForAlice;  
+    EXEC ProcSelectT1;  
 REVERT;  
   
 -- Cleanup  

@@ -1,7 +1,7 @@
 ---
 title: Guía de solución de problemas de SqlClient
 description: Página que proporciona soluciones a los problemas que se observan normalmente.
-ms.date: 11/27/2020
+ms.date: 03/03/2021
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: 6cad6278eb6ac7b170ee108c1a3510db956ecb22
-ms.sourcegitcommit: 0c0e4ab90655dde3e34ebc08487493e621f25dda
+ms.openlocfilehash: 725d1522f98e721f581a7d4b7614181fd2632962
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96468094"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464808"
 ---
 # <a name="sqlclient-troubleshooting-guide"></a>Guía de solución de problemas de SqlClient
 
@@ -143,7 +143,7 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
 
   Este error se produce normalmente en entornos cliente como contenedores de imágenes de Docker, clientes UNIX o clientes Windows, donde TLS 1.2 es el protocolo TLS mínimo admitido.
 
-  **Solución recomendada:** instale las actualizaciones más recientes en las versiones admitidas de SQL Server<sup>1</sup> y asegúrese de que el protocolo TLS 1.2 está habilitado en el servidor.
+  **Solución recomendada:** instale las actualizaciones más recientes en las versiones admitidas de SQL Server <sup>1</sup> y asegúrese de que el protocolo TLS 1.2 está habilitado en el servidor.
 
   _<sup>1</sup> Vea el [ciclo de vida de soporte del controlador SqlClient](sqlclient-driver-support-lifecycle.md) para consultar la lista de versiones admitidas de SQL Server con diferentes versiones de Microsoft.Data.SqlClient._
 
@@ -171,6 +171,12 @@ at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception
 - Certificados TLS/SSL no firmados con SHA-256 o superior.
 
   **Solución recomendada:** genere un nuevo certificado TLS/SSL para el servidor cuyo hash esté firmado con al menos el algoritmo hash SHA-256.
+
+- Conjuntos de cifrado restringidos en Linux con .NET 5 o posterior
+
+  .NET 5 presentó un cambio importante para los clientes de Linux, donde se utiliza de forma predeterminada una lista restringida de conjuntos de cifrado permitidos. Es posible que tenga que expandir la lista de conjuntos de cifrado predeterminados para aceptar clientes heredados (o para ponerse en contacto con servidores heredados), especificando un valor `CipherSuitePolicy` o cambiando el archivo de configuración de _OpenSSL_.
+  
+  Obtenga más información sobre los [conjuntos de cifrado TLS predeterminados para .NET en Linux ](/dotnet/core/compatibility/cryptography/5.0/default-cipher-suites-for-tls-on-linux) para la acción recomendada.
 
 ### <a name="connection-pool-exhaustion-errors"></a>Errores de agotamiento del grupo de conexiones
 

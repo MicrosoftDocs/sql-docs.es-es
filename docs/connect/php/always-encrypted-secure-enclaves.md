@@ -10,39 +10,42 @@ ms.topic: conceptual
 ms.reviewer: ''
 ms.author: v-daenge
 author: David-Engel
-ms.openlocfilehash: f407cae7fe7d53a7522e64f0bb26961ebeb4276f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c49d81783f82c41cd95e25b137807b006e5b2ad1
+ms.sourcegitcommit: 15c7cd187dcff9fc91f2daf0056b12ed3f0403f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632095"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102464712"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-php-drivers-for-sql-server"></a>Uso de Always Encrypted con enclaves seguros con los controladores PHP para SQL Server
+
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 ## <a name="applicable-to"></a>Aplicable a
- -   Controladores de Microsoft 5.8.0 para PHP para SQL Server
- 
+
+- Controladores de Microsoft 5.8.0 para PHP para SQL Server
+
 ## <a name="introduction"></a>Introducción
 
 [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md) es la segunda iteración de la característica Always Encrypted para SQL Server. Always Encrypted con enclaves seguros permite que los usuarios realicen cálculos completos con los datos cifrados mediante la creación de un enclave seguro, una región de memoria en el servidor donde se descifran los datos cifrados de una base de datos para que se puedan realizar los cálculos. Las operaciones admitidas incluyen la comparación y la coincidencia de patrones con la cláusula `LIKE`.
 
 ## <a name="enabling-always-encrypted-with-secure-enclaves"></a>Habilitación de Always Encrypted con enclaves seguros
 
-La compatibilidad con Always Encrypted con enclaves seguro está disponible en los controladores PHP para SQL Server a partir de la versión 5.8.0. Always Encrypted con enclaves seguros requiere SQL Server 2019 o posterior y la versión 17.4 o posterior del controlador ODBC. Puede encontrar más información sobre los requisitos generales de Always Encrypted con los controladores PHP para SQL Server [aquí](using-always-encrypted-php-drivers.md).
+La compatibilidad con Always Encrypted con enclaves seguros está disponible en los controladores PHP para SQL Server a partir de la versión 5.8.0. Always Encrypted con enclaves seguros requiere SQL Server 2019 o posterior, y la versión 17.4 o posterior del controlador ODBC. Puede encontrar más información sobre los requisitos generales de Always Encrypted con los controladores PHP para SQL Server [aquí](using-always-encrypted-php-drivers.md).
 
-Always Encrypted con enclaves seguro garantiza la seguridad de los datos cifrados mediante la atestación de la enclave, es decir, la comprobación del enclave con respecto a un servicio de atestación externo. Para usar los enclaves seguros, la palabra clave `ColumnEncryption` debe identificar el tipo de atestación y el protocolo junto con los datos de atestación asociados, separados por una coma. La versión 17.4 del controlador ODBC solo admite la seguridad basada en virtualización (VBS) y el protocolo del servicio de protección de host (HGS) para el protocolo y el tipo de enclave. Los datos de atestación asociados son la dirección URL del servidor de atestación. Por lo tanto, se agregaría lo siguiente a la cadena de conexión:
+Always Encrypted con enclaves seguros garantiza la seguridad de los datos cifrados mediante la atestación del enclave, es decir, la comprobación del enclave con respecto a un servicio de atestación externo. Para usar los enclaves seguros, la palabra clave `ColumnEncryption` debe identificar el tipo de atestación y el protocolo junto con los datos de atestación asociados, separados por una coma. La versión 17.4 del controlador ODBC solo admite la seguridad basada en virtualización (VBS) y el protocolo del servicio de protección de host (HGS) para el protocolo y el tipo de enclave. Los datos de atestación asociados son la dirección URL del servidor de atestación. Por lo tanto, se agregaría el siguiente valor a la cadena de conexión:
 
 ```
 ColumnEncryption=VBS-HGS,http://attestationserver.mydomain/Attestation
 ```
+
 Si el protocolo es incorrecto, el controlador no lo reconocerá, se producirá un error en la conexión y se devolverá un error. Si solo la dirección URL de atestación es incorrecta, la conexión se realizará correctamente y se producirá un error al intentar un cálculo habilitado para el enclave, pero, de lo contrario, el comportamiento será idéntico al comportamiento original de Always Encrypted. Establecer `ColumnEncryption` en `enabled` proporcionará la funcionalidad Always Encrypted habitual, pero si se intenta una operación habilitada para el enclave, se devolverá un error.
 
-[Aquí](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) encontrará información completa sobre la configuración del entorno para admitir Always Encrypted con enclaves seguro, incluida la configuración del servicio de protección de host y la creación de las claves de cifrado necesarias.
+[Aquí](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) encontrará información completa sobre la configuración del entorno para admitir Always Encrypted con enclaves seguros, incluida la configuración del servicio de protección de host y la creación de las claves de cifrado necesarias.
 
 ## <a name="examples"></a>Ejemplos
 
-En los ejemplos siguientes, uno para SQLSRV y otro para PDO_SQLSRV, cree una tabla con varios tipos de datos en texto no cifrado y, a continuación, cifre y lleve a cabo las comparaciones y las coincidencias de patrones. Tenga en cuenta lo siguiente:
+En los ejemplos siguientes, uno para SQLSRV y otro para PDO_SQLSRV, cree una tabla con varios tipos de datos en texto no cifrado y, a continuación, cifre y lleve a cabo las comparaciones y las coincidencias de patrones. Tenga en cuenta los siguientes detalles:
 
 - Al cifrar una tabla con `ALTER TABLE`, solo se puede cifrar una columna para cada llamada a `ALTER TABLE`, por lo que se necesitan varias llamadas para cifrar varias columnas.
 - Al pasar el umbral de comparación como parámetro para comparar los tipos char y nchar, el ancho de la columna se debe especificar en el `SQLSRV_SQLTYPE_*`correspondiente, o bien se devolverá el error `HY104`, `Invalid precision value`.
@@ -50,9 +53,10 @@ En los ejemplos siguientes, uno para SQLSRV y otro para PDO_SQLSRV, cree una tab
 - Al pasar la cadena de coincidencia de patrones como parámetro para buscar coincidencias de tipos char y nchar, el `SQLSRV_SQLTYPE_*` que se pasó a `sqlsrv_query` o `sqlsrv_prepare` debe especificar la longitud de la cadena con que se debe coincidir y no el tamaño de la columna, ya que los tipos char y nchar rellenan los espacios en blanco al final de la cadena. Por ejemplo, al hacer coincidir la cadena `%abc%` con una columna char(10), especifique `SQLSRV_SQLTYPE_CHAR(5)`. Si en su lugar especifica `SQLSRV_SQLTYPE_CHAR(10)`, la consulta coincidirá con `%abc%     ` (con cinco espacios anexados) y los datos de la columna que tengan menos de cinco espacios anexados no coincidirán (por lo que `abcdef` no coincidirá `%abc%`, porque tiene cuatro espacios de relleno). En el caso de las cadenas Unicode, utilice las funciones `mb_strlen` o `iconv_strlen` para obtener el número de caracteres.
 - La interfaz PDO no permite especificar la longitud de un parámetro. En su lugar, especifique una longitud de 0 o `null` en `PDOStatement::bindParam`. Si la longitud se establece explícitamente en otro número, el parámetro se trata como un parámetro de salida.
 - La coincidencia de patrones no funciona con tipos que no son de cadena en Always Encrypted.
-- La comprobación de errores se excluye para mayor claridad. 
+- La comprobación de errores se excluye para mayor claridad.
 
-A continuación, se indican datos comunes para ambos ejemplos:
+Los datos siguientes son comunes para ambos ejemplos:
+
 ```php
 <?php
 // Data for testing - integer, datetime2, char, nchar, varchar, and nvarchar
@@ -101,7 +105,9 @@ $encryptQuery = " ALTER TABLE $myTable
                   ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;";
 ?>
 ```
+
 ### <a name="sqlsrv"></a>SQLSRV
+
 ```php
 <?php
 // Specify Azure Key Vault credentials using the KeyStoreAuthentication, KeyStorePrincipalId, and KeyStoreSecret keywords
@@ -235,6 +241,7 @@ function getResults($stmt)
 ```
 
 ### <a name="pdo_sqlsrv"></a>PDO_SQLSRV
+
 ```php
 <?php
 // Specify Azure Key Vault credentials using the KeyStoreAuthentication, KeyStorePrincipalId, and KeyStoreSecret keywords
@@ -361,7 +368,9 @@ function getResults($stmt)
 }
 ?>
 ```
+
 Salida:
+
 ```
 Test comparisons:
 1
@@ -390,9 +399,10 @@ zyxwv
 㬚㔈♠既
 㛜ꆶ㕸㔈♠既ꁺꖁ㓫ޘ갧ᛄ
 ```
-## <a name="see-also"></a>Consulte también  
+
+## <a name="see-also"></a>Consulte también
+
 [Guía de programación para el controlador SQL para PHP](programming-guide-for-php-sql-driver.md)  
 [Referencia de API del controlador SQLSRV](sqlsrv-driver-api-reference.md)  
 [Referencia de la API del controlador PDO_SQLSRV](pdo-sqlsrv-driver-reference.md)  
 [Uso de Always Encrypted con los controladores PHP para SQL Server](using-always-encrypted-php-drivers.md)
-  

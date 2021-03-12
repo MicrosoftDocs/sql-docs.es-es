@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fdf81fde342a3c7f0e250d467e7b486d753a8588
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6ed1f27444b86ba79fd6c3178bc0029624b05d2
+ms.sourcegitcommit: ece104654ac14e10d32e59f45916fa944665f4df
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630817"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102474899"
 ---
 # <a name="database-snapshots-sql-server"></a>Instantáneas de base de datos (SQL Server)
 
@@ -137,7 +137,7 @@ Una instantánea de base de datos es una vista estática de solo lectura de una 
   
 -   La base de datos de origen no se puede configurar como una base de datos compartida escalable.  
 
--   La base de datos de origen no debe contener un grupo de archivos MEMORY_OPTIMIZED_DATA.  Para más información, consulte [Características de SQL Server no admitidas para OLTP en memoria](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).
+-   Antes de SQL Server 2019, la base de datos de origen no podía contener un grupo de archivos MEMORY_OPTIMIZED_DATA. La compatibilidad con las instantáneas de base de datos en memoria se agregó en SQL Server 2019.
   
 > [!NOTE]  
 >  Todos los modelos de recuperación admiten instantáneas de base de datos.  
@@ -167,7 +167,7 @@ Una instantánea de base de datos es una vista estática de solo lectura de una 
   
 -   Las instantáneas son de solo lectura. Como son de solo lectura, no se pueden actualizar. Por tanto, las instantáneas de base de datos no serán viables tras una actualización.  
   
--   Las instantáneas de base de datos **model**, **master**y **tempdb** están prohibidas.  
+-   Las instantáneas de base de datos **model**, **master** y **tempdb** están prohibidas.  
   
 -   No se pueden cambiar las especificaciones de los archivos de la instantánea de base de datos.  
   
