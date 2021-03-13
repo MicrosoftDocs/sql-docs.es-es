@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 01d5e44a93776560b5e89c0dc03a36b780f7ab8d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9ef6744fa152bfb5c66cc82ba71de62bc5bfb1a9
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637961"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421977"
 ---
 # <a name="model-database"></a>Base de datos model
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,37 +90,23 @@ Para SQL Server 2014, vea [Base de datos modelo](/previous-versions/sql/2014/rel
 ## <a name="restrictions"></a>Restricciones  
  Las siguientes operaciones no se pueden realizar en la base de datos **modelo** :  
   
--   Agregar archivos o grupos de archivos.  
-  
--   Cambiar intercalaciones. La intercalación predeterminada es la intercalación de servidor.  
-  
--   Cambiar el propietario de la base de datos. **model** es propiedad de **sa**.  
-  
--   Eliminar la base de datos.  
-  
--   Eliminar el usuario **guest** de la base de datos.  
-  
--   Habilitar el mecanismo de captura de cambios en los datos.  
-  
--   Participar en el reflejo de la base de datos.  
-  
--   Quitar el grupo de archivos principal, el archivo de datos principal o el archivo de registro.  
-  
--   Cambiar el nombre de la base de datos o del grupo de archivos principal.  
-  
--   Establecer la base de datos en OFFLINE.  
-  
--   Establecer el grupo de archivos principal en READ_ONLY.  
-  
--   Crear procedimientos, vistas, o desencadenadores utilizando la opción WITH ENCRYPTION. La clave de cifrado está asociada a la base de datos en la que se crea el objeto. Los objetos cifrados creados en la base de datos **modelo** solo se pueden usar en **modelo**.  
+- Agregar archivos o grupos de archivos.  
+- Cambiar intercalaciones. La intercalación predeterminada es la intercalación de servidor.  
+- Cambiar el propietario de la base de datos. **model** es propiedad de **sa**.  
+- Eliminar la base de datos.  
+- Eliminar el usuario **guest** de la base de datos.  
+- Habilitar el mecanismo de captura de cambios en los datos.  
+- Participar en el reflejo de la base de datos.  
+- Quitar el grupo de archivos principal, el archivo de datos principal o el archivo de registro.  
+- Cambiar el nombre de la base de datos o del grupo de archivos principal.  
+- Establecer la base de datos en OFFLINE.  
+- Establecer el grupo de archivos principal en READ_ONLY.  
+- Crear procedimientos, vistas, o desencadenadores utilizando la opción WITH ENCRYPTION. La clave de cifrado está asociada a la base de datos en la que se crea el objeto. Los objetos cifrados creados en la base de datos **modelo** solo se pueden usar en **modelo**.  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Bases de datos del sistema](../../relational-databases/databases/system-databases.md)  
-  
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-  
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
- [Mover archivos de base de datos](../../relational-databases/databases/move-database-files.md)  
+- [Bases de datos del sistema](../../relational-databases/databases/system-databases.md)  
+- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+- [Mover archivos de base de datos](../../relational-databases/databases/move-database-files.md)  
   
   

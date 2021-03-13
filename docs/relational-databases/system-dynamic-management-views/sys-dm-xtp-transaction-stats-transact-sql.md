@@ -1,8 +1,8 @@
 ---
 description: sys.dm_xtp_transaction_stats (Transact-SQL)
-title: sys.dm_xtp_transaction_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_xtp_transaction_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 03/12/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -16,15 +16,14 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_xtp_transaction_stats dynamic management view
-ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: e5216c988f93d2186bc36964b086f82e1995c176
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 37a98ee4a73e7bcc0ce06cef44d3a142e7fba772
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99126426"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421869"
 ---
 # <a name="sysdm_xtp_transaction_stats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "99126426"
 |total_count|**bigint**|El número total de transacciones que se han ejecutado en el motor de base de datos de OLTP en memoria.|  
 |read_only_count|**bigint**|Número de transacciones de solo lectura.|  
 |total_aborts|**bigint**|El número total de transacciones que se anularon, bien mediante intervención del usuario o del sistema.|  
-|user_aborts|**bigint**|Número de interrupciones iniciadas por el sistema. Por ejemplo, debido a conflictos de escritura, errores de validación o errores de dependencia.|  
+|system_aborts|**bigint**|Número de interrupciones iniciadas por el sistema. Por ejemplo, debido a conflictos de escritura, errores de validación o errores de dependencia.|  
 |validation_failures|**bigint**|Número de veces que una transacción se ha anulado debido a un error de validación.|  
 |dependencies_taken|**bigint**|Solo para uso interno.|  
 |dependencies_failed|**bigint**|Número de veces que una transacción se anula debido a que una transacción de la que dependía se anula.|  
@@ -69,7 +68,7 @@ ms.locfileid: "99126426"
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Vistas de administración dinámica de tablas optimizadas para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

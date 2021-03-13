@@ -19,12 +19,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c074add532e55209c8fc304a98da686cec60aab
-ms.sourcegitcommit: 059722ff78a6061b801807416b312ae9f721ec7d
+ms.openlocfilehash: 8c4b69dd5f196cf44f7fedfefbe45df6714aba20
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100636734"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103422004"
 ---
 # <a name="create-indexed-views"></a>Crear vistas indizadas
 
@@ -126,7 +126,7 @@ Además de las opciones SET y los requisitos de funciones deterministas, se debe
    |`MIN`, `MAX`|Operadores `UNION`, `EXCEPT` o `INTERSECT`|`TABLESAMPLE`|
    |Variables de tabla|`OUTER APPLY` o `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |Conjuntos de columnas dispersas|Funciones insertadas (TVF) o con valores de tabla de múltiples instrucciones (MSTVF)|`OFFSET`|
-   |`CHECKSUM_AGG`|||
+   |`CHECKSUM_AGG`|`STRING_AGG`|||
 
    <sup>1</sup> La vista indexada puede contener columnas **float**, aunque no se pueden incluir en la clave de índice agrupado.
 

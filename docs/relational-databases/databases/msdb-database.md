@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 02632ce64dbd7b10571e559daf8fde4475a4e37b
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 80ada8fcce7fe1480dca5e22d4a5b8be3e73b617
+ms.sourcegitcommit: be74dc0966930f28b03d0429aed22b1f0a296d3b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88471222"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "103421997"
 ---
 # <a name="msdb-database"></a>Base de datos msdb
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -86,34 +86,21 @@ ms.locfileid: "88471222"
  Las siguientes operaciones no se pueden realizar en la base de datos **msdb** :  
   
 -   Cambiar intercalaciones. La intercalación predeterminada es la intercalación de servidor.  
-  
 -   Eliminar la base de datos.  
-  
 -   Eliminar el usuario **guest** de la base de datos.  
-  
 -   Habilitar el mecanismo de captura de cambios en los datos.  
-  
 -   Participar en el reflejo de la base de datos.  
-  
 -   Quitar el grupo de archivos principal, el archivo de datos principal o el archivo de registro.  
-  
 -   Cambiar el nombre de la base de datos o del grupo de archivos principal.  
-  
 -   Establecer la base de datos en OFFLINE.  
-  
 -   Establecer el grupo de archivos principal en READ_ONLY.  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Bases de datos del sistema](../../relational-databases/databases/system-databases.md)  
-  
- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
-  
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
-  
- [Mover archivos de base de datos](../../relational-databases/databases/move-database-files.md)  
-  
- [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)  
-  
- [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
+- [Bases de datos del sistema](../../relational-databases/databases/system-databases.md)  
+- [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
+- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+- [Mover archivos de base de datos](../../relational-databases/databases/move-database-files.md)  
+- [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)  
+- [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   
