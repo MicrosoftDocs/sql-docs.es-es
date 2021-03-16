@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
-ms.date: 12/11/2020
-ms.openlocfilehash: 1303473c79558629ee0009f9c07bf8d28ffbd704
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/10/2021
+ms.openlocfilehash: 84405eb4d5ac63f287f2696dcef0a1e3ddc09cc4
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100060980"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622663"
 ---
 # <a name="sqlpackage-extract-parameters-and-properties"></a>Parámetros y propiedades de Extract de SqlPackage
 La acción Extract de SqlPackage.exe crea un esquema de una base de datos conectada en un archivo DACPAC (.dacpac). De forma predeterminada, los datos no se incluyen en el archivo. dacpac. Para incluir datos, use la [acción Export](sqlpackage-export.md) o las propiedades Extract *ExtractAllTableData*/*TableData*. 
@@ -57,8 +57,12 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ## <a name="properties-specific-to-the-extract-action"></a>Propiedades específicas de la acción Extract
 
-|Propiedad|Value|Descripción|
+|Propiedad|Valor|Descripción|
 |---|---|---|
+|**/p:**|AzureStorageBlobEndpoint=(STRING)|Punto de conexión de Azure Blob Storage. Consulte [SqlPackage para Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
+|**/p:**|AzureStorageContainer=(STRING)|Contenedor de Azure Blob Storage. Consulte [SqlPackage para Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
+|**/p:**|AzureStorageKey=(STRING)|Clave de la cuenta de almacenamiento de Azure. Consulte [SqlPackage para Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
+|**/p:**|AzureStorageRootPath=(STRING)|Ruta de acceso raíz de almacenamiento dentro del contenedor. Sin esta propiedad, el valor predeterminado de la ruta de acceso es `servername/databasename/timestamp/`. Consulte [SqlPackage para Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#extract).|
 |**/p:**|CommandTimeout=(INT32 '60')|Especifica el tiempo de espera de comando en segundos cuando se ejecutan consultas en SQL Server.|
 |**/p:**|DacApplicationDescription=(STRING)|Define la descripción de la aplicación que se va a guardar en los metadatos del DACPAC.|
 |**/p:**|DacApplicationName=(STRING)|Define el nombre de la aplicación que se va a guardar en los metadatos del DACPAC. El valor predeterminado es el nombre de la base de datos.|

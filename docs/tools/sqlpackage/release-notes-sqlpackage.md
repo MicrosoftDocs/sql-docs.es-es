@@ -2,25 +2,72 @@
 title: Notas de la versión de DacFx y SqlPackage
 description: Notas de la versión de sqlpackage de Microsoft.
 ms.custom: tools|sos
-ms.date: 02/02/2019
+ms.date: 03/10/2021
 ms.prod: sql
-ms.reviewer: alayu; sstein
+ms.reviewer: llali; sstein
 ms.prod_service: sql-tools
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
-ms.openlocfilehash: 1b93c290596cf9af23e4963912efff652e9c80ee
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: 3a5d63b5c727508473fe83c1de3668b5b3df85c0
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100061050"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622551"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notas de la versión de SqlPackage.exe
 
 **[Descargar la última versión](sqlpackage-download.md)**
 
 En este artículo se enumeran las características y correcciones que ofrecen las versiones publicadas de SqlPackage.exe.
+
+## <a name="187-sqlpackage"></a>sqlpackage 18.7
+
+|Plataforma|Descargar|Fecha de la versión|Versión|Build
+|:---|:---|:---|:---|:---|
+|Windows|[Instalador MSI](https://go.microsoft.com/fwlink/?linkid=2157201)|10 de mazo de 2021|18,7|15.0.5084.2|
+|macOS .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2157203)|10 de mazo de 2021| 18,7|15.0.5084.2|
+|Linux .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2157202)|10 de mazo de 2021| 18,7|15.0.5084.2|
+|Windows .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2157302)|10 de mazo de 2021| 18,7|15.0.5084.2|
+
+### <a name="features"></a>Características
+| Característica | Detalles |
+| :------ | :------ |
+| Implementación | Extraiga y publique macrodatos hacia y desde Azure Storage. Para obtener más información, consulte [SqlPackage para macrodatos](sqlpackage-for-azure-synapse-analytics.md). |
+| Azure Synapse Analytics | Compatibilidad con la seguridad de nivel de fila (función con valores de tabla insertada, directiva de seguridad, predicado de seguridad)  |
+| Azure Synapse Analytics | Compatibilidad con la clasificación de la carga de trabajo |
+| Azure SQL Edge | Compatibilidad con trabajos de streaming externos |
+| Azure SQL Edge | Se han agregado opciones de tabla y de base de datos para la retención de datos. |
+| Importar | Se han agregado dos nuevas propiedades de opción de índice para la operación de importación. *DisableIndexesForDataPhase* (para deshabilitar los índices antes de importar datos en SQL Server, con el valor predeterminado de true) y *RebuildIndexesOfflineForDataPhase* (para volver a generar los índices sin conexión después de importar datos en SQL Server, con el valor predeterminado de false) |
+| Registro | Se ha agregado una propiedad a todas las operaciones (HashObjectNamesInLogs) que convertirá todos los nombres de objeto en una cadena hash en los mensajes de registro. |
+| Rendimiento | Mejoras en el rendimiento de la importación y la exportación, incluido el registro adicional para ayudar a determinar cuellos de botella adicionales. |
+| SQLCMD | Se ha agregado una propiedad para la implementación y la comparación de esquemas (DoNotEvaluateSqlCmdVariables) que especifica si las variables SQLCMD se reemplazarán por valores. |
+
+
+
+### <a name="fixes"></a>Correcciones
+| Característica | Detalles |
+| :------ | :------ | 
+| Implementación | El valor predeterminado MAXDOP se ha cambiado de 0 a 8 para [Azure SQL](https://techcommunity.microsoft.com/t5/azure-sql/changing-default-maxdop-in-azure-sql-database/ba-p/1538528), lo que ha conllevado la actualización del modelo de esquema predeterminado en DacFx. | 
+| Comparación de esquemas | Los procedimientos almacenados que usan las palabras clave OUT y OUTPUT se omitirán como una diferencia |
+| Implementación | Validación adicional para tokens de macrodatos |
+| Compilación/Implementación | Limpieza completa del modelo de esquema de las tablas externas temporales para la coherencia final de DACPAC.  |
+| Compilación/Implementación | Incorporación de control de errores y corrección de 150 expresiones regulares que no son de Edge. |
+| Importación/Implementación | Valor de secuencia restaurado durante la implementación. |
+| Implementación | Se ha corregido un problema debido al cual el cambio de la opción de compresión en el índice agrupado hacía que se volviese a crear la tabla, en lugar de alterar el índice. |
+| Implementación | Se ha corregido un problema debido al cual, si la columna de una tabla cambiaba, se quitaba y se volvía a crear un índice de almacén de columnas agrupado. |
+| Implementación | Se ha corregido un problema debido al cual los usuarios externos se quitaban y se volvían a crear durante la implementación. |
+| Comparación de esquemas | Se ha corregido un problema de comparación de esquemas que afectaba a los trabajos de streaming externos. |
+| Importar | Se produce una excepción de referencia nula cuando se habilita la configuración de ambiente ReliableDdlEnabled al generar los scripts de un informe de implementación.|
+| Implementación | Se ha corregido un problema según el cual los pasos de implementación que contenían el control de versiones del sistema se creaban en orden incorrecto. |
+| Implementación | Se ha corregido un problema según el cual se producía un error en la actualización de comparación de esquemas o la implementación de DACPAC porque el destino contenía tablas temporales. |
+| Implementación | Se reinicializa el valor de identidad después de la implementación en función del último valor del destino. |
+
+### <a name="known-issues"></a>Problemas conocidos
+| Característica | Detalles |
+| :------ | :------ |
+| Implementación | Todavía no se admite la característica Administración de cargas de trabajo de Azure Synapse Analytics (Grupos de cargas de trabajo y Clasificadores de cargas de trabajo). | 
 
 ## <a name="186-sqlpackage"></a>18.6 sqlpackage
 
@@ -275,7 +322,7 @@ Esta versión incluye las compilaciones de versión preliminar multiplataforma d
 | :---------- | :------ |
 | Implementación | En .NET Core, los colaboradores de compilación y de implementación no se admiten. | 
 | Implementación | En .NET Core, no se admiten archivos .dacpac y .bacpac antiguos que utilizan la serialización de datos de json. | 
-| Implementación | En .NET Core, es posible que los archivos .dacpac a los que se hace referencia (por ejemplo, master.dacpac) no se resuelvan debido a problemas con sistemas de archivos que distinguen entre mayúsculas y minúsculas. | Una solución consiste en poner en mayúscula el nombre del archivo de referencia (por ejemplo MASTER.BACPAC). |
+| Implementación | En .NET Core, es posible que los archivos .dacpac a los que se hace referencia (por ejemplo, master.dacpac) no se resuelvan debido a problemas con sistemas de archivos que distinguen entre mayúsculas y minúsculas. Una solución consiste en poner en mayúscula el nombre del archivo de referencia (por ejemplo MASTER.BACPAC). |
 | &nbsp; | &nbsp; |
 
 ## <a name="180-sqlpackage"></a>18.0 sqlpackage

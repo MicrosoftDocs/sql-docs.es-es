@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.date: 03/02/2021
 monikerRange: =azure-sqldw-latest
 ms.custom: template-tutorial
-ms.openlocfilehash: 74f98ad652a58f70cd75ef60556bf0464fd5d7c7
-ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
+ms.openlocfilehash: 3e5e8536c135244288d022879764d021c53e67ca
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102186368"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770517"
 ---
 # <a name="tutorial-to-perform-your-first-code-translation-with-azure-synapse-pathway-preview"></a>Tutorial para realizar la primera traducción de código con la versión preliminar de Azure Synapse Pathway
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
@@ -62,6 +62,18 @@ Para completar este tutorial, asegúrese de que tiene instalado [Azure Synapse P
 1. Incluye la estructura del proyecto, que puede confirmarse fácilmente en el repositorio de GitHub.
   
 1. En el mismo directorio de salida se cargará un archivo de resultados que contendrá una lista de errores y advertencias.
+
+## <a name="run-the-translation-using-command-line"></a>Ejecución de la traducción mediante la línea de comandos
+1. Durante la instalación, AspCmd.exe estará disponible en C:\Archivos de programa (x86)\Azure Synapse Pathway (versión preliminar).
+1. Inicie el símbolo del sistema y vaya a la ubicación del archivo. 
+1. Escriba aspcmd.exe --help para obtener una lista de comandos
+
+  ![Comandos de ayuda de la línea de comandos de la valoración de Azure Synapse.](./media/synapse-pathway-assessment/command-line-help.png)
+
+
+4. Puede empezar a ejecutar las traducciones mediante la línea de comandos.
+
+ ![Valoración de Azure Synapse mediante la línea de comandos.](./media/synapse-pathway-assessment/command-line-assessment.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

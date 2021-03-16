@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 12/11/2019
-ms.openlocfilehash: 9e7a7b0dce01b21fcb746fdfdcbd5adfa7c7483d
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 03/09/2021
+ms.openlocfilehash: 8d56f26c6661587cb13ff2962221a4a41c7da2ba
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100067211"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622681"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar un servidor de informes en un clúster con equilibrio de carga de red
 
@@ -55,7 +55,7 @@ Para ejecutar una implementación escalada en un clúster NLB, debe configurar l
   
  Para evitar este problema, puede generar una clave de validación arbitraria que admita la validación del estado de la vista y, después, configurar manualmente cada nodo del servidor de informes para que utilice la misma clave. Puede utilizar cualquier secuencia hexadecimal generada de forma aleatoria. El algoritmo de validación (como SHA1) determina la longitud que debe tener la secuencia hexadecimal.  
 
-::: moniker range="=sql-server-2016"
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)]
 
 1. Genere una clave de validación y una clave de descifrado utilizando la funcionalidad de generación automática que proporciona [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Al final, debe tener una única entrada <`machineKey`> que puede pegar en el archivo Web.config para cada instancia del servidor de informes de la implementación de escala horizontal.  
   
@@ -65,17 +65,16 @@ Para ejecutar una implementación escalada en un clúster NLB, debe configurar l
     <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Abra el archivo Web.config para el servidor de informes y, en la sección <`system.web`>, pegue el elemento <`machineKey`> que ha generado. De forma predeterminada, el archivo Web.config del Administrador de informes se encuentra en \Archivos de programa\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
+2. Abra el archivo Web.config para el servidor de informes y, en la sección <`system.web`>, pegue el elemento <`machineKey`> que ha generado. De forma predeterminada, el archivo Web.config se encuentra en \Archivos de programa\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
 3. Guarde el archivo.  
   
 4. Repita el paso anterior en cada servidor de informes de la implementación escalada.  
   
-5. Compruebe que todos los archivos Web.Config de las carpetas \Reporting Services\Reportserver contienen elementos <`machineKey`> idénticos en la sección <`system.web`>.  
+5. Compruebe que todos los archivos Web.Config para todos los servidores de informes de la implementación escalada contienen elementos <`machineKey`> idénticos en la sección <`system.web`>.  
 
-::: moniker-end
+**[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)]** [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-::: moniker range=">=sql-server-2017"
 
 1. Genere una clave de validación y una clave de descifrado utilizando la funcionalidad de generación automática que proporciona [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Al final, debe tener una única entrada \<**MachineKey**> que podrá pegar en el archivo RSReportServer.config para cada instancia del servidor de informes de la implementación escalada.
 
@@ -85,13 +84,13 @@ Para ejecutar una implementación escalada en un clúster NLB, debe configurar l
     <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
-2. Guarde el archivo.
+2. Abra el archivo RSReportServer.config para el servidor de informes y, en la sección <`Configuration`>, pegue el elemento \<**MachineKey**> que ha generado. De forma predeterminada, el archivo RSReportServer.config se encuentra en \Archivos de Programa\Microsoft SQL Server Reporting Services\SSRS\ReportServer\RSReportServer.config para Reporting Services y en \Archivos de Programa\Microsoft Power BI Report Server\PBIRS\ReportServer\RSReportServer.config para Power BI Report Server.  
 
-3. Repita el paso anterior en cada servidor de informes de la implementación escalada.  
+3. Guarde el archivo.
 
-4. Compruebe que todos los archivos RSReportServer.config de las carpetas que forman parte de \Reporting Services\Report Server contengan elementos \<**MachineKey**> idénticos.
+4. Repita el paso anterior en cada servidor de informes de la implementación escalada.  
 
-::: moniker-end
+5. Compruebe que todos los archivos RSReportServer.Config para todos los servidores de informes de la implementación escalada contienen elementos \<**MachineKey**> idénticos en la sección <`Configuration`>.
 
 ## <a name="how-to-configure-hostname-and-urlroot"></a><a name="SpecifyingVirtualServerName"></a> Cómo configurar Hostname y UrlRoot
 

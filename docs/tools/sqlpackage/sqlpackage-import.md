@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
-ms.date: 12/11/2020
-ms.openlocfilehash: cecc6de89a9e8f82a64942acb08af7ddee48c5be
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/10/2021
+ms.openlocfilehash: 94ddccc0789f01f3d7d6ac6675ec9c54405972a1
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100081466"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622631"
 ---
 # <a name="sqlpackage-import-parameters-and-properties"></a>Parámetros y propiedades de Import de SqlPackage
 La acción Import de SqlPackage.exe importa los datos de esquemas y tablas de un paquete BACPAC (archivo .bacpac) en una base de datos nueva o vacía en SQL Server o Azure SQL Database. En el momento de la operación de importación a una base de datos existente, la base de datos de destino no puede contener ningún objeto de esquema definido por el usuario.  
@@ -53,17 +53,19 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ## <a name="properties-specific-to-the-import-action"></a>Propiedades específicas de la acción Import
 
-|Propiedad|Value|Descripción|
+|Propiedad|Valor|Descripción|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Especifica el tiempo de espera de comando en segundos cuando se ejecutan consultas en SQL Server.|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Define la edición de la instancia de Azure SQL Database.|
 |**/p:**|DatabaseLockTimeout=(INT32 '60')| Especifica el tiempo de expiración de bloqueo de la base de datos en segundos al ejecutar consultas en SQLServer. Use -1 para esperar indefinidamente.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Define el tamaño máximo en GB de una instancia de Azure SQL Database.|
 |**/p:**|DatabaseServiceObjective=(STRING)|Define el nivel de rendimiento de una instancia de Azure SQL Database, como "P0" o "S1".|
+|**/p:**|DisableIndexesForDataPhase=(BOOLEAN TRUE)|Deshabilite los índices antes de importar datos a SQL Server.|
 |**/p:**|ImportContributorArguments=(STRING)|Especifica los argumentos de colaborador de implementación para los colaboradores de implementación. Debe ser una lista de valores delimitada por punto y coma.|
 |**/p:**|ImportContributors=(STRING)|Especifica los colaboradores de implementación que se deben ejecutar cuando se importa el dacpac. Debe ser una lista delimitada por punto y coma de nombres completos o identificadores de los colaboradores de compilación.|
 |**/p:**|ImportContributorPaths=(STRING)|Especifica las rutas de acceso para cargar colaboradores de implementación adicionales. Debe ser una lista de valores delimitada por punto y coma. |
 |**/p:**|LongRunningCommandTimeout=(INT32)| Especifica el tiempo de espera del comando de larga duración en segundos al ejecutar consultas en SQL Server. Use 0 para esperar indefinidamente.|
+|**/p:**|RebuildIndexesOfflineForDataPhase=(BOOLEAN FALSE)|Recompile los índices sin conexión después de importar datos a SQL Server.|
 |**/p:**|Storage=({File&#124;Memory})|Especifica la forma en que se almacenan los elementos cuando se genera el modelo de base de datos. Por motivos de rendimiento, el valor predeterminado es InMemory. Cuando se trata de bases de datos grandes, se requiere almacenamiento respaldado por archivos.|
   
 

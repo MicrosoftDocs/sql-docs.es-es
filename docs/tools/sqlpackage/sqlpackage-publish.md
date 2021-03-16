@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
-ms.date: 12/11/2020
-ms.openlocfilehash: 84fdd99b00de38b88b1a21963c4565e5c3b27ea7
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 3/10/2021
+ms.openlocfilehash: 364849c03150839ce38c4764c788bb8b813b9d53
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100081456"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622611"
 ---
 # <a name="sqlpackage-publish-parameters-properties-and-sqlcmd-variables"></a>Parámetros, propiedades y variables SQLCMD de Publish de SqlPackage
 La operación Publish de SqlPackage.exe actualiza incrementalmente el esquema de una base de datos de destino para que coincida con la estructura de una de origen. Al publicar un paquete de implementación que contiene datos de usuario de todas las tablas o un subconjunto de ellas, se actualizan los datos de la tabla, además del esquema. La implementación de datos sobrescribe el esquema y los datos de las tablas existentes de la base de datos de destino. La implementación de datos no modificará el esquema ni los datos de la base de datos de destino para las tablas que no se incluyen en el paquete de implementación.  
@@ -73,7 +73,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ## <a name="properties-specific-to-the-publish-action"></a>Propiedades específicas de la acción Publish
 
-|Propiedad|Value|Descripción|
+|Propiedad|Valor|Descripción|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Especifica los argumentos de colaborador de implementación adicionales para los colaboradores de implementación. Debe ser una lista de valores delimitada por punto y coma.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Especifica colaboradores de implementación adicionales que se deben ejecutar cuando se implementa el dacpac. Debe ser una lista delimitada por punto y coma de nombres completos o identificadores de los colaboradores de compilación.|
@@ -81,6 +81,11 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|Esta propiedad se usa en la implementación de SqlClr para hacer que cualquier ensamblado de bloqueo se quite como parte del plan de implementación. De forma predeterminada, cualquier ensamblado de bloqueo o de referencia bloqueará la actualización de un ensamblado si el ensamblado de referencia tiene que quitarse.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Especifica si se intenta la acción a pesar de las posibles plataformas de SQL Server incompatibles.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|No bloquee la transferencia de datos en una tabla con Seguridad de nivel de fila si esta propiedad está establecida en true. El valor predeterminado es False.|
+|**/p:**|AzureSharedAccessSignatureToken=(STRING)|Token de Firma de acceso compartido (SAS) de Azure. Consulte [SqlPackage para Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
+|**/p:**|AzureStorageBlobEndpoint=(STRING)|Punto de conexión de Azure Blob Storage. Consulte [SqlPackage para Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
+|**/p:**|AzureStorageContainer=(STRING)|Contenedor de Azure Blob Storage. Consulte [SqlPackage para Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
+|**/p:**|AzureStorageKey=(STRING)|Clave de la cuenta de almacenamiento de Azure. Consulte [SqlPackage para Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
+|**/p:**|AzureStorageRootPath=(STRING)|Ruta de acceso raíz de almacenamiento dentro del contenedor. Sin esta propiedad, el valor predeterminado de la ruta de acceso es `servername/databasename/timestamp/`. Consulte [SqlPackage para Azure Synapse Analytics](sqlpackage-for-azure-synapse-analytics.md#publish).|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Hace una copia de seguridad de la base de datos antes de implementar ningún cambio.|
 |**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')| Especifica que la operación se terminará durante el paso de validación del esquema si los cambios de esquema resultantes pueden incurrir en una pérdida de datos, incluso debido a la reducción de la precisión de los datos o a un cambio de tipo de datos que necesite una operación de conversión. El valor predeterminado (`True`) hace que la operación finalice independientemente de si la base de datos de destino contiene datos.  Todavía se puede producir un error en la ejecución con un valor `False` para BlockOnPossibleDataLoss durante la ejecución del plan de implementación si hay datos en el destino que no se pueden convertir al nuevo tipo de columna. |
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|Especifica si bloquear la actualización de una base de datos cuyo esquema ha dejado de corresponderse con su registro o no está registrada.|

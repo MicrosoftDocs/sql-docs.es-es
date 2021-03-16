@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4d3d5cb280f20deb3d683d962be986d7df38ed61
-ms.sourcegitcommit: 8bdb5a51f87a6ff3b94360555973ca0cd0b6223f
+ms.openlocfilehash: e2c384a012603af0fd8875071b33813050218c65
+ms.sourcegitcommit: 81ee3cd57526d255de93afb84186074a3fb9885f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2021
-ms.locfileid: "100549381"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622742"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON: marcas de seguimiento (Transact-SQL)
 
@@ -207,7 +207,7 @@ En la siguiente tabla se enumeran y se describen las marcas de seguimiento dispo
 |**11068**|Usa el valor de grado máximo de paralelismo (MAXDOP) configurado del servidor, base de datos o grupo de recursos para las operaciones de inserción de índice de almacén de columnas. Para obtener más información sobre cómo anular grados de paralelismo, vea la [Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#overriding-degrees-of-parallelism).<br /><br />**Importante:** Esta marca de seguimiento solo es efectiva si también está habilitada la marca de seguimiento 11064.<br /><br />**Importante:** Use esta marca de seguimiento cuando se prefiera una carga de datos más rápida en lugar de mantener la calidad del [segmento de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md#column-segment). Por ejemplo, si se usa esta marca de seguimiento al cargar 1 048 577 filas en un almacén de columnas, se puede crear más de un grupo de filas comprimido, si la operación de inserción se ejecuta en paralelo. Sin esta marca de seguimiento, la operación de inserción daría como resultado un grupo de filas comprimido.<br /><br />**Nota:** Esta marca de seguimiento se aplica a [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] y a compilaciones posteriores.<br /><br />**Ámbito**: solo global|
 |**11631**| Una instrucción "ALTER INDEX ... REORGANIZE" limpiará las filas eliminadas de un índice de almacén de columnas filas solo cuando se haya eliminado un determinado umbral de filas de ese grupo de filas. El umbral predeterminado es del 10 % del límite máximo de filas (1 millón), o bien de 100 000 filas. Esta marca de seguimiento cambia el umbral al 10 % del total de filas actuales en un grupo de filas de un almacén de columnas. Por ejemplo, si un grupo de filas contiene 20 000 filas, el umbral será de 2000 filas eliminadas antes de que REORGANIZE valore este grupo de filas para su limpieza. Para obtener más información, consulte [este artículo del Soporte técnico de Microsoft](https://support.microsoft.com/help/5000895).<br /><br />**Nota**: Esta marca de seguimiento se aplica a [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU9 y compilaciones posteriores.<br /><br />**Ámbito**: solo global|
 |**11634**| Una instrucción "ALTER INDEX ... REORGANIZE" limpiará las filas eliminadas de un índice de almacén de columnas filas solo cuando se haya eliminado un determinado umbral de filas de ese grupo de filas. El umbral predeterminado es del 10 % del límite máximo de filas (1 millón), o bien de 100 000 filas. Esta marca de seguimiento cambia el umbral al 1 % de las filas en un grupo de filas de un almacén de columnas. Si se habilita junto con la marca de seguimiento 11631, será del 1 % del número actual de filas en un grupo de filas, en lugar de ser del 1 % de 1 millón de filas. Para obtener más información, consulte [este artículo del Soporte técnico de Microsoft](https://support.microsoft.com/help/5000895).<br /><br />**Nota**: Esta marca de seguimiento se aplica a [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU9 y compilaciones posteriores.<br /><br />**Ámbito**: solo global|
-
+|**13116**|Deshabilita la corrección del error [13685819](https://support.microsoft.com/en-us/topic/kb5000645-cumulative-update-16-for-sql-server-2016-sp2-a3997fa9-ec49-4df0-bcc3-12dd58b78265#bkmk_13685819). Use esta marca de seguimiento si después de aplicar [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU16 se produce un problema en el que las consultas DML (inserción/actualización/eliminación) que usan planes paralelos no pueden completar ninguna ejecución y detecta esperas HP_SPOOL_BARRIER. <br /><br />**Nota:** Esta marca de seguimiento se aplica a [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 CU16.<br /><br />**Ámbito**: solo global| 
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se establece la marca de seguimiento 3205 para todas las sesiones en el nivel de servidor mediante el uso de DBCC TRACEON.  

@@ -14,16 +14,22 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 6f1072f51349952be373a69a04ac556b38e3f25f
-ms.sourcegitcommit: 9413ddd8071da8861715c721b923e52669a921d8
+ms.openlocfilehash: 1816f1a8255041d6211931ffc41963acc460e15d
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101837493"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770482"
 ---
 # <a name="list-of-bugs-fixed"></a>Lista de los errores corregidos
 
 Esta página contiene una lista de los errores corregidos en cada versión, a partir de [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-1772-for-ssnoversion"></a>Correcciones de errores en [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7.2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Corrección de un problema con los errores de tipo "404 No encontrado" al usar la autenticación de Managed Service Identity
+- Corrección de los errores intermitentes de tipo "No se admite el cifrado" en cargas multiproceso altas
+- Corrección del bloqueo intermitente en cargas multiproceso altas
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-177-for-ssnoversion"></a>Correcciones de errores en [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

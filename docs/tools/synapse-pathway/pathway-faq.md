@@ -9,12 +9,12 @@ ms.prod: sql
 ms.technology: tools-other
 monikerRange: =azure-sqldw-latest
 ms.custom: template-overview
-ms.openlocfilehash: 8352fb6a70c54ede61d544a147f970237404c9f5
-ms.sourcegitcommit: ca81fc9e45fccb26934580f6d299feb0b8ec44b7
+ms.openlocfilehash: e97425f682a3f6b9f2f4e955d8476d40d6cf4312
+ms.sourcegitcommit: f10f0d604be1dce6c600a92aec4c095e7b52e19c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102186344"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102770527"
 ---
 # <a name="azure-synapse-pathway-preview-faq"></a>Preguntas más frecuentes sobre la versión preliminar de Azure Synapse Pathway
 [!INCLUDE [Azure Synapse Analytics](../../includes/applies-to-version/asa.md)]
@@ -44,8 +44,15 @@ A. En esta versión preliminar de Synapse Pathway, se incluyen como orígenes lo
 
 ### <a name="q-what-is-included-as-part-of-the-code-conversion"></a>Q. ¿Qué se incluye como parte de la conversión de código?
 
-A. Synapse Pathway admite la traducción de código de tablas, esquemas, vistas y procedimientos almacenados.
+A. La versión preliminar de Synapse Pathway admite la traducción de código de tablas, esquemas y vistas.
 
+| Plataforma de origen| Tipos de instrucción admitidos | 
+|:-------------------:|:------------------|
+| IBM Netezza  | Create/Alter/Drop Database<br /> Create/Alter/Drop Schema <br /> Create/Alter/Drop Table |
+|Microsoft SQL Server  | Create/Alter/Drop Database<br /> Create/Alter/Drop Schema <br /> Create/Alter/Drop Table | 
+| Snowflake |  Create/Alter/Drop Database<br /> Create/Alter/Drop Schema <br /> Create/Alter/Drop Table |                       
+
+  
 ### <a name="q-can-it-also-scan-my-environment-and-provide-an-assessment-report-of-all-the-objects-that-need-to-be-convertedtranslated"></a>Q. ¿Puede examinar también mi entorno y proporcionar un informe de valoración de todos los objetos que se deben convertir o traducir?
 
 A. En esta versión preliminar de Synapse Pathway, tendrá que proporcionar el vínculo a los scripts DDL o DML que deben traducirse. Synapse Pathway no examinará el entorno actual para identificar qué objetos hay que traducir.
