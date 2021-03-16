@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c05da95541e728d981745d43f4da864c2e8b07a8
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: da3071f14be97a4bbbd9ac909926f210c49504d4
+ms.sourcegitcommit: 62c7b972db0ac28e3ae457ce44a4566ebd3bbdee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100343557"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103231523"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configuración de transacciones distribuidas para un grupo de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,9 @@ En una transacción distribuida, las aplicaciones cliente funcionan con Microsof
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] no impide las transacciones distribuidas de bases de datos en un grupo de disponibilidad, aun cuando el grupo de disponibilidad no esté configurado para transacciones distribuidas. Pero cuando un grupo de disponibilidad no está configurado para transacciones distribuidas, hay ocasiones en las que la conmutación por error puede que no se efectúe correctamente. En concreto, es posible que la nueva instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] de réplica principal no pueda obtener el resultado de la transacción de DTC. Para que la instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] pueda obtener el resultado de las transacciones dudosas de DTC tras la conmutación por error, configure el grupo de disponibilidad para que admita transacciones distribuidas. 
 
-DTC no interviene en el procesamiento de grupos de disponibilidad a menos que una base de datos también sea miembro de un clúster de conmutación por error. Dentro de un grupo de disponibilidad, la coherencia entre las réplicas se mantiene mediante la lógica del grupo de disponibilidad: La principal no completará la confirmación ni reconocerá la confirmación en el autor de la llamada hasta que la secundaria haya reconocido que ha conservado las entradas de registro en el almacenamiento duradero. Solo entonces la principal declarará que la transacción se ha completado. En el modo asincrónico, no se espera el reconocimiento por parte de la réplica secundaria, y hay una posibilidad explícita de que se pierda una pequeña cantidad de datos.
+DTC no interviene en el procesamiento de grupos de disponibilidad a menos que una base de datos también sea miembro de un clúster de conmutación por error. Dentro de un grupo de disponibilidad, la coherencia entre las réplicas se mantiene mediante la lógica del grupo de disponibilidad: la principal no completará la confirmación y reconocerá la confirmación al autor de la llamada hasta que la secundaria haya confirmado que ha guardado las entradas del registro en el almacenamiento duradero. Solo entonces la principal declarará que la transacción se ha completado. En el modo asincrónico, no se espera el reconocimiento por parte de la réplica secundaria, y hay una posibilidad explícita de que se pierda una pequeña cantidad de datos.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Antes de configurar un grupo de disponibilidad que admita transacciones distribuidas, debe cumplir los siguientes requisitos previos:
 
@@ -133,7 +133,7 @@ Con los siguientes puntos se explica cómo funciona la aplicación con DTC para 
 
 Cada entidad que participa en una transacción distribuida se conoce como administrador de recursos. Ejemplos de administradores de recursos:
 
-* Una instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]. 
+* Instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]. 
 * Una base de datos en un grupo de disponibilidad que se ha configurado para admitir transacciones distribuidas.
 * Servicio DTC: también puede ser un administrador de transacciones.
 * Otros orígenes de datos. 
@@ -141,6 +141,11 @@ Cada entidad que participa en una transacción distribuida se conoce como admini
 Para poder participar en las transacciones distribuidas, una instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] se da de alta en DTC. Normalmente, la instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] se da de alta en DTC en el servidor local. Cada instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] crea un administrador de recursos con un identificador de administrador de recursos (RMID) único y lo registra con DTC. En la configuración predeterminada, todas las bases de datos de una instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] usan el mismo RMID. 
 
 Cuando una base de datos está en un grupo de disponibilidad, la copia de lectura y escritura de la base de datos (o réplica principal) se puede trasladar a otra instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]. Para admitir transacciones distribuidas durante este traslado, cada base de datos debe actuar como un administrador de recursos independiente y tener un RMID único. Cuando un grupo de disponibilidad tiene `DTC_SUPPORT = PER_DB`, [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] crea un administrador de recursos para cada base de datos y se registra con DTC por medio de un RMID único. En esta configuración, la base de datos es un administrador de recursos en las transacciones de DTC.
+
+>[!IMPORTANT]
+>Tenga en cuenta que DTC tiene un límite de 32 inscripciones por transacción distribuida. Dado que cada base de datos de un grupo de disponibilidad se inscribe con DTC por separado, si la transacción incluye más de 32 bases de datos, es posible que reciba el siguiente error cuando [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] intente inscribir la 33.ª base de datos:
+>
+>`Enlist operation failed: 0x8004d101(XACT_E_TOOMANY_ENLISTMENTS). SQL Server could not register with Microsoft Distributed Transaction Coordinator (MS DTC) as a resource manager for this transaction. The transaction may have been stopped by the client or the resource manager.`
 
 Para más información sobre las transacciones distribuidas en [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)], vea [Transacciones distribuidas](#distTran).
 
@@ -205,4 +210,4 @@ Para más información sobre cómo resolver transacciones dudosas, vea [Resolve 
 
 [Supporting XA Transactions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753563(v=ws.10)) (Compatibilidad con las transacciones XA)
 
-[Cómo funciona: Session/SPID (-2) for DTC Transactions](/archive/blogs/bobsql/how-it-works-sessionspid-2-for-dtc-transactions) (Funcionamiento de Session/SPID [-2] en las transacciones de DTC)
+[How It Works: Session/SPID (-2) for DTC Transactions](/archive/blogs/bobsql/how-it-works-sessionspid-2-for-dtc-transactions) (Funcionamiento de Session/SPID [-2] en las transacciones de DTC)
