@@ -2,7 +2,7 @@
 description: 'ALTER EXTERNAL LANGUAGE (Transact-SQL): SQL Server'
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 03/15/2021
 ms.prod: sql
 ms.technology: language-extensions
 ms.topic: language-reference
@@ -11,12 +11,12 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: bca91a8745a36c845fd3ef7e08e1d0139b37bd1a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a86741824e47c51c6a24c39e6dfc5437d12bca45
+ms.sourcegitcommit: e2d25f265556af92afcc0acde662929e654bf841
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464156"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103489538"
 ---
 # <a name="alter-external-language-transact-sql"></a>ALTER EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -31,7 +31,7 @@ ALTER EXTERNAL LANGUAGE language_name
 {
     SET <file_spec>
     | ADD <file_spec>
-    | REMOVE <file_spec>
+    | REMOVE PLATFORM <platform> 
 }
 [ ; ]  
 

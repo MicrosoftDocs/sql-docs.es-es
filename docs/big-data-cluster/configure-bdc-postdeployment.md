@@ -9,12 +9,12 @@ ms.date: 02/11/2021
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 478ecc9888bbd3c8f51ee96c6c796856472f93d5
-ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+ms.openlocfilehash: 06b01a8fba30178cf8c8eb5842750de4baff1c82
+ms.sourcegitcommit: e2d25f265556af92afcc0acde662929e654bf841
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2021
-ms.locfileid: "100343911"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103489476"
 ---
 # <a name="how-to-configure-bdc-settings-post-deployment"></a>Procedimiento para configurar BDC después de la implementación
 
@@ -45,14 +45,14 @@ Servicio Spark.
 Actualice el número predeterminado de núcleos a 2 y la memoria predeterminada a 7424m para el servicio Spark.
 
 ```bash
-azdata bdc spark settings set spark-defaults-conf.spark.driver.cores=2, spark-defaults-conf.spark.driver.memory=7424m
+azdata bdc spark settings set --settings spark-defaults-conf.spark.driver.cores=2,spark-defaults-conf.spark.driver.memory=7424m
 ```
 
 ### <a name="change-the-default-number-of-cores-and-memory-for-the-spark-executors-in-the-storage-pool"></a>Cambio del número predeterminado de núcleos y de la memoria predeterminada de los ejecutores de Spark en el bloque de almacenamiento
 Actualice el número predeterminado de núcleos de los ejecutores a 4 para el bloque de almacenamiento.
 
 ```bash
-azdata bdc spark settings set spark-defaults-conf.spark.executor.cores=4 --resource=storage-0
+azdata bdc spark settings set --settings spark-defaults-conf.spark.executor.cores=4 --resource=storage-0
 ```
 
 ### <a name="view-the-pending-settings-changes-staged-in-the-bdc"></a>Visualización de los cambios de configuración pendientes almacenados provisionalmente en la instancia de BDC

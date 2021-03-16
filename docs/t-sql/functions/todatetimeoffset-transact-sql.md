@@ -25,12 +25,12 @@ ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e9c5827193f80ca6967a2611a288b04bf6783c0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 66b3b48adf60f4898a72e3476aa66530728c9a24
+ms.sourcegitcommit: 98acedd435aecfda1b3c4c23d3f0c3c1a12682a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99158716"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102532367"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,20 +42,21 @@ ms.locfileid: "99158716"
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
-TODATETIMEOFFSET ( expression , time_zone )  
+TODATETIMEOFFSET ( datetime_expression , timezoneoffset_expression )  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
- *expression*  
+ *datetime_expression*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que se resuelve en un valor de tipo [datetime2](../../t-sql/data-types/datetime2-transact-sql.md).  
   
 > [!NOTE]  
 >  La expresión no puede ser del tipo **text**, **ntext** o **image**, ya que estos tipos no se pueden convertir implícitamente en **varchar** o **nvarchar**.  
   
- *time_zone*  
- Es una expresión que representa el desplazamiento de zona horaria en minutos (si es un entero), por ejemplo -120, o las horas y los minutos (si es una cadena), como "+13:00". El intervalo es de +14 a -14 (en horas). La expresión se interpreta en la hora local para el valor time_zone especificado.  
+ *timezoneoffset_expression*  
+ Es una expresión que representa el desplazamiento de zona horaria en minutos (si es un entero), por ejemplo -120, o las horas y los minutos (si es una cadena), como "+13:00". El intervalo es de +14 a -14 (en horas). La expresión se interpreta en la hora local para el valor timezoneoffset_expression especificado.  
+
   
 > [!NOTE]  
 >  Si la expresión es una cadena de caracteres, debe tener el formato {+|-}TZH:THM.  

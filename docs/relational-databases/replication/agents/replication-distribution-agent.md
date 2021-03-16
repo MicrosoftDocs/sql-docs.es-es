@@ -17,12 +17,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016
-ms.openlocfilehash: 71782c95201c224bdd40624e23f529b01d892f22
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 729fcb2bdd1feccfb80d7b591fe96eeb38c23933
+ms.sourcegitcommit: 98acedd435aecfda1b3c4c23d3f0c3c1a12682a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475946"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102532357"
 ---
 # <a name="replication-distribution-agent"></a>Agente de distribución de replicación
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -208,7 +208,9 @@ distrib [-?]
   
  Si no hay ninguna transacción replicada disponible en el origen, el agente envía un mensaje de no transacción al distribuidor. Esta opción especifica cuánto tiempo espera el agente para enviar otro mensaje que indica que no hay ninguna transacción. Los agentes siempre envían un mensaje que indica que no hay ninguna transacción cuando detectan que no hay ninguna transacción disponible en el origen después de procesar previamente las transacciones replicadas. El valor predeterminado es 60 segundos.  
 
-**-MultiSubnetFailover** Especifica si la propiedad MultiSubnetFailover está habilitada o no. Si su aplicación se conecta a un grupo de disponibilidad (AG) AlwaysOn en subredes diferentes, al establecer MultiSubnetFailover=true, se detecta más rápidamente el servidor (actualmente) activo y se acelera la conexión a este.
+**-MultiSubnetFailover** Especifica si la propiedad MultiSubnetFailover está habilitada o no. Si su aplicación se conecta a un grupo de disponibilidad (AG) AlwaysOn en subredes diferentes, al establecer MultiSubnetFailover=true, se detecta más rápidamente el servidor (actualmente) activo y se acelera la conexión a este.   
+  **Se aplica a**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)]).  
+
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
  Especifica el tamaño mínimo, en bytes, para los datos del objeto binario grande por encima del cual los datos se vincularán como un flujo. Debe especificar **-UseOledbStreaming** para usar este parámetro. Los valores pueden ir de 400 a 1048576 bytes, con un valor predeterminado de 16384 bytes.  

@@ -17,12 +17,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: f5e716be586d7fb152a3c229cc016e349d57c99b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 58e9ed82d9518d423001342fa288e2c7aba1f5bf
+ms.sourcegitcommit: 98acedd435aecfda1b3c4c23d3f0c3c1a12682a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97467356"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102532347"
 ---
 # <a name="replication-log-reader-agent"></a>Agente de registro del LOG de replicación
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -142,7 +142,8 @@ logread [-?]
   
  Si no hay ninguna transacción replicada disponible en el origen, el agente envía un mensaje de no transacción al distribuidor. Esta opción especifica cuánto tiempo espera el agente para enviar otro mensaje que indica que no hay ninguna transacción. Los agentes siempre envían un mensaje que indica que no hay ninguna transacción cuando detectan que no hay ninguna transacción disponible en el origen después de procesar previamente las transacciones replicadas. El valor predeterminado es 60 segundos.  
  
- **-MultiSubnetFailover** [**0**\|**1**] Especifica si la propiedad MultiSubnetFailover está habilitada o no. En un grupo de disponibilidad (AG) AlwaysOn en subredes diferentes, al establecer MultiSubnetFailover en 1 (true), se detecta más rápidamente el servidor (actualmente) activo y se acelera la conexión a este.
+ **-MultiSubnetFailover** [**0**\|**1**] Especifica si la propiedad MultiSubnetFailover está habilitada o no. En un grupo de disponibilidad (AG) AlwaysOn en subredes diferentes, al establecer MultiSubnetFailover en 1 (true), se detecta más rápidamente el servidor (actualmente) activo y se acelera la conexión a este.   
+   **Se aplica a**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)]).  
   
  **-Output** _output_path_and_file_name_  
  Es la ruta de acceso del archivo de salida del agente. Si no se proporciona un nombre de archivo, el resultado se envía a la consola. Si el nombre de archivo especificado existe, el resultado se anexa al archivo.  
