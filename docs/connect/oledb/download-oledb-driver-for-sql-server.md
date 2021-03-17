@@ -7,16 +7,16 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d0f619fbdba59a902a1db379f65ebd131e5e4df
-ms.sourcegitcommit: cad737d30e5a80033f3b021cc3f0d47c00756a6b
+ms.openlocfilehash: 0e5e8a8b084c6762e732c0b866a0e4866e9d2707
+ms.sourcegitcommit: ecf074e374426c708073c7da88313d4915279fb9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96614487"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103575333"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Descarga del controlador Microsoft OLE DB para SQL Server
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 OLE DB Driver for SQL Server es una interfaz de programación de aplicaciones (API) de acceso a datos independiente que se utiliza para OLE DB. OLE DB Driver for SQL Server está disponible en Windows y entrega el controlador OLE DB de SQL en una biblioteca de vínculos dinámicos (DLL).
 
@@ -35,7 +35,7 @@ Microsoft OLE DB Driver 18.5 para SQL Server es la última versión de disponi
 - Fecha de publicación: 1 de diciembre de 2020
 
 > [!Note]
-> Si accede a esta página desde una versión de idioma que no es el inglés y quiere ver el contenido más actualizado, visite la [versión en inglés de EE. UU. del sitio](). Puede descargar distintos idiomas en el sitio de la versión en inglés de EE. UU. si selecciona [idiomas disponibles](#available-languages).
+> Si accede a esta página desde una versión de idioma que no es el inglés y quiere ver el contenido más actualizado, visite la [versión en inglés de EE. UU. del sitio](https://aka.ms/downloadmsoledbsqlusenglish). Puede descargar distintos idiomas en el sitio de la versión en inglés de EE. UU. si selecciona [idiomas disponibles](#available-languages).
 
 ## <a name="available-languages"></a>Idiomas disponibles
 
